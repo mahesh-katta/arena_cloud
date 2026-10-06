@@ -11999,6 +11999,13 @@ All six puzzle modules in one file. Each module is complete on its own and they 
 <td>6 Oct 2026</td>
 <td>62 bank sets (300 questions); 40 solved; 2 sets in Clerk papers, 3 in sister papers</td>
 </tr>
+<tr>
+<td>11</td>
+<td>Direction Sense</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>49 bank sets (41 distinct Sreedhar + 2 Guidely), 171 of 173 questions solved by script; 7 sets in Clerk papers, 6 in sister papers</td>
+</tr>
 </table>
 **A note on time, for all six.** A puzzle set is one arrangement followed by about five questions. Nobody solves the arrangement in 45 seconds. The honest target is 3 to 6 minutes for the arrangement and 15 to 20 seconds for each question after it.
 ## Module 1: Floor and Flat Puzzles - Speed Mastery Module
@@ -13863,6 +13870,397 @@ After these, work through the Guidely “parallel row based arrangement, single 
 **Not verified:** the 22 unsolved bank sets; the size split of the bank sets; the paper inventory beyond a single reading. Memory-based papers are reconstructions.
 **Corrections:** none so far.
 ---
+## Module 11: Direction Sense - Speed Mastery Module
+**Sample.** Papers: I opened the 35 cached memory-based papers (23 IBPS Clerk Prelims files, 16 of them with a readable Reasoning section, and 12 sister papers: SBI Clerk, IBPS RRB Clerk, IBPS PO Prelims). Paper instances: 13 direction sets with 37 questions. IBPS Clerk: 12 Dec 2021 (three reconstructions: Guidely set 1, Guidely set 2, Adda247), 2023 (Guidely), 2025 (Guidely), 4 Oct 2025 shift 1 and 4 Oct 2025 shift 3 (Adda247): 7 sets. Sister: SBI Clerk 20 Sep 2025 shift 1 and 21 Sep 2025 shift 1, IBPS RRB Clerk 13 Dec 2025 shift 1, IBPS PO 23 Aug 2025 shift 2, 24 Aug 2025 shift 1 and 22 Aug 2026 shift 1: 6 sets. Bank: all 48 Sreedhar sets (41 distinct; 7 are reprints of another set) and both Guidely sets (13 short passages), 173 questions, of which 171 were solved by script with coordinates; all 171 agree with the bank key. Floor: the 6 sister sets meet the 6 to 10 sister floor; the Clerk side is below the floor of 8 shifts, because the three 12 Dec 2021 sets may come from the same day's shifts and the Guidely 2025 paper may overlap an Adda247 shift. The web shift analyses (adda247, careerpower, pw.live, time4education) could not be opened from here; one Oliveboard page gave 4 Oct 2025 shift 1 as "Direction & Distance, 3 questions", which matches the paper. Memory-based papers are reconstructions, not official papers.
+**A note on time.** A direction set is one passage followed by two or three questions. The honest target is about 60 seconds to place the points and 15 to 20 seconds for each question after that.
+### 1. Basic Type, Core Mental Model and Grid
+**What the basic type looks like.** Six to nine points on flat ground. Either a walk ("starts from A, walks 6m west to B, takes a left turn ...") or a network of clues ("Point E is 7m north of point F"). The questions ask the direction of one point from another, the shortest distance between two points, or which pair is the odd one out.
+**The one idea: put the first point at (0, 0). East is plus and west is minus for the first number; north is plus and south is minus for the second. Every clue then adds a few metres to one of the two numbers.**
+**Clue to coordinates**
+<table header-row="true">
+<tr>
+<td>The clue says</td>
+<td>Write</td>
+<td>Note</td>
+</tr>
+<tr>
+<td>P is 5m north of Q</td>
+<td>P = Q + (0, 5)</td>
+<td>Q must already be placed; if only P is placed, go backwards</td>
+</tr>
+<tr>
+<td>P is 5m west of Q</td>
+<td>P = Q + (-5, 0)</td>
+<td></td>
+</tr>
+<tr>
+<td>X is east of P and south of Q (no distance)</td>
+<td>X = (east number of Q, north number of P)</td>
+<td>The corner where a row meets a column</td>
+</tr>
+<tr>
+<td>M is exactly in the middle of A and B</td>
+<td>Average both numbers</td>
+<td>Halves are fine</td>
+</tr>
+<tr>
+<td>Walker facing N, E, S, W takes a right turn</td>
+<td>Faces E, S, W, N</td>
+<td>One step clockwise</td>
+</tr>
+<tr>
+<td>Walker facing N, E, S, W takes a left turn</td>
+<td>Faces W, N, E, S</td>
+<td>One step anticlockwise</td>
+</tr>
+<tr>
+<td>"walks 9m west" in the middle of a walk</td>
+<td>A compass word, not a turn</td>
+<td>Ignore the old facing</td>
+</tr>
+</table>
+**Answering**
+<table header-row="true">
+<tr>
+<td>Question</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>Direction of X with respect to Y</td>
+<td>X minus Y. One gap zero: N, S, E or W. Both gaps non-zero: a corner (North-East and so on), whatever their sizes</td>
+</tr>
+<tr>
+<td>Shortest distance X to Y</td>
+<td>Square both gaps, add, take the root. Same row or column: just the gap</td>
+</tr>
+<tr>
+<td>Total distance walked</td>
+<td>Add the legs</td>
+</tr>
+<tr>
+<td>Odd pair out</td>
+<td>Direction of the second point from the first, for each option</td>
+</tr>
+<tr>
+<td>Three points in a straight line</td>
+<td>Same east number (column) or same north number (row)</td>
+</tr>
+</table>
+**Right-angle shapes to know:** 3-4-5, 6-8-10, 9-12-15, 12-16-20, 15-20-25, 5-12-13, 8-15-17. Most bank and paper distances are one of these.
+**Non-linear warning.** Distances do not add along a bend. Gaps of 6 and 8 give 10, not 14, and the 14 is usually an option. The walking distance and the shortest distance are different questions.
+**Universal fallback (works on every set here):** write every point's two numbers in a short list before answering anything. All 171 bank questions and all 37 paper questions in this sample were answered by a script doing exactly that.
+### 2. Archetypes
+Bank counts are distinct sets (reprints removed) and questions. Paper counts are sets seen in the 7 IBPS Clerk sets and the 6 sister sets listed in the sample.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Bank</td>
+<td>Clerk papers</td>
+<td>Sister papers</td>
+<td>Label</td>
+</tr>
+<tr>
+<td>DS1</td>
+<td>Single walk with left and right turns</td>
+<td>25 sets, 73 questions</td>
+<td>3</td>
+<td>3</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>DS2</td>
+<td>Point network with distances</td>
+<td>20 sets, 54 questions</td>
+<td>4</td>
+<td>3</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>DS3</td>
+<td>Odd pair out by direction</td>
+<td>13 questions</td>
+<td>4</td>
+<td>3</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>DS4</td>
+<td>Point with no distance, midpoint, or a point added in the question</td>
+<td>21 questions add a point</td>
+<td>3</td>
+<td>1</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>DS5</td>
+<td>Total distance walked against shortest distance</td>
+<td>7 questions</td>
+<td>0</td>
+<td>3</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>DS6</td>
+<td>Two walkers who meet at one place</td>
+<td>5 sets, 14 questions</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>DS7</td>
+<td>Coded direction symbols ("C @ B (9m)")</td>
+<td>4 sets, 12 questions</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>DS8</td>
+<td>Turns only, "towards his right" from a facing, a walk turned round</td>
+<td>2 turn questions, 4 facing questions</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>DS9</td>
+<td>Shadows and sunrise</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Unverified</td>
+</tr>
+</table>
+DS3, DS4 and DS5 are question forms inside DS1 and DS2 passages, so they overlap those rows. DS5 is Confirmed on sister papers only (RRB Clerk 13 Dec 2025, SBI Clerk 20 Sep 2025, IBPS PO 22 Aug 2026).
+Where they were seen:
+- Walks: IBPS Clerk 12 Dec 2021 (Guidely set 2, rides in km; Adda247), IBPS Clerk 2025 (Guidely); RRB Clerk 13 Dec 2025 shift 1, IBPS PO 23 Aug 2025 shift 2, IBPS PO 22 Aug 2026 shift 1.
+- Networks: IBPS Clerk 12 Dec 2021 (Guidely set 1), 2023 (Guidely), 4 Oct 2025 shifts 1 and 3; SBI Clerk 20 Sep 2025 and 21 Sep 2025, IBPS PO 24 Aug 2025 shift 1.
+- Paper question kinds (37): direction 14, distance 11, odd pair 7, total distance 3, distance and direction together 1, "which point is not north-east" 1.
+What the bank looks like (154 distinct questions): distance 65, direction 56, odd pair 13, total 7, distance and direction 4, straight line 4, other 5. Of 56 direction answers, 47 are corners. Of 69 distance answers, 6 keep a root and 8 say "approximately".
+#### Core archetypes
+**DS1. Single walk with turns. Confirmed.** *Pattern clues:* "starts walking", "takes a left turn", "turns right and walks". *Shortcut engine:* write the facing above each leg (N, E, S, W; right is one step clockwise), then each leg is a point clue. *Worked example:* Drill 2 below.
+**DS2. Point network. Confirmed.** *Pattern clues:* "Point E is 7m north of point F", often with clues out of order. *Shortcut engine:* start from the point named in the most clues, place points in the order the chain allows, go backwards when only the first-named point is known. *Worked example:* Drill 1 below.
+**DS3. Odd pair out. Confirmed.** *Pattern clues:* "Four of the following five pairs are alike based on their directions". *Shortcut engine:* direction of the second point from the first for two options; that is the common direction; find the one that breaks it, often a pure East or South among corners. *Worked example:* IBPS Clerk 4 Oct 2025 shift 3, Q93: W-N, S-V, P-G and Q-V are South-East, G-N is North-East.
+**DS4. Point with no distance or added in the question. Confirmed.** *Pattern clues:* "east of W and south of R", "exactly in the middle", "If point H is 5m south of S". *Shortcut engine:* a corner takes one number from each point; a midpoint averages; an added point is used for that question only. *Worked example:* Drill 6 below.
+**DS5. Total against shortest. Confirmed.** *Pattern clues:* "total distance covered / walked / ridden". *Shortcut engine:* the word total means add legs; everything else is a straight line. *Worked example:* Drill 2, the third question.
+#### Insurance archetypes (Bank only)
+**DS6. Two walkers.** Walk the first person to the shared place; walk the second from their own (0, 0), note how far the end is from their start, and subtract that from the shared place.
+**DS7. Coded symbols.** Read the key twice: once for the direction, once for what happens to the number (in the bank: subtract 4, subtract 3, add 2, or as given). Rewrite every coded clue in words before placing anything.
+**DS8. Turns only and facing.** Rights minus lefts, remainder after dividing by 4: 1 one right, 2 an about-turn, 3 one left. "Facing west, he moves towards his right" means north.
+Shadows and sunrise (DS9, Unverified): in the morning the sun is in the east and shadows fall west; in the evening shadows fall east. No such question was found in the bank or in the papers opened; this is general knowledge only.
+### 3. Drill Set
+Six original questions written for this module. Every answer was computed by a coordinate script.
+#### Drill 1 (Basic, DS2: point network)
+Point B is 6m north of point A. Point C is 8m east of point B. Point D is 2m south of point C. Point E is 5m west of point D.
+**Q1.** What is the shortest distance and direction of point E with respect to point A? (A) 5m North-East (B) 7m North-East (C) 5m North-West (D) 10m North-East (E) 4m North
+**Conventional Method:** draw the four clues to scale and measure.
+**30-Second Exam Method:** A (0, 0), B (0, 6), C (8, 6), D (8, 4), E (3, 4). E minus A: 3 east, 4 north. Corner: North-East. 3-4-5: 5m.
+**Answer:** (A) 5m North-East.
+**Option Elimination Hack:** both gaps are non-zero, so the answer is a corner: (E) is out. A to C is the 6-8-10 shape, so (D) is the distance to C, not E.
+**IBPS Trap Warning:** adding the gaps gives 7m, option (B). Distance never adds along a bend.
+#### Drill 2 (Exam level, DS1 and DS5: walk with turns)
+Kiran walks 10m south from point P to point Q, turns left and walks 7m to point R, turns left and walks 4m to point S, then turns right and walks 5m to point T.
+**Q1.** What is the shortest distance between P and T? (A) 6√5m (B) 12m (C) 26m (D) 4√5m (E) 13m
+**Q2.** In which direction is T with respect to P? (A) North-East (B) South-East (C) South-West (D) East (E) North-West
+**Q3.** What is the total distance walked by Kiran? (A) 20m (B) 6√5m (C) 26m (D) 22m (E) 30m
+**Conventional Method:** draw each leg, then measure P to T.
+**30-Second Exam Method:** facings S, E (left of south), N (left of east), E (right of north). P (0, 0), Q (0, -10), R (7, -10), S (7, -6), T (12, -6). T minus P: 12 east, 6 south. √(144 + 36) = √180 = 6√5. Total 10 + 7 + 4 + 5 = 26.
+**Answers:** Q1 (A) 6√5m. Q2 (B) South-East. Q3 (C) 26m.
+**Option Elimination Hack:** for Q1, 26 is the total walk, so (C) is out at once, and 12 is only the east-west gap. 6√5 is about 13.4, so 13m (E) is a near miss: when the options carry roots, the exact root is wanted.
+**IBPS Trap Warning:** a left turn while facing south sends the walker east, not west. Taking the page's left gives T at (-12, -6) and the answer South-West.
+#### Drill 3 (Exam level, DS7: coded symbols)
+P $ Q (n) means P is (n - 3)m north of Q. P # Q (n) means P is (n - 3)m east of Q. P @ Q (n) means P is (n - 3)m south of Q. Statements: A $ B (8), C # B (15), D @ C (7).
+**Q1.** What is the distance between A and C? (A) 17m (B) 13m (C) 12m (D) 7m (E) √119m
+**Conventional Method:** decode every statement, draw, measure.
+**30-Second Exam Method:** subtract 3 from every number first. A is 5m north of B; C is 12m east of B; D is 4m south of C. B (0, 0), A (0, 5), C (12, 0). 5-12-13.
+**Answer:** (B) 13m.
+**Option Elimination Hack:** with gaps 5 and 12 the answer is more than 12 and less than 17; only (B) fits.
+**IBPS Trap Warning:** using the numbers in brackets as they stand gives gaps 8 and 15 and the answer 17m, option (A).
+#### Drill 4 (Trap, DS6: two walkers)
+Mohan walks 5m west from his house, turns right and walks 9m to the temple. Sohan walks 3m north from his house, turns left and walks 7m to the same temple.
+**Q1.** What is the distance and direction of Sohan's house with respect to Mohan's house? (A) 2√10m North-East (B) 8m North-East (C) 2√10m North-West (D) 6m North (E) √52m North-East
+**Conventional Method:** draw Mohan's walk, then try to fit Sohan's walk onto the temple.
+**30-Second Exam Method:** Mohan's house (0, 0), temple (-5, 9). Sohan's temple is 7 west and 3 north of his house, so his house is the temple plus 7 east and 3 south: (2, 6). Gaps 2 and 6: √40 = 2√10, North-East.
+**Answer:** (A) 2√10m North-East.
+**Option Elimination Hack:** Sohan's house is east of Mohan's (2 > 0), so (C) and (D) are out.
+**IBPS Trap Warning:** subtracting Sohan's walk the wrong way round puts his house at (-12, 12), North-West.
+#### Drill 5 (Basic, DS8: turns only)
+Neha starts walking towards the west. She takes a right turn, then two consecutive left turns, then a right turn, and finally a left turn.
+**Q1.** In which direction is she walking now? (A) North (B) South (C) East (D) West (E) North-West
+**Conventional Method:** turn one step at a time: W, N, W, S, W, S.
+**30-Second Exam Method:** 2 rights and 3 lefts leave one left. One left from west is south.
+**Answer:** (B) South.
+**Option Elimination Hack:** after quarter turns only, the answer can never be a corner: (E) is out.
+**IBPS Trap Warning:** a right turn while facing west is north, not east.
+#### Drill 6 (Exam level, DS4: corner point and an added point)
+Point Q is 12m east of point P. Point R is 9m north of point Q. Point S is 4m west of point R. Point T is south of S and east of P. Point U is 3m south of T.
+**Q1.** What is the shortest distance and direction of point R with respect to point U? (A) 4√10m North-East (B) 16m North-East (C) 12m North (D) 4√10m South-West (E) 13m North-East
+**Conventional Method:** draw, guess where T is, measure.
+**30-Second Exam Method:** P (0, 0), Q (12, 0), R (12, 9), S (8, 9). T takes S's column and P's row: (8, 0). U (8, -3). R minus U: 4 east, 12 north. √160 = 4√10, North-East.
+**Answer:** (A) 4√10m North-East.
+**Option Elimination Hack:** R is above and to the right of U, so (C) and (D) are out; 16 = 4 + 12 adds the gaps, so (B) is out.
+**IBPS Trap Warning:** (D) is U with respect to R, the question turned round.
+### 4. Cheat Sheet and Recall Matrix
+<table header-row="true">
+<tr>
+<td>If you see...</td>
+<td>Do this</td>
+<td>Watch for</td>
+</tr>
+<tr>
+<td>"P is 5m north of Q"</td>
+<td>P = Q + (0, 5)</td>
+<td>Which point is new</td>
+</tr>
+<tr>
+<td>"takes a left / right turn"</td>
+<td>Turn the facing, then walk</td>
+<td>Using the page's left</td>
+</tr>
+<tr>
+<td>"walks 9m west" mid-walk</td>
+<td>Compass word, no turn</td>
+<td>Turning anyway</td>
+</tr>
+<tr>
+<td>"X with respect to Y"</td>
+<td>X minus Y</td>
+<td>Answering Y from X</td>
+</tr>
+<tr>
+<td>Both gaps non-zero</td>
+<td>Corner direction</td>
+<td>Unequal gaps are still a corner</td>
+</tr>
+<tr>
+<td>"shortest distance"</td>
+<td>Squares, add, root</td>
+<td>Adding the gaps</td>
+</tr>
+<tr>
+<td>"approximately"</td>
+<td>Nearest square</td>
+<td>Rounding the wrong way</td>
+</tr>
+<tr>
+<td>"total distance"</td>
+<td>Add legs</td>
+<td>Using the straight line</td>
+</tr>
+<tr>
+<td>"east of W and south of R"</td>
+<td>Corner: one number from each</td>
+<td>Inventing a distance</td>
+</tr>
+<tr>
+<td>"exactly in the middle"</td>
+<td>Average</td>
+<td>Halves</td>
+</tr>
+<tr>
+<td>Odd pair out</td>
+<td>Second from first, two options first</td>
+<td>The pure direction among corners</td>
+</tr>
+<tr>
+<td>Coded symbols</td>
+<td>Decode direction and number rule</td>
+<td>A hidden "minus 4"</td>
+</tr>
+<tr>
+<td>Two walkers</td>
+<td>Second walk backwards from the meeting point</td>
+<td>Subtracting the wrong way</td>
+</tr>
+</table>
+**Order of work, in one line:** first point at (0, 0), list every point's two numbers, then each question is a subtraction, a root or a sum.
+**Two checks before you answer.** Is it "X with respect to Y" or the other way round? Does the question say "total"?
+### 5. Practice Ladder
+All from the Sreedhar bank; every keyed answer in these sets agreed with the coordinate script. MT is the model test number; the range is the question numbers.
+<table header-row="true">
+<tr>
+<td>Rung</td>
+<td>Set</td>
+<td>Shape</td>
+<td>Keyed answers in order</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT80-92 to 93</td>
+<td>Network</td>
+<td>D, A</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT65-75 to 77</td>
+<td>Walk, total and shortest</td>
+<td>C, A, C</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT34-90 to 92</td>
+<td>Walk, added point</td>
+<td>B, D, A</td>
+</tr>
+<tr>
+<td>2: 60 seconds a question</td>
+<td>S-MT79-85 to 87</td>
+<td>Network, odd pair</td>
+<td>C, D, D</td>
+</tr>
+<tr>
+<td>2: 60 seconds a question</td>
+<td>S-MT17-97 to 100</td>
+<td>Long walk, odd pair</td>
+<td>E, D, C, D</td>
+</tr>
+<tr>
+<td>2: 60 seconds a question</td>
+<td>S-MT75-74 to 76</td>
+<td>Network, corner point</td>
+<td>B, D, E</td>
+</tr>
+<tr>
+<td>3: 45 seconds a question</td>
+<td>S-MT69-89 to 91</td>
+<td>Network, two corner points</td>
+<td>C, B, D</td>
+</tr>
+<tr>
+<td>3: 45 seconds a question</td>
+<td>S-MT41-83 to 84</td>
+<td>Two walkers</td>
+<td>C, D</td>
+</tr>
+<tr>
+<td>3: 45 seconds a question</td>
+<td>S-MT45-89 to 91</td>
+<td>Coded symbols</td>
+<td>B, D, C</td>
+</tr>
+<tr>
+<td>3: 45 seconds a question</td>
+<td>S-MT5-93 to 96</td>
+<td>Walk with a jump, odd pair</td>
+<td>E, C, A, E</td>
+</tr>
+</table>
+After these, the two Guidely "Direction sense - Paragraph based" sets give 38 more checked questions, including the facing forms (DS8).
+### 6. Verification Log
+**Built:** 6 Oct 2026.
+**What was checked by script**
+- Every direction-sense question in the banks was written as coordinates in a small Python script (each clue is "P is d metres in direction D of Q"; walks turn left or right from the current facing; corner points, midpoints and points added in a question are separate rules). Sreedhar: 133 questions in 48 sets; Guidely: 38 of 40 questions. All 171 agree with the bank key.
+- Reading choices the script had to make: "approximately" means the nearest whole option (8 questions); "total distance in between Saba's initial point and Roma's initial point" (S-MT47-91 and its reprint S-MT59-91) is keyed as the whole path walked by both, 42m, not the straight 19.2m; "her friend's house is in line with her home" (S-MT42-90) was read as due north of home; "how many points are north-east of Z" (S-MT10-73) counts points strictly north and east, and leaves out the point added in another question; "Z is 25m south-west of L and south of K" (S-MT28-93) is south and west, not 45 degrees.
+- Not solved: Guidely set 2, questions 16 and 17, which give no distances at all ("V is north of Q", "L is south-east of M").
+- Paper sets: the 13 sets (37 questions) were solved the same way. 30 answers agree with the paper's own key, 6 had no key in the file (IBPS Clerk 12 Dec 2021 Adda247 and 4 Oct 2025 shift 1), and 1 does not agree: SBI Clerk 21 Sep 2025 Q88, where the clues as remembered give √109m for G to H but the key is 6m. In the 4 Oct 2025 shift 1 paper one clue reads "Point D is 12m east of point D"; I read it as "of point C".
+- Twice a paper's "total distance between X and Y" was the path along the clues (SBI Clerk 20 Sep 2025 Q76, 60m; IBPS PO 22 Aug 2026 Q11, 40m). The script agrees with both keys on that reading.
+- The six drills and the nine lesson checks were computed by the same script.
+**Where the paper evidence comes from.** The cached pdftotext files of the 35 papers, searched for direction words, turn words, "shadow" and coded "means ... north" clues. Two-column layouts and one bilingual paper were read by hand from the text. The 5 Oct 2025 shift 1 paper is in Hindi with garbled text and could not be searched. Several Clerk files are Quant-only, so the 16 with Reasoning are the real base.
+**Web.** WebFetch was refused for adda247.com, careerpower.in, pw.live, oliveboard.in and time4education.com; plain downloads worked for oliveboard.in, bankersadda.com, testbook.com and guidely.in. Of those, only the Oliveboard page had a usable prelims table (4 Oct 2025 shift 1: Direction & Distance, 3 questions). The 2024 Clerk shifts could not be checked from the web.
+**Not verified:** how often direction sets appear across all 2024 to 2026 shifts; whether the three 12 Dec 2021 reconstructions are different shifts; shadows and sunrise (no question found anywhere). Memory-based papers are reconstructions.
+**Corrections:** none so far.
 ## Pattern Index: Reasoning Puzzles
 Built 6 Oct 2026 on request, each in its own file, mainly from the bank. The bank has no Reasoning PYQs. Paper counts are puzzle sets seen in 12 IBPS Clerk Prelims papers and 12 sister papers opened on the web. In each topic 40 bank sets were solved by brute-force script; the rest were sorted but not solved.
 <table header-row="true">

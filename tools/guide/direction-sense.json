@@ -1,0 +1,767 @@
+{
+ "module": "direction-sense",
+ "intro": [
+  "Direction sense: points on flat ground, walks with turns, and the distance and direction between two points. In the clerk papers it comes as one short passage with two or three questions.",
+  "**What I studied.** The cached memory-based papers (23 IBPS Clerk Prelims files, 16 of them with a readable Reasoning section, and 12 sister papers), and every direction-sense set in your banks: 48 Sreedhar sets (41 distinct; 7 are reprints) and 2 Guidely sets (13 short passages). Every bank question was written out as coordinates and solved by script: 171 of 171 keyed answers agree, after dropping 2 Guidely questions that give no distances. The 13 paper sets were solved the same way.",
+  "| What was measured | Count |",
+  "| Paper sets found | 7 in the IBPS Clerk files, 6 in the sister papers |",
+  "| Point network against walk (papers) | 7 networks, 6 walks |",
+  "| Questions per paper set | 2 or 3 (37 questions in 13 sets) |",
+  "| Paper question kinds | direction 14, distance 11, odd pair 7, total distance 3, distance and direction 1, which points 1 |",
+  "| Paper keys checked by script | 30 agree, 1 does not (SBI Clerk 21 Sep 2025, Q88), 6 papers had no key |",
+  "| Bank sets (distinct) | 25 walks, 20 networks, 5 two walkers, 4 coded, 1 turns only |",
+  "| Bank question kinds (154 distinct) | distance 65, direction 56, odd pair 13, total 7, distance and direction 4, straight line 4, other 5 |",
+  "| Direction answers that are corners | 47 of 56 |",
+  "| Distance answers left as a root | 6 of 69; 8 more say \"approximately\" |",
+  "| Coded symbols, two walkers, shadows in the papers | none found |",
+  "**What it means.** One method covers almost everything: a grid with the first point at (0, 0), then subtraction for direction and the right-angle rule for distance. The lessons add one complication at a time: turns, total against shortest, points with no distance, group questions, two walkers, codes, and facing.",
+  "A note on honesty: memory-based papers are reconstructions, and one SBI Clerk question does not agree with its own clues as remembered. The web shift analyses could not be opened from here, except one (4 Oct 2025 shift 1: \"Direction & Distance, 3 questions\"). Coded, two-walker and shadow forms are from the bank or general knowledge only."
+ ],
+ "needs": [],
+ "after": [
+  "That is direction sense as the clerk papers and your bank set it. The **Quick revision** tab has the archetype table and the drills.",
+  "For every set: first point at (0, 0), place points in the order the clues allow, then subtract for direction and use the right-angle rule for distance. Read \"total\" and \"with respect to\" twice."
+ ],
+ "lessons": [
+  {
+   "id": "ds-grid",
+   "code": "D1",
+   "title": "Points on a grid: \"with respect to\"",
+   "plain": "The starting point. Give every point two numbers, east and north, and every direction question becomes a subtraction.",
+   "needs": [],
+   "teach": [
+    "Every direction question in the papers is about a few points on flat ground. The quickest reliable way to hold them is a **grid**: put the first point at (0, 0), count east as plus and west as minus for the first number, north as plus and south as minus for the second.",
+    "| The clue says | Write |",
+    "| P is 5m north of Q | P = Q + (0, 5) |",
+    "| P is 5m south of Q | P = Q + (0, -5) |",
+    "| P is 5m east of Q | P = Q + (5, 0) |",
+    "| P is 5m west of Q | P = Q + (-5, 0) |",
+    "**Read \"of\" carefully.** In \"P is 5m north of Q\", Q is already placed and P is the new point. Papers often write clues in an awkward order (\"Point D is 8m north of point B\" when only D is known). Then go backwards: B = D + (0, -8).",
+    "**\"Direction of X with respect to Y\"** means: stand at Y and look at X. Work out X minus Y.",
+    "| X minus Y | Answer |",
+    "| only north (east-west gap 0) | North |",
+    "| north and east | North-East |",
+    "| south and west | South-West |",
+    "| only west | West |",
+    "Any east-west gap together with any north-south gap gives a corner direction (North-East and so on), even if the gaps are unequal. This is how all 56 direction questions in the bank were keyed: 47 of them have a corner answer.",
+    "**The commonest slip** is answering the other way round. \"X with respect to Y\" is from Y to X. If you get North-West, the opposite question (Y with respect to X) would be South-East, and both are usually among the options."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 October 2025, shift 3 (memory-based). S is 8m south of W. X is 5m east of S. N is 6m east of M, which is 4m south of X. N is 9m north of V. G is 6m west of V. O is 3m north of G. Q is 5m west of O. P is 6m north of Q. In which direction is S with respect to V?",
+    "steps": [
+     "Put W at (0, 0). S is 8m south: (0, -8). X is 5m east of S: (5, -8).",
+     "M is 4m south of X: (5, -12). N is 6m east of M: (11, -12). V is 9m south of N: (11, -21).",
+     "S minus V: 11 west, 13 north.",
+     "Both gaps are non-zero, so it is a corner: North-West. The paper key agrees."
+    ],
+    "answer": "North-West"
+   },
+   "check": {
+    "q": "Point K is 6m north of point L. Point M is 4m east of point L. In which direction is K with respect to M?",
+    "options": {
+     "a": "North-East",
+     "b": "North-West",
+     "c": "South-East",
+     "d": "South-West"
+    },
+    "answer": "B",
+    "why": "L (0, 0), K (0, 6), M (4, 0). K minus M is 4 west and 6 north: North-West. South-East is M with respect to K, the question turned round."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-55-78375-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-25-78345-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-direction-sense#1"
+    ],
+    "tags": [
+     "Clues out of order: N is placed before L and H.",
+     "Unequal gaps still give a corner direction.",
+     "Same column: a pure North, not a corner.",
+     "Eight clues; three of them must be read backwards.",
+     "A long chain: place the points in the order the chain allows, not the printed order."
+    ]
+   }
+  },
+  {
+   "id": "ds-distance",
+   "code": "D2",
+   "title": "Shortest distance: the right-angle rule",
+   "plain": "New: distance between two points that are not on one line. Square the two gaps, add, take the square root.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "**Same line.** If two points share a column or a row, the distance is just the gap.",
+    "**Different line.** The east-west gap and the north-south gap are two sides of a right angle. The straight (\"shortest\") distance is the long side: **square both gaps, add, take the square root.**",
+    "| Gaps | Distance |",
+    "| 3 and 4 | 5 |",
+    "| 6 and 8 | 10 |",
+    "| 5 and 12 | 13 |",
+    "| 8 and 15 | 17 |",
+    "| 9 and 12 | 15 |",
+    "| 12 and 16 | 20 |",
+    "Learn these; most bank and paper answers are whole numbers from this table. Of 69 distance questions in the bank, 6 keep a root in the answer (for example √41m or 2√74m) and 8 say \"approximately\", where the root is rounded to the nearest whole option.",
+    "**Simplifying a root.** Take out a square: √180 = √(36 × 5) = 6√5. Options are often written this way.",
+    "**\"Approximately\".** Find the two squares either side: √157 is between 12 (144) and 13 (169), and much nearer 169, so 13. Do not add the gaps: that is the walking distance, a different number and usually also an option."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2023 (memory-based, Guidely). Point E is 8km north of point V. Point T is 9km east of point V. Point T is 5km north of point K, which is 12km west of point S. Point M is 16km north of point S. What is the shortest distance between points M and K?",
+    "steps": [
+     "V (0, 0), T (9, 0), K (9, -5), S (21, -5), M (21, 11).",
+     "M minus K: 12 east, 16 north.",
+     "12 and 16 is the 3-4-5 shape four times over: 20.",
+     "The paper key is 20km."
+    ],
+    "answer": "20km"
+   },
+   "check": {
+    "q": "P is 9m south of Q. R is 12m west of P. What is the shortest distance between Q and R?",
+    "options": {
+     "a": "21m",
+     "b": "15m",
+     "c": "13m",
+     "d": "3m"
+    },
+    "answer": "B",
+    "why": "The gaps are 9 and 12: √(81 + 144) = √225 = 15. 21m adds the gaps, which is the walking distance from Q to R through P, not the shortest one."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-55-78375-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-51-78371-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-direction-sense#1"
+    ],
+    "tags": [
+     "6 and 8: the 10 you should know by heart.",
+     "Same shape again, hidden in a chain that starts in the middle.",
+     "Two points on opposite sides of the start.",
+     "\"Approximately\": 3√2 rounds to a whole option.",
+     "A larger root to round: no table shape fits."
+    ]
+   }
+  },
+  {
+   "id": "ds-walk",
+   "code": "D3",
+   "title": "Walks with left and right turns",
+   "plain": "New: the walker turns. Keep a note of which way they face; left and right turn the facing, not the page.",
+   "needs": [],
+   "teach": [
+    "The other common passage is a walk: \"starts from A, walks 6m west to B, takes a left turn, walks 22m to C ...\". Exactly the same grid, but each leg's direction depends on where the walker is facing.",
+    "| Facing | Turns right to face | Turns left to face |",
+    "| North | East | West |",
+    "| East | South | North |",
+    "| South | West | East |",
+    "| West | North | South |",
+    "A right turn is one step clockwise round N, E, S, W; a left turn is one step anticlockwise. Write the facing above each leg as you go: W, S, W, N ... A walk is just a chain of point clues once each leg has a compass direction.",
+    "**Two traps in the wording.** \"From point Q he walks 9m west\" names a compass direction: no turn is involved, whatever he faced before. And \"takes 5m left turn\" (a common bank wording) means turns left, then walks 5m.",
+    "In the 13 paper sets found, 6 were walks and 7 were point networks; in the bank, 25 sets were single walks, 5 had two walkers and 20 were networks."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 12 December 2021 (memory-based, Guidely). A person from his home rides 12km east to the hospital, takes a right turn and rides 10km to the medical shop, takes a right turn again and rides 16km to the hotel, takes a right turn and rides 7km to the theatre, rides 8km to the mall after taking a right turn, and finally takes a left turn and rides 11km to the park. In which direction is the mall with respect to his home?",
+    "steps": [
+     "Facing E: home (0, 0), hospital (12, 0).",
+     "Right: facing S. Medical shop (12, -10). Right: facing W. Hotel (-4, -10).",
+     "Right: facing N. Theatre (-4, -3). Right: facing E. Mall (4, -3).",
+     "Mall minus home: 4 east, 3 south. South-East, which is the paper key."
+    ],
+    "answer": "South-East"
+   },
+   "check": {
+    "q": "Ria walks 5m north, turns right and walks 3m, turns right again and walks 9m. In which direction is she now from her starting point?",
+    "options": {
+     "a": "North-East",
+     "b": "South-East",
+     "c": "South-West",
+     "d": "East"
+    },
+    "answer": "B",
+    "why": "After two right turns she faces south. (0, 5), then (3, 5), then (3, -4): 3 east and 4 south, South-East. North-East is where she was after the second leg; the 9m leg takes her below the start."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-34-78354-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-39-78359-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-68-78388-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-20-78340-direction-sense#2"
+    ],
+    "tags": [
+     "Short walk; the final left turn sends her west, not east.",
+     "Three right turns in a row: the walker comes back down.",
+     "\"Walks 9m west\" in the middle: a compass word, not a turn.",
+     "Seven legs; the end lands directly below the start.",
+     "\"Three consecutive right turns\", and the answer keeps its root."
+    ]
+   }
+  },
+  {
+   "id": "ds-path",
+   "code": "D4",
+   "title": "Walking distance against shortest distance",
+   "plain": "New: two different \"distances\" in one walk. Total distance adds every leg; shortest distance is the straight line.",
+   "needs": [],
+   "teach": [
+    "| The question says | Do this |",
+    "| total distance walked / covered / ridden | add the legs |",
+    "| shortest distance, how far is X from Y | straight line from the grid (lesson D2) |",
+    "| distance between X and Y | straight line, unless the wording says total |",
+    "| how many turns | count every change of facing |",
+    "Both numbers are nearly always among the options, so a slip costs a mark. In the bank, 7 questions ask for a total; in the papers, 3 of the 13 sets did (RRB Clerk 13 Dec 2025, SBI Clerk 20 Sep 2025, IBPS PO 22 Aug 2026).",
+    "**A caution from the papers and the bank.** Twice the word \"total distance between X and Y\" meant the path along the clues, not the straight line: SBI Clerk 20 Sep 2025 (key 60m, the sum of the chain) and IBPS PO 22 Aug 2026 (key 40m, the legs from K back to Z). If \"total\" appears, add legs.",
+    "**Counting turns.** A clue such as \"walks 4m north\" after walking east is a turn even though the word \"turn\" is missing. Count changes of facing, not the word."
+   ],
+   "example": {
+    "q": "IBPS RRB Clerk Prelims, 13 December 2025, shift 1 (memory-based). From point P, Rohan walks 10km east to Q, takes a left turn and walks 14km to R, takes a right turn and walks 6km to S, takes another right turn and walks 11km to T, and finally takes a left turn and walks 9km to U. What is the total distance covered by Rohan?",
+    "steps": [
+     "The question says \"total distance covered\": add the legs.",
+     "10 + 14 + 6 + 11 + 9 = 50.",
+     "The straight distance P to U would be √(25² + 3²), about 25.2, which is not asked.",
+     "The paper key is 50km."
+    ],
+    "answer": "50km"
+   },
+   "check": {
+    "q": "A man walks 6m east, turns left and walks 8m, then turns left and walks 6m. What are his total walking distance and his shortest distance from the start?",
+    "options": {
+     "a": "20m and 8m",
+     "b": "20m and 10m",
+     "c": "14m and 8m",
+     "d": "8m and 20m"
+    },
+    "answer": "A",
+    "why": "Total 6 + 8 + 6 = 20. He ends at (0, 8), directly north of the start: 8m. 10m is the diagonal after only two legs."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-11-78331-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-37-78357-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-37-78357-direction-sense#2"
+    ],
+    "tags": [
+     "Total covered: add, do not use the grid.",
+     "Total from a middle point B, not from home.",
+     "\"From initial position to final position\" but the word total decides.",
+     "Eight legs end straight south of home: shortest distance is a plain gap.",
+     "Count changes of facing, not the word \"turn\"."
+    ]
+   }
+  },
+  {
+   "id": "ds-extra",
+   "code": "D5",
+   "title": "Points without a distance: corners, midpoints, new points",
+   "plain": "New: a point given only by two directions (\"east of W and south of R\"), a midpoint, or a point the question adds.",
+   "needs": [],
+   "teach": [
+    "**\"X is east of P and south of Q\", no distance.** X sits where P's row meets Q's column: it has the north number of P and the east number of Q. Draw the corner, do not guess a length.",
+    "**Midpoint.** \"R is exactly in the middle of H and G\": average the two numbers of each. It can be a half: (1.5, -3) is fine.",
+    "**A point the question adds.** \"If point H is 5m south of S ...\" is used only for that one question. 21 of the 154 distinct bank questions add a point this way, and so did 3 paper questions (IBPS Clerk 2021, IBPS Clerk 2025, SBI Clerk 2025).",
+    "**A point given by a long distance and a direction.** \"Z is 25m south-west of L and south of K\": Z is on K's column, and its distance from L is 25. The east-west gap is known, so the north-south gap comes from the right-angle rule (lesson D2). In the bank this \"south-west\" is not at 45 degrees; it just means south and west."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2025 (memory-based, Guidely). A person walks 6m east from point A to reach B, takes a left turn and walks 5m to C, takes a right turn and walks 7m to the bus stop. From the bus stop he walks 9m south to D, takes a left turn and walks 3m to E, which is 5m south of his school. If the medical shop is east of the bus stop and north of his school, what is the shortest distance between C and the medical shop?",
+    "steps": [
+     "A (0, 0), B (6, 0), C (6, 5), bus stop (13, 5), D (13, -4), E (16, -4), school (16, 1).",
+     "Medical shop: east of the bus stop (its row, north number 5) and north of the school (its column, east number 16): (16, 5).",
+     "C (6, 5) and the shop are on one row: 10 apart.",
+     "The paper key is 10m."
+    ],
+    "answer": "10m"
+   },
+   "check": {
+    "q": "A is 8m east of B. C is 6m north of B. D is to the north of A and to the east of C. What is the distance between B and D?",
+    "options": {
+     "a": "14m",
+     "b": "10m",
+     "c": "8m",
+     "d": "6m"
+    },
+    "answer": "B",
+    "why": "D takes A's column and C's row: (8, 6). From B (0, 0): √(64 + 36) = 10. 14m adds the gaps."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-34-78354-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-54-78374-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-28-78348-direction-sense#3"
+    ],
+    "tags": [
+     "A point added in the question, 6m west of the end point.",
+     "Added point Y, and U itself had no distance: it is where the south walk meets P's row.",
+     "Corner point G: east of W and south of R.",
+     "Corner point W, then distance and direction together.",
+     "\"25m south-west\" with a known column: the right-angle rule run backwards."
+    ]
+   }
+  },
+  {
+   "id": "ds-groups",
+   "code": "D6",
+   "title": "Odd pair out and straight lines",
+   "plain": "New: questions about many points at once. Work out one direction per option and look for the one that differs.",
+   "needs": [],
+   "teach": [
+    "\"Four of the following five pairs are alike in a certain way based on their directions\": for each pair, find the direction of the second point from the first. Four share one direction; the odd one is the answer. In all 13 bank questions of this kind and all 7 paper ones the \"certain way\" was the direction of the second point from the first.",
+    "Do not compute all five in full. Do two; if they agree, that is the common direction, and you are looking for the one that breaks it. The odd one is often a pure direction (East, South) among four corners.",
+    "A variant asks \"based on point D\": find each option point seen from D.",
+    "**Straight line.** \"Which three points are in a straight line?\" Look for three points with the same east number (one column) or the same north number (one row). In all 4 bank questions of this kind the line was a row or a column, never a slant."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 October 2025, shift 3 (memory-based), same passage as lesson D1. Four of the following five are alike in a certain way. Which does not belong? (a) W-N (b) S-V (c) P-G (d) Q-V (e) G-N",
+    "steps": [
+     "W (0, 0), S (0, -8), N (11, -12), V (11, -21), G (5, -21), O (5, -18), Q (0, -18), P (0, -12).",
+     "W to N: 11 east, 12 south, South-East. S to V: South-East. P to G: South-East. Q to V: South-East.",
+     "G to N: 6 east, 9 north, North-East.",
+     "G-N is the odd one; the paper key agrees."
+    ],
+    "answer": "G-N"
+   },
+   "check": {
+    "q": "B is 4m east of A. C is 3m north of B. D is 4m east of C. E is 3m north of D. Which pair does not belong with the others, by the direction of the second point from the first?",
+    "options": {
+     "a": "A – C",
+     "b": "B – D",
+     "c": "C – E",
+     "d": "A – B"
+    },
+    "answer": "D",
+    "why": "A–C, B–D and C–E are each 4 east and 3 north: North-East. A–B is pure East. A pure direction among corners is the usual odd one."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-55-78375-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-32-78352-direction-sense#3"
+    ],
+    "tags": [
+     "Eight-clue network; four pairs are North-West.",
+     "The odd one is a pure East among North-Easts.",
+     "Variant: every option seen from one point, D.",
+     "Straight line: same column.",
+     "Straight line through a point that is not in the first clue."
+    ]
+   }
+  },
+  {
+   "id": "ds-two-walks",
+   "code": "D7",
+   "title": "Two walkers who meet",
+   "plain": "New: two people walk to the same place. Place the first walk, then walk the second one backwards from the meeting point.",
+   "needs": [],
+   "teach": [
+    "Five bank sets have two walkers (\"Roy walks from home ... to reach the market. Alex walks from the bus stop ... to reach the market\"). The second starting point is unknown until you use the shared end.",
+    "**Method.** 1. Walk the first person from (0, 0) to the shared point. 2. Walk the second person from their own (0, 0) and note how far the end is from their start: for example 8 west and 6 north. 3. The second start is the shared point minus that: go 8 east and 6 south from the market.",
+    "Then answer as usual. These sets were not seen in the 13 paper sets found; they are bank only.",
+    "One bank set (MT47 / MT59) asks for \"the total distance in between Saba's initial point and Roma's initial point\" and keys 42m, the whole walk of both people, not the straight 19.2m. That reading is unusual; if you meet it, check whether a straight-line answer is among the options at all."
+   ],
+   "example": {
+    "q": "Bank, Sreedhar model test 60 (not a paper). Ravi walks 9m east from his house to Q, turns left and walks 5m to W, turns right and walks 4m to V, turns right again and walks 3m to H. Raju walks 6m west from his house to S, turns right and walks 2m to D, and turns left and walks 4m to H. In which direction is S with respect to W?",
+    "steps": [
+     "Ravi: house (0, 0), Q (9, 0), W (9, 5), V (13, 5), H (13, 2).",
+     "Raju from his own start: 6 west, then 2 north, then 4 west: H is 10 west and 2 north of his house.",
+     "So Raju's house is H plus 10 east and 2 south: (23, 0). S is 6 west of it: (17, 0).",
+     "S minus W: 8 east, 5 south. South-East, the bank key."
+    ],
+    "answer": "South-East"
+   },
+   "check": {
+    "q": "Asha walks 4m east from her house and then 3m north to the park. Bina walks 2m west from her house and then 3m north to the same park. How far apart are the two houses?",
+    "options": {
+     "a": "6m",
+     "b": "2m",
+     "c": "9m",
+     "d": "10m"
+    },
+    "answer": "A",
+    "why": "Park (4, 3). Bina's park is 2 west and 3 north of her house, so her house is (6, 0). The houses are 6 apart. 2m comes from subtracting 4 and 2 without noticing that the walks go opposite ways."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-41-78361-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-41-78361-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-47-78367-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-47-78367-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-44-78364-direction-sense#3"
+    ],
+    "tags": [
+     "Second start found backwards from the market.",
+     "Distance between the two starts, rounded.",
+     "Only the first walk is needed for this one.",
+     "Roma's start, then a 6-8-10 shape.",
+     "Two walkers tied by a point clue (R is 15m north of Q), not a shared end."
+    ]
+   }
+  },
+  {
+   "id": "ds-codes",
+   "code": "D8",
+   "title": "Coded direction symbols",
+   "plain": "New: the clues are in code (\"C @ B (9m)\"). Decode every clue into a plain sentence first, including any change to the number.",
+   "needs": [],
+   "teach": [
+    "Four distinct bank sets give a key such as \"X # Y (14m) means X is 10m west of Y\" and then a list of coded clues. The code hides two things: the **direction** and the **distance rule**.",
+    "| Bank set | The number in brackets | Real distance |",
+    "| MT45 / MT57 | 14 in the example, 10m meant | subtract 4 |",
+    "| MT52 | 10 in the example, 7m meant | subtract 3 |",
+    "| MT40 | 3 in the example, 5m meant | add 2 |",
+    "| MT31 | 7 means 7m | as given |",
+    "So read the example line of the key twice: once for the direction, once to see what happens to the number. Then rewrite each coded clue as an ordinary clue (\"C is 5m south of B\") and solve as in lesson D1.",
+    "One set (MT40) also uses a two-symbol code for corner directions in the options: \"@$\" = south-east. Work out the direction in words, then translate.",
+    "No coded set appeared in the 13 paper sets found; this is bank only."
+   ],
+   "example": {
+    "q": "Bank, Sreedhar model test 52 (not a paper). P & Q (10m) means P is 7m north of Q; P @ Q (6m) means P is 3m south of Q; P $ Q (19m) means P is 16m east of Q; P # Q (13m) means P is 10m west of Q. E $ F (8m), F & G (14m), G @ H (9m), H $ K (6m), K # M (11m). If R is exactly in the middle of H and G, in which direction is F with respect to R?",
+    "steps": [
+     "Each number loses 3. E is 5m east of F; F is 11m north of G; G is 6m south of H; H is 3m east of K; K is 8m west of M.",
+     "G (0, 0), F (0, 11), E (5, 11), H (0, 6), K (-3, 6), M (5, 6).",
+     "R is the middle of H and G: (0, 3).",
+     "F minus R: 8 north, no east-west gap. North, the bank key."
+    ],
+    "answer": "North"
+   },
+   "check": {
+    "q": "A @ B means A is 3m north of B; A # B means A is 4m east of B. If P @ Q and R # Q, what is the distance between P and R?",
+    "options": {
+     "a": "7m",
+     "b": "5m",
+     "c": "1m",
+     "d": "12m"
+    },
+    "answer": "B",
+    "why": "Q (0, 0), P (0, 3), R (4, 0). The 3-4-5 shape: 5m. 7m adds the two clues."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-45-78365-direction-sense#2",
+     "ibps-csa-xvi-prelims-2026-model-test-52-78372-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-40-78360-direction-sense#1",
+     "ibps-csa-xvi-prelims-2026-model-test-40-78360-direction-sense#3",
+     "ibps-csa-xvi-prelims-2026-model-test-31-78351-direction-sense#3"
+    ],
+    "tags": [
+     "Every number loses 4 before you place anything.",
+     "Every number loses 3.",
+     "Here every number gains 2.",
+     "The answer itself is written in code.",
+     "Numbers as given; a midpoint on top."
+    ]
+   }
+  },
+  {
+   "id": "ds-facing",
+   "code": "D9",
+   "title": "Facing and turning without distances",
+   "plain": "New: questions about which way someone faces, \"towards his right\" from a stated facing, and a whole walk turned round.",
+   "needs": [],
+   "teach": [
+    "**Turns only.** \"He walks south, takes a right turn, then a right turn, two left turns and a right turn. Which way is he walking?\" Use the facing table from lesson D3 one turn at a time, or count: each right is a quarter turn clockwise, each left a quarter turn anticlockwise, and a right and a left cancel. Here three rights and two lefts leave one right: south turns to west.",
+    "**\"Facing west, he moves 5m towards his right.\"** His right while facing west is north, so the first leg goes north. The same idea: \"moves 4m towards his right from his house\" uses the facing he had on arriving.",
+    "**\"If he had started towards north instead of east\"**: every leg turns by the same quarter turn. Turn the one leg you need; do not redraw the walk.",
+    "**Shadows (insurance, not seen).** In the morning the sun is in the east and shadows fall to the west; in the evening shadows fall to the east. No shadow question appeared in the bank or in the papers I opened, so this is from general knowledge only.",
+    "These forms are rare: 2 bank questions on turns only and rotation, a few on \"towards his right\", none in the papers found."
+   ],
+   "example": {
+    "q": "Bank, Sreedhar model test 68 (not a paper). Suresh starts walking in the south direction and after walking some distance he takes a right turn followed by a right turn. After that he takes two consecutive left turns and finally the right turn. In which direction is he walking now?",
+    "steps": [
+     "Facing south. Right: west. Right: north.",
+     "Left: west. Left: south.",
+     "Right: west.",
+     "West, the bank key. By counting: three rights minus two lefts is one right, and one right from south is west."
+    ],
+    "answer": "West"
+   },
+   "check": {
+    "q": "Raj faces south. He turns right, then right again, then left. Which direction does he face now?",
+    "options": {
+     "a": "North",
+     "b": "East",
+     "c": "West",
+     "d": "South"
+    },
+    "answer": "C",
+    "why": "Right from south is west, right again is north, left from north is west. East is the answer if you take right from south as east, as it would be on the page; it is not, because he faces south."
+   },
+   "shortcut": {
+    "title": "Count the turns",
+    "text": [
+     "Rights minus lefts, then take the remainder after dividing by 4: 1 = one right, 2 = about-turn, 3 = one left, 0 = same direction.",
+     "Use it only for turns-only questions; on a walk with distances you need every leg anyway."
+    ]
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "directions-sense-paragraph-based-set-1-1#4",
+     "directions-sense-paragraph-based-set-1-1#5",
+     "directions-sense-paragraph-based-set-1-1#6",
+     "directions-sense-paragraph-based-set-1-1#14",
+     "directions-sense-paragraph-based-set-2-1#9"
+    ],
+    "tags": [
+     "Facing west, \"moves 5m towards his right\": the first leg is north.",
+     "The same set: back to the unnamed start.",
+     "The same set; the answer stays a root, √80.",
+     "The whole walk turned round: turn only the leg you need.",
+     "\"Moves 4m towards his right\" from the house: right of facing south is west."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-direction-sense#2": [
+    "East is +x, north is +y. Points: F (0, 0), E (0, 7), G (-5, 0), N (3, 0), H (7, 0), L (3, -6), M (7, 3).",
+    "M seen from E: 7 east, 4 south.",
+    "Answer: South-East"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-direction-sense#1": [
+    "East is +x, north is +y. Points: B (0, 0), A (0, 7), C (5, 0), D (5, -6), E (9, -6), F (9, -4), G (0, -4).",
+    "F seen from A: 9 east, 11 south.",
+    "Answer: South-East"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-55-78375-direction-sense#2": [
+    "East is +x, north is +y. Points: Q (0, 0), P (0, 4), S (-5, 0), T (0, 2), W (0, -6), R (-8, 0), U (-8, 4), V (-8, -4).",
+    "P seen from W: no east-west gap, 10 north.",
+    "Answer: North"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-25-78345-direction-sense#1": [
+    "East is +x, north is +y. Points: T (0, 0), B (0, -8), E (4, -8), A (8, -12), S (11, -12), R (8, -14), P (4, -14), Q (11, 0), D (6, 0).",
+    "E seen from Q: 7 west, 8 south.",
+    "Answer: South-West"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-direction-sense#1": [
+    "East is +x, north is +y. Points: B (0, 0), H (-7, 0), R (-7, -5), K (3, -5), Q (3, 3), V (7, 3), M (7, 6), S (0, 6), T (0, 11).",
+    "V seen from R: 14 east, 8 north.",
+    "Answer: North-East"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-direction-sense#1": [
+    "East is +x, north is +y. Points: F (0, 0), E (0, 7), G (-5, 0), N (3, 0), H (7, 0), L (3, -6), M (7, 3).",
+    "Gaps 8 and 6: √(64 + 36) = √100 = 10m.",
+    "Answer: 10m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-direction-sense#1": [
+    "East is +x, north is +y. Points: F (0, 0), E (0, -6), G (12, 0), K (20, 0), M (12, 6), L (12, -6), N (12, 2).",
+    "Gaps 8 and 6: √(64 + 36) = √100 = 10m.",
+    "Answer: 10m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-55-78375-direction-sense#1": [
+    "East is +x, north is +y. Points: Q (0, 0), P (0, 4), S (-5, 0), T (0, 2), W (0, -6), R (-8, 0), U (-8, 4), V (-8, -4).",
+    "Gaps 8 and 6: √(64 + 36) = √100 = 10m.",
+    "Answer: 10m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-51-78371-direction-sense#2": [
+    "East is +x, north is +y. Points: B (0, 0), E (0, 6), F (8, 10), C (3, 10), G (3, 3), A (8, 6), D (12, 3), H (3, 6).",
+    "Gaps 3 and 3: √(9 + 9) = √18 = 3√2m ≈ 4.2.",
+    "Nearest option: 4m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-direction-sense#1": [
+    "East is +x, north is +y. Points: F (0, 0), B (0, 3), H (3, 0), N (3, 8), T (-2, 8), Z (-2, -4), W (-12, -4), X (-6, 3).",
+    "Gaps 15 and 12: √(225 + 144) = √369 = 3√41m ≈ 19.2.",
+    "Nearest option: 19m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-direction-sense#3": [
+    "East is +x, north is +y. Walk: A (0, 0), B (0, -7), D (-3, -7), C (-3, 4), E (-6, 4).",
+    "E seen from A: 6 west, 4 north.",
+    "Answer: North-West"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-34-78354-direction-sense#2": [
+    "East is +x, north is +y. Walk: P (0, 0), Q (0, 7), R (-5, 7), S (-5, 10), T (6, 10), W (6, -1), K (0, -1).",
+    "Gaps 6 and 8: √(36 + 64) = √100 = 10m.",
+    "Answer: 10m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-39-78359-direction-sense#1": [
+    "East is +x, north is +y. Walk: B (0, 0), G (0, -11), D (5, -11), Q (5, -6), E (-4, -6), S (-4, -14), T (-10, -14), P (-10, -11).",
+    "B seen from S: 4 east, 14 north.",
+    "Answer: North-East"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-68-78388-direction-sense#3": [
+    "East is +x, north is +y. Walk: B (0, 0), C (3, 0), D (3, -4), E (5, -4), F (5, 4), G (8, 4), H (8, -6), I (0, -6).",
+    "B seen from I: no east-west gap, 6 north.",
+    "Answer: North"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-20-78340-direction-sense#2": [
+    "East is +x, north is +y. Walk: A (0, 0), end (-10, 14).",
+    "Gaps 10 and 14: √(100 + 196) = √296 = 2√74m ≈ 17.2.",
+    "Answer: 2√74 m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-direction-sense#2": [
+    "East is +x, north is +y. Walk: A (0, 0), B (0, -7), D (-3, -7), C (-3, 4), E (-6, 4).",
+    "Add the legs walked: 7 + 3 + 11 + 3 = 24.",
+    "Answer: 24m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-direction-sense#3": [
+    "East is +x, north is +y. Walk: home (0, 0), B (-6, 8), D (-6, 18), G (6, 18), Z (6, 26), H (0, 18).",
+    "Add the legs walked: 10 + 12 + 8 = 30.",
+    "Answer: 30m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-11-78331-direction-sense#1": [
+    "East is +x, north is +y. Walk: temple (0, 0), park (-12, 0), office (-12, -6), school (-4, -6), mall (-4, -17), home (-10, -17), Market (-10, -13).",
+    "Add the legs walked: 12 + 6 + 8 + 11 + 6 + 4 = 47.",
+    "Answer: 47km"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-37-78357-direction-sense#1": [
+    "East is +x, north is +y. Walk: home (0, 0), office (0, -8).",
+    "home and office are on one line: 8 apart.",
+    "Answer: 8m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-37-78357-direction-sense#2": [
+    "East is +x, north is +y. Walk: home (0, 0), office (0, -8).",
+    "Facings leg by leg: N, W, S, E, N, E, S, W.",
+    "Every change counts, including \"walks 12m in south direction\" with no turn word: 7 changes.",
+    "Answer: 7"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-34-78354-direction-sense#3": [
+    "East is +x, north is +y. Walk: P (0, 0), Q (0, 7), R (-5, 7), S (-5, 10), T (6, 10), W (6, -1), K (0, -1).",
+    "P and K are on one line: 1 apart.",
+    "Answer: 1m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-direction-sense#2": [
+    "East is +x, north is +y. Walk: P (0, 0), Q (0, 10), R (7, 10), S (7, 4), T (3, 4), U (3, 0), Y (8, 0), Z (0, -2).",
+    "Y seen from R: 1 east, 10 south.",
+    "Answer: South-east"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-direction-sense#3": [
+    "East is +x, north is +y. Points: P (0, 0), S (0, -9), W (-7, -9), U (-7, -14), V (-3, -14), R (-3, -6), T (-9, -6), Q (-9, -14), H (0, -14), G (-3, -9).",
+    "Gaps 4 and 5: √(16 + 25) = √41 = √41m ≈ 6.4.",
+    "Answer: √41 m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-54-78374-direction-sense#2": [
+    "East is +x, north is +y. Points: R (0, 0), P (0, 4), S (6, 0), Q (6, -4), T (-3, 0), U (6, 4), W (0, -4).",
+    "W seen from T: 3 east, 4 south, so South-East; distance √(9 + 16) = 5m.",
+    "Answer: 5m South-East"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-28-78348-direction-sense#3": [
+    "East is +x, north is +y. Points: S (0, 0), P (-14, 0), G (-14, 9), M (-10, 9), K (-10, 20), H (0, 7), R (5, 7), L (5, 20).",
+    "K (-10, 20) and L (5, 20). Z is due south of K, so the east-west gap from L is 15.",
+    "25 and 15 is the 3-4-5 shape five times over: the north-south gap is 20, so Z is (-10, 0), on the same row as P (-14, 0).",
+    "P to Z: 4.",
+    "Answer: 4m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-direction-sense#3": [
+    "East is +x, north is +y. Points: A (0, 0), G (0, -12), C (7, -12), I (7, -7), E (10, -7), F (10, -15), B (-4, -15), D (-4, -7), H (2, -7).",
+    "Second point seen from the first: G – D North-West; H – A North-West; F – I North-West; E – G South-West; C – H North-West.",
+    "The odd one: E – G"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-direction-sense#2": [
+    "East is +x, north is +y. Points: F (0, 0), E (0, -6), G (12, 0), K (20, 0), M (12, 6), L (12, -6), N (12, 2).",
+    "Second point seen from the first: F, M North-East; L, K North-East; E, K North-East; F, N North-East; F, K East.",
+    "The odd one: F, K"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-direction-sense#2": [
+    "East is +x, north is +y. Walk: A (0, 0), B (-6, 0), C (-6, -22), D (-29, -22), E (-29, -18), F (-23, -18), G (-23, -6), H (-14, -6).",
+    "Each point seen from D: G North-East; F North-East; H North-East; B North-East; C East.",
+    "The odd one: C"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-55-78375-direction-sense#3": [
+    "East is +x, north is +y. Points: Q (0, 0), P (0, 4), S (-5, 0), T (0, 2), W (0, -6), R (-8, 0), U (-8, 4), V (-8, -4).",
+    "T (0, 2), Q (0, 0) and W (0, -6) all have east number 0: one column.",
+    "No other option shares a row or a column.",
+    "Answer: T, Q, W"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-32-78352-direction-sense#3": [
+    "East is +x, north is +y. Points: E (0, 0), B (-15, 0), G (-15, -45), A (-30, -45), D (-25, -5), F (-25, -25), C (0, -25), H (-15, -25).",
+    "B (-15, 0), H (-15, -25) and G (-15, -45) all have east number -15: one column.",
+    "No other option shares a row or a column.",
+    "Answer: BHG"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-41-78361-direction-sense#1": [
+    "East is +x, north is +y. Walk: Roy's home (0, 0), Market (-8, 5), bus stop (-12, -5).",
+    "Market seen from bus stop: 4 east, 10 north.",
+    "Answer: North-East"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-41-78361-direction-sense#2": [
+    "East is +x, north is +y. Walk: Roy's home (0, 0), Market (-8, 5), bus stop (-12, -5).",
+    "Gaps 12 and 5: √(144 + 25) = √169 = 13m.",
+    "Nearest option: 13m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-47-78367-direction-sense#1": [
+    "East is +x, north is +y. Walk: Saba's start (0, 0), Market (9, -3), Roma's start (17, -9).",
+    "Market seen from Saba's start: 9 east, 3 south.",
+    "Answer: South-East"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-47-78367-direction-sense#3": [
+    "East is +x, north is +y. Walk: Saba's start (0, 0), Market (9, -3), Roma's start (17, -9).",
+    "Gaps 8 and 6: √(64 + 36) = √100 = 10m.",
+    "Answer: 10m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-44-78364-direction-sense#3": [
+    "East is +x, north is +y. Walk: Q (0, 0), R (0, 15), M (15, 15), V (15, -5), N (35, -5), S (0, -25), T (35, -25).",
+    "Gaps 15 and 20: √(225 + 400) = √625 = 25m.",
+    "Answer: 25m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-45-78365-direction-sense#2": [
+    "East is +x, north is +y. Points: B (0, 0), C (0, -5), E (-5, -6), R (4, -6), Q (8, 0), S (8, -6), H (4, 0).",
+    "Gaps 8 and 6: √(64 + 36) = √100 = 10m.",
+    "Answer: 10m"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-52-78372-direction-sense#3": [
+    "East is +x, north is +y. Points: F (0, 0), E (5, 0), G (0, -11), H (0, -5), K (-3, -5), M (5, -5), R (0, -8).",
+    "K seen from E: 8 west, 5 south.",
+    "Answer: South-West"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-40-78360-direction-sense#1": [
+    "East is +x, north is +y. Points: Q (0, 0), P (0, -8), G (7, -8), Y (7, -2), K (-4, -2), V (-4, 3).",
+    "K seen from Q: 4 west, 2 south.",
+    "Answer: South-West"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-40-78360-direction-sense#3": [
+    "East is +x, north is +y. Points: Q (0, 0), P (0, -8), G (7, -8), Y (7, -2), K (-4, -2), V (-4, 3).",
+    "K (-4, -2) and G (7, -8): G is 11 east and 6 south of K, South-East.",
+    "In the set's own code @ is south and $ is east: @$.",
+    "Answer: @$"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-31-78351-direction-sense#3": [
+    "East is +x, north is +y. Points: F (0, 0), E (0, -8), G (5, -8), H (5, 4), K (-5, 4), L (-5, 0), B (0, 4).",
+    "B seen from F: no east-west gap, 4 north.",
+    "Answer: North"
+   ]
+  },
+  "guidely": {
+   "directions-sense-paragraph-based-set-1-1#4": [
+    "East is +x, north is +y. Walk: O (0, 0), P (0, 5), Q (4, 5), R (4, -3), S (7, -3), T (7, 0).",
+    "R seen from P: 4 east, 8 south.",
+    "Answer: Southeast"
+   ],
+   "directions-sense-paragraph-based-set-1-1#5": [
+    "East is +x, north is +y. Walk: O (0, 0), P (0, 5), Q (4, 5), R (4, -3), S (7, -3), T (7, 0).",
+    "O and T are on one line: 7 apart.",
+    "Answer: 7m"
+   ],
+   "directions-sense-paragraph-based-set-1-1#6": [
+    "East is +x, north is +y. Walk: O (0, 0), P (0, 5), Q (4, 5), R (4, -3), S (7, -3), T (7, 0).",
+    "Gaps 4 and 8: √(16 + 64) = √80 = 4√5m ≈ 8.9.",
+    "Answer: √80m"
+   ],
+   "directions-sense-paragraph-based-set-1-1#14": [
+    "East is +x, north is +y. Walk: A (0, 0), B (10, 0), C (10, 15), D (22, 15), F (22, 7), J (14, 7), E (16, 15), H (14, 0).",
+    "A (0, 0), B (10, 0), C (10, 15), D (22, 15), F (22, 7), J (14, 7). From F to J he walks west.",
+    "Starting north instead of east turns every leg a quarter turn anticlockwise: west becomes south.",
+    "Answer: South"
+   ],
+   "directions-sense-paragraph-based-set-2-1#9": [
+    "East is +x, north is +y. Walk: coffee shop (0, 0), office (4, -9), house (4, -19), end point (0, -19).",
+    "end point and coffee shop are on one line: 19 apart.",
+    "Answer: 19m"
+   ]
+  }
+ }
+}
