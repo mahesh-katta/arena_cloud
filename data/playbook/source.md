@@ -12006,6 +12006,13 @@ All six puzzle modules in one file. Each module is complete on its own and they 
 <td>6 Oct 2026</td>
 <td>49 bank sets (41 distinct Sreedhar + 2 Guidely), 171 of 173 questions solved by script; 7 sets in Clerk papers, 6 in sister papers</td>
 </tr>
+<tr>
+<td>9</td>
+<td>Triangular Arrangement</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>31 bank puzzles (153 questions; 24 Guidely, 7 Sreedhar); all 31 solved by script; 0 sets in Clerk papers, 0 in sister papers (Bank only)</td>
+</tr>
 </table>
 **A note on time, for all six.** A puzzle set is one arrangement followed by about five questions. Nobody solves the arrangement in 45 seconds. The honest target is 3 to 6 minutes for the arrangement and 15 to 20 seconds for each question after it.
 ## Module 1: Floor and Flat Puzzles - Speed Mastery Module
@@ -14260,6 +14267,358 @@ After these, the two Guidely "Direction sense - Paragraph based" sets give 38 mo
 **Where the paper evidence comes from.** The cached pdftotext files of the 35 papers, searched for direction words, turn words, "shadow" and coded "means ... north" clues. Two-column layouts and one bilingual paper were read by hand from the text. The 5 Oct 2025 shift 1 paper is in Hindi with garbled text and could not be searched. Several Clerk files are Quant-only, so the 16 with Reasoning are the real base.
 **Web.** WebFetch was refused for adda247.com, careerpower.in, pw.live, oliveboard.in and time4education.com; plain downloads worked for oliveboard.in, bankersadda.com, testbook.com and guidely.in. Of those, only the Oliveboard page had a usable prelims table (4 Oct 2025 shift 1: Direction & Distance, 3 questions). The 2024 Clerk shifts could not be checked from the web.
 **Not verified:** how often direction sets appear across all 2024 to 2026 shifts; whether the three 12 Dec 2021 reconstructions are different shifts; shadows and sunrise (no question found anywhere). Memory-based papers are reconstructions.
+**Corrections:** none so far.
+## Module 9: Triangular Arrangement - Speed Mastery Module
+**Sample.** This module is built from your question bank, because the papers did not have this puzzle. Papers opened: 28 memory-based papers with a Reasoning section (16 IBPS Clerk Prelims, 2016 to Oct 2025; 12 sister papers: SBI Clerk, IBPS RRB Clerk and IBPS PO Prelims, 2025 to 2026), plus 14 shift-analysis pages that list each shift's puzzles (IBPS Clerk 2023, 2024 and 2025; SBI Clerk 2025; IBPS RRB Clerk 2024 and 2025). Triangular sets found in them: 0, in clerk and sister papers alike. Bank: 31 triangular puzzles with 153 questions (24 Guidely puzzles in 6 sets, 7 Sreedhar sets; 28 different puzzles, because three are printed twice), all solved by script. Floor (8 target-exam shifts plus 6 to 10 sister questions): not met, and it cannot be met for a puzzle that was not set. Every archetype is Bank only. Memory-based papers are reconstructions, not official papers.
+**A note on time.** A triangular set is a small seating set: six or nine seats and about five questions. The honest target is 3 to 4 minutes for the arrangement and 15 to 20 seconds for each question after it. Since no clerk paper opened had one, give it less practice time than circles, squares and rows.
+### 1. Basic Type, Core Mental Model and Grid
+**What the basic type looks like.** Six persons sit round a triangular table: three at the corners and three in the middle of the sides. Clues say who sits to the left or right of whom, who sits at a corner, and how many sit between two people. In some sets the corner persons face outside and the middle persons face the centre.
+**The one idea: it is a circle of six whose seats take turns, corner, middle, corner, middle. Number the seats 1 to 6 clockwise from the top corner; the odd seats are corners and the even seats are middles, and every clue becomes a step of so many seats.**
+**How to draw it**
+- Six seats: a triangle with one corner at the top. Seats 1, 3, 5 are corners; 2, 4, 6 are middles.
+- Nine seats: a corner and two persons on each side. Seats 1, 4, 7 are corners; the sides are 2-3, 5-6, 8-9.
+- Sides only: two or three persons on each side and no one at a corner. Sides 1-2, 3-4, 5-6 (or 1-2-3, 4-5-6, 7-8-9).
+**Left and right: the only rule that matters**
+<table header-row="true">
+<tr>
+<td>The person faces</td>
+<td>Their left is</td>
+<td>Their right is</td>
+</tr>
+<tr>
+<td>The centre</td>
+<td>+1 (clockwise)</td>
+<td>-1 (anticlockwise)</td>
+</tr>
+<tr>
+<td>Outside</td>
+<td>-1 (anticlockwise)</td>
+<td>+1 (clockwise)</td>
+</tr>
+</table>
+Left and right always belong to the person named **after** the word "of". When corners and middles face opposite ways, write OUT beside seats 1, 3, 5 and IN beside 2, 4, 6 (or the reverse) before reading a clue.
+**The solving algorithm (use it on every set):**
+1. Draw the table and number the seats. Mark IN or OUT.
+2. Seat the person with a seat-type clue first: "X sits at a corner" goes to seat 1, "X sits in the middle of a side" to seat 2. All corners look alike, so no case is lost. A facing clue ("X faces away from the centre") is a seat-type clue when the facing goes by seat type.
+3. Take a clue that joins that person to one more. "Second to the left" fixes one seat; "one person between" gives two seats: draw twice.
+4. Use odd and even steps to kill a case at once.
+5. "Opposite", "the same number between" and neighbour clues settle the rest.
+6. Fill the last seats, then answer.
+**Grid: counting on the six-seat triangle**
+<table header-row="true">
+<tr>
+<td>Wording</td>
+<td>Seats away</td>
+<td>Seat type</td>
+</tr>
+<tr>
+<td>Immediate left / right</td>
+<td>1</td>
+<td>Changes</td>
+</tr>
+<tr>
+<td>Second to the left / right, one person between</td>
+<td>2</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Third to the left / right, two persons between, opposite</td>
+<td>3</td>
+<td>Changes: a corner faces the middle of the far side</td>
+</tr>
+<tr>
+<td>Second to the left = fourth to the right</td>
+<td>2 one way, 4 the other</td>
+<td>The two always add up to 6</td>
+</tr>
+</table>
+**Grid: the nine-seat triangle**
+<table header-row="true">
+<tr>
+<td>Step from a corner</td>
+<td>Lands on</td>
+</tr>
+<tr>
+<td>1 or 2</td>
+<td>A side seat</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The next corner</td>
+</tr>
+<tr>
+<td>4 or 5</td>
+<td>A side seat on the far side</td>
+</tr>
+<tr>
+<td>6</td>
+<td>The corner after next</td>
+</tr>
+</table>
+**Non-linear warning.** For a person facing outside, left and right swap. On a table where corners face out and middles face in, "immediate left" of a corner person and "immediate left" of a middle person point in opposite directions round the table. Treating everyone as facing the centre does not give a slightly wrong answer; in Drill 2 below it gives no arrangement at all.
+**Universal fallback (works on every set in this topic):** seat one person, then for the next most-mentioned person try each free seat in turn and run every clue. With six seats that is at most five small trials.
+### 2. Archetypes
+Bank counts are puzzles out of the 28 different bank puzzles (23 different Guidely puzzles and 5 different Sreedhar ones; the copies are counted once). Paper counts are sets seen in the 16 IBPS Clerk Prelims papers with a Reasoning section and in the 12 sister papers.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Bank puzzles</td>
+<td>Clerk papers</td>
+<td>Sister papers</td>
+<td>Label</td>
+</tr>
+<tr>
+<td>TR1</td>
+<td>Six seats, corners and middles, all facing the centre</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>TR2</td>
+<td>Six seats, corners and middles facing opposite ways</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>TR3</td>
+<td>Any six-seat table with a second fact per person (places, animals, ages, brands)</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>TR4</td>
+<td>Nine seats: a corner and two on each side</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>TR5</td>
+<td>Sides only: two or three on each side, no corner seat</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>TR6</td>
+<td>One vacant seat (six or nine seats)</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>TR7</td>
+<td>Other shapes: pentagon and hexagon tables</td>
+<td>48 Guidely puzzles, 5 solved</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+</table>
+TR3 overlaps TR1 and TR2 (its six puzzles are also counted there). Facing across the 28 puzzles: all to the centre 14, corners out and middles in 8, corners in and middles out 3, all outside 2, decided by clues 1.
+Where they were seen: nowhere in the papers. The seating sets in the 28 papers and the 14 shift lists were circles, square tables, single rows, parallel rows and unknown-number rows. Several shift-analysis sites blocked my reader, so a triangular set in an unopened shift cannot be ruled out.
+What the bank sets look like (from all 28, solved by script): in 24 of 28 a clue names one person's seat type (corner, middle or facing). After seating that person, the best two-person clue leaves 1 case in 7 puzzles, 2 cases in 13 and 3 or more in 3 (23 puzzles measured; the 5 others have an empty seat or no two-person clue). The first two-person clue as printed was already the best opening in 11 of 18 single-fact puzzles.
+#### Core archetypes
+None. No archetype of this topic was found in a clerk or sister paper, so all of them are insurance.
+#### Insurance archetypes (Bank only)
+**TR1. Six seats, all facing the centre. Bank only.** *Pattern clues:* "three persons sit at the corners and three in the middle of the sides … facing the centre". *Shortcut engine:* seat numbers 1 to 6, left = +1; odd steps change the seat type, even steps keep it. *Worked example:* Drill 1 below.
+**TR2. Corners and middles face opposite ways. Bank only.** *Pattern clues:* "the persons at the corners face away from the centre while those in the middle of the sides face the centre". *Shortcut engine:* OUT beside 1, 3, 5 and IN beside 2, 4, 6; a person two seats away shares your facing. "X faces away from the centre" seats X at a corner. *Worked example:* Drill 2 below.
+**TR3. A second fact per person. Bank only.** *Pattern clues:* "each of them likes a different …". *Shortcut engine:* treat "the one who likes Goa" as a person with a label; a clue that links two descriptions always names two different persons. A pattern rule ("no two water animals together") sorts the facts onto corners and middles.
+**TR4. Nine seats. Bank only.** *Pattern clues:* "two persons sit on each side and one at each corner". *Shortcut engine:* corners 1, 4, 7; a step of 3 goes corner to corner; "same side" picks 2-3, 5-6 or 8-9. *Worked example:* Drill 3 below.
+**TR5. Sides only. Bank only.** *Pattern clues:* "two persons sit on each side of the table" with no corner seats. *Shortcut engine:* no seat types; use sides. Neighbours on different sides sit at the two ends of a corner.
+**TR6. One vacant seat. Bank only.** *Pattern clues:* "which has six seats … one of the seats is vacant". *Shortcut engine:* the empty seat is a seat, not a person: "places" and "seats" count it, "persons between" skips it. *Worked example:* Drill 4 below.
+**TR7. Pentagon and hexagon. Bank only.** *Shortcut engine:* the same numbering. With corners and middles, odd seats are corners. Opposite is half the seats on: 5 on a ten-seat pentagon, 3 on a six-seat hexagon, 6 on a twelve-seat hexagon; a five-seat pentagon has no opposite.
+### 3. Drill Set
+Four original puzzles written for this module. Each was checked by a brute-force script and has exactly one arrangement (turning the whole table round does not count as a different one), and the answers below come from the script.
+#### Drill 1 (Basic, TR1: six seats facing the centre)
+Six persons A, B, C, D, E and F are sitting around a triangular table facing the centre. Three of them sit at the corners and three in the middle of the sides. D sits at one of the corners. B sits second to the right of D. C sits opposite D. A is an immediate neighbour of D. F sits second to the left of D. E is not an immediate neighbour of F.
+**Q1.** Who sits third to the left of E? (A) A (B) B (C) C (D) D (E) F
+**Q2.** How many persons sit between A and B when counted from the left of A? (A) None (B) One (C) Two (D) Three (E) Four
+**Q3.** Which of the following persons sits at a corner of the table? (A) A (B) C (C) E (D) F (E) None of these
+**Conventional Method:** fix D and try every order of the other five against the clues.
+**Fast Method:**
+1. D at a corner: seat 1. Facing the centre, left is +1 and right is -1.
+2. B is second to D's right: 1 - 2 = seat 5. F is second to D's left: seat 3. C is opposite D: seat 4.
+3. A and E take seats 2 and 6, both next to D. E is not next to F (seat 3), so E is 6 and A is 2.
+Seats 1 to 6: D, A, F, C, B, E.
+**Answers:** Q1 (E) F. Q2 (C) Two. Q3 (D) F.
+**Option Elimination Hack:** for Q3, C sits opposite D, and an opposite step is odd, so C is in a middle: (B) is out. A and E are D's neighbours, also odd steps: (A) and (C) are out.
+**IBPS Trap Warning:** "B sits second to the right of D" is measured from D, using D's right. Counting clockwise for "right" puts B at seat 3 and F on the same seat.
+#### Drill 2 (Exam level, TR2: corners out, middles in)
+Six persons P, Q, R, S, T and U are sitting around a triangular table. Three sit at the corners and face away from the centre; three sit in the middle of the sides and face the centre. R sits at one of the corners. U sits to the immediate right of R. S sits second to the left of U. Only one person sits between P and Q. T is not an immediate neighbour of Q.
+**Q1.** Who sits to the immediate left of P? (A) T (B) S (C) U (D) Q (E) R
+**Q2.** Who sits second to the left of T? (A) U (B) R (C) Q (D) S (E) P
+**Q3.** How many persons sit between R and S when counted from the right of R? (A) None (B) One (C) Two (D) Three (E) Four
+**Conventional Method:** fix R and try every order of the other five, using each person's own left and right.
+**Fast Method:**
+1. Corners 1, 3, 5 face OUT (left -1, right +1); middles 2, 4, 6 face IN (left +1, right -1).
+2. R at a corner: seat 1. R faces out, so U, on R's immediate right, is 1 + 1 = seat 2.
+3. U is a middle facing in: second to U's left is 2 + 2 = seat 4: S.
+4. One person between P and Q: they are two seats apart. The free seats are 3, 5, 6, and the only pair two apart is 3 and 5 (with S between them). T takes 6.
+5. T (6) is not next to Q: Q is not at 5, so Q is 3 and P is 5.
+Seats 1 to 6: R, U, Q, S, P, T.
+**Answers:** Q1 (B) S. Q2 (A) U. Q3 (C) Two.
+**Option Elimination Hack:** for Q1, P sits at a corner, so P's left is anticlockwise; T is on P's clockwise side, so (A) is the "facing the centre" answer and is out.
+**IBPS Trap Warning:** if everyone is treated as facing the centre, the script finds no arrangement at all. In Q1 the same slip gives T instead of S.
+#### Drill 3 (Exam level, TR4: nine seats)
+Nine persons A, B, C, D, E, F, G, H and I are sitting around a triangular table facing the centre. One person sits at each corner and two persons sit on each side. G sits at one of the corners. D sits third to the right of G. Only two persons sit between A and D. H sits to the immediate left of G. C is an immediate neighbour of D and sits on the same side as B. F sits second to the right of H. E is not an immediate neighbour of A.
+**Q1.** Who sits fourth to the left of B? (A) E (B) H (C) F (D) I (E) G
+**Q2.** Who sits on the same side as E? (A) D (B) F (C) G (D) B (E) None of these
+**Q3.** How many persons sit between C and H when counted from the right of C? (A) One (B) Two (C) Four (D) Three (E) Five
+**Conventional Method:** fix G and try every order of the other eight. That is 40,320 orders: do not.
+**Fast Method:**
+1. Corners 1, 4, 7; sides 2-3, 5-6, 8-9. Left +1, right -1.
+2. G at a corner: seat 7. D is third to G's right: 7 - 3 = 4, the next corner. Two persons between A and D: A at 1 (7 is G's).
+3. H is G's immediate left: 8. F is second to H's right: 8 - 2 = 6.
+4. C is next to D and on the same side as B: C at 3 with B at 2 (C at 5 would need B at 6, F's seat).
+5. E is not next to A (seats 2 and 9): E at 5, I at 9.
+Seats 1 to 9: A, B, C, D, E, F, G, H, I.
+**Answers:** Q1 (C) F. Q2 (B) F. Q3 (D) Three.
+**Option Elimination Hack:** for Q2, D and G sit at corners, and a corner belongs to no side: (A) and (C) are out.
+**IBPS Trap Warning:** "only two persons sit between A and D" is a step of three, corner to corner, not a step of two. Taking it as two puts A on a side seat and the drawing never closes.
+#### Drill 4 (Trap, TR6: one vacant seat)
+Five persons J, K, L, M and N are sitting around a triangular table which has six seats: three at the corners and three in the middle of the sides. All seats face the centre. One seat is vacant. J sits at one of the corners. The seat to the immediate left of K is vacant. L sits opposite J. Only one person sits between K and M. N is an immediate neighbour of J. K does not sit at a corner.
+**Q1.** How many persons sit between K and M when counted from the left of K? (A) None (B) One (C) Two (D) Three (E) Four
+**Q2.** Who sits second to the right of L? (A) J (B) M (C) N (D) K (E) The seat is vacant
+**Q3.** Who sits opposite the vacant seat? (A) K (B) M (C) J (D) L (E) N
+**Conventional Method:** treat the vacant seat as a sixth name and try every order.
+**Fast Method:**
+1. Left +1, right -1. J at a corner: seat 1. L opposite J: seat 4.
+2. K is in a middle: seat 2 or 6. The seat on K's left (K + 1) is vacant: K 2 gives vacant 3; K 6 gives vacant 1, which is J's. So K 2, vacant 3.
+3. One person between K (2) and M: M at 5 (the vacant seat and L lie between: one person) or M at 6 (J lies between the other way: one person). N is next to J, and with M at 6 no seat next to J is left. So M 5, N 6.
+Seats 1 to 6: J, K, vacant, L, M, N.
+**Answers:** Q1 (B) One. Q2 (D) K. Q3 (E) N.
+**Option Elimination Hack:** for Q2, L faces the centre, so L's right runs 3 then 2: the vacant seat is only first to the right, so (E) is out.
+**IBPS Trap Warning:** "only one person between K and M" counts persons, not seats. Two seats lie between them and one is vacant. Read it as "one seat between" and the script finds no arrangement.
+### 4. Cheat Sheet and Recall Matrix
+<table header-row="true">
+<tr>
+<td>If you see…</td>
+<td>Do this</td>
+<td>Watch for</td>
+</tr>
+<tr>
+<td>"Three at the corners, three in the middle of the sides"</td>
+<td>Seats 1 to 6 from the top corner; odd = corner</td>
+<td>Forgetting the seat type is a free clue</td>
+</tr>
+<tr>
+<td>"X sits at a corner" / "in the middle of a side"</td>
+<td>X at seat 1 / seat 2; no cases</td>
+<td>Drawing three cases for three corners</td>
+</tr>
+<tr>
+<td>"Facing the centre"</td>
+<td>Left = +1</td>
+<td>Nothing flips</td>
+</tr>
+<tr>
+<td>"Corners face outside, middles face the centre"</td>
+<td>OUT on 1, 3, 5; IN on 2, 4, 6</td>
+<td>Using one left for everybody</td>
+</tr>
+<tr>
+<td>"X faces away from the centre"</td>
+<td>X sits at a corner (when facing goes by seat)</td>
+<td>Missing the disguised seat clue</td>
+</tr>
+<tr>
+<td>Second to the left, one person between</td>
+<td>Step 2, same seat type</td>
+<td>Second to the left = fourth to the right</td>
+</tr>
+<tr>
+<td>Third to the left, two persons between, opposite</td>
+<td>Step 3, seat type changes</td>
+<td>Thinking three goes corner to corner (true only on nine seats)</td>
+</tr>
+<tr>
+<td>Nine seats, "two on each side"</td>
+<td>Corners 1, 4, 7; sides 2-3, 5-6, 8-9</td>
+<td>A corner is on no side</td>
+</tr>
+<tr>
+<td>"The one who likes Goa"</td>
+<td>A label in a seat; a different person from anyone placed against it</td>
+<td>Giving S the Goa he is measured from</td>
+</tr>
+<tr>
+<td>Vacant seat</td>
+<td>A seat, not a person</td>
+<td>Counting it in "persons between"</td>
+</tr>
+<tr>
+<td>"Who is related to X"</td>
+<td>Work out the step from the two given pairs; try both directions</td>
+<td>The bank keys it both ways</td>
+</tr>
+</table>
+**Order of work, in one line:** number the seats, IN/OUT marks, seat-type person at seat 1 or 2, a clue from that person, odd and even steps, two drawings at most, neighbour clues, questions.
+**Two checks before you answer.** For "nth to the left of X": is X facing in or out? For "how many persons between": are you counting persons, or did you count an empty seat?
+### 5. Practice Ladder
+These are Sreedhar mock sets from your bank. Every one has exactly one arrangement by script and every key agreed with the script. MT is the model test number; the range is the question numbers.
+<table header-row="true">
+<tr>
+<td>Rung</td>
+<td>Set</td>
+<td>Shape</td>
+<td>Keyed answers in order</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT54-76 to 80</td>
+<td>Six seats, all facing the centre</td>
+<td>C, A, D, B, E</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT23-66 to 70</td>
+<td>Six seats, facing the centre, with places</td>
+<td>C, B, E, C, E</td>
+</tr>
+<tr>
+<td>2: 5 minutes a set</td>
+<td>S-MT57-85 to 88</td>
+<td>Corners out, middles in</td>
+<td>B, A, D, C</td>
+</tr>
+<tr>
+<td>2: 5 minutes a set</td>
+<td>S-MT42-84 to 88</td>
+<td>Corners out, middles in, with animals</td>
+<td>C, E, D, A, D</td>
+</tr>
+<tr>
+<td>3: 4 minutes a set</td>
+<td>S-MT33-92 to 96</td>
+<td>Corners in, middles out, with ages</td>
+<td>B, C, E, D, B</td>
+</tr>
+</table>
+S-MT45-85 to 88 repeats S-MT57 and S-MT3-66 to 70 repeats S-MT23 word for word, so they are left out. After these, the Guidely triangular sets give the nine-seat, sides-only and vacant-seat forms; the guided lessons use them.
+### 6. Verification Log
+**Built:** 6 Oct 2026.
+**What was checked by script**
+- All 31 bank triangular puzzles (24 Guidely, 7 Sreedhar) were written as exact conditions and solved by brute force: a script tried every seating (and every assignment of the second fact) against every clue as worded, and each question was answered from what survived.
+- 31 of 31 have exactly one arrangement. Three Guidely puzzles have lost their opening lines; two were settled by trying each facing rule and keeping the one with a single arrangement whose answers match (facing the centre), and one (set 4, questions 6 to 10) only has one arrangement if the corners face outside.
+- 153 of 153 questions agree with the key. Three of them only under a stated reading: two "who is related to X" questions are keyed as "who is to X as A is to B" (the usual reading gives another listed option), and one "arranged in increasing order from ball 3" question is keyed as 1 to 9 placed clockwise from ball 3's seat. One Sreedhar puzzle (MT23, and its copy MT3) has three arrangements unless "between R and the one who likes Munnar" is read as two different persons.
+- Two Guidely sets print a clue inside a question (set 2, question 14; set 3, question 16); one Guidely puzzle repeats another with one question changed.
+- Measurements (seat-type clues, cases after the best opening, printed order against the best order) come from the same script: it recorded which persons each clue names and counted the seats left for the second person.
+- Five Guidely pentagon and hexagon puzzles were solved the same way: one arrangement each, all keys agree, one "related" question under the reverse reading. The other 43 were not solved.
+- The four drill puzzles each have exactly one arrangement by script, and their answers come from the script.
+**Where the paper evidence comes from.** I searched the 35 cached paper texts (28 with a Reasoning section) for triangular, pentagonal and hexagonal seating: none; every "corner" hit was a square table. On the web I opened shift analyses on oliveboard.in, careerpower.in, adda247.com and testbook.com (IBPS Clerk 26 and 27 Aug 2023, 24 Aug 2024 Shifts 1 and 2, 25 Aug 2024 Shift 2, 31 Aug 2024 Shift 1, 4 and 5 Oct 2025 all shifts, 5 Oct 2025 Shifts 1 and 4; SBI Clerk 21 Sep 2025 Shift 3; IBPS RRB Clerk 17 Aug 2024 Shift 2, 7 Dec 2025 Shift 1, 13 Dec 2025 Shift 1, 14 Dec 2025 all shifts). None listed a triangular set. Two more pages opened (IBPS Clerk 2023 all days, 24 Aug 2024 Shift 4) gave no puzzle names. Coaching pages that call the triangle "important for IBPS and RRB" were site-written practice, not papers.
+**What could not be opened.** time4education.com, pw.live, mahendras.org, bankersadda.com, onlineresult.in and aspirantmitraa.com blocked my reader, so their shift lists were not read. A summary of one bankersadda quiz labelled "for SBI Clerk Prelims 2023" describes a triangular puzzle; it is a practice quiz, not a memory-based paper, and I could not open it.
+**Not verified:** shifts not covered by the pages above; the 43 unsolved pentagon and hexagon puzzles. Memory-based papers are reconstructions.
 **Corrections:** none so far.
 ## Pattern Index: Reasoning Puzzles
 Built 6 Oct 2026 on request, each in its own file, mainly from the bank. The bank has no Reasoning PYQs. Paper counts are puzzle sets seen in 12 IBPS Clerk Prelims papers and 12 sister papers opened on the web. In each topic 40 bank sets were solved by brute-force script; the rest were sorted but not solved.
