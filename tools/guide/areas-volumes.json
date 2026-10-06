@@ -1,0 +1,782 @@
+{
+ "module": "areas-volumes",
+ "intro": [
+  "Mensuration in the papers is almost always **two flat figures joined by one length**: find that length in one figure and carry it to the other.",
+  "There are ten short lessons, in the order of what the papers set. The last three (other figures, solids, reshaping) were not asked in the sample papers; learn them after the rest.",
+  "What the papers ask (Stage A count in Quick revision: 23 IBPS Clerk papers and 12 sister papers, all memory-based):",
+  "| Kind | Label | Lesson |",
+  "| Two figures joined by one length (M1) | Confirmed, 14 papers | M1 (two lessons) |",
+  "| One rectangle from a ratio or relation (M2) | Confirmed, 7 papers | M2 |",
+  "| Sides change by a percent (M3) | Confirmed, 3 papers | M3 |",
+  "| Circles and semicircles (M4) | Confirmed, 3 papers | M4 |",
+  "| Squares in a ratio (M5) | Confirmed, 2 papers | M5 |",
+  "| Paths, borders and costs (M6) | Seen once | M6 |",
+  "| Other figures, solids, reshaping | Bank only | M7, M8, M9 |"
+ ],
+ "needs": [
+  "ratio",
+  "percent-words"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has every formula on one page, the drills and the practice ladder.",
+  "Use pi = 22/7 unless the question says otherwise; it makes radii of 7, 14 and 21 come out cleanly."
+ ],
+ "lessons": [
+  {
+   "id": "rectangle",
+   "code": "M2",
+   "title": "One rectangle",
+   "plain": "The starting point: find a rectangle's sides from a ratio, a difference, the perimeter or the area.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Perimeter = 2 x (length + breadth). Area = length x breadth. Almost every question gives two facts and asks for a third.",
+    "**Half the perimeter is length + breadth.** Use it first. Perimeter 92 in the ratio 14 : 9: half is 46 = 23 parts, so a part is 2: 28 by 18.",
+    "**A difference instead of a ratio:** length 8 more than breadth, perimeter 40: l + b = 20 and l - b = 8, so b = 6 and l = 14.",
+    "**A ratio and the area:** parts x parts x unit². 8 : 5 with area 640: 40 unit² = 640, unit² = 16, unit = 4: 32 by 20.",
+    "Checked papers: seven papers (IBPS Clerk 2021, Dec 2021, Sep 2022; SBI Clerk Sep 2025; IBPS RRB Clerk Dec 2025 three times)."
+   ],
+   "example": {
+    "q": "The breadth of a rectangle is 25% less than its length and its perimeter is 70 cm. Find its area.",
+    "steps": [
+     "Breadth = 3/4 of length: ratio 4 : 3.",
+     "Half-perimeter 35 = 7 parts, so a part is 5: 20 by 15.",
+     "Area = 300 cm²."
+    ],
+    "answer": "300 cm² (IBPS RRB Clerk Prelims 6 Dec 2025, memory-based)."
+   },
+   "check": {
+    "q": "A rectangle is 6 cm longer than it is broad, and its perimeter is 44 cm. What is its area?",
+    "options": {
+     "a": "112 cm²",
+     "b": "120 cm²",
+     "c": "88 cm²",
+     "d": "96 cm²"
+    },
+    "answer": "A",
+    "why": "l + b = 22, l - b = 6: 14 by 8, area 112. (120 takes the sides as 12 and 10.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-b-pyq#12",
+     "clerk-19-mensuration-b-pyq#14",
+     "clerk-19-mensuration-b-pyq#13",
+     "clerk-19-mensuration-a-graded#1",
+     "clerk-19-mensuration-a-graded#2"
+    ],
+    "tags": [
+     "A ratio and the area.",
+     "A fraction and the perimeter.",
+     "The perimeter as a multiple of the breadth.",
+     "A ratio and the perimeter.",
+     "A square."
+    ]
+   }
+  },
+  {
+   "id": "two-figures",
+   "code": "M1",
+   "title": "Two figures joined by one length",
+   "plain": "New: the papers' favourite. One figure hands a length to another.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Read for the joining sentence: \"the side of the square is equal to the breadth of the rectangle\", \"2 cm more than the breadth\", \"the sum of the length and the side is 72\".",
+    "Then three steps:",
+    "1. Solve the figure that is fully described.",
+    "2. Carry the shared length across, with any \"more\" or \"less\".",
+    "3. Finish the other figure: its perimeter, area or missing side.",
+    "Checked papers: fourteen papers. In the sample this is the commonest mensuration question by far."
+   ],
+   "example": {
+    "q": "The length of a rectangle is 10 cm more than its breadth, and its perimeter is 68 cm. The breadth is 2 cm less than the side of a square. Find the area of the square.",
+    "steps": [
+     "l + b = 34 and l - b = 10, so the breadth is 12.",
+     "The square's side is 12 + 2 = 14.",
+     "Area = 196 cm²."
+    ],
+    "answer": "196 cm² (IBPS PO Prelims 22 Aug 2026, memory-based)."
+   },
+   "check": {
+    "q": "The perimeter of a square is 48 cm and its side equals the breadth of a rectangle of area 216 cm². What is the rectangle's length?",
+    "options": {
+     "a": "15 cm",
+     "b": "18 cm",
+     "c": "16 cm",
+     "d": "20 cm"
+    },
+    "answer": "B",
+    "why": "Side 12 = breadth, so length = 216 / 12 = 18. (16 uses the square's perimeter divided by 3.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-b-pyq#5",
+     "clerk-19-mensuration-b-pyq#9",
+     "clerk-19-mensuration-b-pyq#16",
+     "clerk-19-mensuration-b-pyq#19",
+     "clerk-19-mensuration-b-pyq#15",
+     "clerk-19-mensuration-a-graded#22",
+     "clerk-19-mensuration-a-graded#30"
+    ],
+    "tags": [
+     "Rectangle to square.",
+     "The link runs through the perimeters.",
+     "A sum of two lengths.",
+     "A ratio and an area hand over a side.",
+     "Two links at once.",
+     "Twice the side, and 4 less.",
+     "Equal perimeters, different areas."
+    ]
+   }
+  },
+  {
+   "id": "triangles",
+   "code": "M1",
+   "title": "Triangles and diagonals",
+   "plain": "New: a right triangle or a diagonal hands over the length.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Triangle area = base x height / 2, so **base = 2 x area / height**.",
+    "For right triangles, know these triples by sight; they save the square root: 3-4-5, 5-12-13, 7-24-25, 8-15-17, and their multiples (6-8-10, 10-24-26).",
+    "A square's diagonal is its side x √2. A rectangle's diagonal comes from the triple its sides make.",
+    "Checked papers: IBPS Clerk Oct 2025 and 2025 (Guidely) set the triangle-to-square form."
+   ],
+   "example": {
+    "q": "A right triangle has area 150 cm² and height 20 cm. Its base is the side of a square. Find the square's perimeter.",
+    "steps": [
+     "Base = 2 x 150 / 20 = 15.",
+     "Perimeter = 4 x 15 = 60 cm."
+    ],
+    "answer": "60 cm."
+   },
+   "check": {
+    "q": "A rectangle is 15 cm long with a 17 cm diagonal. What is its area?",
+    "options": {
+     "a": "120 cm²",
+     "b": "128 cm²",
+     "c": "255 cm²",
+     "d": "136 cm²"
+    },
+    "answer": "A",
+    "why": "8-15-17, so the breadth is 8: area 120. (255 multiplies the length by the diagonal.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-b-pyq#1",
+     "clerk-19-mensuration-b-pyq#6",
+     "clerk-19-mensuration-a-graded#4",
+     "clerk-19-mensuration-a-graded#9",
+     "clerk-19-mensuration-b-pyq#20"
+    ],
+    "tags": [
+     "Base from the area, then 3 less.",
+     "Base from the area.",
+     "A triple gives the height.",
+     "A rectangle's diagonal.",
+     "A square's diagonal, then a rectangle."
+    ]
+   }
+  },
+  {
+   "id": "circles",
+   "code": "M4",
+   "title": "Circles and semicircles",
+   "plain": "New: round figures. With pi = 22/7 the radius is usually a multiple of 7.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "| Figure | Perimeter | Area |",
+    "| circle | 44/7 x r | 22/7 x r x r |",
+    "| semicircle | 36/7 x r (the curve plus the diameter) | 11/7 x r x r |",
+    "So **semicircle perimeter 36 means r = 7**, 72 means r = 14, 108 means r = 21. **Circumference 88 means r = 14.**",
+    "\"Circumference minus diameter\" is 44/7 r - 2r = 30/7 r: 90 gives r = 21.",
+    "Checked papers: IBPS Clerk 2018, SBI Clerk Feb 2025 and IBPS RRB Clerk Dec 2025; semicircles also appear joined to rectangles (IBPS Clerk Sep 2022 and Oct 2025)."
+   ],
+   "example": {
+    "q": "The circumferences of two circles are 88 m and 132 m. Find the sum of their radii.",
+    "steps": [
+     "88 = 44/7 x r gives r = 14.",
+     "132 gives r = 21.",
+     "14 + 21 = 35 m."
+    ],
+    "answer": "35 m (SBI Clerk Prelims 22 Feb 2025, memory-based)."
+   },
+   "check": {
+    "q": "A semicircle has perimeter 72 cm. What is its radius?",
+    "options": {
+     "a": "7 cm",
+     "b": "14 cm",
+     "c": "21 cm",
+     "d": "11.5 cm"
+    },
+    "answer": "B",
+    "why": "36/7 x r = 72, so r = 14. (11.5 forgets the diameter and divides 72 by 2 x 22/7.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-a-graded#3",
+     "clerk-19-mensuration-a-graded#26",
+     "clerk-19-mensuration-b-pyq#18",
+     "clerk-19-mensuration-b-pyq#4",
+     "clerk-19-mensuration-b-pyq#11",
+     "clerk-19-mensuration-b-pyq#8"
+    ],
+    "tags": [
+     "From area to circumference.",
+     "Semicircle perimeter.",
+     "Circumference minus diameter.",
+     "A semicircle hands its radius to a rectangle.",
+     "The same, another paper.",
+     "Equal perimeter and circumference."
+    ]
+   }
+  },
+  {
+   "id": "squares",
+   "code": "M5",
+   "title": "Squares in a ratio",
+   "plain": "New: two squares compared. Lengths follow the ratio; areas follow its square.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Sides in 5 : 9 mean perimeters and diagonals in 5 : 9 too, but **areas in 25 : 81**.",
+    "Turn the given difference into parts: diagonals differing by 16√2 is 4 parts x √2, so one part is 4.",
+    "The largest circle cut from a square has a diameter equal to the side.",
+    "Checked papers: IBPS Clerk Oct 2025, two shifts."
+   ],
+   "example": {
+    "q": "The sides of two squares are in the ratio 3 : 5 and their perimeters differ by 32 cm. Find the difference of their areas.",
+    "steps": [
+     "Perimeters differ by 4 x 2 parts = 8 parts = 32, so a part is 4: sides 12 and 20.",
+     "Areas 144 and 400.",
+     "Difference = 256 cm²."
+    ],
+    "answer": "256 cm²."
+   },
+   "check": {
+    "q": "The sides of two squares are in the ratio 2 : 3. What is the ratio of their areas?",
+    "options": {
+     "a": "2 : 3",
+     "b": "4 : 9",
+     "c": "4 : 6",
+     "d": "8 : 27"
+    },
+    "answer": "B",
+    "why": "Areas follow the square of the ratio: 4 : 9. (8 : 27 is the cube, used for volumes.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-b-pyq#2",
+     "clerk-19-mensuration-b-pyq#3",
+     "clerk-19-mensuration-a-graded#28"
+    ],
+    "tags": [
+     "Diagonals differ.",
+     "One area given.",
+     "A circle cut from a square."
+    ]
+   }
+  },
+  {
+   "id": "percent-change",
+   "code": "M3",
+   "title": "Sides change by a percent",
+   "plain": "New: the sides grow or shrink, and the area or perimeter changes with them.",
+   "needs": [
+    "percent-words"
+   ],
+   "teach": [
+    "**Multiply the factors.** Length up 20% (x 1.2), breadth down 10% (x 0.9): area x 1.08, an 8% rise. Never add the percents.",
+    "**Backwards:** length x 0.8 and area x 0.96 means breadth x 0.96 / 0.8 = 1.2, a 20% rise.",
+    "**Same factor on every side:** a square or cube side up 50% makes the area x 2.25 (up 125%) and the volume x 3.375.",
+    "**Perimeter after a change:** find the new sides first; perimeter does not follow the area's factor.",
+    "Checked papers: IBPS Clerk 2023 and Aug 2024, IBPS PO Aug 2025."
+   ],
+   "example": {
+    "q": "The length of a rectangle is increased by 25%. By what percent must the breadth be decreased to keep the area the same?",
+    "steps": [
+     "25% = 1/4, so the length becomes 5/4.",
+     "The breadth must become 4/5.",
+     "A fall of 1/5 = 20%."
+    ],
+    "answer": "20%."
+   },
+   "check": {
+    "q": "The side of a square is increased by 20%. By what percent does its area increase?",
+    "options": {
+     "a": "20%",
+     "b": "40%",
+     "c": "44%",
+     "d": "21%"
+    },
+    "answer": "C",
+    "why": "1.2 x 1.2 = 1.44: a 44% rise. (40% adds the two 20s.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-b-pyq#7",
+     "clerk-19-mensuration-b-pyq#10",
+     "clerk-19-mensuration-a-graded#12",
+     "clerk-19-mensuration-a-graded#25"
+    ],
+    "tags": [
+     "Find the sides, change them, then the perimeter.",
+     "Backwards: the breadth's change.",
+     "One up, one down.",
+     "Every side up 50%."
+    ]
+   }
+  },
+  {
+   "id": "paths-costs",
+   "code": "M6",
+   "title": "Paths, borders and costs",
+   "plain": "New: a strip around or across a figure, and the cost of covering or fencing it.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "**Path outside:** add twice the width to each side for the outer rectangle; path = outer - inner.",
+    "**Path inside:** subtract twice the width instead.",
+    "**Two roads crossing:** add both roads, then take off the square where they cross (it was counted twice).",
+    "**Cost** = area (or length, for fencing) x rate. When the cost is given, divide first to get the area.",
+    "**Tiles:** floor area / tile area, in the same units. **Wheels:** distance / circumference.",
+    "**Four walls of a room:** 2(l + b) x h.",
+    "Checked papers: IBPS Clerk 2019 set a path with a cost."
+   ],
+   "example": {
+    "q": "A garden 30 m by 20 m has a path 2 m wide all around it outside. Find the cost of paving the path at Rs 10 per m².",
+    "steps": [
+     "Outer 34 by 24 = 816; inner 600.",
+     "Path = 216 m².",
+     "Cost = Rs 2,160."
+    ],
+    "answer": "Rs 2,160."
+   },
+   "check": {
+    "q": "How many square tiles of side 50 cm are needed for a floor 10 m by 6 m?",
+    "options": {
+     "a": "120",
+     "b": "240",
+     "c": "300",
+     "d": "60"
+    },
+    "answer": "B",
+    "why": "Floor 1,000 cm by 600 cm: 20 x 12 = 240 tiles. (60 divides square metres by 1.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-b-pyq#17",
+     "clerk-19-mensuration-a-graded#11",
+     "clerk-19-mensuration-a-graded#27",
+     "clerk-19-mensuration-a-graded#8",
+     "clerk-19-mensuration-a-graded#15",
+     "clerk-19-mensuration-a-graded#18",
+     "clerk-19-mensuration-a-graded#13"
+    ],
+    "tags": [
+     "A path, backwards from the cost.",
+     "A path outside.",
+     "Two crossing roads.",
+     "Fencing.",
+     "Tiles.",
+     "Four walls.",
+     "A wheel."
+    ]
+   }
+  },
+  {
+   "id": "other-figures",
+   "code": "M7",
+   "title": "Rhombus, trapezium, equilateral triangle",
+   "plain": "New: three more flat figures, each with one formula.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "| Figure | Area | Side or perimeter |",
+    "| rhombus, diagonals p and q | p x q / 2 | half-diagonals make a right triangle with the side |",
+    "| trapezium, parallel sides a and b, height h | (a + b) / 2 x h | add the four sides |",
+    "| equilateral triangle, side a | √3/4 x a x a | 3a |",
+    "No paper in the sample set these; they are common in practice sets."
+   ],
+   "example": {
+    "q": "The diagonals of a rhombus are 16 cm and 30 cm. Find its area and its side.",
+    "steps": [
+     "Area = 16 x 30 / 2 = 240 cm².",
+     "Half-diagonals 8 and 15 make 8-15-17: side 17 cm."
+    ],
+    "answer": "240 cm², side 17 cm."
+   },
+   "check": {
+    "q": "An equilateral triangle has perimeter 24 cm. What is its area?",
+    "options": {
+     "a": "16√3 cm²",
+     "b": "64 cm²",
+     "c": "32√3 cm²",
+     "d": "8√3 cm²"
+    },
+    "answer": "A",
+    "why": "Side 8: √3/4 x 64 = 16√3. (32√3 uses √3/2 in place of √3/4.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-a-graded#14",
+     "clerk-19-mensuration-a-graded#20",
+     "clerk-19-mensuration-a-graded#21"
+    ],
+    "tags": [
+     "Rhombus side from the diagonals.",
+     "Trapezium.",
+     "Equilateral triangle."
+    ]
+   }
+  },
+  {
+   "id": "solids",
+   "code": "M8",
+   "title": "Solids: volume and surface",
+   "plain": "New: three-dimensional shapes. None was asked in the sample papers; learn them after the rest.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "| Solid | Volume | Surface |",
+    "| cuboid l, b, h | l x b x h | 2(lb + bh + lh) |",
+    "| cube a | a x a x a | 6 x a x a |",
+    "| cylinder r, h | 22/7 x r x r x h | curved 2 x 22/7 x r x h |",
+    "| cone r, h, slant l | 1/3 x 22/7 x r x r x h | curved 22/7 x r x l, with l from the triple of r and h |",
+    "| sphere r | 4/3 x 22/7 x r x r x r | 4 x 22/7 x r x r |",
+    "| hemisphere r | 2/3 x 22/7 x r x r x r | curved 2 x 22/7 x r x r |",
+    "Cube roots worth knowing: 343 = 7³, 512 = 8³, 729 = 9³, 1,331 = 11³, 1,728 = 12³.",
+    "Bank only: the banks hold 109 such questions, but no paper in the sample set one."
+   ],
+   "example": {
+    "q": "A cylinder has radius 7 cm and height 15 cm. Find its volume and curved surface.",
+    "steps": [
+     "Volume = 22/7 x 49 x 15 = 2,310 cm³.",
+     "Curved surface = 2 x 22/7 x 7 x 15 = 660 cm²."
+    ],
+    "answer": "2,310 cm³ and 660 cm²."
+   },
+   "check": {
+    "q": "A cube has volume 512 cm³. What is its total surface area?",
+    "options": {
+     "a": "256 cm²",
+     "b": "384 cm²",
+     "c": "64 cm²",
+     "d": "512 cm²"
+    },
+    "answer": "B",
+    "why": "Side 8: 6 x 64 = 384. (64 is one face.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-a-graded#5",
+     "clerk-19-mensuration-a-graded#6",
+     "clerk-19-mensuration-a-graded#7",
+     "clerk-19-mensuration-a-graded#16",
+     "clerk-19-mensuration-a-graded#17"
+    ],
+    "tags": [
+     "Cube: from volume to surface.",
+     "Cuboid surface.",
+     "Cylinder volume.",
+     "Cone curved surface.",
+     "Hemisphere volume."
+    ]
+   }
+  },
+  {
+   "id": "reshaping",
+   "code": "M9",
+   "title": "Bent, melted, rolled",
+   "plain": "New: one shape becomes another. Something stays the same; find it.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "| What happens | What stays the same |",
+    "| a wire is bent into a new shape | its length (the perimeter) |",
+    "| metal is melted and recast | the volume |",
+    "| a sheet is rolled into a cylinder | the rolled edge becomes the circumference; the other edge the height |",
+    "Write that quantity once for the old shape and once for the new, and set them equal.",
+    "For the same length of wire, a circle encloses more area than a square. That is a quick check on the options.",
+    "Bank only in this sample."
+   ],
+   "example": {
+    "q": "A wire bent into a square encloses 121 cm². It is rebent into a circle. Find the circle's area.",
+    "steps": [
+     "Side 11, so the wire is 44 cm.",
+     "44/7 x r = 44, so r = 7.",
+     "Area = 22/7 x 49 = 154 cm²."
+    ],
+    "answer": "154 cm²."
+   },
+   "check": {
+    "q": "Eight small cubes of side 2 cm are melted into one cube. What is its side?",
+    "options": {
+     "a": "4 cm",
+     "b": "8 cm",
+     "c": "16 cm",
+     "d": "6 cm"
+    },
+    "answer": "A",
+    "why": "Volume 8 x 8 = 64, so the side is 4. (16 adds the sides.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-19-mensuration-a-graded#10",
+     "clerk-19-mensuration-a-graded#19",
+     "clerk-19-mensuration-a-graded#24",
+     "clerk-19-mensuration-a-graded#29",
+     "clerk-19-mensuration-a-graded#23"
+    ],
+    "tags": [
+     "Square wire into a circle.",
+     "Three cubes melted into one.",
+     "Cylinder into a sphere.",
+     "A sheet rolled.",
+     "Cone and cylinder of equal volume."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-19-mensuration-b-pyq#12": [
+    "8 : 5 means 40 unit² = 640, so unit² = 16 and unit = 4.",
+    "Length 32, breadth 20.",
+    "Perimeter = 2 x 52 = 104 cm."
+   ],
+   "clerk-19-mensuration-b-pyq#14": [
+    "Breadth = 4/5 of length: 5 : 4. Half-perimeter 54 = 9 parts, so a part is 6.",
+    "Length 30, breadth 24.",
+    "Area = 720 cm²."
+   ],
+   "clerk-19-mensuration-b-pyq#13": [
+    "Half-perimeter = 2.25 x breadth, and it is also 25 + breadth.",
+    "1.25 x breadth = 25, so the breadth is 20.",
+    "Area = 25 x 20 = 500."
+   ],
+   "clerk-19-mensuration-a-graded#1": [
+    "Half-perimeter 50 = 5 parts, so a part is 10: 30 by 20.",
+    "Area = 600 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#2": [
+    "Side = 48 / 4 = 12.",
+    "Area = 144 cm²."
+   ],
+   "clerk-19-mensuration-b-pyq#5": [
+    "Half-perimeter 46 = 23 parts, a part is 2: breadth 18.",
+    "Square side 20.",
+    "Perimeter of the square = 80."
+   ],
+   "clerk-19-mensuration-b-pyq#9": [
+    "Rectangle perimeter 2(12 + b); square side b - 2, perimeter 4b - 8.",
+    "24 + 2b = 4b - 8 + 16, so 2b = 16.",
+    "Breadth = 8 cm."
+   ],
+   "clerk-19-mensuration-b-pyq#16": [
+    "Half-perimeter 42 with breadth 18, so length 24.",
+    "Side of the square = 72 - 24 = 48."
+   ],
+   "clerk-19-mensuration-b-pyq#19": [
+    "4 : 3 with area 108: 12 unit² = 108, unit = 3, breadth 9.",
+    "Square side 9, area 81 cm²."
+   ],
+   "clerk-19-mensuration-b-pyq#15": [
+    "Square side 12, perimeter 48. Rectangle length = 12 / 0.75 = 16.",
+    "The rectangle's perimeter is 48 too, so its breadth is 24 - 16 = 8.",
+    "Area = 128 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#22": [
+    "Square side 14. Rectangle 28 by 10.",
+    "Perimeter = 2 x 38 = 76 cm."
+   ],
+   "clerk-19-mensuration-a-graded#30": [
+    "Square side 20, area 400. Rectangle l + b = 40 with area 300.",
+    "l(40 - l) = 300 gives 30 or 10; the length is the longer side.",
+    "Length = 30 cm."
+   ],
+   "clerk-19-mensuration-b-pyq#1": [
+    "Base = 2 x 180 / 24 = 15.",
+    "Square side = 15 - 3 = 12.",
+    "Area = 144."
+   ],
+   "clerk-19-mensuration-b-pyq#6": [
+    "Base = 2 x 144 / 24 = 12, which is the square's side.",
+    "Area = 144 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#4": [
+    "Base 12, hypotenuse 13: 5-12-13, so the height is 5.",
+    "Area = 12 x 5 / 2 = 30 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#9": [
+    "Length 24, diagonal 26: 10-24-26, so the breadth is 10.",
+    "Area = 240 cm²."
+   ],
+   "clerk-19-mensuration-b-pyq#20": [
+    "The square of area 1,225 has side 35 and diagonal 35√2; the length is 80% of that, 28√2.",
+    "Half-perimeter 47√2, so the breadth is 19√2.",
+    "Area = 28√2 x 19√2 = 1064."
+   ],
+   "clerk-19-mensuration-a-graded#3": [
+    "22/7 x r² = 154, so r² = 49 and r = 7.",
+    "Circumference = 44/7 x 7 = 44 cm."
+   ],
+   "clerk-19-mensuration-a-graded#26": [
+    "Perimeter = 36/7 x r = 36/7 x 14.",
+    "72 cm."
+   ],
+   "clerk-19-mensuration-b-pyq#18": [
+    "30/7 x r = 90, so r = 21.",
+    "Circle B: r = 14, area = 22/7 x 196.",
+    "616 cm²."
+   ],
+   "clerk-19-mensuration-b-pyq#4": [
+    "36/7 x r = 36, so r = 7 = the breadth.",
+    "Length = 147 / 7 = 21 cm."
+   ],
+   "clerk-19-mensuration-b-pyq#11": [
+    "36/7 x r = 36, so r = 7 = the breadth.",
+    "Length = 168 / 7 = 24."
+   ],
+   "clerk-19-mensuration-b-pyq#8": [
+    "Rectangle perimeter = 2(2r + 24) = 4r + 48; circumference = 44/7 x r.",
+    "4r + 48 = 44/7 x r gives 16/7 x r = 48, so r = 21.",
+    "Area = 22/7 x 441 = 1386 m²."
+   ],
+   "clerk-19-mensuration-b-pyq#2": [
+    "The diagonals differ by 4 parts x √2 = 16√2, so a part is 4: sides 20 and 36.",
+    "Areas 400 and 1,296.",
+    "Difference = 896."
+   ],
+   "clerk-19-mensuration-b-pyq#3": [
+    "Square A has side 16 = 4 parts, so a part is 4.",
+    "Square B side 20, perimeter 80 cm."
+   ],
+   "clerk-19-mensuration-a-graded#28": [
+    "The largest circle has radius 14.",
+    "Remaining = 784 - 22/7 x 196 = 784 - 616.",
+    "168 cm²."
+   ],
+   "clerk-19-mensuration-b-pyq#7": [
+    "4 : 3 with area 300: 12 unit² = 300, unit = 5: 20 by 15.",
+    "New length 22, new breadth 12.",
+    "New perimeter = 2 x 34 = 68."
+   ],
+   "clerk-19-mensuration-b-pyq#10": [
+    "Length x 0.8 and area x 0.96, so breadth x 0.96 / 0.8 = 1.2.",
+    "The breadth rises by 20%."
+   ],
+   "clerk-19-mensuration-a-graded#12": [
+    "Area factor = 1.2 x 0.9 = 1.08.",
+    "8% increase."
+   ],
+   "clerk-19-mensuration-a-graded#25": [
+    "Each side x 1.5, so the surface x 1.5 x 1.5 = 2.25.",
+    "An increase of 125%."
+   ],
+   "clerk-19-mensuration-b-pyq#17": [
+    "Path area = 273 / 0.5 = 546 m².",
+    "Outer (w + 6)(w + 9) minus inner w(w + 3) = 12w + 54 = 546, so w = 41.",
+    "Garden = 41 x 44 = 1804 m²."
+   ],
+   "clerk-19-mensuration-a-graded#11": [
+    "Outer 70 by 50 = 3,500; inner 60 by 40 = 2,400.",
+    "Path = 1100 m²."
+   ],
+   "clerk-19-mensuration-a-graded#27": [
+    "Roads 80 x 10 and 60 x 10, with a 10 x 10 crossing counted twice.",
+    "800 + 600 - 100 = 1,300 m².",
+    "1,300 is not among the options, so the answer is None of these."
+   ],
+   "clerk-19-mensuration-a-graded#8": [
+    "Perimeter = 2 x 80 = 160 m.",
+    "Cost = 160 x 25 = 4,000."
+   ],
+   "clerk-19-mensuration-a-graded#15": [
+    "Floor 800 cm by 600 cm; each tile 40 by 40.",
+    "20 x 15 = 300 tiles."
+   ],
+   "clerk-19-mensuration-a-graded#18": [
+    "Four walls = 2(10 + 8) x 3 = 108 m².",
+    "Cost = 108 x 15 = 1,620."
+   ],
+   "clerk-19-mensuration-a-graded#13": [
+    "Circumference = 44/7 x 35 = 220 cm = 2.2 m.",
+    "1.1 km = 1,100 m, so 500 revolutions.",
+    "500 is not among the options, so the answer is None of these."
+   ],
+   "clerk-19-mensuration-a-graded#14": [
+    "Half-diagonals 12 and 5 make 5-12-13: side 13.",
+    "Perimeter = 52 cm."
+   ],
+   "clerk-19-mensuration-a-graded#20": [
+    "Area = (20 + 14) / 2 x 12 = 204 cm².",
+    "204 is not among the options, so the answer is None of these."
+   ],
+   "clerk-19-mensuration-a-graded#21": [
+    "Side = 12.",
+    "Area = √3/4 x 144 = 36√3 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#5": [
+    "Side = 7, because 7 x 7 x 7 = 343.",
+    "Total surface = 6 x 49 = 294 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#6": [
+    "2(96 + 40 + 60) = 392 cm².",
+    "392 is not among the options, so the answer is None of these."
+   ],
+   "clerk-19-mensuration-a-graded#7": [
+    "22/7 x 49 x 10 = 1540 cm³."
+   ],
+   "clerk-19-mensuration-a-graded#16": [
+    "Slant height from 7-24-25: 25.",
+    "Curved surface = 22/7 x 7 x 25 = 550 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#17": [
+    "2/3 x 22/7 x 21 x 21 x 21 = 19,404 cm³."
+   ],
+   "clerk-19-mensuration-a-graded#10": [
+    "Square side 22, so the wire is 88 cm.",
+    "44/7 x r = 88, so r = 14.",
+    "Area = 22/7 x 196 = 616 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#19": [
+    "Volumes 27 + 64 + 125 = 216, so the new side is 6.",
+    "Surface = 6 x 36 = 216 cm²."
+   ],
+   "clerk-19-mensuration-a-graded#24": [
+    "22/7 x 36 x 8 = 4/3 x 22/7 x r³.",
+    "So r³ = 216.",
+    "r = 6 cm."
+   ],
+   "clerk-19-mensuration-a-graded#29": [
+    "Rolled along its length, the 44 cm edge is the circumference: r = 7; the height is 20.",
+    "Volume = 22/7 x 49 x 20 = 3080 cm³."
+   ],
+   "clerk-19-mensuration-a-graded#23": [
+    "Equal radii and volumes: 1/3 x h(cone) = h(cylinder).",
+    "So h(cone) = 3 x h(cylinder): 3 : 1."
+   ]
+  }
+ }
+}

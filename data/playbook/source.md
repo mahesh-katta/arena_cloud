@@ -104,6 +104,13 @@ Three files joined into one: the Quant Speed Mastery Modules, the Quant Pattern 
 <td>6 Oct 2026</td>
 <td>No PYQs in the bank; 59 questions from 12 IBPS Clerk Prelims papers opened on the web + 65 sister-exam questions (12 papers) + 933 bank practice questions</td>
 </tr>
+<tr>
+<td>15</td>
+<td>Areas & Volumes</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>20 IBPS Clerk Prelims PYQs (17 paper labels) + 11 sister-exam questions (10 papers) + 360 bank questions</td>
+</tr>
 </table>
 The archetype counts, labels and question IDs for every module are kept in the companion file “Bank Clerk Quant - Pattern Index”.
 ---
@@ -8392,6 +8399,490 @@ The 1,564 practice-question IDs are not listed here because the list would run t
 **Sister questions by archetype:** S1 20, S3 21, S4 13, S5 16, S7 9, A0 9, S6 0. Approximation appeared only in the four IBPS PO papers.
 **Notes.** 1,753 machine-checked and agreeing; 4 wrong keys (S-MT26-54, S-MT22-58, S-MT21-65, S-MT10-58); 34 unconfirmed (13 approximation near-misses, 20 questions (19 Guidely, 1 Sreedhar) with flattened powers, roots or fractions, 1 with no key); 436 image questions unread. 84 exact repeats. In 155 of the 227 PYQs the question mark is buried inside the expression.
 ---
+# Areas & Volumes - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers. PYQs found: 20 IBPS Clerk Prelims questions from 17 paper labels (in your bank as PYQ-MEN-01 to 20) and 11 sister-exam questions from 10 papers. Bank questions used: 360 (50 clerk, 83 Sreedhar, 227 Guidely; the clerk ones sorted by hand, the others by a keyword script, 8 of them unplaced). The floor is met. Every one of the 31 paper questions is a flat (2D) figure; no paper in the sample asked a solid. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** Almost every paper question is **two plain figures joined by one length**: a rectangle's breadth is a square's side, a semicircle's radius is a rectangle's breadth. Find that one length from the first figure, carry it to the second, and finish. Use pi = 22/7, so radii are multiples of 7 more often than not.
+### Formulas that are asked
+<table header-row="true">
+<tr>
+<td>Figure</td>
+<td>Perimeter</td>
+<td>Area</td>
+</tr>
+<tr>
+<td>Rectangle l, b</td>
+<td>2(l + b)</td>
+<td>l x b</td>
+</tr>
+<tr>
+<td>Square a</td>
+<td>4a; diagonal a√2</td>
+<td>a x a</td>
+</tr>
+<tr>
+<td>Circle r</td>
+<td>2 x 22/7 x r</td>
+<td>22/7 x r x r</td>
+</tr>
+<tr>
+<td>Semicircle r</td>
+<td>22/7 x r + 2r = 36/7 x r</td>
+<td>11/7 x r x r</td>
+</tr>
+<tr>
+<td>Right triangle, base b, height h</td>
+<td>add the sides; hypotenuse by 3-4-5, 5-12-13, 7-24-25, 8-15-17</td>
+<td>b x h / 2</td>
+</tr>
+<tr>
+<td>Equilateral triangle a</td>
+<td>3a</td>
+<td>√3/4 x a x a</td>
+</tr>
+<tr>
+<td>Rhombus, diagonals p, q</td>
+<td>4 x √((p/2)² + (q/2)²)</td>
+<td>p x q / 2</td>
+</tr>
+<tr>
+<td>Trapezium, parallel sides a, b, height h</td>
+<td>add the sides</td>
+<td>(a + b) / 2 x h</td>
+</tr>
+</table>
+### Solids (bank only in this sample)
+<table header-row="true">
+<tr>
+<td>Solid</td>
+<td>Volume</td>
+<td>Surface</td>
+</tr>
+<tr>
+<td>Cuboid l, b, h</td>
+<td>l x b x h</td>
+<td>total 2(lb + bh + lh); four walls 2(l + b) x h</td>
+</tr>
+<tr>
+<td>Cube a</td>
+<td>a³</td>
+<td>6a²</td>
+</tr>
+<tr>
+<td>Cylinder r, h</td>
+<td>22/7 x r² x h</td>
+<td>curved 2 x 22/7 x r x h</td>
+</tr>
+<tr>
+<td>Cone r, h, slant l</td>
+<td>1/3 x 22/7 x r² x h</td>
+<td>curved 22/7 x r x l, with l² = r² + h²</td>
+</tr>
+<tr>
+<td>Sphere r; hemisphere</td>
+<td>4/3 x 22/7 x r³; half of that</td>
+<td>4 x 22/7 x r²; hemisphere curved 2 x 22/7 x r²</td>
+</tr>
+</table>
+### Exact algorithms
+1. **Rectangle from a ratio and the perimeter.** Half the perimeter = l + b; split it in the ratio. 92 cm, 14 : 9: 46 in 23 parts, so 2 a part: 28 and 18.
+2. **Rectangle from a ratio and the area.** Area = parts x parts x unit². 4 : 3 with area 108: 12 unit² = 108, unit = 3: 12 and 9.
+3. **Semicircle perimeter 36.** 36/7 x r = 36, so r = 7. Perimeter 72 gives r = 14.
+4. **Circumference minus diameter.** (44/7 - 2) x r = 30/7 x r. 90 gives r = 21.
+### Non-linear warnings
+- **Area scales with the square of the side.** Sides in 5 : 9 give areas 25 : 81. Each side up 50% makes the area 2.25 times (a 125% rise).
+- **Percent changes multiply.** Length +20%, breadth -10%: 1.2 x 0.9 = 1.08, an 8% rise, not 10%.
+- **Volume scales with the cube.** Melting three cubes of 3, 4, 5 gives one of side 6 (27 + 64 + 125 = 216).
+## 2. Archetypes
+Ten archetypes. "Papers" counts paper labels, IBPS Clerk and sister papers together.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>Two figures joined by one length</td>
+<td>Confirmed (14 papers)</td>
+<td>11</td>
+<td>4</td>
+<td>76</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>One rectangle from a ratio or relation</td>
+<td>Confirmed (7 papers)</td>
+<td>3</td>
+<td>4</td>
+<td>12</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Percent change in the sides</td>
+<td>Confirmed (3 papers)</td>
+<td>2</td>
+<td>1</td>
+<td>25</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Circles and semicircles</td>
+<td>Confirmed (3 papers)</td>
+<td>1</td>
+<td>2</td>
+<td>12</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Two squares in a ratio; diagonals</td>
+<td>Confirmed (2 papers)</td>
+<td>2</td>
+<td>0</td>
+<td>11</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Paths, borders, costs, tiles, wheels</td>
+<td>Seen once</td>
+<td>1</td>
+<td>0</td>
+<td>36</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>M7</td>
+<td>Other plane figures (right triangle, rhombus, trapezium, equilateral)</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>47</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>M8</td>
+<td>Solids: volume and surface</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>109</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>M9</td>
+<td>Reshaping: wire bent, metal melted, sheet rolled</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>24</td>
+<td>Insurance</td>
+</tr>
+</table>
+What stands out: the banks are heaviest on solids (109 questions), but no paper in the sample set one. The papers set **two flat figures joined by one length** in 15 of 31 questions.
+### Core archetypes (Confirmed and Seen once)
+**M1. Two figures joined by one length. Confirmed (14 papers).** *Pattern clues:* "the side of a square is equal to the breadth of the rectangle", "2 cm more than the breadth", "the radius of the semicircle is equal to the breadth". *Shortcut engine:* solve the figure that is fully given, carry the shared length across, finish the other. *Worked example (IBPS Clerk Prelims 5 Oct 2025 Shift 1):* perimeter 92, ratio 14 : 9: half-perimeter 46 = 23 parts, breadth 18. Square side 20, perimeter 80.
+**M2. One rectangle from a ratio or relation. Confirmed (7 papers).** *Pattern clues:* "ratio of length to breadth is 8 : 5 and its area is 640", "length 8 cm more than breadth, perimeter 40". *Shortcut engine:* the two algorithms in section 1. *Worked example (IBPS Clerk Prelims 3 Sep 2022 Slot 2):* 8 : 5, area 640: 40 unit² = 640, unit 4: 32 by 20, perimeter 104.
+**M3. Percent change in the sides. Confirmed (3 papers).** *Pattern clues:* "length increased by 10%, breadth decreased by 20%", "area decreased by 4%". *Shortcut engine:* multiply the factors. Backwards: new breadth factor = area factor / length factor. *Worked example (IBPS Clerk Prelims 2023, Guidely):* length x 0.8, area x 0.96, so breadth x 1.2: a 20% rise.
+**M4. Circles and semicircles. Confirmed (3 papers).** *Pattern clues:* "circumference 88", "difference between the circumference and the diameter". *Shortcut engine:* circumference / (44/7) = r; semicircle perimeter = 36/7 x r. *Worked example (IBPS Clerk Prelims 2018):* circumference - diameter = 30/7 x r = 90, r = 21; circle B has r = 14, area 616.
+**M5. Two squares in a ratio; diagonals. Confirmed (2 papers).** *Shortcut engine:* sides k parts each; diagonal = side x √2; areas in the squared ratio. *Worked example (IBPS Clerk Prelims 4 Oct 2025 Shift 2):* sides 5 : 9, diagonals differ by 4 parts x √2 = 16√2, so a part is 4; areas 400 and 1,296 differ by 896.
+**M6. Paths, borders, costs. Seen once.** *Shortcut engine:* path area = outer rectangle - inner rectangle (outside path: add twice the width to each side). Cost = area (or length) x rate. *Worked example (IBPS Clerk Prelims 2019):* garden w by w + 3, path 3 m outside, cost Rs 273 at Rs 0.50: path 546 m². Outer (w + 6)(w + 9) - w(w + 3) = 12w + 54 = 546, w = 41, area 41 x 44 = 1,804.
+### Insurance archetypes (Bank only)
+**M7. Other plane figures.** Right triangles by the Pythagorean triples; rhombus area from diagonals and side from half-diagonals; trapezium = average of parallel sides x height.
+**M8. Solids.** Use the solids table; for "four walls" use 2(l + b) x h.
+**M9. Reshaping.** The length (wire) or volume (melting) stays the same: write it once in the old shape, once in the new, and equate. A sheet rolled along its length makes a cylinder whose circumference is that length.
+## 3. Drill Set
+Six original questions, one per Confirmed archetype and the reshaping trap. Every answer and elimination hack was checked by script.
+### Drill 1. Easy cutoff-buster (M1)
+The perimeter of a rectangle is 64 cm and its length is 12 cm more than its breadth. The side of a square is 4 cm more than the breadth of the rectangle. Find the area of the square (in cm²).
+1. 144 (B) 196 (C) 100 (D) 256 (E) 169
+- **Conventional method.** 2(2b + 12) = 64, so b = 10; side 14; area 196.
+- **30-second exam method.** Half-perimeter 32 = l + b with l - b = 12: b = 10. Side 14, area 196. **Answer (B).**
+- **Option elimination hack.** The area must be a perfect square of (breadth + 4); all options are squares, so check: b = 10 gives 14² = 196.
+- **IBPS trap warning.** Option (C) 100 is the square of the breadth itself.
+### Drill 2. Ratio and area (M2)
+The length and breadth of a rectangle are in the ratio 5 : 3 and its area is 735 cm². Find its perimeter (in cm).
+1. 96 (B) 112 (C) 104 (D) 120 (E) 84
+- **Conventional method.** 15x² = 735, x² = 49, x = 7: 35 by 21, perimeter 112.
+- **30-second exam method.** 15 unit² = 735, unit² = 49, unit = 7. Perimeter = 2 x 8 parts x 7 = 112. **Answer (B).**
+- **Option elimination hack.** Perimeter = 16 x unit, so it divides by 16: 96 and 112. 96 means unit 6 and area 540, so 112.
+- **IBPS trap warning.** 735 / 15 = 49 is the unit squared; forgetting the root gives silly lengths.
+### Drill 3. Percent change backwards (M3)
+The length of a rectangle is increased by 25%. By what percent must its breadth be decreased so that the area is unchanged?
+1. 25% (B) 20% (C) 15% (D) 30% (E) 12.5%
+- **Conventional method.** 1.25 x f = 1, f = 0.8.
+- **30-second exam method.** 25% = 1/4, so the length becomes 5/4; the breadth must become 4/5, a fall of 1/5 = 20%. **Answer (B).**
+- **Option elimination hack.** The fall must be smaller than the rise (a smaller base), so not (A) or (D); 0.8 is the only factor that undoes 1.25.
+- **IBPS trap warning.** Option (A) 25% leaves the area at 93.75%.
+### Drill 4. Semicircle (M4)
+The perimeter of a semicircle is 108 cm. Its radius equals the side of a square. Find the area of the square (in cm²).
+1. 441 (B) 196 (C) 324 (D) 484 (E) 529
+- **Conventional method.** r(22/7 + 2) = 108, r = 21.
+- **30-second exam method.** 36/7 x r = 108, r = 21; area 441. **Answer (A).**
+- **Option elimination hack.** r must be a multiple of 7, so the area is a multiple of 49: 441 and 196. 196 means r = 14, perimeter 72.
+- **IBPS trap warning.** Using only the curved part (22/7 x r) gives r = 34.4, not an option.
+### Drill 5. Squares in a ratio (M5)
+The sides of two squares are in the ratio 3 : 5, and their perimeters differ by 32 cm. Find the difference between their areas (in cm²).
+1. 256 (B) 128 (C) 64 (D) 144 (E) 400
+- **Conventional method.** 4 x 2k = 32, k = 4; sides 12 and 20; areas 144 and 400.
+- **30-second exam method.** Perimeters differ by 4 x 2 parts = 8 parts = 32, so a part is 4. Areas differ by (25 - 9) x 16 = 256. **Answer (A).**
+- **Option elimination hack.** No divisibility test separates these options well; back-check instead: sides 12 and 20 give areas 144 and 400, a difference of 256.
+- **IBPS trap warning.** (D) 144 and (E) 400 are the two areas.
+### Drill 6. Reshaping trap (M9)
+A wire bent into a square encloses 121 cm². It is rebent into a circle. Find the area of the circle (in cm²).
+1. 121 (B) 154 (C) 144 (D) 132 (E) 176
+- **Conventional method.** Side 11, wire 44, radius 7, area 154.
+- **30-second exam method.** Wire 44 = 44/7 x r, so r = 7, area 154. **Answer (B).**
+- **Option elimination hack.** For the same length, a circle always encloses more than a square, so the answer is above 121: (B), (C), (D) or (E); 22/7 x 49 = 154.
+- **IBPS trap warning.** The area does not carry over; the length does. (A) keeps the area.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>"equal to the breadth", "2 cm more than the side"</td>
+<td>solve the given figure, carry the length, finish the other</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>ratio and perimeter; ratio and area</td>
+<td>half-perimeter split by parts; area = parts x parts x unit²</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>% change in sides</td>
+<td>multiply factors; backwards divide</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>circle, semicircle</td>
+<td>circumference = 44/7 r; semicircle perimeter = 36/7 r</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>two squares in a ratio</td>
+<td>sides in parts; areas in the squared ratio</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>path, border, cost</td>
+<td>outer - inner; area x rate</td>
+</tr>
+<tr>
+<td>M9</td>
+<td>bent, melted, rolled</td>
+<td>length or volume stays the same</td>
+</tr>
+</table>
+**Traps.** Perimeter given twice ("twice the perimeter is 96"). Radius vs diameter. The square of a ratio. Semicircle perimeter including the diameter.
+**Fallback.** Draw both figures, mark the one shared length, and write every other length in terms of it.
+## 5. Practice Ladder
+29 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-MEN and PYQ-MEN are `source.id` values in `clerk/questions.json`.
+**Rung 1. Untimed until all correct.** One formula, small numbers.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-MEN-01</td>
+<td>M2</td>
+<td>600 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-02</td>
+<td>M2</td>
+<td>144 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-18</td>
+<td>M2</td>
+<td>104 cm</td>
+</tr>
+<tr>
+<td>CON-MEN-03</td>
+<td>M4</td>
+<td>44 cm</td>
+</tr>
+<tr>
+<td>PYQ-MEN-14</td>
+<td>M1</td>
+<td>144 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-13</td>
+<td>M1</td>
+<td>81 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-04</td>
+<td>M7</td>
+<td>30 cm²</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.** The Confirmed archetypes as the papers set them.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>PYQ-MEN-05</td>
+<td>M1</td>
+<td>80</td>
+</tr>
+<tr>
+<td>PYQ-MEN-01</td>
+<td>M1</td>
+<td>144</td>
+</tr>
+<tr>
+<td>PYQ-MEN-07</td>
+<td>M1</td>
+<td>8 cm</td>
+</tr>
+<tr>
+<td>PYQ-MEN-09</td>
+<td>M1</td>
+<td>48</td>
+</tr>
+<tr>
+<td>PYQ-MEN-17</td>
+<td>M1</td>
+<td>24</td>
+</tr>
+<tr>
+<td>PYQ-MEN-20</td>
+<td>M1</td>
+<td>128 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-19</td>
+<td>M2</td>
+<td>720 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-08</td>
+<td>M2</td>
+<td>500</td>
+</tr>
+<tr>
+<td>PYQ-MEN-06</td>
+<td>M3</td>
+<td>68</td>
+</tr>
+<tr>
+<td>PYQ-MEN-16</td>
+<td>M3</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>PYQ-MEN-11</td>
+<td>M4</td>
+<td>616 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-02</td>
+<td>M5</td>
+<td>896</td>
+</tr>
+<tr>
+<td>PYQ-MEN-03</td>
+<td>M5</td>
+<td>80 cm</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.** Mixed, including Insurance.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>PYQ-MEN-10</td>
+<td>M6</td>
+<td>1804 m²</td>
+</tr>
+<tr>
+<td>CON-MEN-11</td>
+<td>M6</td>
+<td>1100 m²</td>
+</tr>
+<tr>
+<td>CON-MEN-25</td>
+<td>M3</td>
+<td>125%</td>
+</tr>
+<tr>
+<td>CON-MEN-16</td>
+<td>M8</td>
+<td>550 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-17</td>
+<td>M8</td>
+<td>19,404 cm³</td>
+</tr>
+<tr>
+<td>CON-MEN-10</td>
+<td>M9</td>
+<td>616 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-24</td>
+<td>M9</td>
+<td>6 cm</td>
+</tr>
+<tr>
+<td>PYQ-MEN-12</td>
+<td>M1</td>
+<td>1064</td>
+</tr>
+<tr>
+<td>PYQ-MEN-15</td>
+<td>M1</td>
+<td>1386 m²</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026. This module is checked, not guaranteed.
+### What was tested
+- **Answers.** All 50 clerk questions (30 constructed, 20 PYQ) were re-solved by script with pi = 22/7; all 50 agree with the bank key. Four keys are "None of these" and the script confirms why: CON-MEN-06 (392), CON-MEN-13 (500 revolutions), CON-MEN-20 (204), CON-MEN-27 (1,300).
+- **Sister-exam questions.** All 11 were re-solved: SBI Clerk 22 Feb 2025 Q62 (35), IBPS PO 24 Aug 2025 S1 Q100 (24), IBPS PO 22 Aug 2026 S1 Q81 (196) and S2 Q96 (324), SBI Clerk 20 Sep 2025 S2 Q48 (18), SBI Clerk 21 Sep 2025 S1 Q46 (135), IBPS RRB Clerk 6 Dec 2025 S1 Q55 (616) and S2 Q53 (300), IBPS RRB Clerk 13 Dec 2025 S1 Q57 (84) and S2 Q60 (200), IBPS PO 23 Aug 2025 S2 Q91 (5 : 6). The four PO answers match their printed keys; the others printed no key in the extracted text.
+- **Drills.** All 6 were solved by script, and each hack checked.
+### What failed and was fixed
+- Drill 5's first elimination hack (the difference divides by 16) left four options standing, so it was replaced by a back-check.
+### What could not be opened or checked
+- The 310 Sreedhar and Guidely questions were sorted by a keyword script, not re-solved; 8 could not be placed. Keyword sorting can misplace a few questions, so treat those counts as close, not exact.
+- No Mains papers were used.
+### Source links (pages opened)
+- The 12 sister papers are the Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
+## 7. Pattern Index: archetypes and question IDs
+- M1: PYQ-MEN-01, 04, 05, 07, 09, 12, 13, 14, 15, 17, 20 · CON-MEN-22, 30
+- M2: PYQ-MEN-08, 18, 19 · CON-MEN-01, 02
+- M3: PYQ-MEN-06, 16 · CON-MEN-12, 25
+- M4: PYQ-MEN-11 · CON-MEN-03, 26
+- M5: PYQ-MEN-02, 03 · CON-MEN-28
+- M6: PYQ-MEN-10 · CON-MEN-08, 11, 13, 15, 18, 27
+- M7: CON-MEN-04, 09, 14, 20, 21
+- M8: CON-MEN-05, 06, 07, 16, 17
+- M9: CON-MEN-10, 19, 23, 24, 29
 # Reasoning: Series and Miscellaneous - Speed Mastery Module
 **Sample.** Added on request. This is a Reasoning topic, not Quant, and it combines three bank sections into one: alphanumeric / mixed series, alphabet series, and miscellaneous reasoning. Your bank holds no previous-year Reasoning questions, so every statement about what the exam asks comes from papers opened on the web: 12 IBPS Clerk Prelims memory-based papers (4 Oct 2025 Shifts 1 to 4, 5 Oct 2025 Shift 1 in its Hindi version, 24 Aug 2024 Shift 1, and the 2023, 2022, 2021, 2020, 2019 and 2018 papers) giving 59 questions of these kinds, plus the same 12 sister papers as before (4 SBI Clerk, 4 IBPS RRB Clerk, 4 IBPS PO Prelims) giving 65. Bank questions used: 933 practice questions (540 Guidely + 393 Sreedhar). The floor of 8 target-exam shifts and 6 to 10 sister questions is met. Memory-based papers are reconstructions, not official papers.
 ## 1. Core Mental Model, Mechanics and Conversion Grid
