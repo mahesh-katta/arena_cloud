@@ -1,0 +1,855 @@
+{
+ "module": "ratio-proportion",
+ "intro": [
+  "A ratio is a count of parts. Every question here comes down to one move: **find what one part is worth**, then count parts. No letters are needed.",
+  "There are ten short lessons. The first six follow what the papers set; the last four are kinds found only in practice sets. Go in order the first time. If 3 : 4 and \"joining two ratios\" are new to you, do those two basics first.",
+  "What the papers ask (Stage A count in Quick revision: 23 IBPS Clerk papers and 12 sister papers, all memory-based):",
+  "| Kind | Label | Lesson |",
+  "| Adding or taking away changes the ratio (RP3) | Confirmed, 4 papers | RP3 |",
+  "| Joining ratios, with a total or an average (RP1) | Confirmed, 3 papers | RP1 |",
+  "| Income, expenditure and savings (RP4) | Confirmed, 3 papers | RP4 |",
+  "| Dividing an amount (RP2) | Confirmed, 2 papers | RP2 |",
+  "| Groups inside a group (RP5) | Confirmed, 2 papers | RP5 |",
+  "| Percent change on each term, coins, proportion, harder forms | Bank only | RP6 to RP10 |"
+ ],
+ "needs": [
+  "ratio",
+  "join-ratios",
+  "average",
+  "percent-of"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the conversion grid, the drills and the practice ladder.",
+  "Ratio is also the engine inside Ages, Partnership, Mixtures and Time & Work; those topics build on these lessons."
+ ],
+ "lessons": [
+  {
+   "id": "parts",
+   "code": "RP9",
+   "title": "A ratio is a count of parts",
+   "plain": "The starting point: turning words, fractions and percents into parts, and comparing ratios.",
+   "needs": [
+    "ratio",
+    "percent-words"
+   ],
+   "teach": [
+    "A ratio such as 3 : 5 says: cut both things into equal parts; the first has 3, the second has 5. The parts are what you count; rupees come later.",
+    "Most questions start by turning something else into parts:",
+    "| The question says | In parts |",
+    "| A is 25% more than B | A : B = 125 : 100 = 5 : 4 |",
+    "| A is 20% less than B | A : B = 80 : 100 = 4 : 5 |",
+    "| 1/3 : 1/4 : 1/6 | times 12: 4 : 3 : 2 |",
+    "| 2A = 3B = 4C | A : B : C = 1/2 : 1/3 : 1/4 = 6 : 4 : 3 |",
+    "To **compare** ratios, turn each into a decimal (7 : 9 is 0.78) or cross-multiply two at a time.",
+    "An expression such as (4x + 3y) : (4x - 3y) with x : y = 5 : 3 needs no algebra: put 5 and 3 straight in."
+   ],
+   "example": {
+    "q": "If 3A = 5B = 6C, find A : B : C.",
+    "steps": [
+     "Equal products mean A, B and C are like 1/3, 1/5 and 1/6.",
+     "Multiply by 30, the LCM of 3, 5 and 6: 10, 6 and 5.",
+     "A : B : C = 10 : 6 : 5."
+    ],
+    "answer": "10 : 6 : 5."
+   },
+   "check": {
+    "q": "A is 40% more than B. What is A : B?",
+    "options": {
+     "a": "5 : 7",
+     "b": "7 : 5",
+     "c": "4 : 10",
+     "d": "14 : 5"
+    },
+    "answer": "B",
+    "why": "A = 140 when B = 100, so 140 : 100 = 7 : 5. (5 : 7 is the right numbers in the wrong order.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-a-graded#4",
+     "clerk-07-ratio-and-proportion-a-graded#7",
+     "clerk-07-ratio-and-proportion-a-graded#6",
+     "clerk-07-ratio-and-proportion-a-graded#8",
+     "clerk-07-ratio-and-proportion-a-graded#23"
+    ],
+    "tags": [
+     "Compare four ratios.",
+     "Fractions to a ratio.",
+     "Equal products.",
+     "An expression: put the numbers in.",
+     "Percent words to a ratio."
+    ]
+   }
+  },
+  {
+   "id": "joining",
+   "code": "RP1",
+   "title": "Joining ratios, with a total or an average",
+   "plain": "New: two ratios share a person, and the question gives a total or an average.",
+   "needs": [
+    "join-ratios",
+    "average"
+   ],
+   "teach": [
+    "When two ratios share a person, **make that person's number the same in both**, then write one ratio for all three.",
+    "A : B = 3 : 4 and B : C = 6 : 5. B is 4 and 6; make both 12: A : B = 9 : 12 and B : C = 12 : 10. So A : B : C = 9 : 12 : 10.",
+    "Then use the number the question gives. An **average** is a total in disguise: average x how many = total. Total / total parts = one part.",
+    "Sometimes there is no ratio at first, only links such as \"A is 8 more than C\". Find the numbers from the links, then write their ratio.",
+    "Checked papers: this was asked in three IBPS Clerk papers (2017, Dec 2021, Oct 2025)."
+   ],
+   "example": {
+    "q": "A : B = 3 : 4 and B : C = 6 : 5. A + B + C = 155. Find C.",
+    "steps": [
+     "Make B equal: 9 : 12 and 12 : 10, so A : B : C = 9 : 12 : 10.",
+     "31 parts = 155, so one part = 5.",
+     "C = 10 x 5 = 50."
+    ],
+    "answer": "50."
+   },
+   "check": {
+    "q": "A : B = 2 : 5 and B : C = 3 : 4. What is A : B : C?",
+    "options": {
+     "a": "2 : 5 : 4",
+     "b": "6 : 15 : 20",
+     "c": "6 : 5 : 4",
+     "d": "2 : 15 : 20"
+    },
+    "answer": "B",
+    "why": "Make B equal to 15: A : B = 6 : 15 and B : C = 15 : 20. (2 : 5 : 4 just writes the numbers side by side without making B equal.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-a-graded#1",
+     "clerk-07-ratio-and-proportion-a-graded#25",
+     "clerk-07-ratio-and-proportion-b-pyq#2",
+     "clerk-07-ratio-and-proportion-b-pyq#3",
+     "clerk-07-ratio-and-proportion-b-pyq#11"
+    ],
+    "tags": [
+     "Make the shared term equal.",
+     "Join, then add terms.",
+     "Links first, then the ratio.",
+     "Join, then use the average.",
+     "A ratio inside an average."
+    ]
+   }
+  },
+  {
+   "id": "dividing",
+   "code": "RP2",
+   "title": "Dividing an amount",
+   "plain": "New: an amount is shared, and you are told the ratio, a difference, or how the shares relate.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "**Total / total parts = one part.** Rs 1,560 in 5 : 8 is 13 parts, so one part is 120.",
+    "If a **difference** is given instead (\"C gets Rs 1,200 more than A\" with 3 : 5 : 7), the difference is 7 - 3 = 4 parts.",
+    "If shares are described by **fractions of each other** (\"A gets 2/3 of B, B gets 1/4 of C\"), pick a handy number for the last person: C = 12 makes B = 3 and A = 2.",
+    "If shares are described by **differences** (\"A gets 4,000 more than B, C gets 8,000 more than B\"), take the extras off the total and split the rest equally.",
+    "Checked papers: IBPS Clerk 2018 and IBPS PO 2025 each set one."
+   ],
+   "example": {
+    "q": "Rs 9,000 is divided among A, B and C so that A gets Rs 1,000 more than B and C gets Rs 2,000 more than B. Find C's share.",
+    "steps": [
+     "Take the extras off: 9,000 - 1,000 - 2,000 = 6,000.",
+     "That is three equal shares: B = 2,000.",
+     "C = 2,000 + 2,000 = 4,000."
+    ],
+    "answer": "Rs 4,000."
+   },
+   "check": {
+    "q": "Rs 2,400 is divided between P and Q in the ratio 3 : 5. How much more does Q get than P?",
+    "options": {
+     "a": "Rs 300",
+     "b": "Rs 600",
+     "c": "Rs 900",
+     "d": "Rs 1,500"
+    },
+    "answer": "B",
+    "why": "8 parts = 2,400, one part = 300. The gap is 2 parts = 600. (300 is one part; 1,500 is Q's whole share.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-a-graded#2",
+     "clerk-07-ratio-and-proportion-a-graded#14",
+     "clerk-07-ratio-and-proportion-a-graded#17",
+     "clerk-07-ratio-and-proportion-b-pyq#8",
+     "clerk-07-ratio-and-proportion-b-pyq#10"
+    ],
+    "tags": [
+     "A plain split.",
+     "A difference of shares is given.",
+     "Shares as fractions of each other.",
+     "An average gives the total.",
+     "Shares given by differences."
+    ]
+   }
+  },
+  {
+   "id": "changes",
+   "code": "RP3",
+   "title": "When numbers are added or taken away",
+   "plain": "New: the two amounts change and the ratio changes with them. This is the kind the papers set most.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Ask one question first: **what did not change?** It decides how you match the two ratios.",
+    "| What happens | What stays the same | Make this equal in both ratios |",
+    "| the same number is added to (or taken from) each | the difference | the difference of the terms |",
+    "| one gives some to the other | the total | the sum of the terms |",
+    "| only one of them changes | the other one | the other one's parts |",
+    "Then the term that changed moved by some number of parts, and that is the rupees (or people) the question names. One part found, everything follows.",
+    "Checked papers: four papers (IBPS Clerk Oct 2025 and 2025, SBI Clerk Sep 2025 twice)."
+   ],
+   "example": {
+    "q": "Two numbers are in the ratio 4 : 7. If 9 is added to each, the ratio becomes 5 : 8. Find the numbers.",
+    "steps": [
+     "Added to each, so the difference stays: 7 - 4 = 3 and 8 - 5 = 3, already equal.",
+     "The first went from 4 parts to 5 parts by adding 9: one part = 9.",
+     "The numbers are 36 and 63."
+    ],
+    "answer": "36 and 63."
+   },
+   "check": {
+    "q": "A and B have money in the ratio 3 : 2. A gives Rs 100 to B and the ratio becomes 1 : 1. How much did A have at first?",
+    "options": {
+     "a": "Rs 300",
+     "b": "Rs 500",
+     "c": "Rs 600",
+     "d": "Rs 1,000"
+    },
+    "answer": "C",
+    "why": "The total stays at 5 parts, so 1 : 1 is 2.5 : 2.5. A lost half a part = 100, so one part = 200 and A had 600. (300 treats the 100 as one whole part.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-a-graded#9",
+     "clerk-07-ratio-and-proportion-a-graded#21",
+     "clerk-07-ratio-and-proportion-a-graded#16",
+     "clerk-07-ratio-and-proportion-a-graded#28",
+     "clerk-07-ratio-and-proportion-b-pyq#1",
+     "clerk-07-ratio-and-proportion-b-pyq#4"
+    ],
+    "tags": [
+     "The same number added to each.",
+     "Money moves across: the total stays.",
+     "Only one group changes.",
+     "Both change, by different amounts.",
+     "Moved across, exam wording.",
+     "Moved across, bigger numbers."
+    ]
+   },
+   "shortcut": {
+    "title": "Cross-multiplying when nothing lines up",
+    "text": [
+     "If the totals or differences do not match neatly, cross-multiply once. 3 : 2 becomes 19 : 26 after 16 moves from A to B. With A = 3k and B = 2k: (3k - 16) x 26 = (2k + 16) x 19.",
+     "78k - 416 = 38k + 304, so 40k = 720 and k = 18. A = 3k = 54.",
+     "Use it only when matching the parts feels slow; it is one line of algebra."
+    ]
+   }
+  },
+  {
+   "id": "income",
+   "code": "RP4",
+   "title": "Income, expenditure and savings",
+   "plain": "New: three linked amounts. Income is always expenditure plus savings.",
+   "needs": [
+    "ratio",
+    "percent-of"
+   ],
+   "teach": [
+    "**Income = expenditure + savings**, in rupees and in parts. Income : savings = 16 : 3 means expenditure is 13 parts.",
+    "**Two people save the same amount.** Their income parts minus expenditure parts must stand for the same rupees. Scale the ratios until the leftovers match: incomes 5 : 4 with expenditures 7 : 5? Write incomes as 10 : 8; then both leave 3.",
+    "**Spends a fraction.** \"Spends 3/11\" saves 8/11. \"Spends 25%, then 20% of the rest, then 15% of the rest\" leaves 0.75 x 0.8 x 0.85 = 0.51 of the income.",
+    "**Something rises by a percent.** Work it part by part: new income - new expenditure = new savings.",
+    "Checked papers: IBPS Clerk 2021 and 2024, IBPS RRB Clerk Dec 2025."
+   ],
+   "example": {
+    "q": "The incomes of A and B are in the ratio 3 : 2 and their expenditures 5 : 3. Each saves Rs 2,000. Find A's income.",
+    "steps": [
+     "Write incomes as 6 : 4 so that, with expenditures 5 : 3, both leave 1 unit.",
+     "1 unit of savings = 2,000.",
+     "A's income = 6 units = 12,000."
+    ],
+    "answer": "Rs 12,000."
+   },
+   "check": {
+    "q": "A man's income and expenditure are in the ratio 7 : 5. He saves Rs 4,000. What is his income?",
+    "options": {
+     "a": "Rs 10,000",
+     "b": "Rs 14,000",
+     "c": "Rs 20,000",
+     "d": "Rs 28,000"
+    },
+    "answer": "B",
+    "why": "Savings = 7 - 5 = 2 parts = 4,000, so one part = 2,000 and income = 14,000. (10,000 is the expenditure.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-a-graded#10",
+     "clerk-07-ratio-and-proportion-a-graded#24",
+     "clerk-07-ratio-and-proportion-a-graded#26",
+     "clerk-07-ratio-and-proportion-b-pyq#6",
+     "clerk-07-ratio-and-proportion-b-pyq#7"
+    ],
+    "tags": [
+     "Equal savings.",
+     "Savings from percents.",
+     "Percent rises: how much more is saved?",
+     "Fractions spent.",
+     "Income to savings, then both change."
+    ]
+   }
+  },
+  {
+   "id": "groups",
+   "code": "RP5",
+   "title": "Groups inside a group",
+   "plain": "New: a whole is split one way (boys and girls) and each part is split again.",
+   "needs": [
+    "ratio",
+    "percent-of"
+   ],
+   "teach": [
+    "Work **outside in**: split the whole first, then split each piece by its own ratio or percent.",
+    "Take 100 people when only percents are given: 68% literate means 68 and 32.",
+    "**A shared count** is a gift. \"Both sections have the same number of girls\": the difference of the section totals is then exactly the difference of the boys.",
+    "**A percent of each group** (20% of boys, 25% of girls): weight by the parts. With boys : girls = 3 : 2, (3 x 20 + 2 x 25) / 5 = 22%. The plain average, 22.5%, is the usual wrong option.",
+    "Checked papers: IBPS Clerk 2018 and 2024."
+   ],
+   "example": {
+    "q": "A college has 1,200 students, boys and girls in the ratio 7 : 5. 3/7 of the boys and 2/5 of the girls live in the hostel. How many live in the hostel?",
+    "steps": [
+     "Boys 700, girls 500.",
+     "Hostel: 3/7 of 700 = 300 and 2/5 of 500 = 200.",
+     "Total 500."
+    ],
+    "answer": "500."
+   },
+   "check": {
+    "q": "Boys and girls are in the ratio 3 : 2. 10% of the boys and 20% of the girls play chess. What percent of the class plays chess?",
+    "options": {
+     "a": "15%",
+     "b": "14%",
+     "c": "12%",
+     "d": "30%"
+    },
+    "answer": "B",
+    "why": "(3 x 10 + 2 x 20) / 5 = 14%. (15% is the plain average, which ignores that there are more boys.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-b-pyq#5",
+     "clerk-07-ratio-and-proportion-b-pyq#9",
+     "clerk-07-ratio-and-proportion-a-graded#18"
+    ],
+    "tags": [
+     "A shared count.",
+     "Percent outside, ratios inside.",
+     "A percent of each group."
+    ]
+   },
+   "more": [
+    {
+     "q": "Sections A and B have 150 and 190 students. Both have the same number of girls, and the boys are in the ratio 2 : 3. How many girls are in each section?",
+     "options": {
+      "a": "60",
+      "b": "70",
+      "c": "80",
+      "d": "110"
+     },
+     "answer": "B",
+     "why": "The 40 extra students in B are all boys, and boys differ by 1 part: one part = 40, boys 80 and 120, girls 150 - 80 = 70.",
+     "tag": "A shared count"
+    },
+    {
+     "q": "60% of a village is literate. Literate men and women are 2 : 1; illiterate men and women are 1 : 3. What is the ratio of literate women to illiterate women?",
+     "options": {
+      "a": "1 : 1",
+      "b": "2 : 3",
+      "c": "3 : 2",
+      "d": "1 : 3"
+     },
+     "answer": "B",
+     "why": "Take 100: literate women 60 x 1/3 = 20, illiterate women 40 x 3/4 = 30. 20 : 30 = 2 : 3.",
+     "tag": "Percent outside, ratios inside"
+    }
+   ]
+  },
+  {
+   "id": "percent-changes",
+   "code": "RP6",
+   "title": "A different percent change on each term",
+   "plain": "New: each term of the ratio grows or shrinks by its own percent.",
+   "needs": [
+    "percent-of",
+    "percent-words"
+   ],
+   "teach": [
+    "**Multiply each term by its own factor**, then tidy up. Salaries 3 : 4 with rises of 20% and 10%: 3 x 1.2 : 4 x 1.1 = 3.6 : 4.4 = 9 : 11.",
+    "Percents are never added to or subtracted from a ratio. 4 : 5 with rises of 25% and 20% is 5 : 6, not anything with 45 in it.",
+    "If the starting point is a percent comparison (\"males are 60% more than females\"), turn it into a ratio first: 160 : 100.",
+    "If a difference or total is given after the change, work in parts: 3 parts becomes 3.6 parts, 2 parts becomes 2.8 parts, and the gap of 0.8 parts is the number given.",
+    "No paper in the sample set this; it is common in practice sets."
+   ],
+   "example": {
+    "q": "The prices of two items are in the ratio 5 : 6. The first rises by 20% and the second by 25%. What is the new ratio?",
+    "steps": [
+     "5 x 1.2 = 6 and 6 x 1.25 = 7.5.",
+     "6 : 7.5, times 2: 12 : 15.",
+     "4 : 5."
+    ],
+    "answer": "4 : 5."
+   },
+   "check": {
+    "q": "Salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% rise. What is the new ratio?",
+    "options": {
+     "a": "5 : 6",
+     "b": "4 : 5",
+     "c": "20 : 21",
+     "d": "1 : 1"
+    },
+    "answer": "A",
+    "why": "4 x 1.25 = 5 and 5 x 1.2 = 6. (4 : 5 assumes the rises cancel; they do not.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "ratio-and-proportion-based-on-percentage-set-1-1#10",
+     "ratio-and-proportion-based-on-boys-and-girls-set-1-1#4",
+     "ratio-and-proportion-based-on-percentage-set-1-1#7",
+     "ratio-and-proportion-based-on-increase-and-decrease-set-1-1#5",
+     "ratio-and-proportion-based-on-percentage-set-1-1#8"
+    ],
+    "tags": [
+     "Three terms, three different rises.",
+     "Two rises.",
+     "Start from a percent comparison; one rises, one falls.",
+     "Savings rise, income stays.",
+     "A difference after the change."
+    ]
+   }
+  },
+  {
+   "id": "coins-and-heads",
+   "code": "RP7",
+   "title": "Coins, and shares per head",
+   "plain": "New: the ratio counts coins or people, but the total is in rupees.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "**Coins.** The ratio is of the number of coins, not their value. Make one **set**: for Rs 1, Rs 2 and Rs 5 coins in 5 : 3 : 2, one set is five Rs 1, three Rs 2 and two Rs 5 = 5 + 6 + 10 = Rs 21. Total / value of one set = number of sets.",
+    "Paise coins: work in paise, or write 50p as 0.5 and 25p as 0.25.",
+    "Read carefully whether the ratio is of numbers or of values. If it is of values, divide each by the face value to get the numbers.",
+    "**Shares per head.** \"Each man, woman and child gets in the ratio 4 : 3 : 2\" with 5 men, 8 women and 12 children: the groups' shares are 5 x 4 : 8 x 3 : 12 x 2 = 20 : 24 : 24.",
+    "No paper in the sample set this; it is common in practice sets."
+   ],
+   "example": {
+    "q": "A bag has 50 paise, Rs 1 and Rs 2 coins in the ratio 4 : 3 : 2, worth Rs 90 in all. How many Rs 1 coins are there?",
+    "steps": [
+     "One set: four 50p, three Rs 1 and two Rs 2 = 2 + 3 + 4 = Rs 9.",
+     "90 / 9 = 10 sets.",
+     "Rs 1 coins = 3 x 10 = 30."
+    ],
+    "answer": "30."
+   },
+   "check": {
+    "q": "A box has Rs 1, Rs 2 and Rs 5 coins in the ratio 3 : 2 : 1, worth Rs 120. How many Rs 2 coins are there?",
+    "options": {
+     "a": "10",
+     "b": "20",
+     "c": "30",
+     "d": "40"
+    },
+    "answer": "B",
+    "why": "One set is worth 3 + 4 + 5 = Rs 12, so there are 10 sets and 20 Rs 2 coins. (40 takes the Rs 2 coins' value instead of their number.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "ratio-and-proportion-based-on-coins-set-1-1#1",
+     "ratio-and-proportion-based-on-coins-set-1-1#2",
+     "ratio-and-proportion-based-on-coins-set-1-1#8",
+     "ratio-and-proportion-based-on-boys-and-girls-set-1-1#6",
+     "ratio-and-proportion-based-on-choclate-set-1-1#6"
+    ],
+    "tags": [
+     "Paise coins.",
+     "Three kinds, four of the smallest.",
+     "Big coins.",
+     "Shares per head.",
+     "Per head, with a percent."
+    ]
+   }
+  },
+  {
+   "id": "proportion",
+   "code": "RP8",
+   "title": "Proportion",
+   "plain": "New: two ratios that are equal, and the special words third, fourth and mean proportional.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "a : b = c : d is a **proportion**. The rule that does all the work: **a x d = b x c** (outer pair = inner pair).",
+    "| Word | Meaning | Formula |",
+    "| fourth proportional to a, b, c | a : b = c : x | b x c / a |",
+    "| third proportional to a, b | a : b = b : x | b x b / a |",
+    "| mean proportional of a, b | a : x = x : b | square root of a x b |",
+    "\"What must be subtracted from each of four numbers so that they are in proportion?\" Try the options: subtract, then test first x fourth = second x third.",
+    "No paper in the sample set this. It is quick, so learn it after the others."
+   ],
+   "example": {
+    "q": "Find the mean proportional between 9 and 16.",
+    "steps": [
+     "9 : x = x : 16, so x x x = 9 x 16 = 144.",
+     "x = 12."
+    ],
+    "answer": "12."
+   },
+   "check": {
+    "q": "What is the fourth proportional to 4, 10 and 6?",
+    "options": {
+     "a": "12",
+     "b": "15",
+     "c": "20",
+     "d": "24"
+    },
+    "answer": "B",
+    "why": "4 : 10 = 6 : x, so x = 10 x 6 / 4 = 15. (24 multiplies 4 x 6 and stops.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-a-graded#3",
+     "clerk-07-ratio-and-proportion-a-graded#12",
+     "clerk-07-ratio-and-proportion-a-graded#15"
+    ],
+    "tags": [
+     "Fourth proportional.",
+     "Third proportional.",
+     "Subtract to make a proportion: test the options."
+    ]
+   },
+   "more": [
+    {
+     "q": "What is the third proportional to 9 and 12?",
+     "options": {
+      "a": "14",
+      "b": "15",
+      "c": "16",
+      "d": "18"
+     },
+     "answer": "C",
+     "why": "9 : 12 = 12 : x, so x = 144 / 9 = 16.",
+     "tag": "Third proportional"
+    }
+   ]
+  },
+  {
+   "id": "harder-shares",
+   "code": "RP10",
+   "title": "Harder forms",
+   "plain": "New: five less common forms. Each is one extra step on what you know.",
+   "needs": [
+    "ratio",
+    "lcm"
+   ],
+   "teach": [
+    "**A mistaken division.** Work out both divisions and subtract. Intended 2 : 3 : 4 but done as 1/2 : 1/3 : 1/4 (= 6 : 4 : 3).",
+    "**Shares reduced by fixed amounts** before the ratio holds: take the reductions off the total first, split the rest, then add each reduction back.",
+    "**A fraction of one equals a fraction of the other** (4/15 of A = 2/5 of B): A : B = 2/5 : 4/15 = 3 : 2. The fractions swap sides.",
+    "**Squares.** Numbers in 3 : 4 : 5 with squares adding to 1,250: 9 + 16 + 25 = 50 squared parts, so one squared part = 25 and one part = 5.",
+    "**LCM.** Two numbers in 3 : 5 (no common factor) have LCM = 3 x 5 x one part.",
+    "**Sums of pairs** (a + b) : (b + c) : (c + a): the three add up to twice a + b + c."
+   ],
+   "example": {
+    "q": "Rs 1,000 was to be divided between A and B in the ratio 1 : 4, but by mistake it was divided 4 : 1. How much more did A get?",
+    "steps": [
+     "Intended: A = 1,000 x 1/5 = 200.",
+     "By mistake: A = 1,000 x 4/5 = 800.",
+     "A got 600 more."
+    ],
+    "answer": "Rs 600."
+   },
+   "check": {
+    "q": "Two numbers are in the ratio 2 : 3 and their LCM is 48. What is their sum?",
+    "options": {
+     "a": "30",
+     "b": "40",
+     "c": "48",
+     "d": "80"
+    },
+    "answer": "B",
+    "why": "LCM = 2 x 3 x one part = 6 parts = 48, so one part = 8. Numbers 16 and 24, sum 40. (48 is the LCM itself.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-07-ratio-and-proportion-a-graded#19",
+     "clerk-07-ratio-and-proportion-a-graded#22",
+     "clerk-07-ratio-and-proportion-a-graded#29",
+     "clerk-07-ratio-and-proportion-a-graded#30",
+     "clerk-07-ratio-and-proportion-a-graded#20",
+     "clerk-07-ratio-and-proportion-a-graded#5"
+    ],
+    "tags": [
+     "A mistaken division.",
+     "Shares reduced first.",
+     "A fraction of one equals a fraction of the other.",
+     "Sums of pairs.",
+     "Squares of parts.",
+     "Ratio and LCM."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-07-ratio-and-proportion-a-graded#4": [
+    "As decimals: 7/9 = 0.778, 5/7 = 0.714, 3/4 = 0.75, 11/14 = 0.786.",
+    "The largest is 11 : 14."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#7": [
+    "Multiply each term by 12, the LCM of 3, 4 and 6.",
+    "1/3 x 12 = 4, 1/4 x 12 = 3, 1/6 x 12 = 2.",
+    "The ratio is 4 : 3 : 2."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#6": [
+    "2A = 3B = 4C means A, B and C are like 1/2, 1/3 and 1/4.",
+    "Multiply by 12: 6 : 4 : 3."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#8": [
+    "Put x = 5 and y = 3 in.",
+    "4x + 3y = 29 and 4x - 3y = 11.",
+    "The ratio is 29 : 11."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#23": [
+    "Take B = 100. A is 25% more: 125. C is 20% less: 80.",
+    "125 : 100 : 80, divided by 5.",
+    "25 : 20 : 16."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#1": [
+    "B is 4 in the first and 8 in the second; double the first: 6 : 8.",
+    "A : B : C = 6 : 8 : 9."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#25": [
+    "Make B equal: 2 : 3 = 8 : 12 and 4 : 5 = 12 : 15. A : B : C = 8 : 12 : 15.",
+    "A + B = 20 and B + C = 27.",
+    "(A + B) : (B + C) = 20 : 27."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#2": [
+    "A is C + 8 and B is C - 2.",
+    "A + B = 2C + 6 = 26, so C = 10. Then A = 18 and B = 8.",
+    "18 : 8 : 10 = 9 : 4 : 5."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#3": [
+    "A : B = 1 : 2 = 2 : 4 and A : C = 2 : 3, so A : B : C = 2 : 4 : 3, 9 parts.",
+    "Total weight = 18 x 3 = 54, so one part = 6.",
+    "B = 4 x 6 = 24."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#11": [
+    "X : Y = 2 : 3 and X + Y = 60, so one part is 12: X = 24, Y = 36.",
+    "The three total 24 x 3 = 72, so Z = 12.",
+    "X - Z = 24 - 12 = 12."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#2": [
+    "5 + 8 = 13 parts, so one part = 1,560 / 13 = 120.",
+    "B's share = 8 x 120 = 960."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#14": [
+    "C - A = 7 - 3 = 4 parts = 1,200, so one part = 300.",
+    "Total = 15 parts = 4,500.",
+    "4,500 is not among the options, so the answer is None of these."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#17": [
+    "A = 2/3 of B and B = 1/4 of C. Take C = 12: B = 3, A = 2.",
+    "A : B : C = 2 : 3 : 12, 17 parts; one part = 3,400 / 17 = 200.",
+    "C's share = 12 x 200 = 2,400."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#8": [
+    "The average of three incomes is 24,000, so the total is 72,000.",
+    "4 + 5 + 7 = 16 parts, one part = 4,500.",
+    "C = 7 x 4,500 = Rs 31,500."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#10": [
+    "Take out the extras: 25,500 - 4,000 - 8,000 = 13,500, split equally: B = 4,500.",
+    "A = 8,500 and C = 12,500.",
+    "8,500 : 4,500 : 12,500 = 17 : 9 : 25."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#9": [
+    "Differences: 7 - 5 = 2 and 4 - 3 = 1, so write 3 : 4 as 6 : 8.",
+    "The first number went from 5 to 6 parts by adding 8: one part = 8.",
+    "Numbers 40 and 56; their sum is 96."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#21": [
+    "Totals 12 and 9; make both 36: 7 : 5 = 21 : 15 and 5 : 4 = 20 : 16.",
+    "A went from 21 to 20 parts by giving 150: one part = 150.",
+    "B had 15 x 150 = 2,250."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#16": [
+    "640 in 5 : 3: boys 400, girls 240.",
+    "Girls become 280; boys stay 400.",
+    "400 : 280 = 10 : 7."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#28": [
+    "Passed 4 parts, failed 1 part. 30 fewer appeared and 20 fewer passed, so 10 fewer failed.",
+    "4 parts - 20 = 5 x (1 part - 10), so one part = 30.",
+    "Candidates = 5 parts = 150."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#1": [
+    "16 moves from A to B, so the total stays: 5 and 45. Write 3 : 2 as 27 : 18.",
+    "A went from 27 to 19 parts: 8 parts = 16, one part = 2.",
+    "A = 27 x 2 = 54."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#4": [
+    "60 moves from A to B, so the total stays: 5 and 35. Write 3 : 2 as 21 : 14.",
+    "A went from 21 to 18 parts: 3 parts = 60, one part = 20.",
+    "A = 21 x 20 = 420."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#10": [
+    "Incomes 5 : 4 and expenditures 3 : 2 already leave 2 and 2: equal.",
+    "2 units = 4,000, so one unit = 2,000.",
+    "A's income = 5 x 2,000 = 10,000."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#24": [
+    "A saves 20% of 3 parts = 0.6 parts; B saves 30% of 2 parts = 0.6 parts.",
+    "0.6 : 0.6.",
+    "1 : 1."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#26": [
+    "Expenditure 5, savings 3, so income 8.",
+    "New income 9.6, new expenditure 5.6, so new savings 4.",
+    "From 3 to 4 is a rise of 33⅓%."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#6": [
+    "A saves 8/11 of 55,000 = 40,000. B saves 3/8 of 40,000 = 15,000.",
+    "40,000 : 15,000.",
+    "8 : 3."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#7": [
+    "Income : savings = 16 : 3, so expenditure = 13.",
+    "Savings up a third: 4. Expenditure up a half: 19.5. New income 23.5.",
+    "23.5 : 16 = 47 : 32."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#5": [
+    "Girls are equal, so the difference of totals is the difference of boys: 220 - 180 = 40.",
+    "Boys are 3 : 4, one part apart, so one part = 40: boys 120 and 160.",
+    "Girls in A = 180 - 120 = 60."
+   ],
+   "clerk-07-ratio-and-proportion-b-pyq#9": [
+    "Take 100 people: 68 literate and 32 illiterate.",
+    "Literate females = 68 x 6/17 = 24; illiterate females = 32 x 1/4 = 8.",
+    "24 : 8 = 3 : 1."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#18": [
+    "Take 5 students: 3 boys and 2 girls. Holders: 0.6 + 0.5 = 1.1.",
+    "1.1 of 5 is 22%.",
+    "So 78% do not hold one."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#3": [
+    "6 : 9 = 14 : x, so 6 x x = 9 x 14.",
+    "x = 126 / 6 = 21."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#12": [
+    "16 : 24 = 24 : x.",
+    "x = 24 x 24 / 16 = 36."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#15": [
+    "Subtract, then check first x fourth = second x third.",
+    "Subtract 2: 12, 15, 32, 40. 12 x 40 = 480 and 15 x 32 = 480.",
+    "The number is 2."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#19": [
+    "Intended 2 : 3 : 4: A = 1,170 x 2/9 = 260.",
+    "By mistake 1/2 : 1/3 : 1/4 = 6 : 4 : 3: A = 1,170 x 6/13 = 540.",
+    "A got 540 - 260 = 280 more."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#22": [
+    "Take the reductions off: 1,230 - 30 = 1,200 split 3 : 4 : 5, one part = 100.",
+    "C's reduced share is 500, so C's share is 515.",
+    "515 is not among the options, so the answer is None of these."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#29": [
+    "4/15 of A = 2/5 of B gives A : B = 2/5 : 4/15 = 3 : 2.",
+    "B = 1,210 x 2/5 = 484.",
+    "484 is not among the options, so the answer is None of these."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#30": [
+    "The three sums add to 2(a + b + c) = 21 parts = 28, so one part = 4/3.",
+    "a + b = 6 parts = 8.",
+    "c = 14 - 8 = 6."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#20": [
+    "9 + 16 + 25 = 50 squared parts = 1,250, so one squared part = 25 and one part = 5.",
+    "The numbers are 15, 20 and 25.",
+    "Their sum is 60."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#5": [
+    "3 and 5 share no factor, so LCM = 15 parts = 120: one part = 8.",
+    "Numbers 24 and 40, sum 64.",
+    "64 is not among the options, so the answer is None of these."
+   ]
+  },
+  "guidely": {
+   "ratio-and-proportion-based-on-percentage-set-1-1#10": [
+    "Multiply each term: 5 x 1.05 = 5.25, 4 x 1.15 = 4.6, 3 x 1.25 = 3.75.",
+    "Times 20: 105 : 92 : 75.",
+    "105: 92: 75."
+   ],
+   "ratio-and-proportion-based-on-boys-and-girls-set-1-1#4": [
+    "6 x 1.4 = 8.4 and 5 x 1.6 = 8.",
+    "8.4 : 8, times 5 = 42 : 40.",
+    "21:20."
+   ],
+   "ratio-and-proportion-based-on-percentage-set-1-1#7": [
+    "Males are 160 for every 100 females.",
+    "Females up 40%: 140. Males down 25%: 120.",
+    "120 : 140 = 6:7."
+   ],
+   "ratio-and-proportion-based-on-increase-and-decrease-set-1-1#5": [
+    "May: income 12, expenditure 7, savings 5.",
+    "June savings 5 x 1.4 = 7 with income still 12, so expenditure is 5.",
+    "Income : expenditure = 12:5."
+   ],
+   "ratio-and-proportion-based-on-percentage-set-1-1#8": [
+    "Males 3 parts, females 2 parts; after the rises 3.6 and 2.8 parts.",
+    "The gap of 0.8 parts is 12, so one part = 15.",
+    "Total at first = 5 parts = 75."
+   ],
+   "ratio-and-proportion-based-on-coins-set-1-1#1": [
+    "One set: one 10p, two 25p and one 50p = 10 + 50 + 50 = 110 paise.",
+    "Rs 22 = 2,200 paise, so there are 20 sets.",
+    "50p coins = 20."
+   ],
+   "ratio-and-proportion-based-on-coins-set-1-1#2": [
+    "One set: two Rs 1, three 50p, four 25p = 2 + 1.5 + 1 = Rs 4.5.",
+    "270 / 4.5 = 60 sets.",
+    "25 paise coins = 4 x 60 = 240."
+   ],
+   "ratio-and-proportion-based-on-coins-set-1-1#8": [
+    "One set: two Rs 5, three Rs 1, four Rs 10 = 10 + 3 + 40 = Rs 53.",
+    "5,300 / 53 = 100 sets.",
+    "Rs 10 coins = 4 x 100 = 400."
+   ],
+   "ratio-and-proportion-based-on-boys-and-girls-set-1-1#6": [
+    "Group shares: men 6 x 7 = 42, women 9 x 6 = 54, boys 10 x 3 = 30. Total 126 parts.",
+    "One part = 4,977 / 126 = 39.5.",
+    "A man gets 7 parts and a woman 6: the gap is 1 part = Rs. 39.5."
+   ],
+   "ratio-and-proportion-based-on-choclate-set-1-1#6": [
+    "25 students in 2 : 3: 10 girls and 15 boys.",
+    "A girl gets 2 shares and a boy 3 (50% more): 20 + 45 = 65 shares = 260, so one share = 4.",
+    "Each boy gets 3 x 4 = 12."
+   ]
+  }
+ }
+}
