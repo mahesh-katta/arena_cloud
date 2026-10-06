@@ -1,0 +1,333 @@
+{
+ "module": "quadratic-equations",
+ "new": {
+  "title": "Quadratic Equations",
+  "part": "quant",
+  "after": "number-series",
+  "sample": [
+   "Kept short on purpose. In the sample, quadratic comparison appeared in four IBPS Clerk papers (2018 twice, 2019, Dec 2020) with 20 questions, and in none of the 2021 to 2025 Clerk papers or the 12 sister papers of 2025-26."
+  ],
+  "revision": [
+   "**Roots:** two numbers that multiply to c (or a x c) and add to b; flip their signs.",
+   "| Middle sign | Last sign | Roots |",
+   "| - | + | both positive |",
+   "| + | + | both negative |",
+   "| either | - | one of each sign |",
+   "**Compare:** all x above all y: x > y; shared root: x ≥ y; interleaved or equal single values: no relation.",
+   "**Traps.** x² = k has two roots. √ means the positive root only. x = y exactly is marked \"x = y or no relation\"."
+  ]
+ },
+ "intro": [
+  "Two equations are given, one in x and one in y. Solve both, then compare every x root with every y root.",
+  "There are four short lessons; the sign rule in the first often settles the answer without solving.",
+  "What the papers ask: 20 such questions in four IBPS Clerk papers from 2018 to 2020, and none in the 2021 to 2025 Clerk papers or the 2025-26 sister papers checked. So this topic is kept short."
+ ],
+ "needs": [],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the sign rule and the comparison table."
+ ],
+ "lessons": [
+  {
+   "id": "factor-pairs",
+   "code": "QE1",
+   "title": "Roots from a factor pair, and the sign rule",
+   "plain": "The starting point: x² + bx + c = 0 is solved by two numbers that multiply to c and add to b. Their signs can be read before you solve.",
+   "needs": [],
+   "teach": [
+    "For x² - 13x + 42 = 0, find two numbers that **multiply to 42 and add to 13**: 6 and 7. The roots are x = 6 and x = 7 (the signs flip).",
+    "**The sign rule** tells you where the roots lie before any working:",
+    "| Middle sign | Last sign | Roots |",
+    "| - | + | both positive |",
+    "| + | + | both negative |",
+    "| either | - | one positive, one negative |",
+    "Often this alone decides the comparison: if both x roots are negative and both y roots positive, x < y with no more work.",
+    "Checked papers: quadratic comparison was in four IBPS Clerk papers (2018 twice, 2019, Dec 2020) and in none of the 2021 to 2025 Clerk papers or the 2025-26 sister papers checked."
+   ],
+   "example": {
+    "q": "I. x² + 9x + 20 = 0   II. y² - 7y + 12 = 0",
+    "steps": [
+     "Sign rule: x has + and +, so both roots negative; y has - and +, so both positive.",
+     "So every x is below every y: x < y. (The roots are -4, -5 and 3, 4.)"
+    ],
+    "answer": "x < y."
+   },
+   "check": {
+    "q": "What are the roots of x² - 11x + 30 = 0?",
+    "options": {
+     "a": "5 and 6",
+     "b": "-5 and -6",
+     "c": "3 and 10",
+     "d": "-5 and 6"
+    },
+    "answer": "A",
+    "why": "5 x 6 = 30 and 5 + 6 = 11; the middle sign is minus and the last plus, so both roots are positive: 5 and 6."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-04-quadratic-equations-a-graded#1",
+     "clerk-04-quadratic-equations-a-graded#2",
+     "clerk-04-quadratic-equations-a-graded#6",
+     "clerk-04-quadratic-equations-b-pyq#2",
+     "clerk-04-quadratic-equations-b-pyq#7"
+    ],
+    "tags": [
+     "Both positive, apart.",
+     "Both negative.",
+     "One root of each sign.",
+     "A real paper, both negative.",
+     "A real paper, mixed signs."
+    ]
+   }
+  },
+  {
+   "id": "comparing",
+   "code": "QE2",
+   "title": "Comparing the roots",
+   "plain": "New: reading the five answer choices correctly.",
+   "needs": [],
+   "teach": [
+    "Put all four roots on one line. Then:",
+    "| What you see | Answer |",
+    "| every x right of every y | x > y |",
+    "| every x right of or on every y (one root shared) | x ≥ y |",
+    "| every x left of every y | x < y |",
+    "| every x left of or on every y (one root shared) | x ≤ y |",
+    "| the roots interleave, or x = y exactly | x = y or no relation |",
+    "Watch the last row: when x and y are both a single equal number, the papers mark **\"x = y or no relation\"**, not x ≥ y."
+   ],
+   "example": {
+    "q": "I. x² - 13x + 40 = 0   II. y² - 8y + 15 = 0",
+    "steps": [
+     "x = 5 or 8; y = 3 or 5.",
+     "Every x is at least every y, and 5 is shared: x ≥ y."
+    ],
+    "answer": "x ≥ y."
+   },
+   "check": {
+    "q": "x = 3 or 6, and y = 4 or 5. What is the relation?",
+    "options": {
+     "a": "x > y",
+     "b": "x < y",
+     "c": "x ≥ y",
+     "d": "No relation"
+    },
+    "answer": "D",
+    "why": "3 is below both y values but 6 is above both: the roots interleave, so no relation."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-04-quadratic-equations-a-graded#3",
+     "clerk-04-quadratic-equations-a-graded#4",
+     "clerk-04-quadratic-equations-a-graded#15",
+     "clerk-04-quadratic-equations-b-pyq#4",
+     "clerk-04-quadratic-equations-b-pyq#19"
+    ],
+    "tags": [
+     "Interleaved roots.",
+     "One root shared.",
+     "A double root shared.",
+     "A real paper, interleaved.",
+     "A real paper, clearly apart."
+    ]
+   }
+  },
+  {
+   "id": "leading-number",
+   "code": "QE3",
+   "title": "When x² has a number in front",
+   "plain": "New: 2x² - 7x + 6 = 0. Split the middle number using the product of the first and last.",
+   "needs": [],
+   "teach": [
+    "For ax² + bx + c = 0, find two numbers that **multiply to a x c and add to b**, then divide each by a for the roots (and flip the signs).",
+    "2x² - 7x + 6: a x c = 12; 3 and 4 add to 7. Roots 3/2 and 4/2 = 1.5 and 2 (both positive by the sign rule).",
+    "The sign rule still works, and fractions compare easily as decimals."
+   ],
+   "example": {
+    "q": "I. 2x² - 7x + 6 = 0   II. y² - 6y + 8 = 0",
+    "steps": [
+     "x: 12 = 3 x 4, roots 1.5 and 2. y: 2 and 4.",
+     "Every x is at most every y, and 2 is shared: x ≤ y."
+    ],
+    "answer": "x ≤ y."
+   },
+   "check": {
+    "q": "What are the roots of 3x² - 10x + 8 = 0?",
+    "options": {
+     "a": "2 and 4/3",
+     "b": "-2 and -4/3",
+     "c": "4 and 2/3",
+     "d": "1 and 8/3"
+    },
+    "answer": "A",
+    "why": "a x c = 24; 6 and 4 add to 10; roots 6/3 = 2 and 4/3, both positive."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-04-quadratic-equations-a-graded#9",
+     "clerk-04-quadratic-equations-a-graded#11",
+     "clerk-04-quadratic-equations-b-pyq#1",
+     "clerk-04-quadratic-equations-b-pyq#12",
+     "clerk-04-quadratic-equations-b-pyq#20"
+    ],
+    "tags": [
+     "Fractions and a shared root.",
+     "Both sides have a leading number.",
+     "A real paper.",
+     "A real paper, all negative.",
+     "A real paper, large and small."
+    ]
+   }
+  },
+  {
+   "id": "special-forms",
+   "code": "QE4",
+   "title": "Squares, cubes, roots and straight-line pairs",
+   "plain": "New: four forms that are not the usual three-term equation.",
+   "needs": [],
+   "teach": [
+    "| Form | Roots | Note |",
+    "| x² = 144 | 12 or -12 | a square has two roots |",
+    "| y³ = 1728 | 12 only | a cube has one real root |",
+    "| x = √625 | 25 only | the √ sign means the positive root |",
+    "| two straight-line equations in x and y | solve them together | one x and one y |",
+    "The x² = k trap is the usual mistake: forgetting -12 turns \"no relation\" into \"x ≥ y\"."
+   ],
+   "example": {
+    "q": "I. x² = 144   II. y³ = 1728",
+    "steps": [
+     "x = 12 or -12; y = 12.",
+     "Every x is at most y, and 12 is shared: x ≤ y."
+    ],
+    "answer": "x ≤ y."
+   },
+   "check": {
+    "q": "I. x² = 49  II. y = 7. What is the relation?",
+    "options": {
+     "a": "x ≥ y",
+     "b": "x ≤ y",
+     "c": "x = y",
+     "d": "x > y"
+    },
+    "answer": "B",
+    "why": "x is 7 or -7, both at most 7, with 7 shared: x ≤ y."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-04-quadratic-equations-a-graded#14",
+     "clerk-04-quadratic-equations-a-graded#22",
+     "clerk-04-quadratic-equations-b-pyq#3",
+     "clerk-04-quadratic-equations-b-pyq#6",
+     "clerk-04-quadratic-equations-a-graded#7",
+     "clerk-04-quadratic-equations-a-graded#17"
+    ],
+    "tags": [
+     "A square and a cube.",
+     "√ means positive.",
+     "A real paper: x² = 4.",
+     "A real paper: y² = 169.",
+     "Two straight lines.",
+     "Two straight lines, equal values."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-04-quadratic-equations-a-graded#1": [
+    "Pairs: 6 and 7 multiply to 42; 4 and 5 multiply to 20.",
+    "x = 6 or 7; y = 4 or 5.",
+    "Every x is larger than every y: x > y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#2": [
+    "Signs + and +: all roots negative.",
+    "x = -5 or -4; y = -3 or -2.",
+    "Every x is smaller than every y: x < y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#6": [
+    "x: last sign minus, one root each side of zero.",
+    "x = -4 or 3; y = 4 or 7.",
+    "Every x is smaller than every y: x < y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#2": [
+    "Pairs: 10 and 11 make 110; 8 and 9 make 72.",
+    "x = -11 or -10; y = -9 or -8.",
+    "Every x is smaller than every y: x < y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#7": [
+    "Pairs: 9 and -2 make -18; 9 and 10 make 90.",
+    "x = -2 or 9; y = 9 or 10.",
+    "Every x is at most every y, and they meet: x ≤ y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#3": [
+    "x = 3 or 7; y = 4 or 6.",
+    "The roots overlap or are equal: x = y or no relation can be established."
+   ],
+   "clerk-04-quadratic-equations-a-graded#4": [
+    "x = 5 or 8; y = 3 or 5.",
+    "Every x is at least as large as every y, and they meet: x ≥ y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#15": [
+    "x = 9; y = 4 or 9.",
+    "Every x is at least as large as every y, and they meet: x ≥ y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#4": [
+    "x = -11 or 2; y = 3/2 or 2.",
+    "The roots overlap or are equal: x = y or no relation can be established."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#19": [
+    "x = 11 or 17; y = -4 or -3.",
+    "Every x is larger than every y: x > y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#9": [
+    "x = 3/2 or 2; y = 2 or 4.",
+    "Every x is at most every y, and they meet: x ≤ y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#11": [
+    "x = 8/3 or 3; y = 1 or 5/2.",
+    "Every x is larger than every y: x > y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#1": [
+    "x = 1/2 or 1; y = 1 or 3/2.",
+    "Every x is at most every y, and they meet: x ≤ y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#12": [
+    "x = -2 or -4/3; y = -1 or -1/2.",
+    "Every x is smaller than every y: x < y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#20": [
+    "x = 1 or 32/5; y = -2 or -2/5.",
+    "Every x is larger than every y: x > y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#14": [
+    "x = -12 or 12; y = 12.",
+    "Every x is at most every y, and they meet: x ≤ y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#22": [
+    "x = 25; y = -24 or 24.",
+    "Every x is larger than every y: x > y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#3": [
+    "x = -2 or 2; y = 2 or 4.",
+    "Every x is at most every y, and they meet: x ≤ y."
+   ],
+   "clerk-04-quadratic-equations-b-pyq#6": [
+    "x = -11 or 13; y = -13 or 13.",
+    "The roots overlap or are equal: x = y or no relation can be established."
+   ],
+   "clerk-04-quadratic-equations-a-graded#7": [
+    "Solve together: from the two equations, x = 5 and y = 2.",
+    "x = 5; y = 2.",
+    "Every x is larger than every y: x > y."
+   ],
+   "clerk-04-quadratic-equations-a-graded#17": [
+    "Solve together: x = 5 and y = 5.",
+    "x = 5; y = 5.",
+    "The roots overlap or are equal: x = y or no relation can be established."
+   ]
+  }
+ }
+}
