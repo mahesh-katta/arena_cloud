@@ -12020,6 +12020,13 @@ All six puzzle modules in one file. Each module is complete on its own and they 
 <td>6 Oct 2026</td>
 <td>43 bank sets (470 questions); all 89 different puzzles solved; 7 sets in Clerk papers, 2 in sister papers</td>
 </tr>
+<tr>
+<td>12</td>
+<td>Blood Relations</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>51 Sreedhar sets (140 questions; 45 distinct, all solved by script) and 48 Guidely questions; 6 sets in Clerk papers, 8 in sister papers; 9 of 18 Clerk shift lists name it</td>
+</tr>
 </table>
 **A note on time, for all six.** A puzzle set is one arrangement followed by about five questions. Nobody solves the arrangement in 45 seconds. The honest target is 3 to 6 minutes for the arrangement and 15 to 20 seconds for each question after it.
 ## Module 1: Floor and Flat Puzzles - Speed Mastery Module
@@ -14996,6 +15003,427 @@ After these, the Guidely "circular arrangement, single variable, facing inside" 
 - Open drawings ("cases") were counted by a script that adds clues one at a time and keeps every partial seating that survives; "good order" is the order with the smallest peak, found by search.
 **Where the paper evidence comes from.** Local cached PDFs (pdftotext) of 23 IBPS Clerk and 12 sister papers, searched for circular sets and read. Shift analyses opened on oliveboard.in (2024 and 2025 IBPS Clerk, RRB Clerk 2024), adda247.com (2024 IBPS Clerk) and guidely.in (2025 IBPS Clerk). Several web pages could not be read (two adda247 2024 shifts, a pw.live page); the 25 Aug 2024 Shifts 3 and 4 and 31 Aug 2024 Shifts 3 and 4 are not covered. The counts are sightings, not frequencies.
 **Not verified:** the 112 unchecked bank questions; which 2025 shift the Guidely 2025 set comes from (the analyses list circles only in 4 Oct Shifts 1 and 4, so it may repeat one of them); any sister-exam circle beyond the three found. Memory-based papers are reconstructions.
+**Corrections:** none so far.
+## Module 12: Blood Relations - Speed Mastery Module
+**Sample.** Papers opened: 35 memory-based papers, the 23 IBPS Clerk Prelims files in the paper cache (17 of them with a Reasoning section, 2017 to 5 October 2025) and 12 sister papers (SBI Clerk, IBPS RRB Clerk, IBPS PO Prelims, 2025 and 2026). Paper instances found: 14 blood-relation sets with 42 questions, 6 in IBPS Clerk papers (2019; 2022; 2023; a Guidely 2025 paper; 4 October 2025 shifts 1 and 2) and 8 in sister papers (SBI Clerk 22 February 2025 and 20 September 2025 shift 2; RRB Clerk 6 December 2025 shifts 1 and 2 and 13 December 2025 shift 2; IBPS PO 23 August 2025 shift 2 and 22 August 2026 shifts 1 and 2). I also read the topic lists of 18 IBPS Clerk shifts (2023 to 2025) on Bankersadda, Adda247, Oliveboard and PW: 9 of the 18 list blood relation, with 3 questions wherever a number is given. Bank: all 51 Sreedhar sets (140 questions; 45 different puzzles, 6 printed twice) and 48 of the 80 Guidely questions. The floor (8 target-exam shifts plus 6 to 10 sister-exam questions) is met: 6 Clerk sets from 6 different papers plus 9 shift lists that name the topic, and 24 sister-exam questions. Memory-based papers are reconstructions, not official papers.
+**A note on time.** A blood-relation set is one family paragraph and three questions. The honest target is 60 to 90 seconds for the drawing and 15 to 20 seconds for each question after it: about 2 minutes 30 seconds for the set.
+### 1. Basic Type, Core Mental Model and Grid
+**What the basic type looks like.** Seven to ten people, up to three generations, written as short statements: "A is the mother of P. P is the brother of G. K is married to G." Then three questions such as "How is S related to G?", "Who is the aunt of O?", "How many female members are there?". All 14 paper sets had this form; none was coded and none was a "pointing to a photograph" question.
+**The one idea: never answer from the sentences. Turn every statement into one line of a family drawing, with one row per generation, and read every answer off the drawing.**
+**How to draw it**
+- A married couple: the two names side by side on one row with = between them.
+- A child: a vertical line down from the couple (or from the one parent named).
+- Brothers and sisters: a bracket over names on one row.
+- Gender: + beside a man, - beside a woman, only when a word proves it.
+- Rows: grandparents on top, then their children, then grandchildren. A couple is always on one row.
+**Gender words**
+<table header-row="true">
+<tr>
+<td>Word about X</td>
+<td>X is</td>
+<td>Says nothing about</td>
+</tr>
+<tr>
+<td>father, son, brother, husband, uncle, nephew, grandson, son-in-law, brother-in-law</td>
+<td>a man</td>
+<td>the other person</td>
+</tr>
+<tr>
+<td>mother, daughter, sister, wife, aunt, niece, granddaughter, daughter-in-law, sister-in-law</td>
+<td>a woman</td>
+<td>the other person</td>
+</tr>
+<tr>
+<td>parent, child, sibling, spouse, cousin, grandchild, grandparent</td>
+<td>unknown</td>
+<td>either person</td>
+</tr>
+</table>
+**Grid: path on the drawing and the name it gets** (start at the second name in "How is X related to Y")
+<table header-row="true">
+<tr>
+<td>From Y to X</td>
+<td>X is Y's</td>
+<td>Rows apart</td>
+</tr>
+<tr>
+<td>One row up</td>
+<td>father / mother</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Two rows up</td>
+<td>grandfather / grandmother</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Up one, across to a sibling</td>
+<td>uncle / aunt (paternal through the father, maternal through the mother)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Across to a sibling, down one</td>
+<td>nephew / niece</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Up one, across, down one</td>
+<td>cousin</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Across a marriage, up one</td>
+<td>father-in-law / mother-in-law</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Down one, across a marriage</td>
+<td>son-in-law / daughter-in-law</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Across a marriage, across to a sibling; or across to a sibling, across a marriage</td>
+<td>brother-in-law / sister-in-law (two meanings)</td>
+<td>0</td>
+</tr>
+</table>
+**The solving algorithm (use it on every set):**
+1. Write all the names. Draw every direct statement (parent, child, sibling, married) on rows.
+2. For each brother-in-law or sister-in-law clue, draw both meanings lightly.
+3. Use the closing clues ("only son", "has two children", "no siblings", "unmarried", "eight members", "three couples") to place the floating people and rub out the wrong meaning.
+4. Mark + and - only where a word proves it. A couple is one man and one woman.
+5. Answer each question from the drawing. For a question with "If", add the new fact on a copy and throw it away after.
+**Non-linear warning.** A clue changes meaning with the order of the names: "R is the brother of G" makes R a man and says nothing about G. Reading it the other way round fixes the wrong person's gender, and the count of men and women comes out wrong by one.
+**Universal fallback (works on every set in this topic):** list every possible family that fits the statements, and give an answer only if it is the same in all of them; if two fitting families give different answers, the answer is "either" or "cannot be determined". This is exactly what the verification script does.
+### 2. Archetypes
+Bank counts are Sreedhar questions out of the 124 distinct ones (Guidely in brackets where used). Paper counts are sets or questions seen in the 6 IBPS Clerk sets and the 8 sister-paper sets.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Bank</td>
+<td>Clerk papers</td>
+<td>Sister papers</td>
+<td>Label</td>
+</tr>
+<tr>
+<td>BR1</td>
+<td>Family paragraph, "How is X related to Y"</td>
+<td>76 questions (25)</td>
+<td>6 sets</td>
+<td>8 sets</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>BR2</td>
+<td>In-law clue with two meanings</td>
+<td>in 37 of 40 paragraph sets</td>
+<td>5 of 6 sets</td>
+<td>8 of 8 sets</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>BR3</td>
+<td>Closing clues: only, has two children, no siblings, N couples</td>
+<td>in 37 of 40 paragraph sets</td>
+<td>4 of 6 sets</td>
+<td>6 of 8 sets</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>BR4</td>
+<td>How many men, women or couples</td>
+<td>14 questions (1)</td>
+<td>2</td>
+<td>5</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>BR5</td>
+<td>"Either" or "cannot be determined" as the key</td>
+<td>18 questions (1)</td>
+<td>1 (2019)</td>
+<td>0</td>
+<td>Seen once</td>
+</tr>
+<tr>
+<td>BR6</td>
+<td>A person named through another ("L's father")</td>
+<td>4 questions (8)</td>
+<td>1</td>
+<td>4</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>BR7</td>
+<td>"If ... then" question with a new fact</td>
+<td>14 questions (6)</td>
+<td>4 questions in 3 sets</td>
+<td>1</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>BR8</td>
+<td>Whole-tree questions: pairs, odd one out, true statements</td>
+<td>5 questions (8)</td>
+<td>2 questions in 1 set</td>
+<td>2 in 2 sets</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>BR9</td>
+<td>Coded relations (A @ B means A is the father of B)</td>
+<td>15 questions in 5 sets (Guidely set of 20)</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>BR10</td>
+<td>Pointing at a photograph / introducing a person</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Unverified</td>
+</tr>
+</table>
+BR2 and BR3 are clue kinds inside a set, not question kinds; they are listed because they decide most answers. BR1 to BR8 overlap: one question can be BR1 and BR7 at once.
+Where they were seen:
+- Every paper set: IBPS Clerk 2019, 2022, 2023, 2025 (Guidely), 4 October 2025 shifts 1 and 2; SBI Clerk 22 February 2025 and 20 September 2025 shift 2; RRB Clerk 6 December 2025 shifts 1 and 2, 13 December 2025 shift 2; IBPS PO 23 August 2025 shift 2, 22 August 2026 shifts 1 and 2. All 14 are family paragraphs with three questions.
+- Shift topic lists that name blood relation (3 questions where a number is given): IBPS Clerk 27 August 2023 shift 2; 24 August 2024 shift 3; 25 August 2024 shift 1; 31 August 2024 shifts 2 and 3; 4 October 2025 shifts 1 and 2; 5 October 2025 shifts 2 and 4. Not listed in: 24 August 2024 shifts 1, 2 and 4; 25 August 2024 shifts 3 and 4; 4 October 2025 shifts 3 and 4; 5 October 2025 shifts 1 and 3.
+- In the Sreedhar sets 6 of the 14 counting questions are keyed "cannot be determined"; in the 7 paper counting questions none was.
+What the bank sets look like (from the 40 Sreedhar paragraph sets solved by script): 5 to 9 people (8 people in 15 sets, 9 in 11); 16 sets fit exactly one family, the rest leave only a gender or a side link open that the questions do not ask about (or ask about on purpose, keyed "either" or "cannot be determined").
+#### Core archetypes
+**BR1. Family paragraph, how is X related to Y. Confirmed.** *Pattern clues:* "How is X related to Y?" after a paragraph of family statements. *Shortcut engine:* draw on generation rows; start at Y and walk to X; name the walk with the grid. *Worked example:* Drill 1 below.
+**BR2. In-law clue with two meanings. Confirmed.** *Pattern clues:* "brother-in-law", "sister-in-law". *Shortcut engine:* write both meanings (spouse's sibling, or sibling's spouse); "X has no siblings" kills the first, "Y has no siblings" kills the second; the couple count kills one otherwise. *Worked example:* Drill 2 below.
+**BR3. Closing clues. Confirmed.** *Pattern clues:* "only", "has two children", "no siblings", "unmarried", "eight members", "three married couples", "three generations". *Shortcut engine:* draw the direct clues first, list the floating people, then read the closing clues against that list; the family is closed, so nobody outside the names exists. *Worked example:* Lesson 3 (SBI Clerk 22 February 2025).
+**BR4. How many men or women. Confirmed.** *Pattern clues:* "How many female members are there in the family?" *Shortcut engine:* each couple gives one man and one woman; mark only proven genders; if the count depends on an unmarked person, it cannot be determined. *Worked example:* Drill 3 below.
+**BR5. Either or cannot be determined. Seen once (IBPS Clerk 2019).** *Pattern clues:* options "Either (1) or (2)", "Can't be determined". *Shortcut engine:* place known, gender unknown and both words offered: "either"; only one word offered or two places possible: "cannot be determined". *Worked example:* Drill 5 below.
+**BR6. A person named through another. Confirmed.** *Pattern clues:* "L's father", "the sister-in-law of H", "the one who is". *Shortcut engine:* resolve the inner name first and write it above the words, then answer an ordinary question. *Worked example:* Drill 4 below.
+**BR7. If ... then. Confirmed.** *Pattern clues:* "If C is the wife of K, then ...". *Shortcut engine:* add the fact on a copy for that question only; a new person gets no links except the one stated. *Worked example:* Drill 4, Q2 below.
+**BR8. Whole-tree questions. Confirmed.** *Pattern clues:* "Which pair is husband and wife?", "Four of the following five are alike", "Which statement is true?", options i, ii, iii. *Shortcut engine:* finish every couple, row and gender first, then test each option on the drawing; for "alike", the shared feature was gender or parent-and-child in every set checked. *Worked example:* Lesson 8 (IBPS Clerk 2025, Guidely paper).
+#### Insurance archetypes (Bank only)
+**BR9. Coded relations. Bank only.** *Pattern clues:* "A @ B means A is the father of B", then an expression such as M % N © O # P. *Shortcut engine:* each symbol is one line of the drawing between the two letters beside it; the symbol fixes the gender of the first letter only. *Worked example:* Drill 6 below.
+#### Unverified (in neither the bank nor the papers)
+**BR10. Pointing at a photograph.** *Label:* Unverified. *Pattern clues:* "Pointing to a man, Rita said, his mother is the only daughter of my father." *Shortcut engine:* start from the speaker, replace "my father's only daughter" by "me", and draw from the speaker outwards. Not in the papers or the bank studied; from general knowledge only.
+### 3. Drill Set
+Six original sets written for this module. Each was solved by the same script used on the bank: every family that fits the statements was listed, and the answers below are the same in all of them.
+#### Drill 1 (Basic, BR1: read a relation off the drawing)
+In a family of six members, P is the father of Q. R is the mother of S. Q and S are siblings. T is the sister of P. U is the son of T.
+**Q1.** How is U related to S? (A) Brother (B) Cousin (C) Nephew (D) Uncle (E) Son
+**Q2.** How is T related to Q? (A) Mother (B) Sister (C) Aunt (D) Niece (E) Cannot be determined
+**Conventional Method:** write each statement as a sentence about the other people and reason through "the son of the sister of the father of ...".
+**30-Second Exam Method:**
+1. P on the top row with a line down to Q. Q and S are siblings, so S hangs from P too; R, S's mother, is P's wife.
+2. T is P's sister: top row beside P. U is her son: bottom row under T.
+3. Q1: from S, up to P, across to his sister T, down to U. Up, across, down: cousin.
+4. Q2: from Q, up to P, across to his sister T: aunt.
+**Answers:** Q1 (B) Cousin. Q2 (C) Aunt.
+**Option Elimination Hack:** for Q1, U and S are on the same row, so any option that changes the row (nephew, uncle, son) is out at once.
+**IBPS Trap Warning:** "Q and S are siblings" with two different parents named makes P and R a couple. Treating them as two unrelated families gives no answer to Q1.
+#### Drill 2 (Exam level, BR2: an in-law clue with two meanings)
+There are six members A, B, C, D, E and F in a family. B is the brother-in-law of A. A has no siblings. C is the father of B. D is the wife of A. E is the son of A. F is the mother of D.
+**Q1.** How is C related to A? (A) Father (B) Brother-in-law (C) Father-in-law (D) Uncle (E) Son-in-law
+**Q2.** How is B related to E? (A) Father (B) Uncle (C) Brother (D) Cousin (E) Grandfather
+**Conventional Method:** try both meanings of "brother-in-law" through all the later clues.
+**30-Second Exam Method:**
+1. B is A's brother-in-law: the brother of A's wife, or the husband of A's sister.
+2. A has no siblings, so the second meaning dies: B is the brother of A's wife D.
+3. C is B's father, so C is D's father too, and F, D's mother, is C's wife.
+4. Q1: C is the father of A's wife: father-in-law. Q2: B is the brother of E's mother: uncle (maternal).
+**Answers:** Q1 (C) Father-in-law. Q2 (B) Uncle.
+**Option Elimination Hack:** for Q1, C is one row above A, so brother-in-law (same row) and son-in-law (row below) are out.
+**IBPS Trap Warning:** reading "B is the brother-in-law of A" as "A is B's brother-in-law" puts A in B's family and makes C A's father.
+#### Drill 3 (Trap, BR4: count only what is proven)
+P is the son of Q. R is the wife of P. S is the grandchild of Q. T is the sister of P. U is the brother of P and the brother-in-law of R.
+**Q1.** How many female members are there in the family? (A) Two (B) Three (C) Four (D) Five (E) Cannot be determined
+**Conventional Method:** guess the gender of every person from how the sentence sounds and count.
+**30-Second Exam Method:**
+1. Proven men: P (son), U (brother). Proven women: R (wife), T (sister).
+2. Q is only called a parent of P and a grandparent of S. S is only called a grandchild.
+3. Women are at least 2 (R, T) and at most 4 (with Q and S). The count depends on unmarked people.
+**Answers:** Q1 (E) Cannot be determined.
+**Option Elimination Hack:** two words prove women and two prove men; every option that needs a third woman needs a word you have not got.
+**IBPS Trap Warning:** "grandchild" sounds neutral but people often picture a grandson. In the paper sets every gender was provable, so before choosing (E) in the exam, read the paragraph once more for a "same gender" or "only son" clue.
+#### Drill 4 (Two-step, BR6 and BR7: a person named through another, and an "if")
+J is the mother of K. K is married to L. M is the father of L. N is the son of K. O is the sister of L.
+**Q1.** How is O related to K's son? (A) Mother (B) Sister (C) Aunt (D) Grandmother (E) Niece
+**Q2.** If P is the wife of M, how is P related to K? (A) Mother (B) Mother-in-law (C) Aunt (D) Sister-in-law (E) Grandmother
+**Conventional Method:** rewrite "K's son" in words each time and chase it through the sentences.
+**30-Second Exam Method:**
+1. Draw: J above K; M above L; K = L; N below the couple; O beside L as L's sister.
+2. Q1: the inner name first. K's son is N. From N: up to L, across to L's sister O: aunt. (L's own gender is never needed.)
+3. Q2: on a copy, P = M. P is L's mother. K is L's spouse, so P is K's mother-in-law.
+**Answers:** Q1 (C) Aunt. Q2 (B) Mother-in-law.
+**Option Elimination Hack:** in Q1, O is one row above N, so sister and niece are out.
+**IBPS Trap Warning:** in Q2, "mother" is P's relation to L, not to K. And P stays only for Q2: she is not part of the family for any other question.
+#### Drill 5 (Phrasing trap, BR5: either or cannot be determined)
+C is the brother of D. D is the mother of E. F is the father of C.
+**Q1.** How is F related to E? (A) Father (B) Grandfather (C) Uncle (D) Father-in-law (E) Cannot be determined
+**Q2.** How is E related to C? (A) Nephew (B) Niece (C) Son (D) Either nephew or niece (E) Cannot be determined
+**Conventional Method:** pick a gender for E that "seems right" and answer.
+**30-Second Exam Method:**
+1. F on top; C and D below him as brother and sister; E below D.
+2. Q1: from E, up to D, up to F, a man: grandfather.
+3. Q2: E is the child of C's sister, so a nephew or a niece. E's gender is never given and both words are offered with "either".
+**Answers:** Q1 (B) Grandfather. Q2 (D) Either nephew or niece.
+**Option Elimination Hack:** in Q2, E is one row below C and not C's child (D is the mother), so (C) is out, and (A) and (B) each need a gender word that is not there.
+**IBPS Trap Warning:** choose "Cannot be determined" only when the "either" option is missing or when E could sit in two places. Here the place is certain.
+#### Drill 6 (Insurance, BR9: coded relations)
+A # B means A is the father of B. A $ B means A is the sister of B. A @ B means A is the wife of B. A & B means A is the son of B.
+**Q1.** In the expression P # Q $ R & S, how is S related to P? (A) Sister (B) Mother (C) Wife (D) Daughter (E) Cannot be determined
+**Q2.** Which expression shows that M is the grandson of K? (A) M & L # K (B) K # L $ M (C) M & L & K (D) K @ L # M (E) M $ L & K
+**Conventional Method:** translate the whole expression into a sentence and reason in words.
+**30-Second Exam Method:**
+1. Q1: P # Q: P is Q's father. Q $ R: Q is R's sister, so P is R's father too. R & S: R is S's son. R's father is P, so S is R's mother: P's wife.
+2. Q2: draw each option. In (C), M & L: M is L's son; L & K: L is K's son. M is the son of K's son: grandson. None of the other options makes M K's grandson for certain.
+**Answers:** Q1 (C) Wife. Q2 (C) M & L & K.
+**Option Elimination Hack:** for Q2, M must be someone's son (&) and the first person in the chain; (B) and (D) start with K and (E) makes M a sister.
+**IBPS Trap Warning:** a symbol fixes the gender of its first letter only. "R & S" makes R a man and says nothing about S; it is the father P that makes S a woman.
+### 4. Cheat Sheet and Recall Matrix
+<table header-row="true">
+<tr>
+<td>If you see…</td>
+<td>Do this</td>
+<td>Watch for</td>
+</tr>
+<tr>
+<td>Any family paragraph</td>
+<td>Generation rows, = for couples, + and - only when proven</td>
+<td>Answering from the sentences</td>
+</tr>
+<tr>
+<td>"X is the brother-in-law (sister-in-law) of Y"</td>
+<td>Two meanings: spouse's sibling, or sibling's spouse</td>
+<td>Keeping only the first meaning</td>
+</tr>
+<tr>
+<td>"X has no siblings"</td>
+<td>X can only be an in-law by marriage</td>
+<td>Missing which person it kills</td>
+</tr>
+<tr>
+<td>"Only son", "has two children", "eight members", "three couples"</td>
+<td>Place the floating people last with these</td>
+<td>Inventing a person outside the list</td>
+</tr>
+<tr>
+<td>"How many female members"</td>
+<td>Couples first (one of each), then the singles</td>
+<td>Guessing a grandchild's gender</td>
+</tr>
+<tr>
+<td>Place known, gender unknown</td>
+<td>"Either" if both words are offered</td>
+<td>Choosing "cannot be determined" too soon</td>
+</tr>
+<tr>
+<td>"L's father", "the sister-in-law of H"</td>
+<td>Resolve the inner name first</td>
+<td>Answering the relation to the inner person</td>
+</tr>
+<tr>
+<td>"If C is the wife of K"</td>
+<td>A copy, for this question only</td>
+<td>Carrying the new fact to the next question</td>
+</tr>
+<tr>
+<td>Coded symbols</td>
+<td>One symbol = one line; gender of the first letter only</td>
+<td>Giving the second letter a gender</td>
+</tr>
+</table>
+**Order of work, in one line:** direct clues on rows, both meanings of each in-law, closing clues for the floating people, genders proved, then the three questions.
+**Two checks before you answer.** For "How is X related to Y": did you start at Y? For a count: is every person marked, and is every mark proved by a word?
+### 5. Practice Ladder
+These are Sreedhar mock sets from your bank whose keys all agreed with the script. MT is the model test number; the range is the question numbers.
+<table header-row="true">
+<tr>
+<td>Rung</td>
+<td>Set</td>
+<td>Shape</td>
+<td>Keyed answers in order</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT2-84 to 85</td>
+<td>Six people, two questions</td>
+<td>E, D</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT40-81 to 83</td>
+<td>Seven people, son-in-law clue</td>
+<td>C, A, E</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT62-85 to 87</td>
+<td>Five people, both or no parents</td>
+<td>A, A, C</td>
+</tr>
+<tr>
+<td>2: 3 minutes a set</td>
+<td>S-MT80-76 to 78</td>
+<td>Eight people, three couples</td>
+<td>D, B, A</td>
+</tr>
+<tr>
+<td>2: 3 minutes a set</td>
+<td>S-MT10-86 to 88</td>
+<td>Eight people, two couples, count of men</td>
+<td>C, E, D</td>
+</tr>
+<tr>
+<td>2: 3 minutes a set</td>
+<td>S-MT36-73 to 75</td>
+<td>Eight people, count of women</td>
+<td>D, B, E</td>
+</tr>
+<tr>
+<td>2: 3 minutes a set</td>
+<td>S-MT74-87 to 89</td>
+<td>Count that cannot be determined</td>
+<td>D, A, E</td>
+</tr>
+<tr>
+<td>3: 2 minutes 30 seconds a set</td>
+<td>S-MT27-98 to 100</td>
+<td>"If" question, count of women</td>
+<td>B, E, A</td>
+</tr>
+<tr>
+<td>3: 2 minutes 30 seconds a set</td>
+<td>S-MT18-98 to 100</td>
+<td>"If" and "G's sister"</td>
+<td>C, D, D</td>
+</tr>
+<tr>
+<td>3: 2 minutes 30 seconds a set</td>
+<td>S-MT14-71 to 73</td>
+<td>Nine people, two "if" questions, "either"</td>
+<td>B, A, E</td>
+</tr>
+<tr>
+<td>3: 2 minutes 30 seconds a set</td>
+<td>S-MT59-71 to 73</td>
+<td>Coded (insurance)</td>
+<td>C, E, B</td>
+</tr>
+</table>
+After these, work through the Guidely "Blood Relation (Tricky in Para)" sets 1 and 2: their paragraphs are longer, closer to the IBPS PO sets, and most of their questions name one person through another.
+### 6. Verification Log
+**Built:** 6 Oct 2026.
+**What was checked by script**
+- A small family model (each person's gender, sibling group, parents, husband or wife, generation) was solved with the z3 solver: every family that fits the statements was listed, and an answer was accepted only if it is the same in all of them. "Either" and "cannot be determined" keys were reproduced the same way (place fixed but gender open; or two answers possible).
+- Readings used everywhere: brother-in-law means the brother of one's husband or wife or the husband of one's sister (and the same for sister-in-law); an unmarried person has no children; nobody is married to a brother, sister, cousin, uncle or aunt; a couple is one man and one woman; when one parent of a person and that parent's spouse are both in the family, the spouse is the other parent.
+- Sreedhar: all 45 different puzzles (40 paragraph sets, 5 coded sets; 124 questions) were encoded; the 6 sets printed twice (model tests 1 and 49, 3 and 23, 44 and 50, 45 and 57, 47 and 59, 48 and 60) were compared and have the same statements, questions and keys. Paragraph questions: 104 of 109 agree with the key, one of them (MT78-93) only if no brothers or sisters are assumed beyond what is stated. Coded questions: 15 of 15.
+- Not reproduced: MT78-94 and MT78-95 (the paragraph fits a second family in which G is F's father, not grandfather); MT71-80 (a second family fits in which K is not M's daughter); MT32-89 (no number of generations is given and many families fit); MT5-73 (the key "cannot be determined" needs P's mother to be added as a new person; with only K added, K is S's father).
+- Guidely: 48 of the 80 questions encoded (43 from the paragraph and "tricky" sets, 5 from the coded set), 45 agree. Not reproduced: coded set question 13 (the chain makes E C's great-aunt, the key says granddaughter); Tricky set 1 question 20 (V's gender is open; the set's question 19 names S in an option, a person missing from the paragraph, so a line is probably lost and question 19 was not used); Tricky set 2 question 8 (the "if" makes P a sister although P "has no siblings"). Not encoded: the set with full names (Ram, Shyam, ...), 15 coded questions (several have their symbol table split across records in the bank), and the longest tricky passages.
+- Papers: the 14 paper sets were encoded the same way. The 12 that print a key: 36 of 36 questions agree. IBPS Clerk 4 October 2025 shift 1 and SBI Clerk 20 September 2025 shift 2 print no key; each fits exactly one family, giving C father-in-law, V, B nephew (shift 1) and G son-in-law, none true, H nephew (SBI).
+- The six drill sets and the nine lesson checks were solved by the same script, and their answers come from it.
+**Where the paper evidence comes from.** The 35 cached papers were searched by text for family words and every hit was read. The paper cache labels only some files by shift; the 2023, 2024 and 2025 Guidely files are compilations whose shift is not stated. The shift topic lists were read on 20 analysis pages (Bankersadda, Adda247, Oliveboard, PW); the 25 August 2024 shift 2 page had no readable topic table and is not counted. Search snippets were not used as sources.
+**Not verified:** 32 Guidely questions; the IBPS Clerk shifts whose paper is not in the cache; whether the coded form or the photograph form has appeared in any paper not opened here. Memory-based papers are reconstructions.
 **Corrections:** none so far.
 ## Pattern Index: Reasoning Puzzles
 Built 6 Oct 2026 on request, each in its own file, mainly from the bank. The bank has no Reasoning PYQs. Paper counts are puzzle sets seen in 12 IBPS Clerk Prelims papers and 12 sister papers opened on the web. In each topic 40 bank sets were solved by brute-force script; the rest were sorted but not solved.
