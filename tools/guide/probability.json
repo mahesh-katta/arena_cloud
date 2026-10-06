@@ -1,0 +1,571 @@
+{
+ "module": "probability",
+ "intro": [
+  "Probability is a fraction: **the ways you want, out of all the ways**. Everything after that is counting, which Permutations & Combinations has already taught.",
+  "There are eight short lessons. Go in order the first time.",
+  "**What the papers ask.** Two IBPS Clerk papers in the sample had one question each: 2018 (two balls from a bag, after finding a count) and Dec 2021 (two balls of one colour). None of the 2022 to 2025 Clerk papers checked, and none of the 12 sister papers (2025-26), had one. Light insurance for Clerk Prelims.",
+  "Practice questions are from the Guidely bank; every answer used was re-computed with exact fractions."
+ ],
+ "needs": [],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the rules on one page."
+ ],
+ "lessons": [
+  {
+   "id": "basics",
+   "code": "PB1",
+   "title": "Favourable out of all",
+   "plain": "The starting point: probability is a fraction. Count what you want, count everything, divide.",
+   "needs": [],
+   "teach": [
+    "**Probability = favourable outcomes / all outcomes**, when every outcome is equally likely. It is always between 0 and 1.",
+    "A die has 6 faces; the primes are 2, 3, 5: probability 3/6 = 1/2.",
+    "A pack has 52 cards: 4 suits (hearts and diamonds red, clubs and spades black) of 13 cards each; 4 kings, 4 queens, 4 jacks, 4 aces.",
+    "**Not** is 1 minus: neither a king nor a queen is 1 - 8/52 = 11/13.",
+    "Numbers from 1 to n divisible by d: count them as the whole part of n / d."
+   ],
+   "example": {
+    "q": "A ball is drawn from balls numbered 1 to 40. What is the probability that its number divides by 6?",
+    "steps": [
+     "Multiples of 6 up to 40: 6, 12, ..., 36: 6 numbers.",
+     "6 / 40 = 3/20."
+    ],
+    "answer": "3/20."
+   },
+   "check": {
+    "q": "A card is drawn from a pack of 52. What is the probability that it is a red king?",
+    "options": {
+     "a": "1/26",
+     "b": "1/13",
+     "c": "1/52",
+     "d": "1/4"
+    },
+    "answer": "A",
+    "why": "Two red kings out of 52: 2/52 = 1/26. (1/13 counts all four kings.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-dice-set-1-prelims-1#1",
+     "probability-based-on-cards-set-1-prelims-1#8",
+     "probability-based-on-either-or-neither-set-1-prelims-1#8",
+     "probability-based-on-balls-set-1-prelims-1#8",
+     "probability-based-on-balls-set-1-prelims-1#18"
+    ],
+    "tags": [
+     "A die.",
+     "Not this and not that.",
+     "Neither of two colours.",
+     "Numbered balls.",
+     "Multiples of 4."
+    ]
+   }
+  },
+  {
+   "id": "coins-dice",
+   "code": "PB2",
+   "title": "Coins and dice: list the outcomes",
+   "plain": "New: several coins or dice at once. Count all outcomes by multiplying, then the ones you want.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "n coins give 2 x 2 x ... = 2ⁿ outcomes; two dice give 6 x 6 = 36.",
+    "**Exactly r heads in n tosses:** nCr of the 2ⁿ outcomes. 3 coins, exactly 2 heads: 3C2 = 3 of 8.",
+    "**At least one head:** 1 - (all tails) = 1 - 1/2ⁿ.",
+    "Two dice: list the sums. Sum 7 comes 6 ways; 6 and 8 come 5 ways each; 2 and 12 one way each.",
+    "| Sum | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |",
+    "| Ways | 1 | 2 | 3 | 4 | 5 | 6 | 5 | 4 | 3 | 2 | 1 |"
+   ],
+   "example": {
+    "q": "Two dice are thrown. What is the probability that the sum is 9 or more?",
+    "steps": [
+     "Sums 9, 10, 11, 12: 4 + 3 + 2 + 1 = 10 ways.",
+     "10/36 = 5/18."
+    ],
+    "answer": "5/18."
+   },
+   "check": {
+    "q": "Four coins are tossed. What is the probability of exactly 2 heads?",
+    "options": {
+     "a": "3/8",
+     "b": "1/2",
+     "c": "1/4",
+     "d": "3/16"
+    },
+    "answer": "A",
+    "why": "4C2 = 6 of 16 outcomes: 6/16 = 3/8. (1/2 assumes heads and tails just split evenly.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-coins-set-1-prelims-1#1",
+     "probability-based-on-coins-set-1-prelims-1#7",
+     "probability-based-on-coins-set-1-prelims-1#5",
+     "probability-based-on-dice-set-1-prelims-1#5",
+     "probability-based-on-dice-set-1-prelims-1#8"
+    ],
+    "tags": [
+     "Exactly two of three.",
+     "Exactly two of five.",
+     "At least one.",
+     "A sum that divides by 4.",
+     "One die beats the other."
+    ]
+   }
+  },
+  {
+   "id": "drawing",
+   "code": "PB3",
+   "title": "Drawing two or three from a bag",
+   "plain": "New: several items are drawn at once. Count with selections.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "Drawing 2 balls at once: all outcomes = nC2 for n balls. Favourable = selections of the kind wanted.",
+    "2 green from 3 red and 4 green: 4C2 / 7C2 = 6/21 = 2/7.",
+    "**Different colours** (one of each): multiply the counts: 5 red x 6 blue = 30 of 11C2 = 55.",
+    "Cards the same way: 2 red cards: 26C2 / 52C2 = 325 / 1,326 = 25/102.",
+    "Checked papers: IBPS Clerk 2018 and Dec 2021 each set one bag question."
+   ],
+   "example": {
+    "q": "A bag has 12 blue balls and 8 others that are yellow or pink. The probability of drawing a yellow ball is 1/4. Two balls are drawn. What is the probability both are pink?",
+    "steps": [
+     "Yellow = 1/4 of 20 = 5, so pink = 3.",
+     "Both pink: 3C2 / 20C2 = 3 / 190."
+    ],
+    "answer": "3/190 (IBPS Clerk Prelims 2018, Guidely memory-based)."
+   },
+   "check": {
+    "q": "A bag has 5 red and 5 green balls. Two are drawn. What is the probability both are red?",
+    "options": {
+     "a": "2/9",
+     "b": "1/4",
+     "c": "1/2",
+     "d": "4/9"
+    },
+    "answer": "A",
+    "why": "5C2 / 10C2 = 10/45 = 2/9. (1/4 is (1/2) x (1/2), which forgets the first ball is not put back.) IBPS Clerk Dec 2021 asked this form."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-balls-set-1-prelims-1#2",
+     "probability-based-on-balls-set-1-prelims-1#1",
+     "probability-based-on-balls-set-1-prelims-1#10",
+     "probability-based-on-cards-set-1-prelims-1#2",
+     "probability-based-on-cards-set-1-prelims-1#9"
+    ],
+    "tags": [
+     "Two of one colour.",
+     "One of each colour.",
+     "Exactly two of one kind in three.",
+     "Two red cards.",
+     "Two kings."
+    ]
+   }
+  },
+  {
+   "id": "same-either",
+   "code": "PB4",
+   "title": "Same colour, or this or that: add the cases",
+   "plain": "New: more than one kind of outcome is wanted. Count each kind and add.",
+   "needs": [],
+   "teach": [
+    "\"Both the same colour\" = both red + both blue + ... Each is a separate count; add them before dividing.",
+    "\"Either both red or both blue\" works the same way.",
+    "Three of the same colour from 4 pink, 6 grey and 4 brown: 4C3 + 6C3 + 4C3 = 4 + 20 + 4 = 28 of 14C3 = 364."
+   ],
+   "example": {
+    "q": "A bag has 3 red, 4 green and 5 blue balls. Two are drawn. What is the probability they are the same colour?",
+    "steps": [
+     "Both red 3, both green 6, both blue 10: 19.",
+     "12C2 = 66.",
+     "19/66."
+    ],
+    "answer": "19/66."
+   },
+   "check": {
+    "q": "A box has 4 red and 3 green balls. Two are drawn. What is the probability they are the same colour?",
+    "options": {
+     "a": "3/7",
+     "b": "2/7",
+     "c": "1/7",
+     "d": "4/7"
+    },
+    "answer": "A",
+    "why": "(6 + 3) / 21 = 9/21 = 3/7. (2/7 counts only the red pairs.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-balls-set-1-prelims-1#5",
+     "probability-based-on-balls-set-1-prelims-1#4",
+     "probability-based-on-either-or-neither-set-1-prelims-1#1",
+     "probability-based-on-same-or-different-colour-set-1-prelims-1#4",
+     "probability-based-on-same-or-different-colour-set-1-prelims-1#3"
+    ],
+    "tags": [
+     "Two colours.",
+     "Bigger numbers.",
+     "Either both red or both blue.",
+     "Three colours.",
+     "Three drawn, all the same."
+    ]
+   }
+  },
+  {
+   "id": "at-least",
+   "code": "PB5",
+   "title": "At least and at most",
+   "plain": "New: the quickest route is often the opposite event.",
+   "needs": [],
+   "teach": [
+    "**At least one** = 1 - (none). At least one red in 3 from 5 red and 10 others: 1 - 10C3 / 15C3.",
+    "**At most two** of 3 = 1 - (all three).",
+    "When the opposite is no shorter, add the cases directly, as in P&C."
+   ],
+   "example": {
+    "q": "Two balls are drawn from 4 red and 6 white. What is the probability of at least one red?",
+    "steps": [
+     "None red: 6C2 / 10C2 = 15/45 = 1/3.",
+     "1 - 1/3 = 2/3."
+    ],
+    "answer": "2/3."
+   },
+   "check": {
+    "q": "Three coins are tossed. What is the probability of at most two heads?",
+    "options": {
+     "a": "7/8",
+     "b": "3/4",
+     "c": "1/2",
+     "d": "3/8"
+    },
+    "answer": "A",
+    "why": "All three heads is 1/8, so at most two is 7/8. (3/8 is exactly two.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-atleast-or-atmost-set-1-prelims-1#1",
+     "probability-based-on-atleast-or-atmost-set-1-prelims-1#2",
+     "probability-based-on-atleast-or-atmost-set-1-prelims-1#5",
+     "probability-based-on-atleast-or-atmost-set-1-prelims-1#7",
+     "probability-based-on-atleast-or-atmost-set-1-prelims-1#9"
+    ],
+    "tags": [
+     "At least one, three drawn.",
+     "At least one, two drawn.",
+     "Small numbers.",
+     "At most two.",
+     "At most two women: add the cases."
+    ]
+   }
+  },
+  {
+   "id": "unknown",
+   "code": "PB6",
+   "title": "A count is missing",
+   "plain": "New: the probability is given and a number of balls is asked.",
+   "needs": [],
+   "teach": [
+    "Write the probability with the unknown and match it: green 5 of a total T is 1/3, so T = 15.",
+    "With two drawn, the match is with selections: two blue = 4C2 / nC2 = 2/7 gives nC2 = 21, so n = 7.",
+    "Try the options when the equation looks awkward: they are small whole numbers."
+   ],
+   "example": {
+    "q": "A bag has x red and 6 blue balls. The probability of drawing a red ball is 1/4. Find x.",
+    "steps": [
+     "x / (x + 6) = 1/4.",
+     "4x = x + 6, so x = 2."
+    ],
+    "answer": "2."
+   },
+   "check": {
+    "q": "A bag has 9 balls; 3 are red. One more red ball is added. What is the probability of drawing red now?",
+    "options": {
+     "a": "2/5",
+     "b": "1/3",
+     "c": "4/9",
+     "d": "3/10"
+    },
+    "answer": "A",
+    "why": "4 red of 10: 2/5. (1/3 is before the ball was added.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-variables-set-1-prelims-1#1",
+     "probability-based-on-balls-set-1-prelims-1#13",
+     "probability-based-on-balls-set-1-prelims-1#16",
+     "probability-based-on-variables-set-1-prelims-1#5",
+     "probability-based-on-variables-set-1-prelims-1#8"
+    ],
+    "tags": [
+     "Two unknown counts.",
+     "From one known colour.",
+     "A decimal probability.",
+     "An unknown inside a count.",
+     "Two drawn."
+    ]
+   }
+  },
+  {
+   "id": "one-by-one",
+   "code": "PB7",
+   "title": "One after another: with or without putting back",
+   "plain": "New: draws happen in turn. Multiply the probabilities of each step.",
+   "needs": [],
+   "teach": [
+    "**With replacement:** each draw has the same chances. First prime (10 of 30) and then a square (5 of 30): 1/3 x 1/6 = 1/18.",
+    "**Without replacement:** the second draw has one fewer item. First white (12 of 28), then black (16 of 27): 12/28 x 16/27.",
+    "\"Both the same\" with replacement: add the squares of each kind's chance.",
+    "At least two of three draws with replacement: (exactly two) + (all three), using 3C2 for which draws."
+   ],
+   "example": {
+    "q": "A bag has 3 red and 2 blue balls. Two are drawn one by one without replacement. What is the probability both are red?",
+    "steps": [
+     "First red: 3/5. Then red: 2/4.",
+     "3/5 x 2/4 = 3/10."
+    ],
+    "answer": "3/10."
+   },
+   "check": {
+    "q": "A die is rolled twice. What is the probability of a 6 both times?",
+    "options": {
+     "a": "1/36",
+     "b": "1/6",
+     "c": "1/12",
+     "d": "2/36"
+    },
+    "answer": "A",
+    "why": "1/6 x 1/6 = 1/36. (1/12 adds the chances instead of multiplying.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-with-replacement-set-1-prelims-1#1",
+     "probability-based-on-with-replacement-set-1-prelims-1#7",
+     "probability-based-on-without-replacement-set-1-prelims-1#1",
+     "probability-based-on-without-replacement-set-1-prelims-1#2",
+     "probability-based-on-with-replacement-set-1-prelims-1#4"
+    ],
+    "tags": [
+     "With replacement, two kinds.",
+     "Both the same type.",
+     "Without replacement, in order.",
+     "Two of one colour.",
+     "At least two of three."
+    ]
+   }
+  },
+  {
+   "id": "either-neither",
+   "code": "PB8",
+   "title": "Either, neither, and overlaps",
+   "plain": "New: two events that can share outcomes.",
+   "needs": [],
+   "teach": [
+    "**Either A or B** = A + B - (both), so a shared outcome is not counted twice. A club or a jack: 13 + 4 - 1 = 16 of 52.",
+    "**Neither A nor B** = 1 - (either).",
+    "If A and B cannot happen together (a queen of clubs or a king of hearts), just add."
+   ],
+   "example": {
+    "q": "A card is drawn. What is the probability it is a heart or a king?",
+    "steps": [
+     "Hearts 13, kings 4, the king of hearts counted twice: 13 + 4 - 1 = 16.",
+     "16/52 = 4/13."
+    ],
+    "answer": "4/13."
+   },
+   "check": {
+    "q": "A number is chosen from 1 to 20. What is the probability it is even or a multiple of 5?",
+    "options": {
+     "a": "3/5",
+     "b": "7/10",
+     "c": "1/2",
+     "d": "13/20"
+    },
+    "answer": "A",
+    "why": "Even 10, multiples of 5 are 4, both (10, 20) 2: 12/20 = 3/5. (7/10 forgets to remove the overlap.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "probability-based-on-cards-set-1-prelims-1#4",
+     "probability-based-on-either-or-neither-set-1-prelims-1#9",
+     "probability-based-on-either-or-neither-set-1-prelims-1#6",
+     "probability-based-on-dice-set-1-prelims-1#2"
+    ],
+    "tags": [
+     "Two single cards: just add.",
+     "Neither, with an overlap.",
+     "Prime or a cube.",
+     "A sum divisible by 5 or 7."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "guidely": {
+   "probability-based-on-dice-set-1-prelims-1#1": [
+    "Primes on a die: 2, 3, 5.",
+    "3/6 = 1/2."
+   ],
+   "probability-based-on-cards-set-1-prelims-1#8": [
+    "Kings and queens: 8 of 52.",
+    "1 - 8/52 = 44/52 = 11/13."
+   ],
+   "probability-based-on-either-or-neither-set-1-prelims-1#8": [
+    "Neither red nor blue means black: 8 of 32.",
+    "8/32 = 1/4."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#8": [
+    "Even numbers from 1 to 15: 7.",
+    "7/15 is not among the options, so the answer is None of these."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#18": [
+    "Multiples of 4 up to 45: 11.",
+    "11/45 is not among the options, so the answer is None of these."
+   ],
+   "probability-based-on-coins-set-1-prelims-1#1": [
+    "3 coins: 8 outcomes. Exactly 2 heads: 3C2 = 3.",
+    "3/8."
+   ],
+   "probability-based-on-coins-set-1-prelims-1#7": [
+    "5 tosses: 32 outcomes. Exactly 2 tails: 5C2 = 10.",
+    "10/32 = 5/16."
+   ],
+   "probability-based-on-coins-set-1-prelims-1#5": [
+    "All tails: 1 of 8.",
+    "1 - 1/8 = 7/8."
+   ],
+   "probability-based-on-dice-set-1-prelims-1#5": [
+    "Sums 4, 8, 12 come 3 + 5 + 1 = 9 ways.",
+    "9/36 = 1/4."
+   ],
+   "probability-based-on-dice-set-1-prelims-1#8": [
+    "Equal pairs: 6 of 36. The other 30 split evenly: 15 with the second higher.",
+    "15/36 = 5/12."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#2": [
+    "4C2 / 7C2 = 6/21.",
+    "2/7."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#1": [
+    "5 x 6 = 30 favourable; 11C2 = 55 in all.",
+    "30/55 = 6/11."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#10": [
+    "2 green and 1 other: 4C2 x 5 = 30; 9C3 = 84.",
+    "30/84 = 5/14."
+   ],
+   "probability-based-on-cards-set-1-prelims-1#2": [
+    "26C2 / 52C2 = 325 / 1,326.",
+    "25/102."
+   ],
+   "probability-based-on-cards-set-1-prelims-1#9": [
+    "4C2 / 52C2 = 6 / 1,326.",
+    "1/221."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#5": [
+    "Both red 6, both green 3: 9.",
+    "9/21 = 3/7."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#4": [
+    "Both red 10, both blue 21: 31.",
+    "12C2 = 66: 31/66."
+   ],
+   "probability-based-on-either-or-neither-set-1-prelims-1#1": [
+    "Both red 6, both blue 3: 9.",
+    "13C2 = 78: 9/78 = 3/26."
+   ],
+   "probability-based-on-same-or-different-colour-set-1-prelims-1#4": [
+    "Both red 6, both green 15, both blue 1: 22.",
+    "22/66 = 1/3."
+   ],
+   "probability-based-on-same-or-different-colour-set-1-prelims-1#3": [
+    "4 + 20 + 4 = 28 of 14C3 = 364.",
+    "28/364 = 1/13."
+   ],
+   "probability-based-on-atleast-or-atmost-set-1-prelims-1#1": [
+    "None red: 10C3 / 15C3 = 120/455.",
+    "1 - 120/455 = 335/455 = 67/91."
+   ],
+   "probability-based-on-atleast-or-atmost-set-1-prelims-1#2": [
+    "No blue: 7C2 / 9C2 = 21/36.",
+    "1 - 21/36 = 15/36 = 5/12."
+   ],
+   "probability-based-on-atleast-or-atmost-set-1-prelims-1#5": [
+    "No apple means both oranges: 1 of 10.",
+    "1 - 1/10 = 9/10."
+   ],
+   "probability-based-on-atleast-or-atmost-set-1-prelims-1#7": [
+    "All three white: 5C3 / 12C3 = 10/220.",
+    "1 - 10/220 = 210/220 = 21/22."
+   ],
+   "probability-based-on-atleast-or-atmost-set-1-prelims-1#9": [
+    "0 women 21, 1 woman 35 x 6 = 210, 2 women 35 x 15 = 525: 756.",
+    "13C5 = 1,287.",
+    "756/1,287 = 84/143."
+   ],
+   "probability-based-on-variables-set-1-prelims-1#1": [
+    "x / (2x + 2) = 3/7, so 7x = 6x + 6 and x = 6.",
+    "Total = 2x + 2 = 14."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#13": [
+    "Green 5 is 1/3 of the total.",
+    "Total = 15."
+   ],
+   "probability-based-on-balls-set-1-prelims-1#16": [
+    "Green = 0.4 x 15 = 6.",
+    "Red = 9."
+   ],
+   "probability-based-on-variables-set-1-prelims-1#5": [
+    "Green 4 is 2/5 of the total, so the total is 10.",
+    "x - 1 = 10 - 7 = 3, so x = 4."
+   ],
+   "probability-based-on-variables-set-1-prelims-1#8": [
+    "4C2 / nC2 = 2/7 gives nC2 = 21, so n = 7.",
+    "x = 7 - 6 = 1."
+   ],
+   "probability-based-on-with-replacement-set-1-prelims-1#1": [
+    "Primes up to 30: 10. Squares: 5.",
+    "10/30 x 5/30 = 1/18."
+   ],
+   "probability-based-on-with-replacement-set-1-prelims-1#7": [
+    "(12/30)² + (8/30)² + (10/30)² = (144 + 64 + 100) / 900.",
+    "308/900 = 77/225."
+   ],
+   "probability-based-on-without-replacement-set-1-prelims-1#1": [
+    "White first: 12/28. Black next: 16/27.",
+    "12/28 x 16/27 = 16/63."
+   ],
+   "probability-based-on-without-replacement-set-1-prelims-1#2": [
+    "11/21 x 10/20 = 110/420.",
+    "11/42."
+   ],
+   "probability-based-on-with-replacement-set-1-prelims-1#4": [
+    "Red chance 10/35 = 2/7. Exactly two: 3 x (2/7)² x 5/7 = 60/343. All three: 8/343.",
+    "68/343."
+   ],
+   "probability-based-on-cards-set-1-prelims-1#4": [
+    "Queen of clubs or king of hearts: 2 cards.",
+    "2/52 = 1/26."
+   ],
+   "probability-based-on-either-or-neither-set-1-prelims-1#9": [
+    "Clubs 13 + jacks 4 - jack of clubs 1 = 16.",
+    "1 - 16/52 = 36/52 = 9/13."
+   ],
+   "probability-based-on-either-or-neither-set-1-prelims-1#6": [
+    "From 4 to 41: primes 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41 (11); cubes 8, 27 (2).",
+    "13 of 38: 13/38."
+   ],
+   "probability-based-on-dice-set-1-prelims-1#2": [
+    "Sum 5: 4 ways; 10: 3 ways; 7: 6 ways. No sum is both.",
+    "13/36."
+   ]
+  }
+ }
+}

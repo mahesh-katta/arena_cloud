@@ -130,6 +130,11 @@ Three files joined into one: the Quant Speed Mastery Modules, the Quant Pattern 
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>2 IBPS Clerk Prelims PYQs (2 paper labels, 2017 and 2018), none in the 12 sister papers + 131 bank questions</td>
+<td>18</td>
+<td>Probability</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>2 IBPS Clerk Prelims PYQs (2018, Dec 2021), none in the 12 sister papers + 182 bank questions</td>
 </tr>
 </table>
 The archetype counts, labels and question IDs for every module are kept in the companion file “Bank Clerk Quant - Pattern Index”.
@@ -8704,6 +8709,81 @@ Ten archetypes. "Papers" counts paper labels, IBPS Clerk and sister papers toget
 ### Non-linear warnings
 - 5! = 120, 6! = 720, 7! = 5,040, 8! = 40,320, 9! = 362,880, 10! = 3,628,800: the numbers grow fast, so a slip of one factor is never close.
 - Selecting counts AB and BA once; arranging counts them twice.
+# Probability - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 2 IBPS Clerk Prelims questions from 2 papers (2018, Guidely: two balls from a bag after finding a count; 12 Dec 2021 Set 2, Guidely: two balls of one colour); none in the 2022 to 2025 Clerk papers and none in the 12 sister papers. Bank questions used: 182 (180 Guidely in 17 sets, 2 Sreedhar); the clerk bank has none. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** Probability = favourable outcomes / all outcomes, when each outcome is equally likely. Count both with the rules of Permutations & Combinations.
+### Base operations
+1. **One item:** count the wanted ones, divide by all.
+2. **n coins:** 2ⁿ outcomes; exactly r heads: nCr / 2ⁿ. **Two dice:** 36 outcomes.
+3. **Several drawn at once:** selections wanted / nCr.
+4. **Or (no overlap):** add. **Or (with overlap):** A + B - both. **Not:** 1 - P.
+5. **One after another:** multiply; without replacement, reduce the counts after each draw.
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Words</td>
+<td>Rule</td>
+</tr>
+<tr>
+<td>at least one</td>
+<td>1 - none</td>
+</tr>
+<tr>
+<td>same colour</td>
+<td>add each colour's pairs</td>
+</tr>
+<tr>
+<td>different colours (one of each)</td>
+<td>multiply the counts</td>
+</tr>
+<tr>
+<td>either A or B</td>
+<td>A + B - both</td>
+</tr>
+<tr>
+<td>with replacement</td>
+<td>same chances each draw; multiply</td>
+</tr>
+<tr>
+<td>without replacement</td>
+<td>one fewer each draw; multiply</td>
+</tr>
+</table>
+### Two-dice sums
+<table header-row="true">
+<tr>
+<td>Sum</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Ways</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</table>
+### Non-linear warnings
+- Drawing two at once is not (1/2) x (1/2): the second draw has one fewer.
+- "Either" with an overlap double-counts unless the overlap is removed.
 ## 2. Archetypes
 <table header-row="true">
 <tr>
@@ -8916,6 +8996,18 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>AV3</td>
 <td>Overlapping groups (first six, last six; A, B, C and B, C, D)</td>
 <td>Seen once</td>
+<td>PB3</td>
+<td>Drawing two or three from a bag</td>
+<td>Confirmed (2 papers, 2018 and 2021)</td>
+<td>2</td>
+<td>0</td>
+<td>40</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>PB6</td>
+<td>A count is missing</td>
+<td>Seen once (inside the 2018 question)</td>
 <td>1</td>
 <td>0</td>
 <td>20</td>
@@ -9271,6 +9363,17 @@ Two numbers are in the ratio 5 : 8 and their LCM is 480. Find their HCF.
 <tr>
 <td>PN5</td>
 <td>Together; two groups each together</td>
+<td>PB7</td>
+<td>One after another, with or without replacement</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>30</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB1</td>
+<td>One item: dice, cards, numbered balls</td>
 <td>Bank only</td>
 <td>0</td>
 <td>0</td>
@@ -9298,6 +9401,35 @@ Two numbers are in the ratio 5 : 8 and their LCM is 480. Find their HCF.
 <tr>
 <td>PN8</td>
 <td>At least, at most</td>
+<td>PB2</td>
+<td>Coins and dice outcomes</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB4</td>
+<td>Same colour, either-or</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB5</td>
+<td>At least, at most, exactly</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB8</td>
+<td>Either, neither, overlaps</td>
 <td>Bank only</td>
 <td>0</td>
 <td>0</td>
@@ -9341,6 +9473,40 @@ In how many ways can the letters of GARDEN be arranged so that the vowels are to
 - **30-second exam method.** AE as a block + G, R, D, N: 5! x 2 = 240. **Answer (A).**
 - **Option elimination hack.** The answer is a multiple of 2 x 5! = 240.
 - **IBPS trap warning.** (B) forgets that the block can be AE or EA.
+Bank counts are by Guidely set. The two paper questions are both bag draws; one also first finds a missing count, so PB6 is Seen once.
+### Core archetypes
+**PB3. Drawing from a bag. Confirmed (2 papers).** *Shortcut engine:* wanted selections / nCr. *Worked example (IBPS Clerk Prelims 12 Dec 2021 Set 2, Guidely):* 5 red of 10 balls, two drawn, both red: 5C2 / 10C2 = 10/45 = 2/9.
+**PB6. A count is missing. Seen once.** *Shortcut engine:* write the given probability with the unknown and match. *Worked example (IBPS Clerk Prelims 2018, Guidely):* 12 blue and 8 yellow or pink; P(yellow) = 1/4, so yellow 5 and pink 3; both pink: 3C2 / 20C2 = 3/190.
+### Insurance archetypes (Bank only)
+**PB7.** Multiply step by step. **PB1.** Count and divide. **PB2.** 2ⁿ and 36 outcomes. **PB4.** Add the cases. **PB5.** 1 - opposite. **PB8.** A + B - both.
+## 3. Drill Set
+Four original questions; every answer was computed by script.
+### Drill 1. Bag (PB3)
+A bag has 4 red and 6 green balls. Two are drawn. What is the probability that both are green?
+1. 1/3 (B) 2/5 (C) 3/10 (D) 9/25 (E) 2/15
+- **Conventional method.** 6C2 / 10C2.
+- **30-second exam method.** 15/45 = 1/3. **Answer (A).**
+- **Option elimination hack.** It must be below (6/10)² = 9/25, because the second draw has fewer greens: rules out (D).
+- **IBPS trap warning.** (D) treats the draws as with replacement.
+### Drill 2. Missing count (PB6)
+A bag has 5 red, 3 blue and some white balls. The probability of drawing a white ball is 1/3. Two balls are drawn. What is the probability both are red?
+1. 5/33 (B) 1/11 (C) 2/11 (D) 25/144 (E) 1/6
+- **Conventional method.** White = 4 (a third of 12); 5C2 / 12C2.
+- **30-second exam method.** 10/66 = 5/33. **Answer (A).**
+- **Option elimination hack.** It must be below (5/12)² = 25/144 because the second red is drawn from fewer: (A), (B) or (E); 10/66 simplifies to 5/33.
+- **IBPS trap warning.** (D) squares 5/12.
+### Drill 3. At least one (PB5)
+Three coins are tossed. What is the probability of at least one tail?
+1. 7/8 (B) 3/8 (C) 1/2 (D) 1/8 (E) 3/4
+- **30-second exam method.** 1 - 1/8 = 7/8. **Answer (A).**
+- **Option elimination hack.** At least one of three is likely, so above 1/2: (A) or (E).
+- **IBPS trap warning.** (B) 3/8 is exactly one tail; (D) 1/8 is the opposite event, no tail at all.
+### Drill 4. One after another (PB7)
+Two cards are drawn one after the other without replacement. What is the probability both are aces?
+1. 1/221 (B) 1/169 (C) 1/13 (D) 2/221 (E) 4/663
+- **30-second exam method.** 4/52 x 3/51 = 12/2652 = 1/221. **Answer (A).**
+- **Option elimination hack.** Must be below (1/13)² = 1/169: (A), (D) or (E); compute.
+- **IBPS trap warning.** (B) assumes replacement.
 ## 4. Cheat Sheet & 30-Second Recall Matrix
 <table header-row="true">
 <tr>
@@ -9544,6 +9710,34 @@ In how many ways can the letters of GARDEN be arranged so that the vowels are to
 **Fallback.** Write the places as blanks, put the number of choices in each, multiply; divide by r! if order does not matter.
 ## 5. Practice Ladder
 12 bank questions in three rungs. IDs: G-name-n is question n of the Guidely permutation and combination set with that name.
+<td>PB3</td>
+<td>two drawn from a bag</td>
+<td>wanted pairs / nC2</td>
+</tr>
+<tr>
+<td>PB6</td>
+<td>probability given, count asked</td>
+<td>write with the unknown and match</td>
+</tr>
+<tr>
+<td>PB5</td>
+<td>at least one</td>
+<td>1 - none</td>
+</tr>
+<tr>
+<td>PB7</td>
+<td>one by one</td>
+<td>multiply; reduce counts without replacement</td>
+</tr>
+<tr>
+<td>PB8</td>
+<td>either, neither</td>
+<td>A + B - both; 1 - either</td>
+</tr>
+</table>
+**Fallback.** Count all outcomes as P&C would; count the wanted ones the same way; divide.
+## 5. Practice Ladder
+11 bank questions in three rungs. IDs: G-name-n is question n of the Guidely probability set with that name.
 **Rung 1. Untimed until all correct.**
 <table header-row="true">
 <tr>
@@ -10166,6 +10360,24 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>G-committee-2</td>
 <td>PN7</td>
 <td>300</td>
+<td>G-dice-1</td>
+<td>PB1</td>
+<td>1/2</td>
+</tr>
+<tr>
+<td>G-balls-2</td>
+<td>PB3</td>
+<td>2/7</td>
+</tr>
+<tr>
+<td>G-coins-1</td>
+<td>PB2</td>
+<td>3/8</td>
+</tr>
+<tr>
+<td>G-variables-5</td>
+<td>PB6</td>
+<td>4</td>
 </tr>
 </table>
 **Rung 2. 60 seconds each.**
@@ -10232,6 +10444,24 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>G-ends-and-starts-1</td>
 <td>PN4</td>
 <td>2520</td>
+<td>G-balls-4</td>
+<td>PB4</td>
+<td>31/66</td>
+</tr>
+<tr>
+<td>G-atleast-or-atmost-2</td>
+<td>PB5</td>
+<td>5/12</td>
+</tr>
+<tr>
+<td>G-with-replacement-1</td>
+<td>PB7</td>
+<td>1/18</td>
+</tr>
+<tr>
+<td>G-cards-9</td>
+<td>PB3</td>
+<td>1/221</td>
 </tr>
 </table>
 **Rung 3. 45 seconds each.**
@@ -10283,6 +10513,19 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>G-numbers-10</td>
 <td>PN1</td>
 <td>84</td>
+<td>G-without-replacement-1</td>
+<td>PB7</td>
+<td>16/63</td>
+</tr>
+<tr>
+<td>G-atleast-or-atmost-9</td>
+<td>PB5</td>
+<td>84/143</td>
+</tr>
+<tr>
+<td>G-same-or-different-colour-3</td>
+<td>PB4</td>
+<td>1/13</td>
 </tr>
 </table>
 ## 6. Verification Log
@@ -10321,6 +10564,24 @@ Built 6 Oct 2026.
 - PN7: G-persons-1 · G-committee-2, 3 · G-selection-1
 - PN8: G-selection-4, 8 · G-committee-1 · G-persons-5, 6
 - PN9: G-included-and-excluded-1, 2, 3, 6, 8
+- **Search.** All 35 papers were converted to text and searched for "probability"; the two questions above are the only ones (other hits were syllogism wording such as "is a probability").
+- **Answers.** Every Guidely question on the lesson path (39) was re-computed with exact fractions in the build script; all agree with their keys.
+- **Drills.** All 4 were computed by script.
+### What failed and was fixed
+- Drill 2 first had two equal options (5/33 and 10/66); one was replaced by 1/11.
+### What could not be opened or checked
+- Guidely questions off the lesson path were not re-solved; one (variables set Q9, "Maths or Biology only") has a wording that allows two answers.
+### Source links (pages opened)
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json`; the 2018 and Dec 2021 Guidely papers are among them.
+## 7. Pattern Index: archetypes and question IDs
+- PB1: G-dice-1 · G-cards-8 · G-balls-8, 18
+- PB2: G-coins-1, 5, 7 · G-dice-5, 8
+- PB3: G-balls-1, 2, 10 · G-cards-2, 9
+- PB4: G-balls-4, 5 · G-same-or-different-colour-3, 4
+- PB5: G-atleast-or-atmost-1, 2, 5, 7, 9
+- PB6: G-variables-1, 5, 8 · G-balls-13, 16
+- PB7: G-with-replacement-1, 4, 7 · G-without-replacement-1, 2
+- PB8: G-cards-4 · G-dice-2
 # Reasoning: Series and Miscellaneous - Speed Mastery Module
 **Sample.** Added on request. This is a Reasoning topic, not Quant, and it combines three bank sections into one: alphanumeric / mixed series, alphabet series, and miscellaneous reasoning. Your bank holds no previous-year Reasoning questions, so every statement about what the exam asks comes from papers opened on the web: 12 IBPS Clerk Prelims memory-based papers (4 Oct 2025 Shifts 1 to 4, 5 Oct 2025 Shift 1 in its Hindi version, 24 Aug 2024 Shift 1, and the 2023, 2022, 2021, 2020, 2019 and 2018 papers) giving 59 questions of these kinds, plus the same 12 sister papers as before (4 SBI Clerk, 4 IBPS RRB Clerk, 4 IBPS PO Prelims) giving 65. Bank questions used: 933 practice questions (540 Guidely + 393 Sreedhar). The floor of 8 target-exam shifts and 6 to 10 sister questions is met. Memory-based papers are reconstructions, not official papers.
 ## 1. Core Mental Model, Mechanics and Conversion Grid
