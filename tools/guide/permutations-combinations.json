@@ -1,0 +1,637 @@
+{
+ "module": "permutations-combinations",
+ "intro": [
+  "Every question here is counting: how many ways can something be done? Two questions settle the method: **does order matter** (arranging) or not (selecting), and **is there a rule** (fixed places, together, at least, always included)?",
+  "There are nine short lessons: six on arranging, three on selecting. Go in order the first time.",
+  "**What the papers ask.** Two IBPS Clerk papers in the sample had one question each: 2017 (model; a committee with one person always included) and 2018 (arranging MANAGEMENT). None of the 2019 to 2025 Clerk papers checked, and none of the 12 sister papers (2025-26), had one. So this topic is light insurance for Clerk Prelims.",
+  "Practice questions are from the Guidely bank; every answer used was re-computed by script. One Guidely set (letters with repetition) has impossible answers and is not used."
+ ],
+ "needs": [],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the rules on one page.",
+  "Probability builds directly on this: the number of favourable selections divided by the number of all selections."
+ ],
+ "lessons": [
+  {
+   "id": "counting",
+   "code": "PN1",
+   "title": "Counting choices: multiply",
+   "plain": "The starting point: when you make one choice and then another, multiply the numbers of ways.",
+   "needs": [],
+   "teach": [
+    "If a code has a first digit with 9 possible values and a second digit with 5, there are **9 x 5 = 45** codes. Each first choice can go with every second choice.",
+    "Work **place by place**, starting with the place that has a rule:",
+    "- A number cannot start with 0.",
+    "- \"Divisible by 5\" fixes the last digit (0 or 5).",
+    "- \"No digit repeated\" means each later place has one fewer choice.",
+    "- \"Repetition allowed\" means every place has the full set.",
+    "**Or** adds: numbers starting with 8 *or* 9 = the ones starting with 8 + the ones starting with 9."
+   ],
+   "example": {
+    "q": "How many 3-digit numbers can be made from 2, 4, 5, 7, 8 with no digit repeated, if the number must be even?",
+    "steps": [
+     "The last digit has a rule: 2, 4 or 8, so 3 choices.",
+     "Then the first digit: 4 left; the middle: 3 left.",
+     "3 x 4 x 3 = 36."
+    ],
+    "answer": "36."
+   },
+   "check": {
+    "q": "How many 3-digit numbers can be formed from 1, 3, 5, 7, 9 if digits may repeat?",
+    "options": {
+     "a": "60",
+     "b": "125",
+     "c": "15",
+     "d": "243"
+    },
+    "answer": "B",
+    "why": "5 x 5 x 5 = 125. (60 forbids repeats, which the question allows.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "pemutation-and-combination-based-on-selection-set-1-prelims-1#3",
+     "permutation-and-combination-based-on-numbers-set-1-prelims-1#4",
+     "permutation-and-combination-based-on-numbers-set-1-prelims-1#2",
+     "permutation-and-combination-based-on-numbers-set-1-prelims-1#1",
+     "permutation-and-combination-based-on-numbers-set-1-prelims-1#10"
+    ],
+    "tags": [
+     "One from each group.",
+     "A rule on each place.",
+     "Divisible by 5 fixes the last digit.",
+     "No leading zero.",
+     "Between 800 and 1000."
+    ]
+   }
+  },
+  {
+   "id": "arranging-all",
+   "code": "PN2",
+   "title": "Arranging everything, and repeated letters",
+   "plain": "New: all the items are arranged in a row. Some letters may repeat.",
+   "needs": [],
+   "teach": [
+    "n different things in a row can be arranged in **n! = n x (n - 1) x ... x 1** ways. 5! = 120, 6! = 720, 7! = 5,040, 8! = 40,320.",
+    "**Repeated letters.** Swapping two identical letters makes no new word, so divide by the factorial of each repeat count.",
+    "| Word | Letters | Arrangements |",
+    "| ARMOUR | 6, with R twice | 6! / 2! = 360 |",
+    "| TELEPHONE | 9, with E three times | 9! / 3! = 60,480 |",
+    "| MANAGEMENT | 10, with M, A, N, E each twice | 10! / (2! x 2! x 2! x 2!) = 226,800 |",
+    "Checked papers: IBPS Clerk 2018 asked MANAGEMENT."
+   ],
+   "example": {
+    "q": "In how many ways can the letters of BANANA be arranged?",
+    "steps": [
+     "6 letters: A three times, N twice.",
+     "6! / (3! x 2!) = 720 / 12 = 60."
+    ],
+    "answer": "60."
+   },
+   "check": {
+    "q": "In how many ways can the letters of LETTER be arranged?",
+    "options": {
+     "a": "720",
+     "b": "180",
+     "c": "360",
+     "d": "90"
+    },
+    "answer": "B",
+    "why": "6 letters, E twice and T twice: 720 / 4 = 180. (360 divides by only one repeat.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#5",
+     "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#6",
+     "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#4",
+     "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#10",
+     "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#2"
+    ],
+    "tags": [
+     "All different.",
+     "One repeat.",
+     "A letter three times.",
+     "One repeat, seven letters.",
+     "Four repeats (the 2018 paper's word)."
+    ]
+   }
+  },
+  {
+   "id": "arranging-some",
+   "code": "PN3",
+   "title": "Arranging only some of them",
+   "plain": "New: only r of the n letters are used, as in \"how many 4-letter words\".",
+   "needs": [],
+   "teach": [
+    "Choosing and arranging r of n different things: **n x (n - 1) x ... (r factors)**, written nPr.",
+    "4-letter words from the 10 different letters of LOGARITHMS: 10 x 9 x 8 x 7 = 5,040.",
+    "Check the word has no repeated letters first; this rule assumes all are different."
+   ],
+   "example": {
+    "q": "How many 3-letter words can be formed from the letters of NUMBER?",
+    "steps": [
+     "NUMBER has 6 different letters.",
+     "6 x 5 x 4 = 120."
+    ],
+    "answer": "120."
+   },
+   "check": {
+    "q": "How many 2-letter words can be formed from the letters of PLANET?",
+    "options": {
+     "a": "30",
+     "b": "15",
+     "c": "36",
+     "d": "12"
+    },
+    "answer": "A",
+    "why": "6 x 5 = 30. (15 counts AB and BA as the same; words are ordered.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#1",
+     "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#1",
+     "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#3",
+     "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#4"
+    ],
+    "tags": [
+     "Four from ten.",
+     "Three from nine.",
+     "Four from seven.",
+     "Four from six."
+    ]
+   }
+  },
+  {
+   "id": "fixed-places",
+   "code": "PN4",
+   "title": "Some places are fixed",
+   "plain": "New: a letter must start, end or sit in the middle.",
+   "needs": [],
+   "teach": [
+    "Put the fixed letters in their places first; then arrange **what is left** in the free places.",
+    "Words from COUNTRY starting with C and ending with Y: the middle 5 letters arrange in 5! = 120 ways.",
+    "Remember repeats among the letters that are left: SUMMER beginning with U leaves S, M, M, E, R: 5! / 2! = 60."
+   ],
+   "example": {
+    "q": "How many arrangements of PLANET begin with P and end with T?",
+    "steps": [
+     "P and T are fixed. L, A, N, E fill the middle.",
+     "4! = 24."
+    ],
+    "answer": "24."
+   },
+   "check": {
+    "q": "How many arrangements of MOTHER end with R?",
+    "options": {
+     "a": "720",
+     "b": "120",
+     "c": "24",
+     "d": "600"
+    },
+    "answer": "B",
+    "why": "R is fixed last; M, O, T, H, E arrange in 5! = 120. (720 ignores the rule.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#2",
+     "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#3",
+     "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#1",
+     "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#5",
+     "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#4"
+    ],
+    "tags": [
+     "Fixed at both ends.",
+     "Fixed at the end.",
+     "Fixed first, with a repeat left.",
+     "A repeat among the rest.",
+     "First and middle fixed."
+    ]
+   }
+  },
+  {
+   "id": "together",
+   "code": "PN5",
+   "title": "Keeping some together",
+   "plain": "New: certain letters or people must sit side by side.",
+   "needs": [],
+   "teach": [
+    "**Tie the group into one block.** Arrange the block with the others, then arrange the members inside the block, and multiply.",
+    "SIMPLE with the vowels I, E together: block + S, M, P, L = 5 units: 5! = 120; inside the block 2! = 2; total 240.",
+    "**Two groups each together** (all boys together and all girls together): 2 ways to order the two blocks x arrangements inside each.",
+    "Divide for repeats inside and outside the block as usual."
+   ],
+   "example": {
+    "q": "4 boys and 3 girls sit in a row with all the girls together. In how many ways?",
+    "steps": [
+     "Girls' block + 4 boys = 5 units: 5! = 120.",
+     "Girls inside the block: 3! = 6.",
+     "120 x 6 = 720."
+    ],
+    "answer": "720."
+   },
+   "check": {
+    "q": "In how many ways can the letters of FATHER be arranged with the vowels together?",
+    "options": {
+     "a": "240",
+     "b": "120",
+     "c": "720",
+     "d": "48"
+    },
+    "answer": "A",
+    "why": "Vowels A, E as one block + F, T, H, R = 5 units: 120 x 2 = 240. (120 forgets the order inside the block.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "pemutation-and-combination-based-on-words-set-1-prelims-1#7",
+     "pemutation-and-combination-based-on-words-set-1-prelims-1#1",
+     "pemutation-and-combination-based-on-words-set-1-prelims-1#8",
+     "permutation-and-combination-based-on-sitting-set-1-prelims-1#5",
+     "permutation-and-combination-based-on-sitting-set-1-prelims-1#4"
+    ],
+    "tags": [
+     "Two vowels together.",
+     "Repeats inside and outside the block.",
+     "Three vowels together, a repeat outside.",
+     "Two people together.",
+     "Two groups each together."
+    ]
+   }
+  },
+  {
+   "id": "apart",
+   "code": "PN6",
+   "title": "Apart, alternate, and round a table",
+   "plain": "New: three last arrangement rules.",
+   "needs": [],
+   "teach": [
+    "**Never all together** = all arrangements - arrangements with them together.",
+    "**Alternate** (boys and girls take turns in a row of 5 + 5): start with a boy or a girl (2 ways) x 5! x 5!.",
+    "**Round a table:** fix one person to remove the rotations; n people make (n - 1)! arrangements.",
+    "Two particular people **not** side by side round a table: (n - 1)! - 2 x (n - 2)!."
+   ],
+   "example": {
+    "q": "6 people sit round a table. In how many ways?",
+    "steps": [
+     "Fix one person; arrange the other 5.",
+     "5! = 120."
+    ],
+    "answer": "120."
+   },
+   "check": {
+    "q": "4 boys and 4 girls sit in a row, boys and girls alternating. In how many ways?",
+    "options": {
+     "a": "576",
+     "b": "1152",
+     "c": "2304",
+     "d": "40320"
+    },
+    "answer": "B",
+    "why": "2 starts x 4! x 4! = 2 x 24 x 24 = 1,152. (576 forgets that a girl may start.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "permutation-and-combination-based-on-sitting-set-1-prelims-1#10",
+     "pemutation-and-combination-based-on-persons-set-1-prelims-1#9",
+     "pemutation-and-combination-based-on-words-set-1-prelims-1#10"
+    ],
+    "tags": [
+     "Alternate seats.",
+     "Round a table, two apart.",
+     "Vowels not all together."
+    ]
+   }
+  },
+  {
+   "id": "selecting",
+   "code": "PN7",
+   "title": "Selecting, when order does not matter",
+   "plain": "New: a team or committee. Choosing A then B is the same team as B then A.",
+   "needs": [],
+   "teach": [
+    "Choosing r from n when order does not matter: **nCr = nPr / r!**. 6C4 = (6 x 5 x 4 x 3) / (4 x 3 x 2 x 1) = 15.",
+    "Shortcut: nCr = nC(n - r). 8C6 = 8C2 = 28.",
+    "Choosing from two groups at once: multiply. 4 men from 6 **and** 3 women from 5: 6C4 x 5C3 = 15 x 10 = 150.",
+    "Is it arranging or selecting? A **word, number, seating or ranking** is arranging (order matters). A **team, group, committee or handful** is selecting."
+   ],
+   "example": {
+    "q": "In how many ways can 3 men and 2 women be chosen from 5 men and 4 women?",
+    "steps": [
+     "5C3 = 10 and 4C2 = 6.",
+     "10 x 6 = 60."
+    ],
+    "answer": "60."
+   },
+   "check": {
+    "q": "In how many ways can a team of 3 be chosen from 7 players?",
+    "options": {
+     "a": "210",
+     "b": "35",
+     "c": "21",
+     "d": "343"
+    },
+    "answer": "B",
+    "why": "7C3 = (7 x 6 x 5) / 6 = 35. (210 is 7P3, which treats the order as different.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "pemutation-and-combination-based-on-persons-set-1-prelims-1#1",
+     "pemutation-and-combination-based-on-committee-set-1-prelims-1#2",
+     "pemutation-and-combination-based-on-committee-set-1-prelims-1#3",
+     "pemutation-and-combination-based-on-selection-set-1-prelims-1#1"
+    ],
+    "tags": [
+     "Two groups at once.",
+     "A committee from two groups.",
+     "Use nCr = nC(n - r).",
+     "Bigger numbers."
+    ]
+   }
+  },
+  {
+   "id": "at-least",
+   "code": "PN8",
+   "title": "At least and at most",
+   "plain": "New: the team must contain at least (or at most) so many of a kind.",
+   "needs": [],
+   "teach": [
+    "List the cases and add them. At least 3 men in 5 from 6 men and 7 women: (3 men, 2 women) + (4, 1) + (5, 0).",
+    "**At least one** is quickest the other way round: all selections - selections with none of them.",
+    "At least one of each: all - (all of the first kind) - (all of the second kind).",
+    "Checked papers: IBPS Clerk 2017 (model) set a committee with a condition."
+   ],
+   "example": {
+    "q": "A committee of 4 is chosen from 7 men and 8 women, and one particular woman must be included. How many committees are possible?",
+    "steps": [
+     "She is in; choose the other 3 from the remaining 14 people.",
+     "14C3 = 364."
+    ],
+    "answer": "364 (IBPS Clerk Prelims 2017 model paper, memory-based)."
+   },
+   "check": {
+    "q": "From 5 boys and 4 girls, 3 are chosen. How many selections have at least one girl?",
+    "options": {
+     "a": "74",
+     "b": "84",
+     "c": "10",
+     "d": "80"
+    },
+    "answer": "A",
+    "why": "All 9C3 = 84, minus all-boy 5C3 = 10: 74. (84 forgets to remove the all-boy teams.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "pemutation-and-combination-based-on-selection-set-1-prelims-1#4",
+     "pemutation-and-combination-based-on-committee-set-1-prelims-1#1",
+     "pemutation-and-combination-based-on-persons-set-1-prelims-1#5",
+     "pemutation-and-combination-based-on-persons-set-1-prelims-1#6",
+     "pemutation-and-combination-based-on-selection-set-1-prelims-1#8",
+     "pemutation-and-combination-based-on-atleat-and-atmost-set-1-prelims-1#7"
+    ],
+    "tags": [
+     "At least one: all minus none.",
+     "At least three: add the cases.",
+     "At most two.",
+     "At least one of each kind.",
+     "At least two red.",
+     "Dice: at least one 3."
+    ]
+   }
+  },
+  {
+   "id": "in-out",
+   "code": "PN9",
+   "title": "Someone always in, someone always out",
+   "plain": "New: particular people must be included or left out.",
+   "needs": [],
+   "teach": [
+    "**Always included:** put them in and choose the rest from the others. **Always excluded:** remove them from the pool.",
+    "A team of 9 from 16 with 2 always out and 1 always in: pool 16 - 2 - 1 = 13, places left 9 - 1 = 8: 13C8 = 1,287."
+   ],
+   "example": {
+    "q": "A committee of 5 is chosen from 12 people, with 2 particular people always included. How many committees?",
+    "steps": [
+     "Both are in; choose 3 more from the other 10.",
+     "10C3 = 120."
+    ],
+    "answer": "120."
+   },
+   "check": {
+    "q": "A team of 4 is chosen from 10 players, with one particular player always left out. How many teams?",
+    "options": {
+     "a": "210",
+     "b": "126",
+     "c": "84",
+     "d": "120"
+    },
+    "answer": "B",
+    "why": "Choose all 4 from the other 9: 9C4 = 126. (84 is 9C3, which also drops a place.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#1",
+     "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#3",
+     "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#2",
+     "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#6",
+     "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#8"
+    ],
+    "tags": [
+     "One always in.",
+     "Two always out.",
+     "Two out and one in.",
+     "Two always in.",
+     "One in and one out."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "guidely": {
+   "pemutation-and-combination-based-on-selection-set-1-prelims-1#3": [
+    "8 boys and 7 girls: choose one of each.",
+    "8 x 7 = 56."
+   ],
+   "permutation-and-combination-based-on-numbers-set-1-prelims-1#4": [
+    "First digit: 1 to 9, so 9 choices. Second: an odd digit, 5 choices.",
+    "9 x 5 = 45."
+   ],
+   "permutation-and-combination-based-on-numbers-set-1-prelims-1#2": [
+    "The last digit must be 5. The first and middle come from the other 4 digits without repeats.",
+    "4 x 3 = 12."
+   ],
+   "permutation-and-combination-based-on-numbers-set-1-prelims-1#1": [
+    "Digits 0 to 6. The first place cannot be 0: 6 choices.",
+    "Then 6, 5, 4, 3, 2 for the rest.",
+    "6 x 6 x 5 x 4 x 3 x 2 = 4320."
+   ],
+   "permutation-and-combination-based-on-numbers-set-1-prelims-1#10": [
+    "The first digit is 8 or 9: 2 choices.",
+    "Then 7 and 6 choices from the remaining digits.",
+    "2 x 7 x 6 = 84."
+   ],
+   "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#5": [
+    "FRIENDLY has 8 different letters.",
+    "8! = 40320."
+   ],
+   "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#6": [
+    "ARMOUR: 6 letters, R twice.",
+    "6! / 2! = 360."
+   ],
+   "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#4": [
+    "TELEPHONE: 9 letters, E three times.",
+    "9! / 3! = 60480."
+   ],
+   "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#10": [
+    "CURRENT: 7 letters, R twice.",
+    "7! / 2! = 2520."
+   ],
+   "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#2": [
+    "MANAGEMENT: 10 letters; M, A, N and E each twice.",
+    "10! / 16 = 226800."
+   ],
+   "pemutation-and-combination-based-on-letters-arranged-on-different-ways-set-1-prelims-1#1": [
+    "LOGARITHMS has 10 different letters.",
+    "10 x 9 x 8 x 7 = 5040."
+   ],
+   "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#1": [
+    "BIFURCATE has 9 different letters.",
+    "9 x 8 x 7 = 504."
+   ],
+   "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#3": [
+    "MIXTURE has 7 different letters.",
+    "7 x 6 x 5 x 4 = 840."
+   ],
+   "permutation-and-combination-based-on-letter-without-repetition-set-1-prelims-1#4": [
+    "BANGLE has 6 different letters.",
+    "6 x 5 x 4 x 3 = 360."
+   ],
+   "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#2": [
+    "C first and Y last; O, U, N, T, R in between.",
+    "5! = 120."
+   ],
+   "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#3": [
+    "R last; N, O, M, A, L before it.",
+    "5! = 120."
+   ],
+   "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#1": [
+    "B first; F, E, R, U, A, R, Y remain, with R twice.",
+    "7! / 2! = 2520."
+   ],
+   "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#5": [
+    "U first; S, M, M, E, R remain, with M twice.",
+    "5! / 2! = 60."
+   ],
+   "permutation-and-combination-based-on-ends-and-starts-set-1-prelims-1#4": [
+    "T first and E in the 4th place; P, N, A, L, Y fill the other 5 places.",
+    "5! = 120."
+   ],
+   "pemutation-and-combination-based-on-words-set-1-prelims-1#7": [
+    "Vowels I, E as one block + S, M, P, L: 5 units, 5! = 120.",
+    "Inside the block 2! = 2.",
+    "120 x 2 = 240."
+   ],
+   "pemutation-and-combination-based-on-words-set-1-prelims-1#1": [
+    "Vowels E, I, E as one block + S, R, S: 4 units with S twice: 4! / 2! = 12.",
+    "Inside the block: 3! / 2! = 3.",
+    "12 x 3 = 36."
+   ],
+   "pemutation-and-combination-based-on-words-set-1-prelims-1#8": [
+    "Vowels O, I, A as one block + L, G, C, L: 5 units with L twice: 5! / 2! = 60.",
+    "Inside the block 3! = 6.",
+    "60 x 6 = 360."
+   ],
+   "permutation-and-combination-based-on-sitting-set-1-prelims-1#5": [
+    "The two women as one block + 3 men = 4 units: 4! = 24.",
+    "Inside the block 2.",
+    "24 x 2 = 48."
+   ],
+   "permutation-and-combination-based-on-sitting-set-1-prelims-1#4": [
+    "Boys' block and girls' block: 2 orders.",
+    "Inside: 3! x 3! = 36.",
+    "2 x 36 = 72."
+   ],
+   "permutation-and-combination-based-on-sitting-set-1-prelims-1#10": [
+    "Start with a girl or a boy: 2 ways.",
+    "Girls 5! and boys 5!.",
+    "2 x 120 x 120 = 28800."
+   ],
+   "pemutation-and-combination-based-on-persons-set-1-prelims-1#9": [
+    "All round-table arrangements: 9!. With the two together: 2 x 8!.",
+    "9! - 2 x 8! = 8! x (9 - 2).",
+    "7 * 8!."
+   ],
+   "pemutation-and-combination-based-on-words-set-1-prelims-1#10": [
+    "TELEVISION: 10 letters, E twice and I twice: 10! / 4 = 907,200 arrangements.",
+    "Vowels E, E, I, I, O as one block: 6! x (5! / 4) = 720 x 30 = 21,600.",
+    "907,200 - 21,600 = 885,600."
+   ],
+   "pemutation-and-combination-based-on-persons-set-1-prelims-1#1": [
+    "6C4 = 15 and 5C3 = 10.",
+    "15 x 10 = 150."
+   ],
+   "pemutation-and-combination-based-on-committee-set-1-prelims-1#2": [
+    "6C4 = 15 and 6C3 = 20.",
+    "15 x 20 = 300."
+   ],
+   "pemutation-and-combination-based-on-committee-set-1-prelims-1#3": [
+    "6C3 = 20 and 7C5 = 7C2 = 21.",
+    "20 x 21 = 420."
+   ],
+   "pemutation-and-combination-based-on-selection-set-1-prelims-1#1": [
+    "6C4 = 15 and 8C6 = 8C2 = 28.",
+    "15 x 28 = 420."
+   ],
+   "pemutation-and-combination-based-on-selection-set-1-prelims-1#4": [
+    "All: 11C3 = 165. With no girl: 5C3 = 10.",
+    "165 - 10 = 155."
+   ],
+   "pemutation-and-combination-based-on-committee-set-1-prelims-1#1": [
+    "3 men 2 women: 20 x 21 = 420. 4 and 1: 15 x 7 = 105. 5 men: 6.",
+    "420 + 105 + 6 = 531."
+   ],
+   "pemutation-and-combination-based-on-persons-set-1-prelims-1#5": [
+    "0 boys: 6C4 = 15. 1 boy: 5 x 20 = 100. 2 boys: 10 x 15 = 150.",
+    "15 + 100 + 150 = 265."
+   ],
+   "pemutation-and-combination-based-on-persons-set-1-prelims-1#6": [
+    "All: 10C3 = 120. Only singers: 6C3 = 20. Only dancers: 4C3 = 4.",
+    "120 - 20 - 4 = 96."
+   ],
+   "pemutation-and-combination-based-on-selection-set-1-prelims-1#8": [
+    "2 red: 6 x 21 = 126. 3 red: 4 x 7 = 28. 4 red: 1.",
+    "126 + 28 + 1 = 155."
+   ],
+   "pemutation-and-combination-based-on-atleat-and-atmost-set-1-prelims-1#7": [
+    "All outcomes 6 x 6 x 6 = 216. No 3 at all: 5 x 5 x 5 = 125.",
+    "216 - 125 = 91."
+   ],
+   "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#1": [
+    "She is in; choose 4 more from the other 10.",
+    "10C4 = 210."
+   ],
+   "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#3": [
+    "Choose all 10 from the other 16.",
+    "16C10 = 16C6 = 8008."
+   ],
+   "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#2": [
+    "Pool 16 - 3 = 13; places left 9 - 1 = 8.",
+    "13C8 = 13C5 = 1287."
+   ],
+   "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#6": [
+    "Choose 5 more from the other 11.",
+    "11C5 = 462."
+   ],
+   "permutation-and-combination-based-on-included-and-excluded-set-1-prelims-1#8": [
+    "Pool 14 - 2 = 12; places left 7.",
+    "12C7 = 12C5 = 792."
+   ]
+  }
+ }
+}
