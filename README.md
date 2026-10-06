@@ -1,6 +1,22 @@
 # Arena Cloud
 
-The course-style successor to `arena_dashboard` (kept as the backup). Lessons first; the app comes later.
+The course-style successor to `arena_dashboard` (kept as the backup).
+
+## Run the course app
+
+```
+npm install          # once
+node server.mjs      # then open http://localhost:8000 (phone: http://<this computer's IP>:8000)
+npm run build        # only after changing src/; dist/ is committed
+```
+
+Progress is saved beside the repo in `../arena_cloud_progress.json`, so a pull never touches it.
+
+- **Course**: Quant / Reasoning, ordered by suggested (parent topics first), most asked, or easiest. Each topic has Lessons (one suggested, none locked), Quick revision and Papers.
+- **Lesson**: Learn, Example (step by step), Check, Practice (the lesson's disguise questions, with a running timer), Done. After each answer: Next question, Skip, or Practise more.
+- **Practise more**: the topic's questions from the clerk, Guidely and Sreedhar banks, filtered by source and type (`src/pools.js` maps topics to bank sets).
+- **Review**: every question answered wrong, until it is answered right.
+- **Mocks**: placeholder for later.
 
 Read `docs/HANDOVER.md`, then `docs/PIPELINE.md`. The lesson format (`tools/guide/*.json`) is unchanged.
 
