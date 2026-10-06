@@ -1,0 +1,539 @@
+{
+ "module": "approximations",
+ "new": {
+  "title": "Approximations",
+  "part": "quant",
+  "after": "simplification",
+  "sample": [
+   "This topic was split out of **Simplification** so that approximation can be practised on its own. Its paper counts are in that topic's Quick revision tab: in the sample, approximation appeared in one IBPS Clerk paper (the 2017 model, 4 questions) and in each IBPS PO Prelims paper as a block of five; never in SBI Clerk or RRB Clerk."
+  ],
+  "revision": [
+   "**One routine:** round every number to a friendly one, solve the tidy question, pick the nearest option.",
+   "| Looks like | Round to |",
+   "| 24.98, 119.97, 1439.89 | 25, 120, 1440 (a number that divides cleanly) |",
+   "| 33.32%, 16.67%, 24.97%, 124.9% | 1/3, 1/6, 1/4, 5/4 |",
+   "| √624.9, √1445, ∛342.9 | 25, 38, 7 |",
+   "| ?% of 500 = 175 | 175 / 500 x 100 |",
+   "**Options close together:** round less; keep whole numbers and check the biggest rounding.",
+   "**Traps.** Rounding a divisor so that it no longer divides cleanly. Rounding 47 to 50 under a square. Forgetting the order of operations after rounding."
+  ]
+ },
+ "intro": [
+  "Approximation is Simplification with one step in front: **round first, then calculate**. The numbers are chosen to sit a whisker from round ones.",
+  "There are six short lessons. The first is taken from Simplification; the other five fill in each kind of term and how to read the options.",
+  "What the papers ask (Simplification Stage A count and the sister papers, all memory-based):",
+  "| Paper | Approximation questions |",
+  "| IBPS Clerk Prelims, 22 papers | 4, all in the 2017 model paper (Seen once) |",
+  "| IBPS PO Prelims, 4 papers | a block of five in each |",
+  "| SBI Clerk and IBPS RRB Clerk, 8 papers | none |",
+  "So give this topic less time than Simplification for Clerk Prelims, and more if you are also sitting PO."
+ ],
+ "needs": [
+  "check-options",
+  "percent-fractions"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the rounding table.",
+  "Everything here leans on Simplification; if a tidy question still feels slow, go back to that topic's lessons."
+ ],
+ "lessons": [
+  {
+   "id": "approximation",
+   "code": "A0",
+   "title": "Approximation",
+   "plain": "New: the numbers are ugly on purpose, such as 24.98 and 119.97. Round each to a friendly number first, then solve.",
+   "teach": [
+    "Some questions ask for the **approximate** value. You can tell them by the numbers: 24.98, 16.02, 119.97. Each is a whisker away from a round number, and that is the hint. Nobody is expected to multiply 24.98 by 16.02.",
+    "The method is one step added to everything you already know:",
+    "1. **Round every number to the nearest friendly value.** 24.98 becomes 25. 16.02 becomes 16. 119.97 becomes 120.",
+    "2. **Solve the tidy question** exactly as usual.",
+    "3. **Choose the option nearest to your answer.** It will usually match exactly.",
+    "A few things to round with care.",
+    "- **Percents**: round to one you can do. 34.98% is 35%. 33.32% is one third. 16.67% is one sixth.",
+    "- **Roots**: round the number under the root to the nearest perfect square or cube. √624.9 is √625 = 25. ∛342.9 is ∛343 = 7.",
+    "- **A root that is not a perfect square**, such as √255: use the nearest one, √256 = 16.",
+    "Do not round too early or too roughly. Change each number by a tiny amount only; if you find yourself turning 31.98 into 30, you have gone too far. It should become 32.",
+    "One oddity: if the blank is squared, a paper may give the answer as ± 12, meaning 12 or minus 12, since both give 144 when squared."
+   ],
+   "example": {
+    "q": "39.97% of 250.1 + √624.8 = ? (approximately)",
+    "steps": [
+     "Round each number: 40% of 250, and √625.",
+     "40% of 250 = 100.",
+     "√625 = 25.",
+     "100 + 25 = 125."
+    ],
+    "answer": "About 125."
+   },
+   "check": {
+    "q": "19.97 x 15.02 + 99.9 = ? (approximately)",
+    "options": {
+     "a": "300",
+     "b": "380",
+     "c": "400",
+     "d": "420"
+    },
+    "answer": "C",
+    "why": "Round: 20 x 15 + 100 = 300 + 100 = 400."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-02-approximation-a-graded#1",
+     "clerk-02-approximation-a-graded#3",
+     "clerk-02-approximation-a-graded#4",
+     "clerk-02-approximation-a-graded#13",
+     "clerk-02-approximation-b-pyq#1"
+    ],
+    "tags": [
+     "Multiply and add.",
+     "A percent term.",
+     "Two square roots.",
+     "Several operations in one line.",
+     "A real paper: squares, a blank that is squared, and a root that is not exact."
+    ]
+   }
+  },
+  {
+   "id": "plain-ops",
+   "code": "A1",
+   "title": "Round, then the usual order",
+   "plain": "New: longer chains of multiplying, dividing, adding and subtracting.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "Round every number first, then follow the usual order: brackets, then division and multiplication from left to right, then addition and subtraction.",
+    "**Round to a number that divides cleanly.** 1439.89 / 11.99: round to 1440 / 12 = 120, not 1400 / 12.",
+    "**Divide early when you can.** 3599.8 / 59.97 x 14.99 is 3600 / 60 x 15 = 60 x 15 = 900.",
+    "**Several divisions in a row** go left to right: 1400 / 35 / 8 x 20 = 40 / 8 x 20 = 100."
+   ],
+   "example": {
+    "q": "Approximate: 2399.8 / 39.97 x 7.02 - 119.9",
+    "steps": [
+     "Round: 2400 / 40 x 7 - 120.",
+     "2400 / 40 = 60; 60 x 7 = 420.",
+     "420 - 120 = 300."
+    ],
+    "answer": "300."
+   },
+   "check": {
+    "q": "Approximate: 899.9 / 29.98 + 14.97 x 6.01",
+    "options": {
+     "a": "120",
+     "b": "135",
+     "c": "160",
+     "d": "100"
+    },
+    "answer": "A",
+    "why": "900 / 30 = 30 and 15 x 6 = 90: 120. (135 adds 15 to 120.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-02-approximation-a-graded#2",
+     "clerk-02-approximation-a-graded#6",
+     "clerk-02-approximation-a-graded#10",
+     "clerk-02-approximation-a-graded#21",
+     "clerk-02-approximation-a-graded#24",
+     "clerk-02-approximation-a-graded#29",
+     "clerk-02-approximation-b-pyq#3"
+    ],
+    "tags": [
+     "Division before addition.",
+     "Only adding and subtracting.",
+     "Divide first, then multiply.",
+     "A cube in disguise: 2197 = 13 x 13 x 13.",
+     "Three operations.",
+     "Divisions in a row.",
+     "A real paper (2017 model): left to right."
+    ]
+   }
+  },
+  {
+   "id": "percents",
+   "code": "A2",
+   "title": "Percents and fractions",
+   "plain": "New: percent and fraction terms, which hide easy fractions.",
+   "needs": [
+    "percent-fractions",
+    "check-options"
+   ],
+   "teach": [
+    "Round the percent to a friendly one and use its fraction:",
+    "| Percent | Fraction |",
+    "| 33.32%, 33.34% | 1/3 |",
+    "| 16.67% | 1/6 |",
+    "| 24.97%, 25.03% | 1/4 |",
+    "| 59.97% | 3/5 |",
+    "| 119.98% | 6/5 |",
+    "| 124.9% | 5/4 |",
+    "**Same base, add the percents first.** 39.98% of 650 + 59.97% of 650 = 100% of 650.",
+    "A fraction of a number: round the number so the fraction divides it. 3/7 of 489.97 becomes 3/7 of 490 = 210."
+   ],
+   "example": {
+    "q": "Approximate: 31.93% of 750.03 + ?² = 48.03% of 1699.98",
+    "steps": [
+     "Round: 32% of 750 = 240; 48% of 1,700 = 816.",
+     "?² = 816 - 240 = 576.",
+     "? = 24."
+    ],
+    "answer": "24 (IBPS PO Prelims 24 Aug 2025 Shift 1, memory-based; key 24)."
+   },
+   "check": {
+    "q": "Approximate: 24.98% of 1199.9 + 16.67% of 360.1",
+    "options": {
+     "a": "360",
+     "b": "330",
+     "c": "300",
+     "d": "420"
+    },
+    "answer": "A",
+    "why": "A quarter of 1,200 is 300 and a sixth of 360 is 60: 360. (300 forgets the second term.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-02-approximation-a-graded#7",
+     "clerk-02-approximation-a-graded#9",
+     "clerk-02-approximation-a-graded#15",
+     "clerk-02-approximation-a-graded#18",
+     "clerk-02-approximation-a-graded#20",
+     "clerk-02-approximation-a-graded#23",
+     "clerk-02-approximation-a-graded#27"
+    ],
+    "tags": [
+     "A fraction of a number.",
+     "A percent and a product.",
+     "A percent over 100.",
+     "Two fractions.",
+     "Thirds and sixths.",
+     "Small and large percents.",
+     "Same base: add the percents."
+    ]
+   }
+  },
+  {
+   "id": "roots",
+   "code": "A3",
+   "title": "Squares, cubes and roots that are nearly exact",
+   "plain": "New: a number just off a perfect square or cube.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "Know the squares to 30 and the cubes to 15; then a near number is easy:",
+    "| Looks like | Use |",
+    "| √624.9, √783.9, √1023.9 | 25, 28, 32 |",
+    "| √1445 | 38 (38 x 38 = 1,444) |",
+    "| ∛342.9, ∛1331.2 | 7, 11 |",
+    "| (17.98)², (11.99)² | 324, 144 |",
+    "Inside a root, round each part, finish the inside, then take the root: √(16 x 25 + 41) = √441 = 21."
+   ],
+   "example": {
+    "q": "Approximate: (11.99)² + (28.86)² - (425 + 655) / 6³",
+    "steps": [
+     "Round: 144 + 841 - 1080 / 216.",
+     "1080 / 216 = 5.",
+     "144 + 841 - 5 = 980."
+    ],
+    "answer": "980 (IBPS PO Prelims 23 Aug 2025 Shift 2, memory-based; key 980)."
+   },
+   "check": {
+    "q": "Approximate: √1600.2 + ∛728.9",
+    "options": {
+     "a": "49",
+     "b": "51",
+     "c": "40",
+     "d": "59"
+    },
+    "answer": "A",
+    "why": "√1600 = 40 and ∛729 = 9: 49. (51 takes ∛729 as 11.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-02-approximation-a-graded#5",
+     "clerk-02-approximation-a-graded#8",
+     "clerk-02-approximation-a-graded#14",
+     "clerk-02-approximation-a-graded#19",
+     "clerk-02-approximation-a-graded#25",
+     "clerk-02-approximation-a-graded#28"
+    ],
+    "tags": [
+     "A near square, minus.",
+     "A near cube root.",
+     "A root, then times.",
+     "A root that is not quite exact.",
+     "A cube root times a square root.",
+     "Work inside the root first."
+    ]
+   }
+  },
+  {
+   "id": "blank-inside",
+   "code": "A4",
+   "title": "When the blank is inside",
+   "plain": "New: the question mark is not alone after the equals sign.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "Round everything, then **undo** the steps around the blank, the way you would in Simplification.",
+    "| The blank is | Undo by |",
+    "| ?% of 500 = 175 | 175 / 500 x 100 = 35 |",
+    "| √? = 18 | 18 x 18 = 324 |",
+    "| ?³ = 216 | ∛216 = 6 |",
+    "| 24 x ? = 360 | 360 / 24 = 15 |",
+    "Collect the known terms on one side first, then undo the last operation done to the blank."
+   ],
+   "example": {
+    "q": "Approximate: 12.123 x 15.03 + 26.89 - ? = 28.09% of 400.003",
+    "steps": [
+     "Round: 12 x 15 + 27 - ? = 28% of 400.",
+     "180 + 27 - ? = 112.",
+     "? = 95."
+    ],
+    "answer": "95 (IBPS PO Prelims 22 Aug 2026 Shift 2, memory-based; key 95)."
+   },
+   "check": {
+    "q": "Approximate: ?% of 799.9 = 279.98",
+    "options": {
+     "a": "30",
+     "b": "35",
+     "c": "40",
+     "d": "28"
+    },
+    "answer": "B",
+    "why": "280 / 800 x 100 = 35. Check: 35% of 800 = 280. (40 comes from rounding 280 up to 320 by mistake.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-02-approximation-a-graded#11",
+     "clerk-02-approximation-a-graded#12",
+     "clerk-02-approximation-a-graded#17",
+     "clerk-02-approximation-a-graded#22",
+     "clerk-02-approximation-a-graded#26",
+     "clerk-02-approximation-a-graded#30",
+     "clerk-02-approximation-b-pyq#2",
+     "clerk-02-approximation-b-pyq#4"
+    ],
+    "tags": [
+     "A cube equals a product.",
+     "The blank is added.",
+     "The blank is the percent.",
+     "The blank is under a root.",
+     "The blank is multiplied.",
+     "Two squares make a square.",
+     "A real paper (2017 model): divided by 9.",
+     "A real paper (2017 model): the blank is added."
+    ]
+   }
+  },
+  {
+   "id": "options",
+   "code": "A5",
+   "title": "Let the options set the precision",
+   "plain": "New: how much to round depends on how far apart the options are.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "Before rounding, glance at the options.",
+    "- **Options far apart** (45, 50, 41, 47, 43 are close; 30, 45, 20, 25, 50 are far): round boldly to whole tens.",
+    "- **Options close together** (805, 800, 815, 840, 865): keep whole numbers, and do not round 249.11 to 250 and 128.97 to 130 in the same sum without checking the total error.",
+    "- When two options are both near your answer, round less and redo the step that moved the most.",
+    "In the sample, these questions came only in IBPS PO Prelims, as a block of five per paper. The Clerk papers checked had approximation only in one 2017 model paper."
+   ],
+   "example": {
+    "q": "Approximate: 245.048 + 170.95 + 128.97 = ? + 249.11. Options: 245, 312, 296, 286, 276.",
+    "steps": [
+     "The options differ by about 10, so keep whole numbers: 245 + 171 + 129 = 545.",
+     "? = 545 - 249 = 296."
+    ],
+    "answer": "296 (IBPS PO Prelims 22 Aug 2026 Shift 1, memory-based; key 296)."
+   },
+   "check": {
+    "q": "Approximate: 1620.03 / 44.93 + 8836 / (46.98)². Options: 50, 42, 48, 40, 45.",
+    "options": {
+     "a": "50",
+     "b": "42",
+     "c": "40",
+     "d": "45"
+    },
+    "answer": "C",
+    "why": "1620 / 45 = 36 and 8836 / 2209 = 4 (47² = 2,209): 40. The options are only 2 apart, so 47 must not be rounded to 50. (IBPS PO Prelims 23 Aug 2025 Shift 2; key 40.)"
+   },
+   "more": [
+    {
+     "q": "Approximate: 3875 / (4.99)³ = ? - (24)² / 47.98. Options: 45, 49, 41, 47, 43.",
+     "options": {
+      "a": "45",
+      "b": "49",
+      "c": "41",
+      "d": "43"
+     },
+     "answer": "D",
+     "why": "3875 / 125 = 31 and 576 / 48 = 12, so ? = 43. (IBPS PO Prelims 23 Aug 2025 Shift 2; key 43.)",
+     "tag": "Close options, a cube and a square"
+    },
+    {
+     "q": "Approximate: (? / 17.99) x 5.99 = 319.87% of 60. Options: 560, 568, 554, 576, 578.",
+     "options": {
+      "a": "560",
+      "b": "568",
+      "c": "576",
+      "d": "578"
+     },
+     "answer": "C",
+     "why": "320% of 60 = 192, so ? / 18 = 32 and ? = 576. With options 2 apart, 319.87% must be taken as 320%, not 300%. (IBPS PO Prelims 23 Aug 2025 Shift 2; key 576.)",
+     "tag": "Very close options"
+    }
+   ]
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-02-approximation-a-graded#1": [
+    "Round: 25 x 16 + 120.",
+    "400 + 120 = 520."
+   ],
+   "clerk-02-approximation-a-graded#3": [
+    "Round: 35% of 800 + 40.",
+    "35% of 800 = 280, and 280 + 40 = 320."
+   ],
+   "clerk-02-approximation-a-graded#4": [
+    "Round under each root: √625 + √1296.",
+    "25 + 36 = 61."
+   ],
+   "clerk-02-approximation-a-graded#13": [
+    "Round: 1728 ÷ 12 + 16 x 6 - 40.",
+    "144 + 96 - 40 = 200."
+   ],
+   "clerk-02-approximation-b-pyq#1": [
+    "Round: 32 squared - 35 squared + 19 squared = 1024 - 1225 + 361 = 160.",
+    "√255 is about √256 = 16. So ? squared = 160 - 16 = 144.",
+    "? = 12 or -12, written ± 12."
+   ],
+   "clerk-02-approximation-a-graded#2": [
+    "Round: 1440 / 12 + 80.",
+    "1440 / 12 = 120.",
+    "120 + 80 = 200."
+   ],
+   "clerk-02-approximation-a-graded#6": [
+    "Round: 450 + 1250 - 700.",
+    "1000."
+   ],
+   "clerk-02-approximation-a-graded#10": [
+    "Round: 3600 / 60 x 15.",
+    "60 x 15 = 900."
+   ],
+   "clerk-02-approximation-a-graded#21": [
+    "Round: 2197 / 13 - 8 x 12.",
+    "169 - 96 = 73."
+   ],
+   "clerk-02-approximation-a-graded#24": [
+    "Round: 840 / 24 x 16 - 260.",
+    "35 x 16 = 560; 560 - 260 = 300."
+   ],
+   "clerk-02-approximation-a-graded#29": [
+    "Round: 1400 / 35 / 8 x 20.",
+    "40 / 8 = 5; 5 x 20 = 100."
+   ],
+   "clerk-02-approximation-b-pyq#3": [
+    "1596 / 57 = 28; 28 / 4 = 7.",
+    "71 - 7 = 64."
+   ],
+   "clerk-02-approximation-a-graded#7": [
+    "Round: 3/7 of 490 + 40.",
+    "490 / 7 = 70; 3 x 70 = 210.",
+    "210 + 40 = 250."
+   ],
+   "clerk-02-approximation-a-graded#9": [
+    "Round: 60% of 450 + 20 x 15.",
+    "270 + 300 = 570."
+   ],
+   "clerk-02-approximation-a-graded#15": [
+    "Round: 120% of 350 - 15 x 15.",
+    "420 - 225 = 195."
+   ],
+   "clerk-02-approximation-a-graded#18": [
+    "Round: 5/8 of 1280 - 3/5 of 550.",
+    "800 - 330 = 470."
+   ],
+   "clerk-02-approximation-a-graded#20": [
+    "Round: 1/3 of 1200 + 1/6 of 540.",
+    "400 + 90 = 490."
+   ],
+   "clerk-02-approximation-a-graded#23": [
+    "Round: 5% of 1840 + 125% of 80.",
+    "92 + 100 = 192."
+   ],
+   "clerk-02-approximation-a-graded#27": [
+    "40% + 60% of the same 650 = 100% of 650.",
+    "650."
+   ],
+   "clerk-02-approximation-a-graded#5": [
+    "Round: 18² - 124.",
+    "324 - 124 = 200."
+   ],
+   "clerk-02-approximation-a-graded#8": [
+    "∛343 = 7.",
+    "7 x 12 = 84."
+   ],
+   "clerk-02-approximation-a-graded#14": [
+    "√1024 = 32.",
+    "32 x 5 + 140 = 300."
+   ],
+   "clerk-02-approximation-a-graded#19": [
+    "√1445 is about 38 (38² = 1,444).",
+    "38 x 12 + 44 = 500."
+   ],
+   "clerk-02-approximation-a-graded#25": [
+    "∛1331 = 11 and √784 = 28.",
+    "11 x 28 - 108 = 200."
+   ],
+   "clerk-02-approximation-a-graded#28": [
+    "Round: √(16 x 25 + 41) = √441.",
+    "21."
+   ],
+   "clerk-02-approximation-a-graded#11": [
+    "Round: ?³ = 24 x 9 = 216.",
+    "? = 6."
+   ],
+   "clerk-02-approximation-a-graded#12": [
+    "Round: 25% of 640 + ? = 20².",
+    "160 + ? = 400, so ? = 240."
+   ],
+   "clerk-02-approximation-a-graded#17": [
+    "Round: ?% of 500 = 175.",
+    "? = 175 / 500 x 100 = 35."
+   ],
+   "clerk-02-approximation-a-graded#22": [
+    "Round: √? + 15 x 6 = 45% of 240.",
+    "√? + 90 = 108, so √? = 18.",
+    "? = 324."
+   ],
+   "clerk-02-approximation-a-graded#26": [
+    "Round: 24 x ? + 15² = 45 x 13.",
+    "24 x ? + 225 = 585, so 24 x ? = 360.",
+    "? = 15."
+   ],
+   "clerk-02-approximation-a-graded#30": [
+    "Round: 12² + 16² = 144 + 256 = 400 = ?².",
+    "? = 20."
+   ],
+   "clerk-02-approximation-b-pyq#2": [
+    "(779 + 553) / 33.3 = 1332 / 33.3 = 40.",
+    "40 + 528 = 568 = ? / 9.",
+    "? = 5112."
+   ],
+   "clerk-02-approximation-b-pyq#4": [
+    "(3496 - 1002) / 43 x 12 = 2494 / 43 x 12 = 58 x 12 = 696.",
+    "696 = 456 + ?.",
+    "? = 240."
+   ]
+  }
+ }
+}
