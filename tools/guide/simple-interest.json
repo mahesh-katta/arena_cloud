@@ -26,7 +26,16 @@
  },
  "intro": [
   "Simple interest is the extra money you get for lending, the same slice every year. One habit handles every question here: **call the sum 100% and find what 1% is worth.**",
-  "There are seven short lessons, each adding one twist. Four of them are taken from the combined Simple & Compound Interest topic; three are new. Go in order the first time."
+  "There are seven short lessons, each adding one twist. Four of them are taken from the combined Simple & Compound Interest topic; three are new. Go in order the first time.",
+  "What the papers ask (from the Stage A count in Quick revision of Simple & Compound Interest: 30 papers, all memory-based):",
+  "| Kind | Label | Lesson |",
+  "| Plain SI: find the missing value (I1) | Confirmed, 2 papers | S1, S2 |",
+  "| Becomes n times, or interest is a fraction (I2) | Confirmed, 4 papers | S3 |",
+  "| Same sum, rate or time changed (I3) | Confirmed, 2 papers | S4 |",
+  "| Amounts at two dates (I5) | Seen once | S4 |",
+  "| Rate changes from year to year (K8) | Seen once (IBPS PO) | S5 |",
+  "| Two deposits: total, difference or ratio (I4) | Confirmed, 7 papers | S6, S7 |",
+  "Months and days, and the exam-wording sets of S5 and S7, are practised from the Guidely bank; the clerk bank has too few of them."
  ],
  "needs": [
   "percent-of",
@@ -507,6 +516,14 @@
      "x and (x + 2,000); a small difference, so check which is bigger.",
      "A ratio 3 : 2, and the total is asked.",
      "P and 3P, and the amounts are given, not the interests."
+    ]
+   },
+   "shortcut": {
+    "title": "The extra part of a linked sum",
+    "text": [
+     "When one sum is written as another plus a fixed number, such as (X + 1,400), take the fixed part's interest out as plain rupees first.",
+     "X at 8% and (X + 1,400) at 12%, both for 2 years, interests differ by 880: the second earns 24% of X plus 24% of 1,400 = 336. The first earns 16% of X. So 8% of X + 336 = 880, giving 8% of X = 544 and X = 6,800.",
+     "Use it whenever the letter appears in both sums; skip it when the sums are given as a ratio."
     ]
    }
   }
