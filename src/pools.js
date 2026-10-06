@@ -31,6 +31,12 @@ export const POOLS = {
   "floor-and-flat-puzzles": ["Floor puzzle", "Floor with flat puzzle"],
   "month-date-and-day-puzzles": ["Month puzzle", "Month with date puzzle", "Month with year puzzle", "Day puzzle", "Year puzzle"],
   "circular-and-square-seating": ["Circular arrangement", "Square arrangement"],
+  "circular-seating": ["Circular arrangement"],
+  "square-seating": ["Square arrangement", "Rectangular arrangement"],
+  "triangular-arrangement": ["Triangular arrangement", "Pentagonal arrangement", "Hexagonal arrangement"],
+  "designation-puzzles": ["Designation puzzle"],
+  "direction-sense": ["Direction sense"],
+  "blood-relations": ["Blood relation"],
   "reasoning-series-and-miscellaneous": ["Alphabet series", "Alphanumeric / mixed series", "Number series (reasoning)", "Miscellaneous (reasoning)"],
 };
 
