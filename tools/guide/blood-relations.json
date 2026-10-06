@@ -1,0 +1,822 @@
+{
+ "module": "blood-relations",
+ "intro": [
+  "A short paragraph about one family, then three questions. Every blood-relation set in the real papers studied looked like this. These lessons are built the same way as the puzzle topics: real papers first, then every bank question used here solved by a script.",
+  "**What I studied.** 35 memory-based papers (23 IBPS Clerk Prelims files, 17 of them with a Reasoning section, and 12 sister papers: SBI Clerk, IBPS RRB Clerk, IBPS PO), and the shift-by-shift topic lists for 18 IBPS Clerk shifts from 2023 to 2025 (Bankersadda, Adda247, Oliveboard and PW pages). In the papers there were 14 blood-relation sets: 6 in IBPS Clerk papers (2019, 2022, 2023, a 2025 paper and the 4 October 2025 shifts 1 and 2) and 8 in sister papers. From your bank: all 51 Sreedhar sets (45 different puzzles, 6 repeated) and 48 of the 80 Guidely questions.",
+  "**How it was checked.** Each paragraph was written out as exact statements in a small family model (gender, parents, husband or wife, brothers and sisters, generation) and a solver listed every family that fits. An answer counts only if it is the same in every family that fits.",
+  "| What was measured | Count |",
+  "| Blood-relation sets in the 17 Clerk papers with a Reasoning section | 6 sets, 3 questions each |",
+  "| IBPS Clerk shifts listing blood relation, in 18 shift topic lists for 2023 to 2025 | 9 shifts, 3 questions each where a number was given |",
+  "| Paper sets that were a family paragraph | 14 of 14 |",
+  "| Paper sets in coded form (A @ B) or pointing at a photograph | none |",
+  "| Size of the family in the paper sets | 7 to 10 people; 8 people in 8 of the 14 |",
+  "| Paper questions: \"How is X related to Y\" | 25 of 42 |",
+  "| Paper questions: how many men, women or couples | 7, in 7 sets |",
+  "| Paper questions: \"If ...\" / a person named through another / about the whole tree | 5 / 5 / 4 |",
+  "| Paper answers that were \"cannot be determined\" | 1 of 36 keyed |",
+  "| Paper sets whose key the script reproduced | 12 of 12 that have a key (36 questions); 2 sets have no key and gave one answer each |",
+  "| Sreedhar paragraph questions reproduced by the script | 104 of 109 (one only when unstated brothers and sisters are not assumed) |",
+  "| Sreedhar coded questions reproduced | 15 of 15 |",
+  "| Guidely questions reproduced | 45 of 48 tried |",
+  "**What this means.** At clerk level this is a small, steady topic: about half of the IBPS Clerk shifts listed it, always as three questions on one family paragraph. The marks are lost in three places: an in-law word that has two meanings, a gender that is assumed instead of proved, and the closing count of men or women. The lessons take those one at a time, then the question shapes the papers add (\"if\", a person named through another, the whole tree). Coded relations come last, as insurance: they fill part of your bank but were in none of the papers.",
+  "A note on honesty. Memory-based papers are candidates' reconstructions. Two paper sets (IBPS Clerk 4 October 2025 shift 1, SBI Clerk 20 September 2025 shift 2) had no answer key; the script found one family for each, but no key confirms them. Bank questions dropped as unreliable: Sreedhar model test 78 (the paragraph fits two different families, so two of its three keys cannot be reached); model test 71 Q80, model test 32 Q89 and model test 5 Q73 (more than one answer fits the paragraph, or the key needs an extra person); Guidely coded set question 13 (the key says granddaughter where the chain gives a great-aunt); Guidely tricky set 1 questions 19 and 20 (an option names a person missing from the paragraph, and the niece in question 20 has no gender clue); Guidely tricky set 2 question 8 (the \"if\" contradicts \"P has no siblings\"). Reading choices used everywhere: brother-in-law means the brother of one's husband or wife or the husband of one's sister; an unmarried person has no children; people are never married to their own brother, sister or cousin."
+ ],
+ "needs": [],
+ "after": [
+  "That is the blood-relation set as the papers set it. The **Quick revision** tab has the same archetypes in short form, with the drills.",
+  "The order of work for every set: draw the direct clues on generation rows, write both meanings of each brother-in-law or sister-in-law, let the counting clues place the last people, prove every gender before you count, then answer each question from the drawing.",
+  "Not covered by a lesson: questions where someone points at a photograph or introduces a person (\"pointing to a man, she said ...\"). None appeared in the 35 papers or in your bank. The same drawing solves them: start from the speaker."
+ ],
+ "lessons": [
+  {
+   "id": "draw",
+   "code": "BR1",
+   "title": "Draw the family, then read it",
+   "plain": "The starting point. Turn every sentence into one line on a small family drawing, with older people on top, and read the answer off the drawing.",
+   "needs": [],
+   "teach": [
+    "A blood-relation set is a short paragraph of family statements followed by three questions. In every one of the 14 real paper sets found, the paragraph had 7 to 10 people and up to three generations. You never answer from memory of the sentences; you answer from a drawing.",
+    "**The drawing.** Write each name once. Draw it in the right row:",
+    "| Line | Means |",
+    "| A short horizontal line with = between two names | a married couple (husband and wife) |",
+    "| A vertical line down from a couple (or a person) | their child |",
+    "| A bracket over two names on the same row | brother and sister (same parents) |",
+    "| + or - beside a name | man or woman, once you know it |",
+    "**Rows are generations.** Grandparents on the top row, their children in the middle, grandchildren at the bottom. A married couple is always on one row. Brothers, sisters and cousins are on one row.",
+    "**Gender comes from the word, and only from the word.** Father, son, brother, husband, uncle, nephew, grandson: a man. Mother, daughter, sister, wife, aunt, niece, granddaughter: a woman. Parent, child, sibling, spouse, cousin, grandchild: gender unknown. Put the + or - beside the person the word describes, which is the first name: in \"R is the brother of G\", R is the man, not G.",
+    "**Reading the drawing.** Walk from the second name to the first and name the steps:",
+    "| Path on the drawing | Name of the first person |",
+    "| one row up | father or mother |",
+    "| two rows up | grandfather or grandmother |",
+    "| up one, across to a brother or sister | uncle or aunt |",
+    "| across to a brother or sister, then down one | nephew or niece |",
+    "| up one, across, down one | cousin |",
+    "| across a marriage line | husband or wife |",
+    "The question \"How is X related to Y?\" asks for X's name as seen from Y. Start at Y."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2019 (memory-based). There are seven members in a family of three generations. A is the mother of P. P is the brother of G. K is married to G. S is the aunt of M. K is the child of L. S is the sister of K. How is S related to G?",
+    "steps": [
+     "A on the top row, with a line down to P. P is G's brother, so G hangs from A too: P and G are on the middle row.",
+     "K is married to G: K goes on the middle row with an = to G. K is L's child: L on the top row above K.",
+     "S is K's sister: S on the middle row, bracketed with K under L.",
+     "S is M's aunt and M has not been placed: M is the child of K and G, on the bottom row.",
+     "From G to S: across the marriage line to K, then across to K's sister. The sister of your husband or wife is your sister-in-law."
+    ],
+    "answer": "S is G's sister-in-law. (The paper's key also says Sister-in-law.) The script found the same answer in every family that fits the seven statements."
+   },
+   "check": {
+    "q": "A is the father of B. B is the sister of C. D is the son of C. How is A related to D?",
+    "options": {
+     "a": "Father",
+     "b": "Grandfather",
+     "c": "Uncle",
+     "d": "Brother"
+    },
+    "answer": "B",
+    "why": "B and C are siblings, so A is C's father too. D is C's son, so A is two rows above D: grandfather. Uncle would need A to be the brother of D's parent, not the parent."
+   },
+   "shortcut": {
+    "title": "Write the generation number beside each name",
+    "text": [
+     "Give the first person you place a 0. A parent is one less, a child one more, a husband, wife, brother or sister the same number.",
+     "Then \"X is two more than Y\" means grandchild, \"one more and not a child\" means nephew or niece, and so on. It also catches a mistake fast: a grandfather can never have the same number as his grandson."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-60-78380-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-39-78359-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-2-78322-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-2-78322-blood-relation#2"
+    ],
+    "tags": [
+     "Gender of P comes from \"no daughters\", not from a word about P",
+     "Two children of D: one is the wife, so the other is her brother",
+     "\"Paternal aunt\" tells you which parent to go through",
+     "The answer crosses a marriage line",
+     "Aunt through the father, read from the bottom row"
+    ]
+   }
+  },
+  {
+   "id": "in-law",
+   "code": "BR2",
+   "title": "An in-law clue can be read two ways",
+   "plain": "New: \"brother-in-law\" and \"sister-in-law\" each have two meanings. Write both, and let a clue such as \"has no siblings\" or the number of couples pick one.",
+   "needs": [],
+   "teach": [
+    "In-law words are the most common clue after parent, child, brother and sister: 22 of the 129 clues in the 14 paper sets, and 70 of about 340 clues in the Sreedhar sets. Father-in-law, mother-in-law, son-in-law and daughter-in-law have one meaning each. Brother-in-law and sister-in-law have two.",
+    "| The clue says | It means | Drawing |",
+    "| X is the father-in-law (mother-in-law) of Y | X is the father (mother) of Y's husband or wife | X one row above Y's spouse |",
+    "| X is the son-in-law of Y | X is the husband of Y's daughter | X = Y's daughter |",
+    "| X is the daughter-in-law of Y | X is the wife of Y's son | X = Y's son |",
+    "| X is the brother-in-law of Y | either the brother of Y's husband or wife, or the husband of Y's sister | two drawings |",
+    "| X is the sister-in-law of Y | either the sister of Y's husband or wife, or the wife of Y's brother | two drawings |",
+    "**How the second meaning gets killed.** The paragraph nearly always carries one short clue that removes a meaning:",
+    "- \"X has no siblings\": X cannot be anyone's brother-in-law through being a brother. Only the husband-of-a-sister meaning is left.",
+    "- \"Y has no siblings\": Y has no sister to be married to, so X is the brother of Y's spouse.",
+    "- A fixed number of couples, or someone \"unmarried\": count the marriages each drawing needs.",
+    "Read the in-law clue, draw both meanings lightly, and carry on. The next clue that names one of these people usually rubs one out."
+   ],
+   "example": {
+    "q": "IBPS RRB Clerk Prelims, 13 December 2025, shift 2 (memory-based). There are eight persons A, B, C, D, E, F, G and H in a three-generation family. D is the brother-in-law of E. C is the only son of E. H is the sibling of C, but H does not have children. B is the grandson of A. A is female. D doesn't have a sibling. F is also a family member. The family has no single parent. A and F are not married to D. How is H related to G?",
+    "steps": [
+     "D is E's brother-in-law: either the brother of E's wife, or the husband of E's sister.",
+     "D has no sibling, so the first meaning dies: D is the husband of E's sister.",
+     "Who is that sister? Not A and not F (they are not married to D). C, H and B are the younger rows. So E's sister is G, and D and G are a couple.",
+     "B is A's grandson. C is E's only son and H has no children, so B is C's son. A is a woman, so A is E's wife; C's wife (B's mother) is F, the last person.",
+     "H is C's sibling and C is E's only son, so H is a daughter. From G: across to her brother E, down to his daughter H."
+    ],
+    "answer": "H is G's niece. (The paper's key also says Niece.) The script found exactly one family for this set."
+   },
+   "check": {
+    "q": "P is the brother-in-law of Q. Q is a married woman and has no brothers or sisters. H is Q's husband. How is P related to H?",
+    "options": {
+     "a": "Brother",
+     "b": "Brother-in-law",
+     "c": "Father",
+     "d": "Son"
+    },
+    "answer": "A",
+    "why": "Q has no sister, so P cannot be her sister's husband. P must be the brother of Q's husband H. Brother-in-law is P's link to Q, not to H."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-40-78360-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-40-78360-blood-relation#3",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-blood-relation#3",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-blood-relation#1"
+    ],
+    "tags": [
+     "Son-in-law: one meaning only",
+     "\"Son-in-law of P\" picks out P's daughter",
+     "\"Both or none of the parents\" places the husband",
+     "Daughter-in-law read backwards",
+     "Sister-in-law with two meanings; the couple count decides"
+    ]
+   }
+  },
+  {
+   "id": "only",
+   "code": "BR3",
+   "title": "\"Only\", \"has two children\" and the size of the family",
+   "plain": "New: the counting clues. \"Has only two children\", \"three married couples\", \"eight members\" are not decoration; they tell you who the last unplaced people must be.",
+   "needs": [],
+   "teach": [
+    "After the direct clues are drawn, one or two people are usually floating: you know they belong somewhere but not where. The counting clues place them.",
+    "| Clue | What it does |",
+    "| X has only two children | once two children are drawn, any other child-like person is somebody else's child |",
+    "| X is the only son (only daughter) of Y | Y's other children are of the other gender, or there are none |",
+    "| There are only N members | nobody outside the list: a person's husband, wife or parent mentioned in a clue must be one of the names |",
+    "| There are K married couples | count your = signs; if one is missing, the floating people must marry |",
+    "| Three generations | nobody above the grandparents or below the grandchildren |",
+    "| X has no siblings, X is unmarried, X has no children | rule a line out |",
+    "In the 14 paper sets, 10 had at least one clue of this kind (\"only\", \"has two children\", \"no siblings\", \"no children\"), 4 stated the number of generations and 2 the number of couples. In the Sreedhar sets the counting clues are even more common: 62 of about 340 clues.",
+    "**The order of work.** Draw every direct clue first. Then list the people not yet drawn. Then read the counting clues against that short list. The family is closed: when the paragraph says eight members, a husband who is \"not mentioned\" is not in the family."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 22 February 2025, shift 1 (memory-based). There are eight persons in a three-generation family with three married couples. M is the father of O. Q is the daughter-in-law of G. Q is the mother of S. S is the grandchild of M. P is the sister of M. S and T are siblings. T is the only son of O. L and P are married. How is G related to T?",
+    "steps": [
+     "M on the top row, O below him. P is M's sister: top row, and L = P (couple 1).",
+     "T is O's only son and S is T's sibling, so S is O's child too; S is M's grandchild: fits. S and T are on the bottom row.",
+     "Q is S's mother, so Q is O's wife (couple 2), and Q is G's daughter-in-law: G is O's parent.",
+     "Three couples are needed and the only person left unmarried on the top row is M. G is O's parent and is not M: G is M's wife (couple 3).",
+     "From T: up to O, up to G. G is a woman because she is M's wife."
+    ],
+    "answer": "G is T's grandmother. (The paper's key also says Grandmother.)"
+   },
+   "check": {
+    "q": "R has only two children. S is R's son and is married to U. V is R's daughter. W is S's child. How is V related to W?",
+    "options": {
+     "a": "Mother",
+     "b": "Aunt",
+     "c": "Sister",
+     "d": "Grandmother"
+    },
+    "answer": "B",
+    "why": "R's two children are S and V. W is S's child, so V is the sister of W's father: aunt. Mother is tempting, but W's mother is U, S's wife."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-blood-relation#3",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-blood-relation#3"
+    ],
+    "tags": [
+     "Three couples in eight people: the third couple has to be made",
+     "A read-off: the couple you made",
+     "A read-off: the child of that couple",
+     "\"Has three children\" with only two named",
+     "Only two couples: the unmarried one is the uncle"
+    ]
+   }
+  },
+  {
+   "id": "count",
+   "code": "BR4",
+   "title": "How many men or women: count, but only what is known",
+   "plain": "New: the counting question. Mark + and - only where a word proves it; if even one person stays unmarked and the count depends on them, the answer is \"cannot be determined\".",
+   "needs": [],
+   "teach": [
+    "\"How many female members are there in the family?\" came in 7 of the 14 paper sets (6 as men or women, 1 as married couples), and in 14 of the 109 Sreedhar paragraph questions.",
+    "**The routine.**",
+    "- Go through every name and put + or - only if a word proves it.",
+    "- A married couple is always one man and one woman. If you know one, you know the other.",
+    "- \"Only son\" or \"no sons\" turns the other children into daughters.",
+    "- Words like child, sibling, cousin, grandchild, parent and spouse say nothing about gender.",
+    "- Count the + signs and the - signs. If someone is left with no mark, see whether the count changes with them. If it does, the answer is \"cannot be determined\".",
+    "**What the numbers say.** In the Sreedhar sets, 6 of the 14 counting questions are keyed \"cannot be determined\". In the 7 paper counting questions, none was: every paper set gave enough to fix every gender. So in the exam, a count that comes out unknown is a sign to look again for a gender clue you skipped, such as \"K, H and B are of the same gender\". Only then mark \"cannot be determined\"."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 October 2025, shift 2 (memory-based). A is the unmarried sister of U, who is the spouse of K. D is the son-in-law of K's mother. M is the parent of B, who is the child of D. N is the grandfather of B and H. J is the spouse of N, but their daughter-in-law is not M. J's son has a child. K, H and B are of the same gender. How many females are in the family?",
+    "steps": [
+     "A is a sister: -. U is A's sister: -. U is K's spouse, so K is +.",
+     "K, H and B are of the same gender: H and B are + as well.",
+     "N is a grandfather: +. J is N's spouse: -.",
+     "D is a son-in-law: +. M is B's parent and D's wife (M is not N and J's daughter-in-law, so M is their daughter and D married her): -.",
+     "Women: A, U, J, M. Men: K, H, B, N, D. Every one of the nine is marked."
+    ],
+    "answer": "Four females. (The paper's key also says Four.)"
+   },
+   "check": {
+    "q": "A is the son of B. C is the wife of A. D is the child of C. E is the spouse of B. How many female members are there?",
+    "options": {
+     "a": "Two",
+     "b": "Three",
+     "c": "Four",
+     "d": "Cannot be determined"
+    },
+    "answer": "D",
+    "why": "A is a man, C a woman. B and E are a couple, so exactly one of them is a woman even though neither gender is given. D is only called a child. The count is two or three. Two is tempting if you forget the couple B and E."
+   },
+   "shortcut": {
+    "title": "Count the couples first",
+    "text": [
+     "Every married couple adds exactly one man and one woman. Count the couples, then mark only the unmarried people.",
+     "With three couples in a family of eight, you only have to settle the gender of two people."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-blood-relation#3",
+     "ibps-csa-xvi-prelims-2026-model-test-25-78345-blood-relation#3",
+     "ibps-csa-xvi-prelims-2026-model-test-29-78349-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-blood-relation#3",
+     "ibps-csa-xvi-prelims-2026-model-test-21-78341-blood-relation#3"
+    ],
+    "tags": [
+     "A niece is a woman even before she is placed",
+     "\"One daughter and one son\" settles both children",
+     "\"No sons\" turns two grandchildren into daughters",
+     "A grandchild with no gender word",
+     "A brother's sibling: gender never given"
+    ]
+   }
+  },
+  {
+   "id": "either",
+   "code": "BR5",
+   "title": "\"Either\" and \"cannot be determined\" in a relation question",
+   "plain": "New: the answer to \"How is X related to Y?\" can be fixed in shape but open in gender. Pick the \"either\" option when the place is known and only the gender is not.",
+   "needs": [],
+   "teach": [
+    "Sometimes the drawing is certain but one person's gender is not. Then the honest answer is a pair: grandfather or grandmother, nephew or niece.",
+    "| What the drawing shows | The option to choose |",
+    "| X's place is fixed, X's gender is not, and the options offer both words | \"Either (1) or (2)\" |",
+    "| X's place is fixed, X's gender is not, and only one of the two words is offered | \"Cannot be determined\" |",
+    "| X could sit in two different places | \"Cannot be determined\" |",
+    "Of the Sreedhar questions the script reproduced, 11 are keyed \"cannot be determined\" and 7 \"either\". In the 14 paper sets only one question was keyed \"cannot be determined\" (IBPS Clerk 2019), and none \"either\".",
+    "**Before you choose either of them,** read the paragraph once more for a gender clue you skipped: a \"brother\", an \"only son\", a \"same gender\". Most answers that look open are closed by one of these."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2019 (memory-based), the same family as in the first lesson. If L is married to J, then how is J related to G? (a) Granddaughter (b) Grandson (c) Son-in-law (d) Daughter-in-law (e) Can't be determined",
+    "steps": [
+     "L is K's parent and K is married to G. If J is L's spouse, J is K's other parent: G's father-in-law or mother-in-law.",
+     "Nothing tells you whether J (or L) is a man or a woman.",
+     "Neither father-in-law nor mother-in-law is among the options, and the place cannot be named without the gender."
+    ],
+    "answer": "(e) Can't be determined. (The paper's key also says (e).)"
+   },
+   "check": {
+    "q": "X is the brother of Y. Y is the father of Z. How is Z related to X?",
+    "options": {
+     "a": "Nephew",
+     "b": "Niece",
+     "c": "Either nephew or niece",
+     "d": "Son"
+    },
+    "answer": "C",
+    "why": "Z is the child of X's brother, so Z is a nephew or a niece, but Z's gender is never given. Nephew is tempting because the two people around Z are men."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-67-78387-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-11-78331-blood-relation#1"
+    ],
+    "tags": [
+     "A grandparent whose gender is never given",
+     "A grandchild whose gender is never given",
+     "A sister's child: nephew or niece",
+     "Only \"grandfather\" offered for an unknown grandparent",
+     "A parent who could be father or mother"
+    ]
+   }
+  },
+  {
+   "id": "chain",
+   "code": "BR6",
+   "title": "One person named through another",
+   "plain": "New: questions such as \"How is E related to B's sister-in-law?\" First find who \"B's sister-in-law\" is on the drawing, write that name, then answer as usual.",
+   "needs": [],
+   "teach": [
+    "Some questions name a person only through someone else: \"L's father\", \"the son-in-law of the one who is the sister-in-law of C\", \"the uncle of Q\". In the 14 paper sets this came 5 times, in 5 different papers.",
+    "**The routine.** Work from the inside out.",
+    "- Underline the inner part (\"B's sister-in-law\").",
+    "- Find that person on your drawing and write the name above the words.",
+    "- Now the question is an ordinary one: \"How is E related to C?\"",
+    "If the inner part fits two people (two sisters-in-law), check that both give the same answer; if not, the answer is \"cannot be determined\".",
+    "The options often include the relation to the person in the inner part. In \"How is E related to B's sister-in-law?\" the option \"Son\" is E's relation to B, not to her sister-in-law."
+   ],
+   "example": {
+    "q": "IBPS RRB Clerk Prelims, 6 December 2025, shift 1 (memory-based). B has only one son. A is a child of B. C is the sister-in-law of A. E is the son of C. F is the grandfather of E. H is unmarried. H is the daughter of D. F and B are of the same gender. F is the spouse of D. G is a male member of the family. How is E related to the brother-in-law of H?",
+    "steps": [
+     "Try the shape the clues point to, then test it: C is the daughter of F and D (so F is E's grandfather and H, D's daughter, is C's sister); C's husband is G, B's only son; A is G's sister.",
+     "Every clue fits: C is A's sister-in-law, F and B are both men, H is unmarried. The script finds no other family.",
+     "Inner part: H's brother-in-law. H is unmarried, so it is her sister's husband: G.",
+     "Now: how is E related to G? E is C's son and C is G's wife."
+    ],
+    "answer": "E is G's son: (a) Son. (The paper's key also says (a).)"
+   },
+   "check": {
+    "q": "J is the mother of K. L is K's wife. M is the son of K and L. How is M related to the mother-in-law of L?",
+    "options": {
+     "a": "Son",
+     "b": "Grandson",
+     "c": "Nephew",
+     "d": "Son-in-law"
+    },
+    "answer": "B",
+    "why": "L's mother-in-law is her husband's mother: J. M is K's son and K is J's son, so M is J's grandson. Son is M's relation to L, not to J."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "blood-relation-new-pattern-set-2-prelims#3",
+     "blood-relation-new-pattern-set-2-prelims#6",
+     "blood-relation-new-pattern-set-2-prelims#7",
+     "blood-relation-new-pattern-set-2-prelims#9",
+     "blood-relation-new-pattern-set-2-prelims#20"
+    ],
+    "tags": [
+     "Two steps inside: a son-in-law of a sister-in-law",
+     "\"L's son-in-law\" is the father, not the grandfather",
+     "\"B's daughter\" found through B's husband",
+     "\"V's husband\" is the person to place first",
+     "Son of the sister-in-law's brother"
+    ]
+   }
+  },
+  {
+   "id": "if",
+   "code": "BR7",
+   "title": "\"If ... then\": a new fact for one question only",
+   "plain": "New: a question that adds a fact (\"If C is the wife of K\"). Add it to a copy of your drawing, answer, and throw it away before the next question.",
+   "needs": [],
+   "teach": [
+    "\"If\" questions came in 4 of the 14 paper sets (5 questions), and in 14 of the 109 Sreedhar paragraph questions.",
+    "**The routine.**",
+    "- The new fact is true for this question only. Do not write it into the main drawing.",
+    "- The new person is usually outside the family so far (\"If H is the mother of V\"). Give them the place the fact says and nothing more.",
+    "- Ask: does the new fact also make someone else's relation certain? If H is V's mother and V is P's brother, H is P's mother too.",
+    "A new person adds no other links. In \"If K is the grandfather of P\", K could be the father of either of P's parents; if the paragraph only gives one parent of P, that is not enough to decide. One Sreedhar question with this wording keys \"cannot be determined\", and the script agrees only if P's other parent may be added too, so that question is left out of the practice here."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2023 (memory-based). A is the mother of D and B. G's daughter is married to D. F is the brother-in-law of H. H and M are not siblings. M is the sister-in-law of B and vice versa. F is the only brother of G, who is the grandmother of K. If C is the wife of K, then how is D related to C?",
+    "steps": [
+     "M is B's sister-in-law and B is M's sister-in-law, so both are women. B is D's sister (both are A's children), so M is D's wife.",
+     "G's daughter is married to D: that is M. G is K's grandmother, and K is the child of D and M.",
+     "F is G's only brother and H's brother-in-law, so H is G's husband or the brother of F's wife. Only the first fits a family of eight with G as K's grandmother: H is G's husband (the script finds no other family).",
+     "New fact for this question only: C is K's wife. D is K's father."
+    ],
+    "answer": "D is C's father-in-law: (a). (The paper's key also says (a).)"
+   },
+   "check": {
+    "q": "P is the father of Q. Q is the sister of R. If S is the wife of R, how is S related to P?",
+    "options": {
+     "a": "Daughter",
+     "b": "Daughter-in-law",
+     "c": "Sister-in-law",
+     "d": "Wife"
+    },
+    "answer": "B",
+    "why": "Q and R are siblings, so R is P's child too, and R has a wife, so R is P's son. S is the wife of P's son: daughter-in-law. Sister-in-law is S's relation to Q, not to P."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-blood-relation#3",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-14-78334-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-35-78355-blood-relation#1"
+    ],
+    "tags": [
+     "A new mother for a brother-in-law",
+     "A new spouse for a grandfather",
+     "A new aunt on the father's side",
+     "A new son: two cousins",
+     "A new father-in-law, read two rows down"
+    ]
+   }
+  },
+  {
+   "id": "whole",
+   "code": "BR8",
+   "title": "Questions about the whole tree: pairs, odd one out, true statements",
+   "plain": "New: questions that test the finished drawing as a whole. Finish every + and -, every = and every row first, then test each option against the drawing.",
+   "needs": [],
+   "teach": [
+    "Some questions do not ask about two people but about the whole family: \"Which pair is husband and wife?\", \"Four of these pairs are alike\", \"Which statement is true?\", \"Who is the parent of L: i, ii or iii?\". In the 14 paper sets these came 4 times in 3 papers.",
+    "**The routine.**",
+    "- Complete the drawing: every couple, every generation row, and every gender you can prove.",
+    "- For \"four are alike\", find what four options share. In the sets checked here the shared thing was gender (both men, both women) or a parent and child pair; the odd one is the one that breaks it.",
+    "- For true statements, test each one on its own and tick or cross it. Statements with \"only\" need the whole family checked, not one branch.",
+    "- For roman-numeral options (i, ii, iii), decide each numeral first, then find the option that names exactly those."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2025 (Guidely memory-based paper). K is the daughter of P, who is the son of S. S is married to V and they have only two children. D is the son-in-law of V. B is the sister-in-law of J, who is married to D. D does not have any siblings. L is the nephew of P. L and S are of opposite gender. Which pair shows that the first person is the wife of the second? (A) LK (B) BP (C) SP (D) DV (E) None of the above",
+    "steps": [
+     "S and V have only two children: P (a son) and one more. D is V's son-in-law, so D is married to V's daughter: J. J and P are the two children.",
+     "B is J's sister-in-law and D has no siblings, so B is P's wife. K is the daughter of P and B.",
+     "L is P's nephew: the son of J and D.",
+     "Couples: S and V, P and B, J and D. Test each pair: LK are cousins, BP is wife and husband, SP is mother and son, DV is son-in-law and parent."
+    ],
+    "answer": "(B) BP. (The paper's key also says B.)"
+   },
+   "check": {
+    "q": "K is the husband of L. M is their only son and N their only daughter. Which statement is true?",
+    "options": {
+     "a": "L is the father of M",
+     "b": "N is the son of K",
+     "c": "M is the sibling of N",
+     "d": "K is the brother of N"
+    },
+    "answer": "C",
+    "why": "M and N are both children of K and L, so they are siblings. The others misread a gender (L is a woman, N is a daughter) or a generation (K is N's father)."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "blood-relation-new-pattern-set-1-prelims#3",
+     "blood-relation-new-pattern-set-1-prelims#6",
+     "blood-relation-new-pattern-set-2-prelims#15",
+     "blood-relation-new-pattern-set-2-prelims#17",
+     "blood-relation-paragraph-graph-set-1-1#5"
+    ],
+    "tags": [
+     "Which pair is married, with everyone married",
+     "Odd pair by gender",
+     "Three statements about couples",
+     "Odd pair: one is a mother and son",
+     "\"All of these\": every option is a true relation"
+    ]
+   }
+  },
+  {
+   "id": "coded",
+   "code": "BR9",
+   "title": "Coded relations (bank only)",
+   "plain": "New: the same family drawing, but the clues come as symbols, as in \"A @ B means A is the father of B\". Translate one symbol at a time into a line of the drawing.",
+   "needs": [],
+   "teach": [
+    "This form is in your bank (5 Sreedhar sets with 15 questions, and a Guidely set of 20) but in none of the 35 memory-based papers opened for this topic. Learn it as insurance.",
+    "**The routine.**",
+    "- Copy the symbol table in short form: @ = father, $ = wife, and so on.",
+    "- An expression like M % N © O # P is a chain of pairs: M % N, then N © O, then O # P. Each pair is one line on the drawing.",
+    "- The symbol fixes the gender of the first person of the pair only. \"N © O\" (N is the mother of O) makes N a woman and says nothing about O.",
+    "- Draw the whole chain, then answer the question from the drawing exactly as in the earlier lessons, including \"either\" when a gender is missing.",
+    "**Three question shapes.** \"How is X related to Y in this expression?\"; \"Which expression shows that X is the grandfather of Y?\" (draw each option; only one makes it certain); \"Which symbol should replace the question mark?\" (try each symbol in the gap)."
+   ],
+   "example": {
+    "q": "An example written for this lesson (no coded set was found in the papers). A + B means A is the son of B. A - B means A is the daughter of B. A x B means A is the husband of B. A / B means A is the mother of B. In the expression P + Q x R / S, how is S related to P?",
+    "steps": [
+     "P + Q: P is Q's son.",
+     "Q x R: Q is R's husband, so R is P's mother.",
+     "R / S: R is S's mother, so S is P's brother or sister.",
+     "S's gender is never given."
+    ],
+    "answer": "S is P's brother or sister: either brother or sister, so \"Can't be determined\" if only one of those is offered. The script gives the same answer."
+   },
+   "check": {
+    "q": "A + B means A is the son of B. A x B means A is the wife of B. In P + Q x R, how is R related to P?",
+    "options": {
+     "a": "Father",
+     "b": "Uncle",
+     "c": "Brother",
+     "d": "Grandfather"
+    },
+    "answer": "A",
+    "why": "P is Q's son and Q is R's wife, so R is Q's husband: P's father. Uncle is tempting if you read x as \"is the sister of\"."
+   },
+   "shortcut": {
+    "title": "Write the gender above each letter as you go",
+    "text": [
+     "While reading the chain, write + or - above the first letter of every pair the symbol defines.",
+     "When the question asks about a person with no mark above, the answer will be an \"either\" or \"cannot be determined\" unless another pair marks them."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-blood-relation#1",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-blood-relation#2",
+     "ibps-csa-xvi-prelims-2026-model-test-38-78358-blood-relation#2"
+    ],
+    "tags": [
+     "A six-link chain, three generations",
+     "The last person has no gender mark",
+     "A brother makes the son-in-law line",
+     "Find the missing symbol",
+     "Which expression makes a grandfather certain"
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-blood-relation#1": [
+    "G is N's mother, and N and P are siblings, so G is P's mother too.",
+    "V is G's husband and has no daughters, so P is a son.",
+    "R is G's brother: the brother of P's mother.",
+    "P is the son of R's sister. Answer: Nephew."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-60-78380-blood-relation#1": [
+    "P is M's wife, so P is K's mother. M has no sons, so K is a daughter.",
+    "T is M's brother-in-law and D has two children: P and T. T is the brother of K's mother.",
+    "K is the daughter of T's sister. Answer: Niece."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-39-78359-blood-relation#1": [
+    "L is R's paternal aunt: the sister of R's father.",
+    "L is Q's sister and S has only two children (Q and L), so R's father is Q.",
+    "M is R's mother, so M is Q's wife. K, Q's mother, is M's mother-in-law: it fits.",
+    "Q is M's husband. Answer: Husband."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-2-78322-blood-relation#1": [
+    "M is P's only son, so M's sibling J is a daughter. Y is J's mother (P's wife).",
+    "S is married to J, so S is a man.",
+    "S is the husband of Y's daughter. Answer: Son-in-law."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-2-78322-blood-relation#2": [
+    "J is P's child (J is M's sibling, and M is P's son).",
+    "U is P's sister.",
+    "U is the sister of J's father. Answer: Aunt."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-40-78360-blood-relation#1": [
+    "K is P's father and U is K's spouse, so U is P's mother.",
+    "M is married to P.",
+    "M is the husband of U's daughter. Answer: Son-in-law."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-40-78360-blood-relation#3": [
+    "K is S's grandfather, so S is a child of P. P has only two children: V (M's only son) and S.",
+    "R is P's son-in-law: the husband of P's daughter. V is a son, so that daughter is S.",
+    "S is R's wife. Answer: Wife."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-blood-relation#2": [
+    "S is V's daughter-in-law: the wife of V's son. J is V's only daughter, so V's son is someone else in the family.",
+    "Only five people. Both or none of a person's parents are in the family, and C is M's mother, so M's father is here too: V. C is V's wife and M is V's son.",
+    "S is married to M: S is M's wife. Answer: Wife."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-blood-relation#3": [
+    "From the tree: V and C are a couple, M is their son, S is M's wife.",
+    "S is the wife of C's son. Answer: Daughter-in-law."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-blood-relation#1": [
+    "M is R's father-in-law and R is married to S, so M is S's father. O is S's brother, so M is O's father too.",
+    "P is Q's sister-in-law: either the wife of Q's brother or the sister of Q's wife. N is P's mother-in-law and three couples must fit: P is the wife of Q's brother M (T and N, M and P, S and R).",
+    "O is P's only son.",
+    "O is the son of Q's brother M. Answer: Nephew."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-blood-relation#1": [
+    "K is P's mother and P is N's parent. K is also the mother-in-law of N's father, so P is N's mother and N's father is P's husband: Q.",
+    "N is R's grandson and R has only two children. Eight people, three couples, three generations: K and R are the first couple, Q and P the second.",
+    "L is Q's brother-in-law: the brother of Q's wife P, so L is K's son. M is K's daughter-in-law: L's wife, the third couple. U, P's niece, is the daughter of L and M.",
+    "U's father L is K's son.",
+    "K is U's grandmother. Answer: K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-blood-relation#2": [
+    "From the tree: L and M are a couple.",
+    "L is M's husband. Answer: Husband."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-blood-relation#3": [
+    "From the tree: U is the daughter of L and M.",
+    "M is U's mother. Answer: Mother."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-blood-relation#1": [
+    "A is D's only daughter and R is D's son-in-law, so R is A's husband.",
+    "Q and G have no children, and B is J's nephew: B is the son of A and R, and J (unmarried) is another child of D. D's three children: A, J, Q.",
+    "Two couples only: R and A, and G (A's sister-in-law) with Q, A's brother.",
+    "Y is G's father, so G's husband is Y's son-in-law. Answer: Q."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-blood-relation#3": [
+    "From the tree: Q is the brother of A, and A is B's mother.",
+    "Q is B's uncle. Answer: Uncle."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-blood-relation#3": [
+    "D is C's son-in-law and C has only one child, so D is married to C's daughter, and F (C's grandchild) is their child.",
+    "B is F's grandmother with only two children; G is A's father-in-law and H is A's sister-in-law. So B and G are D's parents, H is D's sister, and A is D's wife (C's daughter).",
+    "E is H's maternal aunt: B's sister. F is H's niece, so F is a girl.",
+    "Women: A, B, E, H, F. Men: C, D, G.",
+    "Number of women: Five."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-25-78345-blood-relation#3": [
+    "C is S's uncle and V is C's brother, so S is V's child (V's wife is J).",
+    "R is V's son-in-law, so R is married to S and S is a woman.",
+    "A is J's granddaughter and M is A's sibling. S has one daughter and one son: A is the daughter, M the son.",
+    "Men: V, C, R, M.",
+    "Number of men: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-29-78349-blood-relation#2": [
+    "R is V's son-in-law, so R is married to V's daughter. V's children are A (a brother) and S, so R's wife is S.",
+    "V is G's grandfather and A is unmarried, so G and X are the children of R and S. S has no sons: G and X are daughters.",
+    "N and B are a couple, the parents of J (a sister) and R. B is a woman.",
+    "Women: B, J, S, G, X.",
+    "Number of women: Five."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-blood-relation#3": [
+    "M is R's only son. T is S's daughter-in-law and U's mother, and R is U's grandfather: T is M's wife; R and S are the grandparents.",
+    "N is S's child but not a son, so N is a daughter. P, M's brother-in-law, is N's husband (three couples: R and S, M and T, P and N). Q is their son.",
+    "Women for certain: S, N, T. U is only called a grandchild and a child: U's gender is never given.",
+    "Three or four women: Can’t be determined."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-21-78341-blood-relation#3": [
+    "V has two children and no sons, and V is Q's grandfather; Q is S's niece. So V's daughters are U and S.",
+    "U is T's daughter-in-law: married to T's son P, who is Q's father. T is W's wife.",
+    "Women for certain: T, U, S, Q (a niece). W is R's brother, but R's own gender is never given.",
+    "Four or five women: Cannot be determined."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-67-78387-blood-relation#1": [
+    "H has only two children: B and O. M is B's nephew, so M is O's son (Z is O's wife).",
+    "H is M's grandparent, but H's gender is never given.",
+    "Grandfather or grandmother. Answer: Either (1) or (2)."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-blood-relation#1": [
+    "R is K's aunt. C's only children are M and R, so K is M's child (M's wife X is S's daughter-in-law).",
+    "C is K's grandmother, but K's gender is never given.",
+    "Grandson or granddaughter. Answer: Either 1 or 3."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-blood-relation#1": [
+    "X has only two children: W (a daughter) and F (a son). X is R's grandmother and F has no children, so R is W's child.",
+    "R's gender is never given.",
+    "R is the child of F's sister: nephew or niece. Answer: Either 2 or 4."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-blood-relation#1": [
+    "Q is M's son-in-law, so Q's wife T is M's child.",
+    "S is X's grandmother and P, Q's sister, is S's unmarried daughter: X is the child of Q and T.",
+    "M is X's grandparent, but M's gender is never given. Grandfather is offered, grandmother is not.",
+    "Answer: Cannot be determined."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-11-78331-blood-relation#1": [
+    "U is V's daughter-in-law: the wife of V's son. S is unmarried, so U's husband is T, and S is their son.",
+    "Two couples: T and U, and R with V (R is S's grandparent, so R is T's parent).",
+    "V is T's parent, but V's gender is never given: father or mother.",
+    "Answer: Can’t be determined."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-blood-relation#2": [
+    "Q is A's father and A is S's granddaughter; P, M's daughter-in-law, is Q's wife.",
+    "V is Q's brother-in-law. Q's sister K is unmarried, so V is the brother of Q's wife P.",
+    "Add the new fact for this question only: H is V's mother, so H is P's mother too.",
+    "Q is the husband of H's daughter. Answer: Son-in-law."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-blood-relation#3": [
+    "K is V's sister-in-law and V is unmarried, so K is the wife of V's brother. X has one son and one daughter: N is the son, V the daughter, K is N's wife.",
+    "Add the new fact for this question only: E is X's spouse, so E is N's mother.",
+    "E is the mother of K's husband. Answer: Mother-in-law."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-blood-relation#2": [
+    "R is S's sister and P is R's father, so P is S's father too. S is called a brother-in-law, so S is a man.",
+    "Add the new fact for this question only: K is P's sister, so K is S's aunt.",
+    "S is the son of K's brother. Answer: Nephew."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-14-78334-blood-relation#2": [
+    "X is F's daughter-in-law and S is D's son-in-law: X (D's daughter) is married to S (F's son). H is their son.",
+    "L is X's sister-in-law: S's sister. Q is S's brother-in-law: L's husband.",
+    "Add the new fact for this question only: Y is Q's son, so Y's mother L is the sister of H's father S.",
+    "Y and H are children of a brother and a sister. Answer: Cousin."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-35-78355-blood-relation#1": [
+    "V is X's mother and H is X's brother. T is H's brother-in-law and T's brother A is unmarried, so T is X's husband.",
+    "Q is A's parent, so Q is T's parent too. B is Q's only granddaughter and P is B's sibling: P is a boy.",
+    "Add the new fact for this question only: D is X's father-in-law, so D is T's father.",
+    "P is the son of D's son T. Answer: Grandson."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-blood-relation#1": [
+    "M % N: M is N's son. N © O: N is O's mother. O # P: O is P's brother.",
+    "P $ Q: P is Q's wife. Q @ R: Q is R's father, so P is R's mother.",
+    "N is the mother of P's brother O, so N is P's mother as well.",
+    "N is the mother of R's mother. Answer: Grandmother."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-blood-relation#2": [
+    "F © G: F is G's mother. G @ H: G is H's father. H % J: H is J's son. J © K: J is K's mother.",
+    "H is the son of both G and J, so J is G's wife and K is G's child: F's grandchild.",
+    "K's gender is never given.",
+    "Grandson or granddaughter. Answer: Either 2 or 4."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-blood-relation#1": [
+    "A % G: A is G's mother. G $ K: G is K's spouse. K ^ E: K is E's brother. E * C: E is C's son.",
+    "K is E's brother, so K is C's son too, and G, K's spouse, is a woman.",
+    "G is the wife of C's son. Answer: Daughter-in-law."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-blood-relation#2": [
+    "S * T: S is T's son. T % R: T is R's mother. V ^ P: V is P's brother.",
+    "R is P's sister-in-law if R is the wife of P's brother V: R $ V.",
+    "R * V or R ^ V makes R a man; R % V makes R V's mother, so P's mother.",
+    "The symbol is $."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-38-78358-blood-relation#2": [
+    "E ^ Q: E is Q's husband. Q @ N: Q is N's mother, so E is N's father. N $ W: N is W's father.",
+    "The other options make E a brother, a wife or a father, or leave a step unknown.",
+    "E is the father of W's father: E ^ Q @ N $ W."
+   ]
+  },
+  "guidely": {
+   "blood-relation-new-pattern-set-2-prelims#3": [
+    "A is B's mother-in-law and C is A's only daughter, so B is C's husband. B has no siblings, so D is C's brother.",
+    "E has only two children, C and D. F is E's granddaughter and G is H's son-in-law and F's husband: F is the daughter of D and H.",
+    "The sister-in-law of C is D's wife, H.",
+    "H's son-in-law is G."
+   ],
+   "blood-relation-new-pattern-set-2-prelims#6": [
+    "K is L's son-in-law and Q's father-in-law; M is Q's mother-in-law. So K and M are a couple: M is L's daughter.",
+    "P is L's grandson with no siblings: P is the son of K and M (Q is P's wife).",
+    "L's son-in-law is K.",
+    "K is P's father. Answer: Father."
+   ],
+   "blood-relation-new-pattern-set-2-prelims#7": [
+    "W is M's only paternal uncle and is unmarried, so W is the brother of M's father L.",
+    "B is W's sister-in-law: L's wife. B's daughter is M.",
+    "M is the daughter of W's brother. Answer: Niece."
+   ],
+   "blood-relation-new-pattern-set-2-prelims#9": [
+    "M is the mother of only G and R; R is C's son, so C is M's husband.",
+    "A is C's granddaughter and V is A's mother; G is V's brother-in-law and unmarried, so V is the wife of G's brother R.",
+    "V's husband is R.",
+    "R is C's son. Answer: Son."
+   ],
+   "blood-relation-new-pattern-set-2-prelims#20": [
+    "B is D's only child and G is D's son-in-law, so G is B's husband. F is B's mother-in-law: G's mother.",
+    "F has only two children: G and C. C is B's sister-in-law. E is F's grandson, and C has no child, so E is the son of G and B.",
+    "B's sister-in-law is C.",
+    "E is the son of C's brother. Answer: Nephew."
+   ],
+   "blood-relation-new-pattern-set-1-prelims#3": [
+    "No one is unmarried. Q has no sibling and is M's brother-in-law, so M is the brother of Q's wife O.",
+    "P is O's nephew: M's son. I is P's cousin: the child of Q and O. A is Q's son-in-law, so A is I's husband.",
+    "L is O's sister-in-law: M's wife. R is M's daughter-in-law: P's wife.",
+    "Couples: Q and O, M and L, P and R, A and I.",
+    "Only one option is a husband and wife: IA."
+   ],
+   "blood-relation-new-pattern-set-1-prelims#6": [
+    "Z is X's father and B's maternal grandfather; Q is Z's only son-in-law, so Q is X's husband and B is their child.",
+    "L is A's son and Q's brother-in-law, so L is X's brother. T has no sibling and X is T's sister-in-law: T is L's wife. P, B's cousin, is their son.",
+    "B and X are of the same gender: both women.",
+    "L-P: two men. Z-L: two men. A-X: two women. T-B: two women. L-X: a man and a woman.",
+    "The odd pair is LX."
+   ],
+   "blood-relation-new-pattern-set-2-prelims#15": [
+    "X has two children, C and one more. A is T's nephew; T is X's unmarried sister-in-law, so T is the sister of X's husband.",
+    "B is M's paternal grandfather: B is X's husband and M's father is A, X's son. Q, M's mother, is A's wife.",
+    "A is P's brother-in-law and Q has no siblings, so P is the husband of A's sister C.",
+    "Couples: B and X, A and Q, P and C. T is unmarried, so III is false.",
+    "Answer: Only I and II."
+   ],
+   "blood-relation-new-pattern-set-2-prelims#17": [
+    "K is I's only son and N's child, so I is N's husband. N has no siblings, so L is I's sister.",
+    "M is P's paternal grandmother: I's mother. O is L's maternal uncle: M's brother; J, L's parent, is M's husband.",
+    "N has only P and K, and K is the only son: P is a daughter.",
+    "L-P: two women. O-K: two men. M-N: two women. J-I: two men. K-N: a son and his mother.",
+    "The odd pair is KN."
+   ],
+   "blood-relation-paragraph-graph-set-1-1#5": [
+    "Three couples, each with two children. C and D are brothers; B is F's mother-in-law; I and J are A's grandchildren.",
+    "So A and B are the parents of C and D. C is E's brother-in-law, so E is D's wife; F is C's wife. G is E's son, H is F's son.",
+    "B is A's wife, C's mother, E's mother-in-law and G's grandmother: every option holds.",
+    "Answer: All of these."
+   ]
+  }
+ }
+}
