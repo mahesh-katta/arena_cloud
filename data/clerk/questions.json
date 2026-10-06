@@ -26465,5 +26465,665 @@
 "url": "https://guidelyassets.s3.ap-south-1.amazonaws.com/blogs/162745391573.pdf",
 "id": "PYQ-MSC-12"
 }
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 1,
+"passage": "",
+"stem": "What is the LCM of 12, 18 and 30?",
+"options": {
+"a": "90",
+"b": "360",
+"c": "540",
+"d": "180",
+"e": "60"
+},
+"answer": "D",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-01"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 2,
+"passage": "",
+"stem": "What is the HCF of 84, 126 and 210?",
+"options": {
+"a": "21",
+"b": "42",
+"c": "14",
+"d": "84",
+"e": "6"
+},
+"answer": "B",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-02"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 3,
+"passage": "",
+"stem": "What is the LCM of 24, 36 and 40?",
+"options": {
+"a": "720",
+"b": "240",
+"c": "180",
+"d": "1440",
+"e": "360"
+},
+"answer": "E",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-03"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 4,
+"passage": "",
+"stem": "What is the HCF of 391 and 667?",
+"options": {
+"a": "17",
+"b": "29",
+"c": "23",
+"d": "1",
+"e": "13"
+},
+"answer": "C",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-04"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 5,
+"passage": "",
+"stem": "The HCF of two numbers is 12 and their LCM is 360. One of the numbers is 72. Find the other.",
+"options": {
+"a": "60",
+"b": "48",
+"c": "30",
+"d": "120",
+"e": "90"
+},
+"answer": "A",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-05"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 6,
+"passage": "",
+"stem": "The product of two numbers is 2,160 and their HCF is 12. Find their LCM.",
+"options": {
+"a": "160",
+"b": "216",
+"c": "120",
+"d": "180",
+"e": "240"
+},
+"answer": "D",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-06"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 7,
+"passage": "",
+"stem": "Two numbers have HCF 16 and LCM 480. One of them is 96. Find the other.",
+"options": {
+"a": "60",
+"b": "80",
+"c": "160",
+"d": "120",
+"e": "48"
+},
+"answer": "B",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-07"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 8,
+"passage": "",
+"stem": "Two numbers differ by 4. Their HCF is 4 and their LCM is 120. Find their sum.",
+"options": {
+"a": "40",
+"b": "48",
+"c": "52",
+"d": "36",
+"e": "44"
+},
+"answer": "E",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-08"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 9,
+"passage": "",
+"stem": "Two numbers are in the ratio 3 : 5 and their HCF is 8. Find their LCM.",
+"options": {
+"a": "40",
+"b": "64",
+"c": "120",
+"d": "240",
+"e": "15"
+},
+"answer": "C",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-09"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 10,
+"passage": "",
+"stem": "Two numbers are in the ratio 4 : 7 and their LCM is 336. Find their sum.",
+"options": {
+"a": "132",
+"b": "121",
+"c": "144",
+"d": "112",
+"e": "168"
+},
+"answer": "A",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-10"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 11,
+"passage": "",
+"stem": "Two numbers are in the ratio 2 : 3 and their LCM is 72. Find their HCF.",
+"options": {
+"a": "6",
+"b": "24",
+"c": "36",
+"d": "12",
+"e": "18"
+},
+"answer": "D",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-11"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 12,
+"passage": "",
+"stem": "Two numbers are in the ratio 5 : 6 and their product is 1,080. Find their HCF.",
+"options": {
+"a": "5",
+"b": "6",
+"c": "36",
+"d": "30",
+"e": "12"
+},
+"answer": "B",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-12"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 13,
+"passage": "",
+"stem": "Three bells ring every 6, 8 and 12 minutes. They ring together at 9:00 a.m. When do they next ring together?",
+"options": {
+"a": "9:12 a.m.",
+"b": "9:48 a.m.",
+"c": "9:36 a.m.",
+"d": "10:12 a.m.",
+"e": "9:24 a.m."
+},
+"answer": "E",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-13"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 14,
+"passage": "",
+"stem": "Three traffic lights change every 48, 72 and 108 seconds. They change together at 8:20:00 a.m. When will they next change together?",
+"options": {
+"a": "8:24:00 a.m.",
+"b": "8:25:36 a.m.",
+"c": "8:27:12 a.m.",
+"d": "8:28:48 a.m.",
+"e": "8:21:48 a.m."
+},
+"answer": "C",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-14"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 15,
+"passage": "",
+"stem": "Three bells toll every 4, 6 and 9 minutes. They toll together at noon. How many more times will they toll together in the next 3 hours?",
+"options": {
+"a": "5",
+"b": "4",
+"c": "6",
+"d": "3",
+"e": "9"
+},
+"answer": "A",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-15"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 16,
+"passage": "",
+"stem": "Three runners start together and take 12, 18 and 30 minutes to go round a track. After how many hours do they first meet again at the start?",
+"options": {
+"a": "1.5",
+"b": "6",
+"c": "2",
+"d": "3",
+"e": "1"
+},
+"answer": "D",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-16"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 17,
+"passage": "",
+"stem": "Buses leave a depot every 15, 20 and 25 minutes on three routes. All three leave together at 6:00 a.m. When do all three next leave together?",
+"options": {
+"a": "7:00 a.m.",
+"b": "11:00 a.m.",
+"c": "8:20 a.m.",
+"d": "9:00 a.m.",
+"e": "12:00 noon"
+},
+"answer": "B",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-17"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 18,
+"passage": "",
+"stem": "A floor 6.24 m long and 4.32 m wide is to be covered with equal square tiles, as large as possible, without cutting any. What is the side of each tile?",
+"options": {
+"a": "24 cm",
+"b": "36 cm",
+"c": "72 cm",
+"d": "16 cm",
+"e": "48 cm"
+},
+"answer": "E",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-18"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 19,
+"passage": "",
+"stem": "A floor 6.24 m by 4.32 m is covered with the largest equal square tiles that fit without cutting. How many tiles are needed?",
+"options": {
+"a": "108",
+"b": "234",
+"c": "117",
+"d": "96",
+"e": "156"
+},
+"answer": "C",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-19"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 20,
+"passage": "",
+"stem": "Three tanks hold 403, 434 and 465 litres. What is the largest measure that can fill each of them an exact number of times?",
+"options": {
+"a": "31 litres",
+"b": "13 litres",
+"c": "62 litres",
+"d": "93 litres",
+"e": "21 litres"
+},
+"answer": "A",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-20"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 21,
+"passage": "",
+"stem": "A school has 120, 168 and 216 students in three classes. They sit in rows of equal size, each row from one class only, with as few rows as possible. How many rows are there?",
+"options": {
+"a": "24",
+"b": "12",
+"c": "42",
+"d": "21",
+"e": "18"
+},
+"answer": "D",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-21"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 22,
+"passage": "",
+"stem": "Rods of 78 cm, 104 cm and 130 cm are cut into equal pieces, as long as possible, with nothing left over. How many pieces are there?",
+"options": {
+"a": "26",
+"b": "12",
+"c": "10",
+"d": "13",
+"e": "15"
+},
+"answer": "B",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-22"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 23,
+"passage": "",
+"stem": "What is the largest number that divides 1305, 4665 and 6905 leaving the same remainder each time?",
+"options": {
+"a": "560",
+"b": "280",
+"c": "1680",
+"d": "2240",
+"e": "1120"
+},
+"answer": "E",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-23"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 24,
+"passage": "",
+"stem": "What is the largest number that divides 70 and 125 leaving remainders 5 and 8 respectively?",
+"options": {
+"a": "65",
+"b": "117",
+"c": "13",
+"d": "5",
+"e": "15"
+},
+"answer": "C",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-24"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 25,
+"passage": "",
+"stem": "What is the smallest number which, when divided by 12, 15 and 20, leaves a remainder of 4 each time?",
+"options": {
+"a": "64",
+"b": "60",
+"c": "56",
+"d": "124",
+"e": "184"
+},
+"answer": "A",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-25"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 26,
+"passage": "",
+"stem": "What is the smallest number which leaves remainders 2, 5 and 11 when divided by 6, 9 and 15 respectively?",
+"options": {
+"a": "94",
+"b": "90",
+"c": "176",
+"d": "86",
+"e": "84"
+},
+"answer": "D",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-26"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 27,
+"passage": "",
+"stem": "What is the greatest four-digit number divisible by 15, 25, 40 and 75?",
+"options": {
+"a": "9000",
+"b": "9600",
+"c": "9800",
+"d": "9999",
+"e": "9900"
+},
+"answer": "B",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-27"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 28,
+"passage": "",
+"stem": "What is the LCM of 2/3, 4/9 and 5/6?",
+"options": {
+"a": "10/3",
+"b": "20/9",
+"c": "40/3",
+"d": "1/18",
+"e": "20/3"
+},
+"answer": "E",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-28"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 29,
+"passage": "",
+"stem": "What is the HCF of 9/10, 12/25 and 18/35?",
+"options": {
+"a": "3/5",
+"b": "9/350",
+"c": "3/350",
+"d": "1/350",
+"e": "3/70"
+},
+"answer": "C",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-29"
+}
+},
+{
+"set": "clerk-21-lcm-hcf-a-graded",
+"set_title": "LCM and HCF – Graded practice",
+"q_no": 30,
+"passage": "",
+"stem": "What is the smallest five-digit number exactly divisible by 12, 15 and 18?",
+"options": {
+"a": "10080",
+"b": "10000",
+"c": "10800",
+"d": "10260",
+"e": "10180"
+},
+"answer": "A",
+"solution": "",
+"dirs": "Choose the correct option.",
+"source": {
+"kind": "practice",
+"label": "Constructed practice question (not from a paper)",
+"id": "CON-LCM-30"
+}
 }
 ]

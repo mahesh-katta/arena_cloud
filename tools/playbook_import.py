@@ -380,7 +380,8 @@ TOPIC_HINT = {"ages": "ages", "simple-compound-interest": "si ci interest compou
               "partnership": "partnership", "time-work": "time work pipes cistern",
               "speed-time-distance": "time speed distance trains", "profit-loss": "profit loss",
               "boat-stream": "boats stream", "mixtures-alligations": "mixture alligation",
-              "simplification": "simplification approximation"}
+              "simplification": "simplification approximation",
+              "lcm-hcf": "lcm hcf number system"}
 
 # Short codes the page uses without spelling them out, by module: the start of
 # the Guidely set's own name in data/guidely/sets.json.
