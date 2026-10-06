@@ -1,0 +1,1133 @@
+{
+ "module": "circular-seating",
+ "intro": [
+  "A round table, seven or eight people, everyone facing the centre: that is the circle the clerk papers set. These lessons are built from those puzzles, the same way as the parallel-rows and linear lessons: real paper puzzles first, then every circle set in your bank, all solved by script.",
+  "**What I studied first.** Eight memory-based reconstructions of IBPS Clerk circle sets (2021 to 2025; two of them are the same 24 Aug 2024 puzzle remembered by two websites), one IBPS RRB Clerk set, one IBPS PO set, and all 43 circle sets in your banks (89 different puzzles, 470 questions). Every one was written out as exact conditions and solved by script.",
+  "| What was measured | Clerk papers | Your bank |",
+  "| Puzzles solved, with exactly one arrangement | 8 of 8 | 86 of 89 |",
+  "| Facing | all face the centre | 54 centre, 18 outside, 17 mixed |",
+  "| Size | 7 persons in 2 sets, 8 in 5 | 5 to 12; 8 in 35 of 70 fixed-size puzzles |",
+  "| Second fact, vacant seat, unknown total | none | 18, 8 and 19 puzzles |",
+  "| Clues per puzzle | 4 to 6 | 4 to 10 |",
+  "| First printed clue has a direction (\"second to the left of\") | 6 of 8 | not counted |",
+  "| A \"not a neighbour\" or \"does not\" clue | 7 of 8 | not counted |",
+  "| Opposite or \"faces\" clue | 3 of 8 | not counted |",
+  "| Most drawings open at once, printed order | 2 to 30 (above 4 in 3 of 9 measured, RRB included) | above 4 in 16 of 32 measured |",
+  "| Most drawings open at once, good order | 2 to 4 | 4 or fewer in 26 of 32 |",
+  "| How often | a circle in 6 of 18 IBPS Clerk shift analyses for 2024 and 2025 | |",
+  "**What this means.** The clerk circle is small and plain. Nothing is fixed until you seat someone, so the first person is free; after that a clue with a direction places a person exactly, a \"between\" clue gives two drawings, and the order in which you take the clues decides whether you juggle two drawings or thirty. So the first five lessons are about exactly that. The last four cover the forms your bank adds (facing outside, mixed facing, a second fact, an unknown total), which officer-level papers use and the clerk papers studied did not.",
+  "A note on honesty: the paper puzzles are candidates' reconstructions. Two of them (2024 and 2025 from one website) have no published key; the others' keys agree with the script on all 29 questions checked. In your bank, 3 puzzles have more than one arrangement and 5 keyed answers (all \"related in a certain way\" questions) disagree with their own clues; none of those sets is used below. 112 bank questions were not checked by script; none of them is in these lessons."
+ ],
+ "needs": [],
+ "after": [
+  "That is the circle as the clerk papers set it, and the four forms your bank adds. The **Quick revision** tab keeps the module notes and drills.",
+  "The order of work for every set: one person seated, a directed clue, then always a clue that shares a name, two drawings for \"between\", opposite pairs, negative clues last, then the questions, each read with that person's own left.",
+  "Still to come, as insurance: vacant seats (8 bank puzzles; a vacant seat is a seat, not a person), and the \"if X is related to Y in a certain way\" question, whose bank keys disagreed with the arrangement in 5 of 13 cases."
+ ],
+ "lessons": [
+  {
+   "id": "anchor",
+   "code": "C1",
+   "title": "Seat one person, then count seats",
+   "plain": "The starting point. A round table has no first seat: put one person down, and turn every clue with a direction into \"so many seats clockwise or anticlockwise\".",
+   "needs": [],
+   "teach": [
+    "In a circle puzzle nobody is fixed at the start. That is not a problem: **seat any one person, at the bottom of your drawing, and never move them.** Everyone else is placed relative to that person.",
+    "Draw the circle with the right number of dashes, and decide left and right once:",
+    "| The person faces | Their left is | Their right is |",
+    "| The centre | clockwise | anticlockwise |",
+    "| Outside | anticlockwise | clockwise |",
+    "All the clerk papers studied had everyone facing the centre, so for now: **left = clockwise, right = anticlockwise.**",
+    "Left and right belong to the person named **after** \"of\". \"P sits second to the right of Q\" means: start at Q, move two seats the way Q's right hand points (anticlockwise).",
+    "| The clue says | Seats from the second person |",
+    "| immediate left / right | 1 |",
+    "| second to the left / right | 2 |",
+    "| third to the left / right | 3 |",
+    "| sits opposite (table of 8) | 4 |",
+    "A clue with a direction places a person **exactly**, in one seat. Start with such a clue: in 6 of the 8 clerk reconstructions the very first clue is one. Then take a clue that names someone already drawn.",
+    "A neighbour clue (\"S is an immediate neighbour of Q\") gives two seats. Often one of them is already taken, or dies at the next clue."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 October 2025, shift 4. Eight persons P, Q, R, S, T, U, V and W sit in a circle facing the centre. P sits second to the right of Q. S is an immediate neighbour of Q. T is third to the right of S. V is second to the right of T. W is not an immediate neighbour of T. R does not face S.",
+    "steps": [
+     "Seat Q at the bottom. Right is anticlockwise. P is two seats anticlockwise of Q.",
+     "S is next to Q: either the seat between Q and P, or the seat on Q's other side.",
+     "T is three seats anticlockwise of S. If S were on Q's clockwise side, T would land on P's seat. So S sits between Q and P, and T is three seats anticlockwise of S.",
+     "V is two seats anticlockwise of T.",
+     "Three seats are left. W is not next to T, so W takes the one next to Q. R does not face S, so R is not opposite S: R sits next to T, and U opposite S."
+    ],
+    "answer": "Clockwise from P: P, S, Q, W, V, U, T, R. (The paper's key: T sits opposite Q.)"
+   },
+   "check": {
+    "q": "Eight persons face the centre. Going clockwise the order is A, B, C, D, E, F, G, H. Who sits second to the right of A?",
+    "options": {
+     "a": "C",
+     "b": "G",
+     "c": "B",
+     "d": "H"
+    },
+    "answer": "B",
+    "why": "Facing the centre, right is anticlockwise: from A that is H, then G. C is two seats clockwise, which is A's left: the usual slip."
+   },
+   "more": [
+    {
+     "tag": "Left",
+     "q": "Same table (clockwise A, B, C, D, E, F, G, H, all facing the centre). Who sits third to the left of F?",
+     "options": {
+      "a": "C",
+      "b": "A",
+      "c": "H",
+      "d": "B"
+     },
+     "answer": "B",
+     "why": "Left is clockwise: G, H, A. C is three to F's right."
+    },
+    {
+     "tag": "Whose left",
+     "q": "\"K sits second to the left of M.\" From whom do you count?",
+     "options": {
+      "a": "From K, using K's left",
+      "b": "From M, using M's left",
+      "c": "From M, using your own left",
+      "d": "From K, using M's left"
+     },
+     "answer": "B",
+     "why": "The person after \"of\" is the starting point, and the direction is that person's own left."
+    }
+   ],
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#1",
+     "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#2",
+     "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#3",
+     "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#4",
+     "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#5",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#6",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#7",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#8",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#9",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#10"
+    ],
+    "tags": [
+     "Set A (6 persons): a directed clue, a neighbour clue that splits, and one case dies.",
+     "Set A (6 persons), question 2: read it off the same drawing.",
+     "Set A (6 persons), question 3: read it off the same drawing.",
+     "Set A (6 persons), question 4: read it off the same drawing.",
+     "Set A (6 persons), question 5: read it off the same drawing.",
+     "Set B (8 persons): a chain of directed clues from O; the \"between\" clue settles itself.",
+     "Set B (8 persons), question 2: read it off the same drawing.",
+     "Set B (8 persons), question 3: read it off the same drawing.",
+     "Set B (8 persons), question 4: read it off the same drawing.",
+     "Set B (8 persons), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "between",
+   "code": "C2",
+   "title": "\"Only two persons sit between\": two drawings",
+   "plain": "New: a clue with no direction. It gives two seats, so draw the circle twice and let the next clues remove one.",
+   "needs": [],
+   "teach": [
+    "\"Only two persons sit between Q and M\" does not say which side M is on. M is **three seats from Q, clockwise or anticlockwise**. So you draw two circles, side by side, and carry both.",
+    "| The clue says | Seats apart | Drawings |",
+    "| one person sits between | 2 | 2 |",
+    "| two persons sit between | 3 | 2 |",
+    "| three persons sit between (table of 8) | 4 | 1: they are opposite |",
+    "| X is an immediate neighbour of Y | 1 | 2 |",
+    "In a table of 8, \"three persons between\" is the same as \"opposite\": only one drawing. In a table of 7, two persons between one way means three the other way.",
+    "**Kill drawings quickly.** A drawing dies when a clue sends someone onto a seat that is already taken, or when a \"not a neighbour\" or \"does not face\" clue fails. Look for that after every clue; usually one of the two drawings dies within two clues.",
+    "The clerk papers use these clues in every set: one or two \"persons between\" clues each, and a negative clue in 7 of 8. Taken along the names, no clerk set needed more than 4 drawings open at once."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 12 December 2021 (Guidely memory-based paper). Seven persons L, M, N, O, P, Q and R sit around a circular table facing the centre. Q sits second to the left of L. Only two persons sit between Q and M. O sits second to the right of P. P and Q are not immediate neighbours. R is an immediate neighbour of Q but does not sit second to the left of N. O does not sit immediate right of N.",
+    "steps": [
+     "Seat L. Q is two seats clockwise of L.",
+     "Two persons between Q and M: drawing 1 has M three seats clockwise of Q; drawing 2 has M three seats anticlockwise of Q, which in seven seats is the seat just anticlockwise of L.",
+     "O is two seats anticlockwise of P, and P is not next to Q. Drawing 1: P must sit just anticlockwise of L, with O two seats further on. Drawing 2: P sits three seats clockwise of Q, with O just clockwise of Q.",
+     "R is next to Q. Drawing 2: R must take the seat between L and Q, N takes the last seat, and then O is on N's immediate right: out.",
+     "Drawing 1: R and N take the seats either side of Q. R is not second to the left of N, so R sits between L and Q and N between Q and O."
+    ],
+    "answer": "Clockwise from L: L, R, Q, N, O, M, P. (The paper's key: N is second to the right of M; two persons sit between M and R counted from M's left.)"
+   },
+   "check": {
+    "q": "Eight persons sit facing the centre. Only three persons sit between A and B. In how many places can B sit once A is seated?",
+    "options": {
+     "a": "1",
+     "b": "2",
+     "c": "3",
+     "d": "4"
+    },
+    "answer": "A",
+    "why": "In a table of eight, three persons between means four seats apart either way: the same seat, opposite A. Two would be right for one or two persons between."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#5"
+    ],
+    "tags": [
+     "Set A: three \"between\" clues; four small drawings before C settles it.",
+     "Set A, question 2: read it off the same drawing.",
+     "Set A, question 3: read it off the same drawing.",
+     "Set A, question 4: read it off the same drawing.",
+     "Set A, question 5: read it off the same drawing.",
+     "Set B: a directed start, then a \"between\" clue whose second seat dies at once.",
+     "Set B, question 2: read it off the same drawing.",
+     "Set B, question 3: read it off the same drawing.",
+     "Set B, question 4: read it off the same drawing.",
+     "Set B, question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "order",
+   "code": "C3",
+   "title": "Follow the names, not the printed order",
+   "plain": "New: the order of attack. After the first clue, always take a clue that names someone already drawn; leave a clue with two new names for later.",
+   "needs": [],
+   "teach": [
+    "The clues are not printed in the order you should use them. A clue such as \"F is not an immediate neighbour of G\", read before F or G is drawn, does nothing except multiply drawings.",
+    "The script counted the drawings a solver must keep open, clue by clue:",
+    "| | Clerk papers | Your bank (32 measured) |",
+    "| Printed order, most drawings at once | 2 to 30; above 4 in 3 sets | above 4 in 16 |",
+    "| Following the names, most drawings at once | 2 to 4 | 4 or fewer in 26 |",
+    "The rule that gets close to the best order:",
+    "- Start with a clue that has a direction and two names.",
+    "- Next, always a clue that shares a name with your drawing. Prefer one with a direction, then one with \"opposite\", then a \"between\" clue.",
+    "- Leave negative clues (\"not a neighbour\", \"does not face\") and clues with two new names until the end; use them to kill drawings, not to start them.",
+    "- \"Three persons between\" in a table of 8 is a gift: it is \"opposite\", one drawing. Use it early."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 24 August 2024, shift 1. Eight persons sit around a circular table facing the centre. E sits second to the right of C. Two persons sit between E and A. F is not an immediate neighbour of G. B sits opposite D. G sits second to the left of H. D and H are not immediate neighbours.",
+    "steps": [
+     "In printed order the third clue (F and G, both new) opens up to 30 drawings. Take the names in a chain instead: C, E, A, then B and D, then G and H, then F.",
+     "Seat C. E is two seats anticlockwise of C.",
+     "Two persons between E and A: A is three seats from E, either just clockwise of C or three seats clockwise of C. Two drawings.",
+     "B opposite D: in each drawing only one opposite pair of free seats is left. G is two seats clockwise of H: one pair fits in each drawing.",
+     "F takes the last seat. In the drawing with A next to C, F lands next to G: out. In the other, D must not be next to H, which fixes who is B and who is D."
+    ],
+    "answer": "Clockwise from C: C, B, H, A, G, D, E, F. (The paper's key: C is fifth to the left of A; A sits on G's immediate right.)"
+   },
+   "check": {
+    "q": "You have seated C and E. Which clue should you use next?",
+    "options": {
+     "a": "F is not an immediate neighbour of G",
+     "b": "Two persons sit between E and A",
+     "c": "D and H are not immediate neighbours",
+     "d": "B sits opposite D"
+    },
+    "answer": "B",
+    "why": "It names E, who is already drawn. B-D and the two negative clues bring in two new names each; a negative clue with two new names opens the most drawings."
+   },
+   "shortcut": {
+    "title": "A ten-second scan before you draw",
+    "text": [
+     "Underline every name that appears in a clue with a direction. The name underlined most often is your first seat.",
+     "Put a cross by every clue with \"not\": those are for the end.",
+     "If two clues share a name and both have directions, they make a fixed block of three people. Draw the block first."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#5"
+    ],
+    "tags": [
+     "Set A: printed order reaches 10 drawings; starting from the opposite pair it never passes 2.",
+     "Set A, question 2: read it off the same drawing.",
+     "Set A, question 3: read it off the same drawing.",
+     "Set A, question 4: read it off the same drawing.",
+     "Set A, question 5: read it off the same drawing.",
+     "Set B (10 persons): printed order reaches 8 drawings; following E's clues it never passes 2.",
+     "Set B (10 persons), question 2: read it off the same drawing.",
+     "Set B (10 persons), question 3: read it off the same drawing.",
+     "Set B (10 persons), question 4: read it off the same drawing.",
+     "Set B (10 persons), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "opposite",
+   "code": "C4",
+   "title": "Opposite, and \"faces\"",
+   "plain": "New: \"sits opposite\" and \"X faces Y\". When everyone faces the centre they mean the same: the seat straight across the table.",
+   "needs": [],
+   "teach": [
+    "With everyone facing the centre, \"X faces Y\" means X looks straight across at Y: **they sit opposite**. In a table of 8 that is four seats away, either way round, so it gives **one** seat, not two.",
+    "A table of 7 (or any odd number) has no opposite seat. If a seven-person puzzle says \"faces\", read it again: it is about facing direction, not seats.",
+    "Opposite clues are strong in two ways:",
+    "- **Pairs.** After a few people are seated, count the opposite pairs that are still completely free. Often only one is left, and \"B sits opposite D\" fills it at once (you still need another clue to say which of the two is B).",
+    "- **Long clues.** \"The one who sits third to the left of J faces Q\" is a chain: start at J, move three seats to J's left, then cross the table. Q is there.",
+    "Three of the eight clerk reconstructions use opposite or \"faces\"; in 2023 it was \"B faces G and sits second to the right of C\"."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2023 (Adda247 memory-based paper). Eight persons A to H sit around a circular table facing the centre. E sits second to the right of F. Only two persons sit between A and E. B faces G and sits second to the right of C. H doesn't sit adjacent to A.",
+    "steps": [
+     "Seat F. E is two seats anticlockwise of F.",
+     "Two persons between A and E: A is three seats from E, either just clockwise of F or three seats clockwise of F.",
+     "B and G sit opposite. With A just clockwise of F, only one pair of opposite seats is free: the seat two clockwise of A and the seat just anticlockwise of F. B is second to the right of C, so C is two seats clockwise of B: B takes the first seat, G the second, and C sits two seats on from B.",
+     "H is not next to A: H takes the seat between B and C, and D the seat between A and B.",
+     "With A three seats clockwise of F, either C lands on A's seat or H has no seat away from A: out."
+    ],
+    "answer": "Clockwise from F: F, A, D, B, H, C, E, G. (The paper's key: two persons sit between H and G counted from H's left; D is second to the left of F.)"
+   },
+   "check": {
+    "q": "Seven persons sit around a table facing the centre. Which clue cannot be about seats?",
+    "options": {
+     "a": "P sits third to the left of Q",
+     "b": "P faces Q",
+     "c": "Only two persons sit between P and Q",
+     "d": "P is not an immediate neighbour of Q"
+    },
+    "answer": "B",
+    "why": "Seven seats have no seat straight across. \"Third to the left\" is fine: it is four to the right."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#16",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#17",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#18",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#19",
+     "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#20",
+     "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#16",
+     "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#17",
+     "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#18",
+     "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#19",
+     "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#20"
+    ],
+    "tags": [
+     "Set A: \"the one who sits third to the left of J faces Q\": a chain across the table.",
+     "Set A, question 2: read it off the same drawing.",
+     "Set A, question 3: read it off the same drawing.",
+     "Set A, question 4: read it off the same drawing.",
+     "Set A, question 5: read it off the same drawing.",
+     "Set B: \"the one who sits opposite C sits immediate left of B\".",
+     "Set B, question 2: read it off the same drawing.",
+     "Set B, question 3: read it off the same drawing.",
+     "Set B, question 4: read it off the same drawing.",
+     "Set B, question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "counting",
+   "code": "C5",
+   "title": "Counting clues: \"from the left of\" and \"as many as\"",
+   "plain": "New: clues and questions that count persons between two people in a stated direction, or compare two such counts.",
+   "needs": [],
+   "teach": [
+    "\"How many persons sit between D and E, counted from the left of D?\" Walk from D the way D's left points (clockwise if D faces the centre), count the people you pass, and stop **before** E. Do not count D or E.",
+    "The same counting appears inside clues, usually as a comparison:",
+    "- \"The number of persons between B and G counted from the right of B is one more than the number between A and E counted from the left of E.\"",
+    "- \"As many persons sit between A and D as between F and E.\"",
+    "How to use them:",
+    "1. Keep the comparison until **one side of it is fully drawn**. Then count that side; it becomes an ordinary step clue for the other side.",
+    "2. \"As many between A and B as between B and C\" (one person shared): B is the middle point of A and C.",
+    "3. With no direction stated, count the short way round; the script settled every bank set this way.",
+    "None of the eight clerk sets used a comparison clue; the RRB Clerk set below did, and so do 47 of the 93 printed passages in your bank. The question \"how many persons between X and Y, counted from the left of X\" is in most sets."
+   ],
+   "example": {
+    "q": "IBPS RRB Clerk Prelims, 6 December 2025, shift 2. Seven persons A to G sit around a circular table facing inside. One person sits between G and D. B does not sit adjacent to G and D. C sits second to the left of B. The number of persons between B and G (counted from the right of B) is one more than the number of persons between A and E (counted from the left of E).",
+    "steps": [
+     "Seat B. C is two seats clockwise of B.",
+     "G and D have one person between them, and neither is next to B: of the free seats only the three in a row opposite B are not next to B, so G and D take the two ends of that row. Two drawings: G nearer C, or D nearer C.",
+     "G nearer C: from B going right (anticlockwise) three persons come before G. So two persons sit between E and A counted clockwise from E: E next to B, A three seats on.",
+     "D nearer C: one person before G, so A must sit just clockwise of E. No free pair of seats does that: out.",
+     "F takes the last seat."
+    ],
+    "answer": "Clockwise from B: B, E, C, G, A, D, F. (The paper's key: F sits on B's immediate right; three persons sit between D and E counted from D's right.)"
+   },
+   "check": {
+    "q": "Eight persons face the centre; clockwise the order is A, B, C, D, E, F, G, H. How many persons sit between B and G, counted from the left of B?",
+    "options": {
+     "a": "Two",
+     "b": "Four",
+     "c": "Three",
+     "d": "Five"
+    },
+    "answer": "B",
+    "why": "B's left is clockwise: C, D, E, F, then G. Four. Two is the count the other way, from B's right."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#5"
+    ],
+    "tags": [
+     "Set A: \"between D and E from the left of D\" equals \"between A and H from the right of A\".",
+     "Set A, question 2: read it off the same drawing.",
+     "Set A, question 3: read it off the same drawing.",
+     "Set A, question 4: read it off the same drawing.",
+     "Set A, question 5: read it off the same drawing.",
+     "Set B (7 persons): a comparison clue decides between four drawings.",
+     "Set B (7 persons), question 2: read it off the same drawing.",
+     "Set B (7 persons), question 3: read it off the same drawing.",
+     "Set B (7 persons), question 4: read it off the same drawing.",
+     "Set B (7 persons), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "outside",
+   "code": "C6",
+   "title": "Everyone facing outside",
+   "plain": "New: all the people face away from the centre. Swap left and right once, at the start, and solve exactly as before.",
+   "needs": [],
+   "teach": [
+    "When everyone faces outside, their left hand points **anticlockwise** and their right hand **clockwise**. Write that beside the drawing before reading a clue.",
+    "| Facing | left | right |",
+    "| centre | clockwise | anticlockwise |",
+    "| outside | anticlockwise | clockwise |",
+    "Nothing else changes: \"between\" clues, opposite, neighbours and the counting of seats are the same. The questions also use the person's own left, so \"how many persons between T and U counted from the left of T\" now walks anticlockwise.",
+    "Your bank has 18 puzzles facing outside (4 plain, the rest with a second fact, a vacant seat or an unknown total). None of the clerk papers studied had one; it is here as insurance."
+   ],
+   "example": {
+    "q": "From your bank (no paper puzzle found): Guidely, circular arrangement facing outside, set 1, questions 11 to 15. Eight persons A to H sit at a circular table facing outside. C sits third to the left of E. Only one person sits between E and F. G sits immediate right of H. H neither sits opposite to C nor F. The number of persons between F and G is the same as between E and A. B does not sit adjacent to A. D sits second to the right of B.",
+    "steps": [
+     "Left is anticlockwise, right is clockwise.",
+     "Seat E. C is three seats anticlockwise of E.",
+     "One person between E and F: F is two seats from E, either between C and E or on E's other side.",
+     "G is one seat clockwise of H (on H's right); H is not opposite C or F. In both drawings only one placing survives: H three seats clockwise of E, with G just clockwise of H.",
+     "D is two seats clockwise of B and B is not next to A. With F between C and E, three seats are left: B sits just anticlockwise of E, D just clockwise of E, and A in the last seat. The counting clue checks: one person between F and G, one between E and A.",
+     "With F on E's other side, B can only sit next to A: out."
+    ],
+    "answer": "Clockwise from A: A, H, G, C, F, B, E, D."
+   },
+   "check": {
+    "q": "Seven persons face outside; clockwise the order is T, Z, Y, V, X, U, W. Who sits to the immediate right of Z?",
+    "options": {
+     "a": "T",
+     "b": "Y",
+     "c": "X",
+     "d": "W"
+    },
+    "answer": "B",
+    "why": "Facing outside, right is clockwise: the seat after Z clockwise is Y. T would be right for someone facing the centre."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#1",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#2",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#3",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#4",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#5",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#6",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#7",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#8",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#9",
+     "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#10"
+    ],
+    "tags": [
+     "Set A (7 persons): a neighbour clue and a \"same number between\" clue, facing out.",
+     "Set A (7 persons), question 2: read it off the same drawing.",
+     "Set A (7 persons), question 3: read it off the same drawing.",
+     "Set A (7 persons), question 4: read it off the same drawing.",
+     "Set A (7 persons), question 5: read it off the same drawing.",
+     "Set B (9 persons): a block J _ H _ I that fits in one place only.",
+     "Set B (9 persons), question 2: read it off the same drawing.",
+     "Set B (9 persons), question 3: read it off the same drawing.",
+     "Set B (9 persons), question 4: read it off the same drawing.",
+     "Set B (9 persons), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "mixed",
+   "code": "C7",
+   "title": "Some face in, some face out",
+   "plain": "New: each person has their own left. When facings are not given, seat people by distance first; the facing clues then choose between the shape and its mirror.",
+   "needs": [],
+   "teach": [
+    "In a mixed circle every clue uses the facing of the person after \"of\". Write IN or OUT beside each name as soon as you know it.",
+    "Often you do not know the facings at the start. Then use this:",
+    "- \"Second to the left of H\" and \"second to the right of H\" both mean **two seats from H**. So \"K is second to the left of H and F is second to the right of H\" gives the shape K _ H _ F whatever H faces.",
+    "- In a table of 7, \"fifth to the right\" is \"second to the left\": two seats away. \"Third to the left\" is four the other way.",
+    "- Seat everyone by distance. The shape can be read clockwise or anticlockwise (it and its mirror).",
+    "- Then the facing clues decide: \"X and Y face the same direction\", \"the neighbours of F face opposite directions\", \"more persons face inside than outside\".",
+    "A clue can also decide a facing directly: if a person's left would put someone on a taken seat, that person must face the other way.",
+    "No clerk paper studied had a mixed circle; the IBPS PO paper below did (7 persons). Your bank has 17."
+   ],
+   "example": {
+    "q": "IBPS PO Prelims, 22 August 2026, shift 2. Seven persons A to G sit around a circular table. Some face the centre and others face outside; more face inside than outside. G sits fifth to the right of E. One person sits between G and D. A sits immediate right of D. A is not the immediate neighbour of B and G. F sits third to the left of A. The immediate neighbours of F don't face the same direction. B sits second to the right of F. F and B face the same direction. C and B don't face the same direction.",
+    "steps": [
+     "Distances only: G and E are two seats apart (fifth one way is second the other in seven seats); G and D are two apart; A is next to D; F and A are three apart; B and F are two apart.",
+     "Seat G. E and D sit two seats either side of G. A is next to D but not next to G, so A is on D's far side. F is three seats from A, on G's side; B is two seats from F, not next to A. C takes the last seat. Shape, clockwise: A, D, B, G, F, E, C (or its mirror).",
+     "Read the clues on this shape: A on D's right means D faces in; G fifth to the right of E means E faces out; F third to the left of A means A faces out; B second to the right of F means F faces in, so B faces in and C faces out. F's neighbours G and E differ, so G faces in.",
+     "That gives 4 in and 3 out. The mirror shape flips every facing (3 in, 4 out), which breaks \"more face inside\"."
+    ],
+    "answer": "Clockwise from A: A (out), D (in), B (in), G (in), F (in), E (out), C (out). (The paper's key: D sits second to the right of C; A faces outside.)"
+   },
+   "check": {
+    "q": "T faces outside. Who is on T's immediate left?",
+    "options": {
+     "a": "The person one seat clockwise of T",
+     "b": "The person one seat anticlockwise of T",
+     "c": "The person opposite T",
+     "d": "It depends on who faces the centre"
+    },
+    "answer": "B",
+    "why": "Facing outside, left is anticlockwise. Clockwise is the left of someone facing the centre."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#5"
+    ],
+    "tags": [
+     "Set A (7 persons): the K _ H _ F shape fits in one place; facings follow.",
+     "Set A (7 persons), question 2: read it off the same drawing.",
+     "Set A (7 persons), question 3: read it off the same drawing.",
+     "Set A (7 persons), question 4: read it off the same drawing.",
+     "Set A (7 persons), question 5: read it off the same drawing.",
+     "Set B (8 persons): a placing that would land on G's seat proves C faces outside.",
+     "Set B (8 persons), question 2: read it off the same drawing.",
+     "Set B (8 persons), question 3: read it off the same drawing.",
+     "Set B (8 persons), question 4: read it off the same drawing.",
+     "Set B (8 persons), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "second-fact",
+   "code": "C8",
+   "title": "A second fact for each person",
+   "plain": "New: each person also has a profession, colour or flower. A fact can be placed before its name: \"the one who likes Pink\" is a seat you know before you know who sits there.",
+   "needs": [],
+   "teach": [
+    "Draw the circle with two lines at each seat: name above, fact below.",
+    "- Clues that join two names place people.",
+    "- Clues that join two facts (\"the one who likes Blue sits second to the right of the one who likes Pink\") place facts on seats, with the names still empty.",
+    "- Clues like \"Y likes Black and sits opposite W\" do both at once. Start with these.",
+    "- Negative fact clues (\"S is not a Lawyer\", \"neither X nor Y uses Sony\") are for the last two or three cells.",
+    "Some sets let a fact repeat (\"three like Rose, two like Lotus\"). Then count: the totals become clues.",
+    "Your bank has 18 such puzzles; none of the clerk papers studied had one."
+   ],
+   "example": {
+    "q": "From your bank (no paper puzzle found): Guidely, two variables facing inside, set 1, questions 11 to 15. Six persons U to Z sit facing the centre and use different headphones: Redmi, Beats, Sennheiser, Skullcandy, Bose and Sony. W sits second to the left of the one who uses Beats. One person sits between W and Y. The one who uses Sennheiser sits to the immediate left of Y. X sits second to the left of the one who uses Skullcandy. Neither W nor Y uses Skullcandy. Neither Z nor X uses Sennheiser. Z sits to the immediate right of V. The one who uses Redmi faces U. Neither X nor Y uses Sony.",
+    "steps": [
+     "Seat W. The Beats seat is two seats anticlockwise of W. Y is two seats from W: on the Beats seat, or two seats clockwise of W.",
+     "Y on the Beats seat: Sennheiser is on Y's left, one seat clockwise of Y. Z sits on V's right; X is two seats clockwise of the Skullcandy seat. Only Z next to W, V beyond it, X next to Y works; U takes the Sennheiser seat. Z uses Skullcandy.",
+     "Redmi faces U: V uses Redmi. X and W are left with Sony and Bose; X does not use Sony.",
+     "Y two seats clockwise of W instead: the names fit, but then neither X nor Y can take Sony: out."
+    ],
+    "answer": "Clockwise from U: U (Sennheiser), W (Sony), Z (Skullcandy), V (Redmi), X (Bose), Y (Beats)."
+   },
+   "check": {
+    "q": "\"The one who likes Blue sits second to the right of the one who likes Pink.\" What does this clue place?",
+    "options": {
+     "a": "Two names",
+     "b": "Two facts on seats, names unknown",
+     "c": "One name and one fact",
+     "d": "Nothing until the names are known"
+    },
+    "answer": "B",
+    "why": "It joins two facts. You can mark both seats now and fill the names later; waiting for the names wastes the clue."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#5"
+    ],
+    "tags": [
+     "Set A (professions): the Actor and the Dancer are placed before their names.",
+     "Set A (professions), question 2: read it off the same drawing.",
+     "Set A (professions), question 3: read it off the same drawing.",
+     "Set A (professions), question 4: read it off the same drawing.",
+     "Set A (professions), question 5: read it off the same drawing.",
+     "Set B (flowers that repeat): counts of Rose and Lotus decide the last two flowers.",
+     "Set B (flowers that repeat), question 2: read it off the same drawing.",
+     "Set B (flowers that repeat), question 3: read it off the same drawing.",
+     "Set B (flowers that repeat), question 4: read it off the same drawing.",
+     "Set B (flowers that repeat), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "unknown",
+   "code": "C9",
+   "title": "A certain number of persons",
+   "plain": "New: the total is not given. Number the seats clockwise from one person, build a chain, and let the clue that goes round the back of the table give the total.",
+   "needs": [],
+   "teach": [
+    "\"A certain number of persons sit around a circular table.\" You cannot draw the circle yet. Instead:",
+    "1. Pick the person in the most directed clues and call their seat 0.",
+    "2. Write every other person as a seat number, clockwise: \"Q sits third to the left of V\" (facing the centre) gives Q = 3.",
+    "3. Keep going along the names, as in a straight row. Seats can go negative: \"five persons between U and D\" can put U at D + 6 or D - 6.",
+    "4. One clue will link two people the long way round, past seat 0: \"four places away\", \"three persons between O and K\", a count between two people. Write it with the total T in it, and solve for T: for example \"seat 10 is seven seats anticlockwise of seat 0\" means 10 = T - 7, so T = 17.",
+    "Questions are mostly the total, \"position of X with respect to Y\" and \"how many between\". Most can be answered from the chain before T is known.",
+    "Your bank has 19 such circles. In the clerk shifts studied the unknown-number form appeared only as a straight row, never as a circle."
+   ],
+   "example": {
+    "q": "From your bank (no paper puzzle found): Guidely, unknown circular arrangement, set 1, questions 16 to 20. A certain number of persons sit around a circular table facing the centre. Q sits third to the right of M. One person sits between R and M. M sits exactly between N and Q. O sits adjacent to R. Three persons sit between N and P. One person sits between P and Q, when counted from the left of P. At least three persons sit between R and P on both sides.",
+    "steps": [
+     "Seat M = 0, clockwise numbering. Q is third to the right of M: Q = -3. M is exactly between N and Q: N = 3.",
+     "One person between P and Q counted from P's left (clockwise): Q = P + 2, so P = -5.",
+     "Three persons between N and P: P is four seats from N, at 7 or at -1. P = -5 is the same seat as 7 only if T = 12; it can never equal -1. So 12 persons.",
+     "R is two seats from M: at 2 or at -2 (seat 10). At least three persons between R and P either way rules out seat 10 (only two persons between 10 and 7). R = 2; O is next to R, at 1 (3 is N)."
+    ],
+    "answer": "12 persons. Clockwise from Q: Q, two unknown, M, O, R, N, three unknown, P, one unknown."
+   },
+   "check": {
+    "q": "Facing the centre, seats numbered clockwise from A = 0. \"B sits fifth to the right of A\" gives B at seat -5. On a table of T seats that is seat",
+    "options": {
+     "a": "5",
+     "b": "T - 5",
+     "c": "T + 5",
+     "d": "T - 4"
+    },
+    "answer": "B",
+    "why": "Right is anticlockwise, so five seats back from 0, which is T - 5. Seat 5 is A's left."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#5"
+    ],
+    "tags": [
+     "Set A (21 persons): a count between S and R closes the circle at 21.",
+     "Set A (21 persons), question 2: read it off the same drawing.",
+     "Set A (21 persons), question 3: read it off the same drawing.",
+     "Set A (21 persons), question 4: read it off the same drawing.",
+     "Set A (21 persons), question 5: read it off the same drawing.",
+     "Set B (15, facing outside): \"U four places away from K\" closes the circle at 15.",
+     "Set B (15, facing outside), question 2: read it off the same drawing.",
+     "Set B (15, facing outside), question 3: read it off the same drawing.",
+     "Set B (15, facing outside), question 4: read it off the same drawing.",
+     "Set B (15, facing outside), question 5: read it off the same drawing."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Seat G. Two persons between G and B: B is three seats clockwise of G (drawing 1) or three seats anticlockwise (drawing 2).",
+    "F is not next to G or B, and two persons sit between F and E. In each drawing F has two possible seats, and for each only one seat three away is free for E. Four small drawings.",
+    "D sits on A's immediate right (D just anticlockwise of A), and D is not on F's immediate left (not the seat just clockwise of F). Two drawings survive; clockwise from G they read G, D, A, F, _, B, E, _ and G, E, _, B, D, A, F, _.",
+    "C is not next to F or B. In the second drawing both free seats touch B or F: out. In the first, C takes the seat between E and G, and H the seat between F and B.",
+    "Clockwise from A: A, F, H, B, E, C, G, D.",
+    "From G going left (clockwise): D, A, then F. Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#2": [
+    "Clockwise from A: A, F, H, B, E, C, G, D.",
+    "G's neighbours are D and C: D, C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#3": [
+    "Clockwise from A: A, F, H, B, E, C, G, D.",
+    "E is two seats anticlockwise of G: Second to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#4": [
+    "Clockwise from A: A, F, H, B, E, C, G, D.",
+    "No two alphabet neighbours sit together (statement 3) and C and D are not neighbours (statement 4): Both the given satements 3 and 4 are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-13-78333-circular-arrangement#5": [
+    "Clockwise from A: A, F, H, B, E, C, G, D.",
+    "In B-H, D-G, C-E and H-F the second person sits on the first one's right; in G-A, A is two seats away: G-A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Seat P. T is second to the right of P: two seats anticlockwise.",
+    "Two persons between T and R: R is three seats from T, either next to P (clockwise of P) or two seats clockwise of P.",
+    "S is third to the left of R: three seats clockwise of R. From the second seat S would land on T. So R is next to P and S is four seats from P.",
+    "V is fourth to the right of U: U and V are opposite. The only free opposite pair is the seat between R and S and the seat between T and P. U is not next to P, so U is between R and S and V between T and P.",
+    "Q is not next to R or U: Q takes the seat between S and T, W the seat between R and U.",
+    "Clockwise from P: P, R, W, U, S, Q, T, V.",
+    "Opposite T is W."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#2": [
+    "Clockwise from P: P, R, W, U, S, Q, T, V.",
+    "From P going right (anticlockwise): V, T, Q, S, then U. Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#3": [
+    "Clockwise from P: P, R, W, U, S, Q, T, V.",
+    "Third to the right of W (anticlockwise) is V."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#4": [
+    "Clockwise from P: P, R, W, U, S, Q, T, V.",
+    "Anticlockwise from P the alphabet order would put U in U's own seat only: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-72-78392-circular-arrangement#5": [
+    "Clockwise from P: P, R, W, U, S, Q, T, V.",
+    "P-Q, T-U, V-S and W-V each have the second person three seats anticlockwise of the first; R to S is three seats clockwise: R – S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Printed order starts with U and T, then P and T, then W and Q: three unlinked pairs. Start instead with the only clue that fixes a pair in one drawing.",
+    "Three persons between V and S in a table of eight: they sit opposite. Seat V, S opposite.",
+    "P is second to the right of S: two seats anticlockwise of S.",
+    "Q sits on W's right, so Q is one seat anticlockwise of W. Two free neighbour pairs fit: Q and W just clockwise of S, or one seat further on.",
+    "U is second to the left of T (two seats clockwise of T), P is not next to T, and two persons sit between U and W. In the first drawing T goes next to V (on the side away from P) and U two seats clockwise of T; the second drawing has no seat for T away from P with U free. R takes the last seat.",
+    "Clockwise from V: V, U, P, R, S, Q, W, T.",
+    "Second to the right of Q (anticlockwise) is R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#2": [
+    "Clockwise from V: V, U, P, R, S, Q, W, T.",
+    "From S going left (clockwise): Q, W, T, V, then U. Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#3": [
+    "Clockwise from V: V, U, P, R, S, Q, W, T.",
+    "W is two seats anticlockwise of V: Second to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#4": [
+    "Clockwise from V: V, U, P, R, S, Q, W, T.",
+    "Q is an immediate neighbour of S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-circular-arrangement#5": [
+    "Clockwise from V: V, U, P, R, S, Q, W, T.",
+    "Clockwise from P the alphabet order keeps only V in its seat: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise. Ten seats; the five state-people are written Punjab, Delhi, Goa, Kerala, Assam.",
+    "Follow E: Punjab is three seats clockwise of E, F three seats anticlockwise.",
+    "Kerala is next to E: one seat either side. Goa faces Kerala, so Goa is opposite: two drawings.",
+    "G is second to the left of Delhi: Delhi then G two seats clockwise. In each drawing exactly one free pair fits.",
+    "Three persons between G and Assam: Assam is four seats from G; one way is taken each time.",
+    "H is fourth to the left of K (four seats clockwise of K) and not next to G or Assam. Only the drawing with Kerala just anticlockwise of E has room: K next to E, H between Goa and Delhi.",
+    "Clockwise from E: E, K, Assam, Punjab, Goa, H, Delhi, F, G, Kerala.",
+    "Fourth to the right of F (anticlockwise) is the Punjab seat: The one who belongs to Punjab."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#2": [
+    "Clockwise from E: E, K, Assam, Punjab, Goa, H, Delhi, F, G, Kerala.",
+    "Facing G is Punjab; third to the left of Punjab (clockwise) is Delhi: The one who belongs to Delhi."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#3": [
+    "Clockwise from E: E, K, Assam, Punjab, Goa, H, Delhi, F, G, Kerala.",
+    "E faces H, who is on Delhi's right (I true); H sits between Delhi and Goa (II true); they are neighbours, so III is false: Only I and II."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#4": [
+    "Clockwise from E: E, K, Assam, Punjab, Goa, H, Delhi, F, G, Kerala.",
+    "G-Delhi, E-Assam, K-Punjab and F-Kerala are each two seats apart; F and Goa are three apart: F - Goa."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-circular-arrangement#5": [
+    "Clockwise from E: E, K, Assam, Punjab, Goa, H, Delhi, F, G, Kerala.",
+    "Goa is two seats clockwise of Assam: Second to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Seat C. G is on C's right: one seat anticlockwise.",
+    "One person between G and E: E is two seats from G, either next to C (clockwise of C) or two seats further anticlockwise.",
+    "Two persons between D and C: D is three seats from C. Three drawings fit with E.",
+    "Neither A nor F is next to D. Then the counting clue: persons between D and E counted from D's left (clockwise) equal persons between A and H counted from A's right (anticlockwise).",
+    "With E two seats anticlockwise of G and D three seats clockwise of C, one person sits between D and E counted clockwise from D. So one person sits between A and H counted anticlockwise from A: A sits between E and G, and H between D and E. The other two drawings put A opposite H or leave no seat: out. F and B fill the seats between C and D, F next to C.",
+    "Clockwise from A: A, G, C, F, B, D, H, E.",
+    "Third to the left of G (clockwise) is B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#2": [
+    "Clockwise from A: A, G, C, F, B, D, H, E.",
+    "F is one seat clockwise of C: Immediate left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#3": [
+    "Clockwise from A: A, G, C, F, B, D, H, E.",
+    "From C going right (anticlockwise): G, A, E, then H. Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#4": [
+    "Clockwise from A: A, G, C, F, B, D, H, E.",
+    "A-C, F-D, E-G and B-H each have the second two seats clockwise of the first; E-C is three: E – C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-circular-arrangement#5": [
+    "Clockwise from A: A, G, C, F, B, D, H, E.",
+    "Anticlockwise from A the alphabet order keeps D and F in their seats: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise. Seven seats.",
+    "Seat G. F is second to the left of G: two seats clockwise.",
+    "B is third to the right of E: B three seats anticlockwise of E. Three placings fit the free seats.",
+    "Two persons between F and D, and F is not next to A. That leaves four drawings.",
+    "Counting clue: persons between G and D from G's right (anticlockwise) equal persons between A and E from A's left (clockwise). Only one drawing gives equal counts (one and one): B just clockwise of F, then A, D, E, and C between G and F.",
+    "Clockwise from A: A, D, E, G, C, F, B.",
+    "Third to the right of A (anticlockwise) is C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#2": [
+    "Clockwise from A: A, D, E, G, C, F, B.",
+    "B is three seats clockwise of G: Third to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#3": [
+    "Clockwise from A: A, D, E, G, C, F, B.",
+    "Clockwise from A the alphabet order keeps only F in place: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#4": [
+    "Clockwise from A: A, D, E, G, C, F, B.",
+    "G-B, D-F, A-C and F-E are three seats apart; E and D are neighbours: E – D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-circular-arrangement#5": [
+    "Clockwise from A: A, D, E, G, C, F, B.",
+    "From C going right (anticlockwise): G, E, then D. Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#1": [
+    "Seven seats. N and K face the centre; the rest are unknown at the start.",
+    "Seat N. L is second to the right of N: two seats anticlockwise.",
+    "G is on L's immediate left: next to L on one side or the other, depending on L's facing.",
+    "K is second to the left of H and F second to the right of H: whichever way H faces, K and F are two seats either side of H (K _ H _ F).",
+    "If G sits between L and N there is no room for K _ H _ F: out. So G sits on L's far side, which means L faces outside. The only place for K _ H _ F is with H next to N on N's clockwise side; G is not next to K, so K sits between L and N and F sits next to G.",
+    "K faces in and is second to the left of H, so H faces out. E takes the last seat and faces opposite to L: in. F's neighbours face opposite ways, so G faces out; F faces opposite to G: in.",
+    "Clockwise from E: E (in), F (in), G (out), L (out), K (in), N (in), H (out).",
+    "K faces in, so third to the left of K is three seats clockwise: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#2": [
+    "Clockwise from E: E (in), F (in), G (out), L (out), K (in), N (in), H (out).",
+    "F faces in; from F going right (anticlockwise): E, H, N, then K. Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#3": [
+    "Clockwise from E: E (in), F (in), G (out), L (out), K (in), N (in), H (out).",
+    "F, K, E and N face the centre; L faces outside: L."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#4": [
+    "Clockwise from E: E (in), F (in), G (out), L (out), K (in), N (in), H (out).",
+    "K and L face opposite ways (I false); second to the left of L, who faces out, is F (II false); second to the right of E is N (III true): Only III."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-circular-arrangement#5": [
+    "Clockwise from E: E (in), F (in), G (out), L (out), K (in), N (in), H (out).",
+    "Second to the right of E is N; N faces in, so third to the left of N is three seats clockwise: F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#1": [
+    "Eight seats. Only G's facing (in) is given.",
+    "Seat G. C is second to the right of G: two seats anticlockwise.",
+    "H is second to the left of C. If C faced the centre, H would be two seats clockwise of C, on G's seat. So C faces out and H is two seats anticlockwise of C.",
+    "H is next to both F and A: they sit on either side of H.",
+    "H is second to the left of E. If E faced out, E would be on C's seat; so E faces in and sits two seats anticlockwise of H.",
+    "D is second to the left of F and E is third to the right of D. Only one placing works: D faces out and sits next to G, F faces in and sits between C and H, A on H's other side. B takes the seat between G and E.",
+    "Facings: G's neighbours D and B face the same way (out); E's neighbours B and A face the same way (out); H faces the same way as A (out).",
+    "Clockwise from A: A (out), H (out), F (in), C (out), D (out), G (in), B (out), E (in).",
+    "H faces out, so third to the left of H is three seats anticlockwise: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#2": [
+    "Clockwise from A: A (out), H (out), F (in), C (out), D (out), G (in), B (out), E (in).",
+    "A, H, C, D and B face outside: Five."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#3": [
+    "Clockwise from A: A (out), H (out), F (in), C (out), D (out), G (in), B (out), E (in).",
+    "D-B, E-F, H-A and G-F face the same way as each other; F and C do not: F, C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#4": [
+    "Clockwise from A: A (out), H (out), F (in), C (out), D (out), G (in), B (out), E (in).",
+    "E is not third to the left of D (I false); C and F are neighbours (II true); H is third to the right of B, who faces out (III true): Only II and III."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-circular-arrangement#5": [
+    "Clockwise from A: A (out), H (out), F (in), C (out), D (out), G (in), B (out), E (in).",
+    "Third to the right of D (out, so clockwise) is E; second to the left of E (in, so clockwise) is H, who sits on A's right: The one who sits immediate right of A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise. Seven seats.",
+    "Seat Q (Engineer). P is second to the left of Q: two seats clockwise.",
+    "Two persons between P and the Actor: the Actor's seat is three from P, either way. O sits on the Actor's right: one seat anticlockwise of the Actor.",
+    "Counting clue: going right (anticlockwise) from O, the Dancer comes one place after P. In both drawings that is the seat between Q and P. The Dancer is O or N, so N sits there and is the Dancer.",
+    "S is third to the right of the Teacher (three seats anticlockwise of the Teacher). With the Actor in the seat next to Q, no seat works for S: out. So the Actor is three seats clockwise of P, O sits two seats clockwise of P, S sits between P and O, and the Teacher sits on Q's right (anticlockwise).",
+    "R is next to the Designer. If R sat in the Teacher's seat, R's neighbours would be the Actor and Q (Engineer): no Designer. So R is the Actor, M the Teacher, O the Designer. S is not the Lawyer: S is the Doctor, P the Lawyer.",
+    "Clockwise from M: M (Teacher), Q (Engineer), N (Dancer), P (Lawyer), S (Doctor), O (Designer), R (Actor).",
+    "The Teacher is M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#2": [
+    "Clockwise from M: M (Teacher), Q (Engineer), N (Dancer), P (Lawyer), S (Doctor), O (Designer), R (Actor).",
+    "S is the Doctor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#3": [
+    "Clockwise from M: M (Teacher), Q (Engineer), N (Dancer), P (Lawyer), S (Doctor), O (Designer), R (Actor).",
+    "O-Teacher, Q-Lawyer, P-Designer and S-Actor are each two seats apart, clockwise; R and the Dancer are three apart: R – Dancer."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#4": [
+    "Clockwise from M: M (Teacher), Q (Engineer), N (Dancer), P (Lawyer), S (Doctor), O (Designer), R (Actor).",
+    "Clockwise from M the alphabet order keeps only P in place: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-50-78370-circular-arrangement#5": [
+    "Clockwise from M: M (Teacher), Q (Engineer), N (Dancer), P (Lawyer), S (Doctor), O (Designer), R (Actor).",
+    "Second to the left of P (clockwise) is O, the Designer: The one who likes Designer."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise. Flowers can repeat: three Rose, two Lotus, three Lily.",
+    "Seat J (Rose). Q (Lily) is third to the right of J: three seats anticlockwise.",
+    "K is next to J, and P faces K. If K sat clockwise of J, P (opposite K) would be on Q's seat. So K sits on J's right (anticlockwise), between J and Q, and P (Lotus) sits opposite K.",
+    "M (Rose) faces S: only one pair of opposite seats is still free, so M and S take those two seats.",
+    "R is next to M and three seats anticlockwise of L: L sits next to P, and R sits between J and M.",
+    "K and L like the same flower, not Rose; only two like Lotus and P is one, so K and L like Lily. Three like Rose: J, M and one more. R sits next to M, and no two Rose-lovers sit together, so S likes Rose and R likes Lotus.",
+    "Clockwise from P: P (Lotus), L (Lily), Q (Lily), S (Rose), K (Lily), J (Rose), R (Lotus), M (Rose).",
+    "From P going left (clockwise): L, then Q. One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#2": [
+    "Clockwise from P: P (Lotus), L (Lily), Q (Lily), S (Rose), K (Lily), J (Rose), R (Lotus), M (Rose).",
+    "Third to the left of M (clockwise) is Q."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#3": [
+    "Clockwise from P: P (Lotus), L (Lily), Q (Lily), S (Rose), K (Lily), J (Rose), R (Lotus), M (Rose).",
+    "From M going anticlockwise: R, then J. One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#4": [
+    "Clockwise from P: P (Lotus), L (Lily), Q (Lily), S (Rose), K (Lily), J (Rose), R (Lotus), M (Rose).",
+    "Q faces R, and Q likes Lily: One who likes Lily flower."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-circular-arrangement#5": [
+    "Clockwise from P: P (Lotus), L (Lily), Q (Lily), S (Rose), K (Lily), J (Rose), R (Lotus), M (Rose).",
+    "P is four seats from K, opposite: Fourth to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#1": [
+    "All face the centre: left is clockwise, right is anticlockwise. Number the seats clockwise from V = 0; the total is unknown.",
+    "Q is third to the left of V: seat 3. Two persons between Q and A: A is at 6 (the other way is V's seat).",
+    "A sits on G's right, so G is at 7. R is sixth to the left of A: seat 12.",
+    "Five persons sit between V and A, so four sit between A and U: U is at 1 or at 11.",
+    "U at 11: N is five seats from U and S three seats anticlockwise of N; the counting clue between Q and U and between S and R then needs a total of 9, but seat 12 is already used: out.",
+    "U at 1: N is five seats anticlockwise of U, past V, and S three more. From Q going right (anticlockwise) one person comes before U. From S going right, persons before R must also be one, so S is at 14 and N at 17. N at 17 is five seats anticlockwise of U at 1 only if the table has 21 seats.",
+    "Seats clockwise from V = 0: U 1, Q 3, A 6, G 7, R 12, S 14, N 17; 21 persons in all.",
+    "U is five seats anticlockwise of A: Fifth to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#2": [
+    "Seats clockwise from V = 0: U 1, Q 3, A 6, G 7, R 12, S 14, N 17; 21 persons in all.",
+    "The total is 21."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#3": [
+    "Seats clockwise from V = 0: U 1, Q 3, A 6, G 7, R 12, S 14, N 17; 21 persons in all.",
+    "From A going left (clockwise), seats 7 to 13 come before S at 14: Seven."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#4": [
+    "Seats clockwise from V = 0: U 1, Q 3, A 6, G 7, R 12, S 14, N 17; 21 persons in all.",
+    "Fifth to the left of G (clockwise) is seat 12: R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-circular-arrangement#5": [
+    "Seats clockwise from V = 0: U 1, Q 3, A 6, G 7, R 12, S 14, N 17; 21 persons in all.",
+    "T exactly between S (14) and A (6) is at 10, two seats anticlockwise of R: Second to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#1": [
+    "All face outside: left is anticlockwise, right is clockwise. Number the seats clockwise from O = 0; the total is unknown.",
+    "N is second to the right of O: seat 2. V is on O's left: one seat anticlockwise. D is on N's left: seat 1.",
+    "Five persons between U and D: U at 7 (or six seats anticlockwise of D).",
+    "As many between U and E as between E and D: E is the middle seat, 4.",
+    "Three persons between O and K: K is four seats anticlockwise of O (four clockwise is E). U is four places away from K: going clockwise from U at 7, K is four seats on only if the table has 15 seats. So 15 persons, K at 11, V at 14.",
+    "C is next to K and not more than two persons sit between C and U: C at 10. B is second to the left of C: seat 8. A is the middle point between N and U the long way round: seat 12. (U six seats anticlockwise of D leaves no seat for A.)",
+    "Clockwise from O: O, D, N, _, E, _, _, U, B, _, C, K, A, _, V; 15 persons.",
+    "The table has 15 persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#2": [
+    "Clockwise from O: O, D, N, _, E, _, _, U, B, _, C, K, A, _, V; 15 persons.",
+    "From D going left (anticlockwise): O, V, _, A, K, then C. Five."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#3": [
+    "Clockwise from O: O, D, N, _, E, _, _, U, B, _, C, K, A, _, V; 15 persons.",
+    "B (8) and O (0) are eight seats apart; the middle seat is 4: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#4": [
+    "Clockwise from O: O, D, N, _, E, _, _, U, B, _, C, K, A, _, V; 15 persons.",
+    "A is fourth to the left of D and O is next to D; U and N have four persons between them: Both the statements 2 and 3 are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-29-78349-circular-arrangement#5": [
+    "Clockwise from O: O, D, N, _, E, _, _, U, B, _, C, K, A, _, V; 15 persons.",
+    "C is six seats clockwise of E, and E faces out, so that is E's right: Sixth to the right."
+   ]
+  },
+  "guidely": {
+   "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#1": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Seat Q. N is second to the left of Q: two seats clockwise of Q.",
+    "O is next to Q: either on Q's right (anticlockwise) or in the seat between Q and N.",
+    "If O sits between Q and N, nobody sits between O and N, so nobody sits between Q and P: P is Q's other neighbour. M and L then take the last two seats side by side, and M is next to P or to L. Out.",
+    "So O is on Q's right. Two persons sit between O and N either way round, so two sit between Q and P: P is opposite Q.",
+    "M is not next to P or L: M takes the seat between Q and N, and L the seat between P and O.",
+    "Clockwise from L: L, O, Q, M, N, P.",
+    "M and L are opposite in a table of six, so third to the right of M is L."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#2": [
+    "Clockwise from L: L, O, Q, M, N, P.",
+    "L is on O's right (I), two persons sit between N and O (II), M is second to the right of P (III); L and O are neighbours, so IV is false: Only (I), (II), and (III)."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#3": [
+    "Clockwise from L: L, O, Q, M, N, P.",
+    "From M going right (anticlockwise): Q, O, L, then P. Three."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#4": [
+    "Clockwise from L: L, O, Q, M, N, P.",
+    "LQ, OM, QN and MP each have the second person two seats clockwise of the first; P to L is one seat: PL."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-1-prelims-1#5": [
+    "Clockwise from L: L, O, Q, M, N, P.",
+    "After the swaps the order is Q, N, L, M, O, P clockwise. Second to the right of O (anticlockwise) is L."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#6": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Seat O. M is on O's right: one seat anticlockwise of O.",
+    "Going anticlockwise from P, two persons come before M: P is three seats clockwise of M, that is two seats clockwise of O.",
+    "N is second to the left of P: two seats clockwise of P.",
+    "Q sits exactly between N and T, so Q is next to N with T beyond. If Q sat between P and N, T would need P's seat; so Q and T go clockwise of N.",
+    "Two persons sit between S and O: S is three seats from O. One of those seats is now Q's, so S takes the seat between P and N. T is not next to S: true. R takes the last seat, between O and P.",
+    "Clockwise from M: M, O, R, P, S, N, Q, T.",
+    "Third to the right of R (anticlockwise) is T, and T is also second to the left of N: The one who sits second to the left of N."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#7": [
+    "Clockwise from M: M, O, R, P, S, N, Q, T.",
+    "From T going left (clockwise): M, O, R, P, then S. Four."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#8": [
+    "Clockwise from M: M, O, R, P, S, N, Q, T.",
+    "Q is three seats clockwise of P: Third to the left."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#9": [
+    "Clockwise from M: M, O, R, P, S, N, Q, T.",
+    "Second to the left of S is Q; the person facing Q is R, who sits on O's immediate left: The one who sits immediate left of O."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#10": [
+    "Clockwise from M: M, O, R, P, S, N, Q, T.",
+    "OR, QT, PS and RP are neighbours with the second clockwise of the first; N and M are three apart: NM."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#16": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Seat O. J is on O's right: one seat anticlockwise.",
+    "Third to the left of J is three seats clockwise of J; the person opposite that seat is Q. Work it out: Q sits on J's right, one more seat anticlockwise.",
+    "Two persons between Q and P: P is three seats from Q, so P sits next to O on O's clockwise side, or three seats clockwise of O.",
+    "Two persons between N and O: N is three seats from O. P does not face N, M is not next to P, and one person sits between M and L.",
+    "With P next to O, N cannot sit opposite P, so N is three seats clockwise of O. M is not next to P and has one person between it and L: M sits next to N, L between P and N, and K between M and Q.",
+    "With P three seats clockwise of O, N is three seats anticlockwise of O, M has to sit next to O, and L has no seat: out.",
+    "Clockwise from J: J, O, P, L, N, M, K, Q.",
+    "On M's left (clockwise) sits K, and K is also third to the left of L: The one who sits third left of L."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#17": [
+    "Clockwise from J: J, O, P, L, N, M, K, Q.",
+    "From L going left (clockwise): N, M, K, Q, J, then O. Five."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#18": [
+    "Clockwise from J: J, O, P, L, N, M, K, Q.",
+    "Second to the right of N (anticlockwise) is P."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#19": [
+    "Clockwise from J: J, O, P, L, N, M, K, Q.",
+    "L sits immediate right of N."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-4-prelims-1#20": [
+    "Clockwise from J: J, O, P, L, N, M, K, Q.",
+    "P is three seats clockwise of Q: Third to the left."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#16": [
+    "All face the centre: left is clockwise, right is anticlockwise.",
+    "Seat E. A is third to the right of E: three seats anticlockwise.",
+    "One person between A and C: C is two seats from A, either between A and E or on A's other side.",
+    "The one opposite C sits on B's immediate left, so B is one seat anticlockwise of the seat opposite C. F is opposite B (three persons between).",
+    "D is second to the right of F: two seats anticlockwise of F. With C on A's far side, that seat is E's: out. So C sits between A and E.",
+    "G is not next to D: G takes the seat between E and B, H the seat between B and D.",
+    "Clockwise from A: A, F, C, E, G, B, H, D.",
+    "On B's right sits G; G faces A, and A is on D's left: The one who sits immediate left of D."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#17": [
+    "Clockwise from A: A, F, C, E, G, B, H, D.",
+    "From G going right (anticlockwise): E, C, F, A, D, then H. Five: More than four."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#18": [
+    "Clockwise from A: A, F, C, E, G, B, H, D.",
+    "Third to the left of E (clockwise) is H."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#19": [
+    "Clockwise from A: A, F, C, E, G, B, H, D.",
+    "H faces C; F sits one seat anticlockwise of C: Immediate right."
+   ],
+   "circular-based-arrangement-single-variable-facing-inside-set-5-prelims-1#20": [
+    "Clockwise from A: A, F, C, E, G, B, H, D.",
+    "A sits adjacent to F."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#1": [
+    "All face outside: left is anticlockwise, right is clockwise.",
+    "Seat T. Z is on T's right: one seat clockwise.",
+    "Two persons between Z and X: X is three seats from Z, clockwise (seat 4 from T) or anticlockwise (seat 5, two seats anticlockwise of T).",
+    "Y is second to the left of X: two seats anticlockwise of X.",
+    "As many persons between T and X as between T and V: V sits as far from T as X does.",
+    "With X in seat 5, V and Y crowd the near seats and the two seats left for W are both next to X: out. So X is in seat 4, Y in 2, V in 3; W is not next to X, so W is next to T and U between X and W.",
+    "Clockwise from T: T, Z, Y, V, X, U, W.",
+    "On Z's right (clockwise) sits Y."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#2": [
+    "Clockwise from T: T, Z, Y, V, X, U, W.",
+    "From T going left (anticlockwise): W, then U. One."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#3": [
+    "Clockwise from T: T, Z, Y, V, X, U, W.",
+    "After both swaps, clockwise: U, W, Y, V, X, T, Z. Third to the left of W (anticlockwise) is T."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#4": [
+    "Clockwise from T: T, Z, Y, V, X, U, W.",
+    "Clockwise from T the alphabet order keeps only X in place: One."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#5": [
+    "Clockwise from T: T, Z, Y, V, X, U, W.",
+    "T and X are three seats apart: TX."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#6": [
+    "All face outside: left is anticlockwise, right is clockwise. Nine persons.",
+    "Seat L. M is third to the right of L: three seats clockwise. K is on L's left: one seat anticlockwise.",
+    "Two persons between K and F: F is three seats from K. One way puts F between L and M; the other puts F four seats anticlockwise of L.",
+    "One person between F and G. H is second to the right of J (two seats clockwise of J), and as many persons sit between I and H as between H and J, so J, H and I sit every other seat: J _ H _ I.",
+    "With F between L and M there is no room for J _ H _ I: out. So F is four seats anticlockwise of L, and G, two seats from F, sits next to K.",
+    "J, H and I fill every other seat: J two seats clockwise of L, H between M and F, I between F and G. H is not next to G: true. E takes the last seat, between L and J.",
+    "Clockwise from E: E, J, M, H, F, I, G, K, L.",
+    "Second to the left of F (anticlockwise) is M."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#7": [
+    "Clockwise from E: E, J, M, H, F, I, G, K, L.",
+    "Clockwise from E the alphabet order keeps only H in place: One."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#8": [
+    "Clockwise from E: E, J, M, H, F, I, G, K, L.",
+    "K's neighbours are L and G: G."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#9": [
+    "Clockwise from E: E, J, M, H, F, I, G, K, L.",
+    "From I going right (clockwise): G, then K. One person stands between I and K, when counted from the right of I."
+   ],
+   "circular-based-arrangement-single-variable-facing-outside-set-1-prelims-1#10": [
+    "Clockwise from E: E, J, M, H, F, I, G, K, L.",
+    "F and I stand side by side: FI."
+   ]
+  }
+ }
+}
