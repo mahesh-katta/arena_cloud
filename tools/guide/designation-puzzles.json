@@ -1,0 +1,1080 @@
+{
+ "module": "designation-puzzles",
+ "intro": [
+  "Designation puzzles: a ladder of posts (CEO down to Clerk), one person on each rung, and clues about who is senior to whom. These lessons are built the same way as the Box, Parallel Rows and Linear lessons: from what the papers set, checked by script.",
+  "**What I studied first.** Eight real puzzles with full clue text from memory-based papers (IBPS Clerk 2021, 2022, 25 August 2024 shift 3 and 5 October 2025 shift 1; IBPS RRB Clerk 17 August 2024 and 6 December 2025; IBPS PO 23 and 24 August 2025), and every designation set in your banks: 18 Sreedhar sets and 26 Guidely sets. Each was written out as exact conditions and solved by brute force. All 8 paper puzzles and all 44 bank sets have exactly one arrangement. Every bank question was then answered from the arrangement and compared with the key.",
+  "| What was measured | Result |",
+  "| Size | 6 to 9 posts; the real papers had 6, 7 or 8 |",
+  "| One person per post, post order given in the question | all 8 papers and all 44 bank sets; no \"two per post\" or \"order to be worked out\" sets found |",
+  "| Puzzles with an exact step (\"just senior\", \"four junior\", \"three between, X senior\") | 7 of the 8 papers |",
+  "| Puzzles with the mirror clue (\"as many senior to X as junior to Y\", or \"one/two more\") | 5 of 8 papers; 10 of 18 Sreedhar; 16 of 26 Guidely |",
+  "| Puzzles with a clue that pins a person on its own | 2 of the 7 single-column papers; 8 of 13 distinct Sreedhar sets |",
+  "| Second fact per person (colour, project, country ...) | 1 of 8 papers (IBPS PO); 2 Sreedhar, 2 Guidely (+2 Guidely without keys) |",
+  "| Vacant post | 0 papers; 4 Guidely sets |",
+  "| Equal-gap clue (\"as many between A and B as between C and D\") | 0 papers; 12 of 26 Guidely; 1 Sreedhar |",
+  "| Peak open cases, clues in printed order | papers 3 to 60 (4 or fewer in 4 of 7); Sreedhar 3 to 168 |",
+  "| Peak open cases, best order found | papers 3 to 8; Sreedhar 2 to 91 (7 or fewer in 8 of 13) |",
+  "| Bank questions agreeing with the key | Sreedhar 89 of 89; Guidely 125 of 130 |",
+  "**What this means.** At clerk level this is a short puzzle: one ladder, seven or eight rungs, and the papers' clues are mostly exact steps plus one mirror clue. Few clues pin a person, so the method is to join exact clues into a block, count where it fits, and let the mirror rule turn each start into one place. That is the road the lessons take: ladder and pins, blocks, two-case gaps, the mirror rule, the shifted mirror, then the bank-only twists (equal gaps, a second column, a vacant post).",
+  "A note on honesty: memory-based papers are reconstructions. Three of the eight have the paper's own answer key and all agree with the script; the 5 October 2025 Hindi paper had no key, and for the RRB Clerk 17 August 2024 puzzle I saw only one question. Shift analyses mention two more designation sets at IBPS Clerk 2024 (24 August shift 4, \"with height\"; 25 August shift 3, which is the one solved here), and none in the eight IBPS Clerk 2025 shifts PW lists, although the Adda247 paper for 5 October 2025 shift 1 has one; so the analyses are not complete either. Two Guidely sets were dropped because their keys contradict their own clues; five Sreedhar sets filed under this topic are department-grouping puzzles and were not studied."
+ ],
+ "needs": [],
+ "after": [
+  "That is the designation puzzle as the papers set it. The **Quick revision** tab has the archetype table, drills and cheat sheet.",
+  "The order of work for every set: ladder with rung numbers (senior-most on top), pins first, then the tallest block, then the mirror clue to turn each start into one place, gap clues in two cases, and \"not\" clues to finish.",
+  "Not covered: department-grouping sets filed under this topic in the Sreedhar bank (5 sets), and the two Guidely sets with no answer key."
+ ],
+ "lessons": [
+  {
+   "id": "ladder",
+   "code": "DG1",
+   "title": "One ladder, and the clues that pin a person",
+   "plain": "The starting point. Draw the posts as a ladder, top = senior-most, and place first anyone a clue pins to one rung.",
+   "needs": [],
+   "teach": [
+    "A designation puzzle gives you a list of posts in order (CEO, ED, GM ... Clerk) and as many people as posts. Each person holds one post. You rebuild who holds which.",
+    "**Draw a ladder.** Write the posts down the page, the senior-most at the top, and number the rungs 1, 2, 3 ... from the top. Many papers list the posts \"in increasing order\" (Clerk first). Turn that list upside down before you start: rung 1 is always the senior-most.",
+    "**Senior = higher = above = a smaller rung number. Junior = lower = below = a bigger rung number.**",
+    "Some clues pin a person to one rung at once. Look for them first:",
+    "| The clue says | Rung (8 posts) |",
+    "| X is the GM | the GM's rung |",
+    "| Only three persons are senior to X | 4 (three above) |",
+    "| X is senior to only three persons | 5 (three below) |",
+    "| X is senior to only B | X 7th and B 8th |",
+    "| X is the senior-most / top-most | 1 |",
+    "Other post words only limit a person: \"X is senior to the GM\" means X is somewhere above the GM's rung; \"X is junior to MG\" means below it; \"X is not the CEO\" crosses out one rung.",
+    "In the 13 Sreedhar sets measured, 8 had at least one clue that pins a person on its own. In the 7 real paper puzzles measured, only 2 did. So pin what you can, but expect the next lessons to do most of the work."
+   ],
+   "example": {
+    "q": "Bank set (Sreedhar Model Test 6; no real paper puzzle uses only these clue types). Eight persons A to H hold the posts CEO, ED, CGM, GM, DGM, MG, AM and Clerk (CEO senior-most). Only three persons are senior to H. F is senior to B but not to C, who is not the CEO and not the CGM. G is senior to only B. A is junior to E but not to F. D is junior to F.",
+    "steps": [
+     "Ladder: 1 CEO, 2 ED, 3 CGM, 4 GM, 5 DGM, 6 MG, 7 AM, 8 Clerk.",
+     "Pins: three above H, so H is 4th. G is senior to only B, so B is 8th and G 7th.",
+     "Who is above F? C (F is not senior to C), A (A is not junior to F) and E (E is above A). Who is below F? B, D and G. Three below F in eight posts means F is 5th.",
+     "D is below F: the only free rung below is 6th.",
+     "C, A and E share rungs 1 to 3. C is not 1st or 3rd, so C is 2nd. E is above A: E 1st, A 3rd."
+    ],
+    "answer": "CEO E, ED C, CGM A, GM H, DGM F, MG D, AM G, Clerk B."
+   },
+   "check": {
+    "q": "Eight posts. \"Only three persons are senior to H.\" Which rung does H hold, counting from the top?",
+    "options": {
+     "a": "3rd",
+     "b": "4th",
+     "c": "5th",
+     "d": "8th"
+    },
+    "answer": "B",
+    "why": "Three people above H fill rungs 1, 2 and 3, so H is 4th. The tempting 3rd counts H as one of the three."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#5"
+    ],
+    "tags": [
+     "Set A (8 posts): three fixers (\"only three senior\", \"senior to only B\") pin H, G and B before anything else.",
+     "Set A (8 posts), question 2: read it off the same ladder.",
+     "Set A (8 posts), question 3: read it off the same ladder.",
+     "Set A (8 posts), question 4: read it off the same ladder.",
+     "Set A (8 posts), question 5: read it off the same ladder.",
+     "Set B (8 posts): a post given by name (\"T is the senior teacher\") starts the chain.",
+     "Set B (8 posts), question 2: read it off the same ladder.",
+     "Set B (8 posts), question 3: read it off the same ladder.",
+     "Set B (8 posts), question 4: read it off the same ladder.",
+     "Set B (8 posts), question 5: read it off the same ladder.",
+     "Set C (8 posts): \"senior to only one person\" fixes L; post words limit M and P.",
+     "Set C (8 posts), question 2: read it off the same ladder.",
+     "Set C (8 posts), question 3: read it off the same ladder.",
+     "Set C (8 posts), question 4: read it off the same ladder.",
+     "Set C (8 posts), question 5: read it off the same ladder."
+    ]
+   }
+  },
+  {
+   "id": "blocks",
+   "code": "DG2",
+   "title": "Exact steps make a block that slides",
+   "plain": "Clues such as \"just senior\", \"two posts junior\" or \"four between, X senior\" are exact. Join them into one block and count where it fits.",
+   "needs": [],
+   "teach": [
+    "Most clues are steps up or down the ladder. When the clue gives both the size and the direction, it is **exact**:",
+    "| The clue says | Write it as |",
+    "| A is just (immediately) junior to E | A = E + 1 |",
+    "| A is four designations junior to G | A = G + 4 |",
+    "| F is two designations senior to C | F = C - 2 |",
+    "| Three persons between F and D, D junior to F | D = F + 4 |",
+    "| L is senior to M with four between | M = L + 5 |",
+    "\"Persons between\" is one less than the step: three between means four rungs apart.",
+    "**Join exact clues that share a name into one block.** \"A is four junior to G\" and \"D is just junior to A\" give the block G _ _ _ A D, six rungs tall. In seven posts it fits only two ways: G 1st or G 2nd.",
+    "Then test each way with the other clues. One usually dies in a line or two.",
+    "In the 8 real paper puzzles with full text, 7 had at least one exact step."
+   ],
+   "example": {
+    "q": "IBPS RRB Clerk Prelims, 6 December 2025, shift 1 (memory-based). Seven persons A to G hold the posts CEO, COO, AM, GM, AGM, Manager and Executive, in that order from the senior-most. A is four designations junior to G. D is designated immediately junior to A. Two persons are designated between B and C. F is two designations senior to C.",
+    "steps": [
+     "Ladder as remembered: 1 CEO, 2 COO, 3 AM, 4 GM, 5 AGM, 6 Manager, 7 Executive.",
+     "Block: G _ _ _ A D. It fits as G 1st (A 5th, D 6th) or G 2nd (A 6th, D 7th).",
+     "Second block: F _ C. With G 2nd the free rungs are 1, 3, 4, 5, so F-C is (1,3) or (3,5). Two between B and C then needs B at 6 or 8, or at 0 or 2, all taken or off the ladder. Out.",
+     "With G 1st the free rungs are 2, 3, 4, 7: F 2nd, C 4th. B is three from C: 7th. E takes 3rd."
+    ],
+    "answer": "CEO G, COO F, AM E, GM C, AGM A, Manager D, Executive B. This matches the paper's own key (AM is E, three persons are junior to C, B is the Executive)."
+   },
+   "check": {
+    "q": "Seven posts. A is four designations junior to G, and D is immediately junior to A. Where can G be?",
+    "options": {
+     "a": "1st or 2nd",
+     "b": "1st only",
+     "c": "1st, 2nd or 3rd",
+     "d": "4th"
+    },
+    "answer": "A",
+    "why": "The block G _ _ _ A D is six rungs tall, so in seven rungs it fits two ways. Choosing 1st only forgets that the block can slide down by one."
+   },
+   "shortcut": {
+    "title": "How many places a block fits",
+    "text": [
+     "Places = number of posts - block height + 1. A six-tall block in seven posts: 2 places. In eight posts: 3 places.",
+     "Start with the block that fits the fewest places. Do not start with \"X is senior to Y\" alone; it fits almost anywhere."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#5"
+    ],
+    "tags": [
+     "Set A (8 posts): a four-wide gap with direction is the widest block; it fits only two ways.",
+     "Set A (8 posts), question 2: read it off the same ladder.",
+     "Set A (8 posts), question 3: read it off the same ladder.",
+     "Set A (8 posts), question 4: read it off the same ladder.",
+     "Set A (8 posts), question 5: read it off the same ladder.",
+     "Set B (8 posts): two small blocks join into one chain of four, and a long gap pins it.",
+     "Set B (8 posts), question 2: read it off the same ladder.",
+     "Set B (8 posts), question 3: read it off the same ladder.",
+     "Set B (8 posts), question 4: read it off the same ladder.",
+     "Set B (8 posts), question 5: read it off the same ladder."
+    ]
+   }
+  },
+  {
+   "id": "two-cases",
+   "code": "DG3",
+   "title": "\"Only two between\" without a direction: two cases",
+   "plain": "When a gap clue does not say who is senior, the person can sit on either side. Draw both, and let another clue kill one.",
+   "needs": [],
+   "teach": [
+    "\"Only two designations lie between D and B\" gives the size of the step (three rungs) but not the direction. D can be above B or below B.",
+    "**Write both cases side by side** as two short ladders. Do not guess.",
+    "| The clue says | Cases |",
+    "| Only one person between X and Y | Y = X - 2 or X + 2 |",
+    "| Only two between X and Y | Y = X - 3 or X + 3 |",
+    "| At least four between G and I | G and I five or more rungs apart |",
+    "| Not more than one between S and U | S and U next to each other, or one apart |",
+    "Near the top or bottom of the ladder one case often falls off the end. That is a free kill: check it first.",
+    "Then kill a case with a clue that names a person already placed: a post word (\"not the CEO\"), an order clue (\"C is senior to B\") or a pinned person sitting on the rung the case needs."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 25 August 2024, shift 3 (memory-based, from the Oliveboard previous-year page). Eight persons D to K are ranked Director, General Manager, Manager, Officer, Lead, Assistant, Subordinate, Intern (Director senior-most). Three persons are ranked between F and D, who is junior to F. K is ranked as Lead. Four persons are ranked between E and I. Neither E nor I is senior to F. J is ranked as neither Director nor Officer. At least four persons are ranked between G and I.",
+    "steps": [
+     "Ladder: 1 Director, 2 GM, 3 Manager, 4 Officer, 5 Lead, 6 Assistant, 7 Subordinate, 8 Intern. Pin: K 5th.",
+     "Block F _ _ _ D: F 2nd (D 6th), F 3rd (D 7th) or F 4th (D 8th). F 1st would put D on K's rung.",
+     "E and I are five rungs apart, both below F. With F 3rd or 4th there is no such pair left below F. So F 2nd, D 6th, and E, I take 3 and 8 in some order: two cases.",
+     "Case I 3rd, E 8th: G needs four between himself and I, so G is 8th, which is E's. Out.",
+     "Case E 3rd, I 8th: G is 1st (or 2nd, taken by F). H and J take 4 and 7; J is not the Officer, so J 7th, H 4th."
+    ],
+    "answer": "Director G, GM F, Manager E, Officer H, Lead K, Assistant D, Subordinate J, Intern I. The paper's question \"who is ranked between F and K?\" has E and H, as its key says."
+   },
+   "check": {
+    "q": "Eight posts. H holds the 6th post, and only two persons are designated between H and B. Where is B?",
+    "options": {
+     "a": "3rd",
+     "b": "9th",
+     "c": "3rd or 9th",
+     "d": "4th"
+    },
+    "answer": "A",
+    "why": "Two between means three rungs apart: 3rd or 9th. There is no 9th post, so only 3rd is left. \"4th\" counts two rungs, not three."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 posts): \"only two between\" without direction: test both sides, one survives.",
+     "Set A (7 posts), question 2: read it off the same ladder.",
+     "Set A (7 posts), question 3: read it off the same ladder.",
+     "Set A (7 posts), question 4: read it off the same ladder.",
+     "Set B (8 posts): two cases for F; a gap clue kills one.",
+     "Set B (8 posts), question 2: read it off the same ladder.",
+     "Set B (8 posts), question 3: read it off the same ladder.",
+     "Set B (8 posts), question 4: read it off the same ladder.",
+     "Set B (8 posts), question 5: read it off the same ladder."
+    ]
+   }
+  },
+  {
+   "id": "mirror",
+   "code": "DG4",
+   "title": "\"As many senior to X as junior to Y\": the mirror rule",
+   "plain": "The balance clue looks hard but is one line: the two rung numbers add up to the number of posts plus one.",
+   "needs": [],
+   "teach": [
+    "Real papers love this clue. It was in 5 of the 8 real puzzles with full text, and in 10 of the 18 Sreedhar sets.",
+    "\"As many persons are senior to X as are junior to Y.\" If X is on rung r, then r - 1 people are above X. If Y is on rung s and there are n posts, n - s people are below Y. Setting them equal:",
+    "**r + s = n + 1.** X and Y sit like mirror images: X is as far from the top as Y is from the bottom.",
+    "| Posts | X is | Y is |",
+    "| 7 | 2nd | 6th |",
+    "| 8 | 3rd | 6th |",
+    "| 9 | 2nd | 8th |",
+    "When X and Y are the same person (\"as many senior to T as junior to T\"), T is in the exact middle: 4th of 7. With an even number of posts there is no middle, so that clue only appears with odd numbers.",
+    "Use the rule as soon as one of the two is placed, or to cut the list of cases: each place for X gives exactly one place for Y.",
+    "The questions use it too: \"As many persons are senior to Q as junior to ___\" is answered by the same sum."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2022 (Adda247 memory-based paper, questions 84 to 88). Seven persons P to V hold the posts Vice Chancellor, Director, Director of Nursing, HOD, Principal, Professor, Assistant Professor (VC senior-most). At most two persons are senior to R. Two designations gap between R and V, who is not a Professor. One designation gap between P and T, and both of them are senior to V. There are as many persons junior to P as senior to U. S is junior to Q.",
+    "steps": [
+     "Ladder: 1 VC, 2 DR, 3 DN, 4 HOD, 5 Principal, 6 Professor, 7 Assistant Professor.",
+     "R is 1st, 2nd or 3rd. Two between R and V, V lower (R is near the top): V = R + 3, and V is not 6th. So R 1st with V 4th, or R 2nd with V 5th.",
+     "P and T are two rungs apart and both above V. With V 4th only rungs 2 and 3 are free above him: too close. So R 2nd, V 5th, and P, T take 1 and 3.",
+     "Mirror rule: junior to P = senior to U, so P + U = 8. P 1st gives U 7th. P 3rd gives U 5th, which is V's. So P 1st, T 3rd, U 7th.",
+     "Q is above S in the rungs left, 4 and 6: Q 4th, S 6th."
+    ],
+    "answer": "VC P, DR R, DN T, HOD Q, Principal V, Professor S, Assistant Professor U. This matches the paper's solution table (three persons are senior to Q; V is the Principal)."
+   },
+   "check": {
+    "q": "Eight posts. As many persons are senior to X as are junior to Y. X is 3rd. Where is Y?",
+    "options": {
+     "a": "6th",
+     "b": "3rd",
+     "c": "5th",
+     "d": "7th"
+    },
+    "answer": "A",
+    "why": "3 + Y = 9, so Y is 6th: two above X, two below Y. \"5th\" comes from adding to 8 instead of 9."
+   },
+   "shortcut": {
+    "title": "The mirror rule in one line",
+    "text": [
+     "Senior to X = junior to Y means rung X + rung Y = posts + 1.",
+     "Check it on the finished ladder before you trust it: count the people above X and below Y."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 posts): \"as many senior as junior to T\": the middle post.",
+     "Set A (7 posts), question 2: read it off the same ladder.",
+     "Set A (7 posts), question 3: read it off the same ladder.",
+     "Set A (7 posts), question 4: read it off the same ladder.",
+     "Set A (7 posts), question 5: read it off the same ladder.",
+     "Set B (8 posts): balance between two people: H + D = 9.",
+     "Set B (8 posts), question 2: read it off the same ladder.",
+     "Set B (8 posts), question 3: read it off the same ladder.",
+     "Set B (8 posts), question 4: read it off the same ladder.",
+     "Set B (8 posts), question 5: read it off the same ladder.",
+     "Set C (7 posts): balance with a block: S + Q = 8.",
+     "Set C (7 posts), question 2: read it off the same ladder.",
+     "Set C (7 posts), question 3: read it off the same ladder.",
+     "Set C (7 posts), question 4: read it off the same ladder.",
+     "Set C (7 posts), question 5: read it off the same ladder."
+    ]
+   }
+  },
+  {
+   "id": "mirror-shift",
+   "code": "DG5",
+   "title": "\"One more\" and \"two more\": the shifted mirror",
+   "plain": "When the two counts differ by a number, the sum moves by that number. Then use the sum to test each start.",
+   "needs": [],
+   "teach": [
+    "The papers dress the balance clue up: \"The number of persons junior to D is two more than the number senior to E\" (IBPS PO 2025), \"junior to N is one more than senior to P\" (bank).",
+    "Work it the same way. Junior to D is n - D; senior to E is E - 1.",
+    "| The clue says (n posts) | Sum |",
+    "| junior to D = senior to E | D + E = n + 1 |",
+    "| junior to D is one more than senior to E | D + E = n |",
+    "| junior to D is two more than senior to E | D + E = n - 1 |",
+    "| junior to D is one less than senior to E | D + E = n + 2 |",
+    "Always check the direction with a quick count; reading \"one more\" the wrong way round moves the person two rungs.",
+    "When nobody is pinned, this is often the clue that turns three or four starts into one: list the starts from the block, and the sum gives each start exactly one place for the second person."
+   ],
+   "example": {
+    "q": "IBPS PO Prelims, 23 August 2025, shift 2 (memory-based; a sister exam). Eight persons A to H hold Chairman, MD, GM, DGM, SM, Manager, AM, Clerk (Chairman senior-most). G is three designations senior to D. The number of persons junior to D is two more than the number senior to E. Three persons are designated between E and H. C is junior to H. A is senior to the Manager. F is four persons junior to A. B is senior to the DGM.",
+    "steps": [
+     "Ladder: 1 Chairman, 2 MD, 3 GM, 4 DGM, 5 SM, 6 Manager, 7 AM, 8 Clerk.",
+     "Shifted mirror: junior to D is two more than senior to E, so D + E = 8 - 1 = 7. D is at least 4th (G is three above), so D 4th with E 3rd, D 5th with E 2nd, or D 6th with E 1st.",
+     "D 5th puts G at 2nd and E at 2nd: clash. Out.",
+     "D 4th: G 1st, E 3rd, H 7th (four below E), C 8th, B 2nd. A must be above the Manager and have F four below him: only A 5th, F 9th. Out.",
+     "D 6th: G 3rd, E 1st, H 5th, C 7th or 8th, B 2nd. A 4th, F 8th, so C 7th."
+    ],
+    "answer": "Chairman E, MD B, GM G, DGM A, SM H, Manager D, AM C, Clerk F. This matches the paper's key (D is the Manager; the SM, H, is three above F)."
+   },
+   "check": {
+    "q": "Eight posts. The number of persons junior to N is one more than the number of persons senior to P. N is 2nd. Where is P?",
+    "options": {
+     "a": "6th",
+     "b": "7th",
+     "c": "5th",
+     "d": "8th"
+    },
+    "answer": "A",
+    "why": "Six are junior to N, so five are senior to P: P is 6th (N + P = 8). \"7th\" uses the plain mirror rule and forgets the \"one more\"."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#5"
+    ],
+    "tags": [
+     "Set A (8 posts): \"one more than\": the sum is one less than usual.",
+     "Set A (8 posts), question 2: read it off the same ladder.",
+     "Set A (8 posts), question 3: read it off the same ladder.",
+     "Set A (8 posts), question 4: read it off the same ladder.",
+     "Set A (8 posts), question 5: read it off the same ladder.",
+     "Set B (8 posts): \"one more than\" with three starts to test.",
+     "Set B (8 posts), question 2: read it off the same ladder.",
+     "Set B (8 posts), question 3: read it off the same ladder.",
+     "Set B (8 posts), question 4: read it off the same ladder.",
+     "Set B (8 posts), question 5: read it off the same ladder.",
+     "Set C (9 posts): nine posts, no fixer: the balance clue tests three starts.",
+     "Set C (9 posts), question 2: read it off the same ladder.",
+     "Set C (9 posts), question 3: read it off the same ladder.",
+     "Set C (9 posts), question 4: read it off the same ladder.",
+     "Set C (9 posts), question 5: read it off the same ladder."
+    ]
+   }
+  },
+  {
+   "id": "equal-gaps",
+   "code": "DG6",
+   "title": "\"As many between A and B as between C and D\"",
+   "plain": "A clue that copies a gap from one pair to another. Find the gap of the pair you already know, then place the other pair two ways.",
+   "needs": [],
+   "teach": [
+    "This clue was in 12 of the 26 Guidely sets but in none of the real paper puzzles found, so treat it as insurance.",
+    "\"The number of persons between W and U is the same as between Y and Z.\" It does not say who is above. Read it in two steps:",
+    "- Count the persons between the pair you have placed.",
+    "- Put the other pair the same distance apart, above or below: usually two cases, as in lesson 3.",
+    "A special form: \"As many persons between P and R as between P and U\", with the same person P in both. If R and U are different people, they sit at the same distance on **opposite sides** of P, so P is in the middle of them.",
+    "With a vacant post (lesson 8), check whether the clue counts **persons** or **positions** between."
+   ],
+   "example": {
+    "q": "Bank set (Guidely, Designation puzzle, single variable, set 2, questions 1 to 5; no real paper example was found). Seven persons A to G hold Publisher, Assignment Editor, News Editor, Sub Editor, Photo Editor, Resident Editor, Reporter (Publisher senior-most). F is the Sub Editor. Only two persons are between F and D. A holds the position two above C. C is next to F. As many persons are between D and C as between B and A. E is next to B. G is senior to A.",
+    "steps": [
+     "Ladder: 1 Publisher, 2 Assignment Ed., 3 News Ed., 4 Sub Ed., 5 Photo Ed., 6 Resident Ed., 7 Reporter. Pin: F 4th.",
+     "Two between F and D: D 1st or 7th. C is next to F: 3rd or 5th, and A two above C: (C 3rd, A 1st) or (C 5th, A 3rd).",
+     "G is above A, so A is not 1st: C 5th, A 3rd, G 1st or 2nd.",
+     "D 7th: one person between D and C, so B is two from A: 1st or 5th; 5th is C's, so B 1st, G 2nd, and E must sit next to B at 2nd. Clash. Out.",
+     "D 1st: three between D and C, so B is four from A: 7th. G 2nd. E next to B: 6th."
+    ],
+    "answer": "Publisher D, Assignment Editor G, News Editor A, Sub Editor F, Photo Editor C, Resident Editor E, Reporter B."
+   },
+   "check": {
+    "q": "Seven posts. A is 2nd and B is 5th. As many persons are between A and B as between C and D. C is 6th. Where is D?",
+    "options": {
+     "a": "3rd",
+     "b": "2nd",
+     "c": "9th",
+     "d": "4th"
+    },
+    "answer": "A",
+    "why": "Two persons sit between A and B, so D is three rungs from C: 3rd or 9th, and there is no 9th. \"4th\" copies the rung difference of 2 instead of the two persons between."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "designation-based-puzzle-single-variable-set-1-prelims-1#16",
+     "designation-based-puzzle-single-variable-set-1-prelims-1#17",
+     "designation-based-puzzle-single-variable-set-1-prelims-1#18",
+     "designation-based-puzzle-single-variable-set-1-prelims-1#19",
+     "designation-based-puzzle-single-variable-set-1-prelims-1#20",
+     "designation-based-puzzle-single-variable-set-2-prelims-1#11",
+     "designation-based-puzzle-single-variable-set-2-prelims-1#12",
+     "designation-based-puzzle-single-variable-set-2-prelims-1#13",
+     "designation-based-puzzle-single-variable-set-2-prelims-1#14",
+     "designation-based-puzzle-single-variable-set-2-prelims-1#15"
+    ],
+    "tags": [
+     "Set A (6 posts): equal gaps with a block and a balance clue.",
+     "Set A (6 posts), question 2: read it off the same ladder.",
+     "Set A (6 posts), question 3: read it off the same ladder.",
+     "Set A (6 posts), question 4: read it off the same ladder.",
+     "Set A (6 posts), question 5: read it off the same ladder.",
+     "Set B (7 posts): two equal gaps from the same person put him in the middle.",
+     "Set B (7 posts), question 2: read it off the same ladder.",
+     "Set B (7 posts), question 3: read it off the same ladder.",
+     "Set B (7 posts), question 4: read it off the same ladder.",
+     "Set B (7 posts), question 5: read it off the same ladder."
+    ]
+   }
+  },
+  {
+   "id": "two-columns",
+   "code": "DG7",
+   "title": "A second fact per person: colours, projects, countries",
+   "plain": "Add a second column to the ladder. Treat \"the one who likes Pink\" as a slot on the ladder, just like a person.",
+   "needs": [],
+   "teach": [
+    "Some sets give each person a second fact: a colour, a project, a city or country, a sport. In the real papers found this happened once (IBPS PO, 24 August 2025, countries); one shift analysis also lists a designation puzzle with heights for IBPS Clerk 24 August 2024, shift 4, but its text was not found.",
+    "**Draw two columns beside the ladder:** person and second fact.",
+    "Clues now come in three kinds:",
+    "| The clue links | Example | How to use it |",
+    "| person to person | R is senior to T | as before |",
+    "| fact to fact | Pink is just junior to Orange | a block in the fact column |",
+    "| person to fact | U lives in England | same row |",
+    "A fact clue is an ordinary ladder clue with a fact in place of a name: \"Only three positions lie between D and the one who likes Orange\" is a gap from D to the Orange row. The mirror rule and blocks work unchanged.",
+    "Start with the clue that pins either column, then follow chains that alternate between the columns."
+   ],
+   "example": {
+    "q": "IBPS PO Prelims, 24 August 2025, shift 1 (memory-based; a sister exam). Six persons P to U live in Singapore, Philippines, England, Vietnam, Finland, Canada and hold the posts HRM, CEO, GM, LSP, PH, CTO, with HRM the junior-most and CTO the senior-most. U lives in England and is just senior to S. R is senior to T, who does not live in the Philippines. No one is between the persons who live in England and Vietnam. P does not live in Singapore. R is just senior to the person who lives in Finland. Only three persons are junior to P. The person who lives in Canada is immediately senior to P. There are more than two designations between Canada and Vietnam.",
+    "steps": [
+     "Ladder (the list as remembered, turned upside down): 1 CTO, 2 PH, 3 LSP, 4 GM, 5 CEO, 6 HRM.",
+     "Pins: only three junior to P, so P 3rd. Canada is just above P: row 2.",
+     "More than two between Canada (2) and Vietnam: Vietnam is 6th. England is next to Vietnam: 5th, so U 5th and S, just below U, 6th (Vietnam).",
+     "R is just above Finland. R 1st would make row 2 Finland (it is Canada); R 4th would make row 5 Finland (it is England). So R 2nd (Canada) and P lives in Finland.",
+     "T is below R: 4th. Q 1st. T is not from the Philippines: T Singapore, Q Philippines."
+    ],
+    "answer": "CTO Q (Philippines), PH R (Canada), LSP P (Finland), GM T (Singapore), CEO U (England), HRM S (Vietnam). This matches the paper's key (S is the HRM; R lives in Canada)."
+   },
+   "check": {
+    "q": "Eight posts. B is 3rd. The one who likes Red is two designations junior to B. Which row of the ladder holds Red?",
+    "options": {
+     "a": "5th",
+     "b": "1st",
+     "c": "3rd",
+     "d": "4th"
+    },
+    "answer": "A",
+    "why": "Junior means lower on the ladder: 3 + 2 = 5th. \"1st\" goes two rungs the wrong way."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#5"
+    ],
+    "tags": [
+     "Set A (8 posts, colours): colours as slots on the ladder; a balance clue joins a person to a colour.",
+     "Set A (8 posts, colours), question 2: read it off the same ladder.",
+     "Set A (8 posts, colours), question 3: read it off the same ladder.",
+     "Set A (8 posts, colours), question 4: read it off the same ladder.",
+     "Set A (8 posts, colours), question 5: read it off the same ladder.",
+     "Set B (8 posts, projects): projects as slots; the longest chain of steps runs through project clues.",
+     "Set B (8 posts, projects), question 2: read it off the same ladder.",
+     "Set B (8 posts, projects), question 3: read it off the same ladder.",
+     "Set B (8 posts, projects), question 4: read it off the same ladder.",
+     "Set B (8 posts, projects), question 5: read it off the same ladder."
+    ]
+   }
+  },
+  {
+   "id": "vacant",
+   "code": "DG8",
+   "title": "One post vacant: persons and positions are not the same",
+   "plain": "More posts than people. Count \"positions\" on the ladder but \"persons\" only where someone sits.",
+   "needs": [],
+   "teach": [
+    "Some Guidely sets have one more post than people: \"One of the positions is left vacant.\" None of the real papers found had this, so it is insurance.",
+    "Draw the full ladder of posts. One rung will stay empty.",
+    "| The clue says | Counts |",
+    "| M works two positions senior to I | rungs: I = M + 2, even if the rung between is empty |",
+    "| Only two persons are designated between K and L | people only: an empty rung between them does not count |",
+    "| As many positions senior to M as junior to K | rungs: M + K = posts + 1 |",
+    "| Who is two persons senior to N? | skip the empty rung when you count up |",
+    "The vacant rung is usually found last, as the rung nobody needs. If two arrangements seem to work, check the persons-between clues again with the empty rung skipped."
+   ],
+   "example": {
+    "q": "Bank set (Guidely, Designation puzzle with vacant, set 1, questions 1 to 5; no real paper example was found). Six persons A to F; posts Secretary, Principal, Vice-Principal, HOD, HR, Coordinator, Staff (Secretary senior-most); one post is vacant. D works four positions senior to F. C works immediately junior to F. Only two persons are designated between C and B, who is not the Vice-Principal. As many positions between D and B as between F and A. E is junior to A.",
+    "steps": [
+     "Ladder: 1 Secretary, 2 Principal, 3 Vice-Principal, 4 HOD, 5 HR, 6 Coordinator, 7 Staff.",
+     "Block D _ _ _ F C (positions): D 1st (F 5th, C 6th) or D 2nd (F 6th, C 7th).",
+     "D 1st: two persons between B and C. B 2nd works if one of rungs 3, 4 is empty; B 3rd is not allowed. Equal positions: D to B is 1, so A is next to F: 4th (6th is C). Then rung 3 must be the empty one, and E (below A) is 7th.",
+     "D 2nd fails the B clue in every place (checked by script)."
+    ],
+    "answer": "Secretary D, Principal B, Vice-Principal vacant, HOD A, HR F, Coordinator C, Staff E."
+   },
+   "check": {
+    "q": "Eight posts, seven persons. M is 2nd, the 3rd post is vacant and I is 4th. How many persons are designated between M and I?",
+    "options": {
+     "a": "None",
+     "b": "One",
+     "c": "Two",
+     "d": "Three"
+    },
+    "answer": "A",
+    "why": "Only the vacant 3rd rung lies between them, and it holds no person. \"One\" counts positions, not persons."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#6",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#7",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#8",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#9",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#10",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#11",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#12",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#13",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#14",
+     "designation-based-puzzle-with-vacant-set-1-prelims-1#15"
+    ],
+    "tags": [
+     "Set A (8 posts, 7 persons): positions and persons counted differently around the vacant post.",
+     "Set A (8 posts, 7 persons), question 2: read it off the same ladder.",
+     "Set A (8 posts, 7 persons), question 3: read it off the same ladder.",
+     "Set A (8 posts, 7 persons), question 4: read it off the same ladder.",
+     "Set A (8 posts, 7 persons), question 5: read it off the same ladder.",
+     "Set B (8 posts, 7 persons): the vacant post is found last, as the slot nobody needs.",
+     "Set B (8 posts, 7 persons), question 2: read it off the same ladder.",
+     "Set B (8 posts, 7 persons), question 3: read it off the same ladder.",
+     "Set B (8 posts, 7 persons), question 4: read it off the same ladder.",
+     "Set B (8 posts, 7 persons), question 5: read it off the same ladder."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#1": [
+    "Ladder, top to bottom: 1 CEO, 2 ED, 3 CGM, 4 GM, 5 DGM, 6 MG, 7 AM, 8 Clerk.",
+    "Fixers first. \"Only three persons are senior to H\": H is 4th (GM). \"G is senior to only B\": B is 8th and G is 7th.",
+    "Above F sit C, A and E (F is junior to C; A is not junior to F; E is senior to A). Below F sit D, G and B. Three below F means F is 5th.",
+    "D is 6th. C, A and E share posts 1, 2, 3. C is not CEO or CGM, so C is 2nd. E is above A: E 1st, A 3rd.",
+    "Ladder: E, C, A, H, F, D, G, B.",
+    "The junior-most person is B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#2": [
+    "Ladder: E, C, A, H, F, D, G, B.",
+    "Below F (5th): D, G, B. Three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#3": [
+    "Ladder: E, C, A, H, F, D, G, B.",
+    "Post 2 is ED: C"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#4": [
+    "Ladder: E, C, A, H, F, D, G, B.",
+    "F is 5th, A is 3rd: only H between. One"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-designation-puzzle#5": [
+    "Ladder: E, C, A, H, F, D, G, B.",
+    "Above A (3rd): E and C. Two"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#1": [
+    "Ladder: 1 Director, 2 Principal, 3 VP, 4 ST, 5 Teacher, 6 AT, 7 Librarian, 8 AL.",
+    "Fixed post: T is the Senior Teacher, 4th.",
+    "W is below T and Y below W: W 5th, Y 6th (Y cannot be 7th, he is not the Librarian). U is below Y: 7th or 8th.",
+    "S is junior to the Teacher (5th) and is not the AL: S is 7th. So U is 8th.",
+    "Only three between S and X: X is 3rd. V is above X and Z below V, both in posts 1 and 2: V 1st, Z 2nd.",
+    "Ladder: V, Z, X, T, W, Y, S, U. The Principal is Z"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#2": [
+    "Ladder: V, Z, X, T, W, Y, S, U.",
+    "X 3rd, W 5th: only T between. One"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#3": [
+    "Ladder: V, Z, X, T, W, Y, S, U.",
+    "Three are senior to T (4th). Three are junior to the 5th person: W"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#4": [
+    "Ladder: V, Z, X, T, W, Y, S, U.",
+    "S is 7th, the Librarian: Librarian – S"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-58-78378-designation-puzzle#5": [
+    "Ladder: V, Z, X, T, W, Y, S, U.",
+    "V is 1st: Director"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#1": [
+    "Ladder: 1 CEO, 2 ED, 3 MD, 4 CGM, 5 MG, 6 AM, 7 PO, 8 Clerk.",
+    "Fixer: L is senior to only one person, so L is 7th.",
+    "M is senior to the CGM and N is senior to M: M is 2nd or 3rd. P is one place apart from M by one person and is junior to the MD: M 2nd gives P 4th; M 3rd gives P 5th.",
+    "M 3rd, P 5th: N must be 1st or 2nd and the block R-K needs two free posts next to each other among 1, 2, 4, 6, 8. None left. Out.",
+    "M 2nd, P 4th: N 1st. R-K fits only in 5-6. Q (senior to the AM) takes 3rd, O takes 8th.",
+    "Ladder: N, M, Q, P, R, K, L, O. The MD is Q"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#2": [
+    "Ladder: N, M, Q, P, R, K, L, O.",
+    "K is 6th: K - AM"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#3": [
+    "Ladder: N, M, Q, P, R, K, L, O.",
+    "O is 8th, the CGM (P) is 4th: R, K, L between. Three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#4": [
+    "Ladder: N, M, Q, P, R, K, L, O.",
+    "K is 6th: five above. Five"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-31-78351-designation-puzzle#5": [
+    "Ladder: N, M, Q, P, R, K, L, O.",
+    "Each pair is a person and the post two below his own, except one: P is CGM, not two below ED. P - ED"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#1": [
+    "Ladder: 1 Director, 2 CEO, 3 MD, 4 CFO, 5 COO, 6 MG, 7 AM, 8 Clerk.",
+    "Widest block: four between L and M, L senior. M = L + 5: (1, 6), (2, 7) or (3, 8). U is junior to M, so M is not 8th.",
+    "L 1st, M 6th: N is 4th or 8th, and N must be above U, who is below M. N 4th. The block P-O takes 2-3 (at 7-8 it would leave U no rung), so S, T, U share 5, 7, 8 with U below M and S above T, S not COO (5th). No fit. Out.",
+    "L 2nd, M 7th: U is 8th. N is 5th. P-O fits only in 3-4. S above T in posts 1 and 6.",
+    "Ladder: S, L, P, O, N, T, M, U. The CEO is L"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#2": [
+    "Ladder: S, L, P, O, N, T, M, U.",
+    "O is 4th: O - CFO"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#3": [
+    "Ladder: S, L, P, O, N, T, M, U.",
+    "T is 6th, the MD (P) is 3rd: O and N between. Two"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#4": [
+    "Ladder: S, L, P, O, N, T, M, U.",
+    "Below O (4th): N, T, M, U. Four"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-54-78374-designation-puzzle#5": [
+    "Ladder: S, L, P, O, N, T, M, U.",
+    "Four pairs put a person with the post just below his own; T is 6th, so T with COO (5th) breaks the pattern: T - COO"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#1": [
+    "Ladder: 1 HR Manager, 2 Head of Marketing, 3 Head of Design, 4 Graphic designer, 5 Designer, 6 CSM, 7 Communication officer, 8 Buyer assistant.",
+    "Block one: R just above V, and V is above P. Block two: T just below P. So R, V, P, T in that order, P at least 3rd.",
+    "More than three between P and U, U junior: U is at least five below P. Only P 3rd with U 8th fits.",
+    "So R 1st, V 2nd, P 3rd, T 4th, U 8th. Two between S and T: S is 7th (and S, U are next to each other, as required).",
+    "W and Q take 5 and 6. W is not the CSM: W 5th, Q 6th.",
+    "Ladder: R, V, P, T, W, Q, S, U. Just junior to the Graphic designer (T, 4th) is W"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#2": [
+    "Ladder: R, V, P, T, W, Q, S, U.",
+    "I true (R 1st), II true (S 7th), III false (U is just junior to S). Only III"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#3": [
+    "Ladder: R, V, P, T, W, Q, S, U.",
+    "V is Head of Marketing, not Head of Design: Head of Design – V"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#4": [
+    "Ladder: R, V, P, T, W, Q, S, U.",
+    "Below Q (6th): S, U. Two"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-designation-puzzle#5": [
+    "Ladder: R, V, P, T, W, Q, S, U.",
+    "3rd post: P"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#1": [
+    "Ladder: 1 CEO, 2 ED, 3 GM, 4 DGM, 5 MG, 6 AM, 7 PO.",
+    "Fixer: A is senior to only three, so A is 4th. E is junior to the MG: 6th or 7th.",
+    "F is below G and above the MG, so G and F are both in posts 1 to 3.",
+    "Two between D and B gives two cases each time. D has more than one person above him, so D is 3rd, 5th, 6th or 7th.",
+    "D 5th: B 2nd needs C above B in 1st, leaving one post for G and F. Out. D 6th: B 3rd, with C, G, F all above 3rd. Out. D 7th: B 4th is A's. Out.",
+    "D 3rd, B 6th. G 1st, F 2nd, C 5th (above B), E 7th.",
+    "Ladder: G, F, D, A, C, B, E. Above C (5th): Four"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#2": [
+    "Ladder: G, F, D, A, C, B, E.",
+    "7th: E"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#3": [
+    "Ladder: G, F, D, A, C, B, E.",
+    "6th post: B"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-designation-puzzle#4": [
+    "Ladder: G, F, D, A, C, B, E.",
+    "F is 2nd: F is ED"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#1": [
+    "Ladder: 1 CEO, 2 ED, 3 CGM, 4 GM, 5 DGM, 6 MG, 7 AM, 8 Clerk.",
+    "Fixer: A is senior to only three: A 5th.",
+    "C is above the GM: posts 1 to 3. G is above F, and F is above the DGM; G is not the CEO.",
+    "Two cases for F: 3rd (then C 1st, G 2nd) or 4th (G 2nd or 3rd).",
+    "H is above B with two between: (1,4), (2,5), (3,6), (4,7) or (5,8). D must have at least two below him, so D is 6th or higher.",
+    "F 4th: the only H-B pair left is (3,6) with C 1st, G 2nd; then D has only 7 and 8 left. Out.",
+    "F 3rd: C 1st, G 2nd, H 4th, B 7th, D 6th, E 8th.",
+    "Ladder: C, G, F, H, A, D, B, E. The AM (7th) is B"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#2": [
+    "Ladder: C, G, F, H, A, D, B, E.",
+    "G 2nd, D 6th: F, H, A between. Three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#3": [
+    "Ladder: C, G, F, H, A, D, B, E.",
+    "F is 3rd and H 4th: H is just junior to F"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#4": [
+    "Ladder: C, G, F, H, A, D, B, E.",
+    "Above D (6th): five people. More than four"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-designation-puzzle#5": [
+    "Ladder: C, G, F, H, A, D, B, E.",
+    "8th: E"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#1": [
+    "Ladder: 1 GM, 2 DGM, 3 AGM, 4 CM, 5 SM, 6 M, 7 PO.",
+    "Fixers: W is at the top. \"As many senior as junior to T\" in seven posts puts T in the middle: 4th.",
+    "Two between T and U: U is 1st or 7th, so U 7th.",
+    "Q is above T and below W: 2nd or 3rd. Two between V and Q: Q 2nd gives V 5th; Q 3rd gives V 6th.",
+    "Q 3rd: P must be below Q and S below P, but only posts 2 and 5 are free. Out.",
+    "Q 2nd, V 5th: P and S take 3 and 6, P above S.",
+    "Ladder: W, Q, P, T, V, S, U. P is 3rd: Assistant General Manager"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#2": [
+    "Ladder: W, Q, P, T, V, S, U.",
+    "Q 2nd, T 4th: P between. One"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#3": [
+    "Ladder: W, Q, P, T, V, S, U.",
+    "7th: U"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#4": [
+    "Ladder: W, Q, P, T, V, S, U.",
+    "Mirror rule: 2 + ? = 8, so the 6th person: S"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-designation-puzzle#5": [
+    "Ladder: W, Q, P, T, V, S, U.",
+    "Four pairs are one post apart; T (4th) and W (1st) are three apart: TW"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#1": [
+    "Ladder: 1 CEO, 2 ED, 3 CGM, 4 GM, 5 DGM, 6 MG, 7 AM, 8 Clerk.",
+    "B is above the CGM: 1st or 2nd. Three between B and E, and B is too high to be the junior one: E is 5th or 6th.",
+    "Mirror rule: as many junior to H as senior to D, so H + D = 9.",
+    "H is below E and is not 8th. B 1st, E 5th: H 6th (D 3rd) or 7th (D 2nd). B 2nd, E 6th: H 7th, D 2nd, clash with B. Out.",
+    "Chain G above F above A above C, and A above H. With H 6th and D 3rd the free posts are 2, 4, 7, 8, so the chain fills them in order and A is 7th, below H. Out.",
+    "H 7th, D 2nd: free 3, 4, 6, 8 give G 3rd, F 4th, A 6th, C 8th.",
+    "Ladder: B, D, G, F, E, A, H, C. A is 6th: Manager"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#2": [
+    "Ladder: B, D, G, F, E, A, H, C.",
+    "C 8th, E 5th: A and H between. Two"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#3": [
+    "Ladder: B, D, G, F, E, A, H, C.",
+    "Mirror rule: 6 + ? = 9, the 3rd person: G"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#4": [
+    "Ladder: B, D, G, F, E, A, H, C.",
+    "Four pairs are a person and a post one place away; H is 7th, three away from GM: H – GM"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-designation-puzzle#5": [
+    "Ladder: B, D, G, F, E, A, H, C.",
+    "Below F (4th): E, A, H, C. Four"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#1": [
+    "Ladder: 1 CTO, 2 PH, 3 SM, 4 SA, 5 LSP, 6 SE, 7 ST.",
+    "Block: V just above Q, and Q is above the SA: V-Q is (1,2) or (2,3).",
+    "Three between R and V, R below: V 1st gives R 5th; V 2nd gives R 6th.",
+    "Mirror rule: as many senior to S as junior to Q, so S + Q = 8.",
+    "V 1st, Q 2nd: S 6th, R 5th. T below R is 7th. W and U are left with 3 and 4, but W may not be just above U. Out.",
+    "V 2nd, Q 3rd: S 5th, R 6th, T 7th. W 1st and U 4th (not next to each other).",
+    "Ladder: W, V, Q, U, S, R, T. Three posts above R (6th) is the 3rd: Q"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#2": [
+    "Ladder: W, V, Q, U, S, R, T.",
+    "V 2nd, T 7th: four between. More than three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#3": [
+    "Ladder: W, V, Q, U, S, R, T.",
+    "W 1st, S 5th: Four persons senior"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#4": [
+    "Ladder: W, V, Q, U, S, R, T.",
+    "Between Q (3rd) and R (6th): two. Two are junior to the 5th person: S"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-designation-puzzle#5": [
+    "Ladder: W, V, Q, U, S, R, T.",
+    "Four pairs are two posts apart; W (1st) and PH (2nd) are one apart: PH - W"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#1": [
+    "Ladder: 1 CEO, 2 COO, 3 CFO, 4 VP, 5 MG, 6 AM, 7 Executive, 8 Clerk.",
+    "Fixer: K is the VP, 4th. One between K and N: N is 2nd or 6th.",
+    "\"Junior to N is one more than senior to P\": N + P = 8 (one less than the usual 9).",
+    "N 6th would give P 2nd, but Q must sit between N and P with N above: Out. So N 2nd, P 6th.",
+    "M is above N: 1st. One between R and M: R 3rd. Q is between N and P: 5th. L just above O: 7th and 8th.",
+    "Ladder: M, N, R, K, Q, P, L, O. The MG (5th) is Q"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#2": [
+    "Ladder: M, N, R, K, Q, P, L, O.",
+    "Just junior to P is L (7th): six above him. Six"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#3": [
+    "Ladder: M, N, R, K, Q, P, L, O.",
+    "1st: M"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#4": [
+    "Ladder: M, N, R, K, Q, P, L, O.",
+    "Four pairs put a person with the post two below his own; Q is 5th, CFO is 3rd: Q – CFO"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-56-78376-designation-puzzle#5": [
+    "Ladder: M, N, R, K, Q, P, L, O.",
+    "Alphabetical K, L, M, N, O, P, Q, R against M, N, R, K, Q, P, L, O: only P stays (6th). One"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#1": [
+    "Ladder: 1 CEO, 2 ED, 3 CGM, 4 GM, 5 DGM, 6 MG, 7 AM, 8 Clerk.",
+    "Fixer: F is the GM, 4th. J is above the GM: 1st to 3rd. Three between J and I: I is 5th, 6th or 7th.",
+    "\"Junior to I is one more than senior to E\": I + E = 8. So I 5th, E 3rd; I 6th, E 2nd; I 7th, E 1st.",
+    "J 1st, I 5th, E 3rd: free 2, 6, 7, 8. H must be below E, and K (not ED) above D above G. K, D, G take 6, 7, 8 and H is forced to 2nd, above E. Out.",
+    "J 2nd, I 6th, E 2nd: clash. Out.",
+    "J 3rd, I 7th, E 1st: free 2, 5, 6, 8. K is not 2nd, so H 2nd, K 5th, D 6th, G 8th.",
+    "Ladder: E, H, J, F, K, D, I, G. K is 5th: Deputy General Manager"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#2": [
+    "Ladder: E, H, J, F, K, D, I, G.",
+    "F 4th, G 8th: K, D, I between. Three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#3": [
+    "Ladder: E, H, J, F, K, D, I, G.",
+    "Mirror rule: 3 + ? = 9, the 6th person: D"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#4": [
+    "Ladder: E, H, J, F, K, D, I, G.",
+    "Four pairs put a person with the post just above his own (I 7th with MG, H 2nd with CEO, D 6th with DGM, F 4th with CGM); J is 3rd and GM is just below him: J – GM"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-designation-puzzle#5": [
+    "Ladder: E, H, J, F, K, D, I, G.",
+    "Below I (7th): G. One"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#1": [
+    "Ladder: 1 CEO, 2 HOD, 3 ED, 4 GM, 5 DGM, 6 MG, 7 AM, 8 PO, 9 Clerk.",
+    "B is above the GM: 1st to 3rd. Three between B and E, E below: E = B + 4. A just below E: A = B + 5.",
+    "Mirror rule (nine posts): senior to I = junior to A, so I + A = 10.",
+    "B 1st: E 5th, A 6th, I 4th. D needs two or more between him and I, and H below D (not 9th) with G three from H: D 7th, H 8th, G 5th or 11th. Out.",
+    "B 2nd: E 6th, A 7th, I 3rd. D must be 6th or lower: D 8th, H 9th, but H is not the Clerk. Out.",
+    "B 3rd: E 7th, A 8th, I 2nd. D is 5th or lower and has H below: D 5th, H 6th. F is above D and not the GM: F 1st. G three from H: 9th. C takes 4th.",
+    "Ladder: F, I, B, C, D, H, E, A, G. The GM (4th) is C"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#2": [
+    "Ladder: F, I, B, C, D, H, E, A, G.",
+    "G 9th, D 5th: H, E, A between. Three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#3": [
+    "Ladder: F, I, B, C, D, H, E, A, G.",
+    "F is 1st: Chief Executive Officer"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#4": [
+    "Ladder: F, I, B, C, D, H, E, A, G.",
+    "Four pairs are three posts apart; E (7th) and B (3rd) are four apart: E – B"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-designation-puzzle#5": [
+    "Ladder: F, I, B, C, D, H, E, A, G.",
+    "I true (H 6th is MG); II false (four between A and B); III false (H is above G). Only I"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#1": [
+    "Ladder: 1 Commissioner, 2 DC, 3 Inspector, 4 DI, 5 Superintendent, 6 DS, 7 AC, 8 Agent. Two columns: person and colour.",
+    "D is above the Inspector: 1st or 2nd. Three between D and Orange: Orange is 5th or 6th. Pink just below Orange.",
+    "Mirror rule: senior to A = junior to Pink, so A + Pink = 9.",
+    "D 2nd: Orange 6th, Pink 7th, A 2nd, clash. So D 1st, Orange 5th, Pink 6th, A 3rd.",
+    "B is below Pink: 7th or 8th. Three between B and E: B 7th gives E 3rd (A's). So B 8th, E 4th.",
+    "One between A and White: White is 1st or 5th; 5th is Orange, so D likes White.",
+    "Purple is above E and two from C. Purple 2nd gives C 5th; Purple 3rd gives C 6th, then F (below C) 7th and H must sit at 2 or 5 with Yellow three away, which hits White or Orange. Out.",
+    "So Purple 2nd, C 5th (Orange). H likes Green and Yellow is three from H: H 7th, Yellow 4th (E). F is below C: 6th (Pink). G 2nd (Purple). A cannot like Blue: A Black, B Blue.",
+    "Ladder: D White, G Purple, A Black, E Yellow, C Orange, F Pink, H Green, B Blue. The Deputy Commissioner is G"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#2": [
+    "Ladder: D, G, A, E, C, F, H, B.",
+    "B 8th, Orange (C) 5th: F, H between. Two"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#3": [
+    "Colours: D White, G Purple, A Black, E Yellow, C Orange, F Pink, H Green, B Blue.",
+    "A likes Black"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#4": [
+    "Ladder: D White, G Purple, A Black, E Yellow, C Orange, F Pink, H Green, B Blue.",
+    "Four pairs are true; the Agent (B) likes Blue, not Black: Agent – Black"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-designation-puzzle#5": [
+    "Ladder: D, G, A, E, C, F, H, B.",
+    "Six are senior to H (7th). Six are junior to the 2nd person, G, who likes Purple: The one who likes Purple"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#1": [
+    "Ladder: 1 Commissioner, 2 DC, 3 Inspector, 4 DI, 5 Superintendent, 6 DS, 7 AC, 8 Agent. Two columns: person and project.",
+    "R is below the DS: 7th or 8th. One between R and project H: R 7th gives H at 5th; R 8th gives H at 6th.",
+    "Mirror rule: senior to project H = junior to S, so H + S = 9. Project E is just below S.",
+    "R 7th: H 5th, S 4th, project E 5th, but 5th already does project H. Out. So R 8th, project H 6th, S 3rd, project E 4th.",
+    "Q is above S and two from project C: Q 1st puts C at 4th (E's). So Q 2nd, project C 5th.",
+    "Two between V and project E: V 1st or 7th. Equal gaps: V to C as W to H. V 1st needs W four from 6th: 2nd (Q) or 10th. Out. V 7th: W 4th.",
+    "Five between projects F and G: (1,7) or (2,8). G is above W, so G is 1st or 2nd. (1,7) would give V project F, which is not allowed. So G 2nd, F 8th.",
+    "Project B is just below P: P 6th gives B at 7th. (P 1st would put B at 2nd, which is G; P 5th would put B at 6th, which is H.) So P 6th, project B 7th.",
+    "T is not the Superintendent: T 1st, U 5th. Project A is not at the top: A 3rd (S), D 1st (T).",
+    "Ladder: T (D), Q (G), S (A), W (E), U (C), P (H), V (B), R (F). The Superintendent is U"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#2": [
+    "Ladder: T, Q, S, W, U, P, V, R.",
+    "T 1st, P 6th: four between. Four"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#3": [
+    "Ladder: T (D), Q (G), S (A), W (E), U (C), P (H), V (B), R (F).",
+    "S does project A, and S (3rd) and P (6th) have two between: Both the given statements 1 and 2 are true"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#4": [
+    "Ladder: T (D), Q (G), S (A), W (E), U (C), P (H), V (B), R (F).",
+    "T does Project D"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-19-78339-designation-puzzle#5": [
+    "Ladder: T (D), Q (G), S (A), W (E), U (C), P (H), V (B), R (F).",
+    "Four pairs are true; Q is the DC, not the Commissioner: Q - Commissioner"
+   ]
+  },
+  "guidely": {
+   "designation-based-puzzle-single-variable-set-1-prelims-1#16": [
+    "Ladder: 1 Dean, 2 Surgeon, 3 Doctor, 4 Nursing, 5 Physician Assistant, 6 Intern.",
+    "Block: U just above Z, and X two below Z: U, Z, _, X. U is 1st, 2nd or 3rd.",
+    "Mirror rule: senior to X = junior to W, so X + W = 7.",
+    "U 1st: X 4th, W 3rd. Equal gaps: one between W and U, so one between Y and Z (2nd): Y 4th, taken. Out.",
+    "U 2nd: X 5th, W 2nd, clash. Out.",
+    "U 3rd: Z 4th, X 6th, W 1st. Y and V take 2 and 5 with V below Y: Y 2nd, V 5th. Check: one between W and U, one between Y and Z.",
+    "Ladder: W, Y, U, Z, V, X. Immediate junior of U is Z"
+   ],
+   "designation-based-puzzle-single-variable-set-1-prelims-1#17": [
+    "Ladder: W, Y, U, Z, V, X.",
+    "WY next to each other, ZX not, VZ next to each other: Both I and III"
+   ],
+   "designation-based-puzzle-single-variable-set-1-prelims-1#18": [
+    "Ladder: W, Y, U, Z, V, X.",
+    "Below V (5th): X. One"
+   ],
+   "designation-based-puzzle-single-variable-set-1-prelims-1#19": [
+    "Ladder: W, Y, U, Z, V, X.",
+    "Four pairs put a post with the person one place below it; W is 1st, far from Physician Assistant (5th): Physician Assistant-W"
+   ],
+   "designation-based-puzzle-single-variable-set-1-prelims-1#20": [
+    "Ladder: W, Y, U, Z, V, X.",
+    "After the swaps: U 1st, Z 2nd, W 3rd, Y 4th. Between Y and U: Two"
+   ],
+   "designation-based-puzzle-single-variable-set-2-prelims-1#11": [
+    "Ladder: 1 CEO, 2 GM, 3 DGM, 4 AGM, 5 Manager, 6 AM, 7 Clerk.",
+    "Two between P and U, and as many between P and R as between P and U: U and R are each three from P, on opposite sides. Only P 4th fits, with U and R at 1 and 7.",
+    "S is below P and above R, so R is 7th and U 1st.",
+    "S just above T: S 5th, T 6th.",
+    "V is above T but not just below U: V is not 2nd, so V 3rd and Q 2nd.",
+    "Ladder: U, Q, V, P, S, T, R. The CEO is U"
+   ],
+   "designation-based-puzzle-single-variable-set-2-prelims-1#12": [
+    "Ladder: U, Q, V, P, S, T, R.",
+    "Above T (6th): five. More than four"
+   ],
+   "designation-based-puzzle-single-variable-set-2-prelims-1#13": [
+    "Ladder: U, Q, V, P, S, T, R.",
+    "Four pairs go one place down the ladder; P (4th) to V (3rd) goes up: PV"
+   ],
+   "designation-based-puzzle-single-variable-set-2-prelims-1#14": [
+    "Ladder: U, Q, V, P, S, T, R.",
+    "Alphabetical P, Q, R, S, T, U, V against U, Q, V, P, S, T, R: only Q stays. One"
+   ],
+   "designation-based-puzzle-single-variable-set-2-prelims-1#15": [
+    "Ladder: U, Q, V, P, S, T, R.",
+    "Between Q (2nd) and T (6th): three. Between V (3rd) and R (7th): three. As many persons hold the position between V and R"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#6": [
+    "Eight posts, seven persons, one post vacant: 1 DGP, 2 DSP, 3 IG, 4 DIG, 5 CI, 6 SI, 7 HC, 8 PC.",
+    "I is two positions below M and above the CI (5th, a real person): M 1st, I 3rd or M 2nd, I 4th.",
+    "Mirror rule on positions: positions above M = positions below K, so M + K = 9: K 8th or 7th.",
+    "M 1st, I 3rd, K 8th: N is three below L and two persons sit between K and L. L 4th gives N 7th; then J is two from N: 5th. O is not at the top: 2nd. Post 6 is vacant, and between L and K sit J and N: two persons.",
+    "The other start (M 2nd, I 4th, K 7th) fails the L, N and J clues (checked by script). Out.",
+    "Ladder: M, O, I, L, J, vacant, N, K. Two persons above N: J, then L, who is the one who is immediately senior to J"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#7": [
+    "Ladder: M, O, I, L, J, vacant, N, K.",
+    "O is 2nd: DSP"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#8": [
+    "Ladder: M, O, I, L, J, vacant, N, K.",
+    "Between O and N: I, L, J (the vacant post is not a person). Three"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#9": [
+    "Ladder: M, O, I, L, J, vacant, N, K.",
+    "From the bottom: K, N, J, L, I, O, M against I, J, K, L, M, N, O: only L stays. One"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#10": [
+    "Ladder: M, O, I, L, J, vacant, N, K.",
+    "Between M and L: O, I (two). Between N and I: L, J (two). L, I"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#11": [
+    "Eight posts, seven persons, one vacant: 1 MD, 2 CEO, 3 COO, 4 CFO, 5 CRO, 6 HR, 7 TL, 8 Client.",
+    "U is five positions below T: (1,6), (2,7) or (3,8). Mirror rule on positions: U + V = 9.",
+    "T 3rd, U 8th, V 1st: three persons between V and S, and R three above S. S 5th with R 2nd works (R is not the CRO).",
+    "Equal gaps: R to T is one step, so P is one step from S: 4th or 6th. P and Q need more than one position between them: P 4th, Q 7th. Post 6 is vacant.",
+    "The other starts (T 1st or 2nd) break the R-S or V-S clue by script.",
+    "Ladder: V, R, T, P, S, vacant, Q, U. The vacant post is HR"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#12": [
+    "Ladder: V, R, T, P, S, vacant, Q, U.",
+    "After the swaps: S 1st, R 2nd, T 3rd, U 4th, V 5th, Q 7th, P 8th. Between U and V: No one"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#13": [
+    "Ladder: V, R, T, P, S, vacant, Q, U.",
+    "Four pairs are one person apart; Q (7th) and R (2nd) are far apart: QR"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#14": [
+    "Ladder: V, R, T, P, S, vacant, Q, U.",
+    "Below P (4th) and above Q (7th): S"
+   ],
+   "designation-based-puzzle-with-vacant-set-1-prelims-1#15": [
+    "Ladder: V, R, T, P, S, vacant, Q, U.",
+    "Three persons above S: P, T, then R, who is two positions above P: The one who is two positions senior to P"
+   ]
+  }
+ }
+}
