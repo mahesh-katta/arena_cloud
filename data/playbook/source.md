@@ -12027,6 +12027,13 @@ All six puzzle modules in one file. Each module is complete on its own and they 
 <td>6 Oct 2026</td>
 <td>51 Sreedhar sets (140 questions; 45 distinct, all solved by script) and 48 Guidely questions; 6 sets in Clerk papers, 8 in sister papers; 9 of 18 Clerk shift lists name it</td>
 </tr>
+<tr>
+<td>10</td>
+<td>Designation Puzzles</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>23 Sreedhar sets (114 questions; 18 designation) and 28 Guidely puzzles (140 questions); 44 designation sets solved, all unique; 5 sets in Clerk papers (4 with text), 4 in sister papers</td>
+</tr>
 </table>
 **A note on time, for all six.** A puzzle set is one arrangement followed by about five questions. Nobody solves the arrangement in 45 seconds. The honest target is 3 to 6 minutes for the arrangement and 15 to 20 seconds for each question after it.
 ## Module 1: Floor and Flat Puzzles - Speed Mastery Module
@@ -15424,6 +15431,325 @@ After these, work through the Guidely "Blood Relation (Tricky in Para)" sets 1 a
 - The six drill sets and the nine lesson checks were solved by the same script, and their answers come from it.
 **Where the paper evidence comes from.** The 35 cached papers were searched by text for family words and every hit was read. The paper cache labels only some files by shift; the 2023, 2024 and 2025 Guidely files are compilations whose shift is not stated. The shift topic lists were read on 20 analysis pages (Bankersadda, Adda247, Oliveboard, PW); the 25 August 2024 shift 2 page had no readable topic table and is not counted. Search snippets were not used as sources.
 **Not verified:** 32 Guidely questions; the IBPS Clerk shifts whose paper is not in the cache; whether the coded form or the photograph form has appeared in any paper not opened here. Memory-based papers are reconstructions.
+**Corrections:** none so far.
+## Module 10: Designation Puzzles - Speed Mastery Module
+**Sample.** Papers opened: the 23 cached IBPS Clerk Prelims memory-based papers (16 of them carry a Reasoning section; 2016 to October 2025) and the 12 cached sister papers (SBI Clerk, IBPS RRB Clerk, IBPS PO Prelims), plus on the web the PW shift analyses for 8 IBPS Clerk 2024 shifts and 8 IBPS Clerk 2025 shifts, 3 Oliveboard and 1 PracticeMock analysis, and 5 Oliveboard previous-year question pages. Designation sets found in IBPS Clerk: 5 (12 Dec 2021, 2022, 25 Aug 2024 shift 3 and 5 Oct 2025 shift 1 with full text; 24 Aug 2024 shift 4 named in two shift analyses only). In sister papers: 4, all with full text (IBPS RRB Clerk 17 Aug 2024 shift 2 and 6 Dec 2025 shift 1; IBPS PO 23 Aug 2025 shift 2 and 24 Aug 2025 shift 1). Bank: 23 Sreedhar sets (114 questions; 18 are designation sets, 5 are department-grouping sets filed under this topic) and 7 Guidely sets holding 28 puzzles (140 questions). The floor of 8 target-exam shifts plus 6 to 10 sister questions is **not met**: 5 IBPS Clerk sightings and 4 sister sets. Memory-based papers are reconstructions, not official papers.
+**A note on time.** A designation set is one ladder and about five questions. The honest target is 2 to 4 minutes for the ladder and 15 to 20 seconds for each question after it.
+### 1. Basic Type, Core Mental Model and Grid
+**What the basic type looks like.** Six to nine persons hold six to nine different posts (CEO, ED, GM ... Clerk). The question lists the posts in order. Clues say who is senior or junior to whom, by how many posts, and how many persons are between two people. You rebuild who holds which post.
+**The one idea: it is a single vertical line. Draw the posts as a ladder with the senior-most on rung 1, and every clue becomes a step up or down that ladder.**
+**How to draw it.** Write the posts down the page, senior-most at the top, and number the rungs 1, 2, 3 ... If the paper lists the posts "in increasing order" (Clerk first), turn the list upside down before you start.
+**The step words**
+<table header-row="true">
+<tr>
+<td>The clue says</td>
+<td>Write it as</td>
+<td>Cases</td>
+</tr>
+<tr>
+<td>X is just (immediately) junior to Y</td>
+<td>X = Y + 1</td>
+<td>One block</td>
+</tr>
+<tr>
+<td>X is three designations / persons junior to Y</td>
+<td>X = Y + 3</td>
+<td>One block</td>
+</tr>
+<tr>
+<td>Three persons between F and D, D junior to F</td>
+<td>D = F + 4</td>
+<td>One block</td>
+</tr>
+<tr>
+<td>Only two persons between X and Y (no direction)</td>
+<td>X and Y three rungs apart</td>
+<td>Two</td>
+</tr>
+<tr>
+<td>Only three persons are senior to X</td>
+<td>X on rung 4</td>
+<td>Pinned</td>
+</tr>
+<tr>
+<td>X is senior to only three persons (n posts)</td>
+<td>X on rung n - 3</td>
+<td>Pinned</td>
+</tr>
+<tr>
+<td>X is senior to the GM / not the CEO</td>
+<td>X above the GM's rung / not rung 1</td>
+<td>A range</td>
+</tr>
+<tr>
+<td>As many senior to X as junior to Y</td>
+<td>X + Y = n + 1</td>
+<td>Mirror</td>
+</tr>
+<tr>
+<td>Junior to X is one more than senior to Y</td>
+<td>X + Y = n</td>
+<td>Shifted mirror</td>
+</tr>
+</table>
+**The solving algorithm (use it on every set):**
+1. Draw the ladder and number the rungs from the top.
+2. Place anyone a clue pins: a post given by name, "only k senior to X", "senior to only k".
+3. Join the exact step clues that share a name into one block. Count how many places the tallest block fits (posts - height + 1).
+4. For each place, use the mirror clue to put its partner on exactly one rung.
+5. Gap clues without a direction give two cases; kill one with an order or post clue.
+6. Use "not" clues and plain "senior to" clues last, to settle the final two or three people.
+**Non-linear warning.** "Persons between" is one less than the step: three between means four rungs apart. And "one more" in the mirror clue moves the sum by one, which moves a person by one rung; read it the wrong way round and the person moves two rungs.
+**Universal fallback (works on every set in this topic):** take the tallest block, write one small ladder for each place it fits (rarely more than three), and run every clue down each ladder. Cross out a ladder at the first clue it breaks.
+### 2. Archetypes
+Bank counts are sets out of 23 Sreedhar and 28 Guidely puzzles, each set counted once under its main twist. Paper counts are sets with full clue text, except where noted.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Bank sets</td>
+<td>Clerk papers</td>
+<td>Sister papers</td>
+<td>Label</td>
+</tr>
+<tr>
+<td>DG1</td>
+<td>Single ladder, exact steps and gaps, no mirror clue</td>
+<td>13 (Sreedhar 8, Guidely 5)</td>
+<td>1</td>
+<td>1</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>DG2</td>
+<td>Single ladder with a mirror clue ("as many senior to X as junior to Y", "one/two more")</td>
+<td>14 (Sreedhar 8, Guidely 6)</td>
+<td>3</td>
+<td>2</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>DG3</td>
+<td>A second fact per person (colour, project, country, sport, party)</td>
+<td>6 (Sreedhar 2, Guidely 4, two of them without keys)</td>
+<td>0 with text (1 named in shift analyses: "Designation (Height)")</td>
+<td>1 (IBPS PO)</td>
+<td>Seen once</td>
+</tr>
+<tr>
+<td>DG4</td>
+<td>Equal-gap clue ("as many between A and B as between C and D")</td>
+<td>9 (Guidely)</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>DG5</td>
+<td>One post vacant</td>
+<td>4 (Guidely)</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>DG6</td>
+<td>Department grouping filed under this topic (not a ladder)</td>
+<td>5 (Sreedhar)</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+</table>
+Where they were seen:
+- DG1: IBPS Clerk 25 Aug 2024 shift 3 (8 posts); IBPS RRB Clerk 6 Dec 2025 shift 1 (7 posts).
+- DG2: IBPS Clerk 12 Dec 2021 (7 posts), 2022 (7 posts) and 5 Oct 2025 shift 1 (8 posts, Hindi paper); IBPS RRB Clerk 17 Aug 2024 shift 2 (8 posts); IBPS PO 23 Aug 2025 shift 2 (8 posts).
+- DG3: IBPS PO 24 Aug 2025 shift 1 (6 posts, countries). IBPS Clerk 24 Aug 2024 shift 4 is listed by PW as "Designation Based Puzzle (Height)" and by PracticeMock as a 7-person designation puzzle; its text was not found.
+- Varieties looked for and not found in any paper or bank set: two persons per post, and a hierarchy whose order must be worked out. Every set found gives the order of posts.
+What the sets look like (measured by script on the encodings): 7 of the 8 paper puzzles with text have an exact step; 5 of 8 have the mirror clue (10 of 18 Sreedhar designation sets, 16 of 26 Guidely); only 2 of the 7 single-column paper puzzles have a clue that pins a person on its own, against 8 of 13 distinct Sreedhar sets.
+#### Core archetypes
+**DG1. Single ladder, exact steps and gaps. Confirmed.** *Pattern clues:* "A is four designations junior to G", "D is immediately junior to A", "Three persons are ranked between F and D, who is junior to F", "K is ranked as Lead". *Shortcut engine:* pin what you can, join the exact steps into the tallest block, count its places (posts - height + 1) and test each; gap clues without direction give two cases. *Worked example:* IBPS RRB Clerk 6 Dec 2025 shift 1. Posts CEO, COO, AM, GM, AGM, Manager, Executive (as remembered). A is four junior to G and D just junior to A: block G _ _ _ A D fits at G 1st or 2nd. F is two above C and two persons sit between B and C. With G 2nd no F-C pair leaves room for B; with G 1st, F 2nd, C 4th, B 7th, E 3rd. Ladder G, F, E, C, A, D, B, as the paper's key says.
+**DG2. Single ladder with a mirror clue. Confirmed.** *Pattern clues:* "As many persons junior to P as senior to U", "The number of persons junior to D is two more than the number of persons senior to E". *Shortcut engine:* the mirror rule. Senior to X = junior to Y means rung X + rung Y = posts + 1; "k more" lowers the sum by k. List the starts from the block, and the sum puts the partner on one rung for each. *Worked example:* IBPS Clerk 2022. Seven posts VC to Assistant Professor. R is in the top three and V three rungs below R, not the Professor: R 1st with V 4th, or R 2nd with V 5th. P and T are two apart and above V, so V 5th, R 2nd and P, T at 1 and 3. Mirror: P + U = 8, so P 1st, U 7th, T 3rd; Q 4th, S 6th. Ladder P, R, T, Q, V, S, U, as the paper's solution table says.
+**DG3. A second fact per person. Seen once (IBPS PO Prelims 24 Aug 2025 shift 1).** *Pattern clues:* "the one who likes Orange", "the one doing project H", "U lives in England". *Shortcut engine:* add a second column to the ladder and treat each fact as a slot on a rung: "Pink is just junior to Orange" is a block in the fact column; "only three positions between D and Orange" is an ordinary gap. Start with what pins either column. *Worked example:* IBPS PO 24 Aug 2025. Only three are junior to P, so P 3rd of 6; Canada is just above P; Vietnam must be more than two below Canada, so 6th; England next to it, 5th, is U; S just below U is 6th. R just above Finland fits only at 2nd. Ladder Q, R, P, T, U, S with Philippines, Canada, Finland, Singapore, England, Vietnam, as the paper's key says.
+#### Insurance archetypes (Bank only)
+**DG4. Equal-gap clue.** Count the persons between the pair you have placed, then put the other pair the same distance apart, above or below: two cases. If one person is in both pairs ("as many between P and R as between P and U"), the other two sit on opposite sides of him at the same distance.
+**DG5. One post vacant.** Draw every post; one rung stays empty. "Positions" count rungs, "persons" skip the empty rung. "Two persons senior to N" also skips it. The vacant post is usually found last.
+**DG6. Department grouping filed under this topic.** These five Sreedhar sets (Model Tests 60, 55, 48, 26, 21) put people into departments, not on a ladder. They belong with grouping puzzles and were not solved for this module.
+### 3. Drill Set
+Four original puzzles written for this module. Each was checked by a brute-force script and has exactly one arrangement; every answer below comes from the script.
+#### Drill 1 (Basic, DG1: pins and ranges)
+Seven persons A, B, C, D, E, F and G hold seven different posts: CEO, GM, DGM, AGM, Manager, AM and Clerk, in decreasing order of seniority. D is the DGM. Only one person is senior to B. G is junior to D but senior to the AM. E is senior to only one person. A is junior to G. C is not the CEO. F is senior to C. C is junior to A.
+**Q1.** Who is the AGM? (A) A (B) G (C) E (D) B (E) D
+**Q2.** How many persons are junior to A? (A) One (B) Two (C) Three (D) Four (E) None
+**Q3.** Who is the Clerk? (A) E (B) A (C) C (D) G (E) F
+**Conventional Method:** try every order of the seven against the clues.
+**Fast Method:**
+1. Ladder 1 CEO to 7 Clerk. Pins: D 3rd; one person above B, so B 2nd; one person below E, so E 6th.
+2. G is below D and above the AM (6th): G 4th or 5th. A is below G.
+3. The CEO's rung is left for A, C, F or G. G and A are below D; C is not the CEO. So F 1st.
+4. A, C, G share 4, 5, 7 with G above A above C: G 4th, A 5th, C 7th.
+Ladder: F, B, D, G, A, E, C.
+**Answers:** Q1 (B) G. Q2 (B) Two. Q3 (C) C.
+**Option Elimination Hack:** in Q1, D is pinned as the DGM and E is pinned to 6th (the AM), so (C) and (E) are out before you build anything.
+**IBPS Trap Warning:** "E is senior to only one person" puts E second from the bottom, not at the bottom. "Senior to only one" counts the people below E.
+#### Drill 2 (Exam level, DG2: block plus mirror)
+Eight persons P, Q, R, S, T, U, V and W hold the posts Chairman, MD, ED, GM, DGM, AGM, Manager and Clerk, in decreasing order of seniority. Three persons are designated between Q and T, and Q is senior to T. R is immediately junior to T. As many persons are senior to Q as are junior to V. Only one person is designated between V and S. U is senior to Q. W is not the Chairman. P is junior to S.
+**Q1.** Who is the GM? (A) P (B) Q (C) S (D) V (E) W
+**Q2.** How many persons are designated between U and V? (A) Three (B) Four (C) Five (D) Two (E) None
+**Q3.** How many persons are junior to W? (A) Five (B) Seven (C) Four (D) Six (E) Three
+**Conventional Method:** fix Q on each rung, place T and R, then try the other five in every order.
+**Fast Method:**
+1. Block Q _ _ _ T R is six rungs tall: Q 1st, 2nd or 3rd. U is above Q, so Q is 2nd or 3rd.
+2. Mirror rule: Q + V = 9. Q 2nd gives V 7th, but T 6th puts R at 7th. Out.
+3. Q 3rd: T 7th, R 8th, V 6th. One between V and S: S 4th (8th is R's). P below S: 5th.
+4. U and W take 1 and 2; W is not the Chairman: U 1st, W 2nd.
+Ladder: U, W, Q, S, P, V, T, R.
+**Answers:** Q1 (C) S. Q2 (B) Four. Q3 (D) Six.
+**Option Elimination Hack:** in Q2, U is above Q, and the mirror rule puts V at 9 minus Q's rung, below Q because Q is in the top three. So Q at least lies between U and V, and (E) is out at once.
+**IBPS Trap Warning:** "three persons between Q and T" is a step of four, not three. With a step of three the block fits a different way and the mirror clue gives a second ladder.
+#### Drill 3 (Trap, DG2: the shifted mirror)
+Seven persons H, I, J, K, L, M and N hold the posts President, Vice President, Director, Senior Manager, Manager, Officer and Clerk, in decreasing order of seniority. The number of persons junior to K is one more than the number of persons senior to M. M is three persons junior to K. Only one person is designated between H and M. J is immediately senior to H. I is senior to N but junior to L.
+**Q1.** Who is the Director? (A) N (B) L (C) I (D) J (E) K
+**Q2.** How many persons are designated between L and N? (A) One (B) Two (C) Three (D) None (E) Four
+**Q3.** Who is the Clerk? (A) J (B) M (C) N (D) H (E) I
+**Conventional Method:** place K on each rung, M three below, then try the rest.
+**Fast Method:**
+1. Shifted mirror: junior to K = 7 - K, senior to M = M - 1. "One more" gives K + M = 7.
+2. M = K + 3, so K 2nd, M 5th.
+3. One between H and M: H 3rd or 7th. J is just above H: H 3rd would put J on K's rung. So H 7th, J 6th.
+4. L above I above N in rungs 1, 3, 4: L 1st, I 3rd, N 4th.
+Ladder: L, K, I, N, M, J, H.
+**Answers:** Q1 (C) I. Q2 (B) Two. Q3 (D) H.
+**Option Elimination Hack:** in Q1, the first two clues pin K to 2nd (the Vice President), so (E) is out; J sits just above H near the bottom, so (D) is out.
+**IBPS Trap Warning:** reading "one more" as equal gives K + M = 8, so K at 2.5: no ladder. Reading it the wrong way round (senior to M one more than junior to K) gives K + M = 9, K 3rd, M 6th; then H must be 4th with J on K's rung: no ladder either. When a reading leaves no ladder, re-read the direction.
+#### Drill 4 (Insurance, DG3: a second column)
+Six persons A, B, C, D, E and F hold the posts CEO, COO, CFO, GM, AGM and Manager, in decreasing order of seniority. Each likes a different colour: Red, Blue, Green, Pink, Black and White. The one who likes Red is two persons junior to B. The one who likes Red is the GM. F is immediately senior to the one who likes Blue. Only two persons are designated between F and D. The one who likes Green is senior to the one who likes Blue but is not the CEO. C likes Green. E is senior to A. A does not like Pink, and the one who likes Pink is senior to the one who likes Red. B likes Black.
+**Q1.** Who likes Blue? (A) F (B) A (C) E (D) C (E) B
+**Q2.** What is the post of the one who likes Pink? (A) COO (B) CEO (C) GM (D) CFO (E) Manager
+**Q3.** How many persons are senior to the one who likes White? (A) Four (B) Three (C) Five (D) Two (E) None
+**Conventional Method:** try every order of persons, then every order of colours.
+**Fast Method:**
+1. Red is the GM, 4th. B is two above Red: B 2nd (Black).
+2. F is just above Blue and three rungs from D. F 1st puts Blue at 2nd (B likes Black); F 3rd puts Blue on Red's rung; F 5th puts D on B's rung. So F 4th (Red), Blue 5th, D 1st.
+3. Green is above Blue and not the CEO: 3rd, which is C. E above A: E 5th (Blue), A 6th.
+4. Pink is above Red and not A: the free colour on rungs 1 to 3 is at 1st, D. A likes White.
+Ladder: D Pink, B Black, C Green, F Red, E Blue, A White.
+**Answers:** Q1 (C) E. Q2 (B) CEO. Q3 (C) Five.
+**Option Elimination Hack:** in Q1, F cannot like Blue (F is just above Blue) and B likes Black, so (A) and (E) are out.
+**IBPS Trap Warning:** "the one who likes Red is two persons junior to B" measures from B down to Red. Putting B two below Red sends B to 6th and nothing else fits.
+### 4. Cheat Sheet and Recall Matrix
+<table header-row="true">
+<tr>
+<td>If you see…</td>
+<td>Do this</td>
+<td>Watch for</td>
+</tr>
+<tr>
+<td>Posts listed "in increasing order"</td>
+<td>Turn the list upside down: rung 1 = senior-most</td>
+<td>Building the ladder upside down</td>
+</tr>
+<tr>
+<td>"X is the GM", "only three senior to X", "senior to only B"</td>
+<td>Pin first</td>
+<td>"Senior to only one" is second from the bottom</td>
+</tr>
+<tr>
+<td>"Just junior", "k designations junior", "k between, X senior"</td>
+<td>Join into one block; places = posts - height + 1</td>
+<td>k between = k + 1 rungs</td>
+</tr>
+<tr>
+<td>"Only k between X and Y" (no direction)</td>
+<td>Two cases</td>
+<td>The case that falls off the ladder</td>
+</tr>
+<tr>
+<td>"As many senior to X as junior to Y"</td>
+<td>X + Y = posts + 1</td>
+<td>Same person: the middle rung</td>
+</tr>
+<tr>
+<td>"Junior to X is k more than senior to Y"</td>
+<td>X + Y = posts + 1 - k</td>
+<td>Reading the direction backwards</td>
+</tr>
+<tr>
+<td>"As many between A and B as between C and D"</td>
+<td>Copy the count, two cases</td>
+<td>Copying the rung difference instead</td>
+</tr>
+<tr>
+<td>Second fact (colour, project, city)</td>
+<td>Second column; a fact is a slot</td>
+<td>Giving one person two facts of a kind</td>
+</tr>
+<tr>
+<td>"One post is vacant"</td>
+<td>Positions count rungs; persons skip the empty rung</td>
+<td>Counting the empty rung as a person</td>
+</tr>
+</table>
+**Order of work, in one line:** ladder with rung numbers, pins, tallest block and its places, mirror clue for each place, two-case gaps, "not" clues, questions.
+**Two checks before you answer.** For "how many persons between", count people, not rungs. For "as many senior to X as junior to ___", use the sum: the answer sits on rung posts + 1 - X.
+### 5. Practice Ladder
+These are Sreedhar mock sets from your bank that have exactly one arrangement on a plain reading and whose keys all agreed with the script. MT is the model test number; the range is the question numbers.
+<table header-row="true">
+<tr>
+<td>Rung</td>
+<td>Set</td>
+<td>Shape</td>
+<td>Keyed answers in order</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT6-93 to 97</td>
+<td>8 posts, three pins</td>
+<td>B, E, C, B, A</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT58-86 to 90</td>
+<td>8 posts, a post given by name</td>
+<td>B, D, C, B, B</td>
+</tr>
+<tr>
+<td>2: 5 minutes a set</td>
+<td>S-MT70-93 to 97</td>
+<td>7 posts, mirror clue on one person</td>
+<td>A, A, E, A, C</td>
+</tr>
+<tr>
+<td>2: 5 minutes a set</td>
+<td>S-MT53-75 to 79</td>
+<td>8 posts, mirror clue, no pin</td>
+<td>E, A, D, E, E</td>
+</tr>
+<tr>
+<td>3: 4 minutes a set</td>
+<td>S-MT23-91 to 95</td>
+<td>9 posts, mirror clue, three starts</td>
+<td>E, C, E, D, C</td>
+</tr>
+<tr>
+<td>3: 4 minutes a set</td>
+<td>S-MT27-66 to 70</td>
+<td>8 posts with colours</td>
+<td>D, E, D, E, C</td>
+</tr>
+</table>
+After these, work through the Guidely "Designation puzzle, single variable" sets 1 to 5, then the "with vacant" set. Two Guidely puzzles are not safe: set 3 questions 6 to 10 (the key to question 9 contradicts the clues) and set 5 questions 6 to 10 (four keys contradict the clues).
+### 6. Verification Log
+**Built:** 6 Oct 2026.
+**What was checked by script**
+- Every designation set in both banks was written as exact conditions and solved by brute force: 18 Sreedhar sets (including three repeated puzzles: Model Tests 46 and 58, 43 and 56, 3 and 23) and 26 Guidely puzzles. All 44 have exactly one arrangement. Reading choices noted: "positions" count rungs and "persons" skip a vacant rung; "As many senior and junior to T" puts T in the middle; in Guidely set 5 questions 1 to 5 and similar sets with lost opening lines, the names were taken from the clues; in Guidely set 4 questions 11 to 15 a clue printed inside question 11 ("more than one person between R and the GM") was used.
+- 219 bank questions were answered from the arrangement and compared with the key: Sreedhar 89 of 89 agree; Guidely 125 of 130 agree. The five that do not: Guidely set 3 question 9 (an analogy whose key needs the relation read backwards) and Guidely set 5 questions 6, 8, 9 and 10 (the key fits a different ladder; no reading of the clues tried gave it). Those two sets are dropped from practice.
+- Not solved: 2 Guidely puzzles with no answer key (two-variable set 1, questions 6 to 10 and 16 to 20) and the 5 Sreedhar department-grouping sets.
+- The 8 paper puzzles with full text each have exactly one arrangement by script. For the five with the paper's own key (IBPS Clerk 2021 and 2022, IBPS RRB Clerk 6 Dec 2025, IBPS PO 23 and 24 Aug 2025) every keyed answer agrees; for IBPS Clerk 25 Aug 2024 shift 3 the arrangement agrees with the Oliveboard solution. IBPS Clerk 5 Oct 2025 shift 1 (Hindi) has no key in the file; IBPS RRB Clerk 17 Aug 2024 shift 2 was seen with one question only.
+- The four drill puzzles each have exactly one arrangement by script, and their answers come from the script.
+- Measurements (open cases, pins, clue kinds) were taken by script on the encodings; clue kinds were tagged by a pattern match on the encoded conditions and are approximate.
+**Where the paper evidence comes from.** Cached memory-based papers: Guidely 12 Dec 2021 Mock Test 2 (questions 66 to 70), Adda247 IBPS Clerk 2022 (84 to 88), Adda247 IBPS Clerk 5 Oct 2025 shift 1 (Hindi, 96 to 100), Adda247 IBPS RRB Clerk 6 Dec 2025 shift 1 (36 to 40), Adda247 IBPS PO 23 Aug 2025 shift 2 (31 to 35) and 24 Aug 2025 shift 1 (18 to 22). Web: oliveboard.in previous-year question pages for IBPS Clerk 25 Aug 2024 shift 3 and IBPS RRB Assistant 17 Aug 2024 shift 2; pw.live shift analyses (IBPS Clerk 24 Aug 2024 shift 4 and 25 Aug 2024 shift 3 list a designation puzzle; the eight IBPS Clerk 2025 shifts listed by PW do not, although the Adda247 paper for 5 Oct 2025 shift 1 has one, so the analyses are incomplete). WebFetch was blocked for some sites; pages were read with curl instead.
+**Not verified:** the text of the IBPS Clerk 24 Aug 2024 shift 4 puzzle; whether other 2024 to 2026 clerk shifts had designation sets; the answers to the 5 Oct 2025 paper (no key). Memory-based papers are reconstructions. The 12 Dec 2021 Guidely file is labelled a memory-based mock test.
 **Corrections:** none so far.
 ## Pattern Index: Reasoning Puzzles
 Built 6 Oct 2026 on request, each in its own file, mainly from the bank. The bank has no Reasoning PYQs. Paper counts are puzzle sets seen in 12 IBPS Clerk Prelims papers and 12 sister papers opened on the web. In each topic 40 bank sets were solved by brute-force script; the rest were sorted but not solved.
