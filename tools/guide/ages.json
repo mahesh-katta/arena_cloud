@@ -873,6 +873,33 @@
     "At the marriage he was 40, so his sister was 30.",
     "Eight years later she is 38."
    ]
+  },
+  "guidely": {
+   "ages-based-on-average-set-1-prelims-1#6": [
+    "Total of the three = 27 x 3 = 81.",
+    "Take out the one who is 25: the other two total 56.",
+    "Their average = 56 / 2 = 28."
+   ],
+   "ages-based-on-average-set-1-prelims-1#9": [
+    "Totals of the groups: 5 x 25 = 125, 2 x 30 = 60, 3 x 39 = 117.",
+    "Whole class total = 125 + 60 + 117 = 302.",
+    "Average = 302 / 10 = 30.2 years."
+   ],
+   "ages-based-on-miscellaneous-set-1-prelims-1#2": [
+    "Four years ago A + B + C = 48 x 3 = 144. Now each is 4 older: 144 + 12 = 156.",
+    "A + B after 6 years is 100, so now A + B = 100 - 12 = 88.",
+    "C = 156 - 88 = 68yrs."
+   ],
+   "ages-based-on-three-persons-or-more-set-1-prelims-1#7": [
+    "29 workers total 29 x 12 = 348.",
+    "With the manager, 30 people average 12.5: total 375.",
+    "Manager = 375 - 348 = 27yrs."
+   ],
+   "ages-based-on-relation-and-based-on-family-set-1-prelims-1#2": [
+    "At the wedding the couple totalled 22.5 x 2 = 45. Five years on: 45 + 10 = 55.",
+    "Now the three total 19 x 3 = 57.",
+    "Child = 57 - 55 = 2 years."
+   ]
   }
  }
 }
