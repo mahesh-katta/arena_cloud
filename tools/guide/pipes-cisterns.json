@@ -1,0 +1,677 @@
+{
+ "module": "pipes-cisterns",
+ "new": {
+  "title": "Pipes & Cisterns",
+  "part": "quant",
+  "after": "time-work",
+  "sample": [
+   "This topic was split out of **Time & Work** so that pipes can be learnt on their own. Its paper counts and timed drills are in that topic's Quick revision tab (9 of its 25 IBPS Clerk questions were pipes); four more pipe questions were found in the sister papers (SBI Clerk Sep 2025 twice, IBPS RRB Clerk Dec 2025, IBPS PO Aug 2025)."
+  ],
+  "revision": [
+   "**One idea:** the tank is a number of units (the LCM of the times). Filling pipes add units, emptying pipes take them away.",
+   "| The question says | Do this |",
+   "| fill and empty together | add fillers, subtract emptiers, divide |",
+   "| with a leak it takes longer | leak = pipe alone - pipe with leak |",
+   "| all three, and two of them | the missing pipe = all - the pair |",
+   "| three times as fast, 50% more efficient | units per hour 3 : 1, 3 : 2 |",
+   "| closed after a while / opened late | units stage by stage |",
+   "| in turns | units per cycle; stop early if one pipe empties |",
+   "| n identical pipes | pipes x time = the tank |",
+   "| litres | find where units meet litres: that sizes one unit |",
+   "**Traps.** Starting partly full. Asking for the time to empty. A negative net rate means the tank never fills."
+  ]
+ },
+ "intro": [
+  "A pipe filling a tank is a worker doing a job; a pipe or leak that empties it is a worker undoing the job. Give the tank a number of units, and every question becomes adding and subtracting units per hour.",
+  "There are eight short lessons. Three are taken from Time & Work; five are new. Go in order the first time. If Time & Work's first lesson (turning a job into units) is new to you, do it first.",
+  "What the papers ask (Time & Work Stage A count plus the sister papers, all memory-based):",
+  "| Kind | Label | Lesson |",
+  "| Fill and empty together (W1) | Confirmed, 5 papers | PC1 |",
+  "| A missing pipe or a leak (W2) | Confirmed, 5 papers | PC2 |",
+  "| Opened or closed partway (W4) | Confirmed, 2 papers | PC4 (two lessons) |",
+  "| Fast and slow pipes (W3) | Seen once | PC3 |",
+  "| Turns, many pipes, litres | Bank only | PC5, PC6, PC7 |"
+ ],
+ "needs": [
+  "lcm",
+  "ratio"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the table of what to do for each wording.",
+  "Time & Work keeps its own pipe lessons as well; the two topics share their practice questions."
+ ],
+ "lessons": [
+  {
+   "id": "pipes",
+   "code": "PC1",
+   "title": "Pipes and tanks: the same idea",
+   "plain": "New: pipes filling a tank are workers. A pipe that empties the tank is a worker who undoes the work.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "A pipe that fills a tank in 20 minutes is just a worker who finishes a job in 20 minutes. So everything from the last lesson carries over: give the tank a number of units, find each pipe's units per minute (or per hour), and add.",
+    "There is one new thing. Some pipes **empty** the tank. An emptying pipe, an outlet, a drain or a leak takes water away, so its units are **subtracted**.",
+    "Pipe A fills a tank in 6 hours. Pipe B empties it in 10 hours. Both are open.",
+    "- Call the tank 30 units.",
+    "- A adds 5 units an hour. B removes 3 units an hour.",
+    "- Each hour the tank gains 5 - 3 = 2 units.",
+    "- Time to fill = 30 / 2 = 15 hours.",
+    "If the tank's size is given in **litres**, you do not need to invent units: the litres are the units. A 240-litre tank filled by a pipe in 16 hours gets 240 / 16 = 15 litres an hour from it.",
+    "And if the tank is **already partly full**, only the empty part is the job. A half-full tank of 30 units has 15 units left to fill."
+   ],
+   "example": {
+    "q": "Pipes A and B can fill a tank in 12 hours and 15 hours. Pipe C can empty the full tank in 20 hours. If all three are opened together, how long will the empty tank take to fill?",
+    "steps": [
+     "Call the tank 60 units: 12, 15 and 20 all go into 60.",
+     "A adds 5 an hour, B adds 4 an hour, and C removes 3 an hour.",
+     "Each hour the tank gains 5 + 4 - 3 = 6 units.",
+     "Time = 60 / 6 = 10 hours."
+    ],
+    "answer": "10 hours."
+   },
+   "check": {
+    "q": "A pipe can fill a tank in 8 hours and an outlet can empty it in 24 hours. If both are open, in how many hours will the empty tank be full?",
+    "options": {
+     "a": "6 hours",
+     "b": "12 hours",
+     "c": "16 hours",
+     "d": "32 hours"
+    },
+    "answer": "B",
+    "why": "Call the tank 24 units. The pipe adds 3 an hour and the outlet removes 1, so the tank gains 2 an hour. 24 / 2 = 12 hours. (6 hours would be right if both pipes were filling.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-a-graded#1",
+     "clerk-15-pipes-and-cisterns-a-graded#2",
+     "clerk-15-pipes-and-cisterns-b-pyq#2",
+     "clerk-15-pipes-and-cisterns-a-graded#5",
+     "clerk-15-pipes-and-cisterns-b-pyq#9",
+     "clerk-15-pipes-and-cisterns-a-graded#3",
+     "clerk-15-pipes-and-cisterns-a-graded#10",
+     "clerk-15-pipes-and-cisterns-a-graded#17"
+    ],
+    "tags": [
+     "The plain form: two filling pipes.",
+     "One pipe fills while the other empties.",
+     "Two fill and one empties, as a real paper asked it.",
+     "It asks for the fraction filled in a few minutes.",
+     "The tank is given in litres, and it asks how much is still needed.",
+     "Three filling pipes.",
+     "Two fill, one drains; the answer is not offered.",
+     "The tank starts half full."
+    ]
+   }
+  },
+  {
+   "id": "leaks",
+   "code": "PC2",
+   "title": "Leaks and drain pipes",
+   "plain": "New: last lesson's subtraction, with tanks. The missing one is a leak or a drain.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "\"A pipe can fill a tank in 12 hours. Because of a leak, it takes 18 hours.\" The leak is a hidden worker who undoes some of the pipe's work. You find it exactly as you found the missing person in the last lesson.",
+    "- Call the tank 36 units.",
+    "- The pipe alone adds 36 / 12 = 3 units an hour.",
+    "- With the leak, the tank gains only 36 / 18 = 2 units an hour.",
+    "- So the leak removes 3 - 2 = 1 unit an hour.",
+    "- A full tank of 36 units would drain through the leak in 36 hours.",
+    "Read these questions as \"what the pipes should add\" against \"what the tank actually gains\". The gap is the drain.",
+    "The disguises are the same as for people:",
+    "- a third pipe C that is \"also open\", where the tank fills more slowly than A and B alone would manage, so C must be emptying;",
+    "- two outlets, one of them known;",
+    "- three pairs of pipes;",
+    "- a last line that asks about **half** the tank or some other part."
+   ],
+   "example": {
+    "q": "A pipe can fill a tank in 10 hours. Because of a leak in the bottom, it takes 15 hours. If the tank is full, how long will the leak take to empty it?",
+    "steps": [
+     "Call the tank 30 units.",
+     "The pipe alone adds 3 units an hour.",
+     "With the leak the tank gains 30 / 15 = 2 units an hour.",
+     "So the leak removes 3 - 2 = 1 unit an hour.",
+     "A full tank is 30 units: the leak empties it in 30 hours."
+    ],
+    "answer": "30 hours."
+   },
+   "check": {
+    "q": "Pipes A and B together can fill a tank in 4 hours. When a drain pipe C is also open, the tank fills in 6 hours. In how many hours can C alone empty the full tank?",
+    "options": {
+     "a": "2 hours",
+     "b": "10 hours",
+     "c": "12 hours",
+     "d": "24 hours"
+    },
+    "answer": "C",
+    "why": "Call the tank 12 units. A and B add 3 an hour; with C open the tank gains 2. So C removes 1 an hour and empties 12 units in 12 hours."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-b-pyq#4",
+     "clerk-15-pipes-and-cisterns-b-pyq#5",
+     "clerk-15-pipes-and-cisterns-b-pyq#6",
+     "clerk-15-pipes-and-cisterns-b-pyq#8",
+     "clerk-15-pipes-and-cisterns-a-graded#11",
+     "clerk-15-pipes-and-cisterns-b-pyq#3",
+     "clerk-15-pipes-and-cisterns-a-graded#4"
+    ],
+    "tags": [
+     "A leak slows one pipe down.",
+     "A third pipe that turns out to be emptying.",
+     "The same, and it asks about half the tank.",
+     "Two outlets, one of them known.",
+     "Three pairs of pipes.",
+     "All three, minus a pair; then part of the tank.",
+     "A leak: the plainest form."
+    ]
+   }
+  },
+  {
+   "id": "fast-slow",
+   "code": "PC3",
+   "title": "Fast and slow pipes",
+   "plain": "New: one pipe is described by how much faster it is than another, not by its own time.",
+   "needs": [
+    "lcm",
+    "ratio"
+   ],
+   "teach": [
+    "\"A is three times as fast as B\" gives the units per hour straight away: A 3, B 1. \"B is 50% more efficient than A\" gives A 2, B 3.",
+    "Then add as usual: together 4 units a minute. If together they take 12 minutes, the tank is 48 units, and A alone takes 48 / 3 = 16 minutes.",
+    "A ratio of efficiencies works the same way: \"(A and B together) : C = 9 : 2\". Find A and B's units from their times, then C from the ratio.",
+    "\"A takes 5 hours less than B; together they take 6 hours.\" No pipe's time is given, so **try the options**: together time = product / sum. A = 10, B = 15: 150 / 25 = 6. It fits.",
+    "Checked papers: IBPS Clerk 2021 set one."
+   ],
+   "example": {
+    "q": "Pipe A is twice as fast as pipe B. Together they fill a tank in 10 hours. How long does B alone take?",
+    "steps": [
+     "A 2 units an hour, B 1: together 3.",
+     "Tank = 3 x 10 = 30 units.",
+     "B alone: 30 / 1 = 30 hours."
+    ],
+    "answer": "30 hours."
+   },
+   "check": {
+    "q": "Pipe A fills a tank in 24 minutes. Pipe B is 50% more efficient than A. How long does B take alone?",
+    "options": {
+     "a": "12 minutes",
+     "b": "16 minutes",
+     "c": "36 minutes",
+     "d": "18 minutes"
+    },
+    "answer": "B",
+    "why": "B does 1.5 times A's work per minute, so B takes 24 / 1.5 = 16 minutes. (36 makes B slower, not faster.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-b-pyq#7",
+     "clerk-15-pipes-and-cisterns-a-graded#7",
+     "clerk-15-pipes-and-cisterns-a-graded#26",
+     "clerk-15-pipes-and-cisterns-a-graded#16"
+    ],
+    "tags": [
+     "A ratio of efficiencies.",
+     "\"Three times as fast\".",
+     "Percent words.",
+     "No time given: try the options."
+    ]
+   }
+  },
+  {
+   "id": "phases-pipes",
+   "code": "PC4",
+   "title": "Pipes opened and closed at different times",
+   "plain": "New: the stages idea with tanks. A pipe is closed early, or opened late.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "Stages work the same way for tanks. A pipe being **closed** is a worker leaving; a pipe being **opened later** is a worker joining. Find the units added in each stage and subtract from the tank.",
+    "Two forms are particular to pipes.",
+    "**\"After how many minutes should B be closed so that the tank is full in exactly 9 minutes?\"** Look at it from pipe A's side. A is open for all 9 minutes, so you know exactly how much A adds. Whatever is still missing must come from B, and B's units per minute tell you how long B needs to be open.",
+    "**A drain that is closed, or opened, partway.** While the drain is open its units are subtracted; once it is closed, they are not. Treat the two stretches as two stages with different net units.",
+    "Pipe questions more often ask for the **total** time than work questions do, so remember to add the first stage back at the end when the question says \"in how many hours in total\"."
+   ],
+   "example": {
+    "q": "Pipes A and B can fill a tank in 12 minutes and 18 minutes. Both are opened together, and after 4 minutes A is closed. In how many more minutes will B fill the tank?",
+    "steps": [
+     "Call the tank 36 units. A adds 3 a minute and B adds 2.",
+     "Stage one: 5 a minute for 4 minutes = 20 units.",
+     "Units left: 36 - 20 = 16.",
+     "Stage two: B alone adds 2 a minute. 16 / 2 = 8 minutes."
+    ],
+    "answer": "8 more minutes."
+   },
+   "check": {
+    "q": "Pipe A can fill a tank in 10 hours and pipe B in 15 hours. A is opened first, and after 5 hours B is also opened. In how many hours in total is the tank full?",
+    "options": {
+     "a": "3 hours",
+     "b": "6 hours",
+     "c": "8 hours",
+     "d": "11 hours"
+    },
+    "answer": "C",
+    "why": "Call the tank 30 units. A adds 3 an hour: 15 units in 5 hours. The other 15 are filled by both at 5 an hour, which takes 3 hours. Total 5 + 3 = 8 hours. (3 is only the second stage.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-b-pyq#1",
+     "clerk-15-pipes-and-cisterns-a-graded#9",
+     "clerk-15-pipes-and-cisterns-a-graded#15",
+     "clerk-15-pipes-and-cisterns-a-graded#13",
+     "clerk-15-pipes-and-cisterns-a-graded#19"
+    ],
+    "tags": [
+     "Both open, then one is closed.",
+     "The same, with an answer that is not a whole number.",
+     "One pipe is opened late, and it asks for the total time.",
+     "When should a pipe be closed?",
+     "A drain that is closed partway."
+    ]
+   }
+  },
+  {
+   "id": "harder-timings",
+   "code": "PC4",
+   "title": "Harder timings",
+   "plain": "New: pipes opened at different clock times, or a question that gives the finish and asks about the start.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "Keep the habit from the last lesson: **units added in each stretch of time**, stretch by stretch.",
+    "**Opened at 3 pm, 4 pm and 5 pm.** Work out what is in the tank at each clock time, then let the full set run.",
+    "**Used for half the time, then together for the other half.** Call the half-time t: units = (B's rate + both rates) x t.",
+    "**Closed after a while, and the rest takes so long.** Work out the part done first; the rest tells you the remaining pipes' combined rate. Subtract to find the closed pipe.",
+    "Watch the direction: with an emptying pipe in the set, the question may ask when the tank becomes **empty**, not full."
+   ],
+   "example": {
+    "q": "Pipes A and B fill a tank in 12 and 18 minutes. A is opened at 10:00, B at 10:03. When is the tank full?",
+    "steps": [
+     "Tank = 36 units: A 3, B 2 a minute.",
+     "10:00 to 10:03: A adds 9. 27 units are left.",
+     "Together 5 a minute: 27 / 5 = 5.4 minutes. Full at about 10:08:24."
+    ],
+    "answer": "About 10:08 and 24 seconds."
+   },
+   "check": {
+    "q": "Pipes A and B fill a tank in 20 and 30 minutes. Both are opened; after 6 minutes A is closed. How long does B take to finish?",
+    "options": {
+     "a": "9 minutes",
+     "b": "15 minutes",
+     "c": "12 minutes",
+     "d": "18 minutes"
+    },
+    "answer": "B",
+    "why": "Tank 60 units: A 3, B 2. Six minutes together: 30. B finishes the other 30 in 15 minutes. (12 counts only A's 6 minutes.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-a-graded#20",
+     "clerk-15-pipes-and-cisterns-a-graded#23",
+     "clerk-15-pipes-and-cisterns-a-graded#24",
+     "clerk-15-pipes-and-cisterns-a-graded#29"
+    ],
+    "tags": [
+     "Half the time alone, half together.",
+     "Find the closed pipe.",
+     "A drain opened late.",
+     "Clock times, and the tank empties."
+    ]
+   }
+  },
+  {
+   "id": "turns",
+   "code": "PC5",
+   "title": "Pipes opened in turns",
+   "plain": "New: pipes take turns, one hour (or minute) each.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "Treat each pair of turns as one **cycle**. Units in one cycle = A's units + B's units.",
+    "Take as many full cycles as fit, then finish the rest turn by turn in the starting order.",
+    "**With an emptying pipe, stop early.** The tank can fill partway through a filling turn, before the emptying turn comes. So check: after k cycles, can the next filling turn finish it?",
+    "A fills in 10 minutes and B empties in 15, in turns from A. Tank 30 units: A +3, B -2, so each 2-minute cycle adds 1. After 27 cycles (54 minutes) the level is 27, and A's next minute takes it to 30: full at 55 minutes, not 60.",
+    "No paper in the sample set this with pipes; the work version (alternate days) is in Time & Work."
+   ],
+   "example": {
+    "q": "Pipes A and B fill a tank in 8 and 12 hours. They are opened in turns, one hour each, starting with A. How long does the tank take?",
+    "steps": [
+     "Tank = 24 units: A 3, B 2. One 2-hour cycle adds 5.",
+     "4 cycles (8 hours) add 20. 4 units are left.",
+     "A's next hour adds 3, then B needs half an hour for the last 1: 9.5 hours."
+    ],
+    "answer": "9.5 hours."
+   },
+   "check": {
+    "q": "Pipes A and B fill a tank in 6 and 3 hours. In turns of 1 hour each, starting with A, how long does it take?",
+    "options": {
+     "a": "4 hours",
+     "b": "4.5 hours",
+     "c": "3 hours",
+     "d": "5 hours"
+    },
+    "answer": "A",
+    "why": "Tank 6 units: A 1, B 2, a cycle adds 3. Two cycles fill it exactly: 4 hours. (4.5 adds an extra half turn that is not needed.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-a-graded#12",
+     "clerk-15-pipes-and-cisterns-a-graded#28"
+    ],
+    "tags": [
+     "Two filling pipes.",
+     "One fills, one empties: stop early."
+    ]
+   },
+   "more": [
+    {
+     "q": "Pipes A and B fill a tank in 4 and 6 hours. Opened in turns, one hour each, starting with B, how long does it take?",
+     "options": {
+      "a": "4 hours",
+      "b": "4 hours 40 minutes",
+      "c": "5 hours",
+      "d": "4 hours 30 minutes"
+     },
+     "answer": "C",
+     "why": "Tank 12 units: B 2, A 3, a cycle adds 5. Two cycles (4 hours) give 10; B's next hour adds the last 2: 5 hours. (4 hours 40 minutes lets A take the fifth turn.)",
+     "tag": "Starting with the slower pipe"
+    }
+   ]
+  },
+  {
+   "id": "many-pipes",
+   "code": "PC6",
+   "title": "Many identical pipes",
+   "plain": "New: the question counts pipes instead of naming them.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "Identical pipes are like identical workers: **pipes x time = the tank** (in pipe-minutes).",
+    "12 pipes take 40 minutes: the tank is 480 pipe-minutes. With 10 pipes: 48 minutes.",
+    "**More pipes opened partway:** half the tank by one pipe, the other half by four pipes, takes a quarter of the time.",
+    "**A mix of inlets and outlets:** write the net units per hour with the number of inlets as the unknown, and match it to the time given."
+   ],
+   "example": {
+    "q": "8 identical pipes fill a tank in 45 minutes. How long do 6 such pipes take?",
+    "steps": [
+     "The tank is 8 x 45 = 360 pipe-minutes.",
+     "360 / 6 = 60 minutes."
+    ],
+    "answer": "60 minutes."
+   },
+   "check": {
+    "q": "One pipe fills a tank in 8 hours. After half the tank is filled, one more such pipe is opened. How long does the whole tank take?",
+    "options": {
+     "a": "4 hours",
+     "b": "6 hours",
+     "c": "8 hours",
+     "d": "5 hours"
+    },
+    "answer": "B",
+    "why": "Half by one pipe: 4 hours. The other half by two pipes: 2 hours. Total 6. (4 hours forgets the first half was slower.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-a-graded#14",
+     "clerk-15-pipes-and-cisterns-a-graded#21",
+     "clerk-15-pipes-and-cisterns-a-graded#30"
+    ],
+    "tags": [
+     "Some pipes out of order.",
+     "More pipes opened at half.",
+     "How many are inlets?"
+    ]
+   }
+  },
+  {
+   "id": "litres",
+   "code": "PC7",
+   "title": "Tanks in litres",
+   "plain": "New: some rates are given in litres, so the tank has a real size.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "Keep using units, and look for the one place where **units meet litres**. That fixes the size of one unit.",
+    "Two pipes fill in 20 and 24 minutes; a waste pipe drains 3 litres a minute; all three fill in 15 minutes. Tank = 120 units: pipes 6 and 5, all three 8, so the waste pipe takes 3 units a minute. Those 3 units are 3 litres: one unit is one litre, and the tank holds 120 litres.",
+    "If every rate is already in litres, just subtract and divide: 12 in, 4 out, net 8 a minute; 480 litres takes 60 minutes.",
+    "Checked papers: IBPS Clerk 2016 ended a pipes question with a litres step (that question is in the first lesson)."
+   ],
+   "example": {
+    "q": "A leak empties a full tank in 6 hours. An inlet adds 4 litres a minute; with both open, the full tank empties in 8 hours. What is the capacity?",
+    "steps": [
+     "Tank = 24 units: the leak takes 4 an hour; with the inlet the net loss is 3 an hour.",
+     "So the inlet adds 1 unit an hour, which is 4 x 60 = 240 litres.",
+     "The tank is 24 x 240 = 5,760 litres."
+    ],
+    "answer": "5,760 litres."
+   },
+   "check": {
+    "q": "A tap adds 15 litres a minute and an outlet drains 5 litres a minute. How long to fill an empty 600-litre tank?",
+    "options": {
+     "a": "40 minutes",
+     "b": "60 minutes",
+     "c": "30 minutes",
+     "d": "120 minutes"
+    },
+    "answer": "B",
+    "why": "Net 10 litres a minute: 600 / 10 = 60. (40 ignores the outlet.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-a-graded#8",
+     "clerk-15-pipes-and-cisterns-a-graded#22",
+     "clerk-15-pipes-and-cisterns-a-graded#25",
+     "clerk-15-pipes-and-cisterns-a-graded#27"
+    ],
+    "tags": [
+     "Rates already in litres.",
+     "Inlet in litres, leak in hours.",
+     "A waste pipe in litres.",
+     "A leak found from the delay."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-15-pipes-and-cisterns-a-graded#1": [
+    "Call the tank 60 units.",
+    "A adds 3 a minute and B adds 2: together 5.",
+    "60 / 5 = 12 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#2": [
+    "Call the tank 30 units.",
+    "A adds 5 an hour and B removes 3. The tank gains 2 an hour.",
+    "30 / 2 = 15 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#2": [
+    "Call the tank 60 units.",
+    "A adds 6, B adds 4 and C removes 3. The tank gains 7 an hour.",
+    "60 / 7 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#5": [
+    "Call the tank 90 units. A adds 3 a minute and B adds 2: together 5.",
+    "In 6 minutes they add 30 units, which is 30 / 90 = 1/3 of the tank.",
+    "1/3 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#9": [
+    "The litres are the units. A adds 240 / 16 = 15 litres an hour. B adds 240 / 12 = 20.",
+    "In 2 hours they add 35 x 2 = 70 litres.",
+    "Still needed: 240 - 70 = 170 litres."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#3": [
+    "Tank = 60 units: A 5, B 4, C 3 an hour.",
+    "Together 12 an hour.",
+    "60 / 12 = 5 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#10": [
+    "Tank = 60 units: A +6, B +5, C -3. Net 8 an hour.",
+    "60 / 8 = 7.5 hours.",
+    "7.5 hours is not among the options, so the answer is None of these."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#17": [
+    "Tank = 30 units: A +3, B -2 a minute. Net 1 a minute.",
+    "Half the tank, 15 units, is still needed: 15 minutes.",
+    "15 minutes is not among the options, so the answer is None of these."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#4": [
+    "Call the tank 36 units.",
+    "The pipe adds 3 an hour. With the leak the tank gains 2 an hour.",
+    "The leak removes 1 an hour, so it empties the full tank in 36 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#5": [
+    "Call the tank 12 units. A adds 3 an hour and B adds 2: together 5.",
+    "With C open the tank gains only 12 / 3 = 4 an hour.",
+    "C removes 1 an hour, so it empties the tank in 12 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#6": [
+    "Call the tank 12 units. A and B add 4 an hour. With C the tank gains 3 an hour.",
+    "C removes 1 an hour: 12 hours for the whole tank.",
+    "Half the tank takes 6 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#8": [
+    "Call the tank 80 units. A adds 5 an hour. B removes 2 an hour.",
+    "With all three open the tank gains 80 / 80 = 1 an hour.",
+    "So C removes 5 - 2 - 1 = 2 an hour, and empties the tank in 40 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#11": [
+    "Call the tank 30 units. The pairs add 5, 3 and 4 units an hour.",
+    "Add them: 12. Each pipe is counted twice, so all three add 6 an hour.",
+    "C = all three minus A and B = 6 - 5 = 1 an hour. C alone takes 30 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#3": [
+    "Tank = 20 units: all three 5 an hour, B and C 3 an hour, so A is 2.",
+    "60% of the tank is 12 units.",
+    "12 / 2 = 6 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#4": [
+    "Tank = 40 units: the pipe 5 an hour, with the leak 4.",
+    "The leak takes 1 an hour.",
+    "40 / 1 = 40 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#7": [
+    "Tank = 20 units: A 4, B 5, so A and B together 9 an hour.",
+    "(A + B) : C = 9 : 2, so C fills 2 an hour.",
+    "C alone: 20 / 2 = 10 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#7": [
+    "A 3 units a minute, B 1: together 4.",
+    "Tank = 4 x 12 = 48 units.",
+    "A alone: 48 / 3 = 16 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#26": [
+    "B is 50% more efficient, so B takes 30 / 1.5 = 20 minutes.",
+    "Tank = 60 units: A 2, B 3, together 5.",
+    "60 / 5 = 12 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#16": [
+    "Together time = product / sum. Try A = 10, so B = 15.",
+    "10 x 15 / 25 = 6, which matches.",
+    "A alone takes 10 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#1": [
+    "Call the tank 8 units. A adds 2 an hour and B adds 1.",
+    "Stage one: 3 an hour for 2 hours = 6 units. Left: 2.",
+    "B alone: 2 / 1 = 2 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#9": [
+    "Call the tank 30 units. A adds 3 a minute and B adds 2.",
+    "Stage one: 5 a minute for 3 minutes = 15 units. Left: 15.",
+    "B alone: 15 / 2 = 7 1/2 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#15": [
+    "Call the tank 60 units. A adds 3 an hour and B adds 2.",
+    "A alone for 5 hours: 15 units. Left: 45.",
+    "Both together: 45 / 5 = 9 hours. Total: 5 + 9 = 14 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#13": [
+    "Call the tank 48 units. A adds 4 a minute and B adds 3.",
+    "A is open for all 9 minutes: 36 units.",
+    "The other 12 must come from B: 12 / 3 = 4 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#19": [
+    "Call the tank 300 units. A adds 20 an hour, B adds 15 and C removes 12.",
+    "Stage one: 23 an hour for 10 hours = 230 units. Left: 70.",
+    "Stage two, C closed: 35 an hour. 70 / 35 = 2 hours. Total: 12 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#20": [
+    "Tank = 120 units: A 2, B 3 a minute.",
+    "B alone for t/2 and both for t/2: (3 + 5) x t/2 = 4t units.",
+    "4t = 120, so t = 30 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#23": [
+    "All three take 6 hours, so 2 hours fill a third.",
+    "A and B fill the other two thirds in 7 hours, so alone they take 10.5 hours: rate 2/21 of the tank an hour.",
+    "C = 1/6 - 2/21 = 1/14 of the tank an hour: 14 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#24": [
+    "Tank = 180 units: A 5, B 4, C -6.",
+    "7 minutes of A and B: 63 units. The rest, 117, at a net 3 a minute takes 39 minutes.",
+    "Total 46 minutes is not among the options, so the answer is None of these."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#29": [
+    "Tank = 12 units: A +4, B +3, C -12 an hour.",
+    "3 to 4 pm: 4 units; 4 to 5 pm: 7 more, so 11 units at 5 pm. From 5 pm the net is -5 an hour.",
+    "11 / 5 = 2.2 hours = 2 hours 12 minutes: 7:12 pm."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#12": [
+    "Tank = 12 units: A 2, B 3. One 2-hour cycle adds 5.",
+    "2 cycles (4 hours) add 10; A's next hour adds the last 2.",
+    "5 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#28": [
+    "Tank = 30 units: A +3, B -2, so each 2-minute cycle adds 1.",
+    "After 27 cycles (54 minutes) the level is 27, and A's next minute reaches 30.",
+    "55 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#14": [
+    "The tank is 12 x 40 = 480 pipe-minutes.",
+    "10 pipes: 480 / 10 = 48 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#21": [
+    "Half the tank by one pipe: 3 hours.",
+    "The other half by four pipes: 3 / 4 hour = 45 minutes.",
+    "Total 3 hours 45 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#30": [
+    "Tank = 24 units: each inlet 3, each outlet 4 an hour.",
+    "With x inlets: 3x - 4(12 - x) = 7x - 48, and the tank fills in 24 hours, so the net is 1.",
+    "7x = 49: 7 inlets."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#8": [
+    "Net = 12 - 4 = 8 litres a minute.",
+    "480 / 8 = 60 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#22": [
+    "Tank = 24 units: the leak takes 3 an hour; with the inlet the net loss is 2.",
+    "The inlet adds 1 unit an hour = 6 x 60 = 360 litres.",
+    "Capacity = 24 x 360 = 8,640 litres."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#25": [
+    "Tank = 120 units: pipes 6 and 5, all three 8, so the waste pipe takes 3 units a minute.",
+    "Those 3 units are 3 litres: one unit = 1 litre.",
+    "Capacity = 120 litres."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#27": [
+    "Two pipes: tank = 112 units, 8 + 7 = 15 an hour, 112/15 hours = 7 hours 28 minutes.",
+    "32 minutes more is 8 hours, so the net is 14 an hour and the leak takes 1.",
+    "The leak empties the tank in 112 hours."
+   ]
+  }
+ }
+}
