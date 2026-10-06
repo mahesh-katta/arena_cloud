@@ -244,7 +244,6 @@ tr:last-child td { border-bottom: 0; }
 .lesson { padding: 22px 24px; min-width: 0; max-width: 860px; }
 .lesson-top { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
 .lesson-top .back { margin: 0; }
-.skiplesson { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; text-decoration: none; padding: 6px 12px; border-radius: 999px; background: var(--accent-soft); }
 .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin: 8px 0 18px; }
 .step { display: flex; flex-direction: column; gap: 6px; border: 0; background: none; padding: 4px 0; font-size: 12.5px; font-weight: 700; color: var(--muted); cursor: pointer; text-align: left; }
 .step span { height: 5px; border-radius: 999px; background: var(--ring-bg); }
@@ -335,3 +334,21 @@ img.inl { vertical-align: middle; max-width: 100%; background: #fff; border-radi
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ---------- Grid / list, lesson header buttons, solutions ---------- */
+.seg.icons button { display: inline-flex; align-items: center; gap: 6px; padding: 0 14px; }
+.tlist { display: flex; flex-direction: column; gap: 8px; }
+.lrow-topic { display: flex; align-items: center; gap: 14px; padding: 10px 16px; text-decoration: none; color: var(--ink); border-radius: 16px; }
+.lrow-topic .tname { font-size: 15.5px; }
+.lrow-topic .count { min-width: 44px; text-align: right; }
+.minibar { width: 120px; height: 6px; border-radius: 999px; background: var(--ring-bg); overflow: hidden; flex: none; }
+.minibar span { display: block; height: 100%; background: var(--grad); border-radius: 999px; }
+.tlist .pcard { border-radius: 16px; padding: 10px 16px; }
+.lesson-acts { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+.pillbtn { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; text-decoration: none; padding: 6px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); border: 1px solid transparent; cursor: pointer; }
+.pillbtn:hover { border-color: var(--brand1); }
+.pillbtn.done { background: var(--ok-soft); color: var(--ok-ink); }
+.wblock { display: flex; flex-direction: column; gap: 4px; }
+.wblock + .wblock { border-top: 1px dashed var(--line2); padding-top: 10px; margin-top: 4px; }
+.wtitle { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.badge svg { filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15)); }

@@ -139,3 +139,14 @@ export function applyTheme() {
   if (t === "auto") document.documentElement.removeAttribute("data-theme");
   else document.documentElement.setAttribute("data-theme", t);
 }
+
+/* "Mark as done" from the lesson header, without doing the practice. */
+export function setLessonDone(topic, id, done) {
+  update((p) => {
+    const k = lessonKey(topic, id);
+    if (done) {
+      p.lessons[k] = { ...(p.lessons[k] || {}), done: true, at: Date.now(), marked: true };
+      p.last = { topic, lesson: id };
+    } else delete p.lessons[k];
+  });
+}

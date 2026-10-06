@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Blocks, { Inline } from "./Blocks.jsx";
 import Question, { Options } from "./Question.jsx";
-import { fetchQuestions, markLesson, lessonsOf, useProgress, lessonKey } from "./store.js";
+import { fetchQuestions, markLesson, lessonsOf, useProgress, lessonKey, setLessonDone } from "./store.js";
 import { go } from "./nav.js";
 import { ICONS } from "./Icons.jsx";
 
@@ -161,13 +161,23 @@ export default function Lesson({ book, topic, id }) {
   const n = ls.indexOf(lesson) + 1;
   const after = ls.slice(n);
   const nextL = after.find((l) => !p.lessons[lessonKey(mod.id, l.id)]?.done) || after[0];
+  const isDone = !!p.lessons[lessonKey(mod.id, lesson.id)]?.done;
+  const markDone = () => {
+    setLessonDone(mod.id, lesson.id, true);
+    if (nextL) go("#/lesson/" + mod.id + "/" + nextL.id);
+  };
   const jump = (s) => { setStep(s); document.querySelector("main")?.scrollTo?.(0, 0); window.scrollTo(0, 0); };
   return (
     <article className="lesson glass" key={run}>
       <div className="lesson-top">
         <a className="back" href={"#/topic/" + mod.id}>← {mod.title}</a>
         <span className="muted small">Lesson {n} of {ls.length}</span>
-        {nextL && <a className="skiplesson" href={"#/lesson/" + mod.id + "/" + nextL.id}>Skip lesson {ICONS.skip}</a>}
+        <span className="lesson-acts">
+          {isDone
+            ? <button className="pillbtn done" onClick={() => setLessonDone(mod.id, lesson.id, false)} title="Mark as not done">{ICONS.check} Done</button>
+            : <button className="pillbtn" onClick={markDone}>{ICONS.check} Mark as done</button>}
+          {nextL && <a className="pillbtn" href={"#/lesson/" + mod.id + "/" + nextL.id}>Skip lesson {ICONS.skip}</a>}
+        </span>
       </div>
       <h2>{lesson.title}</h2>
       <Steps at={step} onJump={jump} />

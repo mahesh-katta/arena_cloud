@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Question from "./Question.jsx";
-import { Badge, PartSwitch, useCourse } from "./Course.jsx";
+import { Badge, PartSwitch, useCourse, useView, ViewToggle } from "./Course.jsx";
 import { fetchIndex, fetchPool, fetchQuestions, useProgress, dropReview, SOURCES, inSource } from "./store.js";
 import { go } from "./nav.js";
 
@@ -47,6 +47,7 @@ export function PracticeHome({ book }) {
 export function PracticePick({ book, src }) {
   const [ix, setIx] = useState(null);
   const [part, setPart] = useState("quant");
+  const [view, setView] = useView();
   useEffect(() => { fetchIndex().then(setIx); }, []);
   const topics = useCourse(book).filter((t) => t.mod.part === part);
   return (
@@ -59,19 +60,19 @@ export function PracticePick({ book, src }) {
           <p className="muted">{SOURCES.find((s) => s.id === src)?.note}</p>
         </div>
       </header>
-      <div className="toolbar"><PartSwitch part={part} onChange={setPart} /></div>
+      <div className="toolbar"><PartSwitch part={part} onChange={setPart} /><ViewToggle view={view} setView={setView} /></div>
       {!ix ? <div className="muted">Counting questions...</div> : (
-        <div className="grid">
+        <div className={view === "grid" ? "grid" : "tlist"}>
           {topics.map((t) => {
             const n = ix[t.id]?.[src] || 0;
             return n ? (
               <a key={t.id} className="pcard glass lift" href={"#/practice/" + src + "/" + t.id}>
-                <Badge title={t.mod.title} rank={t.rank} size={40} />
+                <Badge id={t.id} title={t.mod.title} rank={t.rank} size={40} />
                 <span className="grow"><span className="tname">{t.mod.title}</span><span className="muted small">{n} questions</span></span>
               </a>
             ) : (
               <div key={t.id} className="pcard glass off" aria-disabled="true">
-                <Badge title={t.mod.title} rank={t.rank} size={40} />
+                <Badge id={t.id} title={t.mod.title} rank={t.rank} size={40} />
                 <span className="grow"><span className="tname">{t.mod.title}</span><span className="muted small">None in this source</span></span>
               </div>
             );
@@ -120,7 +121,7 @@ export function PracticeRun({ book, src, topic, query }) {
     <div className="page run">
       <a className="back" href={"#/practice/" + src}>← {srcName(src)}</a>
       <header className="runhead glass">
-        <Badge title={mod.title} rank={useCourse(book).find((t) => t.id === topic)?.rank || 0} size={44} />
+        <Badge id={mod.id} title={mod.title} rank={useCourse(book).find((t) => t.id === topic)?.rank || 0} size={44} />
         <div className="grow">
           <h2>{mod.title}</h2>
           <div className="muted small">{list.length} questions · {answered.length} answered · {right} right</div>

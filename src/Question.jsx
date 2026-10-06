@@ -43,16 +43,27 @@ export function Options({ options, answer, picked, onPick, bank }) {
   );
 }
 
-export function Working({ q }) {
-  const lines = (q.work || q.solution || "").split("\n").filter((l) => l.trim());
-  if (!lines.length) return <div className="muted">No working is stored for this one.</div>;
+function Lines({ text, bank }) {
   return (
     <div className="worklines">
-      {lines.map((l, i) => {
-        const hides = l.startsWith("What this one hides:");
-        return <div key={i} className={hides ? "muted" : ""}><Rich text={l} bank={q.bank} /></div>;
-      })}
+      {text.split("\n").filter((l) => l.trim()).map((l, i) => (
+        <div key={i} className={l.startsWith("What this one hides:") ? "muted" : ""}><Rich text={l} bank={bank} /></div>
+      ))}
     </div>
+  );
+}
+
+/* The course's shortcut working where there is one, and the source's own
+   solution (Guidely has one for nearly every question) whenever it exists. */
+export function Working({ q }) {
+  const work = (q.work || "").trim(), sol = (q.solution || "").trim();
+  if (!work && !sol) return <div className="muted">No solution is stored for this one.</div>;
+  const own = q.bank === "guidely" ? "Guidely's solution" : "Solution";
+  return (
+    <>
+      {work && <div className="wblock"><div className="wtitle">Shortcut working</div><Lines text={work} bank={q.bank} /></div>}
+      {sol && <div className="wblock"><div className="wtitle">{own}</div><Lines text={sol} bank={q.bank} /></div>}
+    </>
   );
 }
 

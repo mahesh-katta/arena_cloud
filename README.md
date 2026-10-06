@@ -14,7 +14,7 @@ Progress is saved beside the repo in `../arena_cloud_progress.json`, so a pull n
 
 Four tabs (a sidebar on a laptop, a bottom bar on a phone):
 
-- **Course**: Quant / Reasoning, ordered by suggested (parent topics first), most asked, or easiest. Each topic has Lessons (one suggested, none locked), Quick revision and Papers. A lesson runs Learn, Example, Check, Practice (the lesson's disguise questions, with a running timer), Done; every step can be skipped or opened directly, and "Skip lesson" moves on.
+- **Course**: Quant / Reasoning, ordered by suggested (parent topics first), most asked, or easiest. Each topic has Lessons (one suggested, none locked), Quick revision and Papers. A lesson runs Learn, Example, Check, Practice (the lesson's disguise questions, with a running timer), Done; every step can be skipped or opened directly; "Mark as done" and "Skip lesson" move on. Topics show as a grid or a list. After an answer the shortcut working and, for Guidely, its own solution are both shown.
 - **Practice**: pick a source (all, previous papers, clerk graded sets, Guidely, Sreedhar, or My mistakes), then a topic, then work question by question with a type filter. `src/pools.js` maps topics to bank sets.
 - **Mocks**: coming soon.
 - **Settings**: light / dark, reset one topic, reset all progress.

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Blocks from "./Blocks.jsx";
+import { TopicIcon } from "./TopicIcons.jsx";
 import { COURSE, ASK, LEVEL, ORDERS, ordered } from "./course.js";
 import { useProgress, doneCount, lessonsOf, lessonKey, fetchIndex } from "./store.js";
 
@@ -10,16 +11,11 @@ export function useCourse(book) {
   return COURSE.filter((t) => book.byId[t.id]).map((t) => ({ ...t, mod: book.byId[t.id] }));
 }
 
-const initials = (s) => {
-  const w = s.replace(/&/g, " ").split(/[\s,]+/).filter((x) => /^[A-Z]/.test(x));
-  return w.length > 1 ? w[0][0] + w[1][0] : s.slice(0, 2);
-};
-
-export function Badge({ title, rank, size = 44 }) {
+export function Badge({ id, title, rank, size = 44 }) {
   const h = (rank * 47 + 230) % 360;
   return (
-    <span className="badge" style={{ width: size, height: size, background: `linear-gradient(135deg, hsl(${h} 85% 62%), hsl(${(h + 45) % 360} 85% 58%))` }}>
-      {initials(title)}
+    <span className="badge" title={title} style={{ width: size, height: size, background: `linear-gradient(135deg, hsl(${h} 82% 60%), hsl(${(h + 45) % 360} 82% 55%))` }}>
+      <TopicIcon id={id} size={Math.round(size * 0.56)} />
     </span>
   );
 }
@@ -83,7 +79,7 @@ export function TopicRail({ book, current }) {
           const n = lessonsOf(t.mod).length, d = doneCount(p, t.mod);
           return (
             <a key={t.id} href={"#/topic/" + t.id} className={"trow-mini" + (t.id === current ? " on" : "")}>
-              <Badge title={t.mod.title} rank={t.rank} size={30} />
+              <Badge id={t.id} title={t.mod.title} rank={t.rank} size={30} />
               <span className="grow">{t.mod.title}</span>
               <span className="muted small">{n ? (d === n ? "Done" : d + "/" + n) : "Notes"}</span>
             </a>
@@ -100,7 +96,7 @@ export function TopicCard({ t, p, book }) {
   return (
     <a className="tcard glass lift" href={"#/topic/" + t.id}>
       <div className="tcard-top">
-        <Badge title={t.mod.title} rank={t.rank} />
+        <Badge id={t.id} title={t.mod.title} rank={t.rank} />
         {n > 0 && <div className="ringwrap"><Ring value={n ? d / n : 0} /><span>{Math.round((100 * d) / (n || 1))}%</span></div>}
       </div>
       <div className="tname">{t.mod.title}</div>
@@ -113,9 +109,44 @@ export function TopicCard({ t, p, book }) {
   );
 }
 
+export function TopicRow({ t, p, book }) {
+  const n = lessonsOf(t.mod).length, d = doneCount(p, t.mod);
+  const parent = t.after && book.byId[t.after]?.title;
+  return (
+    <a className="lrow-topic glass lift" href={"#/topic/" + t.id}>
+      <Badge id={t.id} title={t.mod.title} rank={t.rank} size={42} />
+      <span className="grow">
+        <span className="tname">{t.mod.title}</span>
+        <span className="muted small">{n ? n + " lessons" : "Revision notes"} · {LEVEL[t.level]}{parent ? " · after " + parent : ""}</span>
+      </span>
+      <span className={"tag hide-sm " + ASK[t.ask].c}>{ASK[t.ask].t}</span>
+      {n > 0 && <span className="minibar hide-sm"><span style={{ width: (100 * d) / n + "%" }} /></span>}
+      <span className="small strong count">{n ? (d === n ? "Done" : d + "/" + n) : "Notes"}</span>
+    </a>
+  );
+}
+
+const GRID_ICON = <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg>;
+const LIST_ICON = <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11" /><circle cx="4.5" cy="6" r="1" fill="currentColor" /><circle cx="4.5" cy="12" r="1" fill="currentColor" /><circle cx="4.5" cy="18" r="1" fill="currentColor" /></svg>;
+
+export function useView() {
+  const [v, set] = useState(pref("arena-view", "grid"));
+  return [v, (x) => { set(x); setPref("arena-view", x); }];
+}
+
+export function ViewToggle({ view, setView }) {
+  return (
+    <div className="seg icons" role="group" aria-label="View">
+      <button className={view === "grid" ? "on" : ""} aria-pressed={view === "grid"} onClick={() => setView("grid")} title="Grid view">{GRID_ICON}<span className="hide-sm">Grid</span></button>
+      <button className={view === "list" ? "on" : ""} aria-pressed={view === "list"} onClick={() => setView("list")} title="List view">{LIST_ICON}<span className="hide-sm">List</span></button>
+    </div>
+  );
+}
+
 export function CourseHome({ book }) {
   const p = useProgress();
   const ctl = useCourseControls();
+  const [view, setView] = useView();
   const all = useCourse(book);
   const list = ordered(all.filter((t) => t.mod.part === ctl.part), ctl.how);
   const totalL = all.reduce((s, t) => s + lessonsOf(t.mod).length, 0);
@@ -151,16 +182,19 @@ export function CourseHome({ book }) {
       <div className="toolbar">
         <PartSwitch part={ctl.part} onChange={ctl.setPart} />
         <OrderSelect how={ctl.how} setHow={ctl.setHow} />
+        <ViewToggle view={view} setView={setView} />
       </div>
 
       {ctl.part === "quant" && (
         <a className="basics glass lift" href="#/topic/basics">
-          <Badge title="Basics" rank={11} size={36} />
+          <Badge id="basics" title="Basics" rank={11} size={36} />
           <span className="grow"><b>Basics</b><span className="muted small">{book.basics.lessons.length} small ideas every arithmetic topic leans on</span></span>
           <span className="small strong">{doneCount(p, book.byId.basics)}/{book.basics.lessons.length}</span>
         </a>
       )}
-      <div className="grid">{list.map((t) => <TopicCard key={t.id} t={t} p={p} book={book} />)}</div>
+      {view === "grid"
+        ? <div className="grid">{list.map((t) => <TopicCard key={t.id} t={t} p={p} book={book} />)}</div>
+        : <div className="tlist">{list.map((t) => <TopicRow key={t.id} t={t} p={p} book={book} />)}</div>}
     </div>
   );
 }
@@ -261,7 +295,7 @@ export function TopicDetail({ book, topic }) {
     <div className="detail">
       <a className="back" href="#/">← All topics</a>
       <div className="dhead glass">
-        <Badge title={mod.title} rank={c ? c.rank : 11} size={56} />
+        <Badge id={mod.id} title={mod.title} rank={c ? c.rank : 11} size={56} />
         <div className="grow">
           <h2>{mod.title}</h2>
           <div className="meta">
