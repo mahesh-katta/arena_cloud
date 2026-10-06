@@ -29,7 +29,13 @@
  },
  "intro": [
   "A train question is a Speed, Time and Distance question with one extra thought: a train is long, so passing something means travelling its whole length past it.",
-  "There are nine short lessons. Each one changes just one thing: first what is being passed (a pole, a platform, a walking man, another train), then how the exam joins these together. Please go in order the first time. If distance = speed x time is not yet comfortable, do the first lesson of Speed, Time and Distance before this."
+  "There are nine short lessons. Each one changes just one thing: first what is being passed (a pole, a platform, a walking man, another train), then how the exam joins these together. Please go in order the first time. If distance = speed x time is not yet comfortable, do the first lesson of Speed, Time and Distance before this.",
+  "What the papers ask (from the Stage A count in Quick revision of Speed, Time & Distance: 17 IBPS Clerk shifts and 12 sister papers, all memory-based; 13 of the 20 Clerk questions in that sample were train questions):",
+  "| Kind | Label | Lessons |",
+  "| One train passes a pole, platform or bridge (T7) | Confirmed: 6 Clerk, 5 sister | R1, R2, R3 |",
+  "| Train passes a moving man (T9) | Seen once | R4 |",
+  "| Two trains cross each other (T8) | Confirmed: 4 Clerk, 4 sister | R5, R6, R7, R8 |",
+  "| Two trains meeting over a distance (T5, no lengths) | Confirmed: 2 Clerk, 1 sister | R9 |"
  ],
  "needs": [
   "time-words",
@@ -782,6 +788,31 @@
     "Call A's length L. A's speed = (L + 594) / 45.",
     "Overtaking: 330 + L = 136.5 x (22 - (L + 594) / 45) = 136.5 x (396 - L) / 45.",
     "Multiply out: 30(330 + L) = 91(396 - L), so 121L = 26136 and L = 216 m."
+   ],
+   "clerk-17-trains-b-pyq#12": [
+    "Approaching: 40 + 50 = 90 km an hour. They meet after 180 / 90 = 2 hours.",
+    "Train X has covered 40 x 2 = 80 km.",
+    "It still has 180 - 80 = 100 km to go."
+   ],
+   "clerk-17-trains-b-pyq#13": [
+    "The first train travels alone from 7 to 8: 60 km. The gap at 8 am is 270 km.",
+    "Approaching: 60 + 75 = 135 km an hour. 270 / 135 = 2 hours.",
+    "Count from 8 am: 10 am."
+   ],
+   "clerk-17-trains-a-graded#12": [
+    "The first train travels alone from 7 to 8: 20 km. The gap at 8 am is 90 km.",
+    "Approaching: 45 km an hour. 90 / 45 = 2 hours, so they meet at 10:00 am.",
+    "10:00 am is not among the numbered options: \"None of these\"."
+   ],
+   "clerk-17-trains-a-graded#17": [
+    "Train A travels alone from 5 to 7: 120 km lead.",
+    "The gap shrinks by 80 - 60 = 20 km an hour: 6 hours.",
+    "Train B has travelled 80 x 6 = 480 km from the station."
+   ],
+   "clerk-17-trains-a-graded#30": [
+    "Each train takes 5 hours, so each covers one-fifth of the distance every hour. Call the distance 5 units.",
+    "The first train travels alone from 6 to 7: 1 unit. 4 units separate them at 7 am.",
+    "Approaching, they close 2 units an hour: 2 hours. Count from 7 am: 9:00 am."
    ]
   }
  }
