@@ -1,0 +1,664 @@
+{
+ "module": "compound-interest",
+ "new": {
+  "title": "Compound Interest",
+  "part": "quant",
+  "after": "ages",
+  "sample": [
+   "This topic was split out of **Simple & Compound Interest** so that compound interest can be learnt on its own. The paper counts and timed drills are in that topic's Quick revision tab; the questions that mix both kinds stay there too."
+  ],
+  "revision": [
+   "**One idea:** each period multiplies the money. 10% multiplies by 1.1.",
+   "| Rate | 2-year interest | 3-year interest | Fraction |",
+   "| 5% | 10.25% | 15.7625% | 1/20 |",
+   "| 10% | 21% | 33.1% | 1/10 |",
+   "| 15% | 32.25% | 52.0875% | 3/20 |",
+   "| 20% | 44% | 72.8% | 1/5 |",
+   "| 25% | 56.25% | 95.3125% | 1/4 |",
+   "**Two years quick:** rate + rate + (rate x rate) / 100. Different rates: r1 + r2 + r1 x r2 / 100.",
+   "**Half-yearly / quarterly:** half or a quarter of the rate; twice or four times the periods.",
+   "**Multiples:** they multiply. Doubles in 4 years: 8 times in 12.",
+   "**Neighbouring years:** later / earlier = multiplier. Walk back by dividing.",
+   "**CI - SI, same sum and rate:** 2 years: r x r / 100 percent. 3 years: 3 r x r / 100 + r x r x r / 10,000 percent.",
+   "**Traps.** Interest or amount? \"Third year alone\" is not three years. Do not halve a compound percent to get a yearly rate."
+  ]
+ },
+ "intro": [
+  "Compound interest is simple interest with one change: each year's interest is added to the money, so next year's slice is bigger. The habit stays the same: **call the sum 100% and find what 1% is worth.**",
+  "There are seven short lessons. The first is taken from the combined Simple & Compound Interest topic; the other six fill the gaps, each with its own practice set. Go in order the first time."
+ ],
+ "needs": [
+  "percent-of",
+  "percent-words",
+  "ratio"
+ ],
+ "after": [
+  "That is compound interest. The combined **Simple & Compound Interest** topic now puts both kinds in one question, the way recent papers set them.",
+  "Loans repaid in instalments are left out on purpose: they have not appeared in the Clerk papers checked."
+ ],
+ "lessons": [
+  {
+   "id": "compound-interest",
+   "code": "C1",
+   "title": "What compound interest is",
+   "plain": "New: interest that earns interest. Each year's slice is cut from the grown amount, not from the original sum.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "In simple interest the yearly slice never changes. **Compound interest** (CI) is different in one way only: at the end of each year the interest is **added to your money**, and next year's slice is cut from that bigger amount.",
+    "Take Rs 6,000 at 10% a year.",
+    "- Year 1: 10% of 6,000 = 600. You now have 6,600.",
+    "- Year 2: 10% of **6,600** = 660. You now have 7,260.",
+    "The total interest is 600 + 660 = Rs 1,260. Simple interest would have given 600 + 600 = 1,200. The extra Rs 60 is the interest earned on the first year's interest.",
+    "Going year by year always works, and you should do it that way until it feels natural. For **two years** there is also a quick route. The interest percent for two years is:",
+    "**rate + rate + (rate x rate) / 100**",
+    "At 10%: 10 + 10 + 1 = 21%. And 21% of 6,000 is 1,260, the same answer in one step. The first two pieces are the two yearly slices; the last piece is the interest on interest.",
+    "If the rate is different in each year, the same idea holds: first rate + second rate + (first x second) / 100.",
+    "These two-year percents come up so often that it helps to recognise them. There is no need to memorise the table today; it will stick with practice.",
+    "| Rate | CI percent for 2 years |",
+    "| 5% | 10.25% |",
+    "| 8% | 16.64% |",
+    "| 10% | 21% |",
+    "| 15% | 32.25% |",
+    "| 20% | 44% |",
+    "| 25% | 56.25% |",
+    "For three years, do two years first and then one more year on the amount."
+   ],
+   "example": {
+    "q": "Find the compound interest on Rs 8,000 at 20% per annum for 2 years.",
+    "steps": [
+     "Year 1: 20% of 8,000 = 1,600. The money is now 9,600.",
+     "Year 2: 20% of 9,600 = 1,920. The money is now 11,520.",
+     "Compound interest = 1,600 + 1,920 = Rs 3,520.",
+     "Quick route to confirm: 20 + 20 + (20 x 20) / 100 = 44%, and 44% of 8,000 = 3,520."
+    ],
+    "answer": "The compound interest is Rs 3,520."
+   },
+   "check": {
+    "q": "What is the compound interest on Rs 5,000 at 20% per annum for 2 years?",
+    "options": {
+     "a": "Rs 2,000",
+     "b": "Rs 2,200",
+     "c": "Rs 2,400",
+     "d": "Rs 7,200"
+    },
+    "answer": "B",
+    "why": "Year 1: 1,000, giving 6,000. Year 2: 20% of 6,000 = 1,200. Total 2,200. (2,000 is the simple interest; 7,200 is the amount.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-11-si-ci-a-graded#5",
+     "clerk-11-si-ci-a-graded#8",
+     "clerk-11-si-ci-a-graded#16",
+     "clerk-11-si-ci-a-graded#28",
+     "clerk-11-si-ci-a-graded#24",
+     "clerk-11-si-ci-a-graded#12"
+    ],
+    "tags": [
+     "Plain two years: find the interest.",
+     "The question asks for the amount.",
+     "A different rate in each year.",
+     "Backwards: find the rate from how much it grew.",
+     "Two and a half years.",
+     "Three years; the right figure is not among the options."
+    ]
+   },
+   "more": [
+    {
+     "tag": "Three years",
+     "q": "What is the compound interest on Rs 1,000 at 10% per annum for 3 years?",
+     "options": {
+      "a": "Rs 300",
+      "b": "Rs 310",
+      "c": "Rs 331",
+      "d": "Rs 1,331"
+     },
+     "answer": "C",
+     "why": "Year 1: 100, giving 1,100. Year 2: 110, giving 1,210. Year 3: 121, giving 1,331. Interest = 100 + 110 + 121 = 331. (1,331 is the amount.)"
+    }
+   ],
+   "shortcut": {
+    "title": "Rates as fractions",
+    "text": [
+     "Some rates are simple fractions, and then compound interest becomes a ratio. 20% is 1/5: every year, each 5 rupees become 6.",
+     "So after one year, sum : amount = 5 : 6. After two years, 25 : 36. After three, 125 : 216.",
+     "| Rate | As a fraction | Sum : amount after 2 years |",
+     "| 10% | 1/10 | 100 : 121 |",
+     "| 12.5% | 1/8 | 64 : 81 |",
+     "| 20% | 1/5 | 25 : 36 |",
+     "| 25% | 1/4 | 16 : 25 |",
+     "This is most useful backwards. \"A sum amounts to Rs 7,200 in 2 years at 20%\": 36 parts = 7,200, so one part is 200 and the sum, 25 parts, is Rs 5,000."
+    ]
+   }
+  },
+  {
+   "id": "three-years-and-rates",
+   "code": "C2",
+   "title": "Three years, and a different rate each year",
+   "plain": "New: more than two years, and rates that change from year to year.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "Compound interest **multiplies** the money each year. 10% a year multiplies by 1.1; 20% by 1.2; 15% by 1.15.",
+    "For several years, multiply the multipliers. Three years at 10%: 1.1 x 1.1 x 1.1 = 1.331, so the amount is 133.1% of the sum and the interest is 33.1%.",
+    "If the rate changes each year, multiply the different multipliers: 20%, 10%, 25% gives 1.2 x 1.1 x 1.25 = 1.65. The interest is 65% of the sum.",
+    "| Rate | 3-year multiplier | Interest |",
+    "| 10% | 1.331 | 33.1% |",
+    "| 15% | 1.520875 | 52.0875% |",
+    "| 20% | 1.728 | 72.8% |",
+    "Fractions are often quicker: 15% = 3/20, so each year 20 becomes 23, and over 3 years 8,000 becomes 12,167. If an answer is an amount like 12,167, look for a cube like 23 x 23 x 23.",
+    "\"36 months\" is just 3 years."
+   ],
+   "example": {
+    "q": "A sum amounts to Rs 8,640 in 2 years at 20% compound interest. It is then left for one more year at 25%. Find the sum and the final amount.",
+    "steps": [
+     "Two years at 20%: multiplier 1.2 x 1.2 = 1.44.",
+     "Sum = 8,640 / 1.44 = Rs 6,000.",
+     "One more year at 25% multiplies by 1.25: 8,640 x 1.25 = 10,800."
+    ],
+    "answer": "The sum is Rs 6,000 and the final amount is Rs 10,800."
+   },
+   "check": {
+    "q": "What is the compound interest on Rs 5,000 for 3 years if the rates are 10%, 20% and 10% for the three years?",
+    "options": {
+     "a": "Rs 2,000",
+     "b": "Rs 2,100",
+     "c": "Rs 2,260",
+     "d": "Rs 7,260"
+    },
+    "answer": "C",
+    "why": "1.1 x 1.2 x 1.1 = 1.452, so the interest is 45.2% of 5,000 = 2,260. (2,000 is simple interest; 7,260 is the amount.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "si-and-ci-based-on-rate-of-interest-set-1-prelims-1#2",
+     "si-and-ci-based-on-rate-of-interest-set-1-prelims-1#4",
+     "si-and-ci-based-on-rate-of-interest-set-1-prelims-1#6",
+     "compound-interest-based-on-amount-set-1-prelims-1#7",
+     "compounded-interest-based-on-principal-set-1-prelims-1#9"
+    ],
+    "tags": [
+     "Three small rates; walk back from the amount.",
+     "Three different rates; the interest is given.",
+     "The second rate is twice the first.",
+     "36 months is 3 years.",
+     "An amount that is a perfect cube: 23 x 23 x 23."
+    ]
+   }
+  },
+  {
+   "id": "half-yearly",
+   "code": "C3",
+   "title": "Half-yearly and quarterly",
+   "plain": "New: the interest is added more often than once a year.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "When interest is added every half year, each half year is its own period. **Halve the rate and double the number of periods.**",
+    "20% a year, compounded half-yearly, for 1 year: 10% twice. Multiplier 1.1 x 1.1 = 1.21, interest 21%.",
+    "**Quarterly:** a quarter of the rate, four periods a year. 20% quarterly is 5% per quarter; 9 months is 3 quarters; 15 months is 5 quarters.",
+    "| Per year | Compounded | Rate per period | Periods in 1 year | Interest in 1 year |",
+    "| 20% | half-yearly | 10% | 2 | 21% |",
+    "| 8% | half-yearly | 4% | 2 | 8.16% |",
+    "| 30% | half-yearly | 15% | 2 | 32.25% |",
+    "| 20% | quarterly | 5% | 4 | 21.55% |",
+    "| 40% | quarterly | 10% | 4 | 46.41% |",
+    "After that it is the same as yearly compound interest: multiply the period multipliers, or for two periods use rate + rate + (rate x rate) / 100."
+   ],
+   "example": {
+    "q": "Find the compound interest on Rs 16,000 for 1 year at 10% per annum, compounded half-yearly.",
+    "steps": [
+     "Half the rate: 5% per half year, for 2 half years.",
+     "Two-period percent: 5 + 5 + (5 x 5) / 100 = 10.25%.",
+     "10.25% of 16,000 = Rs 1,640."
+    ],
+    "answer": "Rs 1,640."
+   },
+   "check": {
+    "q": "What is the compound interest on Rs 10,000 for 1 year at 12% per annum, compounded half-yearly?",
+    "options": {
+     "a": "Rs 1,200",
+     "b": "Rs 1,236",
+     "c": "Rs 1,254",
+     "d": "Rs 11,236"
+    },
+    "answer": "B",
+    "why": "6% twice: 6 + 6 + 0.36 = 12.36% of 10,000 = 1,236. (1,200 is yearly; 11,236 is the amount.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "si-and-ci-based-on-compounded-half-yearly-set-1-prelims-1#4",
+     "si-and-ci-based-on-compounded-half-yearly-set-1-prelims-1#6",
+     "si-and-ci-based-on-compounded-half-yearly-set-1-prelims-1#2",
+     "si-and-ci-based-on-compounded-quarterly-yearly-set-1-prelims-1#2",
+     "si-and-ci-based-on-compounded-quarterly-yearly-set-1-prelims-1#8"
+    ],
+    "tags": [
+     "Half-yearly: find the sum from the interest.",
+     "Half-yearly at 8%, a large sum.",
+     "Half-yearly at 30%.",
+     "Quarterly for a year: four periods, and the amount is asked.",
+     "Quarterly for 15 months: five periods."
+    ]
+   }
+  },
+  {
+   "id": "multiples",
+   "code": "C4",
+   "title": "\"It doubles\", \"8 times\", \"1.69 times\"",
+   "plain": "New: compound growth described as a multiple, with no rupees.",
+   "needs": [
+    "percent-words"
+   ],
+   "teach": [
+    "Under compound interest the money is **multiplied** by the same number in every equal stretch of time. So multiples combine by multiplying, not adding.",
+    "If a sum doubles in 4 years: after 8 years it is 2 x 2 = 4 times, after 12 years 8 times, after 16 years 16 times.",
+    "So to answer \"when will it be 32 times?\", ask **how many doublings make 32**: 2 x 2 x 2 x 2 x 2, five doublings.",
+    "| It becomes | in T years | Then N times takes |",
+    "| 2 times | 4 | 8 times: 3 doublings, 12 years |",
+    "| 3 times | 4 | 27 times: 3 triplings, 12 years |",
+    "| 8 times | 12 | 2 times every 4 years; 32 times: 20 years |",
+    "For **two years**, a multiple that is a perfect square gives the rate at once: 1.69 = 1.3 x 1.3, so the rate is 30%. 1.44 = 1.2 x 1.2, 20%. 1.21, 10%.",
+    "Compare simple interest: there, \"doubles\" means adding 100% each time, so 3 times takes twice as long as 2 times. Do not mix the two up."
+   ],
+   "example": {
+    "q": "A sum becomes 4 times itself in 6 years at compound interest. In how many years will it become 64 times?",
+    "steps": [
+     "4 times every 6 years.",
+     "64 = 4 x 4 x 4, three stretches.",
+     "3 x 6 = 18 years."
+    ],
+    "answer": "18 years."
+   },
+   "check": {
+    "q": "At what rate of compound interest does a sum become 1.44 times itself in 2 years?",
+    "options": {
+     "a": "12%",
+     "b": "20%",
+     "c": "22%",
+     "d": "44%"
+    },
+    "answer": "B",
+    "why": "1.44 = 1.2 x 1.2, so each year multiplies by 1.2: 20%. (22% halves the 44% growth, which is the simple-interest way.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "compound-interest-based-on-n-times-set-1-prelims-1#1",
+     "compound-interest-based-on-n-times-set-1-prelims-1#3",
+     "compound-interest-based-on-n-times-set-1-prelims-1#4",
+     "compound-interest-based-on-n-times-set-1-prelims-1#7",
+     "compound-interest-based-on-n-times-set-1-prelims-1#8"
+    ],
+    "tags": [
+     "8 times in 12 years: first find one doubling.",
+     "4 times, then 64 times.",
+     "Tripling, then 27 times.",
+     "A square multiple, and the rate is written as (R + 10).",
+     "Doubling, and the amount after 8 years is asked."
+    ]
+   }
+  },
+  {
+   "id": "neighbouring-years",
+   "code": "C5",
+   "title": "From one year to the next",
+   "plain": "New: the question gives the amount, or the interest, of two different years.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "One more year of compound interest multiplies the money by the same number every time. So **divide one year's figure by the year before** to find the rate.",
+    "Amounts Rs 6,292 after 2 years and Rs 6,921.20 after 3 years: 6,921.2 / 6,292 = 1.1, so the rate is 10%.",
+    "The same works for **interest of one year alone**: the second year's interest is the first year's interest x 1.1 at 10%.",
+    "The interest of one year alone, in terms of the sum:",
+    "| Year | Interest of that year alone |",
+    "| 1st | rate% of the sum |",
+    "| 2nd | rate% of the amount after 1 year |",
+    "| 3rd | rate% of the amount after 2 years |",
+    "At 20%: the third year's interest is 20% of 1.44 x sum = 28.8% of the sum.",
+    "Amounts after 3 and 6 years: their ratio is the 3-year multiplier. 1.728 is 1.2 x 1.2 x 1.2, so 20%.",
+    "Once you know the rate, **walk back** to the sum by dividing."
+   ],
+   "example": {
+    "q": "The compound interest on a sum for the 2nd year alone is Rs 1,320 at 10% per annum. Find the sum.",
+    "steps": [
+     "The 2nd year's interest is 10% of the amount after 1 year.",
+     "So the amount after 1 year is 1,320 / 0.1 = 13,200.",
+     "The sum is 13,200 / 1.1 = Rs 12,000."
+    ],
+    "answer": "Rs 12,000."
+   },
+   "check": {
+    "q": "A sum amounts to Rs 7,200 in 2 years and Rs 8,640 in 3 years at compound interest. What is the rate?",
+    "options": {
+     "a": "10%",
+     "b": "12%",
+     "c": "20%",
+     "d": "25%"
+    },
+    "answer": "C",
+    "why": "8,640 / 7,200 = 1.2, so 20%. (Treating 1,440 as a fraction of the sum gives the wrong rate: the year's interest is cut from 7,200, not from the sum.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#10",
+     "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#4",
+     "compounded-interest-based-on-principal-set-1-prelims-1#1",
+     "compounded-interest-based-on-principal-set-1-prelims-1#10",
+     "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#7"
+    ],
+    "tags": [
+     "Amounts after 2 and 3 years: find the sum.",
+     "Interest of the second year alone.",
+     "Interest of the third year alone.",
+     "Amounts after 3 and 6 years.",
+     "Find the rate from two amounts, then use it on a new sum."
+    ]
+   }
+  },
+  {
+   "id": "ci-minus-si",
+   "code": "C6",
+   "title": "Compound against simple: the gap",
+   "plain": "New: the same sum and rate under both kinds, and only the gap is given.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "For the **same sum, same rate**, compound interest beats simple interest only because of interest on interest.",
+    "**2 years:** the gap is (rate x rate) / 100 percent of the sum. At 10%, 1%; at 15%, 2.25%; at 18%, 3.24%.",
+    "**3 years:** the gap is 3 x (rate x rate) / 100 + (rate x rate x rate) / 10,000 percent of the sum. At 10%, 3.1%; at 5%, 0.7625%; at 20%, 12.8%.",
+    "So every gap question is one division: gap in rupees / gap percent = 1% of the sum.",
+    "Backwards: if the sum and the 2-year gap are given, gap / sum x 100 = (rate x rate) / 100, and the rate is the square root.",
+    "This lesson is taken from the combined topic, where the gap also appears with two different rates or two different sums."
+   ],
+   "example": {
+    "q": "The difference between compound and simple interest on a sum for 2 years at 12% per annum is Rs 72. Find the sum.",
+    "steps": [
+     "2-year gap percent = 12 x 12 / 100 = 1.44% of the sum.",
+     "1.44% is Rs 72, so 1% is 50.",
+     "The sum is Rs 5,000."
+    ],
+    "answer": "Rs 5,000."
+   },
+   "check": {
+    "q": "What is the difference between compound and simple interest on Rs 20,000 for 3 years at 10% per annum?",
+    "options": {
+     "a": "Rs 200",
+     "b": "Rs 600",
+     "c": "Rs 620",
+     "d": "Rs 6,620"
+    },
+    "answer": "C",
+    "why": "3-year gap at 10% = 3 + 0.1 = 3.1% of 20,000 = 620. (200 is the 2-year gap; 600 forgets the small last piece.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "si-and-ci-based-on-difference-between-si-and-ci-for-two-years-set-1-prelims-1#5",
+     "si-and-ci-based-on-difference-between-si-and-ci-for-two-years-set-1-prelims-1#9",
+     "si-and-ci-based-on-difference-between-si-and-ci-for-two-years-set-1-prelims-1#2",
+     "si-and-ci-based-on-difference-between-si-and-ci-for-three-years-set-1-prelims-1#2",
+     "si-and-ci-based-on-difference-between-si-and-ci-for-three-years-set-1-prelims-1#9"
+    ],
+    "tags": [
+     "2 years at 18%: find the sum.",
+     "2 years at 15%, a small gap.",
+     "Backwards: the sum is given, find the rate.",
+     "3 years at 10%: find the gap.",
+     "3 years at 5%: find the sum."
+    ]
+   }
+  },
+  {
+   "id": "two-ci-schemes",
+   "code": "C7",
+   "title": "Two compound schemes",
+   "plain": "New: two sums, each under compound interest, compared or added.",
+   "needs": [
+    "ratio",
+    "percent-of"
+   ],
+   "teach": [
+    "As with simple interest, **write each scheme's interest percent first**, then apply it to its own sum.",
+    "Rs 5,500 at 15% for 2 years: 32.25%, so 1,773.75. Rs 4,500 at 10% for 2 years: 21%, so 945.",
+    "**Sums in a ratio:** 3 parts at 44% and 4 parts at 32.25% give 3 x 44 + 4 x 32.25 = 261 part-percents. Match to the rupees.",
+    "**Equal amounts later:** if two sums at the same rate grow to equal amounts, the one that grows longer must be smaller, by exactly the extra years' multiplier. At 25% for 3 more years, 1.25 x 1.25 x 1.25 = 125/64, so the sums are in the ratio 125 : 64.",
+    "**Letters:** x at 12% for 1 year earns 0.12x; (x + 1,000) at 10% for 2 years earns 0.21x + 210. Use the link the question gives."
+   ],
+   "example": {
+    "q": "A man invests in two schemes in the ratio 2 : 3, at 10% and 20% compound interest for 2 years. The total interest is Rs 3,480. Find the total sum.",
+    "steps": [
+     "Percents: 10% for 2 years = 21%; 20% for 2 years = 44%.",
+     "2 x 21 + 3 x 44 = 42 + 132 = 174 part-percents.",
+     "So 1 part = 3,480 / 174 x 100 = 2,000.",
+     "Total = 5 parts = Rs 10,000."
+    ],
+    "answer": "Rs 10,000."
+   },
+   "check": {
+    "q": "Rs 8,000 at 10% and Rs 6,000 at 20%, both compound interest for 2 years. What is the total interest?",
+    "options": {
+     "a": "Rs 2,800",
+     "b": "Rs 4,320",
+     "c": "Rs 4,400",
+     "d": "Rs 18,320"
+    },
+    "answer": "B",
+    "why": "21% of 8,000 = 1,680 and 44% of 6,000 = 2,640. Total 4,320. (2,800 is simple interest; 18,320 is the total amount.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#3",
+     "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#4",
+     "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#9",
+     "compound-interest-based-on-amount-set-1-prelims-1#10",
+     "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#6"
+    ],
+    "tags": [
+     "Sums in a ratio; the difference of the sums is asked.",
+     "Same rate; one sum known, find the other.",
+     "One sum split by a percent; the gap of the interests.",
+     "Equal amounts at a later age.",
+     "A letter, with different rates and years."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-11-si-ci-a-graded#5": [
+    "Year 1: 10% of 10,000 = 1,000. The money is 11,000.",
+    "Year 2: 10% of 11,000 = 1,100.",
+    "Compound interest = 1,000 + 1,100 = Rs 2,100. (Quick route: 21% of 10,000.)"
+   ],
+   "clerk-11-si-ci-a-graded#8": [
+    "Year 1: 5% of 8,000 = 400. The money is 8,400.",
+    "Year 2: 5% of 8,400 = 420. The money is 8,820.",
+    "The question asks for the amount: Rs 8,820."
+   ],
+   "clerk-11-si-ci-a-graded#16": [
+    "Year 1 at 10%: 2,000. The money is 22,000.",
+    "Year 2 at 15%: 15% of 22,000 = 3,300.",
+    "Compound interest = 2,000 + 3,300 = Rs 5,300. (Quick route: 10 + 15 + 1.5 = 26.5% of 20,000.)"
+   ],
+   "clerk-11-si-ci-a-graded#28": [
+    "36/25 is 6/5 multiplied by 6/5.",
+    "So each year multiplies the money by 6/5, which is 1.2.",
+    "Growing by 1.2 times is a rise of 20% a year."
+   ],
+   "clerk-11-si-ci-a-graded#24": [
+    "Year 1: 10% of 12,000 = 1,200. The money is 13,200.",
+    "Year 2: 10% of 13,200 = 1,320. The money is 14,520.",
+    "The last half year earns half the yearly rate, 5%: 5% of 14,520 = 726.",
+    "Compound interest = 1,200 + 1,320 + 726 = Rs 3,246."
+   ],
+   "clerk-11-si-ci-a-graded#12": [
+    "Three years at 10%: 1.1 x 1.1 x 1.1 = 1.331, so the interest is 33.1%.",
+    "33.1% of 8,000 = 2,648.",
+    "2,648 is not among the options, so the answer is None of these."
+   ]
+  },
+  "guidely": {
+   "si-and-ci-based-on-rate-of-interest-set-1-prelims-1#2": [
+    "Multiplier: 1.02 x 1.04 x 1.06 = 1.124448.",
+    "Sum = 6,465.576 / 1.124448.",
+    "Sum = Rs.5750."
+   ],
+   "si-and-ci-based-on-rate-of-interest-set-1-prelims-1#4": [
+    "Multiplier: 1.2 x 1.1 x 1.25 = 1.65, so the interest is 65% of the sum.",
+    "65% is 975, so 1% is 15.",
+    "The sum is Rs.1500."
+   ],
+   "si-and-ci-based-on-rate-of-interest-set-1-prelims-1#6": [
+    "3,960 / 3,000 = 1.32 = (1 + R/100)(1 + 2R/100).",
+    "Try R = 10: 1.1 x 1.2 = 1.32.",
+    "R = 10."
+   ],
+   "compound-interest-based-on-amount-set-1-prelims-1#7": [
+    "36 months = 3 years; 10% for 3 years multiplies by 1.331.",
+    "7,000 x 1.331 = 9,317.",
+    "Amount = Rs.9317."
+   ],
+   "compounded-interest-based-on-principal-set-1-prelims-1#9": [
+    "15% = 3/20: each year 20 becomes 23. Three years: 8,000 becomes 12,167.",
+    "12,167 is exactly 23 x 23 x 23, so the sum is 20 x 20 x 20.",
+    "Sum = Rs.8000."
+   ],
+   "si-and-ci-based-on-compounded-half-yearly-set-1-prelims-1#4": [
+    "20% half-yearly for 1 year: 10% twice = 21%.",
+    "21% of the sum is 840, so 1% is 40.",
+    "The sum is Rs.4000."
+   ],
+   "si-and-ci-based-on-compounded-half-yearly-set-1-prelims-1#6": [
+    "8% half-yearly: 4% twice = 4 + 4 + 0.16 = 8.16%.",
+    "8.16% is 3,264, so 1% is 400.",
+    "The sum is Rs. 40000."
+   ],
+   "si-and-ci-based-on-compounded-half-yearly-set-1-prelims-1#2": [
+    "30% half-yearly: 15% twice = 15 + 15 + 2.25 = 32.25%.",
+    "32.25% is 2,322, so 1% is 72.",
+    "x = Rs.7200."
+   ],
+   "si-and-ci-based-on-compounded-quarterly-yearly-set-1-prelims-1#2": [
+    "20% quarterly: 5% for 4 quarters. Multiplier 1.05 x 1.05 x 1.05 x 1.05 = 1.21550625.",
+    "2,500 x 1.21550625 = 3,038.77.",
+    "The nearest option is 3038.76."
+   ],
+   "si-and-ci-based-on-compounded-quarterly-yearly-set-1-prelims-1#8": [
+    "40% quarterly: 10% per quarter; 15 months = 5 quarters.",
+    "1.1 to the fifth = 1.61051, so the interest is 61.051%.",
+    "61.051% of 10,000 = Rs.6105.10."
+   ],
+   "compound-interest-based-on-n-times-set-1-prelims-1#1": [
+    "8 = 2 x 2 x 2 in 12 years, so one doubling takes 4 years.",
+    "32 = five doublings.",
+    "5 x 4 = 20years."
+   ],
+   "compound-interest-based-on-n-times-set-1-prelims-1#3": [
+    "4 times every 4 years.",
+    "64 = 4 x 4 x 4, three stretches.",
+    "3 x 4 = 12 years."
+   ],
+   "compound-interest-based-on-n-times-set-1-prelims-1#4": [
+    "3 times every 4 years.",
+    "27 = 3 x 3 x 3, three stretches.",
+    "3 x 4 = 12 years."
+   ],
+   "compound-interest-based-on-n-times-set-1-prelims-1#7": [
+    "1.69 = 1.3 x 1.3, so the rate is 30%.",
+    "R + 10 = 30.",
+    "R = 20%."
+   ],
+   "compound-interest-based-on-n-times-set-1-prelims-1#8": [
+    "Doubles in 4 years, so in 8 years it doubles twice: 4 times.",
+    "4 x 1,200 = 4,800.",
+    "Amount = Rs.4800."
+   ],
+   "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#10": [
+    "6,921.2 / 6,292 = 1.1, so the rate is 10%.",
+    "Two years multiplies by 1.21: sum = 6,292 / 1.21.",
+    "Sum = Rs.5200."
+   ],
+   "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#4": [
+    "The 2nd year's interest is 10% of the amount after 1 year, which is 1.1x.",
+    "0.11x = 5,500.",
+    "x = Rs.50000."
+   ],
+   "compounded-interest-based-on-principal-set-1-prelims-1#1": [
+    "The 3rd year's interest is 20% of the amount after 2 years, 1.44 x sum.",
+    "So it is 28.8% of the sum, and 28.8% is 1,440.",
+    "1% is 50, so the sum is Rs.5000."
+   ],
+   "compounded-interest-based-on-principal-set-1-prelims-1#10": [
+    "12,541.1328 / 7,257.6 = 1.728 = 1.2 x 1.2 x 1.2, so the rate is 20%.",
+    "Three years multiplies by 1.728: sum = 7,257.6 / 1.728.",
+    "Sum = Rs.4200."
+   ],
+   "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#7": [
+    "13,487.3088 / 12,042.24 = 1.12, so R = 12%.",
+    "3 years at 12%: 1.12 x 1.12 x 1.12 = 1.404928.",
+    "3,000 x 1.404928 = Rs.4214.784."
+   ],
+   "si-and-ci-based-on-difference-between-si-and-ci-for-two-years-set-1-prelims-1#5": [
+    "Gap at 18% for 2 years = 18 x 18 / 100 = 3.24% of the sum.",
+    "3.24% is 405, so 1% is 125.",
+    "Sum = Rs.12500."
+   ],
+   "si-and-ci-based-on-difference-between-si-and-ci-for-two-years-set-1-prelims-1#9": [
+    "Gap at 15% for 2 years = 2.25% of the sum.",
+    "2.25% is 31.5, so 1% is 14.",
+    "Sum = 1400."
+   ],
+   "si-and-ci-based-on-difference-between-si-and-ci-for-two-years-set-1-prelims-1#2": [
+    "40.32 / 2,800 = 1.44% of the sum.",
+    "(rate x rate) / 100 = 1.44 means rate x rate = 144.",
+    "The rate is 12%."
+   ],
+   "si-and-ci-based-on-difference-between-si-and-ci-for-three-years-set-1-prelims-1#2": [
+    "Gap at 10% for 3 years = 3 + 0.1 = 3.1% of the sum.",
+    "3.1% of 50,000 = 1,550.",
+    "The difference is Rs.1550."
+   ],
+   "si-and-ci-based-on-difference-between-si-and-ci-for-three-years-set-1-prelims-1#9": [
+    "Gap at 5% for 3 years = 0.75 + 0.0125 = 0.7625% of the sum.",
+    "0.7625% is 15.25, so 1% is 20.",
+    "Sum = Rs.2000."
+   ],
+   "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#3": [
+    "Percents for 2 years: 20% gives 44%, 15% gives 32.25%.",
+    "3 x 44 + 4 x 32.25 = 132 + 129 = 261 part-percents = 7,830, so 1 part = 3,000.",
+    "Difference of the sums = 4 - 3 = 1 part = Rs.3000."
+   ],
+   "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#4": [
+    "20% for 2 years = 44%. Scheme B: 44% of 8,000 = 3,520.",
+    "Scheme A earns 3,520 - 352 = 3,168, and 3,168 / 0.44 = 7,200.",
+    "Scheme A = Rs.7200."
+   ],
+   "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#9": [
+    "5,500 at 15% for 2 years: 32.25% = 1,773.75.",
+    "4,500 at 10% for 2 years: 21% = 945.",
+    "Difference = Rs.828.75."
+   ],
+   "compound-interest-based-on-amount-set-1-prelims-1#10": [
+    "Vikash's money grows 30 years, Kavita's 33. For equal amounts, Vikash's sum is bigger by 3 years of growth: 1.25 x 1.25 x 1.25 = 125/64.",
+    "So Vikash : Kavita = 125 : 64, 189 parts = 75,600, 1 part = 400.",
+    "Vikash = 125 x 400 = Rs.50000."
+   ],
+   "compound-interest-based-on-comparison-of-two-ci-set-1-prelims-1#6": [
+    "Ram: 12% of x = 0.12x. Sam: 21% of (x + 1,000) = 0.21x + 210.",
+    "0.21x + 210 - 0.12x = 300 gives 0.09x = 90.",
+    "x = Rs.1000."
+   ]
+  }
+ }
+}
