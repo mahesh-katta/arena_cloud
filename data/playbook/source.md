@@ -110,6 +110,11 @@ Three files joined into one: the Quant Speed Mastery Modules, the Quant Pattern 
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>11 IBPS Clerk Prelims PYQs (9 paper labels) + 4 sister-exam questions (4 papers) + 239 bank questions</td>
+<td>14</td>
+<td>Averages</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>15 IBPS Clerk Prelims PYQs (13 paper labels) + 9 sister-exam questions (6 papers) + 81 bank questions</td>
 </tr>
 </table>
 The archetype counts, labels and question IDs for every module are kept in the companion file “Bank Clerk Quant - Pattern Index”.
@@ -8449,6 +8454,55 @@ The 1,564 practice-question IDs are not listed here because the list would run t
 - **"Added to each" changes the ratio but not the difference; "multiplied" changes both.**
 ## 2. Archetypes
 Ten archetypes cover the bank and the papers. "Papers" counts paper labels, IBPS Clerk and sister papers together. Bank counts: clerk questions by hand, Sreedhar questions by hand, Guidely by the name of the set each question sits in.
+# Averages - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers as the other modules. PYQs found: 15 IBPS Clerk Prelims average questions from 13 paper labels (in your bank as PYQ-AVG-01 to 15) and 9 sister-exam questions from 6 papers (DI sets that only ask for an average, and average speed, are left to DI and Speed). Bank questions used: 81 (45 clerk, 36 Sreedhar; Guidely has no average sets, and its age-average questions belong to Ages). The floor of 8 target-exam shifts and 6-10 sister questions is met. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** An average is a total shared equally. **Total = average x count.** Almost every question is solved by turning averages into totals, doing the arithmetic on totals, and turning back at the end.
+### Base operations
+1. **Total from an average.** 8 numbers averaging 25 total 200.
+2. **Someone joins.** New person = old average + (number of people now x rise in average). Teacher joins 20 students averaging 45 and the average rises 1: teacher = 45 + 21 x 1 = 66.
+3. **Someone leaves.** The leaver = old total - new total. 13 people averaging 36 lose one and the rest average 35: 468 - 420 = 48.
+4. **Someone is replaced.** New - old = number of people x change in average. 8 people, average up 2.5 when a 60 kg person is replaced: new = 60 + 8 x 2.5 = 80.
+5. **Two groups (weighted average).** The overall average sits between the two, closer to the bigger group. The distances are in the opposite ratio of the group sizes: sections averaging 65 and 85, overall 70 → distances 5 and 15 → sizes 15 : 5 = 3 : 1.
+6. **Consecutive numbers.** The average is the middle number (or the mean of the two middle ones). 5 consecutive odd numbers averaging 27: 23, 25, 27, 29, 31.
+7. **Overlapping groups.** Add the group totals; the overlap is counted twice. Average of first six 49, last six 52, all eleven 50: sixth = 294 + 312 - 550 = 56.
+8. **Same change to every number.** Adding k to all adds k to the average; multiplying all by k multiplies the average by k.
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Situation</td>
+<td>Shortcut</td>
+</tr>
+<tr>
+<td>n people, one more joins, average rises by d</td>
+<td>new = old average + (n + 1) x d</td>
+</tr>
+<tr>
+<td>n people, one replaced, average rises by d</td>
+<td>new = old + n x d</td>
+</tr>
+<tr>
+<td>batsman's average rises by d after innings n</td>
+<td>score in innings n = new average + (n - 1) x d</td>
+</tr>
+<tr>
+<td>a number misread</td>
+<td>change in average = (correct - wrong) / count</td>
+</tr>
+<tr>
+<td>two-digit number reversed</td>
+<td>change in total = 9 x (difference of digits)</td>
+</tr>
+<tr>
+<td>k consecutive odd or even numbers</td>
+<td>largest = average + (k - 1); smallest = average - (k - 1)</td>
+</tr>
+</table>
+### Non-linear warnings
+- The average of two averages is not the overall average unless the groups are the same size.
+- "Average increases by 6 months" is 0.5 years; "average decreases by Rs 1" applies to every member, including the new ones.
+## 2. Archetypes
+Nine archetypes cover the bank and the papers. "Papers" counts paper labels, IBPS Clerk and sister papers together. Bank counts are by hand.
 <table header-row="true">
 <tr>
 <td>Code</td>
@@ -8607,6 +8661,143 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 - **30-second exam method.** 4 x 1.25 = 5 and 5 x 1.2 = 6. **Answer (A).**
 - **Option elimination hack.** P's rise is bigger, so P gains on Q: the new ratio is above 4 : 5 = 0.8 and below 1. Only 5 : 6 = 0.83 and 20 : 21 = 0.95 qualify; the factor check picks 5 : 6.
 - **IBPS trap warning.** Percent changes are multiplied into each term; they are not added to the ratio.
+<td>AV1</td>
+<td>Someone joins, leaves or is replaced</td>
+<td>Confirmed (8 papers)</td>
+<td>5</td>
+<td>3</td>
+<td>21</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>AV2</td>
+<td>Two groups: overall average, or a group's size or average</td>
+<td>Confirmed (6 papers)</td>
+<td>5</td>
+<td>1</td>
+<td>12</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>AV5</td>
+<td>Consecutive numbers</td>
+<td>Confirmed (6 papers)</td>
+<td>1</td>
+<td>5</td>
+<td>8</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>AV4</td>
+<td>The numbers are linked by a ratio or a difference</td>
+<td>Confirmed (2 papers)</td>
+<td>2</td>
+<td>0</td>
+<td>6</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>AV3</td>
+<td>Overlapping groups (first six, last six; A, B, C and B, C, D)</td>
+<td>Seen once</td>
+<td>1</td>
+<td>0</td>
+<td>20</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>AV8</td>
+<td>Number puzzles (zero average, smallest possible value)</td>
+<td>Seen once</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>AV6</td>
+<td>Batsman's average; score needed</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>AV7</td>
+<td>A number misread or reversed</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>AV9</td>
+<td>Plain averages, operations on every number, mixed periods</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>Insurance</td>
+</tr>
+</table>
+What stands out: one person changing a group's average (AV1) is in eight papers. Consecutive numbers (AV5) appear in five of the twelve sister papers, all 2025-26.
+### Core archetypes (Confirmed and Seen once)
+**AV1. Someone joins, leaves or is replaced. Confirmed (8 papers).** *Pattern clues:* "when the teacher's weight is included", "a student weighing 48 kg leaves", "replaced by a new student", "two new students join". *Shortcut engine:* the newcomer brings the old average plus enough to lift everyone (now including the newcomer) by the rise. Replacement: new - old = count x change. When the count is unknown, the person's distance from the average gives it. *Worked example (IBPS Clerk Prelims 3 Sep 2022 Slot 1):* 120 students; the average falls 0.6 when a 156-mark student is replaced. New = 156 - 120 x 0.6 = 84.
+**AV2. Two groups. Confirmed (6 papers).** *Pattern clues:* "boys and girls", "Section A and Section B", "technicians and the rest". *Shortcut engine:* weighted average: (n1 x a1 + n2 x a2) / (n1 + n2). Backwards, sizes are in the opposite ratio of the distances from the overall average. *Worked example (IBPS Clerk Prelims 4 Oct 2025 Shift 2):* class 70, Section A 65, Section B 85. Distances 5 and 15, so A : B = 15 : 5 = 3 : 1.
+**AV5. Consecutive numbers. Confirmed (6 papers).** *Pattern clues:* "consecutive odd numbers", "consecutive multiples of 4", "Set A contains". *Shortcut engine:* the average is the middle; step out by the gap. *Worked example (IBPS PO Prelims 22 Aug 2026 Shift 1):* 5 consecutive multiples of 4 average 32 (24 to 40); 4 consecutive multiples of 6 average 33 (24, 30, 36, 42). Largest of B - smallest of A = 42 - 24 = 18.
+**AV4. Numbers linked by a ratio or difference. Confirmed (2 papers).** *Pattern clues:* "A is 24 more than B", "(A + B) : C = 5 : 4", "the first is twice the second". *Shortcut engine:* average x count = total; split the total by the ratio, then use the difference. *Worked example (IBPS Clerk Prelims 4 Oct 2025 Shift 2):* total 216 split 5 : 4: A + B = 120, C = 96. A - B = 24, so B = 48.
+**AV3. Overlapping groups. Seen once.** *Shortcut engine:* add the group totals and subtract the whole; the overlap is what was counted twice. *Worked example (IBPS Clerk Prelims 2024):* A, B, C average 34 (total 102), A and B average 21 (total 42), so C = 60.
+**AV8. Number puzzles. Seen once.** *Shortcut engine:* zero average means the negatives cancel the positives; to make one number as low as possible, make the others as close to zero as allowed. *Worked example (IBPS Clerk Prelims 4 Oct 2025 Shift 2):* positives total 50, so the four negatives total -50; three of them at -1 leave -47.
+### Insurance archetypes (Bank only)
+**AV6. Batsman's average; score needed.** Score in the new innings = new average + (innings before) x rise. Score needed = new average x new count - old total.
+**AV7. Misread numbers.** Change in average = (correct - wrong) / count. A two-digit number reversed changes the total by 9 x the digit difference.
+**AV9. Plain averages.** Add and divide; for "each number doubled and 5 added", double the average and add 5.
+## 3. Drill Set
+Six original questions: one per Confirmed archetype, the overlap engine and the misread trap. Every answer and every elimination hack was checked by script.
+### Drill 1. Easy cutoff-buster (AV1)
+The average weight of 15 students is 40 kg. When the teacher joins, the average rises by 1.5 kg. Find the teacher's weight (in kg).
+1. 41.5 (B) 56 (C) 62.5 (D) 64 (E) 60
+- **Conventional method.** 15 x 40 = 600; 16 x 41.5 = 664; teacher = 64.
+- **30-second exam method.** The teacher brings 40 plus 1.5 for each of the 16 people now: 40 + 24 = 64. **Answer (D).**
+- **Option elimination hack.** The teacher must be above 40 + 1.5 x 15 = 62.5 (lifting the students alone is not enough). Only 64 is above 62.5. Back-check: 664 / 16 = 41.5.
+- **IBPS trap warning.** Option (C) 62.5 multiplies by 15 instead of 16; option (A) is the new average.
+### Drill 2. Two groups backwards (AV2)
+The average marks of a class are 62. The boys average 58 and the girls 68. Find the ratio of boys to girls.
+1. 2 : 3 (B) 3 : 2 (C) 5 : 4 (D) 4 : 5 (E) 1 : 1
+- **Conventional method.** 58b + 68g = 62(b + g), so 6g = 4b.
+- **30-second exam method.** Distances: boys 4 below, girls 6 above. Sizes are the opposite: 6 : 4 = 3 : 2. **Answer (B).**
+- **Option elimination hack.** 62 is nearer the boys' 58, so there are more boys: (B) or (C). Back-check 3 : 2: (3 x 58 + 2 x 68) / 5 = 62.
+- **IBPS trap warning.** Option (A) puts the ratio the wrong way round.
+### Drill 3. Consecutive sets (AV5)
+The average of 4 consecutive even numbers is 27, and the average of 5 consecutive odd numbers is 41. Find the sum of the largest even number and the smallest odd number.
+1. 65 (B) 66 (C) 67 (D) 68 (E) 69
+- **Conventional method.** Write n, n + 2, n + 4, n + 6 with average n + 3 = 27; odd set m - 4 ... m + 4 with m = 41.
+- **30-second exam method.** Evens around 27: 24, 26, 28, 30. Odds around 41: 37 to 45. 30 + 37 = 67. **Answer (C).**
+- **Option elimination hack.** Even + odd is odd: (A), (C) or (E). Largest even is 27 + 3 = 30 and smallest odd is 41 - 4 = 37, so 67.
+- **IBPS trap warning.** Taking the middle numbers (27 + 41 = 68) is option (D).
+### Drill 4. Linked numbers (AV4)
+The average of A, B and C is 40. A is 12 more than B, and (A + B) : C = 7 : 3. Find B.
+1. 36 (B) 42 (C) 30 (D) 48 (E) 24
+- **Conventional method.** A + B + C = 120 and 3(A + B) = 7C give A + B = 84; with A - B = 12, B = 36.
+- **30-second exam method.** Total 120 in 7 : 3: A + B = 84, C = 36. B = (84 - 12) / 2 = 36. **Answer (A).**
+- **Option elimination hack.** B + (B + 12) = 84 means B is (84 - 12) / 2; only 36 fits. Back-check: 48, 36, 36 average 40.
+- **IBPS trap warning.** Option (D) 48 is A.
+### Drill 5. Overlap (AV3)
+The average of 7 numbers is 30. The average of the first four is 28 and of the last four is 33. Find the fourth number.
+1. 30 (B) 32 (C) 34 (D) 36 (E) 38
+- **Conventional method.** Totals 112 and 132; whole 210; the fourth is counted twice.
+- **30-second exam method.** 112 + 132 - 210 = 34. **Answer (C).**
+- **Option elimination hack.** None needed; one subtraction.
+- **IBPS trap warning.** Option (A) 30 is the overall average.
+### Drill 6. Misread trap (AV7)
+The average of 25 numbers was found to be 46. Later it was seen that 74 had been read as 47. Find the correct average.
+1. 44.92 (B) 46.92 (C) 47.08 (D) 48.08 (E) 47.92
+- **Conventional method.** 25 x 46 = 1,150; correct total 1,150 + 27 = 1,177; / 25 = 47.08.
+- **30-second exam method.** The total was 27 too low, so the average rises by 27 / 25 = 1.08: 47.08. **Answer (C).**
+- **Option elimination hack.** The true number was larger, so the average rises: (C), (D) or (E); 27 / 25 is just over 1.
+- **IBPS trap warning.** Option (A) subtracts the correction.
 ## 4. Cheat Sheet & 30-Second Recall Matrix
 <table header-row="true">
 <tr>
@@ -8659,6 +8850,45 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 **Fallback.** When a new form appears, write every quantity as parts of one person and use the single fact the question gives (a total, a difference, an unchanged term) to find one part.
 ## 5. Practice Ladder
 36 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-RAT and PYQ-RAT are `source.id` values in `clerk/questions.json`; G-name-n is question n of the Guidely ratio set with that name.
+<td>AV1</td>
+<td>joins / leaves / replaced</td>
+<td>newcomer = old average + new count x rise; replaced: difference = count x change</td>
+</tr>
+<tr>
+<td>AV2</td>
+<td>two groups and an overall average</td>
+<td>sizes in the opposite ratio of the distances</td>
+</tr>
+<tr>
+<td>AV5</td>
+<td>consecutive numbers</td>
+<td>average is the middle; step out by the gap</td>
+</tr>
+<tr>
+<td>AV4</td>
+<td>ratio or difference between the numbers</td>
+<td>total first, then split</td>
+</tr>
+<tr>
+<td>AV3</td>
+<td>overlapping groups</td>
+<td>add group totals, subtract the whole</td>
+</tr>
+<tr>
+<td>AV6</td>
+<td>batsman, innings</td>
+<td>score = new average + earlier innings x rise</td>
+</tr>
+<tr>
+<td>AV7</td>
+<td>misread, reversed digits</td>
+<td>change in total / count; reversed digits: 9 x digit gap</td>
+</tr>
+</table>
+**Traps.** Counting the newcomer when spreading a rise. The plain average of two group averages. Asking for the new average when the newcomer's value is wanted, and the other way round.
+**Fallback.** Write every average as a total, do the story with totals, divide once at the end.
+## 5. Practice Ladder
+32 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-AVG and PYQ-AVG are `source.id` values in `clerk/questions.json`.
 **Rung 1. Untimed until all correct.** One engine, small numbers.
 <table header-row="true">
 <tr>
@@ -8715,6 +8945,49 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>CON-RAT-16</td>
 <td>RP3</td>
 <td>10 : 7</td>
+<td>CON-AVG-01</td>
+<td>AV9</td>
+<td>33</td>
+</tr>
+<tr>
+<td>CON-AVG-08</td>
+<td>AV9</td>
+<td>23</td>
+</tr>
+<tr>
+<td>CON-AVG-05</td>
+<td>AV1</td>
+<td>66 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-06</td>
+<td>AV1</td>
+<td>40</td>
+</tr>
+<tr>
+<td>PYQ-AVG-04</td>
+<td>AV1</td>
+<td>53 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-07</td>
+<td>AV2</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CON-AVG-02</td>
+<td>AV5</td>
+<td>11</td>
+</tr>
+<tr>
+<td>CON-AVG-03</td>
+<td>AV5</td>
+<td>31</td>
+</tr>
+<tr>
+<td>PYQ-AVG-12</td>
+<td>AV3</td>
+<td>60</td>
 </tr>
 </table>
 **Rung 2. 60 seconds each.** The Confirmed archetypes in exam wording.
@@ -8808,6 +9081,74 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>CON-RAT-17</td>
 <td>RP2</td>
 <td>₹2,400</td>
+<td>PYQ-AVG-06</td>
+<td>AV1</td>
+<td>55 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-08</td>
+<td>AV1</td>
+<td>13</td>
+</tr>
+<tr>
+<td>PYQ-AVG-13</td>
+<td>AV1</td>
+<td>84</td>
+</tr>
+<tr>
+<td>PYQ-AVG-05</td>
+<td>AV1</td>
+<td>122 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-09</td>
+<td>AV1</td>
+<td>80 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-03</td>
+<td>AV2</td>
+<td>3 : 1</td>
+</tr>
+<tr>
+<td>PYQ-AVG-11</td>
+<td>AV2</td>
+<td>35 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-14</td>
+<td>AV2</td>
+<td>30 years</td>
+</tr>
+<tr>
+<td>PYQ-AVG-09</td>
+<td>AV2</td>
+<td>38 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-01</td>
+<td>AV4</td>
+<td>48</td>
+</tr>
+<tr>
+<td>PYQ-AVG-15</td>
+<td>AV4</td>
+<td>39</td>
+</tr>
+<tr>
+<td>PYQ-AVG-07</td>
+<td>AV5</td>
+<td>60</td>
+</tr>
+<tr>
+<td>CON-AVG-14</td>
+<td>AV3</td>
+<td>31 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-15</td>
+<td>AV3</td>
+<td>34°C</td>
 </tr>
 </table>
 **Rung 3. 45 seconds each.** Mixed, including Insurance.
@@ -8861,6 +9202,49 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>CON-RAT-30</td>
 <td>RP10</td>
 <td>6</td>
+<td>CON-AVG-20</td>
+<td>AV1</td>
+<td>20</td>
+</tr>
+<tr>
+<td>CON-AVG-28</td>
+<td>AV1</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-AVG-11</td>
+<td>AV6</td>
+<td>37</td>
+</tr>
+<tr>
+<td>CON-AVG-22</td>
+<td>AV6</td>
+<td>174</td>
+</tr>
+<tr>
+<td>CON-AVG-10</td>
+<td>AV7</td>
+<td>51.8</td>
+</tr>
+<tr>
+<td>CON-AVG-27</td>
+<td>AV7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>PYQ-AVG-02</td>
+<td>AV8</td>
+<td>-47</td>
+</tr>
+<tr>
+<td>CON-AVG-26</td>
+<td>AV3</td>
+<td>76</td>
+</tr>
+<tr>
+<td>CON-AVG-13</td>
+<td>AV2</td>
+<td>21</td>
 </tr>
 </table>
 ## 6. Verification Log
@@ -8893,6 +9277,30 @@ Built 6 Oct 2026. This module is checked, not guaranteed; a new exam variant can
 - RP8: CON-RAT-03, 12, 15
 - RP9: CON-RAT-04, 06, 07, 08, 23
 - RP10: CON-RAT-05, 19, 20, 22, 29, 30
+- **Answers.** All 45 clerk questions (30 constructed, 15 PYQ) were re-solved by script from their own numbers; all 45 agree with the bank key. Four keys are "None of these" and the script confirms the true value is not an option: CON-AVG-04 (55), CON-AVG-12 (56), CON-AVG-21 (88), CON-AVG-28 (30).
+- **Sister-exam questions.** Six standalone questions were re-solved by script: IBPS PO 22 Aug 2026 S1 Q83 (18) and S2 Q90 (9), IBPS PO 23 Aug 2025 S2 Q95 (16), all matching the printed keys; SBI Clerk 20 Sep 2025 S1 Q36 (2,200), S2 Q53 (31) and IBPS RRB Clerk 6 Dec 2025 S1 Q59 (107), whose papers printed no key in the extracted text. The three quantity-comparison items were checked by hand.
+- **Methods.** The join rule (old average + new count x rise) and the replacement rule (count x change) were applied to every AV1 clerk question; all 14 agree. The opposite-distance rule gives the keyed answer on all AV2 clerk questions that ask for a ratio or a group average.
+- **Drills.** All 6 drills were solved by script and each elimination hack was checked.
+### What failed and was fixed
+- The first draft of Drill 3 had no correct option (its answer, 67, was missing). The options were rewritten and re-checked.
+- The batsman line in the conversion grid was first written for the old average; it now gives the score directly (score = new average + earlier innings x rise), checked on CON-AVG-11.
+### What could not be opened or checked
+- The 36 Sreedhar questions were classified by hand but not re-solved one by one; their keys are used as printed.
+- No Mains papers were used. This module reflects Prelims only.
+- The method books and channels in your Priority 3 list were not read or watched.
+### Source links (pages opened)
+- The 12 sister papers are the Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
+## 7. Pattern Index: archetypes and question IDs
+- AV1: PYQ-AVG-04, 05, 06, 08, 13 · CON-AVG-05, 06, 08, 09, 18, 19, 20, 24, 28
+- AV2: PYQ-AVG-03, 09, 10, 11, 14 · CON-AVG-07, 13
+- AV3: PYQ-AVG-12 · CON-AVG-12, 14, 15, 26
+- AV4: PYQ-AVG-01, 15 · CON-AVG-16
+- AV5: PYQ-AVG-07 · CON-AVG-02, 03, 25
+- AV6: CON-AVG-11, 21, 22
+- AV7: CON-AVG-10, 27
+- AV8: PYQ-AVG-02 · CON-AVG-30
+- AV9: CON-AVG-01, 04, 17, 23, 29
 # Reasoning: Series and Miscellaneous - Speed Mastery Module
 **Sample.** Added on request. This is a Reasoning topic, not Quant, and it combines three bank sections into one: alphanumeric / mixed series, alphabet series, and miscellaneous reasoning. Your bank holds no previous-year Reasoning questions, so every statement about what the exam asks comes from papers opened on the web: 12 IBPS Clerk Prelims memory-based papers (4 Oct 2025 Shifts 1 to 4, 5 Oct 2025 Shift 1 in its Hindi version, 24 Aug 2024 Shift 1, and the 2023, 2022, 2021, 2020, 2019 and 2018 papers) giving 59 questions of these kinds, plus the same 12 sister papers as before (4 SBI Clerk, 4 IBPS RRB Clerk, 4 IBPS PO Prelims) giving 65. Bank questions used: 933 practice questions (540 Guidely + 393 Sreedhar). The floor of 8 target-exam shifts and 6 to 10 sister questions is met. Memory-based papers are reconstructions, not official papers.
 ## 1. Core Mental Model, Mechanics and Conversion Grid
