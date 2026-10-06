@@ -12013,6 +12013,13 @@ All six puzzle modules in one file. Each module is complete on its own and they 
 <td>6 Oct 2026</td>
 <td>31 bank puzzles (153 questions; 24 Guidely, 7 Sreedhar); all 31 solved by script; 0 sets in Clerk papers, 0 in sister papers (Bank only)</td>
 </tr>
+<tr>
+<td>7</td>
+<td>Circular Seating</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>43 bank sets (470 questions); all 89 different puzzles solved; 7 sets in Clerk papers, 2 in sister papers</td>
+</tr>
 </table>
 **A note on time, for all six.** A puzzle set is one arrangement followed by about five questions. Nobody solves the arrangement in 45 seconds. The honest target is 3 to 6 minutes for the arrangement and 15 to 20 seconds for each question after it.
 ## Module 1: Floor and Flat Puzzles - Speed Mastery Module
@@ -14619,6 +14626,376 @@ S-MT45-85 to 88 repeats S-MT57 and S-MT3-66 to 70 repeats S-MT23 word for word, 
 **Where the paper evidence comes from.** I searched the 35 cached paper texts (28 with a Reasoning section) for triangular, pentagonal and hexagonal seating: none; every "corner" hit was a square table. On the web I opened shift analyses on oliveboard.in, careerpower.in, adda247.com and testbook.com (IBPS Clerk 26 and 27 Aug 2023, 24 Aug 2024 Shifts 1 and 2, 25 Aug 2024 Shift 2, 31 Aug 2024 Shift 1, 4 and 5 Oct 2025 all shifts, 5 Oct 2025 Shifts 1 and 4; SBI Clerk 21 Sep 2025 Shift 3; IBPS RRB Clerk 17 Aug 2024 Shift 2, 7 Dec 2025 Shift 1, 13 Dec 2025 Shift 1, 14 Dec 2025 all shifts). None listed a triangular set. Two more pages opened (IBPS Clerk 2023 all days, 24 Aug 2024 Shift 4) gave no puzzle names. Coaching pages that call the triangle "important for IBPS and RRB" were site-written practice, not papers.
 **What could not be opened.** time4education.com, pw.live, mahendras.org, bankersadda.com, onlineresult.in and aspirantmitraa.com blocked my reader, so their shift lists were not read. A summary of one bankersadda quiz labelled "for SBI Clerk Prelims 2023" describes a triangular puzzle; it is a practice quiz, not a memory-based paper, and I could not open it.
 **Not verified:** shifts not covered by the pages above; the 43 unsolved pentagon and hexagon puzzles. Memory-based papers are reconstructions.
+**Corrections:** none so far.
+## Module 7: Circular Seating - Speed Mastery Module
+**Sample.** Round tables only; square tables are a separate module, and Module 2 still holds the older combined notes. Bank: all 43 sets filed under "Circular arrangement" (17 Guidely sets of four puzzles each, 26 Sreedhar mock sets): 94 puzzles as printed, 89 different ones, 470 questions. Every one of the 89 was written out as exact conditions and solved by script. Papers: the 35 memory-based papers cached for this course were opened (23 IBPS Clerk Prelims from 2016 to Oct 2025, 12 sister papers), plus 18 IBPS Clerk shift analyses (10 for 2024, 8 for 2025) and 5 IBPS RRB Clerk 2024 shift analyses on the web. Paper instances with full clue text: 7 IBPS Clerk circle sets (12 Dec 2021 twice, 2023, 24 Aug 2024 Shift 1 in two reconstructions, 2025 with no shift stated, 4 Oct 2025 Shifts 1 and 4) and 2 sister sets (IBPS RRB Clerk 6 Dec 2025 Shift 2, IBPS PO 22 Aug 2026 Shift 2). The shift analyses add three more IBPS Clerk circle shifts (24 Aug 2024 Shift 2, 25 Aug 2024 Shift 1, 31 Aug 2024 Shift 1) and one RRB Clerk shift (17 Aug 2024 Shift 2), without clue text. Floor: met for the target exam (at least 9 IBPS Clerk shifts with a circle); not met for sister exams (3 sightings, 2 with full text). Memory-based papers are reconstructions, not official papers.
+**A note on time.** A circle set is one arrangement and about five questions. The honest target is 3 to 4 minutes for the arrangement and 15 to 20 seconds for each question after it. The clerk circles are small: 4 to 6 clues and 7 or 8 people.
+### 1. Basic Type, Core Mental Model and Grid
+**What the basic type looks like.** Seven or eight people sit around a round table, all facing the centre. Clues say who is second or third to the left or right of whom, how many sit between two people, who sits opposite whom, and who is not a neighbour of whom. You rebuild the circle and answer five questions.
+**The one idea: a round table has no first seat. Seat the first person anywhere, never move them, and turn every clue into "so many seats clockwise or anticlockwise from someone already drawn".**
+**Left and right: the only rule that matters**
+<table header-row="true">
+<tr>
+<td>The person faces</td>
+<td>Their left is</td>
+<td>Their right is</td>
+</tr>
+<tr>
+<td>The centre</td>
+<td>Clockwise</td>
+<td>Anticlockwise</td>
+</tr>
+<tr>
+<td>Outside</td>
+<td>Anticlockwise</td>
+<td>Clockwise</td>
+</tr>
+</table>
+Left and right always belong to the person named after "of". "C sits to the immediate right of A" uses A's right.
+**The solving algorithm (use it on every set):**
+1. Draw the circle with the right number of dashes. If anyone faces outside, write IN or OUT beside each name as soon as it is known.
+2. Find a clue with a direction ("second to the left of", "third to the right of") and seat its two people first. In 6 of the 8 clerk reconstructions the first printed clue is such a clue.
+3. Take next the clue that shares a name with your drawing. Leave a clue with two new names ("F is not an immediate neighbour of G") until one of them is drawn.
+4. "Only two persons sit between X and Y" gives two seats: draw the circle twice. "Opposite" and "faces" give one seat.
+5. Kill drawings with "not a neighbour", "does not face" and the counting clues.
+6. Fill the last seats, then answer.
+**Grid: counting round a table**
+<table header-row="true">
+<tr>
+<td>Wording</td>
+<td>Seats away</td>
+<td>Note</td>
+</tr>
+<tr>
+<td>Immediate left / right</td>
+<td>1</td>
+<td>Neighbour</td>
+</tr>
+<tr>
+<td>Second to the left / right; one person between</td>
+<td>2</td>
+<td>Without a direction: two seats</td>
+</tr>
+<tr>
+<td>Third to the left / right; two persons between</td>
+<td>3</td>
+<td>Without a direction: two seats</td>
+</tr>
+<tr>
+<td>Opposite, faces (all facing the centre)</td>
+<td>4 in a table of 8</td>
+<td>One seat. A table of 7 has no opposite seat</td>
+</tr>
+<tr>
+<td>Three persons between, table of 8</td>
+<td>4</td>
+<td>Opposite: one seat, not two</td>
+</tr>
+<tr>
+<td>k to the left = (table size - k) to the right</td>
+<td>7 seats: third left = fourth right</td>
+<td>In a table of 7, "fifth to the right" is "second to the left"</td>
+</tr>
+<tr>
+<td>X sits two persons away from Y</td>
+<td>2</td>
+<td>Two places away: both keyed papers that use the phrase read it so</td>
+</tr>
+</table>
+**Non-linear warning.** For a person facing outside, left and right swap. Solve a mixed table as if everyone faced the centre and you do not get a slightly wrong answer; you get a different table or none at all.
+**Universal fallback (works on every set in this topic):** fix one person; for the next most-mentioned person try each free seat in turn and run every clue. With 8 seats that is at most 7 small trials. For an unknown number of persons, number the seats from one person and let the total be the unknown at the end of the chain.
+### 2. Archetypes
+Bank counts are puzzles out of the 89 different ones. Paper counts are circle sets with full clue text in IBPS Clerk Prelims papers and in sister papers.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Bank puzzles</td>
+<td>Clerk papers</td>
+<td>Sister papers</td>
+<td>Label</td>
+</tr>
+<tr>
+<td>CS1</td>
+<td>All facing the centre, number of persons given</td>
+<td>28</td>
+<td>7 (and 3 more in shift analyses)</td>
+<td>1 (RRB Clerk)</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>CS2</td>
+<td>Some facing the centre, some facing outside</td>
+<td>12</td>
+<td>0</td>
+<td>1 (IBPS PO)</td>
+<td>Seen once</td>
+</tr>
+<tr>
+<td>CS3</td>
+<td>All facing outside</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>CS4</td>
+<td>A second fact per person (profession, colour, phone, relation)</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>CS5</td>
+<td>Unknown number of persons</td>
+<td>19</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+<tr>
+<td>CS6</td>
+<td>Vacant seats</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>Bank only</td>
+</tr>
+</table>
+The six rows add up to 89: each puzzle is counted once, under its rarest feature (CS4 includes 5 mixed-facing and 5 outside-facing puzzles; CS5 includes 5 facing outside).
+Where they were seen:
+- CS1, 8 persons: IBPS Clerk 2023, 24 Aug 2024 Shift 1, 2025 (shift not stated), 4 Oct 2025 Shifts 1 and 4. 7 persons: IBPS Clerk 12 Dec 2021 (two different sets), IBPS RRB Clerk 6 Dec 2025 Shift 2; the 24 Aug 2024 Shift 2 analysis also says 7 persons facing inside.
+- CS2: IBPS PO 22 Aug 2026 Shift 2 (7 persons, more facing in than out).
+- In the 18 IBPS Clerk shift analyses for 2024 and 2025, a circle appeared in 6 shifts (4 of 10 in 2024, 2 of 8 in 2025), always described as facing inside where the analysis says.
+What the clerk sets look like (8 reconstructions, all solved by script, each with exactly one arrangement): 4 to 6 clues; a directed clue first in 6 of 8; a "not a neighbour" or "does not" clue in 7 of 8; an opposite or "faces" clue in 3 of 8; no counting clue ("as many persons between"), no vacant seat, no second fact, no unknown total. Taken in printed order the open drawings reach 30 in one paper (24 Aug 2024 Shift 1); taken along the names they never exceed 4.
+What the bank adds: 6 to 12 persons (8 in 35 of the 70 fixed-size puzzles), longer clue lists (4 to 10), counting clues, and all the insurance forms below. In printed order 16 of the 32 plain fixed-size bank puzzles that could be measured pass 4 open drawings at some point; with a good order 26 of the 32 stay at 4 or fewer.
+#### Core archetypes
+**CS1. All facing the centre, number given. Confirmed.** *Pattern clues:* "sitting around a circular table facing the centre", seven or eight names. *Shortcut engine:* left is clockwise for everyone. Seat the two people of a directed clue, follow the names, keep two drawings when a clue has no direction, kill one with a negative clue. *Worked example:* Drill 1 and Drill 2 below.
+**CS2. Mixed facing. Seen once (IBPS PO Prelims 22 Aug 2026 Shift 2).** *Pattern clues:* "some of them face the centre while some face outside". *Shortcut engine:* when facings are not given, first fix the shape: "second to the left" and "second to the right" both mean two seats away, so seat people by distance only. The shape can then sit two ways (it and its mirror); the facing clues ("X and Y face the same direction", "the neighbours of F face opposite directions", "more face in than out") choose one. *Worked example:* Drill 3 below (facings given).
+#### Insurance archetypes (Bank only)
+**CS3. All facing outside.** Left is anticlockwise for everyone; otherwise the same as CS1.
+**CS4. Second fact.** Seat the names first; treat "the one who likes Pink" as a person whose seat you know before you know the name. A clue such as "Y likes Black and sits opposite W" gives a seat and a fact at once. *Worked example:* Drill 5 below.
+**CS5. Unknown number of persons.** Number seats clockwise from one person, build the chain, and let a clue that goes round the back of the table fix the total. *Worked example:* Drill 4 below.
+**CS6. Vacant seats.** A vacant seat is a seat, not a person: "persons between" skips it, "seats away" counts it. Write VACANT as if it were a name.
+### 3. Drill Set
+Five original puzzles written for this module. Each was checked by a brute-force script: it has exactly one arrangement, and the answers below come from the script.
+#### Drill 1 (Basic, CS1: seven facing the centre)
+Seven persons A, B, C, D, E, F and G sit around a circular table facing the centre. B sits third to the left of A. F sits to the immediate right of B. Only one person sits between E and F. D sits to the immediate right of A. C sits to the immediate left of A.
+**Q1.** Who sits second to the right of E? (A) G (B) F (C) B (D) D (E) C
+**Q2.** How many persons sit between A and E when counted from the left of A? (A) One (B) Two (C) Three (D) Four (E) None
+**Q3.** What is the position of G with respect to C? (A) Third to the left (B) Second to the right (C) Third to the right (D) Immediate left (E) Fourth to the right
+**Conventional Method:** fix A and try every order of the other six against the clues.
+**Fast Method:**
+1. Seat A at the bottom. Facing the centre, left is clockwise. B is three seats clockwise of A.
+2. F is on B's right: one seat anticlockwise of B, so F is two seats clockwise of A.
+3. D is one seat anticlockwise of A; C is one seat clockwise of A.
+4. E is two seats from F: one way is A's seat, so E is two seats clockwise of F, just past B. G takes the last seat.
+Clockwise from A: A, C, F, B, E, G, D.
+**Answers:** Q1 (B) F. Q2 (C) Three. Q3 (C) Third to the right.
+**Option Elimination Hack:** for Q3, C and G are not neighbours (C sits between A and F), so (D) is out; in a table of 7, "third to the right" and "fourth to the left" are the same seat, so look for either wording.
+**IBPS Trap Warning:** "F sits to the immediate right of B" is measured from B. Reading it from F puts F on the other side of B and E has no seat.
+#### Drill 2 (Exam level, CS1: eight, two drawings and an opposite clue)
+Eight persons J, K, L, M, N, O, P and Q sit around a circular table facing the centre. L sits second to the right of J. Only two persons sit between L and N. Q sits opposite N. O sits to the immediate right of N. M sits third to the left of O. K is not an immediate neighbour of M.
+**Q1.** Who sits opposite O? (A) M (B) L (C) Q (D) K (E) J
+**Q2.** How many persons sit between J and M when counted from the right of J? (A) One (B) Three (C) Two (D) Four (E) None
+**Q3.** Who sits third to the left of P? (A) J (B) K (C) L (D) Q (E) O
+**Conventional Method:** fix J and try every order of the other seven.
+**Fast Method:**
+1. Seat J. L is two seats anticlockwise of J.
+2. Two persons between L and N: N is three seats from L either way. Drawing 1: N is just clockwise of J. Drawing 2: N is three seats clockwise of J.
+3. O sits on N's right, one seat anticlockwise of N. In drawing 1 that is J's seat: drawing 1 dies.
+4. Q is opposite N. M is three seats clockwise of O.
+5. K and P take the two free seats; K is not next to M, so K sits next to J.
+Clockwise from J: J, K, O, N, P, M, L, Q.
+**Answers:** Q1 (B) L. Q2 (C) Two. Q3 (D) Q.
+**Option Elimination Hack:** for Q1, O and N are neighbours and N's opposite is Q, so (C) is out at once.
+**IBPS Trap Warning:** "only two persons sit between" has no direction. Drawing only the clockwise case here happens to die, and a solver who drew one case would think the puzzle has no answer.
+#### Drill 3 (Trap, CS2: seven, mixed facing)
+Seven persons P, Q, R, S, T, U and V sit around a circular table. R, T and V face the centre; P, Q, S and U face outside. S sits second to the left of R. U sits to the immediate right of S. P sits second to the right of U. T sits to the immediate right of P. V sits to the immediate left of P.
+**Q1.** Who sits to the immediate left of U? (A) V (B) S (C) Q (D) P (E) T
+**Q2.** Who sits third to the right of T? (A) S (B) Q (C) U (D) V (E) P
+**Q3.** How many persons sit between R and V when counted from the left of V? (A) One (B) Two (C) Three (D) Four (E) None
+**Conventional Method:** fix R and try every order, using each person's own left and right.
+**Fast Method:**
+1. Write IN beside R, T, V and OUT beside P, Q, S, U.
+2. Seat R. R faces in: S is two seats clockwise.
+3. S faces out, so S's right is clockwise: U is next to S, clockwise.
+4. U faces out: P is two seats clockwise of U.
+5. P faces out: T (on P's right) is one seat clockwise of P, V (on P's left) one seat anticlockwise. That is the seat between U and P.
+6. Q takes the last seat, between R and S.
+Clockwise from P: P (out), T (in), R (in), Q (out), S (out), U (out), V (in).
+**Answers:** Q1 (B) S. Q2 (C) U. Q3 (B) Two.
+**Option Elimination Hack:** for Q1, U's neighbours are S and V, so only (A) and (B) can be right; U faces out, so U's left is anticlockwise: S.
+**IBPS Trap Warning:** treating S, U and P as facing the centre sends U and P the other way round the table, and T then lands on R's seat.
+#### Drill 4 (Insurance, CS5: unknown number of persons)
+A certain number of persons sit around a circular table facing the centre. C sits fourth to the left of A. B sits second to the right of A. D sits third to the left of C. E sits fifth to the right of B. Only two persons sit between D and E when counted from the left of D. F sits to the immediate left of D.
+**Q1.** How many persons sit around the table? (A) 15 (B) 16 (C) 17 (D) 18 (E) 19
+**Q2.** What is the position of F with respect to A? (A) Seventh to the left (B) Eighth to the left (C) Eighth to the right (D) Ninth to the left (E) Sixth to the right
+**Q3.** How many persons sit between B and C when counted from the left of C? (A) Eight (B) Nine (C) Ten (D) Eleven (E) Twelve
+**Conventional Method:** try totals one by one and draw each.
+**Fast Method:**
+1. Number seats clockwise from A = 0. Left is clockwise. C is at 4, D at 7, F at 8.
+2. B is two seats anticlockwise of A and E five more: E is seven seats anticlockwise of A.
+3. Going clockwise from D, two persons sit and then E. D is at 7, so E is at 10.
+4. E is also seven seats anticlockwise of A. Seat 10 is seven seats anticlockwise of seat 0 only if the table has 17 seats.
+**Answers:** Q1 (C) 17. Q2 (B) Eighth to the left. Q3 (C) Ten.
+**Option Elimination Hack:** none of the totals can be checked by divisibility; check the answer instead by walking round once: A, 3 unknown, C, 2 unknown, D, F, 1 unknown, E, 4 unknown, B, 1 unknown.
+**IBPS Trap Warning:** "two persons between D and E counted from the left of D" includes F. Counting F as a seat but not a person gives 16.
+#### Drill 5 (Insurance, CS4: second fact)
+Six persons U, V, W, X, Y and Z sit around a circular table facing the centre. Each likes a different colour: Red, Blue, Green, Pink, White and Black. The one who likes Pink sits third to the left of U. W sits to the immediate right of the one who likes Pink. Y likes Black and sits opposite W. Z sits to the immediate left of the one who likes Pink. V is not an immediate neighbour of U. U likes Red. The one who likes Blue sits second to the right of the one who likes Pink. W does not like White.
+**Q1.** Who likes Pink? (A) X (B) Z (C) V (D) W (E) Y
+**Q2.** Who sits opposite the one who likes Blue? (A) U (B) Z (C) W (D) Y (E) V
+**Q3.** What does the person who sits second to the left of W like? (A) Pink (B) Red (C) White (D) Black (E) Green
+**Conventional Method:** seat all six names in every order, then try every colour order.
+**Fast Method:**
+1. Seat U. In a table of six, third to the left is opposite: the Pink seat is opposite U.
+2. W is one seat anticlockwise of Pink, Z one seat clockwise. Y is opposite W, which is next to U.
+3. Blue is two seats anticlockwise of Pink: the seat next to U on the other side.
+4. V and X take Pink's seat and Blue's seat. V is not next to U, so V likes Pink and X likes Blue.
+5. Green and White are left for W and Z; W does not like White, so W likes Green and Z likes White.
+Clockwise from U: U (Red), X (Blue), W (Green), V (Pink), Z (White), Y (Black).
+**Answers:** Q1 (C) V. Q2 (B) Z. Q3 (C) White.
+**Option Elimination Hack:** for Q1, Y likes Black and U likes Red, so (E) is out at once.
+**IBPS Trap Warning:** the colour clues place seats, not names. Writing "Pink" beside a name too early (here, Z) forces a second drawing that has to be rubbed out.
+### 4. Cheat Sheet and Recall Matrix
+<table header-row="true">
+<tr>
+<td>If you see…</td>
+<td>Do this</td>
+<td>Watch for</td>
+</tr>
+<tr>
+<td>"Facing the centre"</td>
+<td>Left = clockwise</td>
+<td>Using your own left</td>
+</tr>
+<tr>
+<td>"Facing outside"</td>
+<td>Left = anticlockwise</td>
+<td>Forgetting to swap</td>
+</tr>
+<tr>
+<td>Mixed facing, not given</td>
+<td>Seat by distance; facing clues choose the shape or its mirror</td>
+<td>Fixing a facing too early</td>
+</tr>
+<tr>
+<td>"X is nth to the left of Y"</td>
+<td>Count from Y, using Y's left</td>
+<td>Counting from X</td>
+</tr>
+<tr>
+<td>"Only n persons between X and Y"</td>
+<td>Two seats, two drawings</td>
+<td>Forgetting the second drawing</td>
+</tr>
+<tr>
+<td>"Three persons between", table of 8</td>
+<td>Opposite: one seat</td>
+<td>Drawing two identical cases</td>
+</tr>
+<tr>
+<td>"X faces Y" (all facing the centre)</td>
+<td>Opposite</td>
+<td>Using it in a table of 7</td>
+</tr>
+<tr>
+<td>A clue with two new names</td>
+<td>Keep it until one name is drawn</td>
+<td>Starting with it</td>
+</tr>
+<tr>
+<td>"As many between A and B as between B and C"</td>
+<td>B is the middle point</td>
+<td>Counting B</td>
+</tr>
+<tr>
+<td>"A certain number of persons"</td>
+<td>Number seats from one person; the closing clue gives the total</td>
+<td>Drawing a circle first</td>
+</tr>
+<tr>
+<td>Vacant seat</td>
+<td>A seat, not a person</td>
+<td>Counting it as a person</td>
+</tr>
+</table>
+**Order of work, in one line:** circle, IN/OUT marks, a directed clue, then always a clue that shares a name, two drawings for "between", negatives last, questions.
+**Two checks before you answer.** For "who sits nth to the left of X": which way does X face? For "how many persons between X and Y counted from the left of X": walk the way X's left goes and do not count X or Y.
+### 5. Practice Ladder
+These are Sreedhar mock sets from your bank. Each has exactly one arrangement by script and all five keys agree with it. MT is the model test number; the range is the question numbers.
+<table header-row="true">
+<tr>
+<td>Rung</td>
+<td>Set</td>
+<td>Shape</td>
+<td>Keyed answers in order</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT72-88 to 92</td>
+<td>8, facing centre</td>
+<td>D, B, E, B, D</td>
+</tr>
+<tr>
+<td>1: untimed</td>
+<td>S-MT7-76 to 80</td>
+<td>8, facing centre</td>
+<td>D, C, E, A, C</td>
+</tr>
+<tr>
+<td>2: 6 minutes a set</td>
+<td>S-MT13-66 to 70</td>
+<td>8, facing centre, two drawings</td>
+<td>B, D, C, E, E</td>
+</tr>
+<tr>
+<td>2: 6 minutes a set</td>
+<td>S-MT79-76 to 80</td>
+<td>8, facing centre, counting clue</td>
+<td>C, D, A, E, A</td>
+</tr>
+<tr>
+<td>2: 6 minutes a set</td>
+<td>S-MT59-66 to 70</td>
+<td>10, facing centre</td>
+<td>D, B, D, E, C</td>
+</tr>
+<tr>
+<td>3: 5 minutes a set</td>
+<td>S-MT80-81 to 85</td>
+<td>7, mixed facing</td>
+<td>B, B, C, D, C</td>
+</tr>
+<tr>
+<td>3: 5 minutes a set</td>
+<td>S-MT50-71 to 75</td>
+<td>7, with professions</td>
+<td>D, E, C, B, C</td>
+</tr>
+<tr>
+<td>3: 5 minutes a set</td>
+<td>S-MT58-77 to 81</td>
+<td>Unknown number (21)</td>
+<td>E, B, A, C, A</td>
+</tr>
+</table>
+After these, the Guidely "circular arrangement, single variable, facing inside" sets 4 and 5 and the "facing outside" set 1 are good untimed practice; the guided lessons use them.
+### 6. Verification Log
+**Built:** 6 Oct 2026.
+**What was checked by script**
+- All 89 different puzzles in the 43 bank sets were written as exact conditions and solved by brute force (a small solver that tries every seat, and every facing or second fact where the puzzle has them).
+- 86 of the 89 have exactly one arrangement. Three of these need care: Sreedhar MT53 is unique only if "K, who likes Oppo" means K likes Oppo (read as M, it has 10 arrangements); Guidely bi-directional set 1, questions 11 to 15, and facing-inside set 1, questions 11 to 15, need a fact that is printed inside a question line, not in the passage.
+- 3 do not: Guidely bi-directional set 2, questions 11 to 15 (4 arrangements; its own question 11 begins "If C and B face the same direction"), unknown-number set 1, questions 11 to 15 (2 arrangements; its own key says "either Z or R"), and unknown-number set 4, questions 16 to 20 (3 arrangements with 10, 16 or 20 persons; the key picks 20).
+- 445 questions in the 89 puzzles: 328 agree with the key; 5 do not; 112 were not checked because the checker did not cover their form (mostly Guidely two-variable, vacant-seat and unknown-number sets). The 5 that do not agree are all "if X is related to Y in a certain way" questions: Guidely facing-inside set 1 Q18, set 2 Q7 and Q15, set 5 Q13, facing-outside set 1 Q17. In three of them the answer the arrangement gives is not among the options.
+- Reading choices settled by the script: "X faces Y" in a mixed table means X sits opposite and faces the centre (Guidely bi-directional set 1 Q11 to 15, set 2 Q1 to 5; Sreedhar MT26 "facing each other" means both face the centre); "U four places away from K" counts places; "the number between A and B is the same as between B and C" is read the short way round.
+- The 9 paper reconstructions (8 clerk, 1 RRB) and the PO set each have exactly one arrangement. Where the paper printed a key (12 Dec 2021 Guidely, 2023, 24 Aug 2024 Shift 1, 4 Oct 2025 Shift 4, RRB 6 Dec 2025 Shift 2, PO 22 Aug 2026 Shift 2), all 29 keyed questions checked agree. Two of them (2023 Q9, 24 Aug 2024 Q33) agree only if "two persons away" means two places away. The 2024 Guidely reconstruction gives the same arrangement as the 24 Aug 2024 Shift 1 paper, from different remembered clues, so they are counted as one set.
+- The five drill puzzles each have exactly one arrangement by script, and their answers come from the script.
+- Open drawings ("cases") were counted by a script that adds clues one at a time and keeps every partial seating that survives; "good order" is the order with the smallest peak, found by search.
+**Where the paper evidence comes from.** Local cached PDFs (pdftotext) of 23 IBPS Clerk and 12 sister papers, searched for circular sets and read. Shift analyses opened on oliveboard.in (2024 and 2025 IBPS Clerk, RRB Clerk 2024), adda247.com (2024 IBPS Clerk) and guidely.in (2025 IBPS Clerk). Several web pages could not be read (two adda247 2024 shifts, a pw.live page); the 25 Aug 2024 Shifts 3 and 4 and 31 Aug 2024 Shifts 3 and 4 are not covered. The counts are sightings, not frequencies.
+**Not verified:** the 112 unchecked bank questions; which 2025 shift the Guidely 2025 set comes from (the analyses list circles only in 4 Oct Shifts 1 and 4, so it may repeat one of them); any sister-exam circle beyond the three found. Memory-based papers are reconstructions.
 **Corrections:** none so far.
 ## Pattern Index: Reasoning Puzzles
 Built 6 Oct 2026 on request, each in its own file, mainly from the bank. The bank has no Reasoning PYQs. Paper counts are puzzle sets seen in 12 IBPS Clerk Prelims papers and 12 sister papers opened on the web. In each topic 40 bank sets were solved by brute-force script; the rest were sorted but not solved.
