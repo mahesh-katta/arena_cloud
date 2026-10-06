@@ -1,0 +1,1039 @@
+{
+ "module": "triangular-arrangement",
+ "intro": [
+  "People seated round a triangular table: three at the corners and three in the middle of the sides, or a corner and two persons on each side. These lessons follow the same method as the other seating topics, with one difference that matters: **no real exam puzzle of this kind was found**, so everything here is built from your bank.",
+  "**What I studied.** 28 memory-based papers that have a Reasoning section (16 IBPS Clerk Prelims from 2016 to October 2025, 12 SBI Clerk, RRB Clerk and IBPS PO Prelims), plus 14 shift-analysis pages listing the puzzles of IBPS Clerk 2023 to 2025, SBI Clerk 2025 and RRB Clerk 2024 to 2025 shifts. Then every triangular set in your bank: 24 Guidely puzzles and 7 Sreedhar ones (28 different puzzles; three are printed twice). Each was written out as exact conditions and solved by a script that tried every seating.",
+  "| What was measured | Count |",
+  "| Triangular sets in the real papers and shift lists | 0 (the seating sets there were circles, squares, rows and parallel rows) |",
+  "| Bank puzzles with exactly one arrangement | 31 of 31 (3 only after a stated reading of a missing opening line) |",
+  "| Bank questions whose key matched the script | 153 of 153 (for 3 questions only under a stated reading) |",
+  "| Table shapes (28 different puzzles) | 6 seats, corners and middles: 16 (2 with an empty seat); 9 seats, corners and two a side: 9 (2 with an empty seat); people on the sides only: 3 |",
+  "| Facing | all to the centre 14; corners out and middles in 8; corners in and middles out 3; all outside 2; decided by clues 1 |",
+  "| Puzzles where a clue names one person's seat type (corner, middle or facing) | 24 of 28 |",
+  "| A second fact per person (places, animals, ages, brands) | 6 of 28 |",
+  "| Cases left by the best two-person opening clue | 1 case in 7 puzzles, 2 in 13, 3 or more in 3 (23 puzzles measured) |",
+  "| First printed clue already the best opening | 11 of 18 single-fact puzzles; the printed order cost 46 cases in all against 34 for the best order |",
+  "**What this means.** A triangle with three corners and three middles is a circle of six where the seats alternate: corner, middle, corner, middle. That one fact gives you a free clue in almost every set, because a step of one or three seats changes the seat type and a step of two keeps it. And in 24 of the 28 puzzles someone is named as sitting at a corner or in a middle, so you can seat that person first without any cases.",
+  "A note on honesty: I did not find this puzzle in any IBPS Clerk, SBI Clerk, RRB Clerk or IBPS PO paper or shift list I could open, so every archetype here is **Bank only**. Several shift-analysis sites blocked my reader, so a triangular set in a shift I did not open cannot be ruled out. Memory-based papers are reconstructions. Give this topic less time than circles, squares and rows."
+ ],
+ "needs": [],
+ "after": [
+  "That is the triangular table as your bank sets it. The **Quick revision** tab has the same material as short notes, drills and a practice ladder.",
+  "The order of work for every set: number the seats from the top corner, mark IN or OUT, seat the person with a seat-type clue first, take the clue that joins that person to one more, use odd and even steps to kill cases, and keep \"not a neighbour\" clues for the last seats.",
+  "No triangular, pentagonal or hexagonal set was found in the clerk papers opened. If time is short, study circles, squares and rows first."
+ ],
+ "lessons": [
+  {
+   "id": "six-seats",
+   "code": "TR1",
+   "title": "Six seats: corners and middles take turns",
+   "plain": "The starting point. Number the six seats round the triangle; corners are the odd seats, middles the even ones, and every clue becomes a step of so many seats.",
+   "needs": [],
+   "teach": [
+    "Three persons sit at the corners and three in the middle of the sides. Go round the table and the seats take turns: corner, middle, corner, middle, corner, middle. So it is a circle of six with a label on every seat.",
+    "**How to draw it.** Draw a triangle with one corner at the top. Number the seats **1 to 6 clockwise from the top corner**. Seats 1, 3 and 5 are corners; seats 2, 4 and 6 are middles.",
+    "**Left and right.** When everyone faces the centre, a person's **left is the next seat clockwise (+1)** and their right is the next seat anticlockwise (-1). Left and right belong to the person named after \"of\".",
+    "| The clue says | Seats apart | Seat type |",
+    "| Immediate left or right | 1 | changes |",
+    "| Second to the left or right, or one person between | 2 | stays the same |",
+    "| Third to the left or right, two persons between, or opposite | 3 | changes |",
+    "**Opposite** on this table means three seats on: a corner faces the middle of the far side. Second to the left and fourth to the right are the same seat, which is why options say \"Both 1 and 3\".",
+    "**Where to start.** All three corners look the same, and so do all three middles. So when a clue says \"X sits at a corner\", put X at seat 1; for \"X sits in the middle of a side\", put X at seat 2. No cases are lost by doing this. In 24 of the 28 bank puzzles such a clue is given.",
+    "Then take a clue that names that person and one other. \"Second to the left of\" fixes the other person in one seat; \"one person sits between\" gives two seats, so draw the table twice and kill one drawing with a neighbour or a seat-type clue."
+   ],
+   "example": {
+    "q": "No triangular puzzle was found in the real papers, so this is a bank set (Sreedhar model test 54). Six persons San, Sel, Ski, Sum, Sya and Sze sit round a triangular table facing the centre, three at the corners and three in the middles of the sides. One person sits between San and Sya. Ski sits second to the right of Sze. Ski does not sit opposite Sya. Sum sits opposite neither Sze nor San, but sits on the immediate left of Sel, who sits at a corner.",
+    "steps": [
+     "Sel sits at a corner: Sel at seat 1. Sum is Sel's immediate left: seat 2.",
+     "Sum is opposite seat 5, so seat 5 is neither Sze nor San.",
+     "The free seats are 3, 4, 5, 6. The pairs two apart are 3-5 (corners) and 4-6 (middles). San-Sya and Ski-Sze are both pairs two apart, so one takes the corners and the other the middles.",
+     "Ski and Sze on the corners: seat 5 must be Ski, Sze 3, and then second to Sze's right is seat 1, Sel. Out.",
+     "San and Sya on the corners: seat 5 is Sya, San 3. Ski is second to Sze's right: Sze 6, Ski 4. Ski (4) is opposite Sel, not Sya. Fine."
+    ],
+    "answer": "Seats 1 to 6 clockwise from the top corner: Sel, Sum, San, Ski, Sya, Sze."
+   },
+   "check": {
+    "q": "Six persons sit round a triangular table facing the centre, three at the corners and three in the middles. X sits at a corner. Y sits third to the left of X. Where does Y sit?",
+    "options": {
+     "a": "At a corner",
+     "b": "In the middle of a side",
+     "c": "Next to X",
+     "d": "Cannot be told"
+    },
+    "answer": "B",
+    "why": "Three seats is an odd step, and an odd step changes the seat type: Y is in the middle of the far side, opposite X. The tempting wrong answer is \"at a corner\", from thinking that three steps jump corner to corner, which is true only on the nine-seat table."
+   },
+   "shortcut": {
+    "title": "Odd steps flip, even steps keep",
+    "text": [
+     "On the six-seat triangle, a step of 1 or 3 seats moves between a corner and a middle; a step of 2 keeps the type.",
+     "So \"X is second to the left of Y\" tells you X and Y are both corners or both middles before you draw anything, and \"X sits opposite Y\" tells you exactly one of them is at a corner.",
+     "Use it to kill a case at once, and to strike out options in \"who sits at a corner\" questions."
+    ]
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#1",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#2",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#3",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#4",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#5",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#11",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#12",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#13",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#14",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#15"
+    ],
+    "tags": [
+     "Set A: a middle seat named, then a gap that gives two seats.",
+     "Set A, question 2: count from A's right.",
+     "Set A, question 3: test each statement against the drawing.",
+     "Set A, question 4: the alphabetical re-seating question.",
+     "Set A, question 5: odd pair out by the step between them.",
+     "Set B: a corner named, then a mirror clue (\"the same number between\").",
+     "Set B, question 2: odd pair out.",
+     "Set B, question 3: \"how many between\" with no direction, so two answers.",
+     "Set B, question 4: the bank prints the last clue inside this question.",
+     "Set B, question 5: the bank prints a statement as the question."
+    ]
+   }
+  },
+  {
+   "id": "facing-by-seat",
+   "code": "TR2",
+   "title": "Corners face out, middles face in",
+   "plain": "New: the two seat types face opposite ways. Mark each seat IN or OUT once, and take every left and right from the seat of the person after \"of\".",
+   "needs": [],
+   "teach": [
+    "In 11 of the 28 bank puzzles the corners and the middles face opposite ways: usually corners outside and middles to the centre, sometimes the reverse. This is the one twist that makes the triangle different from a plain circle.",
+    "**The rule.** A person facing the centre has left = +1 (clockwise). A person facing outside has **left = -1 (anticlockwise)** and right = +1.",
+    "| Seat | Faces | Left | Right |",
+    "| Corner (1, 3, 5), if corners face out | outside | -1 | +1 |",
+    "| Middle (2, 4, 6), if middles face in | the centre | +1 | -1 |",
+    "Before reading any clue, write OUT beside seats 1, 3, 5 and IN beside 2, 4, 6 (or the reverse, as the puzzle says).",
+    "**Facing tells you the seat.** \"Gita is facing away from the centre\" is a seat-type clue in disguise: Gita sits at a corner. \"F does not face outside\" puts F in a middle.",
+    "**Two persons two seats apart share a type, so they share a facing.** \"P is second to the left of K\" therefore uses the same direction for P and K. But \"immediate left\" crosses from one type to the other, so check whose left it is.",
+    "When no one is given a seat type, try the most-mentioned person at a corner and then in a middle: two cases, and one usually dies within three clues."
+   ],
+   "example": {
+    "q": "Bank set (Sreedhar model test 57). Six persons Ram, Gita, Raju, Sita, Siri and Gopi sit round a triangular table: the three at the corners face away from the centre, the three in the middles face the centre. Sita, Gita and Siri are the only women; no three persons of the same gender sit together. Only one person sits between Ram and Siri. Gopi sits second to the left of Siri. Only one person sits between Sita and Raju. Gita faces away from the centre. Gita is an immediate neighbour of Gopi. Sita sits second to the left of Gita.",
+    "steps": [
+     "Corners 1, 3, 5 face OUT (left -1); middles 2, 4, 6 face IN (left +1).",
+     "Gita faces away, so she is at a corner: Gita at 1. Sita is second to Gita's left: 1 - 2 = seat 5.",
+     "Gopi is next to Gita: seat 2 or 6, a middle. Siri is two seats from Gopi, so Siri is a middle too, facing in: Gopi = Siri + 2. Gopi 2 gives Siri 6; Gopi 6 gives Siri 4.",
+     "Ram is two seats from Siri, and Raju two from Sita. Gopi 2, Siri 6: Ram 4, Raju 3; but then Sita, Siri and Gita (5, 6, 1) are three women together. Out.",
+     "Gopi 6, Siri 4: Ram 2, Raju 3. Seats 1 to 6 read woman, man, man, woman, woman, man. Fine."
+    ],
+    "answer": "Seats 1 to 6: Gita, Ram, Raju, Siri, Sita, Gopi. Gita, Raju and Sita face outside; Ram, Siri and Gopi face the centre."
+   },
+   "check": {
+    "q": "Seats 1 to 6 run clockwise from the top corner. Corners (1, 3, 5) face outside; middles face the centre. P sits at seat 3. Which seat is second to the left of P?",
+    "options": {
+     "a": "Seat 5",
+     "b": "Seat 1",
+     "c": "Seat 4",
+     "d": "Seat 2"
+    },
+    "answer": "B",
+    "why": "P is at a corner, facing outside, so P's left is anticlockwise: 3 - 2 = seat 1. Seat 5 is the answer you get by treating P as facing the centre."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#1",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#2",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#3",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#4",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#5",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#16",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#17",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#18",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#19",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#20",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#6",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#7",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#8",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#9",
+     "triangular-seating-arrangement-single-variable-set-2-prelims-1#10"
+    ],
+    "tags": [
+     "Set A: a corner person's left is anticlockwise.",
+     "Set A, question 2: odd one out by seat type.",
+     "Set A, question 3: four descriptions, all corners.",
+     "Set A, question 4: position seen from a middle person.",
+     "Set A, question 5: a corner person's left, answered as a description.",
+     "Set B: \"exactly between\" makes a block of three.",
+     "Set B, question 2: \"exactly between\" the long way round.",
+     "Set B, question 3: position seen from a middle person.",
+     "Set B, question 4: odd pair out (opposite, not neighbours).",
+     "Set B, question 5: count from a middle person's left.",
+     "Set C: no seat type given; try A at a corner and in a middle.",
+     "Set C, question 2: odd one out by seat type.",
+     "Set C, question 3: four descriptions, all corners.",
+     "Set C, question 4: a corner person's right is clockwise.",
+     "Set C, question 5: third to the left of a middle person."
+    ]
+   }
+  },
+  {
+   "id": "second-fact",
+   "code": "TR3",
+   "title": "A second fact per person",
+   "plain": "New: each person also likes a place, an animal or has an age. Seat the persons first where clues allow, then treat \"the one who likes X\" as a person whose name you do not know yet.",
+   "needs": [],
+   "teach": [
+    "Six of the 28 bank puzzles add a second fact to each person: places, animals, ages, brands. All six are on the six-seat table. Most clues then name a fact, not a person: \"the one who likes Shimla\".",
+    "**The method.**",
+    "- Start from the person with a seat-type clue, as before.",
+    "- Treat \"the one who likes Shimla\" as a person with a label instead of a name. Steps between labels are steps between seats, exactly as before.",
+    "- Write the label inside the seat in small letters, and the name beside it when you learn it.",
+    "- A clue that links two descriptions (\"S sits second to the left of the one who likes Goa\") always means **two different persons**. So S does not like Goa. The same goes for \"between R and the one who likes Munnar\": R does not like Munnar. One Sreedhar set has three arrangements unless you read it this way.",
+    "**Facts with a pattern.** \"No two people who like water animals sit together\" with three water and three land animals forces them to alternate: all the water animals on the middles or all on the corners. That is a seat-type clue in disguise.",
+    "**Ages.** Sum and difference clues (J + N = 66, K and O differ by 8) give a short list of pairs; write the list down and let the seating clues choose."
+   ],
+   "example": {
+    "q": "Bank set (Guidely triangular two-variable, set 1, questions 6 to 10). Six persons A to F sit round a triangular table facing the centre, three at the corners and three in the middles. Each likes a different cartoon: Flintstones, Pokemon, Popeye, Scooby-Doo, Shinchan, Superman. D sits at a corner, next to the one who likes Flintstones. A sits second to the right of the Flintstones fan and third to the left of the Popeye fan. One person sits between the Popeye fan and E, who sits on the immediate right of the Pokemon fan. The Shinchan fan sits on the immediate left of the Pokemon fan. At least one person sits between the Shinchan fan and B, who likes neither Popeye nor Superman. C sits on the immediate right of F but does not like Flintstones.",
+    "steps": [
+     "D at seat 1 (a corner). Flintstones is next to D: seat 2 or 6.",
+     "A is second to the right of Flintstones (-2): Flintstones 2 gives A 6; Flintstones 6 gives A 4. Popeye is opposite A: 3, or 1 (D).",
+     "Flintstones 2, A 6, Popeye 3: E is two from Popeye at 5; Pokemon is E + 1 = 6 (A) and Shinchan 1 (D). C = F - 1 leaves C on Flintstones or B next to Shinchan. Out.",
+     "Flintstones 6, A 4, D likes Popeye: E is at 3 or 5, and Pokemon = E + 1 must not be Flintstones, so E 3, A likes Pokemon, Shinchan at 5.",
+     "B is not next to Shinchan (5): B 2. C = F - 1 with seats 5 and 6 left: F 6 (Flintstones), C 5 (Shinchan). B likes neither Popeye nor Superman: B Scooby-Doo, E Superman."
+    ],
+    "answer": "Seats 1 to 6: D Popeye, B Scooby-Doo, E Superman, A Pokemon, C Shinchan, F Flintstones."
+   },
+   "check": {
+    "q": "\"S sits second to the left of the one who likes Goa.\" Which of these must be true?",
+    "options": {
+     "a": "S does not like Goa",
+     "b": "S sits at a corner",
+     "c": "S likes Goa",
+     "d": "S sits next to the one who likes Goa"
+    },
+    "answer": "A",
+    "why": "A clue that places S relative to the Goa fan names two different persons, so S cannot be the Goa fan. \"Next to\" is wrong: second to the left is two seats away, with one person between."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#5"
+    ],
+    "tags": [
+     "Set A (all face the centre, places): two cases from the opposite clue, then the Goa clue decides.",
+     "Set A, question 2: count from P's right.",
+     "Set A, question 3: read the label.",
+     "Set A, question 4: odd pair out (person and a neighbour's place).",
+     "Set A, question 5: four statements, all true.",
+     "Set B (corners out, animals): the no-two-water-animals clue sorts corners from middles.",
+     "Set B, question 2: odd pair out (a person with someone else's animal).",
+     "Set B, question 3: count from a middle person's left.",
+     "Set B, question 4: a corner person's left is anticlockwise.",
+     "Set B, question 5: one true statement.",
+     "Set C (corners in, middles out, ages): pairs from a sum and a difference.",
+     "Set C, question 2: \"between\" with no direction, the same both ways here.",
+     "Set C, question 3: read the age.",
+     "Set C, question 4: a middle person's right is clockwise.",
+     "Set C, question 5: the one pair that names a person's own age."
+    ]
+   }
+  },
+  {
+   "id": "nine-seats",
+   "code": "TR4",
+   "title": "Nine seats: a corner and two on each side",
+   "plain": "New: nine persons, one at each corner and two along each side. Corners are seats 1, 4 and 7, and a step of three goes from corner to corner.",
+   "needs": [],
+   "teach": [
+    "Nine of the 28 bank puzzles seat nine persons (or eight and an empty seat): one at each corner and two along each side.",
+    "**How to draw it.** Number the seats **1 to 9 clockwise from the top corner**. Corners are 1, 4 and 7. The sides are 2-3, 5-6 and 8-9.",
+    "| Step | From a corner you reach |",
+    "| 1 or 2 | a side seat |",
+    "| 3 | the next corner |",
+    "| 4 or 5 | a side seat on the far side |",
+    "| 6 | the corner after next |",
+    "**Seat type works in threes now.** A step of 3 or 6 keeps the seat type. \"Two persons sit between A and D\" with A at a corner puts D at a corner too.",
+    "**Same side.** \"X and Y sit on the same side\" means one of the pairs 2-3, 5-6, 8-9. A corner seat belongs to no side: seat 3 and seat 4 are neighbours, but only seat 3 is on a side.",
+    "Left and right work as before: facing the centre, left is +1. On this table nobody sits exactly opposite anyone, so \"opposite\" clues do not appear here."
+   ],
+   "example": {
+    "q": "Bank set (Guidely triangular single variable, set 2, questions 16 to 20; the opening line is missing in the bank but the rest is complete). Nine persons M to U sit round a triangular table, one at each corner and two on each side, all facing the centre. T sits second to the right of M. Three persons sit between M and Q. Q sits at a corner. R sits on the immediate right of P. Neither Q nor M sits next to R. U sits third to the right of N. O sits second to the right of S.",
+    "steps": [
+     "Q at a corner: seat 1. Three persons between M and Q: M at 5 or 6.",
+     "T is second to M's right (-2): M 5 gives T 3; M 6 gives T 4.",
+     "R = P - 1, and R is not next to Q (1) or M. M 5: R is 7 or 8. M 6: R is 3 or 8, and R 3 puts P on T, so R 8, P 9.",
+     "M 5, R 7, P 8: O = S - 2 and U = N - 3 in seats 2, 4, 6, 9: S 4, O 2, N 9, U 6. Every other try in all three branches leaves U or O on a taken seat.",
+     "Check: U (6) is third to the right of N (9 - 3 = 6). Fine."
+    ],
+    "answer": "Seats 1 to 9 clockwise from the top corner: Q, O, T, S, M, U, R, P, N (corners Q, S, R)."
+   },
+   "check": {
+    "q": "Nine persons sit round a triangular table facing the centre, corners at seats 1, 4 and 7. A sits at seat 1. B sits fourth to the left of A. Where does B sit?",
+    "options": {
+     "a": "Seat 5, on a side",
+     "b": "Seat 4, a corner",
+     "c": "Seat 7, a corner",
+     "d": "Seat 6, on a side"
+    },
+    "answer": "A",
+    "why": "Facing the centre, left is +1: 1 + 4 = seat 5, the first side seat after corner 4. \"Seat 4\" is a step of three, the tempting slip of counting A's own seat."
+   },
+   "shortcut": {
+    "title": "Corner to corner is three",
+    "text": [
+     "On the nine-seat table, from a corner a step of 3 lands on the next corner, and a step of 6 on the last one.",
+     "So \"two persons between X and Y\" with X at a corner, or \"Y is third to the left of X\", puts Y at a corner without drawing."
+    ]
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#11",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#12",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#13",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#14",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#15",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#11",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#12",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#13",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#14",
+     "triangular-seating-arrangement-single-variable-set-4-prelims-1#15",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#16",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#17",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#18",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#19",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#20"
+    ],
+    "tags": [
+     "Set A: a corner named, one gap clue gives two seats.",
+     "Set A, question 2: neighbours.",
+     "Set A, question 3: who is in the stretch from T's left to V.",
+     "Set A, question 4: corner seats are 1, 4, 7.",
+     "Set A, question 5: odd pair out by seat type.",
+     "Set B: corner to corner is three; an equal-gap clue counted to the right.",
+     "Set B, question 2: a long count, more than four.",
+     "Set B, question 3: a chain of two steps.",
+     "Set B, question 4: the alphabetical re-seating question.",
+     "Set B, question 5: fourth to the right.",
+     "Set C (all face outside): a corner named; left is anticlockwise.",
+     "Set C, question 2: swap two pairs, then count.",
+     "Set C, question 3: the pair that is not adjacent.",
+     "Set C, question 4: a corner person facing out.",
+     "Set C, question 5: false statements."
+    ]
+   }
+  },
+  {
+   "id": "sides-only",
+   "code": "TR5",
+   "title": "No one at the corners",
+   "plain": "New: the persons sit only along the sides, two or three to a side. Neighbours across a corner are still neighbours, but they are on different sides.",
+   "needs": [],
+   "teach": [
+    "Three of the 28 bank puzzles leave the corners empty of seats: two or three persons on each side.",
+    "**How to draw it.** Number the seats clockwise as usual, and draw a short bar between the sides: with two a side, the sides are 1-2, 3-4, 5-6; with three a side, 1-2-3, 4-5-6, 7-8-9.",
+    "**What changes.** There is no seat type now, so the parity trick is gone. Instead you get a **side** for each person.",
+    "- \"X and Y sit on the same side\" picks one of the pairs (or triples).",
+    "- \"X and Y are neighbours but not on the same side\" puts them at the two ends of a corner: one at the end of a side, the other at the start of the next.",
+    "- \"X is second to the left of Y\" on a two-a-side table puts X in the same place on the next side.",
+    "**Where to start.** All three sides look the same, so seat the most-mentioned person on side 1. Try them at the first seat of the side and at the last seat: two cases.",
+    "Bank warning: in the set used for practice, the question \"who is related to P\" is keyed as \"who is to P as L is to O\", the reverse of the usual reading. The working shows both."
+   ],
+   "example": {
+    "q": "Original example, checked by script. Six persons A to F sit round a triangular table, two on each side and no one at a corner, all facing the centre. D sits second to the left of B. A and B sit on the same side. C and D sit on the same side. F sits on the immediate right of A.",
+    "steps": [
+     "Sides are 1-2, 3-4, 5-6. Left is +1.",
+     "Try B at the second seat of a side, seat 2: D = 2 + 2 = 4. A shares B's side: A 1. C shares D's side: C 3. F is A's immediate right: 1 - 1 = seat 6. E takes 5.",
+     "Try B at the first seat, seat 1: D 3, A 2, C 4, and F = 2 - 1 = seat 1, which is B's. Out."
+    ],
+    "answer": "Seats 1 to 6: A, B | C, D | E, F."
+   },
+   "check": {
+    "q": "Six persons sit two on each side of a triangular table, none at a corner. P and Q are immediate neighbours. Must they sit on the same side?",
+    "options": {
+     "a": "Yes, always",
+     "b": "No: they may sit either side of a corner",
+     "c": "Only if they face outside",
+     "d": "They cannot be neighbours"
+    },
+    "answer": "B",
+    "why": "The last seat of one side and the first seat of the next are neighbours across the corner, yet on different sides. \"Yes, always\" is the slip of treating each side as a separate row."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "triangular-seating-arrangement-single-variable-set-3-prelims-1#16",
+     "triangular-seating-arrangement-single-variable-set-3-prelims-1#17",
+     "triangular-seating-arrangement-single-variable-set-3-prelims-1#18",
+     "triangular-seating-arrangement-single-variable-set-3-prelims-1#19",
+     "triangular-seating-arrangement-single-variable-set-3-prelims-1#20",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#6",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#7",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#8",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#9",
+     "triangular-seating-arrangement-single-variable-set-1-prelims-1#10"
+    ],
+    "tags": [
+     "Set A (boxes, three a side, facing outside): neighbours on different sides sit at a corner.",
+     "Set A, question 2: count from B's right.",
+     "Set A, question 3: left is anticlockwise for an outward box.",
+     "Set A, question 4: the same step from a new box.",
+     "Set A, question 5: fourth to the right.",
+     "Set B (two a side, facing the centre): same place on the next side.",
+     "Set B, question 2: immediate left.",
+     "Set B, question 3: \"who is related to P\", keyed the reverse way.",
+     "Set B, question 4: who is in the stretch from L's left to M.",
+     "Set B, question 5: second to the right."
+    ]
+   }
+  },
+  {
+   "id": "vacant-seat",
+   "code": "TR6",
+   "title": "One seat is empty",
+   "plain": "New: one seat has no one in it. Count it when a clue counts seats or places; skip it when a clue counts persons.",
+   "needs": [],
+   "teach": [
+    "Four of the 28 bank puzzles have one empty seat: five persons on six seats, or eight on nine.",
+    "**The one rule.** The empty seat is a seat, not a person.",
+    "| The clue says | Count |",
+    "| \"second to the left\", \"two places away\", \"two seats between\" | seats, the empty one included |",
+    "| \"two persons sit between\", \"how many persons\" | persons only, skip the empty seat |",
+    "| \"immediate neighbour\" | the seat next door; if that seat is empty, they are not neighbours |",
+    "**The empty seat still faces somewhere.** It faces the way its seat type faces. \"Who sits on the immediate right of the vacant seat\" uses that seat's right.",
+    "**Persons-between clues are loose.** \"Three persons sit between E and D\" can be true across four seats if one of them is empty. So count the seats on each side and ask where the empty seat can go; a clue like \"D does not sit next to the empty seat\" then settles it.",
+    "A check by script: in Drill 4 of the Quick revision tab, reading \"one person between\" as \"one seat between\" gives no arrangement at all; the persons-only reading gives exactly one."
+   ],
+   "example": {
+    "q": "Bank set (Guidely triangular vacant, set 1, questions 11 to 15). Eight persons M to T sit round a triangular table with nine seats: one at each corner, facing the centre, and two on each side, facing away. One seat is empty. T sits on the immediate right of M, who sits on a side. Q sits second to the right of T. S sits two places away from Q. Two persons sit between S and O, who does not sit next to T. R sits fourth to the right of O. One person sits between R and P. N does not sit at a corner.",
+    "steps": [
+     "Corners 1, 4, 7 face in (left +1); side seats face out (left -1, right +1).",
+     "M is on a side and faces out, so T, on M's right, is M + 1. Try M at seat 2: T 3, and Q = 3 + 2 = 5. S is two seats from Q: 7 (3 is T).",
+     "Two persons between S (7) and O, O not next to T: O at 1, with 8 and 9 both persons. O faces in, so R = 1 - 4 = seat 6. One person between R and P: P 8 (P 4 would need the empty seat between S and O). N on a side: N 9. The empty seat is 4.",
+     "Starting M at seat 3 instead (T then at the corner 4) runs to the end and the last clues leave no seat for P or N. Out."
+    ],
+    "answer": "Seats 1 to 9: O, M, T, empty, Q, R, S, P, N. O and S sit at corners facing the centre; the rest face outside."
+   },
+   "check": {
+    "q": "Six seats round a triangle, all facing the centre. Clockwise: A, B, empty, C, D, E. How many persons sit between B and D, counted from the left of B?",
+    "options": {
+     "a": "One",
+     "b": "Two",
+     "c": "None",
+     "d": "Three"
+    },
+    "answer": "A",
+    "why": "From B going clockwise: the empty seat, then C, then D. One person, C. \"Two\" counts the empty seat as a person."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#1",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#2",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#3",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#4",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#5",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#6",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#7",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#8",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#9",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#10",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#16",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#17",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#18",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#19",
+     "triangular-seating-arrangement-vacant-set-1-prelims-1#20"
+    ],
+    "tags": [
+     "Set A (six seats, all in): \"two places away\" counts seats, \"two persons between\" counts persons.",
+     "Set A, question 2: skip the empty seat when counting persons.",
+     "Set A, question 3: three statements, one counts past the empty seat.",
+     "Set A, question 4: immediate right.",
+     "Set A, question 5: immediate right of a middle person.",
+     "Set B (six seats, corners out): three persons across four seats.",
+     "Set B, question 2: count persons from D's left.",
+     "Set B, question 3: the empty seat's own right.",
+     "Set B, question 4: the relation lands on the empty seat.",
+     "Set B, question 5: second to the right of a corner person.",
+     "Set C (nine seats, all in): a chain from a corner.",
+     "Set C, question 2: one true statement.",
+     "Set C, question 3: the empty seat's own left.",
+     "Set C, question 4: K's other neighbour.",
+     "Set C, question 5: second to the right."
+    ]
+   }
+  },
+  {
+   "id": "other-shapes",
+   "code": "TR7",
+   "title": "Other shapes: the same counting",
+   "plain": "Insurance: pentagon and hexagon tables. Number the seats round the shape and everything from the triangle carries over; only the size and the meaning of \"opposite\" change.",
+   "needs": [],
+   "teach": [
+    "Your Guidely bank also has 24 pentagon puzzles and 24 hexagon puzzles. None was seen in the papers either, so this lesson is short. I solved five of them by script; all five had one arrangement and their keys matched, apart from one \"related\" question keyed the reverse way.",
+    "**The same method.** Number the seats clockwise from the top. If there are corners and middles, odd seats are corners and even seats middles, so the parity trick works unchanged.",
+    "| Table | Seats | Opposite |",
+    "| Pentagon, corners only | 5 | none |",
+    "| Pentagon, corners and middles | 10 | 5 seats on: a corner faces a middle |",
+    "| Hexagon, corners only | 6 | 3 seats on |",
+    "| Hexagon, corners and middles | 12 | 6 seats on: corner faces corner |",
+    "On a 12-seat hexagon, \"faces\" often means opposite. On a 5-seat pentagon there is no opposite, so options built on it are traps.",
+    "Second facts (companies, juices, bikes) and empty seats work exactly as in lessons 3 and 6."
+   ],
+   "example": {
+    "q": "Bank set (Guidely pentagonal two-variable, set 1, questions 11 to 15; one clue is printed inside question 11). Five persons P, Q, R, S, T sit at the five corners of a pentagonal table facing the centre. Their bikes are KTM, Hero, TVS, Bajaj and Royal Enfield. T has Hero and sits second to the right of S. The KTM owner sits next to S. R does not sit next to S. Q does not sit next to R. The Royal Enfield owner sits on the immediate left of the TVS owner. Neither S nor P has TVS.",
+    "steps": [
+     "Seats 1 to 5 clockwise; left +1. T = S - 2: put S at 5, T at 3.",
+     "R is not next to S (4 or 1): R 2. Q is not next to R (1 or 3): Q 4. P takes 1.",
+     "Royal Enfield = TVS + 1, TVS not S or P, and T has Hero: TVS on R (2) puts Royal Enfield on T. So TVS on Q (4), Royal Enfield on S (5).",
+     "KTM is next to S: P (1). R has Bajaj."
+    ],
+    "answer": "Seats 1 to 5: P KTM, R Bajaj, T Hero, Q TVS, S Royal Enfield."
+   },
+   "check": {
+    "q": "A pentagonal table has five corner seats and five middle seats, all facing the centre. X sits at a corner. Who sits opposite X?",
+    "options": {
+     "a": "The person five seats away, in the middle of a side",
+     "b": "The person five seats away, at a corner",
+     "c": "No one: a ten-seat table has no opposite",
+     "d": "The person four seats away"
+    },
+    "answer": "A",
+    "why": "Ten seats, so opposite is five seats on, an odd step, which changes the seat type. \"At a corner\" forgets the parity; \"no one\" is true only for the five-seat pentagon."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#1",
+     "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#2",
+     "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#3",
+     "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#4",
+     "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#5",
+     "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#6",
+     "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#7",
+     "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#8",
+     "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#9",
+     "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#10",
+     "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#1",
+     "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#2",
+     "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#3",
+     "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#4",
+     "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#5"
+    ],
+    "tags": [
+     "Set A (hexagon, six corners): opposite is three on.",
+     "Set A, question 2: exactly between, the long way round.",
+     "Set A, question 3: A's other neighbour.",
+     "Set A, question 4: opposite.",
+     "Set A, question 5: the true answer is not offered.",
+     "Set B (pentagon, five corners, companies): no opposite at all.",
+     "Set B, question 2: nobody between.",
+     "Set B, question 3: two names for the same seat.",
+     "Set B, question 4: odd pair out by step.",
+     "Set B, question 5: read the label.",
+     "Set C (pentagon, ten seats): odd seats are corners, as on the triangle.",
+     "Set C, question 2: the one middle seat.",
+     "Set C, question 3: one true statement.",
+     "Set C, question 4: the pair that is not adjacent.",
+     "Set C, question 5: odd one out by seat type."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "guidely": {
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#1": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Everyone faces the centre: left is +1 (clockwise), right is -1.",
+    "C sits in a middle: put C at seat 2. B is third to the left of C: 2 + 3 = seat 5, a corner (an odd step changes the seat type).",
+    "One person between B and E: E is at seat 3 or seat 1.",
+    "E at 1: going left from C (3, 4, 5, 6) there are four people before E, so the gap from A to E would have to be five. Impossible. Out.",
+    "E at 3: no one between C and E going left, so exactly one person sits between A and E going left from A: A at seat 1 (seat 2 lies between).",
+    "D is second to the left of F: D = F + 2 with seats 4 and 6 free: F 4, D 6.",
+    "The arrangement, seats 1 to 6: A, C, E, F, B, D (corners A, E, B). All face the centre.",
+    "Second to the right of C (seat 2) is seat 6, D. D is also the one who sits to the immediate left of B (B at 5, +1 = 6): The one who sits to the immediate left of B"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#2": [
+    "The arrangement, seats 1 to 6: A, C, E, F, B, D (corners A, E, B). All face the centre.",
+    "From A (seat 1) going right: seat 6 is D, then seat 5 is B. One person between: One"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#3": [
+    "The arrangement, seats 1 to 6: A, C, E, F, B, D (corners A, E, B). All face the centre.",
+    "F (4) and A (1) have two persons between them either way; third to E's left is 3 + 3 = 6, D, not B; C (2) and D (6) are not neighbours. E is at 3 and E's immediate right is seat 2: C sits to the immediate right of E"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#4": [
+    "The arrangement, seats 1 to 6: A, C, E, F, B, D (corners A, E, B). All face the centre.",
+    "Alphabetical clockwise from A would be A 1, B 2, C 3, D 4, E 5, F 6. Nobody except A is in that seat: None"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#5": [
+    "The arrangement, seats 1 to 6: A, C, E, F, B, D (corners A, E, B). All face the centre.",
+    "AE, CF, BA and FD are each \"second to the left\" pairs (two seats clockwise). A 1 to F 4 is three seats: AF"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#11": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Everyone faces the centre: left is +1 (clockwise), right is -1.",
+    "B sits at a corner: B at seat 1. One person between F and B: F at 3 or 5. D is next to F.",
+    "D and E are the same number of people away from B, so E is D's mirror seat across B: D 2 with E 6, or D 6 with E 2 (D at 4 has no mirror seat).",
+    "F 3, D 2, E 6: C is not next to E, so C 4 and A 5. D is not second to the left of C (C 4 + 2 = 6 is E). Fine.",
+    "F 5, D 6, E 2: C not next to E gives C 4, A 3; but then D (6) is second to the left of C. Out.",
+    "The arrangement, seats 1 to 6: B, D, F, C, A, E (corners B, F, A). All face the centre.",
+    "Second to the left of D (seat 2) is seat 4: C"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#12": [
+    "The arrangement, seats 1 to 6: B, D, F, C, A, E (corners B, F, A). All face the centre.",
+    "AE, BD, CA and FC are immediate neighbours (one seat apart). C (4) and D (2) are two seats apart: CD"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#13": [
+    "The arrangement, seats 1 to 6: B, D, F, C, A, E (corners B, F, A). All face the centre.",
+    "A is at 5 and B at 1. One way round there is one person (E at 6), the other way three (C, F, D). So it is one or three: Either b or c"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#14": [
+    "The arrangement, seats 1 to 6: B, D, F, C, A, E (corners B, F, A). All face the centre.",
+    "The bank prints the last clue at the start of this question. Alphabetical clockwise from A (seat 5): A 5, B 6, C 1, D 2, E 3, F 4. Only D keeps its seat: One"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#15": [
+    "The arrangement, seats 1 to 6: B, D, F, C, A, E (corners B, F, A). All face the centre.",
+    "The bank prints statement III as the question. I: D (2) and F (3) are neighbours, true. II: between C (4) and B (1) sit D and F, two persons, true. III: A is at seat 5, a corner, true: All I, II, and III"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#1": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Corners face outside: their left is -1 (anticlockwise) and their right +1. Middles face the centre: left +1, right -1.",
+    "R sits at a corner: R at 1, facing outside. Q is R's immediate left; R's left is -1, so Q at 6.",
+    "Two persons between T and S: they are opposite each other. Q at 6 is not next to T or U, so neither sits at 5.",
+    "The free opposite pairs are 2-5 and 3-6; 6 is taken, so T and S take 2 and 5, and T is not at 5: T 2, S 5.",
+    "T is a middle, facing the centre, so second to T's left is 2 + 2 = seat 4: U. P takes 3.",
+    "The arrangement, seats 1 to 6: R, T, P, U, S, Q. R, P and S sit at corners facing outside; T, U and Q sit in the middles facing the centre.",
+    "R (1) and U (4) are opposite, not neighbours; the other four pairs sit side by side: RU"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#2": [
+    "The arrangement, seats 1 to 6: R, T, P, U, S, Q. R, P and S sit at corners facing outside; T, U and Q sit in the middles facing the centre.",
+    "R, the one on T's immediate right (seat 1, R), the one third to the left of T (seat 5, S) and P all sit at corners. U sits in a middle: U"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#3": [
+    "The arrangement, seats 1 to 6: R, T, P, U, S, Q. R, P and S sit at corners facing outside; T, U and Q sit in the middles facing the centre.",
+    "S (5); second to the right of P (P faces out, 3 + 2 = 5, S); second to the right of R (1 + 2 = 3, P); immediate left of Q (Q faces in, 6 + 1 = 1, R). All are corner seats: All the above"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#4": [
+    "The arrangement, seats 1 to 6: R, T, P, U, S, Q. R, P and S sit at corners facing outside; T, U and Q sit in the middles facing the centre.",
+    "U (seat 4) faces the centre, so U's left runs 5, 6. Q at 6 is: Second to the left"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#5": [
+    "The arrangement, seats 1 to 6: R, T, P, U, S, Q. R, P and S sit at corners facing outside; T, U and Q sit in the middles facing the centre.",
+    "S (5) faces outside, so S's left runs 4, 3, 2: seat 2 is T. T is also the one on R's immediate right (R faces out, 1 + 1 = 2): The one who sits immediate right of R"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#16": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Corners face outside: their left is -1 (anticlockwise) and their right +1. Middles face the centre: left +1, right -1.",
+    "L sits at a corner: L at 1. P is second to the left of K and M sits exactly between them, so P, M, K take three seats in a row with M in the centre.",
+    "The free runs of three are 2-3-4, 3-4-5 and 4-5-6. In 2-3-4, O would have to sit opposite seat 4, which is L's seat. Out.",
+    "In 3-4-5, P and K are corners facing out, so P = K - 2: K 5, P 3; O sits opposite the one on M's right (seat 3), at 6, and N at 2. Then P and O have two between them, M and N one or three. Out.",
+    "In 4-5-6, P and K are middles facing in, so P = K + 2: K 4, P 6, M 5. M faces out, so M's right is 6 (P); O is opposite P, at 3. N takes 2.",
+    "Check: P and O have two between them either way, and so do M and N. Fine.",
+    "The arrangement, seats 1 to 6: L, N, O, K, M, P. L, O and M sit at corners facing outside; N, K and P sit in the middles facing the centre.",
+    "L faces outside, so second to L's left is 1 - 2 = seat 5: M. M is also the one on K's immediate left (K faces in, 4 + 1 = 5): The person who sits immediate left of K"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#17": [
+    "The arrangement, seats 1 to 6: L, N, O, K, M, P. L, O and M sit at corners facing outside; N, K and P sit in the middles facing the centre.",
+    "Exactly between L (1) and O (3) going the short way is N (2); going the long way (6, 5, 4) it is M (5). I is P (K faces in, 4 + 2 = 6), II is M (P faces in, 6 - 1 = 5), III is M (N faces in, 2 + 3 = 5): Only (II) and (III)"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#18": [
+    "The arrangement, seats 1 to 6: L, N, O, K, M, P. L, O and M sit at corners facing outside; N, K and P sit in the middles facing the centre.",
+    "N (2) faces the centre, so N's left runs 3, 4. K at 4 is: Second to the left"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#19": [
+    "The arrangement, seats 1 to 6: L, N, O, K, M, P. L, O and M sit at corners facing outside; N, K and P sit in the middles facing the centre.",
+    "K-M, L-P, N-L and O-K are neighbours. N (2) and M (5) are opposite: N-M"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#20": [
+    "The arrangement, seats 1 to 6: L, N, O, K, M, P. L, O and M sit at corners facing outside; N, K and P sit in the middles facing the centre.",
+    "The one on K's immediate left is M (5). From P (6, facing in) going left: 1 L, 2 N, 3 O, 4 K, then M. Four persons: More than three"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#6": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Corners face outside: their left is -1 (anticlockwise) and their right +1. Middles face the centre: left +1, right -1. The opening line of this set is missing in the bank; the facing rule is in what remains.",
+    "No one is given a seat type, so try A both ways.",
+    "A at a corner (seat 1, facing out): D is on A's immediate left, 1 - 1 = seat 6. B is two from D (seat 2 or 4) but not next to A: B 4.",
+    "E is next to B: 3 or 5, both corners. C faces the same way as E, so C is a corner too: C and E take 3 and 5. F faces the centre: F at 2.",
+    "F (2) and A (1) have no one between them, so F and C must have no one between them either: C 3, E 5.",
+    "A in a middle (seat 2, facing in) puts D at 3, B at 5, E in a middle and C in a middle too, leaving no middle for F. Out.",
+    "The arrangement, seats 1 to 6: A, F, C, B, E, D. A, C and E sit at corners facing outside; F, B and D sit in the middles facing the centre.",
+    "A faces outside, so A's right is +1, seat 2: F sits immediate right of A"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#7": [
+    "The arrangement, seats 1 to 6: A, F, C, B, E, D. A, C and E sit at corners facing outside; F, B and D sit in the middles facing the centre.",
+    "C, the one on B's right (B faces in, 4 - 1 = 3, C), the one third to the left of F (F faces in, 2 + 3 = 5, E) and E are corner persons. D sits in a middle: D"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#8": [
+    "The arrangement, seats 1 to 6: A, F, C, B, E, D. A, C and E sit at corners facing outside; F, B and D sit in the middles facing the centre.",
+    "A (1); second to the right of C (C faces out, 3 + 2 = 5, E); second to the left of E (5 - 2 = 3, C); immediate left of F (F faces in, 2 + 1 = 3, C). All corners: All of the Above"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#9": [
+    "The arrangement, seats 1 to 6: A, F, C, B, E, D. A, C and E sit at corners facing outside; F, B and D sit in the middles facing the centre.",
+    "C (3) faces outside, so C's right is +1: 4, then 5. E at 5 is: Second to the Right"
+   ],
+   "triangular-seating-arrangement-single-variable-set-2-prelims-1#10": [
+    "The arrangement, seats 1 to 6: A, F, C, B, E, D. A, C and E sit at corners facing outside; F, B and D sit in the middles facing the centre.",
+    "D (6) faces the centre: third to the left is 6 + 3 = seat 3, C. C is also on B's immediate right (B faces in, 4 - 1 = 3): The one who sits immediate right of B"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#11": [
+    "Seats 1 to 9 clockwise from the top corner; 1, 4 and 7 are corners; the sides are 2-3, 5-6 and 8-9. Everyone faces the centre: left is +1 (clockwise), right is -1.",
+    "V sits at a corner: V at 1. One person between V and X: X at 3 or 8. T is X's immediate right (-1): X 3 gives T 2; X 8 gives T 7.",
+    "X 8, T 7: R is three seats from T, at 4 (1 is V). W is second to the left of R: 4 + 2 = 6. S = Q + 2 in the free seats 2, 3, 5, 9: Q 3 or 5 would sit next to R, so Q 9, S 2. U is not next to W: U 3, P 5.",
+    "X 3, T 2: R at 5 or 8, W = R + 2 leaves R 5, W 7, and then no place for Q and S two apart that keeps Q away from R. Out.",
+    "The arrangement, seats 1 to 9: V, S, U, R, P, W, T, X, Q (corners V, R, T). All face the centre.",
+    "Third to the left of X (8) is 8 + 3 = 11, that is seat 2: S"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#12": [
+    "The arrangement, seats 1 to 9: V, S, U, R, P, W, T, X, Q (corners V, R, T). All face the centre.",
+    "U (3) and S (2) sit side by side: US"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#13": [
+    "The arrangement, seats 1 to 9: V, S, U, R, P, W, T, X, Q (corners V, R, T). All face the centre.",
+    "From T (7) going left: 8 X, 9 Q, then V. Of the options only X is in that stretch: X"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#14": [
+    "The arrangement, seats 1 to 9: V, S, U, R, P, W, T, X, Q (corners V, R, T). All face the centre.",
+    "The corners are 1, 4 and 7: V, R and T. Of the options: R"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#15": [
+    "The arrangement, seats 1 to 9: V, S, U, R, P, W, T, X, Q (corners V, R, T). All face the centre.",
+    "RV and VT are corner-corner pairs; US and PW are side-side pairs. UR joins a side seat to a corner: UR"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#11": [
+    "Seats 1 to 9 clockwise from the top corner; 1, 4 and 7 are corners; the sides are 2-3, 5-6 and 8-9. Everyone faces the centre: left is +1 (clockwise), right is -1.",
+    "E sits at a corner: E at 1. G is third to the right of E: 1 - 3 = seat 7, the next corner. I is next to G: 6 or 8.",
+    "Count rightwards (-1) from E to I and from G to F: I 8 leaves one person between E and I, so F is at 5; I 6 leaves three, so F is at 3.",
+    "B is F's immediate right (-1): F 5, B 4, or F 3, B 2. D is two from B and not next to E (not 2 or 9): D 6, or D 4.",
+    "I 8 case: free seats 2, 3, 9. H is not next to E, so H 3. C is second to the left of A: A 9, C 2.",
+    "I 6 case: free seats 5, 8, 9 leave no pair for C and A two apart. Out.",
+    "The arrangement, seats 1 to 9: E, C, H, B, F, D, G, I, A (corners E, B, G). All face the centre.",
+    "Second to the right of A (9) is 9 - 2 = 7, G. G is also on I's immediate right (8 - 1 = 7): The one who sits immediate right of I"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#12": [
+    "The arrangement, seats 1 to 9: E, C, H, B, F, D, G, I, A (corners E, B, G). All face the centre.",
+    "From E (1) going right: 9 A, 8 I, 7 G, 6 D, 5 F, 4 B, then H at 3. Six people: More than four"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#13": [
+    "The arrangement, seats 1 to 9: E, C, H, B, F, D, G, I, A (corners E, B, G). All face the centre.",
+    "Second to the right of G (7) is F (5); F's immediate right is B (4). B is also second to the left of C (2 + 2 = 4): The one who sits second to the left of C"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#14": [
+    "The arrangement, seats 1 to 9: E, C, H, B, F, D, G, I, A (corners E, B, G). All face the centre.",
+    "Alphabetical clockwise from A (9): B 1, C 2, D 3, E 4, F 5, G 6, H 7, I 8. C, F and I keep their seats: Three"
+   ],
+   "triangular-seating-arrangement-single-variable-set-4-prelims-1#15": [
+    "The arrangement, seats 1 to 9: E, C, H, B, F, D, G, I, A (corners E, B, G). All face the centre.",
+    "From H (3) going right: 2, 1, 9, then I at 8. That is: Fourth to the right"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#16": [
+    "Seats 1 to 9 clockwise from the top corner; 1, 4 and 7 are corners; the sides are 2-3, 5-6 and 8-9. All face outside: left is -1 (anticlockwise), right is +1.",
+    "H sits at a corner: H at 1. D is three seats from H: 4 or 7. L is two seats from H: 3 or 8. E is L's immediate right (+1): L 3, E 4, or L 8, E 9.",
+    "L 3, E 4: D must be 7. L 8, E 9: D 4 (7 would be next to L).",
+    "I is third to the left of J (I = J - 3), F is I's right (I + 1), G is J's right (J + 1): a pattern I, F, gap, J, G.",
+    "L 3, E 4, D 7: free seats 2, 5, 6, 8, 9 fit the pattern only as I 5, F 6, J 8, G 9; K takes 2, away from G. In the other case the pattern either runs onto a taken seat or leaves K next to G. Out.",
+    "The arrangement, seats 1 to 9: H, K, L, E, I, F, D, J, G (corners H, E, D). All face outside.",
+    "J (8) faces outside: second to the left is 8 - 2 = 6: F"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#17": [
+    "The arrangement, seats 1 to 9: H, K, L, E, I, F, D, J, G (corners H, E, D). All face outside.",
+    "After the swaps: H 1, L 2, K 3, F 4, I 5, E 6, D 7, J 8, G 9. L faces outside, so fourth to the right is 2 + 4 = 6: E"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#18": [
+    "The arrangement, seats 1 to 9: H, K, L, E, I, F, D, J, G (corners H, E, D). All face outside.",
+    "GH (9, 1), IE, FD and JG are side by side. K (2) and D (7) are far apart: KD"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#19": [
+    "The arrangement, seats 1 to 9: H, K, L, E, I, F, D, J, G (corners H, E, D). All face outside.",
+    "H (1) faces outside, so H's left runs 9, 8. J at 8 is: Second to the left"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#20": [
+    "The arrangement, seats 1 to 9: H, K, L, E, I, F, D, J, G (corners H, E, D). All face outside.",
+    "I: D (7) and J (8) are neighbours, true. II: second to I's left is 5 - 2 = 3, L, not D, false. III: K (2) and H (1) are neighbours, so no one is between, false: Only II and III"
+   ],
+   "triangular-seating-arrangement-single-variable-set-3-prelims-1#16": [
+    "No corner seats: seats 1 to 9 clockwise, three to a side (1-3, 4-6, 7-9). All face outside: left -1, right +1. The bank prints one clue (A is next to neither H nor C) inside this question.",
+    "D and B are neighbours but on different sides, so they sit at the two ends of a corner: D at the start of a side and B at the end of the side before it (D 1, B 9), or D at the end of a side and B at the start of the next (D 3, B 4).",
+    "G is second to the right of D (+2), C third to the right of G (+3), H = C + 2. D 1: G 3, C 6, H 8. D 3: G 5, C 8, H 1.",
+    "D 3 case: A must avoid H (1) and C (8), so A 6, and then E and F cannot be three apart in seats 2, 7, 9. Out.",
+    "D 1 case: E and F three apart in 2, 4, 5, 7: (2, 5) or (4, 7). A avoids H and C, so A 2 or 4. With (2, 5), A 4 and I 7, next to H: out (H and I are consecutive letters). With (4, 7), A 2 and I 5; F is not next to G (3), so F 7, E 4.",
+    "The arrangement, seats 1 to 9: D, A, G | E, I, C | F, H, B (sides 1-3, 4-6, 7-9). All boxes face outside.",
+    "H (8) has F (7) and B (9) beside it. Of the options: Box F"
+   ],
+   "triangular-seating-arrangement-single-variable-set-3-prelims-1#17": [
+    "The arrangement, seats 1 to 9: D, A, G | E, I, C | F, H, B (sides 1-3, 4-6, 7-9). All boxes face outside.",
+    "From B (9) going right (+1): 1 D, 2 A, 3 G, then E at 4: 3"
+   ],
+   "triangular-seating-arrangement-single-variable-set-3-prelims-1#18": [
+    "The arrangement, seats 1 to 9: D, A, G | E, I, C | F, H, B (sides 1-3, 4-6, 7-9). All boxes face outside.",
+    "I (5) faces outside: third to the left is 5 - 3 = 2: Box A"
+   ],
+   "triangular-seating-arrangement-single-variable-set-3-prelims-1#19": [
+    "The arrangement, seats 1 to 9: D, A, G | E, I, C | F, H, B (sides 1-3, 4-6, 7-9). All boxes face outside.",
+    "C (6) to B (9) is +3; I (5) to H (8) is +3. D (1) + 3 = 4: Box E"
+   ],
+   "triangular-seating-arrangement-single-variable-set-3-prelims-1#20": [
+    "The arrangement, seats 1 to 9: D, A, G | E, I, C | F, H, B (sides 1-3, 4-6, 7-9). All boxes face outside.",
+    "I (5) faces outside, so I's right runs 6, 7, 8, 9. B at 9 is: Fourth to the right"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#6": [
+    "No corner seats: seats 1 to 6 clockwise, two to a side (1-2, 3-4, 5-6). All face the centre: left +1, right -1.",
+    "M is second to the left of Q: M = Q + 2, so they sit in the same place on two different sides. Try Q at the second seat of a side (Q 2, M 4) and at the first (Q 1, M 3).",
+    "Q 2, M 4: O shares M's side, O 3. L is two from O and not next to M: L 1. P is next to neither L nor Q: P 5, N 6. Gap check: nobody between Q and O going left, nobody between P and N going left. Fine.",
+    "Q 1, M 3: O 4, L 6, and then P has no seat away from both L and Q. Out.",
+    "The arrangement, seats 1 to 6: L, Q | O, M | P, N (sides 1-2, 3-4, 5-6). All face the centre.",
+    "Q (2) shares side 1-2 with: L"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#7": [
+    "The arrangement, seats 1 to 6: L, Q | O, M | P, N (sides 1-2, 3-4, 5-6). All face the centre.",
+    "M (4) faces the centre: immediate left is seat 5: P"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#8": [
+    "The arrangement, seats 1 to 6: L, Q | O, M | P, N (sides 1-2, 3-4, 5-6). All face the centre.",
+    "L to O is +2 and Q to M is +2. The usual reading (P is to ? as L is to O) gives seat 7, that is 1, L. The bank key reads it the other way, \"who is to P as L is to O\": two seats before P (5) is seat 3: O"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#9": [
+    "The arrangement, seats 1 to 6: L, Q | O, M | P, N (sides 1-2, 3-4, 5-6). All face the centre.",
+    "From L (1) going left: 2 Q, 3 O, then M. That is Q and O: Only I and II"
+   ],
+   "triangular-seating-arrangement-single-variable-set-1-prelims-1#10": [
+    "The arrangement, seats 1 to 6: L, Q | O, M | P, N (sides 1-2, 3-4, 5-6). All face the centre.",
+    "L (1) faces the centre, so L's right runs 6, 5. P at 5 is: Second to the right"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#1": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Everyone faces the centre: left is +1 (clockwise), right is -1. One seat is empty: it is counted as a seat, never as a person.",
+    "M sits at a corner: M at 1. J is two places (seats) away: 3 or 5.",
+    "K is not next to M. For J 3, K is at 4 or 5: K 4 leaves three persons the long way round; K 5 gives two persons between them only if the empty seat is on the long side (6, 1, 2).",
+    "L is third to the right of K: 5 - 3 = 2. N is second to the left of L: 2 + 2 = 4. The empty seat is 6. Check: between J (3) and K (5) going via 6, 1, 2 there are two persons, M and L.",
+    "For J 5 the same steps send L to 6 and N to 2, and then the empty seat would have to be 4, which leaves three persons between J and K. Out.",
+    "The arrangement, seats 1 to 6: M, L, J, N, K, vacant (corners M, J, K). All seats face the centre.",
+    "The empty seat (6) faces the centre; its right is seat 5: K"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#2": [
+    "The arrangement, seats 1 to 6: M, L, J, N, K, vacant (corners M, J, K). All seats face the centre.",
+    "From M (1) going right: 6 is empty, 5 K, 4 N, then J at 3. Two persons: Two"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#3": [
+    "The arrangement, seats 1 to 6: M, L, J, N, K, vacant (corners M, J, K). All seats face the centre.",
+    "I: second to K's left is 5 + 2 = 7, seat 1, M, true. II: J's immediate right is 2, L, so false. III: from K (5) going left: 6 empty, 1 M, then L; one person, true: Only I and III"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#4": [
+    "The arrangement, seats 1 to 6: M, L, J, N, K, vacant (corners M, J, K). All seats face the centre.",
+    "L (2) faces the centre; its immediate right is seat 1: M"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#5": [
+    "The arrangement, seats 1 to 6: M, L, J, N, K, vacant (corners M, J, K). All seats face the centre.",
+    "N (4) faces the centre; its immediate right is seat 3, J: Immediate right"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#6": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Corners face outside: their left is -1 (anticlockwise) and their right +1. Middles face the centre: left +1, right -1. One seat is empty.",
+    "B sits at a corner: B at 1. E is next to B: 2 or 6. Five persons and one empty seat: \"three persons between E and D\" needs three persons on one side.",
+    "E 6: D 2 and D 4 leave no room for the empty seat without breaking the three-persons count or putting it next to D. D 5 works: the long way (1, 2, 3, 4) has four seats, one of them empty.",
+    "D is not next to the empty seat, so it is at 2 or 3. One person between D and C: C at 3 (with A at 4). C is not next to B. The empty seat is 2.",
+    "A is C's immediate right; C faces outside, so C's right is +1: A at 4. E at 2 fails in the same way, every time. Out.",
+    "The arrangement, seats 1 to 6: B, vacant, C, A, D, E. Corner seats 1, 3, 5 (B, C, D) face outside; middle seats 2, 4, 6 face the centre (seat 2 is empty).",
+    "A (4) and B (1) have two seats between them either way. E (6) and C (3) also have two seats between them either way: C"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#7": [
+    "The arrangement, seats 1 to 6: B, vacant, C, A, D, E. Corner seats 1, 3, 5 (B, C, D) face outside; middle seats 2, 4, 6 face the centre (seat 2 is empty).",
+    "D (5) faces outside, so D's left runs 4, 3, 2, 1: A, C, the empty seat, B, then E. Three persons: Three"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#8": [
+    "The arrangement, seats 1 to 6: B, vacant, C, A, D, E. Corner seats 1, 3, 5 (B, C, D) face outside; middle seats 2, 4, 6 face the centre (seat 2 is empty).",
+    "The empty seat (2) is a middle seat, facing the centre; its right is seat 1, B: Immediate right"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#9": [
+    "The arrangement, seats 1 to 6: B, vacant, C, A, D, E. Corner seats 1, 3, 5 (B, C, D) face outside; middle seats 2, 4, 6 face the centre (seat 2 is empty).",
+    "E (6) to C (3) is three seats on; A (4) to B (1) is three seats on. Three seats on from D (5) is seat 2: Vacant seat"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#10": [
+    "The arrangement, seats 1 to 6: B, vacant, C, A, D, E. Corner seats 1, 3, 5 (B, C, D) face outside; middle seats 2, 4, 6 face the centre (seat 2 is empty).",
+    "B faces outside: second to the right is seat 3, C. C sits opposite E (6): The one who sits opposite to E"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#16": [
+    "Seats 1 to 9 clockwise from the top corner; 1, 4 and 7 are corners; the sides are 2-3, 5-6 and 8-9. Everyone faces the centre: left is +1 (clockwise), right is -1. One seat is empty.",
+    "F sits at a corner: F at 1. J is two seats away: 3 or 8. G is fourth to the right of J (J - 4). L is G's right neighbour (G on L's left), E is L's right: E, L, G in a row going clockwise.",
+    "J 3: G 8, L 7, E 6, and then no seat for I, K and H works. Out.",
+    "J 8: G 4, L 3, E 2. Three persons between E and I: I at 7, with the empty seat among 3 to 6 (I at 6 would put K on J). K is second to the left of I: 9. H is third to the right of K: 6. The empty seat is 5.",
+    "The arrangement, seats 1 to 9: F, E, L, G, vacant, H, I, J, K (corners F, G, I). All seats face the centre.",
+    "G is the only one of the five at a corner (seat 4): G"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#17": [
+    "The arrangement, seats 1 to 9: F, E, L, G, vacant, H, I, J, K (corners F, G, I). All seats face the centre.",
+    "(a) Second to L's left is 3 + 2 = 5, the empty seat, not F. (b) H (6) and E (2) are apart. (c) G's immediate left is 5, empty. (d) From E (2) going right: 1, 9, 8, so J is third to E's right: J sits third to the right of E"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#18": [
+    "The arrangement, seats 1 to 9: F, E, L, G, vacant, H, I, J, K (corners F, G, I). All seats face the centre.",
+    "The empty seat (5) faces the centre; its left is seat 6: H"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#19": [
+    "The arrangement, seats 1 to 9: F, E, L, G, vacant, H, I, J, K (corners F, G, I). All seats face the centre.",
+    "K (9) has J (8) and F (1) beside it. F is third to the right of G (4 - 3 = 1): The one who sits third to the right of G"
+   ],
+   "triangular-seating-arrangement-vacant-set-1-prelims-1#20": [
+    "The arrangement, seats 1 to 9: F, E, L, G, vacant, H, I, J, K (corners F, G, I). All seats face the centre.",
+    "Second to the right of G (4) is 4 - 2 = 2: E"
+   ],
+   "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#1": [
+    "Hexagon, one person at each corner: six seats clockwise, opposite = three seats on. All face the centre: left +1, right -1.",
+    "A opposite C: A 1, C 4. F is next to both D and C: F 3 with D 2, or F 5 with D 6.",
+    "B is E's immediate right (B = E - 1). F 3, D 2: E 6, B 5. F 5, D 6: E 3, B 2, but then B is A's immediate left. Out.",
+    "The arrangement, hexagon seats 1 to 6: A, D, F, C, B, E. All face the centre.",
+    "A (1) and F (3) have D between them: A and F"
+   ],
+   "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#2": [
+    "The arrangement, hexagon seats 1 to 6: A, D, F, C, B, E. All face the centre.",
+    "Between D (2) and E (6) the long way are 3, 4, 5; the middle one is seat 4: C"
+   ],
+   "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#3": [
+    "The arrangement, hexagon seats 1 to 6: A, D, F, C, B, E. All face the centre.",
+    "A (1) has D (2) and E (6) beside it: E"
+   ],
+   "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#4": [
+    "The arrangement, hexagon seats 1 to 6: A, D, F, C, B, E. All face the centre.",
+    "Opposite E (6) is 6 + 3 = 9, seat 3: F"
+   ],
+   "hexagonal-seating-arrangement-single-variable-set-1-prelims-1#5": [
+    "The arrangement, hexagon seats 1 to 6: A, D, F, C, B, E. All face the centre.",
+    "From C (4): E is second to the left (4 + 2) or fourth to the right. Neither is offered: None of the above"
+   ],
+   "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#6": [
+    "Pentagon, one person at each of 5 corners, seats 1 to 5 clockwise. No one sits opposite anyone. All face the centre: left +1, right -1.",
+    "S is second to the left of T: T 3, S 5. P is next to both R and S, so P is between them: P 1, R 2 (P 4 would need R at 3). Q takes 4.",
+    "Infosys is next to T: R or Q; Q is not Infosys, so R. Q and T are not Wipro, so P is Wipro. Dell is not next to Infosys (R 2): Dell is Q (4). T has Apple.",
+    "The arrangement, pentagon seats 1 to 5: P Wipro, R Infosys, T Apple, Q Dell, S HCL. All face the centre.",
+    "Apple is with: T"
+   ],
+   "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#7": [
+    "The arrangement, pentagon seats 1 to 5: P Wipro, R Infosys, T Apple, Q Dell, S HCL. All face the centre.",
+    "P (1) faces the centre; its left is seat 2, R. Nobody sits between: None"
+   ],
+   "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#8": [
+    "The arrangement, pentagon seats 1 to 5: P Wipro, R Infosys, T Apple, Q Dell, S HCL. All face the centre.",
+    "From R (2): Q (4) is second to the left (2 + 2) and third to the right (2 - 3 = -1, seat 4). Both: Both B & D"
+   ],
+   "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#9": [
+    "The arrangement, pentagon seats 1 to 5: P Wipro, R Infosys, T Apple, Q Dell, S HCL. All face the centre.",
+    "In RS, PQ, ST and QR the second is three seats clockwise from the first. P to T is two seats: PT"
+   ],
+   "pentagonal-seating-arrangement-two-variable-set-1-prelims-1#10": [
+    "The arrangement, pentagon seats 1 to 5: P Wipro, R Infosys, T Apple, Q Dell, S HCL. All face the centre.",
+    "Q works in: Dell"
+   ],
+   "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#1": [
+    "Pentagon with 5 corners and 5 middles: seats 1 to 10 clockwise, odd = corner, even = middle, exactly as on the triangle. All face the centre: left +1, right -1.",
+    "S sits in a middle: S 2. Q is S's immediate left: Q 3. Two persons between S and P: P 5 or 9.",
+    "T is two from P and O is third to T's right (O = T - 3), with U on O's left (U = O + 1). P 5 leaves no seat for U. P 9: T 7, O 4, U 5.",
+    "Going left from Q to T there are three persons, so going left from S there are three before M: M 6. N is next to P and R = N - 2: N 10, R 8. L takes 1.",
+    "The arrangement, pentagon seats 1 to 10: L, S, Q, O, U, M, T, R, P, N (odd seats are corners). All face the centre.",
+    "Third to the right of S (2) is 2 - 3 = -1, seat 9, P. P is also N's immediate right (10 - 1 = 9): The one who sits immediate right of N"
+   ],
+   "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#2": [
+    "The arrangement, pentagon seats 1 to 10: L, S, Q, O, U, M, T, R, P, N (odd seats are corners). All face the centre.",
+    "The immediate left of Q (3) is seat 4, O, a middle seat. The rest are at corners: The one who sits immediate left of Q"
+   ],
+   "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#3": [
+    "The arrangement, pentagon seats 1 to 10: L, S, Q, O, U, M, T, R, P, N (odd seats are corners). All face the centre.",
+    "Third to the left of L (1) is seat 4, O. The other statements fail: O sits third to the left of L"
+   ],
+   "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#4": [
+    "The arrangement, pentagon seats 1 to 10: L, S, Q, O, U, M, T, R, P, N (odd seats are corners). All face the centre.",
+    "TR, QS, MT and OU are side by side. P (9) and L (1) have N between them: PL"
+   ],
+   "pentagonal-seating-arrangement-single-variable-set-2-prelims-1#5": [
+    "The arrangement, pentagon seats 1 to 10: L, S, Q, O, U, M, T, R, P, N (odd seats are corners). All face the centre.",
+    "P, T, Q and L sit at corners. The one on U's immediate left is M (6), in a middle: The one who sits immediate left of U"
+   ]
+  },
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#1": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Everyone faces the centre: left is +1 (clockwise), right is -1.",
+    "Q sits at a corner: Q at 1. Shimla is two seats from Q: seat 3 or 5. U is opposite Shimla: U 6 or U 2.",
+    "Agra is U's immediate right: U 6 gives Agra 5; U 2 gives Agra 1 (Q). Two cases.",
+    "S is second to the left of the Goa-lover, so S = Goa + 2, and Goa is not Q, U or R. The clue \"between R and the Munnar-lover\" means R does not like Munnar.",
+    "Case U 6: Goa can only be seat 2 (with S at 4). Amritsar is P's immediate right; every place for P then fails, either on a place already taken or on Q liking Munnar. Out.",
+    "Case U 2, Q Agra, Shimla 5: Goa 3 with S 5 fails on Amritsar and Munnar; Goa 4 with S 6 works with P 3 (Amritsar on U), T 4 Goa, R 5 Shimla.",
+    "Gap check: from U's left to Goa there is one person (P); from R's right to Munnar (P at 3) there is one person (T). Fine. S takes Manali.",
+    "The arrangement, seats 1 to 6 (all facing the centre): Q Agra, U Amritsar, P Munnar, T Goa, R Shimla, S Manali.",
+    "S likes: Manali"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#2": [
+    "The arrangement, seats 1 to 6 (all facing the centre): Q Agra, U Amritsar, P Munnar, T Goa, R Shimla, S Manali.",
+    "From P (3) going right: 2 U, 1 Q, 6 S, then R at 5. Three people: Three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#3": [
+    "The arrangement, seats 1 to 6 (all facing the centre): Q Agra, U Amritsar, P Munnar, T Goa, R Shimla, S Manali.",
+    "Shimla is at seat 5, which is R: R"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#4": [
+    "The arrangement, seats 1 to 6 (all facing the centre): Q Agra, U Amritsar, P Munnar, T Goa, R Shimla, S Manali.",
+    "Q is next to the Amritsar-lover (U), P to Goa (T), U to Munnar (P), R to Manali (S). S and the Shimla-lover (R) are not neighbours: S – Shimla"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-23-78343-triangular-arrangement#5": [
+    "The arrangement, seats 1 to 6 (all facing the centre): Q Agra, U Amritsar, P Munnar, T Goa, R Shimla, S Manali.",
+    "T likes Goa; Q (1) and T (4) have two between them; S (6) is 4 + 2, second to T's left; T sits in a middle. All four hold: All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#1": [
+    "Seats 1 to 6 clockwise from the top corner; 1, 3 and 5 are corners, 2, 4 and 6 are middles. Corners face outside: their left is -1 (anticlockwise) and their right +1. Middles face the centre: left +1, right -1.",
+    "Three water animals and three land animals with no two water ones together: they alternate round the table.",
+    "R sits at a corner: R at 1. Lion is two seats from R: 3 or 5 (a corner). N (Crab) is opposite Lion: 6 or 2.",
+    "Dolphin is on Lion's immediate left; Lion is a corner facing out, so Lion's left is -1: Lion 3 gives Dolphin 2; Lion 5 gives Dolphin 4. Either way the water animals are in the middles and the corners hold Lion, Monkey and Tiger.",
+    "R is not Tiger and not Lion, so R likes Monkey.",
+    "P is second to the right of O, so they share a seat type. Lion 5 fails: O and P at corners puts O at 3 with Tiger; in the middles P lands on Dolphin.",
+    "Lion 3: O 3 (Lion), P 5 (Tiger); Q and M take 2 and 4, and Dolphin (2) is not M: Q 2 Dolphin, M 4 Prawn.",
+    "The arrangement, seats 1 to 6: R Monkey, Q Dolphin, O Lion, M Prawn, P Tiger, N Crab. R, O and P sit at corners facing outside; Q, M and N in the middles facing the centre.",
+    "O faces outside, so second to O's right is 3 + 2 = seat 5, P, who likes Tiger: The one who likes Tiger"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#2": [
+    "The arrangement, seats 1 to 6: R Monkey, Q Dolphin, O Lion, M Prawn, P Tiger, N Crab. R, O and P sit at corners facing outside; Q, M and N in the middles facing the centre.",
+    "N, Q, M and P each like the animal named with them. R likes Monkey, not Lion: R - Lion"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#3": [
+    "The arrangement, seats 1 to 6: R Monkey, Q Dolphin, O Lion, M Prawn, P Tiger, N Crab. R, O and P sit at corners facing outside; Q, M and N in the middles facing the centre.",
+    "M (4) faces the centre; going left: 5 P, 6 N, 1 R, then Q (Dolphin) at 2. Three people: Three"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#4": [
+    "The arrangement, seats 1 to 6: R Monkey, Q Dolphin, O Lion, M Prawn, P Tiger, N Crab. R, O and P sit at corners facing outside; Q, M and N in the middles facing the centre.",
+    "O (3) faces outside, so O's left is -1: 2, 1, 6. N at 6 is: Third to the left"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-triangular-arrangement#5": [
+    "The arrangement, seats 1 to 6: R Monkey, Q Dolphin, O Lion, M Prawn, P Tiger, N Crab. R, O and P sit at corners facing outside; Q, M and N in the middles facing the centre.",
+    "Prawn (M, 4) is not second to N's left (that is seat 2); N is in a middle; Q (2) and P (5) are apart. Only: Q likes Dolphin."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#1": [
+    "Seats 1 to 6 clockwise from the top corner; corners (1, 3, 5) face the centre (left +1), middles (2, 4, 6) face outside (left -1, right +1).",
+    "J is not at a corner, and J is second to the right of K, so K is a middle too. Middles face out, so J = K + 2: K 6, J 2.",
+    "N is second to the left of O: both corners. The 29-year-old is opposite O, and M is on the immediate right of the 29-year-old.",
+    "O 1, N 3: the 29-year-old is L at 4, M at 5. O 3, N 5: the 29-year-old is K at 6, M at 1, L at 4. O 5, N 1: the 29-year-old is J at 2, M at 3, L at 4.",
+    "Ages: J + N = 66 with J younger, so (24, 42) or (29, 37). K and O differ by 8, so they are 16 and 24, or 29 and 37.",
+    "O 1 fails (L is 29, which blocks both pairs). O 5 fails on the gap clue. O 3: K 29, O 37, J 24, N 42; the gap clue puts 33 on L (one person between O and M, one between the 29 and the 33), so M is 16.",
+    "The arrangement, seats 1 to 6: M 16, J 24, O 37, L 33, N 42, K 29. M, O and N sit at corners facing the centre; J, L and K in the middles facing outside.",
+    "The 33-year-old is: L"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#2": [
+    "The arrangement, seats 1 to 6: M 16, J 24, O 37, L 33, N 42, K 29. M, O and N sit at corners facing the centre; J, L and K in the middles facing outside.",
+    "J (2) and N, the 42-year-old (5), have O and L between them one way and K and M the other: Two"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#3": [
+    "The arrangement, seats 1 to 6: M 16, J 24, O 37, L 33, N 42, K 29. M, O and N sit at corners facing the centre; J, L and K in the middles facing outside.",
+    "M is: 16 years"
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#4": [
+    "The arrangement, seats 1 to 6: M 16, J 24, O 37, L 33, N 42, K 29. M, O and N sit at corners facing the centre; J, L and K in the middles facing outside.",
+    "J is 24, true. K (6) faces outside, so K's right runs 1, 2, 3: O is third to K's right, true. M sits at a corner, so the third is false: Both the given statements 1 and 2 are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-triangular-arrangement#5": [
+    "The arrangement, seats 1 to 6: M 16, J 24, O 37, L 33, N 42, K 29. M, O and N sit at corners facing the centre; J, L and K in the middles facing outside.",
+    "In M – 24, K – 24, L – 42 and N – 16 the age belongs to someone else. O is 37 himself: O – 37"
+   ]
+  }
+ }
+}
