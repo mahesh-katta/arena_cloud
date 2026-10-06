@@ -1,0 +1,586 @@
+{
+ "module": "lcm-hcf",
+ "intro": [
+  "LCM answers \"when will they meet again?\" and \"what is the smallest number that all of these go into?\". HCF answers \"what is the biggest equal piece?\" and \"what divides all of these?\". Most of the topic is deciding which one a question wants.",
+  "There are eight short lessons. Go in order the first time.",
+  "**What the papers ask.** None of the 35 papers checked (23 IBPS Clerk Prelims 2016 to 2025, 12 sister papers 2025-26) set an LCM or HCF question. LCM appears in those papers only as a working step inside Time & Work and Pipes. So this topic is insurance for Clerk Prelims; give it less time than the Confirmed topics.",
+  "The practice questions are constructed for this course (CON-LCM, every answer checked by script), except the last lesson, which uses Sreedhar model-test questions."
+ ],
+ "needs": [
+  "lcm"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the recipes on one page.",
+  "LCM is also the engine of the unit method in Time & Work and Pipes: the tank or the job is the LCM of the times."
+ ],
+ "lessons": [
+  {
+   "id": "finding",
+   "code": "LH1",
+   "title": "Finding the LCM and the HCF",
+   "plain": "The starting point: what the two words mean and the quickest way to work them out.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "**LCM** (least common multiple): the smallest number that every given number goes into. **HCF** (highest common factor): the largest number that goes into every given number.",
+    "Break each number into primes:",
+    "| Number | Primes |",
+    "| 12 | 2 x 2 x 3 |",
+    "| 18 | 2 x 3 x 3 |",
+    "| 30 | 2 x 3 x 5 |",
+    "**LCM: take every prime, as many times as it appears in any one number.** 2 x 2 x 3 x 3 x 5 = 180.",
+    "**HCF: take only primes common to all, as few times as they appear in every number.** 2 x 3 = 6.",
+    "For two awkward numbers (391 and 667), divide the larger by the smaller and keep dividing by the remainder: 667 = 391 + 276; 391 = 276 + 115; 276 = 2 x 115 + 46; 115 = 2 x 46 + 23; 46 = 2 x 23. The last divisor, 23, is the HCF."
+   ],
+   "example": {
+    "q": "Find the LCM and HCF of 16, 24 and 40.",
+    "steps": [
+     "16 = 2⁴, 24 = 2³ x 3, 40 = 2³ x 5.",
+     "LCM = 2⁴ x 3 x 5 = 240.",
+     "HCF = 2³ = 8."
+    ],
+    "answer": "LCM 240, HCF 8."
+   },
+   "check": {
+    "q": "What is the HCF of 36, 54 and 90?",
+    "options": {
+     "a": "9",
+     "b": "18",
+     "c": "6",
+     "d": "36"
+    },
+    "answer": "B",
+    "why": "36 = 2 x 2 x 3 x 3, 54 = 2 x 3 x 3 x 3, 90 = 2 x 3 x 3 x 5: common 2 x 3 x 3 = 18. (9 forgets the shared 2.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-21-lcm-hcf-a-graded#1",
+     "clerk-21-lcm-hcf-a-graded#2",
+     "clerk-21-lcm-hcf-a-graded#3",
+     "clerk-21-lcm-hcf-a-graded#4"
+    ],
+    "tags": [
+     "LCM of three numbers.",
+     "HCF of three numbers.",
+     "LCM with higher powers.",
+     "HCF of two awkward numbers."
+    ]
+   }
+  },
+  {
+   "id": "together",
+   "code": "LH4",
+   "title": "Things that happen together",
+   "plain": "New: bells, lights, buses and runners. When will they coincide again? That is always an LCM.",
+   "needs": [
+    "lcm",
+    "time-words"
+   ],
+   "teach": [
+    "If one bell rings every 6 minutes and another every 8, they ring together again after a time that both 6 and 8 go into: the **LCM**, 24 minutes.",
+    "Add that LCM to the starting clock time for \"when\". Divide the period by the LCM for \"how many times\" (and read whether the starting moment counts).",
+    "Mixed units: put everything in seconds (or minutes) first.",
+    "The word to look for: **together, again, at the same time, meet at the start**."
+   ],
+   "example": {
+    "q": "Three lights flash every 20, 30 and 45 seconds. They flash together at 10:00:00. When do they next flash together?",
+    "steps": [
+     "LCM of 20, 30, 45 = 180 seconds = 3 minutes.",
+     "10:03:00."
+    ],
+    "answer": "10:03:00."
+   },
+   "check": {
+    "q": "Two bells ring every 10 and 15 minutes. They ring together at 8:00 a.m. When do they next ring together?",
+    "options": {
+     "a": "8:25 a.m.",
+     "b": "8:30 a.m.",
+     "c": "8:15 a.m.",
+     "d": "9:00 a.m."
+    },
+    "answer": "B",
+    "why": "LCM of 10 and 15 is 30: 8:30 a.m. (8:25 adds the two gaps.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-21-lcm-hcf-a-graded#13",
+     "clerk-21-lcm-hcf-a-graded#14",
+     "clerk-21-lcm-hcf-a-graded#15",
+     "clerk-21-lcm-hcf-a-graded#16",
+     "clerk-21-lcm-hcf-a-graded#17"
+    ],
+    "tags": [
+     "Bells and a clock time.",
+     "Seconds, then a clock time.",
+     "How many times in a period.",
+     "Runners on a track.",
+     "Buses from a depot."
+    ]
+   }
+  },
+  {
+   "id": "biggest-piece",
+   "code": "LH5",
+   "title": "The biggest equal piece",
+   "plain": "New: cut, fill or group things into equal parts as large as possible. That is always an HCF.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "\"The largest tile that covers the floor exactly\", \"the longest rod that measures each length\", \"the largest measure that fills each tank\": the piece must go into every length, and be as big as possible: the **HCF**.",
+    "Then \"how many pieces\" or \"how many tiles\" is the total divided by that piece: for a floor, (length / side) x (width / side).",
+    "Work in one unit: 6.24 m and 4.32 m become 624 cm and 432 cm.",
+    "Do not mix it up with the last lesson: **together again = LCM; biggest equal piece = HCF.**"
+   ],
+   "example": {
+    "q": "Ribbons of 84 cm, 108 cm and 132 cm are cut into equal pieces as long as possible. How long is each piece and how many pieces are there?",
+    "steps": [
+     "HCF of 84, 108, 132 = 12 cm.",
+     "Pieces: 7 + 9 + 11 = 27."
+    ],
+    "answer": "12 cm; 27 pieces."
+   },
+   "check": {
+    "q": "What is the side of the largest square tile that exactly covers a floor 3.6 m by 2.4 m?",
+    "options": {
+     "a": "60 cm",
+     "b": "120 cm",
+     "c": "40 cm",
+     "d": "30 cm"
+    },
+    "answer": "B",
+    "why": "HCF of 360 and 240 is 120 cm. (60 is a common factor, but not the highest.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-21-lcm-hcf-a-graded#18",
+     "clerk-21-lcm-hcf-a-graded#19",
+     "clerk-21-lcm-hcf-a-graded#20",
+     "clerk-21-lcm-hcf-a-graded#21",
+     "clerk-21-lcm-hcf-a-graded#22"
+    ],
+    "tags": [
+     "The largest tile.",
+     "How many tiles.",
+     "The largest measure.",
+     "Fewest rows.",
+     "How many pieces."
+    ]
+   }
+  },
+  {
+   "id": "product-rule",
+   "code": "LH2",
+   "title": "HCF x LCM = the product",
+   "plain": "New: for two numbers, the HCF and LCM multiply to give the two numbers multiplied.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "For **two** numbers: **HCF x LCM = first number x second number.** (It does not hold for three numbers.)",
+    "So with any three of the four, the fourth is one division: HCF 12, LCM 360, one number 72: the other is 12 x 360 / 72 = 60.",
+    "Both numbers are multiples of the HCF: write them as HCF x a and HCF x b, where a and b share no factor. Then LCM = HCF x a x b.",
+    "That last line solves the harder form: HCF 4 and LCM 120 give a x b = 30, and a, b share no factor: (5, 6), (3, 10), (2, 15), (1, 30). A clue such as \"they differ by 4\" picks one pair."
+   ],
+   "example": {
+    "q": "The HCF of two numbers is 9 and their LCM is 270. One number is 54. Find the other.",
+    "steps": [
+     "Other = 9 x 270 / 54.",
+     "= 2,430 / 54 = 45."
+    ],
+    "answer": "45."
+   },
+   "check": {
+    "q": "Two numbers multiply to 1,800 and their HCF is 15. What is their LCM?",
+    "options": {
+     "a": "90",
+     "b": "120",
+     "c": "150",
+     "d": "180"
+    },
+    "answer": "B",
+    "why": "LCM = 1,800 / 15 = 120. (180 divides by 10.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-21-lcm-hcf-a-graded#5",
+     "clerk-21-lcm-hcf-a-graded#6",
+     "clerk-21-lcm-hcf-a-graded#7",
+     "clerk-21-lcm-hcf-a-graded#8"
+    ],
+    "tags": [
+     "Find the other number.",
+     "Find the LCM from the product.",
+     "The same, another pair.",
+     "A difference picks the pair."
+    ]
+   }
+  },
+  {
+   "id": "ratio",
+   "code": "LH3",
+   "title": "Ratio with HCF and LCM",
+   "plain": "New: the two numbers are given as a ratio.",
+   "needs": [
+    "ratio",
+    "lcm"
+   ],
+   "teach": [
+    "If two numbers are in the ratio 3 : 5 (no common factor), then **one part is the HCF**: the numbers are 3h and 5h.",
+    "And **LCM = 3 x 5 x h**. So ratio 3 : 5 with HCF 8 gives 24 and 40, LCM 120.",
+    "Backwards: ratio 4 : 7 and LCM 336: 28 parts = 336, so h = 12, numbers 48 and 84.",
+    "With the product: 5 : 6 and product 1,080 means 30 x h x h = 1,080, so h x h = 36 and h = 6."
+   ],
+   "example": {
+    "q": "Two numbers are in the ratio 2 : 7 and their LCM is 126. Find the numbers.",
+    "steps": [
+     "LCM = 2 x 7 x h = 14h = 126, so h = 9.",
+     "Numbers 18 and 63."
+    ],
+    "answer": "18 and 63."
+   },
+   "check": {
+    "q": "Two numbers are in the ratio 3 : 4 and their HCF is 6. What is their LCM?",
+    "options": {
+     "a": "24",
+     "b": "72",
+     "c": "42",
+     "d": "144"
+    },
+    "answer": "B",
+    "why": "Numbers 18 and 24; LCM = 3 x 4 x 6 = 72. (24 is the larger number.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-21-lcm-hcf-a-graded#9",
+     "clerk-21-lcm-hcf-a-graded#10",
+     "clerk-21-lcm-hcf-a-graded#11",
+     "clerk-21-lcm-hcf-a-graded#12",
+     "clerk-07-ratio-and-proportion-a-graded#5"
+    ],
+    "tags": [
+     "Ratio and HCF give the LCM.",
+     "Ratio and LCM give the numbers.",
+     "Ratio and LCM give the HCF.",
+     "Ratio and product.",
+     "The same idea from the Ratio topic."
+    ]
+   }
+  },
+  {
+   "id": "remainders",
+   "code": "LH6",
+   "title": "Remainders",
+   "plain": "New: division with something left over. Each wording has a fixed recipe.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "| The question asks | Recipe |",
+    "| largest number dividing a, b, c leaving the **same** remainder | HCF of the differences (b - a, c - b) |",
+    "| largest number dividing a and b leaving remainders r and s | HCF of (a - r) and (b - s) |",
+    "| smallest number which divided by p, q, r leaves remainder k each time | LCM + k |",
+    "| smallest number leaving remainders that are each the **same amount short** of the divisor (6 leaves 2, 9 leaves 5, 15 leaves 11: each 4 short) | LCM - that amount |",
+    "| greatest or smallest number of n digits divisible by p, q, r | the nearest multiple of the LCM |",
+    "Check any answer by actually dividing: it takes seconds and catches a wrong recipe."
+   ],
+   "example": {
+    "q": "Find the smallest number which, divided by 8, 12 and 18, leaves a remainder of 5 each time.",
+    "steps": [
+     "LCM of 8, 12, 18 = 72.",
+     "72 + 5 = 77. Check: 77 = 9 x 8 + 5 = 6 x 12 + 5 = 4 x 18 + 5."
+    ],
+    "answer": "77."
+   },
+   "check": {
+    "q": "What is the largest number that divides 43, 91 and 183 leaving the same remainder?",
+    "options": {
+     "a": "4",
+     "b": "8",
+     "c": "12",
+     "d": "48"
+    },
+    "answer": "A",
+    "why": "Differences 48, 92 and 140; their HCF is 4. (48 is only one difference.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-21-lcm-hcf-a-graded#23",
+     "clerk-21-lcm-hcf-a-graded#24",
+     "clerk-21-lcm-hcf-a-graded#25",
+     "clerk-21-lcm-hcf-a-graded#26",
+     "clerk-21-lcm-hcf-a-graded#27"
+    ],
+    "tags": [
+     "Same remainder.",
+     "Given remainders.",
+     "Same remainder left by the smallest number.",
+     "Each remainder is 4 short of its divisor.",
+     "The greatest four-digit number."
+    ]
+   }
+  },
+  {
+   "id": "fractions-digits",
+   "code": "LH7",
+   "title": "Fractions, and the smallest n-digit number",
+   "plain": "New: two short forms that finish the topic.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "**Fractions.** LCM of fractions = LCM of the numerators / HCF of the denominators. HCF of fractions = HCF of the numerators / LCM of the denominators. Write each fraction in lowest terms first.",
+    "**Smallest n-digit number divisible by several numbers:** find the LCM, divide the smallest n-digit number by it, and go up to the next multiple. 10,000 / 180 leaves 100, so the next multiple is 10,000 + 80 = 10,080."
+   ],
+   "example": {
+    "q": "Find the LCM of 1/2, 3/4 and 5/6.",
+    "steps": [
+     "LCM of numerators 1, 3, 5 = 15.",
+     "HCF of denominators 2, 4, 6 = 2.",
+     "LCM = 15/2."
+    ],
+    "answer": "15/2."
+   },
+   "check": {
+    "q": "What is the HCF of 2/3, 8/9 and 10/27?",
+    "options": {
+     "a": "2/27",
+     "b": "2/3",
+     "c": "8/27",
+     "d": "1/27"
+    },
+    "answer": "A",
+    "why": "HCF of 2, 8, 10 = 2; LCM of 3, 9, 27 = 27: 2/27. (2/3 takes the HCF of the denominators instead.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-21-lcm-hcf-a-graded#28",
+     "clerk-21-lcm-hcf-a-graded#29",
+     "clerk-21-lcm-hcf-a-graded#30"
+    ],
+    "tags": [
+     "LCM of fractions.",
+     "HCF of fractions.",
+     "The smallest five-digit number."
+    ]
+   }
+  },
+  {
+   "id": "exam-wording",
+   "code": "LH2",
+   "title": "Two numbers from their difference, HCF and LCM",
+   "plain": "New: the form found in recent model tests. Nothing new in the idea; only the last step changes.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "The numbers are HCF x a and HCF x b, with a x b = LCM / HCF and a, b sharing no factor. The difference picks the pair.",
+    "Then the question asks something about the two numbers: their sum, the larger one, or the sum of their squares.",
+    "Difference 15, HCF 3, LCM 198: a x b = 66 and 3(a - b) = 15, so a - b = 5: (11, 6). Numbers 33 and 18.",
+    "These are from Sreedhar model tests for IBPS Clerk 2026 (built by a coaching publisher, not memory-based papers). No paper in the sample of 35 set an LCM or HCF question."
+   ],
+   "example": {
+    "q": "Two numbers differ by 16. Their HCF is 8 and their LCM is 120. Find the sum of their squares.",
+    "steps": [
+     "a x b = 120 / 8 = 15 and 8(a - b) = 16, so a - b = 2: (5, 3).",
+     "Numbers 40 and 24.",
+     "1600 + 576 = 2176."
+    ],
+    "answer": "2,176."
+   },
+   "check": {
+    "q": "Two numbers have HCF 4 and LCM 96, and they differ by 20. What is the larger?",
+    "options": {
+     "a": "32",
+     "b": "24",
+     "c": "48",
+     "d": "96"
+    },
+    "answer": "A",
+    "why": "a x b = 24 with 4(a - b) = 20, so a - b = 5: (8, 3). Numbers 32 and 12. (48 is half the LCM.)"
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-66-78386-number-system#1",
+     "ibps-csa-xvi-prelims-2026-model-test-55-78375-number-system#2",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-number-system#2",
+     "ibps-csa-xvi-prelims-2026-model-test-24-78344-number-system#1",
+     "ibps-csa-xvi-prelims-2026-model-test-2-78322-number-system#1"
+    ],
+    "tags": [
+     "Sum of squares.",
+     "Sum of squares, HCF 2.",
+     "Sum of squares, HCF 4.",
+     "A ratio instead of a difference.",
+     "The same question in another model test."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-21-lcm-hcf-a-graded#1": [
+    "12 = 2² x 3, 18 = 2 x 3², 30 = 2 x 3 x 5.",
+    "LCM = 2² x 3² x 5 = 180."
+   ],
+   "clerk-21-lcm-hcf-a-graded#2": [
+    "84 = 2² x 3 x 7, 126 = 2 x 3² x 7, 210 = 2 x 3 x 5 x 7.",
+    "HCF = 2 x 3 x 7 = 42."
+   ],
+   "clerk-21-lcm-hcf-a-graded#3": [
+    "24 = 2³ x 3, 36 = 2² x 3², 40 = 2³ x 5.",
+    "LCM = 2³ x 3² x 5 = 360."
+   ],
+   "clerk-21-lcm-hcf-a-graded#4": [
+    "667 - 391 = 276; 391 - 276 = 115; 276 = 2 x 115 + 46; 115 = 2 x 46 + 23; 46 = 2 x 23.",
+    "HCF = 23."
+   ],
+   "clerk-21-lcm-hcf-a-graded#13": [
+    "LCM of 6, 8, 12 = 24 minutes.",
+    "9:00 + 24 minutes = 9:24 a.m."
+   ],
+   "clerk-21-lcm-hcf-a-graded#14": [
+    "LCM of 48, 72, 108 = 432 seconds = 7 minutes 12 seconds.",
+    "8:20:00 + 7:12 = 8:27:12 a.m."
+   ],
+   "clerk-21-lcm-hcf-a-graded#15": [
+    "LCM of 4, 6, 9 = 36 minutes.",
+    "3 hours = 180 minutes = 5 times 36.",
+    "5 more times after noon."
+   ],
+   "clerk-21-lcm-hcf-a-graded#16": [
+    "LCM of 12, 18, 30 = 180 minutes.",
+    "180 minutes = 3 hours."
+   ],
+   "clerk-21-lcm-hcf-a-graded#17": [
+    "LCM of 15, 20, 25 = 300 minutes = 5 hours.",
+    "6:00 a.m. + 5 hours = 11:00 a.m."
+   ],
+   "clerk-21-lcm-hcf-a-graded#18": [
+    "In cm: 624 and 432.",
+    "HCF = 48 cm."
+   ],
+   "clerk-21-lcm-hcf-a-graded#19": [
+    "Tile side 48 cm: 624 / 48 = 13 and 432 / 48 = 9.",
+    "13 x 9 = 117 tiles."
+   ],
+   "clerk-21-lcm-hcf-a-graded#20": [
+    "HCF of 403, 434, 465: their differences are 31 and 31, and 403 = 13 x 31.",
+    "31 litres."
+   ],
+   "clerk-21-lcm-hcf-a-graded#21": [
+    "HCF of 120, 168, 216 = 24 per row.",
+    "Rows: 5 + 7 + 9 = 21."
+   ],
+   "clerk-21-lcm-hcf-a-graded#22": [
+    "HCF of 78, 104, 130 = 26 cm.",
+    "Pieces: 3 + 4 + 5 = 12."
+   ],
+   "clerk-21-lcm-hcf-a-graded#5": [
+    "Other = 12 x 360 / 72.",
+    "= 4,320 / 72 = 60."
+   ],
+   "clerk-21-lcm-hcf-a-graded#6": [
+    "LCM = product / HCF.",
+    "2,160 / 12 = 180."
+   ],
+   "clerk-21-lcm-hcf-a-graded#7": [
+    "Other = 16 x 480 / 96.",
+    "= 7,680 / 96 = 80."
+   ],
+   "clerk-21-lcm-hcf-a-graded#8": [
+    "Numbers 4a and 4b with a x b = 120 / 4 = 30 and no common factor.",
+    "They differ by 4, so a - b = 1: a = 6, b = 5, numbers 24 and 20.",
+    "Sum = 44."
+   ],
+   "clerk-21-lcm-hcf-a-graded#9": [
+    "Numbers 3 x 8 = 24 and 5 x 8 = 40.",
+    "LCM = 3 x 5 x 8 = 120."
+   ],
+   "clerk-21-lcm-hcf-a-graded#10": [
+    "LCM = 4 x 7 x h = 28h = 336, so h = 12.",
+    "Numbers 48 and 84, sum 132."
+   ],
+   "clerk-21-lcm-hcf-a-graded#11": [
+    "LCM = 2 x 3 x h = 6h = 72.",
+    "HCF = h = 12."
+   ],
+   "clerk-21-lcm-hcf-a-graded#12": [
+    "5h x 6h = 30h² = 1,080, so h² = 36.",
+    "HCF = 6."
+   ],
+   "clerk-07-ratio-and-proportion-a-graded#5": [
+    "3 and 5 share no factor, so LCM = 15h = 120 and h = 8.",
+    "Numbers 24 and 40, sum 64.",
+    "64 is not among the options, so the answer is None of these."
+   ],
+   "clerk-21-lcm-hcf-a-graded#23": [
+    "Differences: 4665 - 1305 = 3360 and 6905 - 4665 = 2240.",
+    "HCF of 3360 and 2240 = 1120."
+   ],
+   "clerk-21-lcm-hcf-a-graded#24": [
+    "70 - 5 = 65 and 125 - 8 = 117.",
+    "HCF of 65 and 117 = 13."
+   ],
+   "clerk-21-lcm-hcf-a-graded#25": [
+    "LCM of 12, 15, 20 = 60.",
+    "60 + 4 = 64."
+   ],
+   "clerk-21-lcm-hcf-a-graded#26": [
+    "6 - 2 = 9 - 5 = 15 - 11 = 4.",
+    "LCM of 6, 9, 15 = 90; 90 - 4 = 86."
+   ],
+   "clerk-21-lcm-hcf-a-graded#27": [
+    "LCM of 15, 25, 40, 75 = 600.",
+    "9999 / 600 leaves 399, so 9999 - 399 = 9600."
+   ],
+   "clerk-21-lcm-hcf-a-graded#28": [
+    "LCM of 2, 4, 5 = 20; HCF of 3, 9, 6 = 3.",
+    "20/3."
+   ],
+   "clerk-21-lcm-hcf-a-graded#29": [
+    "HCF of 9, 12, 18 = 3; LCM of 10, 25, 35 = 350.",
+    "3/350."
+   ],
+   "clerk-21-lcm-hcf-a-graded#30": [
+    "LCM of 12, 15, 18 = 180.",
+    "10,000 / 180 leaves 100, so add 80: 10080."
+   ]
+  },
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-66-78386-number-system#1": [
+    "a x b = 198 / 3 = 66 and 3(a - b) = 15, so a - b = 5: (11, 6).",
+    "Numbers 33 and 18.",
+    "33² + 18² = 1089 + 324 = 1413."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-55-78375-number-system#2": [
+    "a x b = 104 / 2 = 52 and 2(a - b) = 18, so a - b = 9: (13, 4).",
+    "Numbers 26 and 8.",
+    "676 + 64 = 740."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-number-system#2": [
+    "a x b = 96 / 4 = 24 and 4(a - b) = 20, so a - b = 5: (8, 3).",
+    "Numbers 32 and 12.",
+    "1024 + 144 = 1168."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-24-78344-number-system#1": [
+    "Ratio 3 : 8 with HCF 12: numbers 36 and 96.",
+    "Check: LCM = 3 x 8 x 12 = 288.",
+    "The largest is 96."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-2-78322-number-system#1": [
+    "Numbers 36 and 96 (ratio 3 : 8, HCF 12, LCM 288).",
+    "The largest is 96."
+   ]
+  }
+ }
+}
