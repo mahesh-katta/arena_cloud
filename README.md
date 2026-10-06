@@ -10,36 +10,38 @@ python3 -B tools/playbook_import.py     # rebuilds data/playbook/playbook.json; 
 
 Keep this repository private: the Guidely and Sreedhar banks are third-party material.
 
-## Quant goal: 23 topics
+## Quant: 23 topics
 
-| # | Topic | Status | Practice bank |
+| # | Topic | Stage A (paper evidence) | Lessons |
 |---|---|---|---|
-| 1 | Ages | built (5 workings missing) | clerk |
-| 2 | Simple Interest | to split out | clerk |
-| 3 | Compound Interest | to split out | clerk |
-| — | Simple & Compound Interest | built; kept for mixed SI/CI lessons | clerk |
-| 4 | Percentages | built | clerk |
-| 5 | Partnership | built | clerk |
-| 6 | Time & Work | built | clerk |
-| 7 | Time, Speed & Distance | built | clerk |
-| 8 | Trains | lessons only (5 workings missing, no Stage A) | clerk |
-| 9 | Profit & Loss | built | clerk |
-| 10 | Boats & Streams | built | clerk |
-| 11 | Mixtures & Alligations | built | clerk |
-| 12 | Ratio & Proportion | new | clerk, sreedhar, guidely |
-| 13 | Averages | new | clerk, sreedhar |
-| 14 | Pipes & Cisterns | new | clerk, sreedhar, guidely |
-| 15 | Areas & Volumes | new | clerk (mensuration), sreedhar, guidely |
-| 16 | LCM & HCF | new; ~9 bank questions, rest written and script-checked | sreedhar, guidely, own |
-| 17 | Approximations | new | clerk, sreedhar |
-| 18 | Permutations & Combinations | new | guidely (129, with solutions) |
-| 19 | Probability | new | guidely (180, with solutions) |
-| 20 | Data Interpretation | new | clerk, sreedhar, guidely |
-| 21 | Simplification | built | clerk |
-| 22 | Number Series | new | clerk |
-| 23 | Quadratic Equations | new | clerk |
+| 1 | Ages | yes | 9 |
+| 2 | Simple Interest | in Simple & Compound Interest | 7 |
+| 3 | Compound Interest | in Simple & Compound Interest | 8 |
+| - | Simple & Compound Interest (combined) | yes | 10 |
+| 4 | Percentages | yes | 10 |
+| 5 | Partnership | yes | 9 |
+| 6 | Time & Work | yes | 12 |
+| 7 | Time, Speed & Distance | yes | 8 |
+| 8 | Trains | in Speed, Time & Distance | 9 |
+| 9 | Profit & Loss | yes | 12 |
+| 10 | Boats & Streams | yes | 10 |
+| 11 | Mixtures & Alligations | yes | 11 |
+| 12 | Ratio & Proportion | yes | 10 |
+| 13 | Averages | yes | 9 |
+| 14 | Pipes & Cisterns | in Time & Work | 8 |
+| 15 | Areas & Volumes | yes | 10 |
+| 16 | LCM & HCF | yes (no paper question found) | 8 |
+| 17 | Approximations | in Simplification | 6 |
+| 18 | Permutations & Combinations | yes | 9 |
+| 19 | Probability | yes | 8 |
+| 20 | Data Interpretation | not started (skipped for now) | - |
+| 21 | Simplification | yes | 14 |
+| 22 | Number Series | yes | 8 |
+| 23 | Quadratic Equations | kept short | 4 |
 
-Reasoning: six puzzle topics built (see HANDOVER).
+Reasoning: seven puzzle topics; six have lessons, Circular and Square Seating has revision notes only.
+
+Checks: `python3 -B tools/check_guides.py` (every practice question exists, has a working, and the working ends on the keyed option).
 
 ## Working rules
 

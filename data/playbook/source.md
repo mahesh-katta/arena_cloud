@@ -110,31 +110,43 @@ Three files joined into one: the Quant Speed Mastery Modules, the Quant Pattern 
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>11 IBPS Clerk Prelims PYQs (9 paper labels) + 4 sister-exam questions (4 papers) + 239 bank questions</td>
+</tr>
+<tr>
 <td>14</td>
 <td>Averages</td>
-<td>Done</td>
-<td>6 Oct 2026</td>
-<td>15 IBPS Clerk Prelims PYQs (13 paper labels) + 9 sister-exam questions (6 papers) + 81 bank questions</td>
+<td>Skipped on request (5 Oct 2026)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>15</td>
 <td>Areas & Volumes</td>
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>20 IBPS Clerk Prelims PYQs (17 paper labels) + 11 sister-exam questions (10 papers) + 360 bank questions</td>
+</tr>
+<tr>
 <td>16</td>
 <td>LCM & HCF</td>
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>No PYQ found in 35 papers; 10 third-party bank questions + 30 constructed and script-checked</td>
+</tr>
+<tr>
 <td>17</td>
 <td>Permutations & Combinations</td>
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>2 IBPS Clerk Prelims PYQs (2 paper labels, 2017 and 2018), none in the 12 sister papers + 131 bank questions</td>
+</tr>
+<tr>
 <td>18</td>
 <td>Probability</td>
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>2 IBPS Clerk Prelims PYQs (2018, Dec 2021), none in the 12 sister papers + 182 bank questions</td>
+</tr>
+<tr>
 <td>19</td>
 <td>Number Series</td>
 <td>Done</td>
@@ -8479,361 +8491,6 @@ The 1,564 practice-question IDs are not listed here because the list would run t
 - **"Added to each" changes the ratio but not the difference; "multiplied" changes both.**
 ## 2. Archetypes
 Ten archetypes cover the bank and the papers. "Papers" counts paper labels, IBPS Clerk and sister papers together. Bank counts: clerk questions by hand, Sreedhar questions by hand, Guidely by the name of the set each question sits in.
-# Averages - Speed Mastery Module
-**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers as the other modules. PYQs found: 15 IBPS Clerk Prelims average questions from 13 paper labels (in your bank as PYQ-AVG-01 to 15) and 9 sister-exam questions from 6 papers (DI sets that only ask for an average, and average speed, are left to DI and Speed). Bank questions used: 81 (45 clerk, 36 Sreedhar; Guidely has no average sets, and its age-average questions belong to Ages). The floor of 8 target-exam shifts and 6-10 sister questions is met. All papers are memory-based reconstructions.
-## 1. Core Mental Model, Exact Mechanics & Conversion Grid
-**Central law.** An average is a total shared equally. **Total = average x count.** Almost every question is solved by turning averages into totals, doing the arithmetic on totals, and turning back at the end.
-### Base operations
-1. **Total from an average.** 8 numbers averaging 25 total 200.
-2. **Someone joins.** New person = old average + (number of people now x rise in average). Teacher joins 20 students averaging 45 and the average rises 1: teacher = 45 + 21 x 1 = 66.
-3. **Someone leaves.** The leaver = old total - new total. 13 people averaging 36 lose one and the rest average 35: 468 - 420 = 48.
-4. **Someone is replaced.** New - old = number of people x change in average. 8 people, average up 2.5 when a 60 kg person is replaced: new = 60 + 8 x 2.5 = 80.
-5. **Two groups (weighted average).** The overall average sits between the two, closer to the bigger group. The distances are in the opposite ratio of the group sizes: sections averaging 65 and 85, overall 70 → distances 5 and 15 → sizes 15 : 5 = 3 : 1.
-6. **Consecutive numbers.** The average is the middle number (or the mean of the two middle ones). 5 consecutive odd numbers averaging 27: 23, 25, 27, 29, 31.
-7. **Overlapping groups.** Add the group totals; the overlap is counted twice. Average of first six 49, last six 52, all eleven 50: sixth = 294 + 312 - 550 = 56.
-8. **Same change to every number.** Adding k to all adds k to the average; multiplying all by k multiplies the average by k.
-### Conversion grid
-<table header-row="true">
-<tr>
-<td>Situation</td>
-<td>Shortcut</td>
-</tr>
-<tr>
-<td>n people, one more joins, average rises by d</td>
-<td>new = old average + (n + 1) x d</td>
-</tr>
-<tr>
-<td>n people, one replaced, average rises by d</td>
-<td>new = old + n x d</td>
-</tr>
-<tr>
-<td>batsman's average rises by d after innings n</td>
-<td>score in innings n = new average + (n - 1) x d</td>
-</tr>
-<tr>
-<td>a number misread</td>
-<td>change in average = (correct - wrong) / count</td>
-</tr>
-<tr>
-<td>two-digit number reversed</td>
-<td>change in total = 9 x (difference of digits)</td>
-</tr>
-<tr>
-<td>k consecutive odd or even numbers</td>
-<td>largest = average + (k - 1); smallest = average - (k - 1)</td>
-</tr>
-</table>
-### Non-linear warnings
-- The average of two averages is not the overall average unless the groups are the same size.
-- "Average increases by 6 months" is 0.5 years; "average decreases by Rs 1" applies to every member, including the new ones.
-## 2. Archetypes
-Nine archetypes cover the bank and the papers. "Papers" counts paper labels, IBPS Clerk and sister papers together. Bank counts are by hand.
-# Areas & Volumes - Speed Mastery Module
-**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers. PYQs found: 20 IBPS Clerk Prelims questions from 17 paper labels (in your bank as PYQ-MEN-01 to 20) and 11 sister-exam questions from 10 papers. Bank questions used: 360 (50 clerk, 83 Sreedhar, 227 Guidely; the clerk ones sorted by hand, the others by a keyword script, 8 of them unplaced). The floor is met. Every one of the 31 paper questions is a flat (2D) figure; no paper in the sample asked a solid. All papers are memory-based reconstructions.
-## 1. Core Mental Model, Exact Mechanics & Conversion Grid
-**Central law.** Almost every paper question is **two plain figures joined by one length**: a rectangle's breadth is a square's side, a semicircle's radius is a rectangle's breadth. Find that one length from the first figure, carry it to the second, and finish. Use pi = 22/7, so radii are multiples of 7 more often than not.
-### Formulas that are asked
-<table header-row="true">
-<tr>
-<td>Figure</td>
-<td>Perimeter</td>
-<td>Area</td>
-</tr>
-<tr>
-<td>Rectangle l, b</td>
-<td>2(l + b)</td>
-<td>l x b</td>
-</tr>
-<tr>
-<td>Square a</td>
-<td>4a; diagonal a√2</td>
-<td>a x a</td>
-</tr>
-<tr>
-<td>Circle r</td>
-<td>2 x 22/7 x r</td>
-<td>22/7 x r x r</td>
-</tr>
-<tr>
-<td>Semicircle r</td>
-<td>22/7 x r + 2r = 36/7 x r</td>
-<td>11/7 x r x r</td>
-</tr>
-<tr>
-<td>Right triangle, base b, height h</td>
-<td>add the sides; hypotenuse by 3-4-5, 5-12-13, 7-24-25, 8-15-17</td>
-<td>b x h / 2</td>
-</tr>
-<tr>
-<td>Equilateral triangle a</td>
-<td>3a</td>
-<td>√3/4 x a x a</td>
-</tr>
-<tr>
-<td>Rhombus, diagonals p, q</td>
-<td>4 x √((p/2)² + (q/2)²)</td>
-<td>p x q / 2</td>
-</tr>
-<tr>
-<td>Trapezium, parallel sides a, b, height h</td>
-<td>add the sides</td>
-<td>(a + b) / 2 x h</td>
-</tr>
-</table>
-### Solids (bank only in this sample)
-<table header-row="true">
-<tr>
-<td>Solid</td>
-<td>Volume</td>
-<td>Surface</td>
-</tr>
-<tr>
-<td>Cuboid l, b, h</td>
-<td>l x b x h</td>
-<td>total 2(lb + bh + lh); four walls 2(l + b) x h</td>
-</tr>
-<tr>
-<td>Cube a</td>
-<td>a³</td>
-<td>6a²</td>
-</tr>
-<tr>
-<td>Cylinder r, h</td>
-<td>22/7 x r² x h</td>
-<td>curved 2 x 22/7 x r x h</td>
-</tr>
-<tr>
-<td>Cone r, h, slant l</td>
-<td>1/3 x 22/7 x r² x h</td>
-<td>curved 22/7 x r x l, with l² = r² + h²</td>
-</tr>
-<tr>
-<td>Sphere r; hemisphere</td>
-<td>4/3 x 22/7 x r³; half of that</td>
-<td>4 x 22/7 x r²; hemisphere curved 2 x 22/7 x r²</td>
-</tr>
-</table>
-### Exact algorithms
-1. **Rectangle from a ratio and the perimeter.** Half the perimeter = l + b; split it in the ratio. 92 cm, 14 : 9: 46 in 23 parts, so 2 a part: 28 and 18.
-2. **Rectangle from a ratio and the area.** Area = parts x parts x unit². 4 : 3 with area 108: 12 unit² = 108, unit = 3: 12 and 9.
-3. **Semicircle perimeter 36.** 36/7 x r = 36, so r = 7. Perimeter 72 gives r = 14.
-4. **Circumference minus diameter.** (44/7 - 2) x r = 30/7 x r. 90 gives r = 21.
-### Non-linear warnings
-- **Area scales with the square of the side.** Sides in 5 : 9 give areas 25 : 81. Each side up 50% makes the area 2.25 times (a 125% rise).
-- **Percent changes multiply.** Length +20%, breadth -10%: 1.2 x 0.9 = 1.08, an 8% rise, not 10%.
-- **Volume scales with the cube.** Melting three cubes of 3, 4, 5 gives one of side 6 (27 + 64 + 125 = 216).
-## 2. Archetypes
-Ten archetypes. "Papers" counts paper labels, IBPS Clerk and sister papers together.
-# LCM & HCF - Speed Mastery Module
-**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers. PYQs found: **none**. No paper in the sample set an LCM or HCF question; the words appear only inside Time & Work and Pipes solutions, as the unit-method step. Bank questions found: 10 (5 Sreedhar model-test questions, 4 Guidely number-system questions, 1 clerk ratio question), one of them flawed (Guidely consecutive-numbers set 1 Q6: HCF 18 cannot divide 128). Because the bank is so thin, 30 practice questions were constructed for this topic (CON-LCM-01 to 30) with every answer computed by script. The floor of 8 target-exam shifts is met in papers opened, but the topic itself was not found; every archetype is labelled Bank only or Unverified. Memory-based papers are reconstructions.
-## 1. Core Mental Model, Exact Mechanics & Conversion Grid
-**Central law.** LCM is the meeting point: the smallest number that all the given numbers go into. HCF is the biggest common piece: the largest number that goes into all of them. Decide which one the story wants before calculating.
-### Base operations
-1. **Prime breakdown.** LCM = every prime, at its highest power in any number. HCF = common primes, at their lowest power.
-2. **Division method for two awkward numbers.** Divide, then divide the divisor by the remainder, until the remainder is 0. The last divisor is the HCF.
-3. **Product rule (two numbers only).** HCF x LCM = product.
-4. **Ratio form.** Numbers in a : b (coprime) are ha and hb with h = HCF; LCM = h x a x b.
-5. **Fractions.** LCM = LCM(numerators) / HCF(denominators); HCF = HCF(numerators) / LCM(denominators).
-### Conversion grid
-<table header-row="true">
-<tr>
-<td>Story words</td>
-<td>Use</td>
-</tr>
-<tr>
-<td>together again, at the same time, meet at the start</td>
-<td>LCM</td>
-</tr>
-<tr>
-<td>largest tile, longest rod, biggest measure, fewest rows</td>
-<td>HCF</td>
-</tr>
-<tr>
-<td>largest number leaving the same remainder</td>
-<td>HCF of differences</td>
-</tr>
-<tr>
-<td>smallest number leaving remainder k</td>
-<td>LCM + k</td>
-</tr>
-<tr>
-<td>remainders each d short of the divisors</td>
-<td>LCM - d</td>
-</tr>
-<tr>
-<td>greatest / smallest n-digit number divisible by</td>
-<td>nearest multiple of the LCM</td>
-</tr>
-</table>
-### Non-linear warnings
-- HCF x LCM = product holds for two numbers only.
-- "How many times together in 3 hours" depends on whether the starting moment counts; read it.
-# Permutations & Combinations - Speed Mastery Module
-**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 2 IBPS Clerk Prelims questions from 2 papers (2017 model, Guidely: a committee with one person always included; 2018, Guidely: arrangements of MANAGEMENT); none in the 2019 to 2025 Clerk papers and none in the 12 sister papers. Bank questions used: 131 (129 Guidely in 13 sets, 2 Sreedhar); the clerk bank has none. One Guidely set (letters with repetition, 10 questions) has impossible keys (for example 1,562.5 ways) and is not used. The 8-shift floor is met in papers opened, but the topic is thinly asked. All papers are memory-based reconstructions.
-## 1. Core Mental Model, Exact Mechanics & Conversion Grid
-**Central law.** Count choices place by place and multiply. Then ask two questions: does order matter (arrange) or not (select)? Is there a rule (fixed place, together, at least, always in)?
-### Base operations
-1. **And multiplies, or adds.** 9 first digits and 5 second digits: 45 codes.
-2. **Arrange all n different things:** n!. With repeats: n! / (a! b! ...).
-3. **Arrange r of n:** nPr = n x (n - 1) x ... (r factors).
-4. **Select r of n:** nCr = nPr / r!; nCr = nC(n - r).
-5. **Together:** tie into a block, arrange units, multiply by arrangements inside.
-6. **At least one:** all - none.
-7. **Round a table:** (n - 1)!.
-### Conversion grid
-<table header-row="true">
-<tr>
-<td>Words in the question</td>
-<td>Rule</td>
-</tr>
-<tr>
-<td>words, numbers, codes, seating, ranks</td>
-<td>arrange (order matters)</td>
-</tr>
-<tr>
-<td>team, committee, group, handful</td>
-<td>select (order does not matter)</td>
-</tr>
-<tr>
-<td>always together</td>
-<td>block</td>
-</tr>
-<tr>
-<td>never all together</td>
-<td>all - together</td>
-</tr>
-<tr>
-<td>at least one</td>
-<td>all - none</td>
-</tr>
-<tr>
-<td>always included / excluded</td>
-<td>put in / take out of the pool</td>
-</tr>
-</table>
-### Non-linear warnings
-- 5! = 120, 6! = 720, 7! = 5,040, 8! = 40,320, 9! = 362,880, 10! = 3,628,800: the numbers grow fast, so a slip of one factor is never close.
-- Selecting counts AB and BA once; arranging counts them twice.
-# Probability - Speed Mastery Module
-**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 2 IBPS Clerk Prelims questions from 2 papers (2018, Guidely: two balls from a bag after finding a count; 12 Dec 2021 Set 2, Guidely: two balls of one colour); none in the 2022 to 2025 Clerk papers and none in the 12 sister papers. Bank questions used: 182 (180 Guidely in 17 sets, 2 Sreedhar); the clerk bank has none. All papers are memory-based reconstructions.
-## 1. Core Mental Model, Exact Mechanics & Conversion Grid
-**Central law.** Probability = favourable outcomes / all outcomes, when each outcome is equally likely. Count both with the rules of Permutations & Combinations.
-### Base operations
-1. **One item:** count the wanted ones, divide by all.
-2. **n coins:** 2ⁿ outcomes; exactly r heads: nCr / 2ⁿ. **Two dice:** 36 outcomes.
-3. **Several drawn at once:** selections wanted / nCr.
-4. **Or (no overlap):** add. **Or (with overlap):** A + B - both. **Not:** 1 - P.
-5. **One after another:** multiply; without replacement, reduce the counts after each draw.
-### Conversion grid
-<table header-row="true">
-<tr>
-<td>Words</td>
-<td>Rule</td>
-</tr>
-<tr>
-<td>at least one</td>
-<td>1 - none</td>
-</tr>
-<tr>
-<td>same colour</td>
-<td>add each colour's pairs</td>
-</tr>
-<tr>
-<td>different colours (one of each)</td>
-<td>multiply the counts</td>
-</tr>
-<tr>
-<td>either A or B</td>
-<td>A + B - both</td>
-</tr>
-<tr>
-<td>with replacement</td>
-<td>same chances each draw; multiply</td>
-</tr>
-<tr>
-<td>without replacement</td>
-<td>one fewer each draw; multiply</td>
-</tr>
-</table>
-### Two-dice sums
-<table header-row="true">
-<tr>
-<td>Sum</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-<td>9</td>
-<td>10</td>
-<td>11</td>
-<td>12</td>
-</tr>
-<tr>
-<td>Ways</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>5</td>
-<td>4</td>
-<td>3</td>
-<td>2</td>
-<td>1</td>
-</tr>
-</table>
-### Non-linear warnings
-- Drawing two at once is not (1/2) x (1/2): the second draw has one fewer.
-- "Either" with an overlap double-counts unless the overlap is removed.
-# Number Series - Speed Mastery Module
-**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 70 IBPS Clerk Prelims number series questions from 15 paper labels (in your bank as PYQ-SER-01 to 70; 42 missing-number, 28 wrong-number), and about 24 sister-exam questions from 7 papers (SBI Clerk Feb 2025, IBPS RRB Clerk Dec 2025 three shifts, IBPS PO 2025 and 2026). Bank questions used: 100 clerk questions (30 constructed, 70 PYQ), every one classified by a rule-finding script. The floor is met many times over. All papers are memory-based reconstructions.
-## 1. Core Mental Model, Exact Mechanics & Conversion Grid
-**Central law.** A series hides one rule. Test in a fixed order and stop at the first that fits: **gaps, gaps of gaps, ratios, multiply-and-add, taking turns**. The size of the growth tells you where to start.
-### The test order
-1. **Growth under double each step:** write the gaps. Steady gaps or evenly growing gaps settle most of these.
-2. **Gaps uneven:** write the gaps of the gaps; or recognise the gaps as squares, cubes, primes or doubling.
-3. **Growth x2 or more each step:** write the ratios (next / previous). Ratios 2, 3, 4 ...; 1/7, 1/6, 1/5 ...; 0.5, 1, 1.5 ...
-4. **Ratios almost whole:** multiply-and-add. Guess the multiplier, see what is left over: x2 + 1, x1 + 1, x2 + 2, x3 + 3 ...
-5. **Zig-zag:** gaps with alternating signs, or two series woven together, or two operations taking turns.
-### Recognition grid
-<table header-row="true">
-<tr>
-<td>Gaps or ratios</td>
-<td>Rule</td>
-</tr>
-<tr>
-<td>1, 4, 9, 16, 25</td>
-<td>squares</td>
-</tr>
-<tr>
-<td>1, 8, 27, 64, 125</td>
-<td>cubes</td>
-</tr>
-<tr>
-<td>2, 3, 5, 7, 11, 13</td>
-<td>primes</td>
-</tr>
-<tr>
-<td>4, 9, 25, 49, 121</td>
-<td>squares of primes</td>
-</tr>
-<tr>
-<td>1, 2, 6, 24, 120</td>
-<td>x2, x3, x4 ... on the gaps</td>
-</tr>
-<tr>
-<td>ratios 0.5, 1, 2, 4</td>
-<td>the multiplier doubles</td>
-</tr>
-</table>
-### Non-linear warnings
-- A wrong number spoils **two** neighbouring gaps; one corrected term must fix both.
-- With the blank inside, check the filled value against both neighbours.
-## 2. Archetypes
 <table header-row="true">
 <tr>
 <td>Code</td>
@@ -8992,34 +8649,357 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 - **30-second exam method.** 4 x 1.25 = 5 and 5 x 1.2 = 6. **Answer (A).**
 - **Option elimination hack.** P's rise is bigger, so P gains on Q: the new ratio is above 4 : 5 = 0.8 and below 1. Only 5 : 6 = 0.83 and 20 : 21 = 0.95 qualify; the factor check picks 5 : 6.
 - **IBPS trap warning.** Percent changes are multiplied into each term; they are not added to the ratio.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>RP1</td>
+<td>two ratios sharing a person; an average</td>
+<td>make the shared term equal; average x count = total; total / parts</td>
+</tr>
+<tr>
+<td>RP2</td>
+<td>an amount shared; "more than" between shares</td>
+<td>total / parts; take differences off the total first</td>
+</tr>
+<tr>
+<td>RP3</td>
+<td>added to each / moved across / joined</td>
+<td>keep the difference / the total / the fixed term equal across the two ratios</td>
+</tr>
+<tr>
+<td>RP4</td>
+<td>income, spends, saves</td>
+<td>income = expenditure + savings in parts; equal savings means equal (income - expenditure) parts</td>
+</tr>
+<tr>
+<td>RP5</td>
+<td>boys and girls inside sections</td>
+<td>outer split first, then each inner ratio; a shared count gives the difference</td>
+</tr>
+<tr>
+<td>RP6</td>
+<td>different % on each term</td>
+<td>multiply each term by its own factor</td>
+</tr>
+<tr>
+<td>RP7</td>
+<td>coins; shares per head</td>
+<td>value of one set; per-head ratio x heads</td>
+</tr>
+<tr>
+<td>RP8</td>
+<td>third / fourth / mean proportional</td>
+<td>b x b / a; b x c / a; square root of a x b</td>
+</tr>
+</table>
+**Traps.** Which person is asked (the smaller number, B's share). Squares of parts. Percent changes added to a ratio. Saving ratio confused with income ratio.
+**Fallback.** When a new form appears, write every quantity as parts of one person and use the single fact the question gives (a total, a difference, an unchanged term) to find one part.
+## 5. Practice Ladder
+36 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-RAT and PYQ-RAT are `source.id` values in `clerk/questions.json`; G-name-n is question n of the Guidely ratio set with that name.
+**Rung 1. Untimed until all correct.** One engine, small numbers.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-RAT-04</td>
+<td>RP9</td>
+<td>11 : 14</td>
+</tr>
+<tr>
+<td>CON-RAT-06</td>
+<td>RP9</td>
+<td>6 : 4 : 3</td>
+</tr>
+<tr>
+<td>CON-RAT-07</td>
+<td>RP9</td>
+<td>4 : 3 : 2</td>
+</tr>
+<tr>
+<td>CON-RAT-08</td>
+<td>RP9</td>
+<td>29 : 11</td>
+</tr>
+<tr>
+<td>CON-RAT-01</td>
+<td>RP1</td>
+<td>6 : 8 : 9</td>
+</tr>
+<tr>
+<td>CON-RAT-25</td>
+<td>RP1</td>
+<td>20 : 27</td>
+</tr>
+<tr>
+<td>CON-RAT-02</td>
+<td>RP2</td>
+<td>₹960</td>
+</tr>
+<tr>
+<td>CON-RAT-14</td>
+<td>RP2</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-RAT-09</td>
+<td>RP3</td>
+<td>96</td>
+</tr>
+<tr>
+<td>CON-RAT-16</td>
+<td>RP3</td>
+<td>10 : 7</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.** The Confirmed archetypes in exam wording.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>PYQ-RAT-02</td>
+<td>RP1</td>
+<td>9 : 4 : 5</td>
+</tr>
+<tr>
+<td>PYQ-RAT-03</td>
+<td>RP1</td>
+<td>24</td>
+</tr>
+<tr>
+<td>PYQ-RAT-05</td>
+<td>RP1</td>
+<td>12</td>
+</tr>
+<tr>
+<td>PYQ-RAT-10</td>
+<td>RP1</td>
+<td>Rs 31,500</td>
+</tr>
+<tr>
+<td>PYQ-RAT-01</td>
+<td>RP3</td>
+<td>54</td>
+</tr>
+<tr>
+<td>PYQ-RAT-07</td>
+<td>RP3</td>
+<td>420</td>
+</tr>
+<tr>
+<td>CON-RAT-21</td>
+<td>RP3</td>
+<td>₹2,250</td>
+</tr>
+<tr>
+<td>CON-RAT-28</td>
+<td>RP3</td>
+<td>150</td>
+</tr>
+<tr>
+<td>PYQ-RAT-09</td>
+<td>RP4</td>
+<td>8 : 3</td>
+</tr>
+<tr>
+<td>PYQ-RAT-04</td>
+<td>RP4</td>
+<td>47 : 32</td>
+</tr>
+<tr>
+<td>CON-RAT-10</td>
+<td>RP4</td>
+<td>₹10,000</td>
+</tr>
+<tr>
+<td>CON-RAT-24</td>
+<td>RP4</td>
+<td>1 : 1</td>
+</tr>
+<tr>
+<td>PYQ-RAT-08</td>
+<td>RP5</td>
+<td>60</td>
+</tr>
+<tr>
+<td>PYQ-RAT-06</td>
+<td>RP5</td>
+<td>3 : 1</td>
+</tr>
+<tr>
+<td>CON-RAT-18</td>
+<td>RP5</td>
+<td>78%</td>
+</tr>
+<tr>
+<td>PYQ-RAT-11</td>
+<td>RP2</td>
+<td>17 : 9 : 25</td>
+</tr>
+<tr>
+<td>CON-RAT-17</td>
+<td>RP2</td>
+<td>₹2,400</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.** Mixed, including Insurance.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-percentage-10</td>
+<td>RP6</td>
+<td>105: 92: 75</td>
+</tr>
+<tr>
+<td>G-percentage-7</td>
+<td>RP6</td>
+<td>6:7</td>
+</tr>
+<tr>
+<td>G-increase-decrease-5</td>
+<td>RP6</td>
+<td>12:5</td>
+</tr>
+<tr>
+<td>G-coins-2</td>
+<td>RP7</td>
+<td>240</td>
+</tr>
+<tr>
+<td>G-coins-8</td>
+<td>RP7</td>
+<td>400</td>
+</tr>
+<tr>
+<td>CON-RAT-19</td>
+<td>RP10</td>
+<td>₹280</td>
+</tr>
+<tr>
+<td>CON-RAT-22</td>
+<td>RP10</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-RAT-29</td>
+<td>RP10</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-RAT-30</td>
+<td>RP10</td>
+<td>6</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026. This module is checked, not guaranteed; a new exam variant can still fall outside it.
+### What was tested
+- **Answers.** All 41 clerk questions (30 constructed, 11 PYQ) were re-solved by script from their own numbers and compared with the bank key: 41 of 41 agree (four keys are "None of these", and the script confirms the true value is not among the options: CON-RAT-05 gives 64, CON-RAT-14 gives 4,500, CON-RAT-22 gives 515, CON-RAT-29 gives 484).
+- **Guidely questions on the lesson path.** The 10 used for practice were re-solved by script; all agree with their keys.
+- **Sister-exam questions.** All 4 were solved by hand and checked: IBPS PO 24 Aug 2025 S1 Q79 (Rs 40,000, matches the printed key), SBI Clerk 20 Sep 2025 S1 Q42 (320), SBI Clerk 20 Sep 2025 S2 Q51 (15 : 19), IBPS RRB Clerk 13 Dec 2025 S2 Q54 (Rs 22,500). The three Clerk-level papers printed no key in the text extracted; the answers are computed.
+- **Methods.** The equal-difference rule (RP3a) and the equal-total rule (RP3b) were applied to every RP3 clerk question and give the keyed answer on all 6. The equal-savings rule (RP4) gives the keyed answer on all 5 RP4 clerk questions.
+- **Drills.** All 6 drill answers were solved by script, and each elimination hack was checked to leave exactly one option (Drill 6 leaves two by range and is finished by the factor check, as stated).
+### What failed and was fixed
+- A first check matched CON-RAT-18 to 77.5% instead of 78% because the comparison allowed rounding; the check now takes the nearest option and agrees with the key.
+- Drill 3's first "30-second method" tried to scale the two ratios directly, which does not work when only the savings are equal; the method now states the equal (income - expenditure) rule.
+### What could not be opened or checked
+- The 126 Guidely and 37 Sreedhar ratio questions off the lesson path were classified by their set names and stems, not re-solved one by one.
+- No Mains papers were used. This module reflects Prelims only.
+- Paper counts use paper labels; "IBPS Clerk Prelims 2024, Guidely" carries two of the PYQs (RAT-08 and RAT-09) and is counted once.
+- The method books and channels in your Priority 3 list were not read or watched. The methods here are the standard parts and unit methods.
+### Source links (pages opened)
+- The 12 sister papers are the same Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
+## 7. Pattern Index: archetypes and question IDs
+- RP1: PYQ-RAT-02, 03, 05, 10 · CON-RAT-01, 25
+- RP2: PYQ-RAT-11 · CON-RAT-02, 14, 17
+- RP3: PYQ-RAT-01, 07 · CON-RAT-09, 16, 21, 28
+- RP4: PYQ-RAT-04, 09 · CON-RAT-10, 24, 26
+- RP5: PYQ-RAT-06, 08 · CON-RAT-18
+- RP6: CON-RAT-13 · G-percentage-7, 8, 10 · G-increase-decrease-5 · G-boys-girls-4
+- RP7: CON-RAT-11, 27 · G-coins-1, 2, 8 · G-boys-girls-6 · G-choclate-6
+- RP8: CON-RAT-03, 12, 15
+- RP9: CON-RAT-04, 06, 07, 08, 23
+- RP10: CON-RAT-05, 19, 20, 22, 29, 30
+# Averages - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers as the other modules. PYQs found: 15 IBPS Clerk Prelims average questions from 13 paper labels (in your bank as PYQ-AVG-01 to 15) and 9 sister-exam questions from 6 papers (DI sets that only ask for an average, and average speed, are left to DI and Speed). Bank questions used: 81 (45 clerk, 36 Sreedhar; Guidely has no average sets, and its age-average questions belong to Ages). The floor of 8 target-exam shifts and 6-10 sister questions is met. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** An average is a total shared equally. **Total = average x count.** Almost every question is solved by turning averages into totals, doing the arithmetic on totals, and turning back at the end.
+### Base operations
+1. **Total from an average.** 8 numbers averaging 25 total 200.
+2. **Someone joins.** New person = old average + (number of people now x rise in average). Teacher joins 20 students averaging 45 and the average rises 1: teacher = 45 + 21 x 1 = 66.
+3. **Someone leaves.** The leaver = old total - new total. 13 people averaging 36 lose one and the rest average 35: 468 - 420 = 48.
+4. **Someone is replaced.** New - old = number of people x change in average. 8 people, average up 2.5 when a 60 kg person is replaced: new = 60 + 8 x 2.5 = 80.
+5. **Two groups (weighted average).** The overall average sits between the two, closer to the bigger group. The distances are in the opposite ratio of the group sizes: sections averaging 65 and 85, overall 70 → distances 5 and 15 → sizes 15 : 5 = 3 : 1.
+6. **Consecutive numbers.** The average is the middle number (or the mean of the two middle ones). 5 consecutive odd numbers averaging 27: 23, 25, 27, 29, 31.
+7. **Overlapping groups.** Add the group totals; the overlap is counted twice. Average of first six 49, last six 52, all eleven 50: sixth = 294 + 312 - 550 = 56.
+8. **Same change to every number.** Adding k to all adds k to the average; multiplying all by k multiplies the average by k.
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Situation</td>
+<td>Shortcut</td>
+</tr>
+<tr>
+<td>n people, one more joins, average rises by d</td>
+<td>new = old average + (n + 1) x d</td>
+</tr>
+<tr>
+<td>n people, one replaced, average rises by d</td>
+<td>new = old + n x d</td>
+</tr>
+<tr>
+<td>batsman's average rises by d after innings n</td>
+<td>score in innings n = new average + (n - 1) x d</td>
+</tr>
+<tr>
+<td>a number misread</td>
+<td>change in average = (correct - wrong) / count</td>
+</tr>
+<tr>
+<td>two-digit number reversed</td>
+<td>change in total = 9 x (difference of digits)</td>
+</tr>
+<tr>
+<td>k consecutive odd or even numbers</td>
+<td>largest = average + (k - 1); smallest = average - (k - 1)</td>
+</tr>
+</table>
+### Non-linear warnings
+- The average of two averages is not the overall average unless the groups are the same size.
+- "Average increases by 6 months" is 0.5 years; "average decreases by Rs 1" applies to every member, including the new ones.
+## 2. Archetypes
+Nine archetypes cover the bank and the papers. "Papers" counts paper labels, IBPS Clerk and sister papers together. Bank counts are by hand.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
 <td>AV1</td>
 <td>Someone joins, leaves or is replaced</td>
 <td>Confirmed (8 papers)</td>
 <td>5</td>
 <td>3</td>
-<td>NS1</td>
-<td>Gaps steady or growing evenly</td>
-<td>Confirmed (11 Clerk papers)</td>
-<td>20</td>
-<td>5</td>
-<td>28</td>
-<td>Core</td>
-</tr>
-<tr>
-<td>NS4</td>
-<td>Multiply or divide by changing numbers</td>
-<td>Confirmed (11 Clerk papers)</td>
-<td>12</td>
-<td>3</td>
-<td>15</td>
-<td>Core</td>
-</tr>
-<tr>
-<td>NS2</td>
-<td>Gaps that are squares, cubes, primes or doubling</td>
-<td>Confirmed (9 Clerk papers)</td>
-<td>16</td>
-<td>7</td>
 <td>21</td>
 <td>Core</td>
 </tr>
@@ -9029,20 +9009,6 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>Confirmed (6 papers)</td>
 <td>5</td>
 <td>1</td>
-<td>M1</td>
-<td>Two figures joined by one length</td>
-<td>Confirmed (14 papers)</td>
-<td>11</td>
-<td>4</td>
-<td>76</td>
-<td>Core</td>
-</tr>
-<tr>
-<td>M2</td>
-<td>One rectangle from a ratio or relation</td>
-<td>Confirmed (7 papers)</td>
-<td>3</td>
-<td>4</td>
 <td>12</td>
 <td>Core</td>
 </tr>
@@ -9068,25 +9034,8 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>AV3</td>
 <td>Overlapping groups (first six, last six; A, B, C and B, C, D)</td>
 <td>Seen once</td>
-<td>PB3</td>
-<td>Drawing two or three from a bag</td>
-<td>Confirmed (2 papers, 2018 and 2021)</td>
-<td>2</td>
-<td>0</td>
-<td>40</td>
-<td>Core</td>
-</tr>
-<tr>
-<td>PB6</td>
-<td>A count is missing</td>
-<td>Seen once (inside the 2018 question)</td>
 <td>1</td>
 <td>0</td>
-<td>NS3</td>
-<td>Multiply, then add</td>
-<td>Confirmed (8 Clerk papers)</td>
-<td>13</td>
-<td>5</td>
 <td>20</td>
 <td>Core</td>
 </tr>
@@ -9183,6 +9132,389 @@ The average of 25 numbers was found to be 46. Later it was seen that 74 had been
 - **30-second exam method.** The total was 27 too low, so the average rises by 27 / 25 = 1.08: 47.08. **Answer (C).**
 - **Option elimination hack.** The true number was larger, so the average rises: (C), (D) or (E); 27 / 25 is just over 1.
 - **IBPS trap warning.** Option (A) subtracts the correction.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>AV1</td>
+<td>joins / leaves / replaced</td>
+<td>newcomer = old average + new count x rise; replaced: difference = count x change</td>
+</tr>
+<tr>
+<td>AV2</td>
+<td>two groups and an overall average</td>
+<td>sizes in the opposite ratio of the distances</td>
+</tr>
+<tr>
+<td>AV5</td>
+<td>consecutive numbers</td>
+<td>average is the middle; step out by the gap</td>
+</tr>
+<tr>
+<td>AV4</td>
+<td>ratio or difference between the numbers</td>
+<td>total first, then split</td>
+</tr>
+<tr>
+<td>AV3</td>
+<td>overlapping groups</td>
+<td>add group totals, subtract the whole</td>
+</tr>
+<tr>
+<td>AV6</td>
+<td>batsman, innings</td>
+<td>score = new average + earlier innings x rise</td>
+</tr>
+<tr>
+<td>AV7</td>
+<td>misread, reversed digits</td>
+<td>change in total / count; reversed digits: 9 x digit gap</td>
+</tr>
+</table>
+**Traps.** Counting the newcomer when spreading a rise. The plain average of two group averages. Asking for the new average when the newcomer's value is wanted, and the other way round.
+**Fallback.** Write every average as a total, do the story with totals, divide once at the end.
+## 5. Practice Ladder
+32 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-AVG and PYQ-AVG are `source.id` values in `clerk/questions.json`.
+**Rung 1. Untimed until all correct.** One engine, small numbers.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-AVG-01</td>
+<td>AV9</td>
+<td>33</td>
+</tr>
+<tr>
+<td>CON-AVG-08</td>
+<td>AV9</td>
+<td>23</td>
+</tr>
+<tr>
+<td>CON-AVG-05</td>
+<td>AV1</td>
+<td>66 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-06</td>
+<td>AV1</td>
+<td>40</td>
+</tr>
+<tr>
+<td>PYQ-AVG-04</td>
+<td>AV1</td>
+<td>53 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-07</td>
+<td>AV2</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CON-AVG-02</td>
+<td>AV5</td>
+<td>11</td>
+</tr>
+<tr>
+<td>CON-AVG-03</td>
+<td>AV5</td>
+<td>31</td>
+</tr>
+<tr>
+<td>PYQ-AVG-12</td>
+<td>AV3</td>
+<td>60</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.** The Confirmed archetypes in exam wording.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>PYQ-AVG-06</td>
+<td>AV1</td>
+<td>55 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-08</td>
+<td>AV1</td>
+<td>13</td>
+</tr>
+<tr>
+<td>PYQ-AVG-13</td>
+<td>AV1</td>
+<td>84</td>
+</tr>
+<tr>
+<td>PYQ-AVG-05</td>
+<td>AV1</td>
+<td>122 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-09</td>
+<td>AV1</td>
+<td>80 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-03</td>
+<td>AV2</td>
+<td>3 : 1</td>
+</tr>
+<tr>
+<td>PYQ-AVG-11</td>
+<td>AV2</td>
+<td>35 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-14</td>
+<td>AV2</td>
+<td>30 years</td>
+</tr>
+<tr>
+<td>PYQ-AVG-09</td>
+<td>AV2</td>
+<td>38 kg</td>
+</tr>
+<tr>
+<td>PYQ-AVG-01</td>
+<td>AV4</td>
+<td>48</td>
+</tr>
+<tr>
+<td>PYQ-AVG-15</td>
+<td>AV4</td>
+<td>39</td>
+</tr>
+<tr>
+<td>PYQ-AVG-07</td>
+<td>AV5</td>
+<td>60</td>
+</tr>
+<tr>
+<td>CON-AVG-14</td>
+<td>AV3</td>
+<td>31 kg</td>
+</tr>
+<tr>
+<td>CON-AVG-15</td>
+<td>AV3</td>
+<td>34°C</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.** Mixed, including Insurance.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-AVG-20</td>
+<td>AV1</td>
+<td>20</td>
+</tr>
+<tr>
+<td>CON-AVG-28</td>
+<td>AV1</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-AVG-11</td>
+<td>AV6</td>
+<td>37</td>
+</tr>
+<tr>
+<td>CON-AVG-22</td>
+<td>AV6</td>
+<td>174</td>
+</tr>
+<tr>
+<td>CON-AVG-10</td>
+<td>AV7</td>
+<td>51.8</td>
+</tr>
+<tr>
+<td>CON-AVG-27</td>
+<td>AV7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>PYQ-AVG-02</td>
+<td>AV8</td>
+<td>-47</td>
+</tr>
+<tr>
+<td>CON-AVG-26</td>
+<td>AV3</td>
+<td>76</td>
+</tr>
+<tr>
+<td>CON-AVG-13</td>
+<td>AV2</td>
+<td>21</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026. This module is checked, not guaranteed; a new exam variant can still fall outside it.
+### What was tested
+- **Answers.** All 45 clerk questions (30 constructed, 15 PYQ) were re-solved by script from their own numbers; all 45 agree with the bank key. Four keys are "None of these" and the script confirms the true value is not an option: CON-AVG-04 (55), CON-AVG-12 (56), CON-AVG-21 (88), CON-AVG-28 (30).
+- **Sister-exam questions.** Six standalone questions were re-solved by script: IBPS PO 22 Aug 2026 S1 Q83 (18) and S2 Q90 (9), IBPS PO 23 Aug 2025 S2 Q95 (16), all matching the printed keys; SBI Clerk 20 Sep 2025 S1 Q36 (2,200), S2 Q53 (31) and IBPS RRB Clerk 6 Dec 2025 S1 Q59 (107), whose papers printed no key in the extracted text. The three quantity-comparison items were checked by hand.
+- **Methods.** The join rule (old average + new count x rise) and the replacement rule (count x change) were applied to every AV1 clerk question; all 14 agree. The opposite-distance rule gives the keyed answer on all AV2 clerk questions that ask for a ratio or a group average.
+- **Drills.** All 6 drills were solved by script and each elimination hack was checked.
+### What failed and was fixed
+- The first draft of Drill 3 had no correct option (its answer, 67, was missing). The options were rewritten and re-checked.
+- The batsman line in the conversion grid was first written for the old average; it now gives the score directly (score = new average + earlier innings x rise), checked on CON-AVG-11.
+### What could not be opened or checked
+- The 36 Sreedhar questions were classified by hand but not re-solved one by one; their keys are used as printed.
+- No Mains papers were used. This module reflects Prelims only.
+- The method books and channels in your Priority 3 list were not read or watched.
+### Source links (pages opened)
+- The 12 sister papers are the Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
+## 7. Pattern Index: archetypes and question IDs
+- AV1: PYQ-AVG-04, 05, 06, 08, 13 · CON-AVG-05, 06, 08, 09, 18, 19, 20, 24, 28
+- AV2: PYQ-AVG-03, 09, 10, 11, 14 · CON-AVG-07, 13
+- AV3: PYQ-AVG-12 · CON-AVG-12, 14, 15, 26
+- AV4: PYQ-AVG-01, 15 · CON-AVG-16
+- AV5: PYQ-AVG-07 · CON-AVG-02, 03, 25
+- AV6: CON-AVG-11, 21, 22
+- AV7: CON-AVG-10, 27
+- AV8: PYQ-AVG-02 · CON-AVG-30
+- AV9: CON-AVG-01, 04, 17, 23, 29
+# Areas & Volumes - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers. PYQs found: 20 IBPS Clerk Prelims questions from 17 paper labels (in your bank as PYQ-MEN-01 to 20) and 11 sister-exam questions from 10 papers. Bank questions used: 360 (50 clerk, 83 Sreedhar, 227 Guidely; the clerk ones sorted by hand, the others by a keyword script, 8 of them unplaced). The floor is met. Every one of the 31 paper questions is a flat (2D) figure; no paper in the sample asked a solid. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** Almost every paper question is **two plain figures joined by one length**: a rectangle's breadth is a square's side, a semicircle's radius is a rectangle's breadth. Find that one length from the first figure, carry it to the second, and finish. Use pi = 22/7, so radii are multiples of 7 more often than not.
+### Formulas that are asked
+<table header-row="true">
+<tr>
+<td>Figure</td>
+<td>Perimeter</td>
+<td>Area</td>
+</tr>
+<tr>
+<td>Rectangle l, b</td>
+<td>2(l + b)</td>
+<td>l x b</td>
+</tr>
+<tr>
+<td>Square a</td>
+<td>4a; diagonal a√2</td>
+<td>a x a</td>
+</tr>
+<tr>
+<td>Circle r</td>
+<td>2 x 22/7 x r</td>
+<td>22/7 x r x r</td>
+</tr>
+<tr>
+<td>Semicircle r</td>
+<td>22/7 x r + 2r = 36/7 x r</td>
+<td>11/7 x r x r</td>
+</tr>
+<tr>
+<td>Right triangle, base b, height h</td>
+<td>add the sides; hypotenuse by 3-4-5, 5-12-13, 7-24-25, 8-15-17</td>
+<td>b x h / 2</td>
+</tr>
+<tr>
+<td>Equilateral triangle a</td>
+<td>3a</td>
+<td>√3/4 x a x a</td>
+</tr>
+<tr>
+<td>Rhombus, diagonals p, q</td>
+<td>4 x √((p/2)² + (q/2)²)</td>
+<td>p x q / 2</td>
+</tr>
+<tr>
+<td>Trapezium, parallel sides a, b, height h</td>
+<td>add the sides</td>
+<td>(a + b) / 2 x h</td>
+</tr>
+</table>
+### Solids (bank only in this sample)
+<table header-row="true">
+<tr>
+<td>Solid</td>
+<td>Volume</td>
+<td>Surface</td>
+</tr>
+<tr>
+<td>Cuboid l, b, h</td>
+<td>l x b x h</td>
+<td>total 2(lb + bh + lh); four walls 2(l + b) x h</td>
+</tr>
+<tr>
+<td>Cube a</td>
+<td>a³</td>
+<td>6a²</td>
+</tr>
+<tr>
+<td>Cylinder r, h</td>
+<td>22/7 x r² x h</td>
+<td>curved 2 x 22/7 x r x h</td>
+</tr>
+<tr>
+<td>Cone r, h, slant l</td>
+<td>1/3 x 22/7 x r² x h</td>
+<td>curved 22/7 x r x l, with l² = r² + h²</td>
+</tr>
+<tr>
+<td>Sphere r; hemisphere</td>
+<td>4/3 x 22/7 x r³; half of that</td>
+<td>4 x 22/7 x r²; hemisphere curved 2 x 22/7 x r²</td>
+</tr>
+</table>
+### Exact algorithms
+1. **Rectangle from a ratio and the perimeter.** Half the perimeter = l + b; split it in the ratio. 92 cm, 14 : 9: 46 in 23 parts, so 2 a part: 28 and 18.
+2. **Rectangle from a ratio and the area.** Area = parts x parts x unit². 4 : 3 with area 108: 12 unit² = 108, unit = 3: 12 and 9.
+3. **Semicircle perimeter 36.** 36/7 x r = 36, so r = 7. Perimeter 72 gives r = 14.
+4. **Circumference minus diameter.** (44/7 - 2) x r = 30/7 x r. 90 gives r = 21.
+### Non-linear warnings
+- **Area scales with the square of the side.** Sides in 5 : 9 give areas 25 : 81. Each side up 50% makes the area 2.25 times (a 125% rise).
+- **Percent changes multiply.** Length +20%, breadth -10%: 1.2 x 0.9 = 1.08, an 8% rise, not 10%.
+- **Volume scales with the cube.** Melting three cubes of 3, 4, 5 gives one of side 6 (27 + 64 + 125 = 216).
+## 2. Archetypes
+Ten archetypes. "Papers" counts paper labels, IBPS Clerk and sister papers together.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>Two figures joined by one length</td>
+<td>Confirmed (14 papers)</td>
+<td>11</td>
+<td>4</td>
+<td>76</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>One rectangle from a ratio or relation</td>
+<td>Confirmed (7 papers)</td>
+<td>3</td>
+<td>4</td>
+<td>12</td>
+<td>Core</td>
+</tr>
+<tr>
 <td>M3</td>
 <td>Percent change in the sides</td>
 <td>Confirmed (3 papers)</td>
@@ -9302,6 +9634,302 @@ A wire bent into a square encloses 121 cm². It is rebent into a circle. Find th
 - **30-second exam method.** Wire 44 = 44/7 x r, so r = 7, area 154. **Answer (B).**
 - **Option elimination hack.** For the same length, a circle always encloses more than a square, so the answer is above 121: (B), (C), (D) or (E); 22/7 x 49 = 154.
 - **IBPS trap warning.** The area does not carry over; the length does. (A) keeps the area.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>M1</td>
+<td>"equal to the breadth", "2 cm more than the side"</td>
+<td>solve the given figure, carry the length, finish the other</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>ratio and perimeter; ratio and area</td>
+<td>half-perimeter split by parts; area = parts x parts x unit²</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>% change in sides</td>
+<td>multiply factors; backwards divide</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>circle, semicircle</td>
+<td>circumference = 44/7 r; semicircle perimeter = 36/7 r</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>two squares in a ratio</td>
+<td>sides in parts; areas in the squared ratio</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>path, border, cost</td>
+<td>outer - inner; area x rate</td>
+</tr>
+<tr>
+<td>M9</td>
+<td>bent, melted, rolled</td>
+<td>length or volume stays the same</td>
+</tr>
+</table>
+**Traps.** Perimeter given twice ("twice the perimeter is 96"). Radius vs diameter. The square of a ratio. Semicircle perimeter including the diameter.
+**Fallback.** Draw both figures, mark the one shared length, and write every other length in terms of it.
+## 5. Practice Ladder
+29 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-MEN and PYQ-MEN are `source.id` values in `clerk/questions.json`.
+**Rung 1. Untimed until all correct.** One formula, small numbers.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-MEN-01</td>
+<td>M2</td>
+<td>600 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-02</td>
+<td>M2</td>
+<td>144 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-18</td>
+<td>M2</td>
+<td>104 cm</td>
+</tr>
+<tr>
+<td>CON-MEN-03</td>
+<td>M4</td>
+<td>44 cm</td>
+</tr>
+<tr>
+<td>PYQ-MEN-14</td>
+<td>M1</td>
+<td>144 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-13</td>
+<td>M1</td>
+<td>81 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-04</td>
+<td>M7</td>
+<td>30 cm²</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.** The Confirmed archetypes as the papers set them.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>PYQ-MEN-05</td>
+<td>M1</td>
+<td>80</td>
+</tr>
+<tr>
+<td>PYQ-MEN-01</td>
+<td>M1</td>
+<td>144</td>
+</tr>
+<tr>
+<td>PYQ-MEN-07</td>
+<td>M1</td>
+<td>8 cm</td>
+</tr>
+<tr>
+<td>PYQ-MEN-09</td>
+<td>M1</td>
+<td>48</td>
+</tr>
+<tr>
+<td>PYQ-MEN-17</td>
+<td>M1</td>
+<td>24</td>
+</tr>
+<tr>
+<td>PYQ-MEN-20</td>
+<td>M1</td>
+<td>128 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-19</td>
+<td>M2</td>
+<td>720 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-08</td>
+<td>M2</td>
+<td>500</td>
+</tr>
+<tr>
+<td>PYQ-MEN-06</td>
+<td>M3</td>
+<td>68</td>
+</tr>
+<tr>
+<td>PYQ-MEN-16</td>
+<td>M3</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>PYQ-MEN-11</td>
+<td>M4</td>
+<td>616 cm²</td>
+</tr>
+<tr>
+<td>PYQ-MEN-02</td>
+<td>M5</td>
+<td>896</td>
+</tr>
+<tr>
+<td>PYQ-MEN-03</td>
+<td>M5</td>
+<td>80 cm</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.** Mixed, including Insurance.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>PYQ-MEN-10</td>
+<td>M6</td>
+<td>1804 m²</td>
+</tr>
+<tr>
+<td>CON-MEN-11</td>
+<td>M6</td>
+<td>1100 m²</td>
+</tr>
+<tr>
+<td>CON-MEN-25</td>
+<td>M3</td>
+<td>125%</td>
+</tr>
+<tr>
+<td>CON-MEN-16</td>
+<td>M8</td>
+<td>550 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-17</td>
+<td>M8</td>
+<td>19,404 cm³</td>
+</tr>
+<tr>
+<td>CON-MEN-10</td>
+<td>M9</td>
+<td>616 cm²</td>
+</tr>
+<tr>
+<td>CON-MEN-24</td>
+<td>M9</td>
+<td>6 cm</td>
+</tr>
+<tr>
+<td>PYQ-MEN-12</td>
+<td>M1</td>
+<td>1064</td>
+</tr>
+<tr>
+<td>PYQ-MEN-15</td>
+<td>M1</td>
+<td>1386 m²</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026. This module is checked, not guaranteed.
+### What was tested
+- **Answers.** All 50 clerk questions (30 constructed, 20 PYQ) were re-solved by script with pi = 22/7; all 50 agree with the bank key. Four keys are "None of these" and the script confirms why: CON-MEN-06 (392), CON-MEN-13 (500 revolutions), CON-MEN-20 (204), CON-MEN-27 (1,300).
+- **Sister-exam questions.** All 11 were re-solved: SBI Clerk 22 Feb 2025 Q62 (35), IBPS PO 24 Aug 2025 S1 Q100 (24), IBPS PO 22 Aug 2026 S1 Q81 (196) and S2 Q96 (324), SBI Clerk 20 Sep 2025 S2 Q48 (18), SBI Clerk 21 Sep 2025 S1 Q46 (135), IBPS RRB Clerk 6 Dec 2025 S1 Q55 (616) and S2 Q53 (300), IBPS RRB Clerk 13 Dec 2025 S1 Q57 (84) and S2 Q60 (200), IBPS PO 23 Aug 2025 S2 Q91 (5 : 6). The four PO answers match their printed keys; the others printed no key in the extracted text.
+- **Drills.** All 6 were solved by script, and each hack checked.
+### What failed and was fixed
+- Drill 5's first elimination hack (the difference divides by 16) left four options standing, so it was replaced by a back-check.
+### What could not be opened or checked
+- The 310 Sreedhar and Guidely questions were sorted by a keyword script, not re-solved; 8 could not be placed. Keyword sorting can misplace a few questions, so treat those counts as close, not exact.
+- No Mains papers were used.
+### Source links (pages opened)
+- The 12 sister papers are the Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
+## 7. Pattern Index: archetypes and question IDs
+- M1: PYQ-MEN-01, 04, 05, 07, 09, 12, 13, 14, 15, 17, 20 · CON-MEN-22, 30
+- M2: PYQ-MEN-08, 18, 19 · CON-MEN-01, 02
+- M3: PYQ-MEN-06, 16 · CON-MEN-12, 25
+- M4: PYQ-MEN-11 · CON-MEN-03, 26
+- M5: PYQ-MEN-02, 03 · CON-MEN-28
+- M6: PYQ-MEN-10 · CON-MEN-08, 11, 13, 15, 18, 27
+- M7: CON-MEN-04, 09, 14, 20, 21
+- M8: CON-MEN-05, 06, 07, 16, 17
+- M9: CON-MEN-10, 19, 23, 24, 29
+# LCM & HCF - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers. PYQs found: **none**. No paper in the sample set an LCM or HCF question; the words appear only inside Time & Work and Pipes solutions, as the unit-method step. Bank questions found: 10 (5 Sreedhar model-test questions, 4 Guidely number-system questions, 1 clerk ratio question), one of them flawed (Guidely consecutive-numbers set 1 Q6: HCF 18 cannot divide 128). Because the bank is so thin, 30 practice questions were constructed for this topic (CON-LCM-01 to 30) with every answer computed by script. The floor of 8 target-exam shifts is met in papers opened, but the topic itself was not found; every archetype is labelled Bank only or Unverified. Memory-based papers are reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** LCM is the meeting point: the smallest number that all the given numbers go into. HCF is the biggest common piece: the largest number that goes into all of them. Decide which one the story wants before calculating.
+### Base operations
+1. **Prime breakdown.** LCM = every prime, at its highest power in any number. HCF = common primes, at their lowest power.
+2. **Division method for two awkward numbers.** Divide, then divide the divisor by the remainder, until the remainder is 0. The last divisor is the HCF.
+3. **Product rule (two numbers only).** HCF x LCM = product.
+4. **Ratio form.** Numbers in a : b (coprime) are ha and hb with h = HCF; LCM = h x a x b.
+5. **Fractions.** LCM = LCM(numerators) / HCF(denominators); HCF = HCF(numerators) / LCM(denominators).
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Story words</td>
+<td>Use</td>
+</tr>
+<tr>
+<td>together again, at the same time, meet at the start</td>
+<td>LCM</td>
+</tr>
+<tr>
+<td>largest tile, longest rod, biggest measure, fewest rows</td>
+<td>HCF</td>
+</tr>
+<tr>
+<td>largest number leaving the same remainder</td>
+<td>HCF of differences</td>
+</tr>
+<tr>
+<td>smallest number leaving remainder k</td>
+<td>LCM + k</td>
+</tr>
+<tr>
+<td>remainders each d short of the divisors</td>
+<td>LCM - d</td>
+</tr>
+<tr>
+<td>greatest / smallest n-digit number divisible by</td>
+<td>nearest multiple of the LCM</td>
+</tr>
+</table>
+### Non-linear warnings
+- HCF x LCM = product holds for two numbers only.
+- "How many times together in 3 hours" depends on whether the starting moment counts; read it.
+## 2. Archetypes
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
 <td>LH2</td>
 <td>HCF x LCM = product; two numbers from difference, HCF and LCM</td>
 <td>Bank only</td>
@@ -9411,6 +10039,244 @@ Two numbers are in the ratio 5 : 8 and their LCM is 480. Find their HCF.
 - **30-second exam method.** 40h = 480, h = 12. **Answer (A).**
 - **Option elimination hack.** 40 x HCF must equal 480: only 12.
 - **IBPS trap warning.** (E) 60 is the smaller number.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>LH4</td>
+<td>together again</td>
+<td>LCM, add to the start</td>
+</tr>
+<tr>
+<td>LH5</td>
+<td>largest equal piece</td>
+<td>HCF; count = total / HCF</td>
+</tr>
+<tr>
+<td>LH2</td>
+<td>HCF, LCM and one number</td>
+<td>other = HCF x LCM / number</td>
+</tr>
+<tr>
+<td>LH3</td>
+<td>ratio and HCF or LCM</td>
+<td>part = HCF; LCM = a x b x HCF</td>
+</tr>
+<tr>
+<td>LH6</td>
+<td>remainders</td>
+<td>HCF of differences; LCM + k; LCM - d</td>
+</tr>
+<tr>
+<td>LH7</td>
+<td>fractions</td>
+<td>LCM(num)/HCF(den); HCF(num)/LCM(den)</td>
+</tr>
+</table>
+**Fallback.** When unsure which one, ask: is the answer bigger than the numbers (LCM) or smaller (HCF)?
+## 5. Practice Ladder
+19 questions in three rungs. IDs: CON-LCM are `source.id` values in `clerk/questions.json` (constructed for this course); S-MTm-q is question q of Sreedhar model test m.
+**Rung 1. Untimed until all correct.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-LCM-01</td>
+<td>LH1</td>
+<td>180</td>
+</tr>
+<tr>
+<td>CON-LCM-02</td>
+<td>LH1</td>
+<td>42</td>
+</tr>
+<tr>
+<td>CON-LCM-13</td>
+<td>LH4</td>
+<td>9:24 a.m.</td>
+</tr>
+<tr>
+<td>CON-LCM-16</td>
+<td>LH4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>CON-LCM-18</td>
+<td>LH5</td>
+<td>48 cm</td>
+</tr>
+<tr>
+<td>CON-LCM-22</td>
+<td>LH5</td>
+<td>12</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-LCM-05</td>
+<td>LH2</td>
+<td>60</td>
+</tr>
+<tr>
+<td>CON-LCM-08</td>
+<td>LH2</td>
+<td>44</td>
+</tr>
+<tr>
+<td>CON-LCM-09</td>
+<td>LH3</td>
+<td>120</td>
+</tr>
+<tr>
+<td>CON-LCM-10</td>
+<td>LH3</td>
+<td>132</td>
+</tr>
+<tr>
+<td>CON-LCM-24</td>
+<td>LH6</td>
+<td>13</td>
+</tr>
+<tr>
+<td>CON-LCM-25</td>
+<td>LH6</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CON-LCM-26</td>
+<td>LH6</td>
+<td>86</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>S-MT66-46</td>
+<td>LH2</td>
+<td>1413</td>
+</tr>
+<tr>
+<td>S-MT55-45</td>
+<td>LH2</td>
+<td>740</td>
+</tr>
+<tr>
+<td>S-MT24-35</td>
+<td>LH3</td>
+<td>96</td>
+</tr>
+<tr>
+<td>CON-LCM-23</td>
+<td>LH6</td>
+<td>1120</td>
+</tr>
+<tr>
+<td>CON-LCM-27</td>
+<td>LH6</td>
+<td>9600</td>
+</tr>
+<tr>
+<td>CON-LCM-28</td>
+<td>LH7</td>
+<td>20/3</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026.
+### What was tested
+- **Search.** All 35 papers were converted to text and searched for LCM, HCF, GCD, "least common", "highest common", "ring together" and "bells". The only hits are solution steps in Time & Work and Pipes.
+- **Constructed questions.** All 30 CON-LCM answers were computed by script from the question's own numbers and must equal the stated answer; each set of five options contains it exactly once.
+- **Bank questions.** The 5 Sreedhar questions used for practice were re-solved and agree with their keys. Guidely number-system set 1 Q6 is inconsistent (HCF 18 cannot divide 128) and is not used.
+- **Drills.** All 5 were solved by script and each hack checked.
+### What could not be opened or checked
+- The method books and channels in your Priority 3 list were not read; the methods are the standard textbook ones.
+- Three web pages with LCM practice sets (cracku.in, affairscloud.com) were blocked at the time of the first search and were not used.
+### Source links (pages opened)
+- The 12 sister papers are the Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log; the IBPS Clerk paper links are stored with each question in `clerk/questions.json`.
+## 7. Pattern Index: archetypes and question IDs
+- LH1: CON-LCM-01, 02, 03, 04
+- LH2: CON-LCM-05, 06, 07, 08 · S-MT66-46, S-MT55-45, S-MT9-51
+- LH3: CON-LCM-09, 10, 11, 12 · CON-RAT-05 · S-MT24-35, S-MT2-50
+- LH4: CON-LCM-13, 14, 15, 16, 17
+- LH5: CON-LCM-18, 19, 20, 21, 22
+- LH6: CON-LCM-23, 24, 25, 26, 27, 30
+- LH7: CON-LCM-28, 29
+# Permutations & Combinations - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 2 IBPS Clerk Prelims questions from 2 papers (2017 model, Guidely: a committee with one person always included; 2018, Guidely: arrangements of MANAGEMENT); none in the 2019 to 2025 Clerk papers and none in the 12 sister papers. Bank questions used: 131 (129 Guidely in 13 sets, 2 Sreedhar); the clerk bank has none. One Guidely set (letters with repetition, 10 questions) has impossible keys (for example 1,562.5 ways) and is not used. The 8-shift floor is met in papers opened, but the topic is thinly asked. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** Count choices place by place and multiply. Then ask two questions: does order matter (arrange) or not (select)? Is there a rule (fixed place, together, at least, always in)?
+### Base operations
+1. **And multiplies, or adds.** 9 first digits and 5 second digits: 45 codes.
+2. **Arrange all n different things:** n!. With repeats: n! / (a! b! ...).
+3. **Arrange r of n:** nPr = n x (n - 1) x ... (r factors).
+4. **Select r of n:** nCr = nPr / r!; nCr = nC(n - r).
+5. **Together:** tie into a block, arrange units, multiply by arrangements inside.
+6. **At least one:** all - none.
+7. **Round a table:** (n - 1)!.
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Words in the question</td>
+<td>Rule</td>
+</tr>
+<tr>
+<td>words, numbers, codes, seating, ranks</td>
+<td>arrange (order matters)</td>
+</tr>
+<tr>
+<td>team, committee, group, handful</td>
+<td>select (order does not matter)</td>
+</tr>
+<tr>
+<td>always together</td>
+<td>block</td>
+</tr>
+<tr>
+<td>never all together</td>
+<td>all - together</td>
+</tr>
+<tr>
+<td>at least one</td>
+<td>all - none</td>
+</tr>
+<tr>
+<td>always included / excluded</td>
+<td>put in / take out of the pool</td>
+</tr>
+</table>
+### Non-linear warnings
+- 5! = 120, 6! = 720, 7! = 5,040, 8! = 40,320, 9! = 362,880, 10! = 3,628,800: the numbers grow fast, so a slip of one factor is never close.
+- Selecting counts AB and BA once; arranging counts them twice.
+## 2. Archetypes
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
 <td>PN2</td>
 <td>Arranging all letters, with repeats</td>
 <td>Seen once (2018)</td>
@@ -9440,17 +10306,6 @@ Two numbers are in the ratio 5 : 8 and their LCM is 480. Find their HCF.
 <tr>
 <td>PN5</td>
 <td>Together; two groups each together</td>
-<td>PB7</td>
-<td>One after another, with or without replacement</td>
-<td>Bank only</td>
-<td>0</td>
-<td>0</td>
-<td>30</td>
-<td>Insurance</td>
-</tr>
-<tr>
-<td>PB1</td>
-<td>One item: dice, cards, numbered balls</td>
 <td>Bank only</td>
 <td>0</td>
 <td>0</td>
@@ -9478,35 +10333,6 @@ Two numbers are in the ratio 5 : 8 and their LCM is 480. Find their HCF.
 <tr>
 <td>PN8</td>
 <td>At least, at most</td>
-<td>PB2</td>
-<td>Coins and dice outcomes</td>
-<td>Bank only</td>
-<td>0</td>
-<td>0</td>
-<td>20</td>
-<td>Insurance</td>
-</tr>
-<tr>
-<td>PB4</td>
-<td>Same colour, either-or</td>
-<td>Bank only</td>
-<td>0</td>
-<td>0</td>
-<td>20</td>
-<td>Insurance</td>
-</tr>
-<tr>
-<td>PB5</td>
-<td>At least, at most, exactly</td>
-<td>Bank only</td>
-<td>0</td>
-<td>0</td>
-<td>20</td>
-<td>Insurance</td>
-</tr>
-<tr>
-<td>PB8</td>
-<td>Either, neither, overlaps</td>
 <td>Bank only</td>
 <td>0</td>
 <td>0</td>
@@ -9550,6 +10376,314 @@ In how many ways can the letters of GARDEN be arranged so that the vowels are to
 - **30-second exam method.** AE as a block + G, R, D, N: 5! x 2 = 240. **Answer (A).**
 - **Option elimination hack.** The answer is a multiple of 2 x 5! = 240.
 - **IBPS trap warning.** (B) forgets that the block can be AE or EA.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>PN1</td>
+<td>digits, codes</td>
+<td>place by place, rule first</td>
+</tr>
+<tr>
+<td>PN2</td>
+<td>arrange all letters</td>
+<td>n! / repeats!</td>
+</tr>
+<tr>
+<td>PN4</td>
+<td>begins with, ends with</td>
+<td>fix, arrange the rest</td>
+</tr>
+<tr>
+<td>PN5</td>
+<td>together</td>
+<td>block x inside</td>
+</tr>
+<tr>
+<td>PN7</td>
+<td>team from groups</td>
+<td>nCr x nCr</td>
+</tr>
+<tr>
+<td>PN8</td>
+<td>at least one</td>
+<td>all - none</td>
+</tr>
+<tr>
+<td>PN9</td>
+<td>always in / out</td>
+<td>shrink the pool</td>
+</tr>
+</table>
+**Fallback.** Write the places as blanks, put the number of choices in each, multiply; divide by r! if order does not matter.
+## 5. Practice Ladder
+12 bank questions in three rungs. IDs: G-name-n is question n of the Guidely permutation and combination set with that name.
+**Rung 1. Untimed until all correct.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-numbers-4</td>
+<td>PN1</td>
+<td>45</td>
+</tr>
+<tr>
+<td>G-letters-different-ways-6</td>
+<td>PN2</td>
+<td>360</td>
+</tr>
+<tr>
+<td>G-ends-and-starts-2</td>
+<td>PN4</td>
+<td>120</td>
+</tr>
+<tr>
+<td>G-committee-2</td>
+<td>PN7</td>
+<td>300</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-letter-without-repetition-2</td>
+<td>PN2</td>
+<td>226800</td>
+</tr>
+<tr>
+<td>G-included-and-excluded-1</td>
+<td>PN9</td>
+<td>210</td>
+</tr>
+<tr>
+<td>G-included-and-excluded-2</td>
+<td>PN9</td>
+<td>1287</td>
+</tr>
+<tr>
+<td>G-selection-4</td>
+<td>PN8</td>
+<td>155</td>
+</tr>
+<tr>
+<td>G-ends-and-starts-1</td>
+<td>PN4</td>
+<td>2520</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-committee-1</td>
+<td>PN8</td>
+<td>531</td>
+</tr>
+<tr>
+<td>G-persons-6</td>
+<td>PN8</td>
+<td>96</td>
+</tr>
+<tr>
+<td>G-numbers-10</td>
+<td>PN1</td>
+<td>84</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026.
+### What was tested
+- **Search.** All 35 papers were converted to text and searched for "in how many ways", "number of ways", "arrangement" and "committee"; the two questions above are the only counting questions (other hits were puzzle and series wording).
+- **Answers.** Every Guidely question used on the lesson path (42) was re-computed by formula in the build script; all agree with their keys.
+- **Bank faults found.** The "letters with repetition" set has keys such as 1,562.5 and 607.2 ways, which cannot be counts; it is excluded. The ENCAPSULATION question's key treats repeated letters as different.
+- **Drills.** All 4 drills were computed by script.
+### What could not be opened or checked
+- Guidely questions off the lesson path were not re-solved.
+- No Mains papers were used.
+### Source links (pages opened)
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json`; the 2017 and 2018 Guidely papers are among them. The 12 sister papers are listed in the Simple & Compound Interest module.
+## 7. Pattern Index: archetypes and question IDs
+- PN1: G-numbers-1, 2, 4, 10
+- PN2: G-letters-different-ways-4, 5, 6, 10 · G-letter-without-repetition-2
+- PN4: G-ends-and-starts-1, 2, 3, 4, 5
+- PN7: G-persons-1 · G-committee-2, 3 · G-selection-1
+- PN8: G-selection-4, 8 · G-committee-1 · G-persons-5, 6
+- PN9: G-included-and-excluded-1, 2, 3, 6, 8
+# Probability - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 2 IBPS Clerk Prelims questions from 2 papers (2018, Guidely: two balls from a bag after finding a count; 12 Dec 2021 Set 2, Guidely: two balls of one colour); none in the 2022 to 2025 Clerk papers and none in the 12 sister papers. Bank questions used: 182 (180 Guidely in 17 sets, 2 Sreedhar); the clerk bank has none. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** Probability = favourable outcomes / all outcomes, when each outcome is equally likely. Count both with the rules of Permutations & Combinations.
+### Base operations
+1. **One item:** count the wanted ones, divide by all.
+2. **n coins:** 2ⁿ outcomes; exactly r heads: nCr / 2ⁿ. **Two dice:** 36 outcomes.
+3. **Several drawn at once:** selections wanted / nCr.
+4. **Or (no overlap):** add. **Or (with overlap):** A + B - both. **Not:** 1 - P.
+5. **One after another:** multiply; without replacement, reduce the counts after each draw.
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Words</td>
+<td>Rule</td>
+</tr>
+<tr>
+<td>at least one</td>
+<td>1 - none</td>
+</tr>
+<tr>
+<td>same colour</td>
+<td>add each colour's pairs</td>
+</tr>
+<tr>
+<td>different colours (one of each)</td>
+<td>multiply the counts</td>
+</tr>
+<tr>
+<td>either A or B</td>
+<td>A + B - both</td>
+</tr>
+<tr>
+<td>with replacement</td>
+<td>same chances each draw; multiply</td>
+</tr>
+<tr>
+<td>without replacement</td>
+<td>one fewer each draw; multiply</td>
+</tr>
+</table>
+### Two-dice sums
+<table header-row="true">
+<tr>
+<td>Sum</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Ways</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</table>
+### Non-linear warnings
+- Drawing two at once is not (1/2) x (1/2): the second draw has one fewer.
+- "Either" with an overlap double-counts unless the overlap is removed.
+## 2. Archetypes
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
+<td>PB3</td>
+<td>Drawing two or three from a bag</td>
+<td>Confirmed (2 papers, 2018 and 2021)</td>
+<td>2</td>
+<td>0</td>
+<td>40</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>PB6</td>
+<td>A count is missing</td>
+<td>Seen once (inside the 2018 question)</td>
+<td>1</td>
+<td>0</td>
+<td>20</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>PB7</td>
+<td>One after another, with or without replacement</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>30</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB1</td>
+<td>One item: dice, cards, numbered balls</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB2</td>
+<td>Coins and dice outcomes</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB4</td>
+<td>Same colour, either-or</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB5</td>
+<td>At least, at most, exactly</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PB8</td>
+<td>Either, neither, overlaps</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>10</td>
+<td>Insurance</td>
+</tr>
+</table>
 Bank counts are by Guidely set. The two paper questions are both bag draws; one also first finds a missing count, so PB6 is Seen once.
 ### Core archetypes
 **PB3. Drawing from a bag. Confirmed (2 papers).** *Shortcut engine:* wanted selections / nCr. *Worked example (IBPS Clerk Prelims 12 Dec 2021 Set 2, Guidely):* 5 red of 10 balls, two drawn, both red: 5C2 / 10C2 = 10/45 = 2/9.
@@ -9584,6 +10718,234 @@ Two cards are drawn one after the other without replacement. What is the probabi
 - **30-second exam method.** 4/52 x 3/51 = 12/2652 = 1/221. **Answer (A).**
 - **Option elimination hack.** Must be below (1/13)² = 1/169: (A), (D) or (E); compute.
 - **IBPS trap warning.** (B) assumes replacement.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>PB3</td>
+<td>two drawn from a bag</td>
+<td>wanted pairs / nC2</td>
+</tr>
+<tr>
+<td>PB6</td>
+<td>probability given, count asked</td>
+<td>write with the unknown and match</td>
+</tr>
+<tr>
+<td>PB5</td>
+<td>at least one</td>
+<td>1 - none</td>
+</tr>
+<tr>
+<td>PB7</td>
+<td>one by one</td>
+<td>multiply; reduce counts without replacement</td>
+</tr>
+<tr>
+<td>PB8</td>
+<td>either, neither</td>
+<td>A + B - both; 1 - either</td>
+</tr>
+</table>
+**Fallback.** Count all outcomes as P&C would; count the wanted ones the same way; divide.
+## 5. Practice Ladder
+11 bank questions in three rungs. IDs: G-name-n is question n of the Guidely probability set with that name.
+**Rung 1. Untimed until all correct.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-dice-1</td>
+<td>PB1</td>
+<td>1/2</td>
+</tr>
+<tr>
+<td>G-balls-2</td>
+<td>PB3</td>
+<td>2/7</td>
+</tr>
+<tr>
+<td>G-coins-1</td>
+<td>PB2</td>
+<td>3/8</td>
+</tr>
+<tr>
+<td>G-variables-5</td>
+<td>PB6</td>
+<td>4</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-balls-4</td>
+<td>PB4</td>
+<td>31/66</td>
+</tr>
+<tr>
+<td>G-atleast-or-atmost-2</td>
+<td>PB5</td>
+<td>5/12</td>
+</tr>
+<tr>
+<td>G-with-replacement-1</td>
+<td>PB7</td>
+<td>1/18</td>
+</tr>
+<tr>
+<td>G-cards-9</td>
+<td>PB3</td>
+<td>1/221</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.**
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-without-replacement-1</td>
+<td>PB7</td>
+<td>16/63</td>
+</tr>
+<tr>
+<td>G-atleast-or-atmost-9</td>
+<td>PB5</td>
+<td>84/143</td>
+</tr>
+<tr>
+<td>G-same-or-different-colour-3</td>
+<td>PB4</td>
+<td>1/13</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026.
+### What was tested
+- **Search.** All 35 papers were converted to text and searched for "probability"; the two questions above are the only ones (other hits were syllogism wording such as "is a probability").
+- **Answers.** Every Guidely question on the lesson path (39) was re-computed with exact fractions in the build script; all agree with their keys.
+- **Drills.** All 4 were computed by script.
+### What failed and was fixed
+- Drill 2 first had two equal options (5/33 and 10/66); one was replaced by 1/11.
+### What could not be opened or checked
+- Guidely questions off the lesson path were not re-solved; one (variables set Q9, "Maths or Biology only") has a wording that allows two answers.
+### Source links (pages opened)
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json`; the 2018 and Dec 2021 Guidely papers are among them.
+## 7. Pattern Index: archetypes and question IDs
+- PB1: G-dice-1 · G-cards-8 · G-balls-8, 18
+- PB2: G-coins-1, 5, 7 · G-dice-5, 8
+- PB3: G-balls-1, 2, 10 · G-cards-2, 9
+- PB4: G-balls-4, 5 · G-same-or-different-colour-3, 4
+- PB5: G-atleast-or-atmost-1, 2, 5, 7, 9
+- PB6: G-variables-1, 5, 8 · G-balls-13, 16
+- PB7: G-with-replacement-1, 4, 7 · G-without-replacement-1, 2
+- PB8: G-cards-4 · G-dice-2
+# Number Series - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 70 IBPS Clerk Prelims number series questions from 15 paper labels (in your bank as PYQ-SER-01 to 70; 42 missing-number, 28 wrong-number), and about 24 sister-exam questions from 7 papers (SBI Clerk Feb 2025, IBPS RRB Clerk Dec 2025 three shifts, IBPS PO 2025 and 2026). Bank questions used: 100 clerk questions (30 constructed, 70 PYQ), every one classified by a rule-finding script. The floor is met many times over. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** A series hides one rule. Test in a fixed order and stop at the first that fits: **gaps, gaps of gaps, ratios, multiply-and-add, taking turns**. The size of the growth tells you where to start.
+### The test order
+1. **Growth under double each step:** write the gaps. Steady gaps or evenly growing gaps settle most of these.
+2. **Gaps uneven:** write the gaps of the gaps; or recognise the gaps as squares, cubes, primes or doubling.
+3. **Growth x2 or more each step:** write the ratios (next / previous). Ratios 2, 3, 4 ...; 1/7, 1/6, 1/5 ...; 0.5, 1, 1.5 ...
+4. **Ratios almost whole:** multiply-and-add. Guess the multiplier, see what is left over: x2 + 1, x1 + 1, x2 + 2, x3 + 3 ...
+5. **Zig-zag:** gaps with alternating signs, or two series woven together, or two operations taking turns.
+### Recognition grid
+<table header-row="true">
+<tr>
+<td>Gaps or ratios</td>
+<td>Rule</td>
+</tr>
+<tr>
+<td>1, 4, 9, 16, 25</td>
+<td>squares</td>
+</tr>
+<tr>
+<td>1, 8, 27, 64, 125</td>
+<td>cubes</td>
+</tr>
+<tr>
+<td>2, 3, 5, 7, 11, 13</td>
+<td>primes</td>
+</tr>
+<tr>
+<td>4, 9, 25, 49, 121</td>
+<td>squares of primes</td>
+</tr>
+<tr>
+<td>1, 2, 6, 24, 120</td>
+<td>x2, x3, x4 ... on the gaps</td>
+</tr>
+<tr>
+<td>ratios 0.5, 1, 2, 4</td>
+<td>the multiplier doubles</td>
+</tr>
+</table>
+### Non-linear warnings
+- A wrong number spoils **two** neighbouring gaps; one corrected term must fix both.
+- With the blank inside, check the filled value against both neighbours.
+## 2. Archetypes
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
+<td>NS1</td>
+<td>Gaps steady or growing evenly</td>
+<td>Confirmed (11 Clerk papers)</td>
+<td>20</td>
+<td>5</td>
+<td>28</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>NS4</td>
+<td>Multiply or divide by changing numbers</td>
+<td>Confirmed (11 Clerk papers)</td>
+<td>12</td>
+<td>3</td>
+<td>15</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>NS2</td>
+<td>Gaps that are squares, cubes, primes or doubling</td>
+<td>Confirmed (9 Clerk papers)</td>
+<td>16</td>
+<td>7</td>
+<td>21</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>NS3</td>
+<td>Multiply, then add</td>
+<td>Confirmed (8 Clerk papers)</td>
+<td>13</td>
+<td>5</td>
+<td>20</td>
+<td>Core</td>
+</tr>
+<tr>
 <td>NS6</td>
 <td>Two patterns taking turns</td>
 <td>Confirmed (8 Clerk papers)</td>
@@ -9658,230 +11020,6 @@ Six original questions, one per Confirmed archetype and the wrong-number form; e
 <td>Do this</td>
 </tr>
 <tr>
-<td>RP1</td>
-<td>two ratios sharing a person; an average</td>
-<td>make the shared term equal; average x count = total; total / parts</td>
-</tr>
-<tr>
-<td>RP2</td>
-<td>an amount shared; "more than" between shares</td>
-<td>total / parts; take differences off the total first</td>
-</tr>
-<tr>
-<td>RP3</td>
-<td>added to each / moved across / joined</td>
-<td>keep the difference / the total / the fixed term equal across the two ratios</td>
-</tr>
-<tr>
-<td>RP4</td>
-<td>income, spends, saves</td>
-<td>income = expenditure + savings in parts; equal savings means equal (income - expenditure) parts</td>
-</tr>
-<tr>
-<td>RP5</td>
-<td>boys and girls inside sections</td>
-<td>outer split first, then each inner ratio; a shared count gives the difference</td>
-</tr>
-<tr>
-<td>RP6</td>
-<td>different % on each term</td>
-<td>multiply each term by its own factor</td>
-</tr>
-<tr>
-<td>RP7</td>
-<td>coins; shares per head</td>
-<td>value of one set; per-head ratio x heads</td>
-</tr>
-<tr>
-<td>RP8</td>
-<td>third / fourth / mean proportional</td>
-<td>b x b / a; b x c / a; square root of a x b</td>
-</tr>
-</table>
-**Traps.** Which person is asked (the smaller number, B's share). Squares of parts. Percent changes added to a ratio. Saving ratio confused with income ratio.
-**Fallback.** When a new form appears, write every quantity as parts of one person and use the single fact the question gives (a total, a difference, an unchanged term) to find one part.
-## 5. Practice Ladder
-36 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-RAT and PYQ-RAT are `source.id` values in `clerk/questions.json`; G-name-n is question n of the Guidely ratio set with that name.
-<td>AV1</td>
-<td>joins / leaves / replaced</td>
-<td>newcomer = old average + new count x rise; replaced: difference = count x change</td>
-</tr>
-<tr>
-<td>AV2</td>
-<td>two groups and an overall average</td>
-<td>sizes in the opposite ratio of the distances</td>
-</tr>
-<tr>
-<td>AV5</td>
-<td>consecutive numbers</td>
-<td>average is the middle; step out by the gap</td>
-</tr>
-<tr>
-<td>AV4</td>
-<td>ratio or difference between the numbers</td>
-<td>total first, then split</td>
-</tr>
-<tr>
-<td>AV3</td>
-<td>overlapping groups</td>
-<td>add group totals, subtract the whole</td>
-</tr>
-<tr>
-<td>AV6</td>
-<td>batsman, innings</td>
-<td>score = new average + earlier innings x rise</td>
-</tr>
-<tr>
-<td>AV7</td>
-<td>misread, reversed digits</td>
-<td>change in total / count; reversed digits: 9 x digit gap</td>
-</tr>
-</table>
-**Traps.** Counting the newcomer when spreading a rise. The plain average of two group averages. Asking for the new average when the newcomer's value is wanted, and the other way round.
-**Fallback.** Write every average as a total, do the story with totals, divide once at the end.
-## 5. Practice Ladder
-32 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-AVG and PYQ-AVG are `source.id` values in `clerk/questions.json`.
-**Rung 1. Untimed until all correct.** One engine, small numbers.
-<td>M1</td>
-<td>"equal to the breadth", "2 cm more than the side"</td>
-<td>solve the given figure, carry the length, finish the other</td>
-</tr>
-<tr>
-<td>M2</td>
-<td>ratio and perimeter; ratio and area</td>
-<td>half-perimeter split by parts; area = parts x parts x unit²</td>
-</tr>
-<tr>
-<td>M3</td>
-<td>% change in sides</td>
-<td>multiply factors; backwards divide</td>
-</tr>
-<tr>
-<td>M4</td>
-<td>circle, semicircle</td>
-<td>circumference = 44/7 r; semicircle perimeter = 36/7 r</td>
-</tr>
-<tr>
-<td>M5</td>
-<td>two squares in a ratio</td>
-<td>sides in parts; areas in the squared ratio</td>
-</tr>
-<tr>
-<td>M6</td>
-<td>path, border, cost</td>
-<td>outer - inner; area x rate</td>
-</tr>
-<tr>
-<td>M9</td>
-<td>bent, melted, rolled</td>
-<td>length or volume stays the same</td>
-</tr>
-</table>
-**Traps.** Perimeter given twice ("twice the perimeter is 96"). Radius vs diameter. The square of a ratio. Semicircle perimeter including the diameter.
-**Fallback.** Draw both figures, mark the one shared length, and write every other length in terms of it.
-## 5. Practice Ladder
-29 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-MEN and PYQ-MEN are `source.id` values in `clerk/questions.json`.
-**Rung 1. Untimed until all correct.** One formula, small numbers.
-<td>LH4</td>
-<td>together again</td>
-<td>LCM, add to the start</td>
-</tr>
-<tr>
-<td>LH5</td>
-<td>largest equal piece</td>
-<td>HCF; count = total / HCF</td>
-</tr>
-<tr>
-<td>LH2</td>
-<td>HCF, LCM and one number</td>
-<td>other = HCF x LCM / number</td>
-</tr>
-<tr>
-<td>LH3</td>
-<td>ratio and HCF or LCM</td>
-<td>part = HCF; LCM = a x b x HCF</td>
-</tr>
-<tr>
-<td>LH6</td>
-<td>remainders</td>
-<td>HCF of differences; LCM + k; LCM - d</td>
-</tr>
-<tr>
-<td>LH7</td>
-<td>fractions</td>
-<td>LCM(num)/HCF(den); HCF(num)/LCM(den)</td>
-</tr>
-</table>
-**Fallback.** When unsure which one, ask: is the answer bigger than the numbers (LCM) or smaller (HCF)?
-## 5. Practice Ladder
-19 questions in three rungs. IDs: CON-LCM are `source.id` values in `clerk/questions.json` (constructed for this course); S-MTm-q is question q of Sreedhar model test m.
-<td>PN1</td>
-<td>digits, codes</td>
-<td>place by place, rule first</td>
-</tr>
-<tr>
-<td>PN2</td>
-<td>arrange all letters</td>
-<td>n! / repeats!</td>
-</tr>
-<tr>
-<td>PN4</td>
-<td>begins with, ends with</td>
-<td>fix, arrange the rest</td>
-</tr>
-<tr>
-<td>PN5</td>
-<td>together</td>
-<td>block x inside</td>
-</tr>
-<tr>
-<td>PN7</td>
-<td>team from groups</td>
-<td>nCr x nCr</td>
-</tr>
-<tr>
-<td>PN8</td>
-<td>at least one</td>
-<td>all - none</td>
-</tr>
-<tr>
-<td>PN9</td>
-<td>always in / out</td>
-<td>shrink the pool</td>
-</tr>
-</table>
-**Fallback.** Write the places as blanks, put the number of choices in each, multiply; divide by r! if order does not matter.
-## 5. Practice Ladder
-12 bank questions in three rungs. IDs: G-name-n is question n of the Guidely permutation and combination set with that name.
-<td>PB3</td>
-<td>two drawn from a bag</td>
-<td>wanted pairs / nC2</td>
-</tr>
-<tr>
-<td>PB6</td>
-<td>probability given, count asked</td>
-<td>write with the unknown and match</td>
-</tr>
-<tr>
-<td>PB5</td>
-<td>at least one</td>
-<td>1 - none</td>
-</tr>
-<tr>
-<td>PB7</td>
-<td>one by one</td>
-<td>multiply; reduce counts without replacement</td>
-</tr>
-<tr>
-<td>PB8</td>
-<td>either, neither</td>
-<td>A + B - both; 1 - either</td>
-</tr>
-</table>
-**Fallback.** Count all outcomes as P&C would; count the wanted ones the same way; divide.
-## 5. Practice Ladder
-11 bank questions in three rungs. IDs: G-name-n is question n of the Guidely probability set with that name.
-**Rung 1. Untimed until all correct.**
 <td>NS1</td>
 <td>slow, steady growth</td>
 <td>gaps; gaps of gaps</td>
@@ -9918,136 +11056,6 @@ Six original questions, one per Confirmed archetype and the wrong-number form; e
 <td>Answer</td>
 </tr>
 <tr>
-<td>CON-RAT-04</td>
-<td>RP9</td>
-<td>11 : 14</td>
-</tr>
-<tr>
-<td>CON-RAT-06</td>
-<td>RP9</td>
-<td>6 : 4 : 3</td>
-</tr>
-<tr>
-<td>CON-RAT-07</td>
-<td>RP9</td>
-<td>4 : 3 : 2</td>
-</tr>
-<tr>
-<td>CON-RAT-08</td>
-<td>RP9</td>
-<td>29 : 11</td>
-</tr>
-<tr>
-<td>CON-RAT-01</td>
-<td>RP1</td>
-<td>6 : 8 : 9</td>
-</tr>
-<tr>
-<td>CON-RAT-25</td>
-<td>RP1</td>
-<td>20 : 27</td>
-</tr>
-<tr>
-<td>CON-RAT-02</td>
-<td>RP2</td>
-<td>₹960</td>
-</tr>
-<tr>
-<td>CON-RAT-14</td>
-<td>RP2</td>
-<td>None of these</td>
-</tr>
-<tr>
-<td>CON-RAT-09</td>
-<td>RP3</td>
-<td>96</td>
-</tr>
-<tr>
-<td>CON-RAT-16</td>
-<td>RP3</td>
-<td>10 : 7</td>
-<td>CON-AVG-01</td>
-<td>AV9</td>
-<td>33</td>
-</tr>
-<tr>
-<td>CON-AVG-08</td>
-<td>AV9</td>
-<td>23</td>
-</tr>
-<tr>
-<td>CON-AVG-05</td>
-<td>AV1</td>
-<td>66 kg</td>
-</tr>
-<tr>
-<td>CON-AVG-06</td>
-<td>AV1</td>
-<td>40</td>
-</tr>
-<tr>
-<td>PYQ-AVG-04</td>
-<td>AV1</td>
-<td>53 kg</td>
-</tr>
-<tr>
-<td>CON-AVG-07</td>
-<td>AV2</td>
-<td>64</td>
-</tr>
-<tr>
-<td>CON-AVG-02</td>
-<td>AV5</td>
-<td>11</td>
-</tr>
-<tr>
-<td>CON-AVG-03</td>
-<td>AV5</td>
-<td>31</td>
-</tr>
-<tr>
-<td>PYQ-AVG-12</td>
-<td>AV3</td>
-<td>60</td>
-</tr>
-</table>
-**Rung 2. 60 seconds each.** The Confirmed archetypes in exam wording.
-<td>CON-MEN-01</td>
-<td>M2</td>
-<td>600 cm²</td>
-</tr>
-<tr>
-<td>CON-MEN-02</td>
-<td>M2</td>
-<td>144 cm²</td>
-</tr>
-<tr>
-<td>PYQ-MEN-18</td>
-<td>M2</td>
-<td>104 cm</td>
-</tr>
-<tr>
-<td>CON-MEN-03</td>
-<td>M4</td>
-<td>44 cm</td>
-</tr>
-<tr>
-<td>PYQ-MEN-14</td>
-<td>M1</td>
-<td>144 cm²</td>
-</tr>
-<tr>
-<td>PYQ-MEN-13</td>
-<td>M1</td>
-<td>81 cm²</td>
-</tr>
-<tr>
-<td>CON-MEN-04</td>
-<td>M7</td>
-<td>30 cm²</td>
-</tr>
-</table>
-**Rung 2. 60 seconds each.** The Confirmed archetypes as the papers set them.
 <td>CON-SER-04</td>
 <td>NS1</td>
 <td>62</td>
@@ -10081,504 +11089,6 @@ Six original questions, one per Confirmed archetype and the wrong-number form; e
 <td>Answer</td>
 </tr>
 <tr>
-<td>PYQ-RAT-02</td>
-<td>RP1</td>
-<td>9 : 4 : 5</td>
-</tr>
-<tr>
-<td>PYQ-RAT-03</td>
-<td>RP1</td>
-<td>24</td>
-</tr>
-<tr>
-<td>PYQ-RAT-05</td>
-<td>RP1</td>
-<td>12</td>
-</tr>
-<tr>
-<td>PYQ-RAT-10</td>
-<td>RP1</td>
-<td>Rs 31,500</td>
-</tr>
-<tr>
-<td>PYQ-RAT-01</td>
-<td>RP3</td>
-<td>54</td>
-</tr>
-<tr>
-<td>PYQ-RAT-07</td>
-<td>RP3</td>
-<td>420</td>
-</tr>
-<tr>
-<td>CON-RAT-21</td>
-<td>RP3</td>
-<td>₹2,250</td>
-</tr>
-<tr>
-<td>CON-RAT-28</td>
-<td>RP3</td>
-<td>150</td>
-</tr>
-<tr>
-<td>PYQ-RAT-09</td>
-<td>RP4</td>
-<td>8 : 3</td>
-</tr>
-<tr>
-<td>PYQ-RAT-04</td>
-<td>RP4</td>
-<td>47 : 32</td>
-</tr>
-<tr>
-<td>CON-RAT-10</td>
-<td>RP4</td>
-<td>₹10,000</td>
-</tr>
-<tr>
-<td>CON-RAT-24</td>
-<td>RP4</td>
-<td>1 : 1</td>
-</tr>
-<tr>
-<td>PYQ-RAT-08</td>
-<td>RP5</td>
-<td>60</td>
-</tr>
-<tr>
-<td>PYQ-RAT-06</td>
-<td>RP5</td>
-<td>3 : 1</td>
-</tr>
-<tr>
-<td>CON-RAT-18</td>
-<td>RP5</td>
-<td>78%</td>
-</tr>
-<tr>
-<td>PYQ-RAT-11</td>
-<td>RP2</td>
-<td>17 : 9 : 25</td>
-</tr>
-<tr>
-<td>CON-RAT-17</td>
-<td>RP2</td>
-<td>₹2,400</td>
-<td>PYQ-AVG-06</td>
-<td>AV1</td>
-<td>55 kg</td>
-</tr>
-<tr>
-<td>PYQ-AVG-08</td>
-<td>AV1</td>
-<td>13</td>
-</tr>
-<tr>
-<td>PYQ-AVG-13</td>
-<td>AV1</td>
-<td>84</td>
-</tr>
-<tr>
-<td>PYQ-AVG-05</td>
-<td>AV1</td>
-<td>122 kg</td>
-</tr>
-<tr>
-<td>CON-AVG-09</td>
-<td>AV1</td>
-<td>80 kg</td>
-</tr>
-<tr>
-<td>PYQ-AVG-03</td>
-<td>AV2</td>
-<td>3 : 1</td>
-</tr>
-<tr>
-<td>PYQ-AVG-11</td>
-<td>AV2</td>
-<td>35 kg</td>
-</tr>
-<tr>
-<td>PYQ-AVG-14</td>
-<td>AV2</td>
-<td>30 years</td>
-</tr>
-<tr>
-<td>PYQ-AVG-09</td>
-<td>AV2</td>
-<td>38 kg</td>
-</tr>
-<tr>
-<td>PYQ-AVG-01</td>
-<td>AV4</td>
-<td>48</td>
-</tr>
-<tr>
-<td>PYQ-AVG-15</td>
-<td>AV4</td>
-<td>39</td>
-</tr>
-<tr>
-<td>PYQ-AVG-07</td>
-<td>AV5</td>
-<td>60</td>
-</tr>
-<tr>
-<td>CON-AVG-14</td>
-<td>AV3</td>
-<td>31 kg</td>
-</tr>
-<tr>
-<td>CON-AVG-15</td>
-<td>AV3</td>
-<td>34°C</td>
-<td>PYQ-MEN-05</td>
-<td>M1</td>
-<td>80</td>
-</tr>
-<tr>
-<td>PYQ-MEN-01</td>
-<td>M1</td>
-<td>144</td>
-</tr>
-<tr>
-<td>PYQ-MEN-07</td>
-<td>M1</td>
-<td>8 cm</td>
-</tr>
-<tr>
-<td>PYQ-MEN-09</td>
-<td>M1</td>
-<td>48</td>
-</tr>
-<tr>
-<td>PYQ-MEN-17</td>
-<td>M1</td>
-<td>24</td>
-</tr>
-<tr>
-<td>PYQ-MEN-20</td>
-<td>M1</td>
-<td>128 cm²</td>
-</tr>
-<tr>
-<td>PYQ-MEN-19</td>
-<td>M2</td>
-<td>720 cm²</td>
-</tr>
-<tr>
-<td>PYQ-MEN-08</td>
-<td>M2</td>
-<td>500</td>
-</tr>
-<tr>
-<td>PYQ-MEN-06</td>
-<td>M3</td>
-<td>68</td>
-</tr>
-<tr>
-<td>PYQ-MEN-16</td>
-<td>M3</td>
-<td>20%</td>
-</tr>
-<tr>
-<td>PYQ-MEN-11</td>
-<td>M4</td>
-<td>616 cm²</td>
-</tr>
-<tr>
-<td>PYQ-MEN-02</td>
-<td>M5</td>
-<td>896</td>
-</tr>
-<tr>
-<td>PYQ-MEN-03</td>
-<td>M5</td>
-<td>80 cm</td>
-</tr>
-</table>
-**Rung 3. 45 seconds each.** Mixed, including Insurance.
-<table header-row="true">
-<tr>
-<td>ID</td>
-<td>Engine</td>
-<td>Answer</td>
-</tr>
-<tr>
-<td>G-percentage-10</td>
-<td>RP6</td>
-<td>105: 92: 75</td>
-</tr>
-<tr>
-<td>G-percentage-7</td>
-<td>RP6</td>
-<td>6:7</td>
-</tr>
-<tr>
-<td>G-increase-decrease-5</td>
-<td>RP6</td>
-<td>12:5</td>
-</tr>
-<tr>
-<td>G-coins-2</td>
-<td>RP7</td>
-<td>240</td>
-</tr>
-<tr>
-<td>G-coins-8</td>
-<td>RP7</td>
-<td>400</td>
-</tr>
-<tr>
-<td>CON-RAT-19</td>
-<td>RP10</td>
-<td>₹280</td>
-</tr>
-<tr>
-<td>CON-RAT-22</td>
-<td>RP10</td>
-<td>None of these</td>
-</tr>
-<tr>
-<td>CON-RAT-29</td>
-<td>RP10</td>
-<td>None of these</td>
-</tr>
-<tr>
-<td>CON-RAT-30</td>
-<td>RP10</td>
-<td>6</td>
-<td>CON-AVG-20</td>
-<td>AV1</td>
-<td>20</td>
-</tr>
-<tr>
-<td>CON-AVG-28</td>
-<td>AV1</td>
-<td>None of these</td>
-</tr>
-<tr>
-<td>CON-AVG-11</td>
-<td>AV6</td>
-<td>37</td>
-</tr>
-<tr>
-<td>CON-AVG-22</td>
-<td>AV6</td>
-<td>174</td>
-</tr>
-<tr>
-<td>CON-AVG-10</td>
-<td>AV7</td>
-<td>51.8</td>
-</tr>
-<tr>
-<td>CON-AVG-27</td>
-<td>AV7</td>
-<td>3</td>
-</tr>
-<tr>
-<td>PYQ-AVG-02</td>
-<td>AV8</td>
-<td>-47</td>
-</tr>
-<tr>
-<td>CON-AVG-26</td>
-<td>AV3</td>
-<td>76</td>
-</tr>
-<tr>
-<td>CON-AVG-13</td>
-<td>AV2</td>
-<td>21</td>
-</tr>
-</table>
-## 6. Verification Log
-Built 6 Oct 2026. This module is checked, not guaranteed; a new exam variant can still fall outside it.
-### What was tested
-- **Answers.** All 41 clerk questions (30 constructed, 11 PYQ) were re-solved by script from their own numbers and compared with the bank key: 41 of 41 agree (four keys are "None of these", and the script confirms the true value is not among the options: CON-RAT-05 gives 64, CON-RAT-14 gives 4,500, CON-RAT-22 gives 515, CON-RAT-29 gives 484).
-- **Guidely questions on the lesson path.** The 10 used for practice were re-solved by script; all agree with their keys.
-- **Sister-exam questions.** All 4 were solved by hand and checked: IBPS PO 24 Aug 2025 S1 Q79 (Rs 40,000, matches the printed key), SBI Clerk 20 Sep 2025 S1 Q42 (320), SBI Clerk 20 Sep 2025 S2 Q51 (15 : 19), IBPS RRB Clerk 13 Dec 2025 S2 Q54 (Rs 22,500). The three Clerk-level papers printed no key in the text extracted; the answers are computed.
-- **Methods.** The equal-difference rule (RP3a) and the equal-total rule (RP3b) were applied to every RP3 clerk question and give the keyed answer on all 6. The equal-savings rule (RP4) gives the keyed answer on all 5 RP4 clerk questions.
-- **Drills.** All 6 drill answers were solved by script, and each elimination hack was checked to leave exactly one option (Drill 6 leaves two by range and is finished by the factor check, as stated).
-### What failed and was fixed
-- A first check matched CON-RAT-18 to 77.5% instead of 78% because the comparison allowed rounding; the check now takes the nearest option and agrees with the key.
-- Drill 3's first "30-second method" tried to scale the two ratios directly, which does not work when only the savings are equal; the method now states the equal (income - expenditure) rule.
-### What could not be opened or checked
-- The 126 Guidely and 37 Sreedhar ratio questions off the lesson path were classified by their set names and stems, not re-solved one by one.
-- No Mains papers were used. This module reflects Prelims only.
-- Paper counts use paper labels; "IBPS Clerk Prelims 2024, Guidely" carries two of the PYQs (RAT-08 and RAT-09) and is counted once.
-- The method books and channels in your Priority 3 list were not read or watched. The methods here are the standard parts and unit methods.
-### Source links (pages opened)
-- The 12 sister papers are the same Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
-- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
-## 7. Pattern Index: archetypes and question IDs
-- RP1: PYQ-RAT-02, 03, 05, 10 · CON-RAT-01, 25
-- RP2: PYQ-RAT-11 · CON-RAT-02, 14, 17
-- RP3: PYQ-RAT-01, 07 · CON-RAT-09, 16, 21, 28
-- RP4: PYQ-RAT-04, 09 · CON-RAT-10, 24, 26
-- RP5: PYQ-RAT-06, 08 · CON-RAT-18
-- RP6: CON-RAT-13 · G-percentage-7, 8, 10 · G-increase-decrease-5 · G-boys-girls-4
-- RP7: CON-RAT-11, 27 · G-coins-1, 2, 8 · G-boys-girls-6 · G-choclate-6
-- RP8: CON-RAT-03, 12, 15
-- RP9: CON-RAT-04, 06, 07, 08, 23
-- RP10: CON-RAT-05, 19, 20, 22, 29, 30
-- **Answers.** All 45 clerk questions (30 constructed, 15 PYQ) were re-solved by script from their own numbers; all 45 agree with the bank key. Four keys are "None of these" and the script confirms the true value is not an option: CON-AVG-04 (55), CON-AVG-12 (56), CON-AVG-21 (88), CON-AVG-28 (30).
-- **Sister-exam questions.** Six standalone questions were re-solved by script: IBPS PO 22 Aug 2026 S1 Q83 (18) and S2 Q90 (9), IBPS PO 23 Aug 2025 S2 Q95 (16), all matching the printed keys; SBI Clerk 20 Sep 2025 S1 Q36 (2,200), S2 Q53 (31) and IBPS RRB Clerk 6 Dec 2025 S1 Q59 (107), whose papers printed no key in the extracted text. The three quantity-comparison items were checked by hand.
-- **Methods.** The join rule (old average + new count x rise) and the replacement rule (count x change) were applied to every AV1 clerk question; all 14 agree. The opposite-distance rule gives the keyed answer on all AV2 clerk questions that ask for a ratio or a group average.
-- **Drills.** All 6 drills were solved by script and each elimination hack was checked.
-### What failed and was fixed
-- The first draft of Drill 3 had no correct option (its answer, 67, was missing). The options were rewritten and re-checked.
-- The batsman line in the conversion grid was first written for the old average; it now gives the score directly (score = new average + earlier innings x rise), checked on CON-AVG-11.
-### What could not be opened or checked
-- The 36 Sreedhar questions were classified by hand but not re-solved one by one; their keys are used as printed.
-- No Mains papers were used. This module reflects Prelims only.
-- The method books and channels in your Priority 3 list were not read or watched.
-<td>PYQ-MEN-10</td>
-<td>M6</td>
-<td>1804 m²</td>
-</tr>
-<tr>
-<td>CON-MEN-11</td>
-<td>M6</td>
-<td>1100 m²</td>
-</tr>
-<tr>
-<td>CON-MEN-25</td>
-<td>M3</td>
-<td>125%</td>
-</tr>
-<tr>
-<td>CON-MEN-16</td>
-<td>M8</td>
-<td>550 cm²</td>
-</tr>
-<tr>
-<td>CON-MEN-17</td>
-<td>M8</td>
-<td>19,404 cm³</td>
-</tr>
-<tr>
-<td>CON-MEN-10</td>
-<td>M9</td>
-<td>616 cm²</td>
-</tr>
-<tr>
-<td>CON-MEN-24</td>
-<td>M9</td>
-<td>6 cm</td>
-</tr>
-<tr>
-<td>PYQ-MEN-12</td>
-<td>M1</td>
-<td>1064</td>
-</tr>
-<tr>
-<td>PYQ-MEN-15</td>
-<td>M1</td>
-<td>1386 m²</td>
-</tr>
-</table>
-## 6. Verification Log
-Built 6 Oct 2026. This module is checked, not guaranteed.
-### What was tested
-- **Answers.** All 50 clerk questions (30 constructed, 20 PYQ) were re-solved by script with pi = 22/7; all 50 agree with the bank key. Four keys are "None of these" and the script confirms why: CON-MEN-06 (392), CON-MEN-13 (500 revolutions), CON-MEN-20 (204), CON-MEN-27 (1,300).
-- **Sister-exam questions.** All 11 were re-solved: SBI Clerk 22 Feb 2025 Q62 (35), IBPS PO 24 Aug 2025 S1 Q100 (24), IBPS PO 22 Aug 2026 S1 Q81 (196) and S2 Q96 (324), SBI Clerk 20 Sep 2025 S2 Q48 (18), SBI Clerk 21 Sep 2025 S1 Q46 (135), IBPS RRB Clerk 6 Dec 2025 S1 Q55 (616) and S2 Q53 (300), IBPS RRB Clerk 13 Dec 2025 S1 Q57 (84) and S2 Q60 (200), IBPS PO 23 Aug 2025 S2 Q91 (5 : 6). The four PO answers match their printed keys; the others printed no key in the extracted text.
-- **Drills.** All 6 were solved by script, and each hack checked.
-### What failed and was fixed
-- Drill 5's first elimination hack (the difference divides by 16) left four options standing, so it was replaced by a back-check.
-### What could not be opened or checked
-- The 310 Sreedhar and Guidely questions were sorted by a keyword script, not re-solved; 8 could not be placed. Keyword sorting can misplace a few questions, so treat those counts as close, not exact.
-- No Mains papers were used.
-### Source links (pages opened)
-- The 12 sister papers are the Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
-- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
-## 7. Pattern Index: archetypes and question IDs
-- AV1: PYQ-AVG-04, 05, 06, 08, 13 · CON-AVG-05, 06, 08, 09, 18, 19, 20, 24, 28
-- AV2: PYQ-AVG-03, 09, 10, 11, 14 · CON-AVG-07, 13
-- AV3: PYQ-AVG-12 · CON-AVG-12, 14, 15, 26
-- AV4: PYQ-AVG-01, 15 · CON-AVG-16
-- AV5: PYQ-AVG-07 · CON-AVG-02, 03, 25
-- AV6: CON-AVG-11, 21, 22
-- AV7: CON-AVG-10, 27
-- AV8: PYQ-AVG-02 · CON-AVG-30
-- AV9: CON-AVG-01, 04, 17, 23, 29
-- M1: PYQ-MEN-01, 04, 05, 07, 09, 12, 13, 14, 15, 17, 20 · CON-MEN-22, 30
-- M2: PYQ-MEN-08, 18, 19 · CON-MEN-01, 02
-- M3: PYQ-MEN-06, 16 · CON-MEN-12, 25
-- M4: PYQ-MEN-11 · CON-MEN-03, 26
-- M5: PYQ-MEN-02, 03 · CON-MEN-28
-- M6: PYQ-MEN-10 · CON-MEN-08, 11, 13, 15, 18, 27
-- M7: CON-MEN-04, 09, 14, 20, 21
-- M8: CON-MEN-05, 06, 07, 16, 17
-- M9: CON-MEN-10, 19, 23, 24, 29
-<td>CON-LCM-01</td>
-<td>LH1</td>
-<td>180</td>
-</tr>
-<tr>
-<td>CON-LCM-02</td>
-<td>LH1</td>
-<td>42</td>
-</tr>
-<tr>
-<td>CON-LCM-13</td>
-<td>LH4</td>
-<td>9:24 a.m.</td>
-</tr>
-<tr>
-<td>CON-LCM-16</td>
-<td>LH4</td>
-<td>3</td>
-</tr>
-<tr>
-<td>CON-LCM-18</td>
-<td>LH5</td>
-<td>48 cm</td>
-</tr>
-<tr>
-<td>CON-LCM-22</td>
-<td>LH5</td>
-<td>12</td>
-<td>G-numbers-4</td>
-<td>PN1</td>
-<td>45</td>
-</tr>
-<tr>
-<td>G-letters-different-ways-6</td>
-<td>PN2</td>
-<td>360</td>
-</tr>
-<tr>
-<td>G-ends-and-starts-2</td>
-<td>PN4</td>
-<td>120</td>
-</tr>
-<tr>
-<td>G-committee-2</td>
-<td>PN7</td>
-<td>300</td>
-<td>G-dice-1</td>
-<td>PB1</td>
-<td>1/2</td>
-</tr>
-<tr>
-<td>G-balls-2</td>
-<td>PB3</td>
-<td>2/7</td>
-</tr>
-<tr>
-<td>G-coins-1</td>
-<td>PB2</td>
-<td>3/8</td>
-</tr>
-<tr>
-<td>G-variables-5</td>
-<td>PB6</td>
-<td>4</td>
-</tr>
-</table>
-**Rung 2. 60 seconds each.**
 <td>PYQ-SER-29</td>
 <td>NS1</td>
 <td>43</td>
@@ -10637,144 +11147,6 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>Answer</td>
 </tr>
 <tr>
-<td>CON-LCM-05</td>
-<td>LH2</td>
-<td>60</td>
-</tr>
-<tr>
-<td>CON-LCM-08</td>
-<td>LH2</td>
-<td>44</td>
-</tr>
-<tr>
-<td>CON-LCM-09</td>
-<td>LH3</td>
-<td>120</td>
-</tr>
-<tr>
-<td>CON-LCM-10</td>
-<td>LH3</td>
-<td>132</td>
-</tr>
-<tr>
-<td>CON-LCM-24</td>
-<td>LH6</td>
-<td>13</td>
-</tr>
-<tr>
-<td>CON-LCM-25</td>
-<td>LH6</td>
-<td>64</td>
-</tr>
-<tr>
-<td>CON-LCM-26</td>
-<td>LH6</td>
-<td>86</td>
-<td>G-letter-without-repetition-2</td>
-<td>PN2</td>
-<td>226800</td>
-</tr>
-<tr>
-<td>G-included-and-excluded-1</td>
-<td>PN9</td>
-<td>210</td>
-</tr>
-<tr>
-<td>G-included-and-excluded-2</td>
-<td>PN9</td>
-<td>1287</td>
-</tr>
-<tr>
-<td>G-selection-4</td>
-<td>PN8</td>
-<td>155</td>
-</tr>
-<tr>
-<td>G-ends-and-starts-1</td>
-<td>PN4</td>
-<td>2520</td>
-<td>G-balls-4</td>
-<td>PB4</td>
-<td>31/66</td>
-</tr>
-<tr>
-<td>G-atleast-or-atmost-2</td>
-<td>PB5</td>
-<td>5/12</td>
-</tr>
-<tr>
-<td>G-with-replacement-1</td>
-<td>PB7</td>
-<td>1/18</td>
-</tr>
-<tr>
-<td>G-cards-9</td>
-<td>PB3</td>
-<td>1/221</td>
-</tr>
-</table>
-**Rung 3. 45 seconds each.**
-<table header-row="true">
-<tr>
-<td>ID</td>
-<td>Engine</td>
-<td>Answer</td>
-</tr>
-<tr>
-<td>S-MT66-46</td>
-<td>LH2</td>
-<td>1413</td>
-</tr>
-<tr>
-<td>S-MT55-45</td>
-<td>LH2</td>
-<td>740</td>
-</tr>
-<tr>
-<td>S-MT24-35</td>
-<td>LH3</td>
-<td>96</td>
-</tr>
-<tr>
-<td>CON-LCM-23</td>
-<td>LH6</td>
-<td>1120</td>
-</tr>
-<tr>
-<td>CON-LCM-27</td>
-<td>LH6</td>
-<td>9600</td>
-</tr>
-<tr>
-<td>CON-LCM-28</td>
-<td>LH7</td>
-<td>20/3</td>
-<td>G-committee-1</td>
-<td>PN8</td>
-<td>531</td>
-</tr>
-<tr>
-<td>G-persons-6</td>
-<td>PN8</td>
-<td>96</td>
-</tr>
-<tr>
-<td>G-numbers-10</td>
-<td>PN1</td>
-<td>84</td>
-<td>G-without-replacement-1</td>
-<td>PB7</td>
-<td>16/63</td>
-</tr>
-<tr>
-<td>G-atleast-or-atmost-9</td>
-<td>PB5</td>
-<td>84/143</td>
-</tr>
-<tr>
-<td>G-same-or-different-colour-3</td>
-<td>PB4</td>
-<td>1/13</td>
 <td>PYQ-SER-65</td>
 <td>NS1</td>
 <td>73</td>
@@ -10818,57 +11190,6 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 ## 6. Verification Log
 Built 6 Oct 2026.
 ### What was tested
-- **Search.** All 35 papers were converted to text and searched for LCM, HCF, GCD, "least common", "highest common", "ring together" and "bells". The only hits are solution steps in Time & Work and Pipes.
-- **Constructed questions.** All 30 CON-LCM answers were computed by script from the question's own numbers and must equal the stated answer; each set of five options contains it exactly once.
-- **Bank questions.** The 5 Sreedhar questions used for practice were re-solved and agree with their keys. Guidely number-system set 1 Q6 is inconsistent (HCF 18 cannot divide 128) and is not used.
-- **Drills.** All 5 were solved by script and each hack checked.
-### What could not be opened or checked
-- The method books and channels in your Priority 3 list were not read; the methods are the standard textbook ones.
-- Three web pages with LCM practice sets (cracku.in, affairscloud.com) were blocked at the time of the first search and were not used.
-### Source links (pages opened)
-- The 12 sister papers are the Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log; the IBPS Clerk paper links are stored with each question in `clerk/questions.json`.
-## 7. Pattern Index: archetypes and question IDs
-- LH1: CON-LCM-01, 02, 03, 04
-- LH2: CON-LCM-05, 06, 07, 08 · S-MT66-46, S-MT55-45, S-MT9-51
-- LH3: CON-LCM-09, 10, 11, 12 · CON-RAT-05 · S-MT24-35, S-MT2-50
-- LH4: CON-LCM-13, 14, 15, 16, 17
-- LH5: CON-LCM-18, 19, 20, 21, 22
-- LH6: CON-LCM-23, 24, 25, 26, 27, 30
-- LH7: CON-LCM-28, 29
-- **Search.** All 35 papers were converted to text and searched for "in how many ways", "number of ways", "arrangement" and "committee"; the two questions above are the only counting questions (other hits were puzzle and series wording).
-- **Answers.** Every Guidely question used on the lesson path (42) was re-computed by formula in the build script; all agree with their keys.
-- **Bank faults found.** The "letters with repetition" set has keys such as 1,562.5 and 607.2 ways, which cannot be counts; it is excluded. The ENCAPSULATION question's key treats repeated letters as different.
-- **Drills.** All 4 drills were computed by script.
-### What could not be opened or checked
-- Guidely questions off the lesson path were not re-solved.
-- No Mains papers were used.
-### Source links (pages opened)
-- The IBPS Clerk paper links are stored with each question in `clerk/questions.json`; the 2017 and 2018 Guidely papers are among them. The 12 sister papers are listed in the Simple & Compound Interest module.
-## 7. Pattern Index: archetypes and question IDs
-- PN1: G-numbers-1, 2, 4, 10
-- PN2: G-letters-different-ways-4, 5, 6, 10 · G-letter-without-repetition-2
-- PN4: G-ends-and-starts-1, 2, 3, 4, 5
-- PN7: G-persons-1 · G-committee-2, 3 · G-selection-1
-- PN8: G-selection-4, 8 · G-committee-1 · G-persons-5, 6
-- PN9: G-included-and-excluded-1, 2, 3, 6, 8
-- **Search.** All 35 papers were converted to text and searched for "probability"; the two questions above are the only ones (other hits were syllogism wording such as "is a probability").
-- **Answers.** Every Guidely question on the lesson path (39) was re-computed with exact fractions in the build script; all agree with their keys.
-- **Drills.** All 4 were computed by script.
-### What failed and was fixed
-- Drill 2 first had two equal options (5/33 and 10/66); one was replaced by 1/11.
-### What could not be opened or checked
-- Guidely questions off the lesson path were not re-solved; one (variables set Q9, "Maths or Biology only") has a wording that allows two answers.
-### Source links (pages opened)
-- The IBPS Clerk paper links are stored with each question in `clerk/questions.json`; the 2018 and Dec 2021 Guidely papers are among them.
-## 7. Pattern Index: archetypes and question IDs
-- PB1: G-dice-1 · G-cards-8 · G-balls-8, 18
-- PB2: G-coins-1, 5, 7 · G-dice-5, 8
-- PB3: G-balls-1, 2, 10 · G-cards-2, 9
-- PB4: G-balls-4, 5 · G-same-or-different-colour-3, 4
-- PB5: G-atleast-or-atmost-1, 2, 5, 7, 9
-- PB6: G-variables-1, 5, 8 · G-balls-13, 16
-- PB7: G-with-replacement-1, 4, 7 · G-without-replacement-1, 2
-- PB8: G-cards-4 · G-dice-2
 - **Answers and archetypes.** A rule-finding script tried every family on all 100 clerk questions with each option in place. On 89 questions exactly the keyed option fits a rule; that rule names the archetype. The other 11 were solved by hand (rules the script does not hold: primes as terms, n² ± 1 taking turns, sum of the two before, cubes counting down, squares of primes going down, signed gaps of n(n + 1)); all 11 agree with their keys.
 - **Lesson workings.** The working of every practice question is generated from the rule found, and its last line is checked to show the keyed option.
 - **Drills.** All 6 were checked by the script, and the script found exactly one fitting option in each.
