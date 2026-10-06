@@ -1,0 +1,677 @@
+{
+ "module": "linear-arrangement",
+ "intro": [
+  "A single row of people, all facing north. In today's clerk papers the usual form does not tell you how many people there are: \"a certain number of persons sit in a row\", and one of the questions is \"how many?\". These lessons are built around that form, as you asked.",
+  "**What I studied first.** Twenty real clerk-level puzzles of the unknown-number kind from memory-based papers of 2024 to 2026 (IBPS Clerk, SBI Clerk, RRB Clerk), four of the plain fixed-number kind, and 17 unknown-number sets from your Sreedhar bank. Eighteen of the paper puzzles and the 17 bank sets were written out as exact conditions and solved by script for the seats and the total. Seventeen of the 18 paper puzzles give exactly one arrangement, with the total the paper's own answer; so do 16 of the 17 bank sets.",
+  "| What was measured | Real clerk papers |",
+  "| How often | about half of the clerk shift papers opened for 2024 to 2026 had an unknown-number row |",
+  "| Unknown number against fixed number | 20 sets against 4 |",
+  "| Some people facing south in the same row | none at clerk level (officer level only) |",
+  "| People named | 5 to 9, usually 6 or 7 |",
+  "| The total | 10 to 21; most often 11 to 16 |",
+  "| Questions on the set | 3, sometimes 4; one is always the total |",
+  "| An end clue | in every set |",
+  "| How the total is fixed | a balance clue (left of X against right of Y) in 12 of 17; both ends tied to named people in 5 of 17 |",
+  "**What this means.** The row cannot be drawn until its length is known, so the method is to build a chain of steps from one person, turn it into seat numbers with the end clue, and get the total from one addition. Two of the three questions can usually be answered from the chain alone, before the total is found.",
+  "A note on honesty: the paper puzzles are candidates' reconstructions, read through a summarising tool. One of the eighteen did not give a single arrangement as remembered and is not used; two others were too unclear to write out."
+ ],
+ "needs": [],
+ "after": [
+  "That is the row as the clerk papers set it. The **Quick revision** tab keeps the older short notes.",
+  "For every unknown-number set: chain, end clue, total, then the limits and the negative clues. Answer the \"position of X with respect to Y\" and \"how many between\" questions from the chain as soon as it is built.",
+  "Still to come, as insurance: rows where some people face south, rows with a second fact per person, and rows with a vacant seat. They are in your bank and in officer-level papers; none appeared in the clerk papers studied."
+ ],
+ "lessons": [
+  {
+   "id": "number-line",
+   "code": "N1",
+   "title": "A row is a number line",
+   "plain": "The starting point. Give every seat a number from the left, and every clue becomes a small addition or subtraction.",
+   "needs": [],
+   "teach": [
+    "A single row is the simplest arrangement there is, and the clerk papers use it in two forms. In the older form, seven or eight named people fill the row. In the newer and far more common form, **the number of people is not given**, and finding it is one of the questions. This first lesson is the plain form; the rest of the topic is about the unknown number.",
+    "**Number the seats from the left: 1, 2, 3 ...** When everyone faces north, their left is your left and their right is your right, so \"to the right\" always means a **higher number**.",
+    "| The clue says | As numbers |",
+    "| X sits third to the right of Y | X = Y + 3 |",
+    "| X sits second to the left of Y | X = Y - 2 |",
+    "| X sits to the immediate left of Y | X = Y - 1 |",
+    "| Only three persons sit between X and Y | 4 apart, either side |",
+    "| X sits three places away from Y | 3 apart, either side |",
+    "| X sits to the left of Y | X is a lower number; how much lower is not known |",
+    "| X sits at an extreme end | seat 1 or the last seat |",
+    "| X sits third from one of the extreme ends | seat 3, or the third seat from the other end |",
+    "Notice the two different words. \"Three persons **between**\" is 4 apart. \"Three **places away**\" is 3 apart. The papers use both.",
+    "**If the row faces south**, the people are looking at you, and their right is your left. The simplest way to handle it: number the seats from **your right** instead, and then \"to the right\" is again a higher number. Nothing else changes.",
+    "**How to solve the plain form.** Start from a clue about an end, attach the people tied to that person by exact steps, and let the edges of the row remove cases. With only seven or eight seats, most clues can go only one way.",
+    "In the papers I found, the plain form with a fixed number appeared in only 4 clerk sets, against 20 of the unknown-number kind. So treat this lesson as the alphabet for what follows."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 18 August 2024, shift 1. Seven persons A, B, C, D, E, F and G sit in a row, all facing north. B sits third to the right of D. Only one person sits between D and F. Three persons sit between F and E. C sits immediately to the left of E. E sits at an end of the row. A sits to the left of B.",
+    "steps": [
+     "E is at an end and C is immediately on its left, so E is at the right end: E 7, C 6.",
+     "F is 4 from E: seat 3.",
+     "D is 2 from F: seat 1 or 5. B = D + 3: from 5 that would be seat 8, so D 1 and B 4.",
+     "Free seats: 2 and 5. A is to the left of B: A 2. G takes 5."
+    ],
+    "answer": "From the left: D, A, F, B, G, C, E."
+   },
+   "check": {
+    "q": "Eight persons sit in a row facing north. Q sits at the right end. Only two persons sit between Q and R. T sits to the immediate left of R. In which seat, counted from the left, is T?",
+    "options": {
+     "a": "Third",
+     "b": "Fourth",
+     "c": "Fifth",
+     "d": "Sixth"
+    },
+    "answer": "B",
+    "why": "Q is in seat 8. Two between means 3 apart: R is in seat 5. T is one to the left: seat 4."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#5"
+    ],
+    "tags": [
+     "Set A (8 persons, facing north): an end clue with two cases, and the edges remove one.",
+     "Set A (8 persons, facing north), question 2: read it off the same row.",
+     "Set A (8 persons, facing north), question 3: read it off the same row.",
+     "Set A (8 persons, facing north), question 4: read it off the same row.",
+     "Set A (8 persons, facing north), question 5: read it off the same row."
+    ]
+   }
+  },
+  {
+   "id": "offsets",
+   "code": "N2",
+   "title": "The number is not given: build a chain",
+   "plain": "New: \"a certain number of persons sit in a row\". Do not draw seats. Write each person as a step from one chosen person, and the chain can be read before the total is known.",
+   "needs": [],
+   "teach": [
+    "\"A certain number of persons sit in a row facing north.\" Five to nine people are named; the row is longer than that, usually 11 to 17 seats and sometimes 21; and one question is always \"How many persons sit in the row?\"",
+    "About half of all the clerk shift papers I could open for 2024 to 2026 had one of these, in IBPS Clerk, SBI Clerk and RRB Clerk alike. I found 20 real ones and solved 18 of them by script. They are the single most useful seating puzzle to be quick at.",
+    "The difficulty people feel is this: \"I cannot draw the row because I do not know how long it is.\" The answer is that **you do not need the row**. You need a **chain**.",
+    "**Build the chain.** Pick the person who appears in the most clues and call that seat 0. Write every person tied to it by an exact step as a number, to the right as plus and to the left as minus.",
+    "\"O sits second to the left of K. P sits fourth to the right of O. P sits third to the left of J. J sits third to the left of M.\" With O at 0: K is +2, P is +4, J is +7, M is +10.",
+    "On paper, write the letters along a line with the gaps between them: **O . K . P . . J . . M**. That is the row, apart from its two ends.",
+    "**The chain already answers most questions.**",
+    "- \"What is the position of J with respect to K?\" 7 - 2 = 5: fifth to the right.",
+    "- \"How many persons sit between O and J?\" 7 - 0 - 1 = 6.",
+    "- \"Who sits third to the left of M?\" +7, which is J.",
+    "None of these needs the total. In the real sets, two of the three questions are usually of this kind. So even if the total gives you trouble, the chain alone earns most of the marks.",
+    "**Clues with two possibilities.** \"Only two persons sit between K and Q\" puts Q at +5 or at -1. Write both, lightly. One of them nearly always turns out to be taken, or to fall off the row once an end is known.",
+    "**As soon as a left-end clue appears** (\"D sits at the extreme left end\", \"M sits sixth from the left end\", \"no one sits to the left of F\"), change the chain into real seat numbers by adding whatever makes that person's number right."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 17 August 2024, shift 4. A certain number of persons sit in a row facing north. Only two persons sit between K and Q. O sits second to the left of K. P sits fourth to the right of O. P sits third to the left of J. J sits third to the left of M. M sits at the extreme end of the row. The number of persons to the left of J is one more than the number of persons to the right of P. Without finding the total: how many persons sit between K and J, and who sits third to the left of M?",
+    "steps": [
+     "Chain from O = 0: K is +2, P is +4, J is +7, M is +10.",
+     "Between K (+2) and J (+7): 7 - 2 - 1 = 4 persons.",
+     "Third to the left of M (+10) is +7: J.",
+     "Q is 3 from K: +5 or -1. This is left open for now."
+    ],
+    "answer": "Four persons; J. (The next lesson finds the total of this same row.)"
+   },
+   "check": {
+    "q": "In a row of unknown length, K sits second to the right of O, P sits fourth to the right of O, and J sits third to the right of P. How many persons sit between K and J?",
+    "options": {
+     "a": "Three",
+     "b": "Four",
+     "c": "Five",
+     "d": "Six"
+    },
+    "answer": "B",
+    "why": "With O at 0: K is +2, P is +4, J is +7. Between K and J: 7 - 2 - 1 = 4."
+   },
+   "shortcut": {
+    "title": "Write the gaps, not the seats",
+    "text": [
+     "On the rough sheet, write the named people in order with a dot for each seat between them: **F . E A . . B . G**",
+     "Leave space at both ends of the line. People are often added to the left of your first letter, and the total is settled last.",
+     "Under each letter write its number in the chain. Every \"position of X with respect to Y\" and every \"how many between\" is then one subtraction."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#5"
+    ],
+    "tags": [
+     "Set A: a left-end clue turns the chain into seat numbers at once.",
+     "Set A, question 2: read it off the same row.",
+     "Set B: the end clue and a count near the other end.",
+     "Set B, question 2: read it off the same row.",
+     "Set B, question 3: read it off the same row.",
+     "Set B, question 4: read it off the same row.",
+     "Set B, question 5: read it off the same row."
+    ]
+   }
+  },
+  {
+   "id": "balance",
+   "code": "N3",
+   "title": "Finding the total: the balance clue",
+   "plain": "New: how the number of persons is actually fixed. One end is known; a clue compares the people on the left of one person with the people on the right of another; the total is one addition.",
+   "needs": [],
+   "teach": [
+    "Every unknown-number puzzle must contain something that fixes the length, or the first question would have no answer. In the 17 real puzzles that the script solved to a single arrangement, the length is fixed in one of only **two** ways:",
+    "| How the total is fixed | Real puzzles |",
+    "| one end is known, and a **balance clue** compares left of X with right of Y | 12 of 17 |",
+    "| **both ends** are tied to named people | 5 of 17 |",
+    "This lesson is the first way. The next two lessons cover the awkward end clue and the second way.",
+    "**The balance clue.** \"The number of persons sitting to the left of B is the same as the number of persons sitting to the right of A.\"",
+    "Once the left end is known, every named person has a real seat number. Then:",
+    "- persons to the left of B = B's seat number minus 1;",
+    "- persons to the right of A = total minus A's seat number.",
+    "Put them equal and the total falls out:",
+    "**total = A's seat number + (B's seat number - 1)**",
+    "In words: **take the person on the \"right of\" side, and add the count from the \"left of\" side.**",
+    "If B is in seat 7 and A is in seat 10, six persons are to the left of B, so six are to the right of A, and the row has 10 + 6 = 16 seats.",
+    "**Variations that the papers use.**",
+    "| Wording | What to do |",
+    "| left of X is **one more than** right of Y | right of Y = (left of X) - 1 |",
+    "| left of X is **one less than** right of Y | right of Y = (left of X) + 1 |",
+    "| as many to the left of K as to the right of K; K sits exactly in the middle | total = 2 x (K's seat) - 1 |",
+    "| persons between E and D equal persons to the right of D | count the first, add to D's seat |",
+    "| only one person sits to the right of D | total = D's seat + 1 |",
+    "**When the left end is not known yet**, the balance clue still works on the chain: it gives one relation between the starting seat and the total, and the end clue gives the other. That is the next lesson."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 October 2025, shift 1. A certain number of persons sit in a row facing north. Two persons sit between B and E. C sits to the immediate right of E. Three persons sit between D and C. No one sits to the left of D. Four persons sit between A and C. The number of persons to the left of B is the same as the number of persons to the right of A. How many persons sit in the row?",
+    "steps": [
+     "No one is to the left of D: D is in seat 1.",
+     "C is 4 from D: seat 5. E is immediately left of C: seat 4.",
+     "B is 3 from E: seat 7 (seat 1 is D's). A is 5 from C: seat 10 (seat 0 does not exist).",
+     "Six persons are to the left of B, so six are to the right of A.",
+     "Total = 10 + 6 = 16."
+    ],
+    "answer": "16 persons. Six seats at the right end hold people who are never named."
+   },
+   "check": {
+    "q": "In a row facing north, B sits in the 7th seat from the left and A in the 10th. The number of persons to the left of B is the same as the number to the right of A. How many persons sit in the row?",
+    "options": {
+     "a": "15",
+     "b": "16",
+     "c": "17",
+     "d": "13"
+    },
+    "answer": "B",
+    "why": "Six persons are to the left of B, so six are to the right of A. 10 + 6 = 16."
+   },
+   "shortcut": {
+    "title": "The total in one line",
+    "text": [
+     "For \"the number of persons to the left of X is the same as the number to the right of Y\":",
+     "**total = seat of Y + seat of X - 1**",
+     "For \"one more\" or \"one less\", adjust that by one in the direction the words say, and check with a quick count.",
+     "For one person in the middle of the row: **total = twice that seat, minus 1**. The total is then always odd, which rules out even options at a glance."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#5"
+    ],
+    "tags": [
+     "Set A: a left end, a long chain, and a balance clue with a limit.",
+     "Set A, question 2: read it off the same row.",
+     "Set A, question 3: read it off the same row.",
+     "Set A, question 4: read it off the same row.",
+     "Set B: the balance is about one person, and the end clue supplies the rest.",
+     "Set B, question 2: read it off the same row.",
+     "Set B, question 3: read it off the same row.",
+     "Set B, question 4: read it off the same row.",
+     "Set B, question 5: read it off the same row."
+    ]
+   }
+  },
+  {
+   "id": "one-of-the-ends",
+   "code": "N4",
+   "title": "\"From one of the extreme ends\"",
+   "plain": "New: the end clue does not say which end. Try the end that leaves room for the chain; the other usually falls off the row.",
+   "needs": [],
+   "teach": [
+    "The papers seldom say \"third from the left end\". The usual wording is \"sits third from **one of the** extreme ends of the row\". Twelve of the real puzzles I found use it. It looks like two cases every time. In practice it is rarely more than one.",
+    "**Look at where the person sits in your chain.** The chain has a left part and a right part around that person.",
+    "- If several named people must sit **more than two seats to their left**, the person cannot be third from the left end. They are third from the **right** end.",
+    "- If the chain stretches far to their right, they are near the **left** end.",
+    "\"P sits fourth from one of the extreme ends. R sits ninth to the right of P.\" P cannot be fourth from the right end, because R needs nine seats beyond it. So P is in seat 4, and the chain becomes real numbers.",
+    "**Two such clues in one puzzle** give the total directly. \"P is fourth from one end, and R, nine seats to its right, is third from one end\": P is seat 4, R is seat 13, and R must be third from the right. Total = 13 + 2 = 15.",
+    "**When both ends really are possible**, write the two cases side by side:",
+    "- Case L: the person is in seat k. The chain becomes numbers, and the balance clue gives the total.",
+    "- Case R: the person is in seat (total - k + 1). The chain is then written as steps back from the right end, and the balance clue must still be satisfied.",
+    "One of the two nearly always produces a seat number below 1, puts two people in one seat, or breaks a limit such as \"not more than 15 persons\". Check those three things in that order.",
+    "A plain \"X sits at an extreme end\" is the same idea with k = 1: see which side of X the chain lies on."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 1 March 2025, shift 1. A certain number of persons sit in a row facing north. Four persons sit between S and T. P sits second to the left of T. P sits fourth from one of the extreme ends of the row. Five persons sit between P and V, and P sits to the left of V. R sits third to the right of V. R sits third from one of the extreme ends of the row. The number of persons to the right of R is the same as the number to the left of Q. M sits second to the left of Q. How many persons sit in the row?",
+    "steps": [
+     "Chain from P = 0: T is +2, V is +6, R is +9.",
+     "P is fourth from one end. R sits nine seats to its right, so P cannot be near the right end: P is seat 4. Then T 6, V 10, R 13.",
+     "R is third from one end, and it is not seat 3: it is third from the right. Total = 13 + 2 = 15.",
+     "Two persons are to the right of R, so two are to the left of Q: Q is seat 3, and M is seat 1.",
+     "S is 5 from T: seat 11 (seat 1 is M's)."
+    ],
+    "answer": "15 persons. From the left: M . Q P . T . . . V S . R . ."
+   },
+   "check": {
+    "q": "In a row of unknown length facing north, P sits fourth from one of the extreme ends. R sits ninth to the right of P and third from one of the extreme ends. How many persons sit in the row?",
+    "options": {
+     "a": "13",
+     "b": "14",
+     "c": "15",
+     "d": "16"
+    },
+    "answer": "C",
+    "why": "R needs nine seats to the right of P, so P is seat 4 and R is seat 13. R is third from the right end: 13 + 2 = 15."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-linear-arrangement#3"
+    ],
+    "tags": [
+     "Set A: both directions of the chain tried; a limit removes one.",
+     "Set A, question 2: read it off the same row.",
+     "Set A, question 3: read it off the same row.",
+     "Set A, question 4: read it off the same row.",
+     "Set A, question 5: read it off the same row.",
+     "Set B: two people each third from an end.",
+     "Set B, question 2: read it off the same row.",
+     "Set B, question 3: read it off the same row."
+    ]
+   }
+  },
+  {
+   "id": "both-ends",
+   "code": "N5",
+   "title": "Both ends pinned, and the limits",
+   "plain": "New: the other way the total is fixed. One named person is tied to the left end and another to the right end, and the chain between them measures the row.",
+   "needs": [],
+   "teach": [
+    "In 5 of the 17 real puzzles there is no balance clue at all. Instead, **two different people are tied to the two ends**, and the chain between them gives the length.",
+    "The end-ties come in several wordings:",
+    "| Wording | Meaning |",
+    "| No one sits to the left of F | F is seat 1 |",
+    "| No one sits to the right of G | G is the last seat |",
+    "| Only one person sits to the right of R | R is the last seat but one |",
+    "| K sits fifth from the extreme right end | four persons to the right of K |",
+    "| Y is the only neighbour of P | P is at an end, with Y next to it |",
+    "| B sits at one of the ends, and G sits at the extreme end | if both are in one chain, they are the two ends |",
+    "**How to use them.** Fix the left one as a real number; run the chain to the right one; add what is beyond it.",
+    "\"B sits at one end and G at the other. Four persons sit between B and K, and six between K and G.\" B 1, K 6, G 13. The row has 13 seats.",
+    "**The limits.** Some puzzles add a sentence about the total itself. These are not decoration; each one exists to remove the one extra case.",
+    "| Wording | Use |",
+    "| Not more than 14 persons sit in the row | the case that gives 18 is out |",
+    "| At least nine persons sit in the row | the short case is out |",
+    "| Not more than seven persons sit to the left of M | limits M's seat, and with a middle clue limits the total |",
+    "| An odd number of persons sit in the row | someone can be exactly in the middle |",
+    "| Not more than two persons sit to the right of W | the total is at most W's seat + 2 |",
+    "So when your working gives two possible totals, look for the limit sentence before doing anything else. If the options include \"Cannot be determined\", the limit is what makes the answer a number.",
+    "**The negative clues** (\"G does not sit at an extreme end\", \"A and D are not immediate neighbours\") do the same job for two possible seats of one person. Leave them for the end, as in every seating puzzle."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 26 September 2026, shift 1. An uncertain number of persons sit in a row facing north. Three persons sit between G and T. C sits second to the right of T. Four persons sit between C and N, and N sits to the left of C. Two persons sit between B and N. B sits fourth from one of the extreme ends. P sits two places away from B. The number of persons to the left of P is one less than the number to the right of C. G does not sit at an extreme end. Not more than 14 persons sit in the row. How many persons sit in the row?",
+    "steps": [
+     "Chain from T = 0: C is +2, N is -3. B is 3 from N: that is 0 (T's seat) or -6. So B is -6.",
+     "B is fourth from one end. C sits eight seats to its right, so B is seat 4. Then N 7, T 10, C 12.",
+     "P is 2 from B: seat 2 or 6. G is 4 from T: seat 6 or 14.",
+     "P 6: five are to its left, so six are to the right of C, and the total would be 18. More than 14. Out.",
+     "P 2: one is to its left, so two are to the right of C. Total = 12 + 2 = 14.",
+     "G cannot be seat 14, the right end. So G is seat 6."
+    ],
+    "answer": "14 persons. From the left: . P . B . G N . . T . C . ."
+   },
+   "check": {
+    "q": "In a row of unknown length, B sits at the left end and G at the right end. Four persons sit between B and K, and six persons sit between K and G. How many persons sit in the row?",
+    "options": {
+     "a": "11",
+     "b": "12",
+     "c": "13",
+     "d": "14"
+    },
+    "answer": "C",
+    "why": "B is seat 1. K is 5 further on: seat 6. G is 7 further on: seat 13, the last seat."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#5"
+    ],
+    "tags": [
+     "Set A: two people at the two ends, and a same-gap clue inside.",
+     "Set A, question 2: read it off the same row.",
+     "Set A, question 3: read it off the same row.",
+     "Set A, question 4: read it off the same row.",
+     "Set B: 'no one to the left', an end, and 'third from one of the ends'.",
+     "Set B, question 2: read it off the same row.",
+     "Set B, question 3: read it off the same row.",
+     "Set B, question 4: read it off the same row.",
+     "Set B, question 5: read it off the same row."
+    ]
+   }
+  },
+  {
+   "id": "equal-gaps",
+   "code": "N6",
+   "title": "Equal gaps and \"exactly between\" in a long row",
+   "plain": "New: clues that compare two gaps. When the two pairs share a person, that person is a midpoint, and the clue becomes an exact step in the chain.",
+   "needs": [],
+   "teach": [
+    "Long rows are full of clues that compare distances:",
+    "- \"E sits exactly between J and H.\"",
+    "- \"As many persons sit between V and B as between B and R.\"",
+    "- \"The number of persons between O and S is half the number between K and S.\"",
+    "They look like bookkeeping. Used properly they are among the strongest clues, because the row is long and a midpoint is exact.",
+    "**Exactly between.** The middle person's seat is the **average** of the other two. If J is 3 and H is 7, E is 5. For this to be a whole number, the two outer people must be an even number of seats apart; if they are not, the case is dead.",
+    "**As many between A and B as between B and C.** B is named twice. A and C are different people at the same distance from B, so they are on **opposite sides**, and B is exactly between them. If V is seat 1 and B is seat 9, R is seat 17.",
+    "This is how a row grows long. One midpoint clue can throw a person eight or ten seats beyond the rest of the chain, and that person is often the one tied to the far end.",
+    "**Twice, half, one more.** \"The number between O and S is half the number between K and S\": count the first gap, double it, and place K that many persons beyond S. Work with the number of persons **between**, then add 1 to turn it into a step.",
+    "**Two pairs with nobody in common** (\"as many between P and X as between T and M\"): keep this for last. When one pair is placed, count its gap and look for a free seat that gives the other pair the same gap.",
+    "**Order of work for a full unknown-number set**, now that all the pieces are here:",
+    "- chain from the most-mentioned person, with midpoint clues included as exact steps;",
+    "- the end clue, to turn the chain into seat numbers;",
+    "- the balance clue or the second end, for the total;",
+    "- limits and negative clues, to remove the last extra case."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 18 August 2024, shift 1. A certain number of persons sit in a row facing north. Exactly one person sits between J and L. L sits at an extreme end. Five persons sit between L and H. H sits immediately to the left of F. Two persons sit between F and B, and B is to the right of F. E sits exactly between J and H. The number of persons to the right of H is the same as the number to the left of E. How many persons sit in the row?",
+    "steps": [
+     "L is at an end. Suppose it is seat 1: J is seat 3, H is seat 7, F is seat 8, B is seat 11.",
+     "E is exactly between J (3) and H (7): seat 5.",
+     "Four persons are to the left of E, so four are to the right of H. Total = 7 + 4 = 11, and B is in the last seat.",
+     "If L were the right end instead, J and B would both need the seat two to its left. Out."
+    ],
+    "answer": "11 persons. From the left: L . J . E . H F . . B"
+   },
+   "check": {
+    "q": "In a row facing north, J is in the 3rd seat from the left and H in the 7th. E sits exactly between J and H. The number of persons to the right of H is the same as the number to the left of E. How many persons sit in the row?",
+    "options": {
+     "a": "9",
+     "b": "10",
+     "c": "11",
+     "d": "12"
+    },
+    "answer": "C",
+    "why": "E is in seat (3 + 7) / 2 = 5. Four persons are to its left, so four are to the right of H. 7 + 4 = 11."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#5"
+    ],
+    "tags": [
+     "Set A: a midpoint clue stretches the row to its full length.",
+     "Set A, question 2: read it off the same row.",
+     "Set A, question 3: read it off the same row.",
+     "Set A, question 4: read it off the same row.",
+     "Set A, question 5: read it off the same row."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#1": [
+    "Notes: Q is at an end. V, W are 4 apart. T = R - 1. P = S + 2. S and W have more than two persons between them. Q, R are 3 apart.",
+    "Q 8 gives R 5, T 4. Q 1 gives R 4, T 3.",
+    "Q 1, R 4, T 3: free seats 2, 5, 6, 7, 8. V and W take 2 and 6. S and P take 5 and 7. But S (5) would be too close to W on either side. Out.",
+    "Q 8, R 5, T 4: free seats 1, 2, 3, 6, 7. S 1 with P 3 is the only way to place them. V and W, 4 apart, take 2 and 6.",
+    "S and W must have more than two between them: W 6, V 2. U takes 7.",
+    "The row has 8 seats. From the left (a dot is someone not named): S V P T R W U Q  Places: S 1, V 2, P 3, T 4, R 5, W 6, U 7, Q 8.",
+    "T is in seat 4. Third to its right is seat 7: U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#2": [
+    "The row has 8 seats. From the left (a dot is someone not named): S V P T R W U Q  Places: S 1, V 2, P 3, T 4, R 5, W 6, U 7, Q 8.",
+    "P is in seat 3 and W in seat 6. Between them are Two persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#3": [
+    "The row has 8 seats. From the left (a dot is someone not named): S V P T R W U Q  Places: S 1, V 2, P 3, T 4, R 5, W 6, U 7, Q 8.",
+    "V is in seat 2 and T in seat 4: Second to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#4": [
+    "The row has 8 seats. From the left (a dot is someone not named): S V P T R W U Q  Places: S 1, V 2, P 3, T 4, R 5, W 6, U 7, Q 8.",
+    "One person sits between S (1) and P (3), and W (6) is immediately right of R (5). V is only fourth to the left of W. So: Both the given statements 1 and 2 are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-linear-arrangement#5": [
+    "The row has 8 seats. From the left (a dot is someone not named): S V P T R W U Q  Places: S 1, V 2, P 3, T 4, R 5, W 6, U 7, Q 8.",
+    "Q – W, U – R, V – T and P – S each have one person between them. T (4) and U (7) have two: T – U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-linear-arrangement#1": [
+    "M is sixth from the left: seat 6. N is 4 from M: seat 10 or 2.",
+    "O = N - 2, S = O + 3, Q = N + 3. With N at 2, O would be at 0. So N 10, O 8, S 11, Q 13.",
+    "Between M (6) and S (11) are four persons, so P is 5 from S: seat 16 (seat 6 is M's). T = P + 2 = 18.",
+    "Between O (8) and Q (13) are four persons, so four persons sit to the right of P: the row ends at seat 20.",
+    "The row has 20 seats. From the left (a dot is someone not named): . . . . . M . O . N S . Q . . P . T . .  Places: M 6, O 8, N 10, S 11, Q 13, P 16, T 18.",
+    "The number of people in the row is 20."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-linear-arrangement#2": [
+    "The row has 20 seats. From the left (a dot is someone not named): . . . . . M . O . N S . Q . . P . T . .  Places: M 6, O 8, N 10, S 11, Q 13, P 16, T 18.",
+    "M is in seat 6 and P in seat 16. Exactly between them is seat 11: S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#1": [
+    "F is at an end and F = A - 3, so F is to the left of A: F is seat 1 and A is seat 4. E = A - 1 = 3.",
+    "B is 3 from A: seat 7 (seat 1 is F's). G = B + 2 = 9. D = G + 5 = 14.",
+    "Only one person sits to the right of D, so the row has 15 seats.",
+    "E and F have one person between them, so G and C do too: C is at 11 (seat 7 is B's).",
+    "The row has 15 seats. From the left (a dot is someone not named): F . E A . . B . G . C . . D .  Places: F 1, E 3, A 4, B 7, G 9, C 11, D 14.",
+    "E is in seat 3 and G in seat 9. Between them are Five persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#2": [
+    "The row has 15 seats. From the left (a dot is someone not named): F . E A . . B . G . C . . D .  Places: F 1, E 3, A 4, B 7, G 9, C 11, D 14.",
+    "The row has 15 persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#3": [
+    "The row has 15 seats. From the left (a dot is someone not named): F . E A . . B . G . C . . D .  Places: F 1, E 3, A 4, B 7, G 9, C 11, D 14.",
+    "E is in seat 3, third from the left end. Nobody named is third from the right end (seat 13). So: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#4": [
+    "The row has 15 seats. From the left (a dot is someone not named): F . E A . . B . G . C . . D .  Places: F 1, E 3, A 4, B 7, G 9, C 11, D 14.",
+    "C is in seat 11 and B in seat 7: Fourth to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-linear-arrangement#5": [
+    "The row has 15 seats. From the left (a dot is someone not named): F . E A . . B . G . C . . D .  Places: F 1, E 3, A 4, B 7, G 9, C 11, D 14.",
+    "Between E (3) and B (7) are three persons. Three persons sit to the left of seat 4, which is A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#1": [
+    "No one sits to the left of B: B is seat 1. R has one person between it and B: seat 3.",
+    "V is 3 from R: seat 6. O = V + 4 = 10. A = O - 2 = 8.",
+    "M is next to A: 7 or 9. W = M + 2 and D = W + 1. M 7 would put D on seat 10, which is O's. So M 9, W 11, D 12.",
+    "Q is 5 from D: seat 7. T is next to V: seat 5.",
+    "Not more than two persons sit to the right of W, and D is one of them. If the row had 13 seats, two would be to the right of W, and P would need two to its left: seat 3, which is R's. So the row has 12 seats, one person is to the right of W, and P is in seat 2.",
+    "The row has 12 seats. From the left (a dot is someone not named): B P R . T V Q A M O W D  Places: B 1, P 2, R 3, T 5, V 6, Q 7, A 8, M 9, O 10, W 11, D 12.",
+    "Q is in seat 7. Second to its right is seat 9: M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#2": [
+    "The row has 12 seats. From the left (a dot is someone not named): B P R . T V Q A M O W D  Places: B 1, P 2, R 3, T 5, V 6, Q 7, A 8, M 9, O 10, W 11, D 12.",
+    "Between R (seat 3) and Q (seat 7) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#3": [
+    "The row has 12 seats. From the left (a dot is someone not named): B P R . T V Q A M O W D  Places: B 1, P 2, R 3, T 5, V 6, Q 7, A 8, M 9, O 10, W 11, D 12.",
+    "Immediately to the left of R (seat 3) is seat 2: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-linear-arrangement#4": [
+    "The row has 12 seats. From the left (a dot is someone not named): B P R . T V Q A M O W D  Places: B 1, P 2, R 3, T 5, V 6, Q 7, A 8, M 9, O 10, W 11, D 12.",
+    "Put S in seat 4. RT, SV, TQ and OD each have one person between them. B (1) and S (4) have two: BS."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#1": [
+    "Chain from R = 0: T is +2 and X is +5.",
+    "The number to the right of R is one less than the number to its left. If R is in seat r, the total is r + (r - 2) = 2r - 2.",
+    "X is second from an end. It cannot be seat 2 (R would be before seat 1), so X is the last seat but one: r + 5 = total - 1 = 2r - 3. So r = 8 and the row has 14 seats: R 8, T 10, X 13.",
+    "P is 3 from R: seat 5 or 11. K is next to P and Q = K - 2. With P at 11, K would be 12 and Q 10, which is T's. So P 5.",
+    "Between P (5) and X (13) are seven persons, so M is 8 from T: seat 2. G is next to M: seat 1 or 3.",
+    "K is 4 or 6. K 4 would put Q on seat 2. So K 6, Q 4. G is not next to Q, so G is seat 1.",
+    "The row has 14 seats. From the left (a dot is someone not named): G M . Q P K . R . T . . X .  Places: G 1, M 2, Q 4, P 5, K 6, R 8, T 10, X 13.",
+    "The row has 14 people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#2": [
+    "The row has 14 seats. From the left (a dot is someone not named): G M . Q P K . R . T . . X .  Places: G 1, M 2, Q 4, P 5, K 6, R 8, T 10, X 13.",
+    "Between Q (seat 4) and R (seat 8) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#3": [
+    "The row has 14 seats. From the left (a dot is someone not named): G M . Q P K . R . T . . X .  Places: G 1, M 2, Q 4, P 5, K 6, R 8, T 10, X 13.",
+    "T is in seat 10. Fourth to its left is seat 6: K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#4": [
+    "The row has 14 seats. From the left (a dot is someone not named): G M . Q P K . R . T . . X .  Places: G 1, M 2, Q 4, P 5, K 6, R 8, T 10, X 13.",
+    "M is in seat 2 and K in seat 6; exactly between them is seat 4, where Q sits. So: Q sits exactly between M and K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-linear-arrangement#5": [
+    "The row has 14 seats. From the left (a dot is someone not named): G M . Q P K . R . T . . X .  Places: G 1, M 2, Q 4, P 5, K 6, R 8, T 10, X 13.",
+    "Q - M, T - R, K - Q and K – R each have one person between them. R (8) and P (5) have two: R - P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#1": [
+    "Not more than 15 persons. E and P are 4 apart, L is between them, and K is exactly between P and L. So the five seats from E to P read E, (empty), L, K, P, in one direction or the other.",
+    "R = K + 2. N is 3 from P and not next to E, and is second from an end. F is 2 from E. Left of F is one less than right of R.",
+    "If E is on the left, in seat e: L e + 2, K e + 3, P e + 4, R e + 5, and N is at e + 7 (e + 1 is next to E). N is second from the right end, so the total is e + 8. F is at e - 2. Then e - 3 persons are left of F and 3 are right of R: e - 3 = 2, so e = 5 and the total is 13.",
+    "If P is on the left, in seat p: K p + 1, L p + 2, R p + 3, E p + 4, N at p - 3 = 2 so p = 5, and F at p + 6 = 11. Ten are left of F, so eleven are right of R (seat 8): the total would be 19, more than 15. Out.",
+    "So F 3, E 5, L 7, K 8, P 9, R 10, N 12.",
+    "The row has 13 seats. From the left (a dot is someone not named): . . F . E . L K P R . N .  Places: F 3, E 5, L 7, K 8, P 9, R 10, N 12.",
+    "The number of people in the line is 13."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#2": [
+    "The row has 13 seats. From the left (a dot is someone not named): . . F . E . L K P R . N .  Places: F 3, E 5, L 7, K 8, P 9, R 10, N 12.",
+    "R is in seat 10 and E in seat 5. Between them are Four people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#3": [
+    "The row has 13 seats. From the left (a dot is someone not named): . . F . E . L K P R . N .  Places: F 3, E 5, L 7, K 8, P 9, R 10, N 12.",
+    "K (8) and P (9) are next to each other: P and K are immediate neighbours."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#4": [
+    "The row has 13 seats. From the left (a dot is someone not named): . . F . E . L K P R . N .  Places: F 3, E 5, L 7, K 8, P 9, R 10, N 12.",
+    "P is in seat 9 and F in seat 3: Sixth to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-linear-arrangement#5": [
+    "The row has 13 seats. From the left (a dot is someone not named): . . F . E . L K P R . N .  Places: F 3, E 5, L 7, K 8, P 9, R 10, N 12.",
+    "Between R (10) and L (7) are two people. Between E (5) and K (8) are also two: E, K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-linear-arrangement#1": [
+    "R is third from one end and V is third from one end, so they are seat 3 and the third seat from the right, one each.",
+    "Q is 9 from R and 3 from V.",
+    "Suppose V is seat 3 and R is third from the right. Q is 9 to the left of R, and 3 from V: Q is seat 6, so R is seat 15 and the row has 17 seats.",
+    "Z = V - 2 = 1. S is 4 from Q: seat 2 or 10. T = S + 5: from 10 that is seat 15, which is R's. So S 2, T 7.",
+    "U is exactly between R (15) and T (7): seat 11. P is 5 from R: seat 10.",
+    "The other way round (R seat 3, Q seat 12, V seat 15) leaves no seat for T. Out.",
+    "The row has 17 seats. From the left (a dot is someone not named): Z S V . . Q T . . P U . . . R . .  Places: Z 1, S 2, V 3, Q 6, T 7, P 10, U 11, R 15.",
+    "The number of people in the line is 17."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-linear-arrangement#2": [
+    "The row has 17 seats. From the left (a dot is someone not named): Z S V . . Q T . . P U . . . R . .  Places: Z 1, S 2, V 3, Q 6, T 7, P 10, U 11, R 15.",
+    "Z is in seat 1 and U in seat 11. Exactly between them is seat 6: Q."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-linear-arrangement#3": [
+    "The row has 17 seats. From the left (a dot is someone not named): Z S V . . Q T . . P U . . . R . .  Places: Z 1, S 2, V 3, Q 6, T 7, P 10, U 11, R 15.",
+    "S, V; Q, T; P, U and Z, S are neighbours. R (15) and Q (6) are not: R, Q."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#1": [
+    "B is at an end and G is at the extreme end. K has four persons between it and B and six between it and G, so B and G are the two ends with K between them.",
+    "A = D - 3, so A is to the left of D. Take B as seat 1: K is seat 6 and G is seat 13. The row has 13 seats.",
+    "H and D are 6 apart. The number between H and A equals the number between H and B, and A is not B, so A is as far to the right of H as B is to the left.",
+    "If H is in seat h, A is in seat 2h - 1 and D in 2h + 2. Six apart from H means h + 2 = 6: H 4, A 7, D 10.",
+    "(With G at the left end instead, the same steps put A on a seat below 1.)",
+    "The row has 13 seats. From the left (a dot is someone not named): B . . H . K A . . D . . G  Places: B 1, H 4, K 6, A 7, D 10, G 13.",
+    "Between K (seat 6) and D (seat 10), the only named person is A: Only A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#2": [
+    "The row has 13 seats. From the left (a dot is someone not named): B . . H . K A . . D . . G  Places: B 1, H 4, K 6, A 7, D 10, G 13.",
+    "The row has 13 people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#3": [
+    "The row has 13 seats. From the left (a dot is someone not named): B . . H . K A . . D . . G  Places: B 1, H 4, K 6, A 7, D 10, G 13.",
+    "K is in seat 6. Fifth to its left is seat 1: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-linear-arrangement#4": [
+    "The row has 13 seats. From the left (a dot is someone not named): B . . H . K A . . D . . G  Places: B 1, H 4, K 6, A 7, D 10, G 13.",
+    "D is in seat 10 of 13. To its right are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#1": [
+    "No one sits to the left of F: F is seat 1. C is at an end, so C is the last seat.",
+    "E has one person between it and C: E is the last seat but two.",
+    "B is third from one end. Third from the right is E's seat, so B is seat 3.",
+    "E is 6 from B: seat 9. So C is seat 11 and the row has 11 seats. (C and F then have nine persons between them, more than six.)",
+    "D has as many between it and F as between it and E: D is exactly between seats 1 and 9, seat 5. A = D + 3 = 8.",
+    "G sits between D and A with one more person on D's side: G is seat 7.",
+    "The row has 11 seats. From the left (a dot is someone not named): F . B . D . G A E . C  Places: F 1, B 3, D 5, G 7, A 8, E 9, C 11.",
+    "The row has 11 people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#2": [
+    "The row has 11 seats. From the left (a dot is someone not named): F . B . D . G A E . C  Places: F 1, B 3, D 5, G 7, A 8, E 9, C 11.",
+    "D is in seat 5. Second to its left is seat 3: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#3": [
+    "The row has 11 seats. From the left (a dot is someone not named): F . B . D . G A E . C  Places: F 1, B 3, D 5, G 7, A 8, E 9, C 11.",
+    "A is in seat 8 and C in seat 11: Third to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#4": [
+    "The row has 11 seats. From the left (a dot is someone not named): F . B . D . G A E . C  Places: F 1, B 3, D 5, G 7, A 8, E 9, C 11.",
+    "GE, BD, FB and DG each have one person between them. A (8) and E (9) are neighbours: AE."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-linear-arrangement#5": [
+    "The row has 11 seats. From the left (a dot is someone not named): F . B . D . G A E . C  Places: F 1, B 3, D 5, G 7, A 8, E 9, C 11.",
+    "H would be in seat 2. Between seat 2 and A (seat 8) are Five people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#1": [
+    "T is at an end and T = R + 1, so T is the right end and R is the last seat but one.",
+    "Exactly one person is to the right of R. That is one more than the number to the left of V, so nobody is to the left of V: V is seat 1, and K, immediately to its right, is seat 2.",
+    "S is 3 from V: seat 4. B = S + 5 = 9.",
+    "As many between V and B as between B and R: B is exactly between them. V is 8 seats to the left of B, so R is 8 to the right: seat 17. T is seat 18.",
+    "H = R - 6 = 11, and E = H + 3 = 14. H is not next to S.",
+    "The row has 18 seats. From the left (a dot is someone not named): V K . S . . . . B . H . . E . . R T  Places: V 1, K 2, S 4, B 9, H 11, E 14, R 17, T 18.",
+    "The number of people in the line is 18."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#2": [
+    "The row has 18 seats. From the left (a dot is someone not named): V K . S . . . . B . H . . E . . R T  Places: V 1, K 2, S 4, B 9, H 11, E 14, R 17, T 18.",
+    "SK has one person between, TE three, HB one and RH five: an odd number each time. S (4) and B (9) have four between them: SB."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#3": [
+    "The row has 18 seats. From the left (a dot is someone not named): V K . S . . . . B . H . . E . . R T  Places: V 1, K 2, S 4, B 9, H 11, E 14, R 17, T 18.",
+    "R is in seat 17 and E in seat 14: Third to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#4": [
+    "The row has 18 seats. From the left (a dot is someone not named): V K . S . . . . B . H . . E . . R T  Places: V 1, K 2, S 4, B 9, H 11, E 14, R 17, T 18.",
+    "H is in seat 11 of 18. To its right are Seven people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-42-78362-linear-arrangement#5": [
+    "The row has 18 seats. From the left (a dot is someone not named): V K . S . . . . B . H . . E . . R T  Places: V 1, K 2, S 4, B 9, H 11, E 14, R 17, T 18.",
+    "B is in seat 9, halfway between S (4) and E (14): B sits exactly between S and E."
+   ]
+  }
+ }
+}

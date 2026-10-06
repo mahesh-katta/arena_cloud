@@ -1,0 +1,836 @@
+{
+ "module": "boat-stream",
+ "intro": [
+  "A boat on a river is helped along when it goes with the flow and held back when it goes against it. This topic is Speed, Time and Distance with that one extra thought.",
+  "There are ten short lessons. The first three set up the four speeds and how any two of them give the rest. The others are the ways the exam uses them: round trips, ratios, and a speed that changes. Go in order the first time, and if distance = speed x time is not yet comfortable, do the first lesson of Speed, Time and Distance before this."
+ ],
+ "needs": [
+  "ratio",
+  "lcm",
+  "percent-words"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the ratio table and every question type on one page, and the Course in each bank has many more.",
+  "Whatever the wording, begin by asking which two facts about the four speeds you have been given. Once the four are filled in, the rest is a single division."
+ ],
+ "lessons": [
+  {
+   "id": "four-speeds",
+   "code": "B1",
+   "title": "With the stream and against it",
+   "plain": "The starting point: a river pushes a boat along one way and holds it back the other. That gives four speeds.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "A river flows. So a boat on it never moves at just its own speed: the water carries it along or holds it back. That is the whole topic, and it comes down to four speeds.",
+    "- **Speed of the boat in still water**: how fast the boat goes on a lake, with no current. We will call it the **boat speed**.",
+    "- **Speed of the stream** (or current): how fast the river itself flows.",
+    "- **Downstream speed**: going **with** the flow. The river helps, so the speeds add.",
+    "- **Upstream speed**: going **against** the flow. The river hinders, so the stream is taken away.",
+    "**downstream = boat + stream**",
+    "**upstream = boat - stream**",
+    "A boat that does 12 km/h in still water, on a stream of 3 km/h, goes downstream at 15 and upstream at 9.",
+    "Once you have the right one of these, the question is the first lesson of Speed, Time and Distance: distance = speed x time. So the routine is always two steps.",
+    "1. Decide the direction, and work out the downstream or upstream speed.",
+    "2. Use distance = speed x time.",
+    "Words to know: \"with the stream\" or \"along the current\" means downstream; \"against the stream\" means upstream. And when a boat goes somewhere downstream and then **returns**, the return is upstream."
+   ],
+   "example": {
+    "q": "The speed of a boat in still water is 12 km/h and the speed of the stream is 3 km/h. How long will the boat take to cover 45 km downstream?",
+    "steps": [
+     "Downstream, the stream helps: 12 + 3 = 15 km/h.",
+     "Time = distance / speed = 45 / 15 = 3 hours."
+    ],
+    "answer": "3 hours."
+   },
+   "check": {
+    "q": "The speed of a boat in still water is 9 km/h and the speed of the stream is 3 km/h. How long will it take to cover 24 km upstream?",
+    "options": {
+     "a": "2 hours",
+     "b": "2 2/3 hours",
+     "c": "4 hours",
+     "d": "8 hours"
+    },
+    "answer": "C",
+    "why": "Upstream, the stream hinders: 9 - 3 = 6 km/h. 24 / 6 = 4 hours. (2 hours uses the downstream speed, 12.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-a-graded#1",
+     "clerk-18-boats-and-streams-a-graded#4",
+     "clerk-18-boats-and-streams-a-graded#6",
+     "clerk-18-boats-and-streams-a-graded#18",
+     "clerk-18-boats-and-streams-a-graded#11"
+    ],
+    "tags": [
+     "Downstream: find the time.",
+     "Upstream: find the time.",
+     "Downstream: find the distance, with the time in minutes.",
+     "Both directions compared.",
+     "A trip one way, then the return."
+    ]
+   }
+  },
+  {
+   "id": "from-two-trips",
+   "code": "B2",
+   "title": "Finding the boat and the stream from two trips",
+   "plain": "New: the question gives the downstream and upstream speeds. The boat is halfway between them; the stream is half the gap.",
+   "needs": [
+    "average"
+   ],
+   "teach": [
+    "Last lesson you were given the boat and the stream and built the other two. More often it is the other way round: you learn the **downstream** and **upstream** speeds, and must find the boat and the stream.",
+    "Picture the four speeds on a line. The boat speed sits in the middle. Going downstream adds the stream; going upstream takes the same amount away.",
+    "**upstream ... boat ... downstream**, with one stream-sized step on each side.",
+    "So:",
+    "- **boat speed = halfway between the two = (downstream + upstream) / 2**",
+    "- **stream speed = half the gap between them = (downstream - upstream) / 2**",
+    "Downstream 20 and upstream 12: the boat is (20 + 12) / 2 = 16, and the stream is (20 - 12) / 2 = 4. Check: 16 + 4 = 20 and 16 - 4 = 12.",
+    "The question may not hand you the two speeds directly. It may describe two **trips**: \"36 km downstream in 3 hours and 24 km upstream in 4 hours\". Turn each trip into a speed first (12 and 6), then use the line.",
+    "The slip to avoid is forgetting to halve. The gap between downstream and upstream is **two** streams, not one."
+   ],
+   "example": {
+    "q": "A boat covers 40 km downstream in 2 hours and 36 km upstream in 3 hours. Find the speed of the boat in still water and the speed of the stream.",
+    "steps": [
+     "Downstream speed = 40 / 2 = 20 km/h. Upstream speed = 36 / 3 = 12 km/h.",
+     "Boat = halfway between: (20 + 12) / 2 = 16 km/h.",
+     "Stream = half the gap: (20 - 12) / 2 = 4 km/h.",
+     "Check: 16 + 4 = 20, and 16 - 4 = 12."
+    ],
+    "answer": "Boat 16 km/h, stream 4 km/h."
+   },
+   "check": {
+    "q": "A boat goes downstream at 14 km/h and upstream at 8 km/h. What is the speed of the stream?",
+    "options": {
+     "a": "3 km/h",
+     "b": "6 km/h",
+     "c": "11 km/h",
+     "d": "22 km/h"
+    },
+    "answer": "A",
+    "why": "The stream is half the gap: (14 - 8) / 2 = 3 km/h. (6 is the whole gap, which is two streams. 11 is the boat.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-a-graded#2",
+     "clerk-18-boats-and-streams-a-graded#3",
+     "clerk-18-boats-and-streams-a-graded#5",
+     "clerk-18-boats-and-streams-b-pyq#4",
+     "clerk-18-boats-and-streams-b-pyq#22"
+    ],
+    "tags": [
+     "Two speeds given: find the boat.",
+     "Two speeds given: find the stream.",
+     "Two trips: find the boat.",
+     "The same, with a real paper's bigger numbers.",
+     "Times in minutes: find the stream."
+    ]
+   }
+  },
+  {
+   "id": "any-two",
+   "code": "B2",
+   "title": "Any two of the four give the rest",
+   "plain": "New: the two facts come in less obvious forms: a sum, a time in still water, even a floating log.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "There are four speeds, tied together by two simple relations. So **any two of them, or any two facts about them, fix all four.** Every question in this topic is a hunt for two facts.",
+    "Here are the less obvious ways the two facts arrive.",
+    "**The sum of the two trip speeds.** Downstream + upstream = (boat + stream) + (boat - stream) = **twice the boat**. So \"the sum of the upstream and downstream speeds is 36\" tells you the boat does 18.",
+    "**One speed described through another.** \"The upstream speed is 12 more than the stream.\" Upstream is boat minus stream, so boat - stream = stream + 12, which means the boat is twice the stream plus 12. Use that with the second fact.",
+    "**Times for the same distance, instead of speeds.** \"A boat takes 8 hours in still water and 6 hours downstream for the same distance.\" No distance is given, so choose one that both times go into: 24 km. Then the boat does 3 km/h and downstream is 4 km/h, so the stream is 1 and upstream is 2.",
+    "**A floating log.** A log, a raft or anything that simply drifts has no speed of its own. It moves at the **speed of the stream**. So \"how long will a log take\" is asking for distance / stream speed.",
+    "**A trip in still water** uses the boat speed alone, with no stream added or taken away."
+   ],
+   "example": {
+    "q": "A boat takes 4 hours to cover a certain distance downstream and 6 hours to cover the same distance in still water. How long will it take to cover the same distance upstream?",
+    "steps": [
+     "Choose a distance both times go into: 12 km.",
+     "Downstream speed = 12 / 4 = 3 km/h. Boat speed = 12 / 6 = 2 km/h.",
+     "Stream = 3 - 2 = 1 km/h, so upstream speed = 2 - 1 = 1 km/h.",
+     "Time upstream = 12 / 1 = 12 hours."
+    ],
+    "answer": "12 hours."
+   },
+   "check": {
+    "q": "The sum of the downstream and upstream speeds of a boat is 30 km/h, and the speed of the stream is 2 km/h. What is the downstream speed?",
+    "options": {
+     "a": "13 km/h",
+     "b": "15 km/h",
+     "c": "17 km/h",
+     "d": "32 km/h"
+    },
+    "answer": "C",
+    "why": "The sum of the two is twice the boat, so the boat does 15 km/h. Downstream = 15 + 2 = 17 km/h. (15 is the boat itself.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-b-pyq#7",
+     "clerk-18-boats-and-streams-b-pyq#18",
+     "clerk-18-boats-and-streams-b-pyq#3",
+     "clerk-18-boats-and-streams-a-graded#25",
+     "clerk-18-boats-and-streams-a-graded#29"
+    ],
+    "tags": [
+     "Two trips, and the answer is a ratio.",
+     "The sum of the two trip speeds.",
+     "One speed is described through another.",
+     "Times for the same distance, with still water as one of them.",
+     "A floating log."
+    ]
+   }
+  },
+  {
+   "id": "round-trip",
+   "code": "B3",
+   "title": "There and back",
+   "plain": "New: the boat goes somewhere and returns. Add the two times; never use the still-water speed for the whole trip.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "\"A boat goes 30 km downstream and comes back.\" The two legs are at different speeds, so they take different times. Work them out separately and add.",
+    "**total time = distance / downstream speed + distance / upstream speed**",
+    "It is tempting to say the stream \"cancels out\" over a round trip, and to divide the total distance by the boat's still-water speed. It does not cancel. The boat spends **longer** on the slow upstream leg, so the stream costs more time than it saves. You met the same thing with average speed.",
+    "**When the distance is the unknown.** \"The boat goes to a place and comes back in 5 hours. How far is the place?\" Use the trick of choosing a convenient distance.",
+    "- Say the speeds are 12 downstream and 8 upstream. Choose a distance both go into: 24 km.",
+    "- For 24 km: 2 hours down and 3 hours back, 5 hours in all.",
+    "- Compare with the real time and scale. Here the real time is also 5 hours, so the place is 24 km away. Had it been 10 hours, the place would be 48 km away.",
+    "**Not all the way back.** If the boat returns only to a point halfway, the upstream leg is half the distance. Write each leg with its own distance.",
+    "Read carefully whether the question wants the distance to the place or the **total** distance travelled (which is twice as much)."
+   ],
+   "example": {
+    "q": "The speed of a boat in still water is 6 km/h and the speed of the stream is 2 km/h. How long will it take to go 16 km downstream and come back?",
+    "steps": [
+     "Downstream speed = 8 km/h. Upstream speed = 4 km/h.",
+     "Going: 16 / 8 = 2 hours. Returning: 16 / 4 = 4 hours.",
+     "Total = 6 hours.",
+     "(Dividing 32 km by the still-water speed, 6, would give 5 1/3 hours, which is too little.)"
+    ],
+    "answer": "6 hours."
+   },
+   "check": {
+    "q": "The speed of a boat in still water is 5 km/h and the speed of the stream is 1 km/h. The boat goes to a place and comes back in 5 hours. How far is the place?",
+    "options": {
+     "a": "10 km",
+     "b": "12 km",
+     "c": "12.5 km",
+     "d": "24 km"
+    },
+    "answer": "B",
+    "why": "Speeds are 6 downstream and 4 upstream. Try 12 km: 2 hours down and 3 hours back, 5 hours. That matches, so the place is 12 km away. (12.5 km uses the still-water speed for the whole trip.)"
+   },
+   "shortcut": {
+    "title": "Average speed for a round trip",
+    "text": [
+     "For going somewhere and coming straight back, the average speed over the whole trip is:",
+     "**downstream speed x upstream speed / boat speed**",
+     "Boat 10, stream 2: 12 x 8 / 10 = 9.6 km/h. It is always a little less than the boat's own speed.",
+     "From that, total time = total distance / this average, and total distance = this average x total time. With boat 10, stream 2 and 5 hours in all: 9.6 x 5 = 48 km there and back, so the place is 24 km away."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-a-graded#7",
+     "clerk-18-boats-and-streams-a-graded#9",
+     "clerk-18-boats-and-streams-b-pyq#21",
+     "clerk-18-boats-and-streams-a-graded#16",
+     "clerk-18-boats-and-streams-a-graded#19"
+    ],
+    "tags": [
+     "Find the total time.",
+     "Find how far the place is.",
+     "It asks for the total distance travelled.",
+     "The average speed for the whole trip.",
+     "The boat comes only halfway back."
+    ]
+   }
+  },
+  {
+   "id": "time-gap",
+   "code": "B3",
+   "title": "\"Takes 2 hours more upstream\", and a missing speed",
+   "plain": "New: the question gives the difference between the two times, or hides one of the speeds inside a round trip.",
+   "needs": [
+    "lcm",
+    "check-options"
+   ],
+   "teach": [
+    "Two more forms of the there-and-back question.",
+    "**The difference in time is given.** \"The boat takes 2 hours more to cover a distance upstream than downstream.\" Use the same trial-distance idea, but look at the **gap** between the two times instead of their total.",
+    "- Speeds 15 downstream and 9 upstream. Choose 45 km.",
+    "- That takes 3 hours down and 5 hours up: a gap of 2 hours.",
+    "- Compare with the real gap and scale. If the real gap is 2 hours, the distance is 45 km; if it were 4 hours, 90 km.",
+    "**One of the speeds is missing.** \"The boat does 9 km/h in still water. It goes 36 km downstream and comes back in 9 hours. Find the speed of the stream.\"",
+    "Here you cannot build the two speeds, because the stream is the unknown. Solving it properly leads to an equation with the unknown squared, which is slow and easy to get wrong. The sensible route is to **test the options**.",
+    "- Try a stream of 3: downstream 12, upstream 6. Times 3 hours and 6 hours, total 9. It fits.",
+    "A good first guess saves time. The stream is usually a small whole number, and it should make both speeds divide the distance neatly. Start with the option that does.",
+    "Testing options is not a lesser method here. It is the fastest correct one, and it checks the answer as you go."
+   ],
+   "example": {
+    "q": "The speed of a boat in still water is 8 km/h and the speed of the stream is 2 km/h. The boat takes 4 hours more to cover a certain distance upstream than downstream. Find the distance.",
+    "steps": [
+     "Downstream 10 km/h, upstream 6 km/h.",
+     "Choose a distance both go into: 30 km. Times: 3 hours down, 5 hours up.",
+     "That is a gap of 2 hours for 30 km.",
+     "The real gap is 4 hours, twice as much, so the distance is 60 km."
+    ],
+    "answer": "60 km."
+   },
+   "check": {
+    "q": "A boat does 7 km/h in still water. It goes 24 km downstream and comes back in a total of 7 hours. What is the speed of the stream?",
+    "options": {
+     "a": "1 km/h",
+     "b": "2 km/h",
+     "c": "3 km/h",
+     "d": "4 km/h"
+    },
+    "answer": "A",
+    "why": "Test the options. Stream 1: downstream 8, upstream 6. Times 3 hours and 4 hours, total 7. It fits."
+   },
+   "shortcut": {
+    "title": "The time gap in one line",
+    "text": [
+     "If going upstream takes **t** hours longer than going downstream over the same distance:",
+     "**distance = t x downstream speed x upstream speed / (downstream speed - upstream speed)**",
+     "Speeds 15 and 9 with a gap of 2 hours: 2 x 15 x 9 / 6 = 45 km.",
+     "It is the cousin of the late-and-early line from Speed, Time and Distance. The bottom number is twice the stream."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-a-graded#13",
+     "clerk-18-boats-and-streams-b-pyq#13",
+     "clerk-18-boats-and-streams-a-graded#12",
+     "clerk-18-boats-and-streams-a-graded#24",
+     "clerk-18-boats-and-streams-b-pyq#17"
+    ],
+    "tags": [
+     "A time gap: find the distance.",
+     "A time gap, then a still-water trip.",
+     "A round trip with the stream missing: test the options.",
+     "A time gap with the stream missing: test the options.",
+     "A round trip with the boat missing, then a further trip."
+    ]
+   }
+  },
+  {
+   "id": "ratios",
+   "code": "B4",
+   "title": "When a ratio links the speeds",
+   "plain": "New: the boat and stream are given as a ratio or a percent. Write all four speeds in parts, then match one real number.",
+   "needs": [
+    "ratio",
+    "percent-words"
+   ],
+   "teach": [
+    "The Clerk papers set this form more than any other in the topic. Instead of speeds, you are told how two of them compare: \"the ratio of the boat to the stream is 7 : 2\".",
+    "Treat the ratio as **parts**, and build all four speeds in parts with the two relations you know.",
+    "| Speed | In parts, for boat : stream = 7 : 2 |",
+    "| boat | 7 |",
+    "| stream | 2 |",
+    "| downstream | 7 + 2 = 9 |",
+    "| upstream | 7 - 2 = 5 |",
+    "Then the question gives one real number, usually a trip. \"432 km downstream in 6 hours\" means the downstream speed is 72 km/h. Downstream is 9 parts, so one part is 8 km/h. Now every speed is known: upstream is 5 x 8 = 40 km/h.",
+    "This is the \"match the real number to the parts\" step from every earlier topic.",
+    "The ratio can link **any** two of the four, and it may be given as a percent.",
+    "- \"The stream is 20% of the boat\": stream 1, boat 5.",
+    "- \"Upstream to stream is 4 : 1\": upstream 4, stream 1, so boat = 4 + 1 = 5 and downstream = 6.",
+    "- \"Downstream to stream is 9 : 1\": downstream 9, stream 1, so boat = 8 and upstream = 7.",
+    "- \"Upstream to downstream is 3 : 5\": boat is halfway, 4; stream is half the gap, 1.",
+    "Whichever two you are given, fill in the other two using: downstream = boat + stream, upstream = boat - stream."
+   ],
+   "example": {
+    "q": "The ratio of the speed of a boat in still water to the speed of the stream is 5 : 1. The boat covers 36 km downstream in 2 hours. How long will it take to cover 48 km upstream?",
+    "steps": [
+     "In parts: boat 5, stream 1, downstream 6, upstream 4.",
+     "Real number: downstream speed = 36 / 2 = 18 km/h. That is 6 parts, so one part is 3 km/h.",
+     "Upstream = 4 parts = 12 km/h.",
+     "Time = 48 / 12 = 4 hours."
+    ],
+    "answer": "4 hours."
+   },
+   "check": {
+    "q": "The speed of the stream is 25% of the speed of a boat in still water. If the downstream speed is 20 km/h, what is the upstream speed?",
+    "options": {
+     "a": "10 km/h",
+     "b": "12 km/h",
+     "c": "15 km/h",
+     "d": "16 km/h"
+    },
+    "answer": "B",
+    "why": "25% means stream 1, boat 4. Downstream is 5 parts and upstream is 3 parts. 5 parts = 20, so one part is 4 and upstream is 12 km/h. (16 is the boat.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-b-pyq#14",
+     "clerk-18-boats-and-streams-a-graded#23",
+     "clerk-18-boats-and-streams-b-pyq#5",
+     "clerk-18-boats-and-streams-b-pyq#20",
+     "clerk-18-boats-and-streams-b-pyq#2"
+    ],
+    "tags": [
+     "Boat to stream, and a downstream trip.",
+     "The link is a percent.",
+     "Upstream to stream.",
+     "Downstream to stream, with the stream given.",
+     "Upstream to downstream, with the stream given."
+    ]
+   }
+  },
+  {
+   "id": "hidden-ratio",
+   "code": "B4",
+   "title": "The ratio hidden in times and distances",
+   "plain": "New: no ratio is stated. \"Twice as long upstream\" or \"20 km up in the time of 30 km down\" is one in disguise.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Sometimes the ratio of downstream to upstream speed is not stated but is sitting in the sentence. Two disguises cover almost all cases, and both come from Speed, Time and Distance.",
+    "**Same distance, times compared.** \"He takes twice as long to row upstream as downstream.\" For the same distance, speed and time are opposite. Twice the time means half the speed. So **downstream : upstream = 2 : 1**.",
+    "Likewise \"downstream in 2 hours, back in 3 hours\" gives times 2 : 3, so the speeds are 3 : 2.",
+    "**Same time, distances compared.** \"In the time it covers 20 km upstream it covers 30 km downstream.\" In the same time, a faster boat goes further in direct proportion. So **upstream : downstream = 20 : 30 = 2 : 3**.",
+    "Once you have downstream : upstream, the other two follow as in the last lesson:",
+    "- the **boat** is halfway between the two numbers;",
+    "- the **stream** is half the gap.",
+    "With downstream 3 and upstream 2: boat 2.5 parts, stream 0.5 part. If halves bother you, double everything: 6, 4, 5 and 1.",
+    "Then match the one real number. \"The stream is 2 km/h\" makes 0.5 part equal to 2, so one part is 4."
+   ],
+   "example": {
+    "q": "A man takes three times as long to row a distance upstream as to row the same distance downstream. His speed in still water is 8 km/h. Find the speed of the stream.",
+    "steps": [
+     "Three times the time means one third of the speed: downstream : upstream = 3 : 1.",
+     "Boat = halfway between 3 and 1 = 2 parts. Stream = half the gap = 1 part.",
+     "The boat is 8 km/h, so one part is 4 km/h.",
+     "Stream = 1 part = 4 km/h."
+    ],
+    "answer": "4 km/h."
+   },
+   "check": {
+    "q": "In the time a boat covers 15 km upstream, it covers 25 km downstream. If the speed of the stream is 3 km/h, what is the speed of the boat in still water?",
+    "options": {
+     "a": "9 km/h",
+     "b": "12 km/h",
+     "c": "15 km/h",
+     "d": "24 km/h"
+    },
+    "answer": "B",
+    "why": "Same time, so upstream : downstream = 15 : 25 = 3 : 5. Boat = 4 parts, stream = 1 part. The stream is 3 km/h, so the boat is 12 km/h."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-a-graded#10",
+     "clerk-18-boats-and-streams-a-graded#17",
+     "clerk-18-boats-and-streams-a-graded#28",
+     "clerk-18-boats-and-streams-a-graded#14",
+     "clerk-18-boats-and-streams-b-pyq#10"
+    ],
+    "tags": [
+     "\"Twice as long upstream\", with the boat given.",
+     "Distances in the same time, with the stream given.",
+     "Two times for the same distance: find the distance.",
+     "A percent between the two trip speeds.",
+     "A ratio of trip speeds and a total time; find the still-water time."
+    ]
+   }
+  },
+  {
+   "id": "ratio-exam",
+   "code": "B4",
+   "title": "Ratios, in exam wording",
+   "plain": "New: nothing new in the idea. The real number arrives as a difference between two speeds, a round-trip time, or a letter.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Recent papers keep the ratio but change what the real number is. Here are the forms, each with the one thought that opens it.",
+    "**\"Downstream is 5 km/h more than upstream.\"** The gap between downstream and upstream is always **twice the stream**. So a gap of 5 means the stream is 2.5 km/h. That is a real speed, and with a boat-to-stream ratio you have everything.",
+    "**Speeds written with a letter**: \"downstream is x and upstream is x - 15\". The same thought: the gap is 15, so the stream is 7.5.",
+    "**A round-trip time.** \"120 km down and back in 24 hours; stream to boat is 2 : 3.\" Build the two trip speeds in parts (5 and 1 here). Write the total time with one part as the unknown: 120 / 5 parts + 120 / 1 part. That is 24 + 120, all divided by the size of one part, and it must equal 24 hours.",
+    "**Two trips whose times are tied by a letter**: \"32 km downstream in (t + 1) hours and 12 km upstream in t hours, with downstream twice upstream\". Write each speed as distance over time and use the ratio between them.",
+    "In each case the order of work is the same as before: **parts first, then find the real size of one part, then answer.**"
+   ],
+   "example": {
+    "q": "The downstream speed of a boat is 6 km/h more than its upstream speed. The ratio of the speed of the boat in still water to the speed of the stream is 5 : 1. How long will the boat take to cover 36 km downstream?",
+    "steps": [
+     "The gap between downstream and upstream is twice the stream. So the stream is 3 km/h.",
+     "Boat : stream = 5 : 1, so the boat does 15 km/h.",
+     "Downstream = 15 + 3 = 18 km/h.",
+     "Time = 36 / 18 = 2 hours."
+    ],
+    "answer": "2 hours."
+   },
+   "check": {
+    "q": "The downstream speed of a boat is x km/h and its upstream speed is (x - 8) km/h. The ratio of the boat's speed in still water to the speed of the stream is 3 : 1. What is x?",
+    "options": {
+     "a": "8",
+     "b": "12",
+     "c": "16",
+     "d": "24"
+    },
+    "answer": "C",
+    "why": "The gap is 8, so the stream is 4 km/h. Boat : stream = 3 : 1, so the boat does 12. Downstream, x = 12 + 4 = 16."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-b-pyq#8",
+     "clerk-18-boats-and-streams-b-pyq#16",
+     "clerk-18-boats-and-streams-b-pyq#15",
+     "clerk-18-boats-and-streams-b-pyq#19",
+     "clerk-18-boats-and-streams-b-pyq#6"
+    ],
+    "tags": [
+     "The gap between the two trip speeds, written with a letter.",
+     "The gap in km/h, then a two-leg trip.",
+     "A round-trip time with a ratio.",
+     "The ratio is hidden in equal times, with a round-trip time.",
+     "Two trips tied by a letter in the times."
+    ]
+   }
+  },
+  {
+   "id": "changed-speed",
+   "code": "B6",
+   "title": "When one of the speeds changes",
+   "plain": "New: the boat's speed is cut, or the stream rises after rain. Change only that one, then rebuild the trip speed.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"If its speed in still water is decreased by 20%...\" or \"after rain the speed of the stream doubles\". One of the two basic speeds, the boat or the stream, is altered, and the question asks about a trip afterwards.",
+    "The danger is changing the wrong thing. A cut of 20% in the **boat's** speed is not a cut of 20% in the downstream speed. So keep to this order:",
+    "1. **Find the boat speed and the stream speed as they are now**, using whatever the first part of the question gives.",
+    "2. **Change only the one the question names.**",
+    "3. **Rebuild** the downstream or upstream speed from the new pair.",
+    "4. Do the new trip.",
+    "\"A boat covers 30 km upstream in 5 hours when the stream is 2 km/h. The stream rises by 2 km/h.\" Now: upstream 6, so the boat does 8. Change the stream to 4. Rebuild: upstream = 8 - 4 = 4. New time for 30 km: 7.5 hours.",
+    "Notice how hard a stronger stream hits an upstream trip: the stream only doubled, but the trip takes half as long again.",
+    "A different twist puts **letters in the distances**: \"(X + 50) km downstream in 5 hours\". Find the trip speed from the boat and stream first, multiply by the time to get the real distance, and read off the letter."
+   ],
+   "example": {
+    "q": "A boat covers 30 km upstream in 5 hours when the speed of the stream is 2 km/h. If the speed of the stream increases by 2 km/h, how long will the boat take to cover 30 km upstream?",
+    "steps": [
+     "Now: upstream speed = 30 / 5 = 6 km/h. The stream is 2, so the boat does 8 km/h.",
+     "Change only the stream: it becomes 4 km/h.",
+     "Rebuild: upstream = 8 - 4 = 4 km/h.",
+     "New time = 30 / 4 = 7.5 hours."
+    ],
+    "answer": "7.5 hours."
+   },
+   "check": {
+    "q": "A boat goes downstream at 20 km/h and upstream at 12 km/h. If its speed in still water is increased by 25%, what is its new downstream speed?",
+    "options": {
+     "a": "20 km/h",
+     "b": "24 km/h",
+     "c": "25 km/h",
+     "d": "29 km/h"
+    },
+    "answer": "B",
+    "why": "Now: boat 16, stream 4. Raise only the boat by 25%: 20. New downstream = 20 + 4 = 24 km/h. (25 raises the downstream speed itself by 25%, which is not what changed.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-a-graded#30",
+     "clerk-18-boats-and-streams-b-pyq#1",
+     "clerk-18-boats-and-streams-b-pyq#9",
+     "clerk-18-boats-and-streams-b-pyq#11"
+    ],
+    "tags": [
+     "The stream changes.",
+     "The boat's speed is cut, then a still-water trip.",
+     "The boat's speed is raised, with a ratio and a letter.",
+     "Letters in the distances."
+    ]
+   }
+  },
+  {
+   "id": "two-boats",
+   "code": "B7",
+   "title": "Two boats, and two mixed trips",
+   "plain": "New: two boats on the same river, where the stream cancels; and a pair of mixed trips that is best solved from the options.",
+   "needs": [
+    "check-options"
+   ],
+   "teach": [
+    "Two settings to finish. Neither has appeared in the papers we checked, but both sit in practice sets.",
+    "**Two boats moving towards each other.** One is going downstream and the other upstream, on the same river. The stream helps one and hinders the other by exactly the same amount, so in the gap between them **the stream cancels out**.",
+    "- First boat, downstream: its still-water speed + stream.",
+    "- Second boat, upstream: its still-water speed - stream.",
+    "- Add them to see how fast the gap closes: the stream drops away, leaving the **sum of the two still-water speeds**.",
+    "So time to meet = distance between them / (sum of the still-water speeds). The speed of the stream in the question is there to distract. (It does matter if the question asks **where** they meet.)",
+    "If the two boats move in the same direction, the stream carries both along equally, and the gap closes at the difference of their still-water speeds.",
+    "**Two mixed trips.** \"A boat goes 30 km upstream and 44 km downstream in 10 hours, and 40 km upstream and 55 km downstream in 13 hours.\" Each trip mixes the two directions, so neither speed can be read off. The proper method is a pair of equations with the unknowns underneath, which is slow.",
+    "Test the options instead. Take an option for the boat speed and look for an upstream and downstream speed around it that divide the distances neatly. Check both trips."
+   ],
+   "example": {
+    "q": "Two boats start at the same time from points 90 km apart on a river and move towards each other. Their speeds in still water are 10 km/h and 8 km/h, and the speed of the stream is 2 km/h. After how long do they meet?",
+    "steps": [
+     "One boat goes downstream: 10 + 2 = 12 km/h. The other goes upstream: 8 - 2 = 6 km/h.",
+     "The gap closes at 12 + 6 = 18 km/h. That is just 10 + 8: the stream has cancelled.",
+     "Time = 90 / 18 = 5 hours."
+    ],
+    "answer": "5 hours."
+   },
+   "check": {
+    "q": "In the example above, suppose the speed of the stream were 4 km/h instead of 2 km/h. After how long would the two boats meet?",
+    "options": {
+     "a": "3 hours",
+     "b": "4.5 hours",
+     "c": "5 hours",
+     "d": "7.5 hours"
+    },
+    "answer": "C",
+    "why": "The stream cancels when two boats approach each other: 14 + 4 = 18 km/h, the same as before. They still meet after 5 hours."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-18-boats-and-streams-a-graded#15",
+     "clerk-18-boats-and-streams-a-graded#21"
+    ],
+    "tags": [
+     "Two boats approaching each other.",
+     "Two mixed trips: test the options."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-18-boats-and-streams-a-graded#1": [
+    "Downstream speed = 15 + 3 = 18 km/h.",
+    "54 / 18 = 3 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#4": [
+    "Upstream speed = 12 - 4 = 8 km/h.",
+    "32 / 8 = 4 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#6": [
+    "Downstream speed = 10 + 2 = 12 km/h.",
+    "45 minutes is 3/4 of an hour: 12 x 3/4 = 9 km."
+   ],
+   "clerk-18-boats-and-streams-a-graded#18": [
+    "Downstream 12 km/h, upstream 8 km/h. The gap is 4 km/h.",
+    "In 5 hours that is 4 x 5 = 20 km more."
+   ],
+   "clerk-18-boats-and-streams-a-graded#11": [
+    "Downstream speed = 48 / 4 = 12 km/h. Take away the stream: the boat does 10 km/h.",
+    "The return is upstream: 10 - 2 = 8 km/h. 48 / 8 = 6 hours.",
+    "6 hours is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-18-boats-and-streams-a-graded#2": [
+    "Boat = halfway between: (20 + 12) / 2 = 16 km/h."
+   ],
+   "clerk-18-boats-and-streams-a-graded#3": [
+    "Stream = half the gap: (18 - 10) / 2 = 4 km/h.",
+    "4 km/h is not among the numbered options (8 is the whole gap), so the answer is \"None of these\"."
+   ],
+   "clerk-18-boats-and-streams-a-graded#5": [
+    "Downstream speed = 36 / 3 = 12 km/h. Upstream speed = 24 / 4 = 6 km/h.",
+    "Boat = (12 + 6) / 2 = 9 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#4": [
+    "Downstream = 192 / 4 = 48 km/h. Upstream = 200 / 5 = 40 km/h.",
+    "Boat = (48 + 40) / 2 = 44 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#22": [
+    "240 minutes is 4 hours: downstream speed = 32 / 4 = 8 km/h. 1440 minutes is 24 hours: upstream speed = 48 / 24 = 2 km/h.",
+    "Stream = (8 - 2) / 2 = 3 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#7": [
+    "Upstream speed = 54 / 9 = 6 km/h. Downstream speed = 60 / 5 = 12 km/h.",
+    "Boat = 9 km/h, stream = 3 km/h.",
+    "Boat : stream = 9 : 3 = 3 : 1."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#18": [
+    "The sum is twice the boat, so the boat does 18 km/h.",
+    "Downstream = 18 + 3 = 21 km/h.",
+    "52.5 / 21 = 2.5 hours."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#3": [
+    "Downstream speed = 45 / 2.5 = 18 km/h, so boat + stream = 18.",
+    "Upstream = stream + 12 means boat - stream = stream + 12, so boat = twice the stream + 12.",
+    "Then three times the stream + 12 = 18: the stream is 2, the boat is 16 and upstream is 14 km/h.",
+    "In 5 hours: 14 x 5 = 70 km."
+   ],
+   "clerk-18-boats-and-streams-a-graded#25": [
+    "Choose 24 km. Boat speed = 24 / 8 = 3 km/h. Downstream speed = 24 / 6 = 4 km/h.",
+    "Stream = 1 km/h, so upstream = 3 - 1 = 2 km/h.",
+    "24 / 2 = 12 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#29": [
+    "Choose 15 km. Downstream speed = 15 / 3 = 5 km/h. Upstream speed = 15 / 5 = 3 km/h.",
+    "Stream = (5 - 3) / 2 = 1 km/h. The log drifts at the speed of the stream.",
+    "15 / 1 = 15 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#7": [
+    "Downstream 10 km/h, upstream 6 km/h.",
+    "Going: 30 / 10 = 3 hours. Returning: 30 / 6 = 5 hours.",
+    "Total: 8 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#9": [
+    "Downstream 12 km/h, upstream 8 km/h. Try 24 km: 2 hours down and 3 hours back, 5 hours.",
+    "That matches the 5 hours given.",
+    "The place is 24 km away."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#21": [
+    "Downstream 10 km/h, upstream 2 km/h. Try 10 km: 1 hour down and 5 hours back, 6 hours.",
+    "The real time is 18 hours, three times as long, so the place is 30 km away.",
+    "Total distance = 60 km."
+   ],
+   "clerk-18-boats-and-streams-a-graded#16": [
+    "Downstream 12 km/h, upstream 8 km/h. Try 24 km each way: 2 hours and 3 hours.",
+    "48 km in 5 hours.",
+    "Average speed = 9.6 km/h."
+   ],
+   "clerk-18-boats-and-streams-a-graded#19": [
+    "Downstream 18 km/h, upstream 10 km/h. Try 180 km from A to B: 10 hours down, then 90 km back at 10 km/h is 9 hours.",
+    "Total 19 hours, which matches. So A to B is 180 km.",
+    "180 km is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-18-boats-and-streams-a-graded#13": [
+    "Downstream 15 km/h, upstream 9 km/h. Try 45 km: 3 hours down and 5 hours up.",
+    "The gap is 2 hours, which matches.",
+    "The distance is 45 km."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#13": [
+    "Downstream 8 km/h, upstream 4 km/h. Try 8 km: 1 hour down and 2 hours up, a gap of 1 hour.",
+    "The real gap is 4 hours, so D = 32 km.",
+    "In still water at 6 km/h: 32 / 6 = 5 1/3 hours = 5 hours 20 minutes."
+   ],
+   "clerk-18-boats-and-streams-a-graded#12": [
+    "Try a stream of 3 km/h: downstream 12, upstream 6.",
+    "36 / 12 = 3 hours and 36 / 6 = 6 hours. Total 9 hours. It fits.",
+    "The stream is 3 km/h."
+   ],
+   "clerk-18-boats-and-streams-a-graded#24": [
+    "90 minutes is 1.5 hours. Try a stream of 2 km/h: downstream 12, upstream 8.",
+    "36 / 8 = 4.5 hours and 36 / 12 = 3 hours. The gap is 1.5 hours. It fits.",
+    "The stream is 2 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#17": [
+    "14 hours 24 minutes is 14.4 hours. Try a boat speed of 24 km/h: downstream 30, upstream 18.",
+    "162 / 30 = 5.4 hours and 162 / 18 = 9 hours. Total 14.4. It fits.",
+    "240 km upstream at 18 km/h: 240 / 18 = 13 1/3 hours."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#14": [
+    "In parts: boat 7, stream 2, downstream 9, upstream 5.",
+    "Downstream speed = 432 / 6 = 72 km/h = 9 parts, so one part is 8.",
+    "Upstream = 40 km/h. 280 / 40 = 7 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#23": [
+    "20% means stream 1, boat 5. Downstream 6 parts, upstream 4 parts.",
+    "Downstream speed = 72 / 3 = 24 km/h = 6 parts, so one part is 4.",
+    "Upstream = 16 km/h. 48 / 16 = 3 hours."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#5": [
+    "In parts: upstream 4, stream 1. So boat = 5 and downstream = 6.",
+    "Downstream speed = 60 / 2.5 = 24 km/h = 6 parts, so one part is 4.",
+    "The stream is 4 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#20": [
+    "In parts: downstream 9, stream 1. The stream is 3 km/h, so one part is 3.",
+    "Downstream = 27, boat = 24, upstream = 21 km/h.",
+    "In 5 hours upstream: 105 km."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#2": [
+    "In parts: upstream 3, downstream 5. The stream is half the gap: 1 part = 4 m/s.",
+    "Upstream = 12 m/s, downstream = 20 m/s.",
+    "120 / 12 + 120 / 20 = 10 + 6 = 16 seconds."
+   ],
+   "clerk-18-boats-and-streams-a-graded#10": [
+    "Downstream : upstream = 2 : 1. Boat = 1.5 parts, stream = 0.5 part.",
+    "The boat is 6 km/h, so one part is 4.",
+    "Stream = 2 km/h."
+   ],
+   "clerk-18-boats-and-streams-a-graded#17": [
+    "Upstream : downstream = 20 : 30 = 2 : 3. Stream = 0.5 part, boat = 2.5 parts.",
+    "The stream is 2 km/h, so one part is 4.",
+    "Boat = 10 km/h."
+   ],
+   "clerk-18-boats-and-streams-a-graded#28": [
+    "Times 2 : 3, so downstream : upstream = 3 : 2. Stream = 0.5 part = 2 km/h, so one part is 4.",
+    "Downstream = 12 km/h.",
+    "Distance = 12 x 2 = 24 km."
+   ],
+   "clerk-18-boats-and-streams-a-graded#14": [
+    "150% means downstream : upstream = 3 : 2. Boat = 2.5 parts, stream = 0.5 part.",
+    "The boat is 15 km/h, so one part is 6.",
+    "Stream = 3 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#10": [
+    "Downstream 4, upstream 1, so the boat is 2.5. Choose a distance of 4 units: 1 unit of time down and 4 up, 5 in all.",
+    "Those 5 time units are 10 hours, so one is 2 hours.",
+    "In still water: 4 / 2.5 = 1.6 time units = 3.2 hours = 3 hours 12 minutes."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#8": [
+    "Downstream minus upstream = 15, which is twice the stream. The stream is 7.5 km/h.",
+    "Boat : stream = 2 : 1, so the boat does 15 km/h.",
+    "x is the downstream speed: 15 + 7.5 = 22.5."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#16": [
+    "The gap is 5, so the stream is 2.5 km/h. Boat : stream = 19 : 5, so the boat does 9.5 km/h.",
+    "Downstream = 12 km/h, upstream = 7 km/h.",
+    "42 / 12 + 31.5 / 7 = 3.5 + 4.5 = 8 hours."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#15": [
+    "Stream 2, boat 3: downstream 5 parts, upstream 1 part.",
+    "Time = 120 / 5 parts + 120 / 1 part = (24 + 120) / one part = 144 / one part. That is 24 hours, so one part is 6.",
+    "Boat = 3 parts = 18 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#19": [
+    "40 km down in the time of 20 km up: downstream : upstream = 2 : 1.",
+    "Time = 120 / 2 parts + 120 / 1 part = 180 / one part. That is 9 hours, so one part is 20.",
+    "Downstream 40, upstream 20: the boat does 30 km/h."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#6": [
+    "Downstream speed = 32 / (t + 1). Upstream speed = 12 / t. Downstream is twice upstream.",
+    "32 / (t + 1) = 24 / t, so 32t = 24t + 24.",
+    "t = 3."
+   ],
+   "clerk-18-boats-and-streams-a-graded#30": [
+    "Now: upstream speed = 36 / 6 = 6 km/h, stream 2, so the boat does 8 km/h.",
+    "The stream doubles to 4. Upstream = 8 - 4 = 4 km/h.",
+    "36 / 4 = 9 hours."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#1": [
+    "Now: downstream 192 / 4 = 48, upstream 210 / 5 = 42. Boat = 45 km/h.",
+    "Cut by 20%: 36 km/h.",
+    "In still water for 3 hours: 108 km."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#9": [
+    "In parts: boat 4, stream 1, downstream 5. Raise the boat by 25%: 5 parts, so downstream becomes 6 parts.",
+    "240 / 5 parts - 240 / 6 parts = 4 hours. That is (48 - 40) / one part = 4, so one part is 2.",
+    "The first downstream speed is 10 km/h: t = 240 / 10 = 24."
+   ],
+   "clerk-18-boats-and-streams-b-pyq#11": [
+    "The stream is 4 and the boat is three times that: 12. Downstream 16 km/h, upstream 8 km/h.",
+    "Downstream for 5 hours: 80 km = X + 50, so X = 30. Upstream for 8 hours: 64 km = Y + 24, so Y = 40.",
+    "4X + Y = 160 km. Upstream at 8 km/h: 20 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#15": [
+    "The stream cancels. The gap closes at 12 + 15 = 27 km/h.",
+    "108 / 27 = 4 hours."
+   ],
+   "clerk-18-boats-and-streams-a-graded#21": [
+    "Try a boat speed of 8 km/h with a stream of 3: upstream 5 km/h, downstream 11 km/h.",
+    "First trip: 30 / 5 + 44 / 11 = 6 + 4 = 10 hours. It fits.",
+    "Second trip: 40 / 5 + 55 / 11 = 8 + 5 = 13 hours. It fits too. The boat does 8 km/h."
+   ]
+  }
+ }
+}

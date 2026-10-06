@@ -1,0 +1,789 @@
+{
+ "module": "floor-and-flat-puzzles",
+ "intro": [
+  "Two puzzles share this name: people on floors, one to a floor; and people in flats, two to a floor. These lessons are built from the puzzles the clerk papers actually set, in the same way as the other reasoning topics.",
+  "**What I studied first.** Thirteen real clerk-level puzzles with their clues (IBPS Clerk 2025, SBI Clerk 2025, RRB Clerk 2024), a few officer-level ones for contrast, and 13 sets from your Sreedhar bank. Eleven of the paper puzzles and all 13 bank sets were written out as exact conditions and each has exactly one arrangement by script.",
+  "| What was measured | Real clerk papers |",
+  "| How often | 13 of the 31 clerk shift papers opened had one: 7 with flats, 6 with floors only |",
+  "| Floors only | 8 floors in IBPS and SBI Clerk, 7 in RRB Clerk |",
+  "| With flats | 4 floors x 2 flats in 4 of 7; 3 floors x 2 flats in 2 (RRB Clerk); one with 5 floors |",
+  "| Three flats on a floor, an empty flat, a second fact per person | none found |",
+  "| Floor puzzles with no floor number and no even or odd clue | 2 of the 4 solved |",
+  "| Plain \"X lives above Y\" in a flat puzzle | any higher floor, either flat: all 7 have one arrangement on this reading |",
+  "| Flat puzzles using a compass word (north, south-west) | 2 of 7, one word each; your bank uses them in most sets |",
+  "**What this means.** The floors-only puzzle is the box puzzle with numbers printed, so two lessons are enough for it. The flat puzzle is where time is lost, because its clues are short and vague when read one at a time. The fix is to split each person into two facts, side and floor, and settle the sides first: four people in the west flats and four in the east. The IBPS Clerk puzzle of October 2025 goes from 52 open cases, read in printed order, to none.",
+  "A note on honesty: the paper puzzles are candidates' reconstructions, read through a summarising tool. Two of the thirteen were too condensed to use. One of the seven flat puzzles, with five floors, carries a shift label I could not confirm."
+ ],
+ "needs": [],
+ "after": [
+  "That covers both kinds as the clerk papers set them. The **Quick revision** tab keeps the older short notes.",
+  "For floors only: notes, block, count the fits, mirror, closers. For flats: the grid, the two teams, each column as four people on four floors, links across the columns, pairs and free floors, and the \"not\" clues last.",
+  "Still to come, as insurance: three flats on a floor, an empty flat or floor, five and six floors of flats, and a second fact per person. Your bank has these; none appeared in the clerk papers studied except the one five-floor set."
+ ],
+ "lessons": [
+  {
+   "id": "floors",
+   "code": "F1",
+   "title": "Floors only: a stack with the numbers already printed",
+   "plain": "The starting point. One person per floor is the box puzzle again. Turn each clue into a floor number or a step, and join the exact clues into a block.",
+   "needs": [],
+   "teach": [
+    "There are two puzzles under this name. In the first, eight people live on eight floors, **one person per floor**. In the second, each floor has two flats. This lesson and the next deal with the first kind; the rest of the topic is about the second.",
+    "A floor puzzle with one person per floor is the **box puzzle with the numbers already written on the boxes**. The lowest floor is 1. Everything you learned for boxes applies without change, so this lesson is a short reminder and then practice.",
+    "**The words, as steps.**",
+    "| The clue says | Floors apart |",
+    "| X lives immediately above Y | 1 |",
+    "| X lives three floors above Y | 3 |",
+    "| Only three persons live between X and Y; three floors between X and Y | 4, either way |",
+    "| X lives above Y | not known |",
+    "| As many persons live above X as below Y | the two floors add up to (number of floors + 1) |",
+    "Just as with boxes, \"three **between**\" is a step of 4, and \"three floors **above**\" is a step of 3. The real papers I checked agree: in the IBPS Clerk puzzle of 5 October 2025, \"D lives four floor above A\" has A on floor 2 and D on floor 6 in the answer key.",
+    "**How to solve.** Two of the four real floor puzzles I solved by script give no floor number and no even or odd clue at all. So do not wait for one.",
+    "- Write each clue as a short note.",
+    "- Join the notes that share a name into a **block**, measured from one person: G = A - 1, D = A + 4, and so on.",
+    "- The block's height tells you how many ways it fits: floors minus height, plus one.",
+    "- Draw a column for each fit, and use the other clues to remove columns. The mirror clue (\"as many above X as below Y\") is the first to try, because it places a new person in every column at once.",
+    "A building of 8 floors is the IBPS and SBI Clerk size; RRB Clerk uses 7."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 5 October 2025, shift 1. Eight persons A to H live on eight floors, numbered 1 to 8 from the bottom. D lives four floors above A. G lives immediately below A. Two persons live between G and B. The number of floors above B and below C are the same. F lives immediately above H.",
+    "steps": [
+     "Notes: D = A + 4. G = A - 1. G, B are 3 apart. Floor of B + floor of C = 9. F = H + 1.",
+     "Block from A: G is just below, D four above. B is 3 from G: that is A + 2, or A - 4. With A - 4 the block would run from A - 4 to A + 4, nine floors. So B = A + 2.",
+     "The block G, A, B, D covers six floors (A - 1 to A + 4). It fits three ways: A on floor 2, 3 or 4.",
+     "Mirror: A 2 puts B on 4, so C on 5. A 3 puts B on 5, so C on 4. A 4 puts B on 6, so C on 3, which is G's floor. Out.",
+     "A 3 (G 2, C 4, B 5, D 7): free floors 1, 6, 8. F and H need two floors in a row. Out.",
+     "A 2 (G 1, B 4, C 5, D 6): free floors 3, 7, 8. H 7, F 8, and E takes 3."
+    ],
+    "answer": "From the top floor down: F, H, D, C, B, E, A, G."
+   },
+   "check": {
+    "q": "Eight floors. D lives four floors above A, and G lives immediately below A. On how many different floors can A live?",
+    "options": {
+     "a": "2",
+     "b": "3",
+     "c": "4",
+     "d": "5"
+    },
+    "answer": "B",
+    "why": "G needs a floor below A, so A is at least 2. D needs floor A + 4, so A is at most 4. A can be 2, 3 or 4: three floors."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#5"
+    ],
+    "tags": [
+     "Set A (8 floors): a named floor, then a same-gap clue chooses the case.",
+     "Set A (8 floors), question 2: read it off the same drawing.",
+     "Set A (8 floors), question 3: read it off the same drawing.",
+     "Set A (8 floors), question 4: read it off the same drawing.",
+     "Set A (8 floors), question 5: read it off the same drawing.",
+     "Set B (7 floors): a count clue, a mirror, and 'not immediate' closers.",
+     "Set B (7 floors), question 2: read it off the same drawing.",
+     "Set B (7 floors), question 3: read it off the same drawing.",
+     "Set B (7 floors), question 4: read it off the same drawing.",
+     "Set B (7 floors), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "floors-soft",
+   "code": "F2",
+   "title": "Floors: even, odd and \"above the fifth\"",
+   "plain": "New: the clue that narrows one person to two floors. Join it to that person's next clue before drawing anything.",
+   "needs": [],
+   "teach": [
+    "When a floor puzzle does give a starting clue, it is nearly always a soft one about a single person:",
+    "- \"D lives on an even numbered floor above the 5th floor\": floor 6 or 8.",
+    "- \"D lives on an odd numbered floor\": 1, 3, 5 or 7.",
+    "- \"L lives on an even numbered floor but not on the 6th\": 2 or 4 (in seven floors).",
+    "Two of the four real floor puzzles open this way. Treat the clue as a short list of floors, and immediately **join it to the next clue about the same person**. Most of the list disappears.",
+    "\"D is on 6 or 8, and three persons live between D and B\": B is 4 below (4 above would be off the building). Two cases, each with two people placed.",
+    "\"D is on an odd floor, and H lives three floors below D\": D cannot be on 1 or 3. Two cases again: D 5 with H 2, or D 7 with H 4.",
+    "**Even and odd travel with the step.** An odd step (1, 3, 5) changes even to odd. An even step (2, 4) keeps it. So \"N lives on an even floor, and J lives immediately above N\" tells you J is on an odd floor without placing either. In a long bank set this check removes cases quickly.",
+    "**The order that works** in nearly every floor set, real or bank:",
+    "- the soft clue plus its partner clue: two cases;",
+    "- the mirror clue, as soon as one of its two people is in a case;",
+    "- the remaining exact steps (immediately above, two between), looking at the free floors as numbers;",
+    "- \"more than three between\", \"not adjacent\" and plain \"above\" for the last free floors."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 21 September 2025, shift 1. Eight persons A to H live on eight floors, numbered 1 to 8 from the bottom. D lives on an even numbered floor above the 5th floor. Three persons live between D and B. The number of floors above B is the same as the number of floors below E. Two persons live between E and G. C lives immediately above A. More than three persons live between A and H.",
+    "steps": [
+     "D is on 6 or 8. B is 4 below: (D 6, B 2) or (D 8, B 4).",
+     "Mirror: floor of B + floor of E = 9. B 2 gives E 7; B 4 gives E 5.",
+     "G is 3 from E. E 7 gives G 4. E 5 gives G 2 (floor 8 is D's).",
+     "D 6, B 2, E 7, G 4: free floors 1, 3, 5, 8. C and A need two floors in a row. Out.",
+     "D 8, B 4, E 5, G 2: free floors 1, 3, 6, 7. A 6, C 7.",
+     "More than three between A and H: H on floor 1. F takes 3."
+    ],
+    "answer": "From the top floor down: D, C, A, E, B, F, G, H."
+   },
+   "check": {
+    "q": "Eight floors. D lives on an even numbered floor above the 5th floor. Three persons live between D and B. On which floors can B live?",
+    "options": {
+     "a": "2 or 4",
+     "b": "2 only",
+     "c": "4 or 6",
+     "d": "1 or 3"
+    },
+    "answer": "A",
+    "why": "D is on 6 or 8. Three persons between is a step of 4, and only downwards fits: B is on 2 or 4."
+   },
+   "shortcut": {
+    "title": "Even and odd, without placing anyone",
+    "text": [
+     "Before drawing cases, mark each person in a parity clue with E or O, and pass the mark along every exact step:",
+     "- a step of 1, 3 or 5 flips it;",
+     "- a step of 2 or 4 keeps it.",
+     "\"C is on an odd floor and B lives two floors above C\": B is odd too. \"Only two persons between F and H\" is a step of 3: F and H are on floors of different kinds.",
+     "A case in which a marked person lands on the wrong kind of floor is dead on sight."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#6"
+    ],
+    "tags": [
+     "Set A (8 floors): two soft clues, a mirror, and a same-gap closer.",
+     "Set A (8 floors), question 2: read it off the same drawing.",
+     "Set A (8 floors), question 3: read it off the same drawing.",
+     "Set A (8 floors), question 4: read it off the same drawing.",
+     "Set A (8 floors), question 5: read it off the same drawing.",
+     "Set B (8 floors): a named floor and an odd-floor clue with three cases.",
+     "Set B (8 floors), question 2: read it off the same drawing.",
+     "Set B (8 floors), question 3: read it off the same drawing.",
+     "Set B (8 floors), question 4: read it off the same drawing.",
+     "Set B (8 floors), question 5: read it off the same drawing.",
+     "Set C (8 floors): a mirror and a small sum decide almost everything.",
+     "Set C (8 floors), question 2: read it off the same drawing.",
+     "Set C (8 floors), question 3: read it off the same drawing.",
+     "Set C (8 floors), question 4: read it off the same drawing.",
+     "Set C (8 floors), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "grid",
+   "code": "F3",
+   "title": "Two flats on each floor: what the words mean",
+   "plain": "New: the building is now a grid, four floors high and two flats wide. Each person has two facts, a floor and a side. Learn exactly which clue speaks about which.",
+   "needs": [],
+   "teach": [
+    "Now each floor has **two flats**, a west one and an east one, and one person lives in each. In the clerk papers the building is four floors with eight people (IBPS and SBI Clerk) or three floors with six people (RRB Clerk). I found no real puzzle with three flats on a floor or with an empty flat.",
+    "**Draw a grid**: floors as rows with floor 1 at the bottom, two columns, west on your left. The puzzle always says which flat is west; write the flat names above the columns.",
+    "Every person now has **two separate facts**: which **floor**, and which **side**. The whole skill is knowing which of the two a clue is talking about.",
+    "| The clue says | Floor | Side |",
+    "| X lives above Y | X is on a higher floor | says nothing |",
+    "| X lives immediately above (just above) Y | X is one floor higher | says nothing |",
+    "| There is one floor gap between X and Y | two floors apart | says nothing |",
+    "| X and Y live on the same floor | same | so they are on opposite sides |",
+    "| X lives to the west of Y | same floor | X west, Y east |",
+    "| X and Y live in the same named flat (same type of flat) | says nothing | same side |",
+    "| X lives immediately above Y in the same flat; X's flat is immediately above Y's flat | one floor higher | same side |",
+    "| X lives to the north of Y | higher | same side |",
+    "| X lives to the north-east of Y | higher | X east, Y west |",
+    "| No one lives to the east of X | says nothing | X is in the east flat |",
+    "**The line that matters most is the first.** A plain \"X lives above Y\" means **any higher floor, in either flat**. I did not assume this. In the IBPS Clerk puzzle of 4 October 2025 the clues say \"E lives above G\" and also \"E and G do not live in the same type of flat\"; and all seven real puzzles have exactly one arrangement when \"above\" is read this way. When the paper means the same column, it says so: \"in the same named flat\".",
+    "The compass words (north, south-west and so on) are common in your bank and rare in the papers, where two of the seven puzzles use one each. They are worth knowing because each one gives **both** facts at once."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 18 August 2024, shift 1. Six persons P to U live in a three-storey building with two flats on each floor; Flat X is to the west of Flat Y. P lives on the topmost floor. Q lives just below P, but not in the same named flat. R and S live on the same floor. U lives immediately above R but not in the same named flat. T does not live to the east of P.",
+    "steps": [
+     "P is on floor 3. Q is on floor 2, on the other side from P.",
+     "R and S share a floor, so that floor must have both flats free: floor 1.",
+     "U is one floor above R: floor 2, in the flat Q did not take. That is the flat directly below P, so U is on P's side.",
+     "U and R are on different sides, so R is on Q's side and S is on P's side.",
+     "T takes the last flat, on floor 3 beside P. T is not east of P, so T is west and P is east.",
+     "So the east column is P, U, S and the west column is T, Q, R."
+    ],
+    "answer": "Floor 3: T (X), P (Y). Floor 2: Q (X), U (Y). Floor 1: R (X), S (Y)."
+   },
+   "check": {
+    "q": "Flat A is to the west of Flat B. The clue says \"H lives to the west of F\". What does it tell you?",
+    "options": {
+     "a": "H and F are on the same floor, H in Flat A and F in Flat B",
+     "b": "H is in Flat A, on any floor",
+     "c": "H lives on a lower floor than F",
+     "d": "H and F are in the same flat"
+    },
+    "answer": "A",
+    "why": "West of means on the same floor and on the west side of that person. So they share a floor, with H in A and F in B."
+   },
+   "more": [
+    {
+     "tag": "Above",
+     "q": "In a building with two flats on each floor, the clue says only \"E lives above G\". What do you know?",
+     "options": {
+      "a": "E is on a higher floor; the flats are not known",
+      "b": "E is directly above G in the same flat",
+      "c": "E is one floor above G",
+      "d": "E is in the east flat"
+     },
+     "answer": "A",
+     "why": "A plain \"above\" speaks only about floors. The 2025 IBPS Clerk puzzle adds \"E and G do not live in the same type of flat\" to the same pair, which shows it."
+    },
+    {
+     "tag": "A compass word",
+     "q": "Flat P is west of Flat Q. \"C lives to the south-west of F.\" Where are they?",
+     "options": {
+      "a": "C on a lower floor in Flat P, F in Flat Q",
+      "b": "C on a higher floor in Flat P, F in Flat Q",
+      "c": "C and F on the same floor",
+      "d": "C on a lower floor in Flat Q, F in Flat P"
+     },
+     "answer": "A",
+     "why": "South means a lower floor; west means the west flat. So C is lower and in P, and F is in Q."
+    },
+    {
+     "tag": "Same floor",
+     "q": "R and S live on the same floor. S lives in the east flat. Where is R?",
+     "options": {
+      "a": "In the west flat of that floor",
+      "b": "In the east flat of another floor",
+      "c": "Directly below S",
+      "d": "It cannot be said"
+     },
+     "answer": "A",
+     "why": "Each floor has only two flats. If S has the east one, R has the west one."
+    }
+   ]
+  },
+  {
+   "id": "teams",
+   "code": "F4",
+   "title": "Two teams of four",
+   "plain": "New: settle the sides first. Four people live in the west flats and four in the east. Once the teams are known, each team is just four people on four floors.",
+   "needs": [],
+   "teach": [
+    "A flat puzzle read clue by clue is slow. I measured the IBPS Clerk puzzle of 4 October 2025 that way: taken in printed order it reaches 52 open cases. Solved the way this lesson shows, it needs none.",
+    "The idea is to answer the two questions **one at a time**, and to take the easier one first.",
+    "**Step 1: sides.** Exactly four people live in west flats and four in east flats. Go through the clues and collect only what they say about sides.",
+    "- \"G lives in flat-B\" puts G in a team.",
+    "- \"H lives to the west of F\" puts H west and F east.",
+    "- \"same type of flat\" ties two people to one team; \"not the same type of flat\" puts them in opposite teams.",
+    "- \"C and B live on the same floor\" puts them in opposite teams.",
+    "- Every compass word with east or west in it sorts two people at once.",
+    "Write two short lists, West and East. **When one list reaches four names, everyone else belongs to the other.** When a tied pair would make a list five long, the pair goes to the other side. In most puzzles the teams are complete before you have thought about a single floor.",
+    "**Step 2: floors, one team at a time.** A team is four people in one column: **one on each floor**. That is a stack of four boxes. Clues about two people in the same team (\"A lives above H\", \"D lives above B\") order them directly.",
+    "**Step 3: across the teams.** Clues about people in different teams (\"E lives above G\", \"C and B live on the same floor\", \"one floor gap between G and F\") link the two columns. With only four floors, each of these has very few possibilities.",
+    "If the sides cannot be fully settled from the clues, sort as many as you can, and carry at most one unknown person into step 2."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 October 2025, shift 2. Eight persons A to H live in a four-floor building with flat-A to the west of flat-B on each floor. G lives in flat-B. H lives to the west of F. H and A live in the same type of flat. A lives above H. C and B live on the same floor. B lives below the floor of D, and both live in the same type of flat. E lives above G. E and G do not live in the same type of flat. There is one floor gap between G's floor and F's floor. E lives on an even-numbered floor.",
+    "steps": [
+     "Sides. G is east. H is west and F is east. A is with H: west. E is opposite G: west.",
+     "So far, West: H, A, E. East: G, F. B and D are together; they cannot join West (that would make five), so they are East. East is full: G, F, B, D. So C is West.",
+     "East column, one per floor: G and F are two floors apart, so they hold floors 1 and 3. B and D get 2 and 4, with D above B: B 2, D 4.",
+     "C is on B's floor: C on floor 2, west.",
+     "West column has floors 1, 3, 4 left for H, A, E. E is on an even floor: E 4. A is above H: A 3, H 1.",
+     "H is west of F, so F is on floor 1, and G is on floor 3. E (floor 4) is above G."
+    ],
+    "answer": "Floor 4: E, D. Floor 3: A, G. Floor 2: C, B. Floor 1: H, F. (West flat first.) No cases were needed."
+   },
+   "check": {
+    "q": "Four floors, flat-A west of flat-B. G lives in flat-B. H lives to the west of F. H and A live in the same type of flat. E and G do not live in the same type of flat. Who is known to live in a flat-A?",
+    "options": {
+     "a": "H, A and E",
+     "b": "H and A only",
+     "c": "A, E and F",
+     "d": "H and F"
+    },
+    "answer": "A",
+    "why": "H is west of F, so H is in A. A is with H. E is opposite G, who is in B. So H, A and E are in flat-A; F and G are in flat-B."
+   },
+   "shortcut": {
+    "title": "Count to four",
+    "text": [
+     "Keep the two lists, West and East, at the top of your rough work and count them after every clue.",
+     "- A list with four names is closed: write the rest in the other list straight away.",
+     "- A list with three names and a tied pair still loose: the pair goes to the other list.",
+     "- Two people on the same floor are always in different lists, and two people north or south of each other are always in the same one.",
+     "In the bank's compass-word sets, the lists are usually complete after reading only the side half of each clue."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#5"
+    ],
+    "tags": [
+     "Set A (4 floors x 2 flats): compass words sort all eight people at once.",
+     "Set A (4 floors x 2 flats), question 2: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 3: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 4: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 5: read it off the same drawing.",
+     "Set B (4 floors x 2 flats): six people sorted by the clues, the last two by counting.",
+     "Set B (4 floors x 2 flats), question 2: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 3: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 4: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "four-floors",
+   "code": "F5",
+   "title": "Only four floors: gaps and parity",
+   "plain": "New: with four floors, every floor clue has very few ways to be true. Learn the short list for each, and how even and odd pass through a gap.",
+   "needs": [],
+   "teach": [
+    "Four floors is a very small ladder. That makes floor clues far stronger than they are in an eight-floor building, and it pays to know exactly how strong.",
+    "| The clue says | Possible floors (first person, second person) |",
+    "| two floors gap between X and Y; three floors above | 1 and 4 only |",
+    "| one floor gap between X and Y | 1 and 3, or 2 and 4 |",
+    "| X lives two floors above Y | (3, 1) or (4, 2) |",
+    "| X lives immediately above Y | (2, 1), (3, 2) or (4, 3) |",
+    "| X lives above Y | six ways |",
+    "**Parity through a gap.** \"One floor gap\" means two floors apart, so both people are on odd floors or both on even floors. \"Immediately above\" switches between odd and even. So:",
+    "- \"D lives on an odd floor, two floors above H\" is not two cases. It is one: D 3, H 1.",
+    "- \"One floor gap between Q and S, and S is on an odd floor\": Q is on the other odd floor. Together they take floors 1 and 3 of their columns.",
+    "- \"Two floors gap between S and A, and S is on an even floor\": S 4, A 1.",
+    "**Chains of \"above\".** In one column there are four floors and four people. \"K lives above P but below Y\" is three people in order; if they are in the same column they fill three of its four floors in order.",
+    "**A whole floor is two people.** \"R and V live on the same floor\" fixes neither, but as soon as one of them has a floor, so has the other, in the opposite column.",
+    "Use these after the teams are sorted. A floor clue about two people in the same column is a direct order; about two people in different columns it is one of the short lists above."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 October 2025, shift 3. Eight persons A to H live in a four-storey building; on each floor the first flat is to the west of the second. D lives on an odd numbered floor, two floors above H. D and H live in different flats. F lives above D. C lives to the south-west of F. There is one floor gap between C's floor and A's floor. C and A live in different flats. C's flat is immediately above E's flat. B lives above G.",
+    "steps": [
+     "D is odd and two floors above H: D 3, H 1. F is above D: F 4.",
+     "Sides. C is south-west of F: C west, F east. A is opposite C: A east. E is directly below C: E west.",
+     "C has E below it, so C is not on floor 1, and it is below F, so not on 4. C and A are two floors apart: C 3 with A 1 (C 2 would need A on 4, where F already has the east flat).",
+     "So E is on floor 2, west. A is on floor 1, east, which means H takes floor 1 west, and D, on the other side from H, is floor 3 east.",
+     "Two flats are left: floor 4 west and floor 2 east. B is above G: B floor 4 west, G floor 2 east."
+    ],
+    "answer": "Floor 4: B, F. Floor 3: C, D. Floor 2: E, G. Floor 1: H, A. (West flat first.)"
+   },
+   "check": {
+    "q": "Four floors, two flats on each. There is one floor gap between G and F. G lives on an odd numbered floor. What can you say about F?",
+    "options": {
+     "a": "F also lives on an odd numbered floor",
+     "b": "F lives on an even numbered floor",
+     "c": "F lives on floor 4",
+     "d": "Nothing"
+    },
+    "answer": "A",
+    "why": "One floor gap means two floors apart: floors 1 and 3, or 2 and 4. G is odd, so they hold floors 1 and 3, and F is on the other odd floor."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#5"
+    ],
+    "tags": [
+     "Set A (4 floors x 2 flats): parity through a gap fills one column.",
+     "Set A (4 floors x 2 flats), question 2: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 3: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 4: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 5: read it off the same drawing.",
+     "Set B (4 floors x 2 flats): two odd floors and a small sum fix four people.",
+     "Set B (4 floors x 2 flats), question 2: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 3: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 4: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "floor-mates",
+   "code": "F6",
+   "title": "Floor-mates, and the clues that say \"not\"",
+   "plain": "New: every person shares a floor with exactly one other. Count the four pairs, and use the \"do not live on the same floor\" clues to finish.",
+   "needs": [],
+   "teach": [
+    "One more way of looking at the grid, and then the closers.",
+    "**Four floors, four pairs.** Each floor holds exactly two people, so the eight people form four pairs of floor-mates. Clues hand you these pairs directly:",
+    "- \"X lives to the west of Y\" and \"X and Y live on the same floor\" each name a pair.",
+    "- \"L lives to the west of the person who lives just below K in the same flat\" names nobody new, but says a great deal: K is in the east column, not on floor 1, and L is west on the floor below K.",
+    "When three pairs are known, the last two people are the fourth pair.",
+    "**Where a pair can go.** A pair needs a floor with **both** flats free. Late in the puzzle there is often only one such floor, and the pair is placed without any other clue. The RRB Clerk example in lesson 3 was solved exactly so.",
+    "**Two people who need two floors in a row in one column** (\"R lives immediately above Q in the same flat\") need that column to have two neighbouring floors free. If one column has floors 1 and 3 left and the other has 2 and 3, only the second will do.",
+    "**The clues that say \"not\".** Flat puzzles carry many of these: \"K and X do not live on the same floor\", \"W and X do not live in the same named flat\", \"Z does not live on the first floor\", \"H does not live on the same floor as P\".",
+    "- \"Not in the same flat\" is a **side** clue and belongs in step 1 with the teams.",
+    "- \"Not on the same floor\" and \"not on floor 1\" place nobody. Keep them for the end, when two people are left for two flats.",
+    "So the full order of work for a flat puzzle is: teams, then exact floor clues inside each column, then links across the columns, then pairs and free floors, and finally the \"not\" clues."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 22 February 2025, shift 4. Eight persons G, K, L, M, W, X, Y, Z live in a four-storey building; flat-X is to the west of flat-Y. Y lives two floors above X in the same named flat. X does not live on an odd-numbered floor. L lives to the west of the person who lives just below K in the same named flat. K and X do not live on the same floor. There is one floor gap between W and Z. W and X do not live in the same named flat. Z does not live on the first floor. Z and K live on different floors. M lives above G.",
+    "steps": [
+     "X is on an even floor with Y two floors above in the same column: X 2, Y 4.",
+     "K is in the east column, above floor 1, and not on X's floor: K is on 3 or 4. L is west, one floor below K.",
+     "Suppose X and Y are in the east column. Then K is east on floor 3 and L is west on floor 2. W must be opposite X: west. Z is not on floor 1 or on K's floor, so Z is on 2 or 4, and W two floors away needs floor 4 or 2 in the west column; with Z on 2 no flat is free for it, and with Z on 4 W would need L's flat. Out.",
+     "So X and Y are in the west column. K is east: on 3 it would need L in X's flat, so K is on floor 4 and L is west on floor 3.",
+     "W is opposite X: east. W and Z are two floors apart; Z is not on 1 and not on K's floor: Z 3, W 1. Z takes the east flat of floor 3.",
+     "Left: floor 2 east and floor 1 west. M is above G: M floor 2, G floor 1."
+    ],
+    "answer": "Floor 4: Y, K. Floor 3: L, Z. Floor 2: X, M. Floor 1: G, W. (West flat first.)"
+   },
+   "check": {
+    "q": "Four floors, two flats on each. S and A live in the same named flat with two floors between them. S lives on an even numbered floor. On which floor does S live?",
+    "options": {
+     "a": "Floor 2",
+     "b": "Floor 4",
+     "c": "Floor 2 or 4",
+     "d": "It cannot be found"
+    },
+    "answer": "B",
+    "why": "Two floors between them means floors 1 and 4. S is on the even one: floor 4, with A on floor 1."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#5"
+    ],
+    "tags": [
+     "Set A (4 floors x 2 flats): a wide gap, then a pair that fits only one column.",
+     "Set A (4 floors x 2 flats), question 2: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 3: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 4: read it off the same drawing.",
+     "Set A (4 floors x 2 flats), question 5: read it off the same drawing.",
+     "Set B (4 floors x 2 flats): fifteen short clues, most of them 'not'. Sides first, 'not' last.",
+     "Set B (4 floors x 2 flats), question 2: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 3: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 4: read it off the same drawing.",
+     "Set B (4 floors x 2 flats), question 5: read it off the same drawing."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#1": [
+    "Notes: E is on floor 4. E, B are 3 apart. D = B + 1. D, G are 5 apart. Persons between E and G = persons between D and A. H is below A. F is not on the top floor.",
+    "B is on 1 or 7, so D is on 2 or 8.",
+    "D 8: G is on 3, right next to E. Then nobody is between E and G, so A must be next to D: floor 7, which B has. Out.",
+    "D 2, B 1: G is on 7. Two persons are between E and G, so A is 3 from D: floor 5.",
+    "Free: 3, 6, 8. H is below A: floor 3. F is not on top: floor 6. C takes 8.",
+    "The building. From the top floor down: C, G, F, A, E, H, D, B.",
+    "H lives on floor Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#2": [
+    "The building. From the top floor down: C, G, F, A, E, H, D, B.",
+    "Between G (floor 7) and E (floor 4) are Two persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#3": [
+    "The building. From the top floor down: C, G, F, A, E, H, D, B.",
+    "H, G, A and B live on odd floors (3, 7, 5, 1). F lives on floor 6: F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#4": [
+    "The building. From the top floor down: C, G, F, A, E, H, D, B.",
+    "In alphabetical order from the top the building would read A, B, C, D, E, F, G, H. It reads C, G, F, A, E, H, D, B. Only E, on the fifth place down, matches: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-floor-puzzle#5": [
+    "The building. From the top floor down: C, G, F, A, E, H, D, B.",
+    "Five persons are above H (floor 3). Five are below floor 6, where F lives."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#1": [
+    "Notes: two persons above J, so J is on floor 5. J, N are 2 apart. O = M - 1. M is not next to J or N. Floor of O + floor of P = 8. K is below P. L, K are 3 apart. L is not next to M or O.",
+    "N is on 3 or 7.",
+    "N 7: M must avoid floors next to 5 and 7, and have O just below: (M 3, O 2) or (M 2, O 1). O 1 would put P on 7. O 2 puts P on 6; K is then 1 or 4, and L, three away, lands next to M or O either way. Out.",
+    "N 3: M and O in a row with M not next to 3 or 5: M 7, O 6. Mirror: P on 2.",
+    "K is below P: floor 1. L is 3 from K: floor 4.",
+    "The building. From the top floor down: M, O, J, L, N, P, K.",
+    "On the ground floor: K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#2": [
+    "The building. From the top floor down: M, O, J, L, N, P, K.",
+    "O lives on the Sixth floor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#3": [
+    "The building. From the top floor down: M, O, J, L, N, P, K.",
+    "Between J (floor 5) and M (floor 7) is One person."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#4": [
+    "The building. From the top floor down: M, O, J, L, N, P, K.",
+    "J, K, M and N live on odd floors (5, 1, 7, 3). P lives on floor 2: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-68-78388-floor-puzzle#5": [
+    "The building. From the top floor down: M, O, J, L, N, P, K.",
+    "The even floors are 6, 4 and 2: O, L and P. Of the pairs offered: OL."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#1": [
+    "Notes: M is on 5 or 7. Floor of O + floor of L = 9. J = N + 1. M, O are 4 apart. L is not next to N or J. N, P are 2 apart. N is on an even floor. Persons between M and N = persons between J and K.",
+    "M 5 gives O 1 and L 8. M 7 gives O 3 and L 6.",
+    "M 7, O 3, L 6: N is even with J just above: N 2 needs J on 3, N 4 puts J next to L, N 8 has no floor above. Out.",
+    "M 5, O 1, L 8: N 2 with J 3 (N 4 would put J on M's floor; N 6 would put J next to L).",
+    "P is 2 from N: floor 4.",
+    "Between M (5) and N (2) are two persons, so K is 3 from J: floor 6. Q takes 7.",
+    "The building. From the top floor down: L, Q, K, M, P, J, N, O.",
+    "Between P (floor 4) and K (floor 6) is One person."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#2": [
+    "The building. From the top floor down: L, Q, K, M, P, J, N, O.",
+    "P lives on floor 4, an even floor, so the true statement is: P does not live odd numbered floor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#3": [
+    "The building. From the top floor down: L, Q, K, M, P, J, N, O.",
+    "On the seventh floor: Q."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#4": [
+    "The building. From the top floor down: L, Q, K, M, P, J, N, O.",
+    "Q – K, J – P, O – N and N – J live on floors next to each other. M (5) and Q (7) do not: M - Q."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-floor-puzzle#5": [
+    "The building. From the top floor down: L, Q, K, M, P, J, N, O.",
+    "In alphabetical order from the top the building would read J, K, L, M, N, O, P, Q. It reads L, Q, K, M, P, J, N, O. Only M matches: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#1": [
+    "Notes: G is on floor 4. C is on an odd floor and B = C + 2. F = D + 1. F, H are 4 apart. A is not on the top floor. At most two persons between B and E. E is not next to A.",
+    "C and B: (1, 3), (3, 5) or (5, 7).",
+    "C 1, B 3: D and F in a row with H four from F: only D 5, F 6, H 2. That leaves 7 and 8 for A and E, next to each other. Out.",
+    "C 3, B 5: only D 1, F 2, H 6 fits. Again 7 and 8 are left for A and E. Out.",
+    "C 5, B 7: D 1, F 2, H 6. Free: 3 and 8. A is not on top: A 3, E 8. E is next to B and far from A.",
+    "The building. From the top floor down: E, B, H, C, G, A, F, D.",
+    "On the topmost floor: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#2": [
+    "The building. From the top floor down: E, B, H, C, G, A, F, D.",
+    "A lives on the Third floor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#3": [
+    "The building. From the top floor down: E, B, H, C, G, A, F, D.",
+    "Between C (floor 5) and F (floor 2) are Two persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#4": [
+    "The building. From the top floor down: E, B, H, C, G, A, F, D.",
+    "D, A, B and C live on odd floors (1, 3, 7, 5). G lives on floor 4: G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-22-78342-floor-puzzle#5": [
+    "The building. From the top floor down: E, B, H, C, G, A, F, D.",
+    "H is on floor 6 and A on floor 3, so the true statement is: Only two people live between H and A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#2": [
+    "Notes: F is on 4, 6 or 8. Floor of F + floor of D = 9, and D is not on floor 1. A = C + 1. The difference between D's floor and A's floor equals C's floor. A, H are 3 apart. B is not next to C or H. Floors between B and E = floors between C and G. G is not next to H.",
+    "F 8 would put D on floor 1. So (F 4, D 5) or (F 6, D 3).",
+    "D 5: A = C + 1 and 5 - A = C give C 2, A 3. D 3: 3 - A = C gives C 1, A 2.",
+    "F 6, D 3, C 1, A 2: H is on 5. G must not be next to H, so G is 7 or 8; then five or six floors lie between C and G, and B and E cannot match that. Out.",
+    "F 4, D 5, C 2, A 3: H is on 6. Free: 1, 7, 8. B is not next to C or H: floor 8.",
+    "G is not next to H: floor 1, and E takes 7. Check: nobody is between B and E, and nobody between C and G.",
+    "The building. From the top floor down: B, E, H, D, F, A, C, G.",
+    "B lives on the Eighth floor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#3": [
+    "The building. From the top floor down: B, E, H, D, F, A, C, G.",
+    "On the ground floor: G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#4": [
+    "The building. From the top floor down: B, E, H, D, F, A, C, G.",
+    "Between C (floor 2) and E (floor 7) are Four persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#5": [
+    "The building. From the top floor down: B, E, H, D, F, A, C, G.",
+    "ED, HF, BH and AG each have one person between them. D (5) and C (2) have two: DC."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-61-78381-floor-puzzle#6": [
+    "The building. From the top floor down: B, E, H, D, F, A, C, G.",
+    "Three floors are above D (floor 5). Below H there are five, below F three, below B seven, and below A only two. So the answer is A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#1": [
+    "Flat A is west. Sides first. W is in flat A. W is north-west of P: P is east. Q is north-west of V: Q west, V east. T is north of R: same side. T is south-west of U: T west, U east, so R is west too.",
+    "West: W, Q, T, R. That is four, so East: P, V, U, S.",
+    "West column, one per floor: T is above R and on an even floor; W is on an odd floor.",
+    "U is above T, so T is not on floor 4: T 2, R 1. Then W 3 and Q 4.",
+    "East column. W (floor 3) is above P, and W and V are two floors apart: V 1, so P 2.",
+    "U and P are two floors apart: U 4. S takes floor 3.",
+    "The building. West flat then east flat. Floor 4: Q, U. Floor 3: W, S. Floor 2: T, P. Floor 1: R, V.",
+    "In flat-B of the 3rd floor: S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#2": [
+    "The building. West flat then east flat. Floor 4: Q, U. Floor 3: W, S. Floor 2: T, P. Floor 1: R, V.",
+    "T and P share floor 2; P (floor 2, east) is north-east of R (floor 1, west); U (4) and V (1) have two floors between; Q is in flat A. All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#3": [
+    "The building. West flat then east flat. Floor 4: Q, U. Floor 3: W, S. Floor 2: T, P. Floor 1: R, V.",
+    "T lives on the 2nd floor – flat- A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#4": [
+    "The building. West flat then east flat. Floor 4: Q, U. Floor 3: W, S. Floor 2: T, P. Floor 1: R, V.",
+    "South-east of W (floor 3, west) means a lower floor in the east flat: P and V. Both 2 and 4."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-7-78327-floor-with-flat-puzzle#5": [
+    "The building. West flat then east flat. Floor 4: Q, U. Floor 3: W, S. Floor 2: T, P. Floor 1: R, V.",
+    "Q – P, V – W, R – S and U – T are each in different flats, two floors apart. S and V are both in the east flat: S – V."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#1": [
+    "Flat 1 is west. Sides first. F is in flat 2 (east). G is north-west of F: G west. A is south of G: A west. G is north of D: D west. C is south-east of D: C east. C is south of H: H east.",
+    "West: G, A, D. East: F, C, H. B and E are still open, one to each side.",
+    "Floors. A is on an even floor and has G above it. H is north-east of A, so H is higher than A. If A were on 4 nothing could be above it: A 2.",
+    "A and B are two floors apart: B is on floor 4.",
+    "If B were west, G would be on 3 and D on 1, and C could not be below D. So B is east on floor 4, and E is west.",
+    "East column: H is above A and above C: H 3. F is on an odd floor: F 1. C 2.",
+    "West column: D is above C (floor 2) and below G: D 3, G 4. E takes floor 1.",
+    "The building. West flat then east flat. Floor 4: G, B. Floor 3: D, H. Floor 2: A, C. Floor 1: E, F.",
+    "In the 1st flat of the 1st floor: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#2": [
+    "The building. West flat then east flat. Floor 4: G, B. Floor 3: D, H. Floor 2: A, C. Floor 1: E, F.",
+    "H lives on the 3rd floor – 2nd flat."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#3": [
+    "The building. West flat then east flat. Floor 4: G, B. Floor 3: D, H. Floor 2: A, C. Floor 1: E, F.",
+    "B (floor 4, east) is higher than D (floor 3, west) and on the other side, so the true statement is: B lives to the north-east of D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#4": [
+    "The building. West flat then east flat. Floor 4: G, B. Floor 3: D, H. Floor 2: A, C. Floor 1: E, F.",
+    "South-east of D (floor 3, west) means a lower floor in the east flat: C and F. Both 3 and 4."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-8-78328-floor-with-flat-puzzle#5": [
+    "The building. West flat then east flat. Floor 4: G, B. Floor 3: D, H. Floor 2: A, C. Floor 1: E, F.",
+    "D, E, H and F live on odd floors (3, 1, 3, 1). The fourth option, C, lives on floor 2."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#1": [
+    "Flat 1 is west. Sides. S is south-east of P: S east, P west. R is north-west of Q: R west, Q east. V is on R's floor: V east. U is in flat 2: east.",
+    "East: S, Q, V, U. That is four, so West: P, R, W, T.",
+    "East column. S is on an odd floor, and Q is two floors from S, so Q is odd as well: S and Q hold floors 1 and 3. U and V hold 2 and 4.",
+    "R is above Q and on V's floor. P is above S.",
+    "Q 3, S 1: R would be on floor 4 with V, and W could not be above R. Out.",
+    "Q 1, S 3: P is on 4. R is on V's floor, 2 or 4; floor 4 west is P's, so R 2, V 2, U 4.",
+    "W is above R: floor 3. T takes floor 1.",
+    "The building. West flat then east flat. Floor 4: P, U. Floor 3: W, S. Floor 2: R, V. Floor 1: T, Q.",
+    "On an even floor and in an even flat: V (floor 2) and U (floor 4): V, U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#2": [
+    "The building. West flat then east flat. Floor 4: P, U. Floor 3: W, S. Floor 2: R, V. Floor 1: T, Q.",
+    "T is on floor 1 and P on floor 4. Between them are two floors: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#3": [
+    "The building. West flat then east flat. Floor 4: P, U. Floor 3: W, S. Floor 2: R, V. Floor 1: T, Q.",
+    "North of W (floor 3, west) is floor 4 west: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#4": [
+    "The building. West flat then east flat. Floor 4: P, U. Floor 3: W, S. Floor 2: R, V. Floor 1: T, Q.",
+    "In flat-2 of the 3rd floor: S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-floor-with-flat-puzzle#5": [
+    "The building. West flat then east flat. Floor 4: P, U. Floor 3: W, S. Floor 2: R, V. Floor 1: T, Q.",
+    "Q is on floor 1 east; on the same floor, west, is T."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#1": [
+    "Flat 1 is west. P is above N and both are on odd floors: P 3, N 1.",
+    "K's floor is twice the square root of A's floor, so A's floor is 1 or 4. A is above N and F: A 4, and K is on 4 too.",
+    "Sides. K is north-west of N: K west, N east. So A, sharing floor 4, is east. A is north-east of S: S west. V is north-east of S: V east. R is on S's floor: R east.",
+    "East: A, N, V, R. That is four, so West: K, S, P, F.",
+    "East column: A 4, N 1, so V and R hold 2 and 3. West column: K 4, P 3, so S and F hold 1 and 2.",
+    "S is on R's floor, so both are on 2. V is on 3, above S. F is on floor 1, which is neither A's floor nor V's.",
+    "The building. West flat then east flat. Floor 4: K, A. Floor 3: P, V. Floor 2: S, R. Floor 1: F, N.",
+    "K lives on the Fourth floor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#2": [
+    "The building. West flat then east flat. Floor 4: K, A. Floor 3: P, V. Floor 2: S, R. Floor 1: F, N.",
+    "K and A are both on floor 4: KA."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#3": [
+    "The building. West flat then east flat. Floor 4: K, A. Floor 3: P, V. Floor 2: S, R. Floor 1: F, N.",
+    "A is on the top floor, so above A's floor there is No one."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#4": [
+    "The building. West flat then east flat. Floor 4: K, A. Floor 3: P, V. Floor 2: S, R. Floor 1: F, N.",
+    "The odd floors of the second flat are floor 1 and floor 3: N,V."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-floor-with-flat-puzzle#5": [
+    "The building. West flat then east flat. Floor 4: K, A. Floor 3: P, V. Floor 2: S, R. Floor 1: F, N.",
+    "K - S, A - R, V - F and P - N are each two floors apart. A (4) and F (1) are three floors apart: A - F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#1": [
+    "S and A are in the same flat with two floors between them: floors 1 and 4. S is on an even floor: S 4, A 1, same column.",
+    "B is on S's floor, so B is on floor 4 in the other column. P is two floors from B in B's column: P 2.",
+    "R is immediately above Q in the same flat. S's column has floors 2 and 3 free; B's column has 1 and 3. Only S's column has two in a row: R 3, Q 2.",
+    "C and D take floors 1 and 3 of B's column, with D above C: D 3, C 1.",
+    "D lives in flat 2. So B's column is flat 2 (east) and S's column is flat 1 (west).",
+    "The building. West flat then east flat. Floor 4: S, B. Floor 3: R, D. Floor 2: Q, P. Floor 1: A, C.",
+    "In flat-1 of the 4th floor: S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#2": [
+    "The building. West flat then east flat. Floor 4: S, B. Floor 3: R, D. Floor 2: Q, P. Floor 1: A, C.",
+    "R is on floor 3; with it on that floor is D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#3": [
+    "The building. West flat then east flat. Floor 4: S, B. Floor 3: R, D. Floor 2: Q, P. Floor 1: A, C.",
+    "B, D, P and C live in flat 2. The fourth option, A, lives in flat 1."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#4": [
+    "The building. West flat then east flat. Floor 4: S, B. Floor 3: R, D. Floor 2: Q, P. Floor 1: A, C.",
+    "D lives on the 3rd floor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-floor-with-flat-puzzle#5": [
+    "The building. West flat then east flat. Floor 4: S, B. Floor 3: R, D. Floor 2: Q, P. Floor 1: A, C.",
+    "B is on floor 4 and C is on floor 1; Q is on floor 2. Both (1) and (3)."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#1": [
+    "Flat B is west and flat C is east. G is on an odd floor with F two floors above in the same flat: G 1, F 3.",
+    "No one lives to the east of F: F is in flat C, and so is G.",
+    "E is in the same type of flat as G: flat C, on floor 2 or 4. A is one floor below E in the other flat: E 4 with A 3, or E 2 with A 1.",
+    "P is below A and not in A's flat. With A on 1 nothing is below. So E 4, A 3 (flat B), and P is in flat C on floor 2.",
+    "Flat C is now full: E, F, P, G from the top. Flat B has A on 3, and Q, D, H for floors 4, 2, 1.",
+    "Now the 'not' clues. Q is on an even floor but not on P's floor (2): Q 4. H is not on P's floor: H 1. D takes floor 2, which is not E's floor.",
+    "The building. West flat then east flat. Floor 4: Q, E. Floor 3: A, F. Floor 2: D, P. Floor 1: H, G.",
+    "On the same numbered floor: Q and E, both on floor 4: Q-E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#2": [
+    "The building. West flat then east flat. Floor 4: Q, E. Floor 3: A, F. Floor 2: D, P. Floor 1: H, G.",
+    "Q is on floor 4 and H on floor 1. The sum is 5."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#3": [
+    "The building. West flat then east flat. Floor 4: Q, E. Floor 3: A, F. Floor 2: D, P. Floor 1: H, G.",
+    "A lives on the 3rd - floor."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#4": [
+    "The building. West flat then east flat. Floor 4: Q, E. Floor 3: A, F. Floor 2: D, P. Floor 1: H, G.",
+    "P is on floor 2 in the east flat. West of P on that floor is D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-floor-with-flat-puzzle#5": [
+    "The building. West flat then east flat. Floor 4: Q, E. Floor 3: A, F. Floor 2: D, P. Floor 1: H, G.",
+    "E, P, F and G live in flat C. The one who does not is A."
+   ]
+  }
+ }
+}

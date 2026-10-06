@@ -1,0 +1,878 @@
+{
+ "module": "ages",
+ "intro": [
+  "Age questions look different every time, but they all rest on one fact: **everybody grows older at the same speed**. So the gap between two people never changes.",
+  "This path has nine short lessons. Each one adds a single new idea to the one before it, shows it on one question, lets you try one, and then gives you a few real questions of exactly that kind. Go in order the first time."
+ ],
+ "needs": [
+  "time-words",
+  "ratio",
+  "average"
+ ],
+ "after": [
+  "That is the whole topic. From here, the **Quick revision** tab has everything on one page for the days before the exam, and the Course in each bank has many more Ages questions of every kind.",
+  "One last thing to carry with you: some questions offer the option \"Cannot be determined\". Choose it only when you can show that one sentence of the question says nothing new. A question that merely looks long almost always has an answer."
+ ],
+ "lessons": [
+  {
+   "id": "ratio-number",
+   "code": "A1",
+   "title": "A ratio and one real number",
+   "plain": "The simplest kind: you are told the ratio of two ages today, and one real number.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "We start with the question every other Ages question is built on.",
+    "You are given a ratio such as 4 : 7 for two people's ages today. Read it as **parts**: the first person has 4 equal parts, the second has 7. Nobody has told you how big a part is.",
+    "Then the question gives you one real number. It is always one of three things, and each one matches a number of parts:",
+    "- their **sum**, which matches the parts added together;",
+    "- their **difference**, which matches the parts subtracted;",
+    "- **one person's age**, which matches that person's parts.",
+    "Divide the real number by the matching parts and you have the size of one part. After that, every age in the question is a multiplication."
+   ],
+   "example": {
+    "q": "The ages of A and B are in the ratio 4 : 7 and the sum of their ages is 66 years. Find B's age.",
+    "steps": [
+     "Read the ratio as parts: A has 4 parts, B has 7.",
+     "The real number is a sum, so match it to the parts added: 4 + 7 = 11 parts.",
+     "One part = 66 / 11 = 6 years.",
+     "B has 7 parts: 7 x 6 = 42.",
+     "Check: A = 4 x 6 = 24, and 24 + 42 = 66."
+    ],
+    "answer": "B is 42 years old."
+   },
+   "check": {
+    "q": "The ages of P and Q are in the ratio 5 : 6 and the sum of their ages is 44 years. How old is Q?",
+    "options": {
+     "a": "20 years",
+     "b": "22 years",
+     "c": "24 years",
+     "d": "30 years"
+    },
+    "answer": "C",
+    "why": "5 + 6 = 11 parts = 44, so one part is 4. Q has 6 parts: 6 x 4 = 24. (20 is P's age.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-a-graded#1",
+     "clerk-09-ages-b-pyq#5",
+     "clerk-09-ages-a-graded#15",
+     "clerk-09-ages-a-graded#24",
+     "clerk-09-ages-a-graded#6"
+    ],
+    "tags": [
+     "The plain form: the real number is the sum.",
+     "The same question, as a real paper asked it.",
+     "The real number is one person's age, and at a future date.",
+     "The ratio arrives in two pieces that must be joined first.",
+     "The sum is hidden inside an average, and the answer is not among the numbers."
+    ]
+   },
+   "more": [
+    {
+     "tag": "The real number is a difference",
+     "q": "The ages of A and B are in the ratio 5 : 8. B is 12 years older than A. How old is A?",
+     "options": {
+      "a": "12 years",
+      "b": "20 years",
+      "c": "32 years",
+      "d": "52 years"
+     },
+     "answer": "B",
+     "why": "A difference matches the parts subtracted: 8 - 5 = 3 parts = 12, so one part is 4. A = 5 x 4 = 20. (32 is B.)"
+    },
+    {
+     "tag": "A third person stands between them",
+     "q": "The ages of M and T are in the ratio 3 : 5. K is 4 years older than M and 6 years younger than T. How old is T?",
+     "options": {
+      "a": "15 years",
+      "b": "19 years",
+      "c": "25 years",
+      "d": "40 years"
+     },
+     "answer": "C",
+     "why": "K sits between them, so T is 4 + 6 = 10 years older than M. That gap is 5 - 3 = 2 parts, so one part is 5. T = 5 x 5 = 25."
+    }
+   ]
+  },
+  {
+   "id": "gaps-totals",
+   "code": "A5",
+   "title": "Older, younger and totals",
+   "plain": "New: no ratio at all. People are described as \"4 years older than\" someone, with a sum or an average.",
+   "needs": [
+    "average"
+   ],
+   "teach": [
+    "Some questions never mention a ratio. They describe people by **how much older or younger** they are, and then give a sum or an average.",
+    "Two habits solve all of these.",
+    "**Habit 1: turn an average into a total at once.** Average 35 for three people means a total of 35 x 3 = 105. Work with the 105.",
+    "**Habit 2: pick one person as the base and write everyone else from them.** If Neha is 5 years older than Sukruti, write Sukruti as the base and Neha as \"base + 5\". Usually the youngest person makes the easiest base.",
+    "Now add everybody up. You get \"so many bases, plus some extra years = the total\". Take the extra years off the total, divide by the number of people, and you have the base."
+   ],
+   "example": {
+    "q": "A is 6 years older than B, and C is 3 years younger than B. The average of their ages is 31 years. Find A's age.",
+    "steps": [
+     "Average to total: 31 x 3 = 93.",
+     "Take B as the base. Then A = B + 6 and C = B - 3.",
+     "Add all three: B + (B + 6) + (B - 3) = 3 B + 3.",
+     "So 3 B + 3 = 93, which gives 3 B = 90 and B = 30.",
+     "A = 30 + 6 = 36. Check: 36 + 30 + 27 = 93."
+    ],
+    "answer": "A is 36 years old."
+   },
+   "check": {
+    "q": "X is 5 years older than Y and the sum of their ages is 41 years. How old is Y?",
+    "options": {
+     "a": "18 years",
+     "b": "20 years",
+     "c": "23 years",
+     "d": "36 years"
+    },
+    "answer": "A",
+    "why": "Y is the base and X is base + 5, so 2 bases + 5 = 41. Two bases = 36, and Y = 18. (23 is X.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-a-graded#3",
+     "clerk-09-ages-a-graded#2",
+     "clerk-09-ages-a-graded#18",
+     "clerk-09-ages-b-pyq#13",
+     "clerk-09-ages-b-pyq#20"
+    ],
+    "tags": [
+     "Two people: a gap and a sum.",
+     "A chain: each person is described from the one before.",
+     "\"Twice as old\" mixed with \"older than\".",
+     "Three people around one base, with an average.",
+     "The total belongs to the past, and one age to the future."
+    ]
+   },
+   "more": [
+    {
+     "tag": "Equal steps on both sides",
+     "q": "A is as much younger than B as he is older than C. The sum of the ages of B and C is 50 years. How old is A?",
+     "options": {
+      "a": "20 years",
+      "b": "25 years",
+      "c": "30 years",
+      "d": "Cannot be determined"
+     },
+     "answer": "B",
+     "why": "A is the same distance from B and from C, so A sits exactly in the middle. The middle of two numbers is their average: 50 / 2 = 25."
+    }
+   ],
+   "shortcut": {
+    "title": "Equally spaced people",
+    "text": [
+     "When three people are equally spaced, for example \"A is 5 years older than B, and B is 5 years older than C\", the **middle person's age is the average** of all three.",
+     "So if their average is 30, B is 30 straight away, A is 35 and C is 25. No equation needed. Look for this whenever the two gaps are the same."
+    ]
+   }
+  },
+  {
+   "id": "two-dates",
+   "code": "A2",
+   "title": "The same two people at two dates",
+   "plain": "New: two ratios for the same pair, at two different times. No sum, no age given.",
+   "needs": [
+    "time-words",
+    "ratio"
+   ],
+   "teach": [
+    "Now a question gives you two ratios and nothing else: \"Four years ago the ratio was 3 : 5. Eight years hence it will be 3 : 4.\" It looks as if there is no real number to start from. There is one, hidden in the dates.",
+    "Here is the idea. The **gap** between two people never changes. If B is 8 years older than A today, B was 8 years older four years ago and will be 8 years older for ever.",
+    "In a ratio, the gap is the difference of the two numbers. In 3 : 5 the gap is 2 parts. In 3 : 4 the gap is 1 part. But it is the same gap in years, so those parts are different sizes, and that is why the two ratios cannot be compared yet.",
+    "**Step 1.** Make the gaps equal. Multiply 3 : 4 by 2 and it becomes 6 : 8, with a gap of 2 parts. Now both ratios are written in parts of the same size.",
+    "**Step 2.** Watch one person. A was 3 parts at the first date and is 6 parts at the second. A has grown by 3 parts.",
+    "**Step 3.** A also grew by the years between the two dates. So those 3 parts **are** those years, and that gives you one part.",
+    "Remember from the Basics: \"ago\" and \"hence\" sit on opposite sides of today, so the years between them add up."
+   ],
+   "example": {
+    "q": "Four years ago the ratio of the ages of A and B was 3 : 5. Eight years hence it will be 3 : 4. Find B's present age.",
+    "steps": [
+     "Gaps: 3 : 5 has a gap of 2 parts, 3 : 4 has a gap of 1 part.",
+     "Make them equal: write 3 : 4 as 6 : 8. Both gaps are now 2 parts.",
+     "Watch A: 3 parts at the first date, 6 parts at the second. A grew by 3 parts.",
+     "Years between the dates: 4 + 8 = 12. So 3 parts = 12 years and one part = 4.",
+     "Four years ago B was 5 parts = 20, so B is 24 now.",
+     "Check: A is 16 now. Eight years hence they are 24 and 32, which is 3 : 4."
+    ],
+    "answer": "B is 24 years old."
+   },
+   "check": {
+    "q": "The ratio of the present ages of two sisters is 2 : 3. After 10 years it will be 4 : 5. How old is the younger sister now?",
+    "options": {
+     "a": "5 years",
+     "b": "10 years",
+     "c": "15 years",
+     "d": "20 years"
+    },
+    "answer": "B",
+    "why": "Both gaps are already 1 part. The younger sister goes from 2 parts to 4 parts, so 2 parts = 10 years and one part = 5. She is 2 x 5 = 10 now."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-a-graded#4",
+     "clerk-09-ages-a-graded#9",
+     "clerk-09-ages-a-graded#7",
+     "clerk-09-ages-a-graded#20",
+     "clerk-09-ages-b-pyq#7"
+    ],
+    "tags": [
+     "Today and a later date; the gaps are already equal.",
+     "Past and future, and the question asks for a sum.",
+     "\"Twice\" and \"three times\" instead of ratios.",
+     "Neither date is today.",
+     "Both dates are in the future, and given in reverse order."
+    ]
+   },
+   "more": [
+    {
+     "tag": "The question asks about a third date",
+     "q": "The ratio of the present ages of A and B is 3 : 5. After 6 years it will be 2 : 3. What was the ratio of their ages 6 years ago?",
+     "options": {
+      "a": "1 : 2",
+      "b": "2 : 3",
+      "c": "3 : 5",
+      "d": "1 : 3"
+     },
+     "answer": "A",
+     "why": "Gaps are 2 and 1, so write 2 : 3 as 4 : 6. A goes from 3 parts to 4 parts: one part = 6 years. Today they are 18 and 30. Six years ago they were 12 and 24, which is 1 : 2. Find today's ages first, then move to the date asked."
+    }
+   ]
+  },
+  {
+   "id": "two-dates-words",
+   "code": "A2",
+   "title": "Two dates, in exam wording",
+   "plain": "New: the same question as the last lesson, but the ratios are hidden inside percent words or a changed order.",
+   "needs": [
+    "percent-words"
+   ],
+   "teach": [
+    "Real papers rarely hand you the two ratios neatly. They dress them up. The method from the last lesson does not change at all; you only have to **uncover the ratios first**.",
+    "There are three common disguises.",
+    "**Percent words.** \"A's age was 200% more than B's age\" is a ratio. Call B 100; then A is 300, so A : B = 3 : 1. If this step feels shaky, the Basics lesson on percent words takes five minutes.",
+    "**A changed order.** \"The ratio of A to B is 3 : 2. After four years the ratio of **B to A** will be 7 : 10.\" The second ratio is written the other way round. Turn it so both ratios read A : B before you do anything else: 10 : 7.",
+    "**An unknown number of years.** \"x years hence the ratio will be 7 : 5, and x + 4 years hence it will be 4 : 3.\" You do not need x to begin. The two dates are 4 years apart whatever x is, and that is all the method asks for.",
+    "So the routine is: uncover both ratios, put them in the same order, and then do exactly what you did in the last lesson."
+   ],
+   "example": {
+    "q": "Five years ago A's age was 100% more than B's age. Five years hence A's age will be 50% more than B's age. Find B's present age.",
+    "steps": [
+     "Uncover the first ratio: 100% more means B is 100 and A is 200, so A : B = 2 : 1.",
+     "Uncover the second: 50% more means 150 against 100, so A : B = 3 : 2.",
+     "Gaps: 2 : 1 has a gap of 1 part, and 3 : 2 has a gap of 1 part. Already equal.",
+     "Watch A: 2 parts, then 3 parts. A grew by 1 part.",
+     "Years between the dates: 5 + 5 = 10. So one part = 10 years.",
+     "Five years ago B was 1 part = 10, so B is 15 now.",
+     "Check: A is 25 now. Five years hence they are 30 and 20, and 30 is 50% more than 20."
+    ],
+    "answer": "B is 15 years old."
+   },
+   "check": {
+    "q": "The ratio of the present ages of A and B is 5 : 3. After 6 years the ratio of the ages of B and A will be 2 : 3. How old is A now?",
+    "options": {
+     "a": "18 years",
+     "b": "24 years",
+     "c": "30 years",
+     "d": "36 years"
+    },
+    "answer": "C",
+    "why": "Turn the second ratio round: A : B = 3 : 2. Gaps are 2 and 1, so write 3 : 2 as 6 : 4. A goes from 5 parts to 6 parts: one part = 6 years. A is 5 x 6 = 30 now. (18 is B.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-b-pyq#19",
+     "clerk-09-ages-b-pyq#16",
+     "clerk-09-ages-b-pyq#9",
+     "clerk-09-ages-b-pyq#3"
+    ],
+    "tags": [
+     "The second ratio is written the other way round.",
+     "Both ratios are hidden in percent words.",
+     "The number of years is a letter.",
+     "Percent words, plus a third person brought in by an average."
+    ]
+   },
+   "more": [
+    {
+     "tag": "Fractions instead of percents",
+     "q": "Four years ago B's age was 2/3 of A's age. Four years hence B's age will be 3/4 of A's age. How old is A now?",
+     "options": {
+      "a": "20 years",
+      "b": "24 years",
+      "c": "28 years",
+      "d": "32 years"
+     },
+     "answer": "C",
+     "why": "\"B is 2/3 of A\" means A : B = 3 : 2. \"B is 3/4 of A\" means A : B = 4 : 3. Both gaps are 1 part. A goes from 3 parts to 4 parts in 8 years, so one part = 8. A was 24 four years ago and is 28 now."
+    }
+   ]
+  },
+  {
+   "id": "shifted-total",
+   "code": "A4",
+   "title": "One ratio at another date, plus a sum or a gap",
+   "plain": "New: only one ratio, and it belongs to the past or the future. The real number belongs to today.",
+   "needs": [
+    "average",
+    "time-words"
+   ],
+   "teach": [
+    "This kind gives you one ratio, but not for today. For example: \"A's age 3 years ago and B's age 7 years hence are in the ratio 3 : 5.\" Then it gives a real number for **today**: a sum, an average, or \"A is so many years younger\".",
+    "The ratio and the real number are talking about different dates, so they cannot be matched yet. The fix is to **move the real number to the dates of the ratio**.",
+    "**If the real number is a sum.** Change it the same way the ratio changed each person. In the example A is taken back 3 years and B is taken forward 7 years, so the sum changes by - 3 + 7. That moved sum now matches the parts added together.",
+    "**If the real number is a gap.** When both people are moved by the same number of years the gap does not change, and it matches the parts subtracted. This is the most common form: \"A father is 30 years older than his son. In 5 years he will be three times as old.\"",
+    "After that it is lesson 1 again: real number / matching parts = one part. Then bring the person back to today."
+   ],
+   "example": {
+    "q": "The ratio of K's age 3 years ago to L's age 7 years hence is 3 : 5. The average of their present ages is 26 years. Find K's present age.",
+    "steps": [
+     "Average to total: 26 x 2 = 52 today.",
+     "Move the total to the dates of the ratio: K goes back 3, L goes forward 7. So 52 - 3 + 7 = 56.",
+     "That 56 matches the parts added: 3 + 5 = 8 parts. One part = 7.",
+     "K's age 3 years ago was 3 parts = 21.",
+     "Bring K back to today: 21 + 3 = 24.",
+     "Check: L is 52 - 24 = 28. Seven years hence L is 35, and 21 : 35 is 3 : 5."
+    ],
+    "answer": "K is 24 years old."
+   },
+   "check": {
+    "q": "A father is 24 years older than his son. In 4 years the father will be three times as old as his son. How old is the son now?",
+    "options": {
+     "a": "8 years",
+     "b": "12 years",
+     "c": "32 years",
+     "d": "36 years"
+    },
+    "answer": "A",
+    "why": "In 4 years the ratio is 3 : 1, a gap of 2 parts. The gap in years is still 24, so one part = 12. The son will be 12 then, so he is 8 now. (12 is his age in 4 years.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-a-graded#17",
+     "clerk-09-ages-b-pyq#14",
+     "clerk-09-ages-b-pyq#21",
+     "clerk-09-ages-b-pyq#8",
+     "clerk-09-ages-b-pyq#18"
+    ],
+    "tags": [
+     "A gap today, and one ratio in the future.",
+     "An average today, and \"twice\" in the future.",
+     "Each person at a different past date, with a gap.",
+     "Each person at a different date, with an average.",
+     "The same, and the last line asks for something further."
+    ]
+   },
+   "more": [
+    {
+     "tag": "A sum today and \"times\" in the past",
+     "q": "The sum of the present ages of a mother and her daughter is 50 years. Five years ago the mother was 4 times as old as her daughter. How old is the daughter now?",
+     "options": {
+      "a": "8 years",
+      "b": "10 years",
+      "c": "13 years",
+      "d": "37 years"
+     },
+     "answer": "C",
+     "why": "Move the sum back five years: two people, so 50 - 10 = 40. Then the ratio was 4 : 1, which is 5 parts = 40, so one part is 8. The daughter was 8 then and is 13 now. (8 is her age five years ago.)"
+    }
+   ]
+  },
+  {
+   "id": "three-people",
+   "code": "A5",
+   "title": "Three people: a ratio, an \"older than\", and a total",
+   "plain": "New: lessons 1 and 2 together. Two people are tied by a ratio, a third by \"older than\", and there is one total for all.",
+   "needs": [
+    "average",
+    "join-ratios"
+   ],
+   "teach": [
+    "This is the form the Clerk paper sets most often, and you already own both halves of it.",
+    "Two of the people are given as a ratio, so they are **parts**. The third is described as \"17 years older than\" one of them, so the third is **parts plus some extra years**. Then there is an average or a sum for all three.",
+    "The routine:",
+    "1. Turn the average into a total.",
+    "2. If the ratio belongs to another date, move the total to that date. Remember that three people each change, so the total changes by 3 x the years.",
+    "3. Write each person as parts, or parts plus extra years, and add them all up.",
+    "4. You get \"so many parts + extra years = total\". Take the extra years away and divide.",
+    "The only place people slip is step 2: three people going back 5 years lose 15 years between them, not 5."
+   ],
+   "example": {
+    "q": "Five years ago the ratio of the ages of U and V was 4 : 3. W is 14 years older than V. The average of the present ages of all three is 33 years. Find W's present age.",
+    "steps": [
+     "Average to total: 33 x 3 = 99 today.",
+     "The ratio is for five years ago, so move the total there: 99 - 3 x 5 = 84.",
+     "Five years ago: U was 4 parts, V was 3 parts, and W was 3 parts + 14 (W is always 14 older than V).",
+     "Add them: 4 + 3 + 3 = 10 parts, plus 14 years, equals 84.",
+     "So 10 parts = 70 and one part = 7.",
+     "W five years ago = 3 x 7 + 14 = 35. Today W is 40.",
+     "Check: today U is 33, V is 26, W is 40. Total 99."
+    ],
+    "answer": "W is 40 years old."
+   },
+   "check": {
+    "q": "The ages of A and B are in the ratio 2 : 3. C is 4 years older than B. The sum of all three ages is 68 years. How old is B?",
+    "options": {
+     "a": "16 years",
+     "b": "24 years",
+     "c": "28 years",
+     "d": "32 years"
+    },
+    "answer": "B",
+    "why": "A is 2 parts, B is 3 parts, C is 3 parts + 4. That is 8 parts + 4 = 68, so 8 parts = 64 and one part = 8. B = 3 x 8 = 24. (28 is C.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-a-graded#25",
+     "clerk-09-ages-a-graded#12",
+     "clerk-09-ages-b-pyq#10",
+     "clerk-09-ages-b-pyq#15",
+     "clerk-09-ages-b-pyq#17"
+    ],
+    "tags": [
+     "Everything at today's date.",
+     "No \"older than\": three parts, at a past date.",
+     "The ratio is hidden in a fraction.",
+     "The full exam form: past ratio, \"older than\", average, and a future answer.",
+     "The total covers only two of them; the third arrives through another average."
+    ]
+   }
+  },
+  {
+   "id": "different-shifts",
+   "code": "A3",
+   "title": "When each person is moved by a different number of years",
+   "plain": "New: you know today's ratio, and a second ratio where one person is moved forward and the other back.",
+   "needs": [
+    "ratio",
+    "time-words"
+   ],
+   "teach": [
+    "Look closely at this sentence: \"The ratio of A's age 2 years **ago** to B's age 6 years **hence** is 4 : 3.\" The two people are standing at different dates. In lesson 3 the gap stayed fixed because both people moved together. Here it does not, so making the gaps equal will give a wrong answer. This is the one place where a short equation is the honest method.",
+    "It is a small one. You are also told today's ratio, say 7 : 4. So:",
+    "1. Write today's ages in parts: A is 7 parts, B is 4 parts.",
+    "2. Move each person as the sentence says: A becomes \"7 parts - 2\", B becomes \"4 parts + 6\".",
+    "3. Those two are in the ratio 4 : 3. To remove a ratio, **cross-multiply**: multiply each side by the other side's number. That gives 3 x (7 parts - 2) = 4 x (4 parts + 6).",
+    "4. Open the brackets and collect the parts on one side.",
+    "Why cross-multiplying works: \"X : Y = 4 : 3\" means X is 4 pieces when Y is 3 of the same pieces. So 3 lots of X and 4 lots of Y are both 12 pieces, which makes them equal.",
+    "How to tell this kind from lesson 3: check whether both people are moved by the **same** years. Same years, use the gap. Different years, use this."
+   ],
+   "example": {
+    "q": "The ratio of the present ages of A and B is 7 : 4. The ratio of A's age 2 years ago to B's age 6 years hence is 4 : 3. Find B's present age.",
+    "steps": [
+     "Today: A is 7 parts, B is 4 parts.",
+     "Move them as the sentence says: A is 7 parts - 2, and B is 4 parts + 6.",
+     "They are in the ratio 4 : 3, so cross-multiply: 3 x (7 parts - 2) = 4 x (4 parts + 6).",
+     "Open the brackets: 21 parts - 6 = 16 parts + 24.",
+     "Collect: 5 parts = 30, so one part = 6.",
+     "B = 4 x 6 = 24.",
+     "Check: A is 42. Two years ago A was 40; six years hence B is 30. 40 : 30 is 4 : 3."
+    ],
+    "answer": "B is 24 years old."
+   },
+   "check": {
+    "q": "The ratio of the present ages of P and Q is 3 : 1. P's age 5 years ago is twice Q's age 5 years hence. How old is Q now?",
+    "options": {
+     "a": "10 years",
+     "b": "15 years",
+     "c": "20 years",
+     "d": "45 years"
+    },
+    "answer": "B",
+    "why": "P is 3 parts, Q is 1 part. 3 parts - 5 = 2 x (1 part + 5), so 3 parts - 5 = 2 parts + 10 and one part = 15. Q is 15. (45 is P.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-a-graded#19",
+     "clerk-09-ages-b-pyq#6",
+     "clerk-09-ages-b-pyq#4",
+     "clerk-09-ages-b-pyq#1"
+    ],
+    "tags": [
+     "The two shifted ages are equal.",
+     "A proper ratio after the shifts.",
+     "\"Twice\" instead of a ratio, both moved forward.",
+     "Opposite directions, and the answer is a sum at a later date."
+    ]
+   },
+   "shortcut": {
+    "title": "The cross rule",
+    "text": [
+     "Once the equation feels natural, you can skip writing it. Say today's ratio is **m : n**, the second ratio is **r : s**, and the shifts are **p** for the first person and **q** for the second (hence is plus, ago is minus).",
+     "**One part = (r x q - s x p) / (s x m - r x n)**",
+     "With the worked example above: m : n = 7 : 4, r : s = 4 : 3, p = -2, q = +6. Top: 4 x 6 - 3 x (-2) = 30. Bottom: 3 x 7 - 4 x 4 = 5. One part = 6, the same answer.",
+     "It is only the equation solved in advance. If you ever doubt the signs, write the equation out instead; it takes a few seconds more and cannot go wrong."
+    ]
+   }
+  },
+  {
+   "id": "one-person",
+   "code": "B4",
+   "title": "One person at two dates, and \"after how many years\"",
+   "plain": "New: the question compares a person with their own younger self, or asks when a ratio will come true.",
+   "needs": [
+    "percent-words"
+   ],
+   "teach": [
+    "Two small relatives of what you already know. Neither has appeared in the Clerk papers we checked, but both are common in practice sets and each takes a minute to learn.",
+    "**One person, two dates.** \"His age after 15 years will be 5 times his age 5 years ago.\" Treat his two ages as a ratio, 5 : 1. He grew from 1 part to 5 parts, which is 4 parts, and he grew by the years between the two dates. So those 4 parts are those years. It is lesson 3 with one person instead of two.",
+    "**After how many years.** \"A mother is 36 and her daughter is 12. After how many years will the mother be twice as old?\" Use the gap. The gap is 24 years today and will be 24 years on that day too. On that day the ratio is 2 : 1, a gap of 1 part. So one part is 24, the daughter will be 24, and that is 12 years from now.",
+    "**\"When he was born.\"** A sentence like \"the father was 28 when his son was born\" is simply giving you the gap: the father is always 28 years older."
+   ],
+   "example": {
+    "q": "A man's age after 12 years will be 3 times his age 4 years ago. Find his present age.",
+    "steps": [
+     "His two ages are in the ratio 3 : 1.",
+     "From 1 part to 3 parts he grew by 2 parts.",
+     "Years between the two dates: 4 + 12 = 16. So 2 parts = 16 and one part = 8.",
+     "Four years ago he was 1 part = 8.",
+     "Today he is 8 + 4 = 12.",
+     "Check: after 12 years he is 24, and 24 is 3 times 8."
+    ],
+    "answer": "He is 12 years old."
+   },
+   "check": {
+    "q": "A mother is 40 years old and her son is 10. After how many years will she be three times as old as her son?",
+    "options": {
+     "a": "5 years",
+     "b": "10 years",
+     "c": "15 years",
+     "d": "20 years"
+    },
+    "answer": "A",
+    "why": "The gap is 30 years and stays 30. At 3 : 1 the gap is 2 parts, so one part = 15. The son will be 15, which is 5 years from now. (15 is his age then, not the wait.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-09-ages-a-graded#5",
+     "clerk-09-ages-a-graded#8",
+     "clerk-09-ages-a-graded#10",
+     "clerk-09-ages-a-graded#22",
+     "clerk-09-ages-a-graded#26"
+    ],
+    "tags": [
+     "After how many years: use the gap.",
+     "One person, a past date and a future date.",
+     "\"When his son was born\" gives the gap.",
+     "Percent words for one person's two ages.",
+     "A fraction for one person, then a second person."
+    ]
+   }
+  },
+  {
+   "id": "family-average",
+   "code": "B2",
+   "title": "Family and group averages",
+   "plain": "New: no ratios. A group's average changes because time passes, someone joins, or a child is born.",
+   "needs": [
+    "average"
+   ],
+   "teach": [
+    "The last kind is about groups: a family, a class, an office. There is usually no ratio. Everything is done with totals.",
+    "Keep three rules in front of you.",
+    "**1. Always work in totals.** Total = average x number of people. Do this for every average in the question before you think about anything else.",
+    "**2. A total grows by people x years.** A family of 4 with a total of 100 today had a total of 100 - 4 x 5 = 80 five years ago. A child who was not born yet adds nothing for those years.",
+    "**3. To find one person, subtract totals.** The total of everyone, minus the total of the others, is the person you want.",
+    "When someone joins a group, the same rule finds them: new total minus old total is the newcomer's age."
+   ],
+   "example": {
+    "q": "Four years ago the average age of a husband, his wife and their son was 26 years. Six years ago the average age of the wife and the son was 18 years. Find the husband's present age.",
+    "steps": [
+     "All three, four years ago: 26 x 3 = 78.",
+     "Bring that to today: three people, four years each, so add 12. Total today = 90.",
+     "Wife and son, six years ago: 18 x 2 = 36.",
+     "Bring that to today: two people, six years each, so add 12. Their total today = 48.",
+     "The husband is the difference: 90 - 48 = 42."
+    ],
+    "answer": "The husband is 42 years old."
+   },
+   "check": {
+    "q": "The average age of 5 people is 20 years. A sixth person joins and the average becomes 21 years. How old is the sixth person?",
+    "options": {
+     "a": "21 years",
+     "b": "25 years",
+     "c": "26 years",
+     "d": "30 years"
+    },
+    "answer": "C",
+    "why": "Old total = 20 x 5 = 100. New total = 21 x 6 = 126. The newcomer is 126 - 100 = 26."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "ages-based-on-average-set-1-prelims-1#6",
+     "ages-based-on-average-set-1-prelims-1#9",
+     "ages-based-on-miscellaneous-set-1-prelims-1#2",
+     "ages-based-on-three-persons-or-more-set-1-prelims-1#7",
+     "ages-based-on-relation-and-based-on-family-set-1-prelims-1#2"
+    ],
+    "tags": [
+     "Take one person out of a total.",
+     "Three small groups joined into one.",
+     "A past average and a future sum.",
+     "Someone joins and the average moves.",
+     "A child is born in between."
+    ]
+   },
+   "more": [
+    {
+     "tag": "Someone leaves",
+     "q": "The average age of 6 friends is 30 years. One of them, aged 40, leaves the group. What is the average age of those who remain?",
+     "options": {
+      "a": "26 years",
+      "b": "28 years",
+      "c": "29 years",
+      "d": "32 years"
+     },
+     "answer": "B",
+     "why": "Total = 30 x 6 = 180. Take out the 40: 140 is left for 5 people. 140 / 5 = 28."
+    }
+   ],
+   "shortcut": {
+    "title": "When one person joins",
+    "text": [
+     "If one person joins and the average rises, you can find the newcomer in one line:",
+     "**newcomer = new average + (old number of people x rise in the average)**",
+     "Five people average 20; a sixth joins and the average becomes 21. Newcomer = 21 + 5 x 1 = 26.",
+     "Why it works: the newcomer brings the new average for themselves, and also has to lift each of the old members by the rise. If the average falls instead, subtract."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-09-ages-a-graded#1": [
+    "The real number is a sum, so add the parts: 3 + 5 = 8 parts.",
+    "One part = 64 / 8 = 8.",
+    "B has 5 parts: 5 x 8 = 40 years."
+   ],
+   "clerk-09-ages-b-pyq#5": [
+    "Sum, so add the parts: 4 + 7 = 11 parts.",
+    "One part = 66 / 11 = 6.",
+    "B has 7 parts: 7 x 6 = 42 years."
+   ],
+   "clerk-09-ages-a-graded#15": [
+    "A will be 30 after 6 years, so A is 24 today.",
+    "A has 4 parts, so one part = 24 / 4 = 6.",
+    "B = 3 x 6 = 18 today, and 18 + 6 = 24 after 6 years."
+   ],
+   "clerk-09-ages-a-graded#24": [
+    "B is 5 in one ratio and 3 in the other. Make B 15 in both.",
+    "4 : 5 becomes 12 : 15, and 3 : 4 becomes 15 : 20. So A : B : C = 12 : 15 : 20.",
+    "Sum of parts = 47, and 94 / 47 = 2.",
+    "B = 15 x 2 = 30 years."
+   ],
+   "clerk-09-ages-a-graded#6": [
+    "Average to total: 30 x 3 = 90.",
+    "Parts added: 2 + 3 + 5 = 10, so one part = 9.",
+    "C = 5 x 9 = 45 years.",
+    "45 is not among the numbered options, so the answer is \"None of these\". Always finish the working before you choose that option."
+   ],
+   "clerk-09-ages-a-graded#3": [
+    "Take B as the base. A is base + 4.",
+    "Two bases + 4 = 48, so two bases = 44 and B = 22.",
+    "A = 22 + 4 = 26 years."
+   ],
+   "clerk-09-ages-a-graded#2": [
+    "A is 28.",
+    "B is 4 years younger: 24.",
+    "C is half of B: 12.",
+    "Sum = 28 + 24 + 12 = 64 years."
+   ],
+   "clerk-09-ages-a-graded#18": [
+    "Take C as the base. B is twice C, so B = 2 bases. A is 2 more than B, so A = 2 bases + 2.",
+    "Add them: 5 bases + 2 = 27, so 5 bases = 25 and C = 5.",
+    "B = 2 x 5 = 10 years."
+   ],
+   "clerk-09-ages-b-pyq#13": [
+    "Average to total: 35 x 3 = 105.",
+    "Take Sukruti as the base. Neha = base + 5, Kunal = base + 4.",
+    "Three bases + 9 = 105, so three bases = 96 and Sukruti = 32.",
+    "Kunal = 32 + 4 = 36 years."
+   ],
+   "clerk-09-ages-b-pyq#20": [
+    "Two years ago A + B = 26 x 2 = 52. Two people, two years each: today A + B = 56.",
+    "A will be 40 in five years, so A is 35 today. Then B = 56 - 35 = 21.",
+    "B is 5 years younger than C, so C = 26.",
+    "A - C = 35 - 26 = 9."
+   ],
+   "clerk-09-ages-a-graded#4": [
+    "Gaps: 4 : 5 and 5 : 6 both have a gap of 1 part. Already equal.",
+    "The elder brother goes from 5 parts to 6 parts: 1 part in 6 years.",
+    "One part = 6. Elder brother today = 5 x 6 = 30 years."
+   ],
+   "clerk-09-ages-a-graded#9": [
+    "Gaps: 3 : 4 and 5 : 6 both have a gap of 1 part.",
+    "A goes from 3 parts to 5 parts: 2 parts. Years between the dates: 5 + 5 = 10. One part = 5.",
+    "Five years ago they were 15 and 20, so today they are 20 and 25.",
+    "Sum = 45 years."
+   ],
+   "clerk-09-ages-a-graded#7": [
+    "Today 2 : 1 (gap 1 part). Ten years ago 3 : 1 (gap 2 parts).",
+    "Make the gaps equal: write 2 : 1 as 4 : 2.",
+    "A goes from 3 parts (ten years ago) to 4 parts (today): 1 part = 10 years.",
+    "A today = 4 x 10 = 40 years. Check: B is 20; ten years ago they were 30 and 10."
+   ],
+   "clerk-09-ages-a-graded#20": [
+    "Six years ago 4 : 1 (gap 3 parts). Six years hence 2 : 1 (gap 1 part).",
+    "Make the gaps equal: write 2 : 1 as 6 : 3.",
+    "The daughter goes from 1 part to 3 parts: 2 parts. Years between the dates: 6 + 6 = 12. One part = 6.",
+    "Six years ago the mother was 4 x 6 = 24, so she is 30 today."
+   ],
+   "clerk-09-ages-b-pyq#7": [
+    "Put the earlier date first: three years hence 5 : 2 (gap 3 parts), seven years hence 2 : 1 (gap 1 part).",
+    "Make the gaps equal: write 2 : 1 as 6 : 3.",
+    "A goes from 5 parts to 6 parts: 1 part. The dates are 4 years apart, so one part = 4.",
+    "Three years hence B is 2 x 4 = 8, so B is 5 today."
+   ],
+   "clerk-09-ages-b-pyq#19": [
+    "The second ratio is written B to A. Turn it round: A : B = 10 : 7.",
+    "Gaps: 3 : 2 has 1 part, 10 : 7 has 3 parts. Write 3 : 2 as 9 : 6.",
+    "A goes from 9 parts to 10 parts: 1 part = 4 years.",
+    "B today = 6 x 4 = 24 years."
+   ],
+   "clerk-09-ages-b-pyq#16": [
+    "200% more means 300 against 100: A : B = 3 : 1 five years ago.",
+    "40% more means 140 against 100: A : B = 7 : 5 after 15 years.",
+    "Both gaps are 2 parts. B goes from 1 part to 5 parts: 4 parts. Years between the dates: 5 + 15 = 20. One part = 5.",
+    "Five years ago Bhavani was 5, so she is 10 today."
+   ],
+   "clerk-09-ages-b-pyq#9": [
+    "The two dates are 4 years apart, whatever x is.",
+    "Gaps: 7 : 5 has 2 parts, 4 : 3 has 1 part. Write 4 : 3 as 8 : 6.",
+    "A goes from 7 parts to 8 parts: 1 part = 4 years. So at the first date A is 28 and B is 20.",
+    "A is 26 today, so the first date is 2 years away (x = 2). B today = 20 - 2 = 18 years."
+   ],
+   "clerk-09-ages-b-pyq#3": [
+    "150% more means 250 against 100: A : B = 5 : 2 ten years ago.",
+    "75% more means 175 against 100: A : B = 7 : 4 eight years hence.",
+    "Both gaps are 3 parts. A goes from 5 parts to 7 parts: 2 parts in 10 + 8 = 18 years. One part = 9.",
+    "Ten years ago A was 45 and B was 18, so today A is 55 and B is 28.",
+    "Total of all three = 33 x 3 = 99, so C = 99 - 55 - 28 = 16.",
+    "A - C = 55 - 16 = 39."
+   ],
+   "clerk-09-ages-a-graded#17": [
+    "In 5 years the ratio is 3 : 1, a gap of 2 parts.",
+    "The gap is always 30 years, so one part = 15.",
+    "In 5 years the father is 3 x 15 = 45, so he is 40 today."
+   ],
+   "clerk-09-ages-b-pyq#14": [
+    "Average to total: 18 x 2 = 36 today.",
+    "Six years hence the total is 36 + 2 x 6 = 48.",
+    "Then A is twice B, so 2 + 1 = 3 parts = 48 and one part = 16. A is 32 and B is 16.",
+    "The gap never changes: 32 - 16 = 16 years."
+   ],
+   "clerk-09-ages-b-pyq#21": [
+    "A is 4 years younger than B today.",
+    "Compare B five years ago with A three years ago: the gap is 4 - 5 + 3 = 2 years.",
+    "In the ratio 4 : 5 the gap is 1 part, so one part = 2.",
+    "B five years ago = 5 x 2 = 10, so B is 15 today."
+   ],
+   "clerk-09-ages-b-pyq#8": [
+    "Average to total: 19 x 2 = 38 today.",
+    "Move the total to the dates of the ratio: A goes back 4, B goes forward 6. 38 - 4 + 6 = 40.",
+    "Parts added: 2 + 3 = 5, so one part = 8.",
+    "A four years ago = 2 x 8 = 16, so A is 20 today."
+   ],
+   "clerk-09-ages-b-pyq#18": [
+    "Average to total: 39 x 2 = 78 today.",
+    "Move the total: P goes back 2, R goes forward 2. 78 - 2 + 2 = 78.",
+    "Parts added: 1 + 2 = 3, so one part = 26.",
+    "P two years ago = 26, so P is 28 today. R two years hence = 52, so R is 50 today.",
+    "P five years hence = 33. Difference from R's present age: 50 - 33 = 17 years."
+   ],
+   "clerk-09-ages-a-graded#25": [
+    "Average to total: 26 x 3 = 78.",
+    "A is 2 parts, B is 3 parts, C is 3 parts + 6.",
+    "8 parts + 6 = 78, so 8 parts = 72 and one part = 9.",
+    "C = 3 x 9 + 6 = 33 years."
+   ],
+   "clerk-09-ages-a-graded#12": [
+    "Move the total to six years ago: three people, six years each. 90 - 18 = 72.",
+    "Parts added: 1 + 2 + 3 = 6, so one part = 12.",
+    "C six years ago = 3 x 12 = 36, so C is 42 today."
+   ],
+   "clerk-09-ages-b-pyq#10": [
+    "Ravi is 5/4 of Lokesh, so Ravi : Lokesh = 5 : 4.",
+    "Total = 35 x 3 = 105. Amir is Ravi + 7, which is 5 parts + 7.",
+    "5 + 4 + 5 = 14 parts, plus 7, equals 105. So 14 parts = 98 and one part = 7.",
+    "Amir = 5 x 7 + 7 = 42 years."
+   ],
+   "clerk-09-ages-b-pyq#15": [
+    "Total today = 39 x 3 = 117. Five years ago: 117 - 15 = 102.",
+    "Five years ago Palani was 7 parts, Baba 5 parts, Ramar 5 parts + 17.",
+    "17 parts + 17 = 102, so 17 parts = 85 and one part = 5.",
+    "Baba five years ago = 25, today 30, and two years hence 32."
+   ],
+   "clerk-09-ages-b-pyq#17": [
+    "Five years ago A + B = 55. Two people, five years each: today A + B = 65.",
+    "Parts added: 8 + 5 = 13, so one part = 5. A is 40 and B is 25.",
+    "B + C = 35 x 2 = 70, so C = 45.",
+    "Difference between A and C = 5 years."
+   ],
+   "clerk-09-ages-a-graded#19": [
+    "Today A is 5 parts and B is 3 parts.",
+    "A four years ago equals B four years hence: 5 parts - 4 = 3 parts + 4.",
+    "2 parts = 8, so one part = 4. A is 20 and B is 12.",
+    "A four years hence is 24, B four years ago is 8. 24 : 8 = 3 : 1."
+   ],
+   "clerk-09-ages-b-pyq#6": [
+    "Today A is 4 parts and B is 5 parts.",
+    "A five years ago : B five years hence = 1 : 2. Cross-multiply: 2 x (4 parts - 5) = 1 x (5 parts + 5).",
+    "8 parts - 10 = 5 parts + 5, so 3 parts = 15 and one part = 5.",
+    "A is 20 today, and 24 four years hence."
+   ],
+   "clerk-09-ages-b-pyq#4": [
+    "Today A is 16 parts and B is 9 parts.",
+    "A eight years hence is twice B two years hence: 16 parts + 8 = 2 x (9 parts + 2).",
+    "16 parts + 8 = 18 parts + 4, so 2 parts = 4 and one part = 2.",
+    "B = 9 x 2 = 18 years."
+   ],
+   "clerk-09-ages-b-pyq#1": [
+    "Today A is 9 parts and B is 5 parts.",
+    "A five years hence : B five years ago = 16 : 5. Cross-multiply: 5 x (9 parts + 5) = 16 x (5 parts - 5).",
+    "45 parts + 25 = 80 parts - 80, so 35 parts = 105 and one part = 3.",
+    "A is 27 and B is 15. After 10 years: 37 + 25 = 62."
+   ],
+   "clerk-09-ages-a-graded#5": [
+    "The gap is 36 - 12 = 24 years, today and always.",
+    "When the mother is twice as old, the ratio is 2 : 1, a gap of 1 part. So one part = 24.",
+    "The daughter will be 24 then. She is 12 now, so that is after 12 years."
+   ],
+   "clerk-09-ages-a-graded#8": [
+    "His two ages are in the ratio 5 : 1, so he grows by 4 parts.",
+    "Years between the dates: 5 + 15 = 20. One part = 5.",
+    "Five years ago he was 5, so he is 10 today."
+   ],
+   "clerk-09-ages-a-graded#10": [
+    "\"28 when his son was born\" means the father is always 28 years older.",
+    "Today the ratio is 3 : 1, a gap of 2 parts. So one part = 14.",
+    "Father = 3 x 14 = 42 years."
+   ],
+   "clerk-09-ages-a-graded#22": [
+    "125% of his age ten years ago means now : then = 125 : 100 = 5 : 4.",
+    "From 4 parts to 5 parts is 1 part, and that took 10 years. One part = 10.",
+    "Today he is 5 x 10 = 50 years.",
+    "Check with the second clue: in 10 years he is 60, and 83 1/3% (which is 5/6) of 60 is 50."
+   ],
+   "clerk-09-ages-a-graded#26": [
+    "6/5 of his age at marriage means now : then = 6 : 5.",
+    "From 5 parts to 6 parts is 1 part, and that took 8 years. One part = 8.",
+    "At the marriage he was 40, so his sister was 30.",
+    "Eight years later she is 38."
+   ]
+  }
+ }
+}

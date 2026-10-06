@@ -1,0 +1,1206 @@
+{
+ "module": "simplification",
+ "intro": [
+  "Simplification is plain arithmetic: one line of numbers and signs, and one value to find. There are no stories to untangle. What it asks for is a fixed **order** of working and a few tables known well enough that you do not have to stop and calculate.",
+  "There are fourteen short lessons. The first two set up the order and the working-backwards habit. Then each lesson adds one kind of term: percents, squares and roots, fractions, decimals, powers. The last two cover approximation and full exam-style lines. Go in order the first time."
+ ],
+ "needs": [
+  "percent-of",
+  "percent-fractions",
+  "lcm"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has all the tables on one page, and the Course in the Clerk Quant bank has over two hundred real paper questions to practise on.",
+  "This topic rewards a little daily practice more than any other. Ten questions a day, with the tables beside you until you no longer need them, is the surest way to make it fast."
+ ],
+ "lessons": [
+  {
+   "id": "order",
+   "code": "S1",
+   "title": "Which step comes first",
+   "plain": "The starting point: a fixed order for doing the operations, so that everyone reaches the same answer.",
+   "teach": [
+    "\"48 x 15 ÷ 12 + 140\". Simplification questions are plain arithmetic, but one line can hold several operations. If you did them in any order you liked, different people would get different answers. So there is an agreed order, and the whole topic rests on it.",
+    "1. **Brackets** first. If there are brackets inside brackets, start with the innermost.",
+    "2. **Roots and powers** next (square roots, squares, cubes).",
+    "3. **\"Of\"**. In these questions \"of\" means multiply, and it is done before ordinary dividing and multiplying. \"1/2 of 90\" is treated as one lump, 45.",
+    "4. **Divide and multiply**, strictly from left to right, whichever comes first.",
+    "5. **Add and subtract**, from left to right.",
+    "This is often remembered as **BODMAS**. The two places people slip are both in step 4.",
+    "- Division and multiplication have **equal rank**. In 225 ÷ 45 ÷ 5 x 75 you do not multiply first. You go left to right: 225 ÷ 45 = 5, then 5 ÷ 5 = 1, then 1 x 75 = 75.",
+    "- Adding never jumps ahead of multiplying. In 120 + 17 x 8, the 17 x 8 is done first.",
+    "A good working habit: **underline the multiplying and dividing lumps first**, finish each lump, and only then do the adding and subtracting between them."
+   ],
+   "example": {
+    "q": "72 ÷ 8 x 5 - 3 x 4 + 6 = ?",
+    "steps": [
+     "Find the lumps joined by ÷ and x: \"72 ÷ 8 x 5\" and \"3 x 4\".",
+     "First lump, left to right: 72 ÷ 8 = 9, then 9 x 5 = 45.",
+     "Second lump: 3 x 4 = 12.",
+     "Now add and subtract, left to right: 45 - 12 + 6 = 39."
+    ],
+    "answer": "39."
+   },
+   "check": {
+    "q": "36 ÷ 6 x 3 + 2 = ?",
+    "options": {
+     "a": "4",
+     "b": "8",
+     "c": "20",
+     "d": "30"
+    },
+    "answer": "C",
+    "why": "Left to right: 36 ÷ 6 = 6, then 6 x 3 = 18. Then add: 18 + 2 = 20. (4 comes from doing 6 x 3 first, which is not allowed: ÷ and x go in the order they appear.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-a-graded#1",
+     "clerk-01-simplification-b-pyq#5",
+     "clerk-01-simplification-a-graded#9",
+     "clerk-01-simplification-a-graded#22",
+     "clerk-01-simplification-b-pyq#66"
+    ],
+    "tags": [
+     "Multiply and divide, then add.",
+     "Two divisions in a row: strictly left to right.",
+     "Two lumps with adding and subtracting between them.",
+     "Brackets inside brackets, and an \"of\".",
+     "\"Of\" is done before dividing."
+    ]
+   }
+  },
+  {
+   "id": "find-the-blank",
+   "code": "S1",
+   "title": "When the question mark is in the middle",
+   "plain": "New: the blank is not at the end. Finish everything you can, then undo the steps around the blank one at a time.",
+   "teach": [
+    "In most Clerk questions the question mark is not sitting alone on one side. It is buried: \"(? + 24) ÷ 6 x 5 = 60\". You cannot simply calculate. You have to **work backwards**.",
+    "1. **Finish every part that has no question mark in it.** That usually leaves one side as a plain number.",
+    "2. **Undo the steps around the question mark, starting from the outside.** The last thing done to the blank is the first thing you undo.",
+    "Undoing means doing the opposite:",
+    "| What was done to the blank | To undo it |",
+    "| something was added | subtract it |",
+    "| something was subtracted | add it |",
+    "| it was multiplied by something | divide by it |",
+    "| it was divided by something | multiply by it |",
+    "| it was squared | take the square root |",
+    "Take \"? ÷ 12 + 15 = 40\". The blank was divided by 12, and then 15 was added. Undo in the reverse order: take away the 15 first (25), then multiply by 12 (300).",
+    "One arrangement needs a little care: when the blank is what you **divide by** or **subtract**. In \"9240 ÷ ? = 330\", the blank is 9240 ÷ 330. In \"336 - ? = 108\", the blank is 336 - 108.",
+    "Sometimes the blank appears **twice**, as in \"3 x ? ÷ 8 = 54 ÷ ?\". Bring both to one side by multiplying: ? x ? = 54 x 8 ÷ 3 = 144, so ? = 12."
+   ],
+   "example": {
+    "q": "(? + 24) ÷ 6 x 5 = 60",
+    "steps": [
+     "The right side is already a plain number: 60.",
+     "The last thing done on the left was \"x 5\". Undo it: 60 ÷ 5 = 12.",
+     "Before that came \"÷ 6\". Undo it: 12 x 6 = 72.",
+     "So ? + 24 = 72, and ? = 48.",
+     "Check: 48 + 24 = 72, 72 ÷ 6 = 12, 12 x 5 = 60."
+    ],
+    "answer": "48."
+   },
+   "check": {
+    "q": "? ÷ 12 + 15 = 40",
+    "options": {
+     "a": "25",
+     "b": "37",
+     "c": "300",
+     "d": "660"
+    },
+    "answer": "C",
+    "why": "Undo from the outside. Take away the 15: 25. Then undo \"÷ 12\" by multiplying: 25 x 12 = 300. (25 stops one step too early.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-b-pyq#23",
+     "clerk-01-simplification-b-pyq#6",
+     "clerk-01-simplification-a-graded#13",
+     "clerk-01-simplification-b-pyq#101",
+     "clerk-01-simplification-b-pyq#59"
+    ],
+    "tags": [
+     "The blank is one of the numbers added.",
+     "The blank is what you divide by.",
+     "Finish both sides first.",
+     "Several steps to undo.",
+     "The blank appears on both sides."
+    ]
+   }
+  },
+  {
+   "id": "percent-terms",
+   "code": "S3",
+   "title": "Percent of a number",
+   "plain": "New: terms such as \"35% of 480\". Find each one quickly by splitting the percent into easy pieces.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"a% of b\" terms are in most Clerk simplification questions. Each one is a lump: work it out first, then add and subtract the lumps.",
+    "You know the basic method: 1% is the number divided by 100. Two stepping stones make it quicker.",
+    "- **10%**: divide by 10. 10% of 480 is 48.",
+    "- **50%, 25%**: a half, a quarter. 25% of 480 is 120.",
+    "Then **split** any percent into pieces you can do in your head.",
+    "| The percent | Split it as |",
+    "| 15% | 10% + half of that |",
+    "| 35% | 25% + 10% |",
+    "| 45% | 50% - 5% |",
+    "| 65% | 50% + 10% + 5% |",
+    "| 23% | 23 times the 1% |",
+    "35% of 480: a quarter is 120, 10% is 48, together 168.",
+    "When the number is a round hundred, go straight through 1%. \"23% of 600\": 1% is 6, so 23 x 6 = 138.",
+    "If the question mark is itself a percent (\"... = ?% of 930\"), find the left side as a number first, then ask what percent of 930 it is: divide by 930 and multiply by 100, or more simply, divide by the 1% (9.3)."
+   ],
+   "example": {
+    "q": "35% of 480 + 15% of 200 = ?",
+    "steps": [
+     "First lump, split 35% as 25% + 10%: a quarter of 480 is 120, and 10% is 48. Together 168.",
+     "Second lump: 10% of 200 is 20, and half of that is 10. Together 30.",
+     "Add the lumps: 168 + 30 = 198."
+    ],
+    "answer": "198."
+   },
+   "check": {
+    "q": "30% of 250 + 10% of 150 = ?",
+    "options": {
+     "a": "80",
+     "b": "90",
+     "c": "100",
+     "d": "120"
+    },
+    "answer": "B",
+    "why": "10% of 250 is 25, so 30% is 75. 10% of 150 is 15. 75 + 15 = 90."
+   },
+   "shortcut": {
+    "title": "Swap the two numbers",
+    "text": [
+     "**a% of b is the same as b% of a.** When a percent is awkward but the other number is friendly, swap them.",
+     "48% of 250 is fiddly. But 250% of 48 is two and a half times 48: 96 + 24 = 120.",
+     "16% of 25 = 25% of 16 = 4. And 36% of 50 = 50% of 36 = 18.",
+     "Look for 25, 50, 125 or 250 as the second number; those are the ones worth swapping."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-b-pyq#18",
+     "clerk-01-simplification-a-graded#2",
+     "clerk-01-simplification-b-pyq#46",
+     "clerk-01-simplification-b-pyq#41",
+     "clerk-01-simplification-a-graded#23"
+    ],
+    "tags": [
+     "Round percents of round numbers.",
+     "Split the percent.",
+     "One term is easier swapped.",
+     "Three terms, with the blank on the right.",
+     "The blank is the percent."
+    ]
+   }
+  },
+  {
+   "id": "percent-blank",
+   "code": "S3",
+   "title": "Percent terms with the blank inside",
+   "plain": "New: lessons 2 and 3 together. The number you take the percent of is the unknown.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"35% of 480 + 15% of ? = 204.\" The blank is inside a percent term. Nothing new is needed; combine the last two lessons.",
+    "1. Finish the terms that have no blank: 35% of 480 = 168.",
+    "2. Undo the adding: 15% of ? = 204 - 168 = 36.",
+    "3. Now you know a **part** and want the **whole**. Go through 1%: 36 ÷ 15 = 2.4, so the whole is 240.",
+    "Step 3 is the \"find the whole from a part\" move from the Basics. When the percent is a simple fraction, use that instead: if 25% of something is 150, the something is 4 x 150 = 600; if 75% is 375, a quarter is 125 and the whole is 500.",
+    "Two arrangements to recognise.",
+    "- **The blank is inside a bracket**: \"25% of (? + 360) = 150\". Treat the bracket as one thing first. The bracket is 600, so ? is 240.",
+    "- **The blank is the percent**: \"?% of 120 + 45 = 57\". Then ?% of 120 is 12, and 12 out of 120 is 10%."
+   ],
+   "example": {
+    "q": "35% of 480 + 15% of ? = 204",
+    "steps": [
+     "Finish the known term: 35% of 480 = 120 + 48 = 168.",
+     "Undo the adding: 15% of ? = 204 - 168 = 36.",
+     "Part to whole: 1% = 36 ÷ 15 = 2.4.",
+     "? = 100 x 2.4 = 240."
+    ],
+    "answer": "240."
+   },
+   "check": {
+    "q": "20% of ? + 40 = 100",
+    "options": {
+     "a": "12",
+     "b": "120",
+     "c": "300",
+     "d": "500"
+    },
+    "answer": "C",
+    "why": "Undo the adding: 20% of ? = 60. 20% is one fifth, so the whole is 5 x 60 = 300. (12 takes 20% of 60 instead of going back to the whole.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-b-pyq#29",
+     "clerk-01-simplification-b-pyq#108",
+     "clerk-01-simplification-b-pyq#50",
+     "clerk-01-simplification-b-pyq#106",
+     "clerk-01-simplification-b-pyq#8"
+    ],
+    "tags": [
+     "The blank is a plain number subtracted.",
+     "The blank is the whole.",
+     "The blank is inside a bracket.",
+     "The blank is the percent.",
+     "A percent above 100, and a plain multiplication."
+    ]
+   }
+  },
+  {
+   "id": "fraction-percents",
+   "code": "S3",
+   "title": "Percents that are fractions in disguise",
+   "plain": "New: 12.5%, 37.5%, 16 2/3% and percents above 100. Replace each with its fraction and divide.",
+   "needs": [
+    "percent-fractions"
+   ],
+   "teach": [
+    "Some percents look unpleasant as numbers but are simple fractions underneath. Examiners use them on purpose, and the numbers they attach are chosen to divide exactly.",
+    "| Percent | Fraction | Percent | Fraction |",
+    "| 50% | 1/2 | 12.5% | 1/8 |",
+    "| 25% | 1/4 | 37.5% | 3/8 |",
+    "| 75% | 3/4 | 62.5% | 5/8 |",
+    "| 20% | 1/5 | 87.5% | 7/8 |",
+    "| 33 1/3% | 1/3 | 16 2/3% | 1/6 |",
+    "| 66 2/3% | 2/3 | 6.25% | 1/16 |",
+    "\"12.5% of 968\" is one eighth of 968: 121. \"37.5% of 256\" is three eighths: 256 ÷ 8 = 32, and 3 x 32 = 96.",
+    "The eighths are worth knowing as a family: 12.5, 25, 37.5, 50, 62.5, 75, 87.5 are 1/8 to 7/8.",
+    "**Percents above 100** split the same way. 150% is the number plus half of it. 130% is the number plus 30% of it. 225% is twice the number plus a quarter of it.",
+    "**A percent of a percent.** \"60% of 50% of 650\": do one at a time. Half of 650 is 325, and 60% of 325 is 195."
+   ],
+   "example": {
+    "q": "62.5% of 720 - 16 2/3% of 180 = ?",
+    "steps": [
+     "62.5% is 5/8. 720 ÷ 8 = 90, and 5 x 90 = 450.",
+     "16 2/3% is 1/6. 180 ÷ 6 = 30.",
+     "450 - 30 = 420."
+    ],
+    "answer": "420."
+   },
+   "check": {
+    "q": "37.5% of 640 = ?",
+    "options": {
+     "a": "213",
+     "b": "240",
+     "c": "256",
+     "d": "400"
+    },
+    "answer": "B",
+    "why": "37.5% is 3/8. 640 ÷ 8 = 80, and 3 x 80 = 240."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-a-graded#15",
+     "clerk-01-simplification-b-pyq#13",
+     "clerk-01-simplification-b-pyq#115",
+     "clerk-01-simplification-b-pyq#159",
+     "clerk-01-simplification-b-pyq#53"
+    ],
+    "tags": [
+     "Two eighths.",
+     "A percent above 100.",
+     "Two percents above 100.",
+     "A fraction percent, with the blank as the whole.",
+     "A percent of a percent."
+    ]
+   }
+  },
+  {
+   "id": "squares-roots",
+   "code": "S4",
+   "title": "Squares and square roots",
+   "plain": "New: the signs for squaring and square root. Replace each from memory, and the question becomes plain arithmetic.",
+   "teach": [
+    "A small raised 2 means **squared**: the number multiplied by itself. 14 squared is 14 x 14 = 196.",
+    "The sign √ means **square root**: the number that was squared to give this one. √196 is 14, because 14 x 14 = 196.",
+    "In the order of operations these come early, straight after brackets. So the first move in any such question is to **replace every square and every square root with its value**. What remains is the plain arithmetic of lesson 1.",
+    "That is why this lesson is mostly about recognising numbers. The squares up to 30 appear constantly, in both directions. They are worth learning the way you learned multiplication tables.",
+    "| n | n squared | n | n squared | n | n squared |",
+    "| 11 | 121 | 18 | 324 | 25 | 625 |",
+    "| 12 | 144 | 19 | 361 | 26 | 676 |",
+    "| 13 | 169 | 20 | 400 | 27 | 729 |",
+    "| 14 | 196 | 21 | 441 | 28 | 784 |",
+    "| 15 | 225 | 22 | 484 | 29 | 841 |",
+    "| 16 | 256 | 23 | 529 | 30 | 900 |",
+    "| 17 | 289 | 24 | 576 | | |",
+    "For a bigger root, a little reasoning finds it. √1764: it lies between 40 squared (1600) and 50 squared (2500), and it ends in 4, so the root ends in 2 or 8. It must be 42.",
+    "The last digit is a useful check both ways: a number ending in 2, 3, 7 or 8 is never a perfect square."
+   ],
+   "example": {
+    "q": "√1296 + 17² - 15² = ?",
+    "steps": [
+     "Replace each one. √1296 = 36 (it lies between 30 squared and 40 squared, and ends in 6).",
+     "17 squared = 289. 15 squared = 225.",
+     "36 + 289 - 225 = 100."
+    ],
+    "answer": "100."
+   },
+   "check": {
+    "q": "√441 + 13² = ?",
+    "options": {
+     "a": "182",
+     "b": "190",
+     "c": "290",
+     "d": "610"
+    },
+    "answer": "B",
+    "why": "√441 = 21 and 13 squared = 169. 21 + 169 = 190."
+   },
+   "shortcut": {
+    "title": "Squares of numbers ending in 5",
+    "text": [
+     "To square a number ending in 5: take the part before the 5, **multiply it by the next number up**, and write 25 after the result.",
+     "35 squared: 3 x 4 = 12, then 25. So 1225.",
+     "65 squared: 6 x 7 = 42, then 25. So 4225. And 105 squared: 10 x 11 = 110, then 25: 11,025.",
+     "It also runs backwards: √5625 ends in 25, and 56 = 7 x 8, so the root is 75."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-a-graded#3",
+     "clerk-01-simplification-a-graded#5",
+     "clerk-01-simplification-b-pyq#122",
+     "clerk-01-simplification-b-pyq#39",
+     "clerk-01-simplification-b-pyq#68"
+    ],
+    "tags": [
+     "Two square roots.",
+     "Two squares.",
+     "Three square roots.",
+     "Roots mixed with dividing and multiplying.",
+     "Squares, a large root, and the blank is squared."
+    ]
+   }
+  },
+  {
+   "id": "cubes",
+   "code": "S4",
+   "title": "Cubes, cube roots and roots inside roots",
+   "plain": "New: the cube (a number times itself twice) and its root, and how to open a root that sits inside another root.",
+   "teach": [
+    "A small raised 3 means **cubed**: 5 cubed is 5 x 5 x 5 = 125. The sign ∛ is the **cube root**: ∛125 = 5.",
+    "As with squares, the first move is to replace each one with its value. The cubes that come up are these.",
+    "| n | n cubed | n | n cubed | n | n cubed |",
+    "| 1 | 1 | 6 | 216 | 11 | 1331 |",
+    "| 2 | 8 | 7 | 343 | 12 | 1728 |",
+    "| 3 | 27 | 8 | 512 | 13 | 2197 |",
+    "| 4 | 64 | 9 | 729 | 17 | 4913 |",
+    "| 5 | 125 | 10 | 1000 | 19 | 6859 |",
+    "Some papers write a cube root as a power of one-third: (729) to the power 1/3 means ∛729. Likewise a power of one-half means a square root.",
+    "**A root inside a root.** \"√(157 + √(130 + √196))\". Work from the **inside out**, exactly as with brackets.",
+    "- Innermost: √196 = 14.",
+    "- Next: 130 + 14 = 144, and √144 = 12.",
+    "- Outermost: 157 + 12 = 169, and √169 = 13.",
+    "The same goes for a root of a root. √(√6561): the inner root is 81, and the root of 81 is 9."
+   ],
+   "example": {
+    "q": "∛4913 x √(√256) = ?",
+    "steps": [
+     "∛4913 = 17 (from the table).",
+     "Inside out: √256 = 16, and √16 = 4.",
+     "17 x 4 = 68."
+    ],
+    "answer": "68."
+   },
+   "check": {
+    "q": "∛2744 = ?",
+    "options": {
+     "a": "12",
+     "b": "14",
+     "c": "16",
+     "d": "24"
+    },
+    "answer": "B",
+    "why": "The number ends in 4, and the only digit whose cube ends in 4 is 4. Between 10 cubed (1000) and 20 cubed (8000), that makes it 14. Check: 14 x 14 = 196, and 196 x 14 = 2744."
+   },
+   "shortcut": {
+    "title": "Reading a cube root from its last digit",
+    "text": [
+     "For a perfect cube, the last digit of the root is fixed by the last digit of the number. Most digits stay the same; only four swap.",
+     "| The cube ends in | The root ends in |",
+     "| 0, 1, 4, 5, 6, 9 | the same digit |",
+     "| 2 | 8 |",
+     "| 8 | 2 |",
+     "| 3 | 7 |",
+     "| 7 | 3 |",
+     "Then drop the last three digits and see which cube the rest sits just above. That gives the first digit.",
+     "∛6859: it ends in 9, so the root ends in 9. Drop \"859\" and 6 remains; 1 cubed is 1 and 2 cubed is 8, so the first digit is 1. The root is 19."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-a-graded#8",
+     "clerk-01-simplification-b-pyq#151",
+     "clerk-01-simplification-b-pyq#14",
+     "clerk-01-simplification-b-pyq#110",
+     "clerk-01-simplification-a-graded#29"
+    ],
+    "tags": [
+     "A cube root and a square root.",
+     "Cube roots written as a power of one-third.",
+     "Roots inside a bracket.",
+     "A root inside a root inside a root.",
+     "A root of a root, twice."
+    ]
+   }
+  },
+  {
+   "id": "square-patterns",
+   "code": "S4",
+   "title": "Squares with a blank, and a pattern that saves work",
+   "plain": "New: the blank is itself squared; and a difference of two squares can be done without squaring anything.",
+   "teach": [
+    "Two things in this lesson.",
+    "**When the blank is squared.** \"2500 + 24² - 51 = ?² - 111.\" Treat \"? squared\" as the unknown first. Finish the known side, undo the steps, and you will have \"? squared = some number\". Then take the square root as the very last step.",
+    "This is where knowing the squares table backwards pays off: 3136 is 56 squared, 676 is 26 squared, 2809 is 53 squared.",
+    "**A difference of two squares.** Whenever you see one square minus another, there is a pattern that avoids squaring at all:",
+    "**a squared minus b squared = (a + b) x (a - b)**",
+    "\"140² - 60²\" is (140 + 60) x (140 - 60) = 200 x 80 = 16,000. No big squares needed.",
+    "\"47² - 33²\" is 80 x 14 = 1,120.",
+    "Use it when the two numbers add or subtract to something round. If they do not, just use the table.",
+    "Be careful that it is a **difference**. There is no such shortcut for a sum of two squares: 14² + 16² simply has to be 196 + 256."
+   ],
+   "example": {
+    "q": "(73² - 27²) ÷ 25 = ?",
+    "steps": [
+     "A difference of two squares: (73 + 27) x (73 - 27).",
+     "That is 100 x 46 = 4,600.",
+     "4,600 ÷ 25 = 184."
+    ],
+    "answer": "184."
+   },
+   "check": {
+    "q": "65² - 35² = ?",
+    "options": {
+     "a": "900",
+     "b": "3,000",
+     "c": "3,600",
+     "d": "4,000"
+    },
+    "answer": "B",
+    "why": "(65 + 35) x (65 - 35) = 100 x 30 = 3,000. (900 is 30 squared: the difference must not be squared.)"
+   },
+   "shortcut": {
+    "title": "The same pattern for cubes",
+    "text": [
+     "A pattern that has appeared in the Clerk paper once, in a frightening-looking form:",
+     "**(a cubed - b cubed) ÷ (a squared + a x b + b squared) = a - b**",
+     "So (854 x 854 x 854 - 276 x 276 x 276) ÷ (854 x 854 + 854 x 276 + 276 x 276) is simply 854 - 276 = 578.",
+     "When a question repeats the same two numbers in this exact arrangement, it is asking you to notice the pattern, not to multiply."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-a-graded#20",
+     "clerk-01-simplification-b-pyq#12",
+     "clerk-01-simplification-b-pyq#113",
+     "clerk-01-simplification-b-pyq#64",
+     "clerk-01-simplification-b-pyq#90"
+    ],
+    "tags": [
+     "A difference of squares, then a division.",
+     "A difference of squares inside a longer line.",
+     "Three squares, and the answer side has one too.",
+     "The blank is squared.",
+     "The blank is squared, with work on both sides."
+    ]
+   }
+  },
+  {
+   "id": "fractions-of",
+   "code": "S5",
+   "title": "Fractions of a number",
+   "plain": "New: \"3/7 of 2/5 of 1050\". Cancel across the fractions before you multiply anything.",
+   "teach": [
+    "\"3/7 of 1050\" means divide 1050 by 7 and multiply by 3. Always **divide first**: 1050 ÷ 7 = 150, then 3 x 150 = 450. Dividing first keeps the numbers small.",
+    "When several fractions are chained with \"of\", they are all being multiplied. The golden rule is: **cancel before you multiply.**",
+    "\"3/4 of 8/9 of 27/32 of 4608\". Write all the tops together and all the bottoms together:",
+    "- tops: 3 x 8 x 27",
+    "- bottoms: 4 x 9 x 32",
+    "Now cancel any top with any bottom. 8 goes into 32 four times. 27 and 9 leave 3. The chain shrinks to 3 x 3 on top and 4 x 4 underneath: 9/16.",
+    "Then 9/16 of 4608: 4608 ÷ 16 = 288, and 9 x 288 = 2592.",
+    "You may also cancel a bottom number straight against the big number at the end, if it divides exactly. Cancel in whatever order looks easiest; the answer is the same.",
+    "If the question has two fraction terms joined by plus or minus, each is its own lump: work out each, then add or subtract.",
+    "A top-heavy fraction such as 23/19 behaves the same way: \"23/19 of 684\" is 684 ÷ 19 = 36, then 23 x 36."
+   ],
+   "example": {
+    "q": "4/9 of 3/8 of 5/6 of 1296 = ?",
+    "steps": [
+     "Tops: 4 x 3 x 5. Bottoms: 9 x 8 x 6.",
+     "Cancel: 4 into 8 leaves 2 underneath. 3 into 9 leaves 3 underneath. Now 5 on top, and 3 x 2 x 6 = 36 underneath.",
+     "So the chain is 5/36.",
+     "1296 ÷ 36 = 36, and 5 x 36 = 180."
+    ],
+    "answer": "180."
+   },
+   "check": {
+    "q": "2/3 of 3/4 of 480 = ?",
+    "options": {
+     "a": "120",
+     "b": "240",
+     "c": "360",
+     "d": "680"
+    },
+    "answer": "B",
+    "why": "The 3s cancel, leaving 2/4, which is a half. Half of 480 is 240."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-a-graded#4",
+     "clerk-01-simplification-b-pyq#25",
+     "clerk-01-simplification-b-pyq#186",
+     "clerk-01-simplification-b-pyq#37",
+     "clerk-01-simplification-b-pyq#84"
+    ],
+    "tags": [
+     "Two fractions in a chain.",
+     "Three fractions in a chain.",
+     "Awkward numbers that cancel completely.",
+     "Two fraction lumps added.",
+     "A top-heavy fraction, and a blank."
+    ]
+   }
+  },
+  {
+   "id": "mixed-numbers",
+   "code": "S5",
+   "title": "Mixed numbers",
+   "plain": "New: numbers such as 7 1/2. Add and subtract the whole parts and the fraction parts separately.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "A **mixed number** is a whole number with a fraction beside it: 7 1/2 means seven and a half.",
+    "**Adding and subtracting.** Do not turn them into top-heavy fractions. Handle the two parts separately.",
+    "1. Add and subtract the **whole parts**.",
+    "2. Add and subtract the **fraction parts**. To do that, give them all the same bottom number: one that all the bottoms go into (the Basics lesson on this is \"A number that several numbers go into\").",
+    "3. Put the two results together. If the fractions come to more than 1, carry the extra to the whole part. If they come out negative, borrow 1 from the whole part.",
+    "\"4 3/4 + 2 5/6 - 3 1/3\": the whole parts give 4 + 2 - 3 = 3. For the fractions, 4, 6 and 3 all go into 12: 9/12 + 10/12 - 4/12 = 15/12, which is 1 3/12 = 1 1/4. Together: 4 1/4.",
+    "**Multiplying and dividing.** Here you **do** turn each into a top-heavy fraction first, because the parts cannot be multiplied separately. 4 2/5 is (4 x 5 + 2) over 5 = 22/5.",
+    "Then multiply as in the last lesson, cancelling across. To divide by a fraction, turn it upside down and multiply.",
+    "A mixed number times a whole number is a useful special case: 3 1/13 x 65 is 40/13 x 65 = 40 x 5 = 200."
+   ],
+   "example": {
+    "q": "4 3/4 + 2 5/6 - 3 1/3 = ?",
+    "steps": [
+     "Whole parts: 4 + 2 - 3 = 3.",
+     "Fractions, with 12 underneath: 9/12 + 10/12 - 4/12 = 15/12.",
+     "15/12 is 1 and 3/12, which is 1 1/4.",
+     "Together: 3 + 1 1/4 = 4 1/4."
+    ],
+    "answer": "4 1/4."
+   },
+   "check": {
+    "q": "2 1/2 + 3 1/3 - 1 1/6 = ?",
+    "options": {
+     "a": "4 1/3",
+     "b": "4 2/3",
+     "c": "5",
+     "d": "5 2/3"
+    },
+    "answer": "B",
+    "why": "Whole parts: 2 + 3 - 1 = 4. Fractions with 6 underneath: 3/6 + 2/6 - 1/6 = 4/6 = 2/3. Together 4 2/3."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-b-pyq#35",
+     "clerk-01-simplification-a-graded#26",
+     "clerk-01-simplification-b-pyq#94",
+     "clerk-01-simplification-a-graded#18",
+     "clerk-01-simplification-b-pyq#73"
+    ],
+    "tags": [
+     "Adding and subtracting, with a carry.",
+     "Adding and subtracting, with a borrow.",
+     "The blank is on the other side.",
+     "Multiplying and dividing.",
+     "Mixed numbers multiplied by whole numbers."
+    ]
+   }
+  },
+  {
+   "id": "decimals",
+   "code": "S7",
+   "title": "Decimals",
+   "plain": "New: numbers with a decimal point. Line them up to add; turn awkward ones into fractions to multiply or divide.",
+   "teach": [
+    "**Adding and subtracting decimals.** Line up the decimal points and work as with whole numbers. It often helps to add the easy pairs first: in 45.6 + 124.75 - 68.35, notice that 124.75 - 68.35 = 56.4, and 56.4 + 45.6 = 102.",
+    "**Multiplying.** Ignore the points, multiply, then put the point back so that the answer has as many decimal places as the two numbers had together. 2.4 x 1.5: 24 x 15 = 360, two decimal places, so 3.60.",
+    "**Dividing by a decimal.** Move the point the same number of places in **both** numbers until the divisor is whole. 15.6 ÷ 0.13 becomes 1560 ÷ 13 = 120.",
+    "The real time-saver is recognising decimals that are simple fractions. Dividing by them turns into multiplying by something easy.",
+    "| The decimal | Is the fraction | So dividing by it means |",
+    "| 0.5 | 1/2 | multiply by 2 |",
+    "| 0.25 | 1/4 | multiply by 4 |",
+    "| 0.125 | 1/8 | multiply by 8 |",
+    "| 2.5 | 10/4 | multiply by 4, then divide by 10 |",
+    "| 12.5 | 100/8 | multiply by 8, then divide by 100 |",
+    "| 0.75 | 3/4 | multiply by 4, then divide by 3 |",
+    "So 3750 ÷ 12.5 = 3750 x 8 ÷ 100 = 300. And multiplying by 12.5 goes the other way: x 100 ÷ 8.",
+    "Watch for squares hiding behind a decimal point: 1.44 is 1.2 squared and 2.56 is 1.6 squared, so 36 ÷ 1.44 is 3600 ÷ 144 = 25."
+   ],
+   "example": {
+    "q": "8.4 x 2.5 + 96 ÷ 0.25 = ?",
+    "steps": [
+     "8.4 x 2.5: multiplying by 2.5 is x 10 ÷ 4. 84 ÷ 4 = 21.",
+     "96 ÷ 0.25: dividing by a quarter is multiplying by 4. 384.",
+     "21 + 384 = 405."
+    ],
+    "answer": "405."
+   },
+   "check": {
+    "q": "450 ÷ 2.5 = ?",
+    "options": {
+     "a": "18",
+     "b": "112.5",
+     "c": "180",
+     "d": "1,125"
+    },
+    "answer": "C",
+    "why": "Dividing by 2.5 is x 4 ÷ 10. 450 x 4 = 1,800, and 1,800 ÷ 10 = 180. (1,125 multiplies by 2.5 instead of dividing.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-a-graded#6",
+     "clerk-01-simplification-b-pyq#48",
+     "clerk-01-simplification-b-pyq#19",
+     "clerk-01-simplification-a-graded#25",
+     "clerk-01-simplification-b-pyq#27"
+    ],
+    "tags": [
+     "Adding and subtracting.",
+     "Multiplying, with 0.75 as a fraction.",
+     "Dividing by 12.5.",
+     "Dividing by a small decimal, and multiplying by 12.5.",
+     "Decimals that are squares in disguise."
+    ]
+   }
+  },
+  {
+   "id": "powers",
+   "code": "S6",
+   "title": "Powers",
+   "plain": "New: a small raised number counts how many times a number is multiplied by itself. With one base, you only add and subtract those counts.",
+   "teach": [
+    "2⁵ means 2 multiplied by itself five times: 2 x 2 x 2 x 2 x 2 = 32. The 2 is the **base** and the 5 is the **power**.",
+    "Questions on powers look heavy but are among the lightest, because of three rules. They work only when the **base is the same**.",
+    "| When you | You do this to the powers | Example |",
+    "| multiply | add them | 2⁴ x 2⁷ = 2¹¹ |",
+    "| divide | subtract them | 7⁹ ÷ 7⁶ = 7³ |",
+    "| take a power of a power | multiply them | (7²)² = 7⁴ |",
+    "So the method is always:",
+    "1. **Rewrite every number as a power of one base.** This is the real work.",
+    "2. Add, subtract or multiply the powers.",
+    "The numbers to recognise:",
+    "- powers of 2: 4, 8, 16, 32, 64, 128, 256 are 2², 2³, 2⁴, 2⁵, 2⁶, 2⁷, 2⁸;",
+    "- powers of 3: 9, 27, 81, 243 are 3², 3³, 3⁴, 3⁵;",
+    "- powers of 5 and 7: 25, 125 are 5², 5³; and 49, 343 are 7², 7³.",
+    "\"2⁴ x 2^? = 32 x 64.\" The right side is 2⁵ x 2⁶ = 2¹¹. So 4 + ? = 11, and ? = 7.",
+    "Decimals can share a base too: 0.49 is 0.7 squared and 0.343 is 0.7 cubed.",
+    "If two numbers have the **same power** but different bases, divide the bases instead: 64⁵ ÷ 32⁵ = (64 ÷ 32)⁵ = 2⁵."
+   ],
+   "example": {
+    "q": "4³ x 8² ÷ 16 = 2^?",
+    "steps": [
+     "Rewrite in base 2. 4 is 2², so 4³ = 2⁶. 8 is 2³, so 8² = 2⁶. 16 is 2⁴.",
+     "Multiplying adds the powers: 6 + 6 = 12.",
+     "Dividing subtracts: 12 - 4 = 8.",
+     "So ? = 8."
+    ],
+    "answer": "8."
+   },
+   "check": {
+    "q": "3^? = 27 x 81 ÷ 9",
+    "options": {
+     "a": "3",
+     "b": "5",
+     "c": "7",
+     "d": "9"
+    },
+    "answer": "B",
+    "why": "In base 3: 27 is 3³, 81 is 3⁴ and 9 is 3². So 3 + 4 - 2 = 5."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-b-pyq#51",
+     "clerk-01-simplification-a-graded#14",
+     "clerk-01-simplification-b-pyq#198",
+     "clerk-01-simplification-b-pyq#141",
+     "clerk-01-simplification-b-pyq#149"
+    ],
+    "tags": [
+     "One base already; find the missing power.",
+     "Rewrite in base 7 first.",
+     "Base 8 against base 2.",
+     "The same power on two different bases.",
+     "Decimals with a common base, and large powers."
+    ]
+   }
+  },
+  {
+   "id": "approximation",
+   "code": "A0",
+   "title": "Approximation",
+   "plain": "New: the numbers are ugly on purpose, such as 24.98 and 119.97. Round each to a friendly number first, then solve.",
+   "teach": [
+    "Some questions ask for the **approximate** value. You can tell them by the numbers: 24.98, 16.02, 119.97. Each is a whisker away from a round number, and that is the hint. Nobody is expected to multiply 24.98 by 16.02.",
+    "The method is one step added to everything you already know:",
+    "1. **Round every number to the nearest friendly value.** 24.98 becomes 25. 16.02 becomes 16. 119.97 becomes 120.",
+    "2. **Solve the tidy question** exactly as usual.",
+    "3. **Choose the option nearest to your answer.** It will usually match exactly.",
+    "A few things to round with care.",
+    "- **Percents**: round to one you can do. 34.98% is 35%. 33.32% is one third. 16.67% is one sixth.",
+    "- **Roots**: round the number under the root to the nearest perfect square or cube. √624.9 is √625 = 25. ∛342.9 is ∛343 = 7.",
+    "- **A root that is not a perfect square**, such as √255: use the nearest one, √256 = 16.",
+    "Do not round too early or too roughly. Change each number by a tiny amount only; if you find yourself turning 31.98 into 30, you have gone too far. It should become 32.",
+    "One oddity: if the blank is squared, a paper may give the answer as ± 12, meaning 12 or minus 12, since both give 144 when squared."
+   ],
+   "example": {
+    "q": "39.97% of 250.1 + √624.8 = ? (approximately)",
+    "steps": [
+     "Round each number: 40% of 250, and √625.",
+     "40% of 250 = 100.",
+     "√625 = 25.",
+     "100 + 25 = 125."
+    ],
+    "answer": "About 125."
+   },
+   "check": {
+    "q": "19.97 x 15.02 + 99.9 = ? (approximately)",
+    "options": {
+     "a": "300",
+     "b": "380",
+     "c": "400",
+     "d": "420"
+    },
+    "answer": "C",
+    "why": "Round: 20 x 15 + 100 = 300 + 100 = 400."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-02-approximation-a-graded#1",
+     "clerk-02-approximation-a-graded#3",
+     "clerk-02-approximation-a-graded#4",
+     "clerk-02-approximation-a-graded#13",
+     "clerk-02-approximation-b-pyq#1"
+    ],
+    "tags": [
+     "Multiply and add.",
+     "A percent term.",
+     "Two square roots.",
+     "Several operations in one line.",
+     "A real paper: squares, a blank that is squared, and a root that is not exact."
+    ]
+   }
+  },
+  {
+   "id": "all-together",
+   "code": "S3",
+   "title": "Everything in one line",
+   "plain": "New: nothing new. A real Clerk question mixes three or four of these ideas, so practise taking it one lump at a time.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "A typical Clerk question does not test one idea. It puts a percent, a square, a fraction and a blank into a single line: \"55% of 1400 + ?² + 282 = 12³\".",
+    "You already have every piece. What is left is a calm routine for long lines.",
+    "1. **Mark the lumps.** Each percent term, each fraction term, each square or root is a lump.",
+    "2. **Replace every lump that has no blank with its value.** Write the line again with plain numbers. It will be much shorter.",
+    "3. **Follow the order of operations** on what is left, or **undo towards the blank**.",
+    "4. **Glance at the options** before the last step. If they are all whole numbers and you are heading for a decimal, something has slipped.",
+    "Writing the line out again after step 2 is not wasted time. It is where most errors are caught.",
+    "A final word on speed. It comes from the tables (squares, cubes, fraction percents) far more than from tricks. If one of those tables still feels slow, a few minutes on it every day will do more for this topic than anything else."
+   ],
+   "example": {
+    "q": "45% of 600 + ?² - 14 x 11 = 6³",
+    "steps": [
+     "Replace the lumps: 45% of 600 = 270. 14 x 11 = 154. 6 cubed = 216.",
+     "The line is now: 270 + ?² - 154 = 216.",
+     "Tidy the left: 116 + ?² = 216.",
+     "So ?² = 100, and ? = 10."
+    ],
+    "answer": "10."
+   },
+   "check": {
+    "q": "40% of 150 + √144 x 5 - 2³ = ?",
+    "options": {
+     "a": "104",
+     "b": "112",
+     "c": "120",
+     "d": "128"
+    },
+    "answer": "B",
+    "why": "Replace the lumps: 40% of 150 = 60, √144 x 5 = 12 x 5 = 60, and 2 cubed = 8. Then 60 + 60 - 8 = 112."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-01-simplification-b-pyq#10",
+     "clerk-01-simplification-a-graded#19",
+     "clerk-01-simplification-b-pyq#133",
+     "clerk-01-simplification-b-pyq#96",
+     "clerk-01-simplification-b-pyq#188"
+    ],
+    "tags": [
+     "A percent, a division and a square.",
+     "A percent, a fraction and a square.",
+     "A percent, a fraction, a blank and a square.",
+     "A percent, a blank that is squared, and a cube.",
+     "A blank under a root, a fraction, a percent, all in one."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-01-simplification-a-graded#1": [
+    "Left to right: 48 x 15 = 720, then 720 ÷ 12 = 60. (Or cancel first: 48 ÷ 12 = 4, and 4 x 15 = 60.)",
+    "60 + 140 = 200."
+   ],
+   "clerk-01-simplification-b-pyq#5": [
+    "225 ÷ 45 = 5.",
+    "5 ÷ 5 = 1.",
+    "1 x 75 = 75."
+   ],
+   "clerk-01-simplification-a-graded#9": [
+    "First lump: 1560 ÷ 13 = 120. Second lump: 17 x 8 = 136.",
+    "120 + 136 - 96 = 160."
+   ],
+   "clerk-01-simplification-a-graded#22": [
+    "Innermost first: 56 ÷ 7 + 4 = 8 + 4 = 12.",
+    "Next: 18 x 12 = 216. Then 720 - 216 = 504.",
+    "1/4 of 504 = 126."
+   ],
+   "clerk-01-simplification-b-pyq#66": [
+    "\"4 of 143\" is one lump: 572.",
+    "572 ÷ 26 = 22, then 22 x 12 = 264.",
+    "264 - 200 = 64."
+   ],
+   "clerk-01-simplification-b-pyq#23": [
+    "Right side: 1000 + 50 = 1050.",
+    "Left side without the blank: 845 + 55 = 900.",
+    "? = 1050 - 900 = 150."
+   ],
+   "clerk-01-simplification-b-pyq#6": [
+    "Bracket first: 3080 + 6160 = 9240.",
+    "9240 ÷ ? = 330, so ? = 9240 ÷ 330 = 28."
+   ],
+   "clerk-01-simplification-a-graded#13": [
+    "Left lump: 18 x 24 ÷ 9 = 48. Right side: 13 squared = 169.",
+    "48 + ? = 169, so ? = 121."
+   ],
+   "clerk-01-simplification-b-pyq#101": [
+    "Square first: 8 squared = 64. So (? x 48) ÷ 54 = 96 - 64 = 32.",
+    "Undo \"÷ 54\": ? x 48 = 32 x 54 = 1728.",
+    "Undo \"x 48\": ? = 1728 ÷ 48 = 36."
+   ],
+   "clerk-01-simplification-b-pyq#59": [
+    "Right side numbers: 18 x 3 = 54. So 3 x ? ÷ 8 = 54 ÷ ?.",
+    "Multiply both sides by ?, and by 8, and divide by 3: ? x ? = 54 x 8 ÷ 3 = 144.",
+    "? = 12."
+   ],
+   "clerk-01-simplification-b-pyq#18": [
+    "40% of 150: 10% is 15, so 60.",
+    "20% of 200: 10% is 20, so 40.",
+    "60 + 40 = 100."
+   ],
+   "clerk-01-simplification-a-graded#2": [
+    "35% of 480 = 25% + 10% = 120 + 48 = 168.",
+    "25% of 360 = 90.",
+    "168 + 90 = 258."
+   ],
+   "clerk-01-simplification-b-pyq#46": [
+    "48% of 250 = 250% of 48 = 96 + 24 = 120.",
+    "45% of 600: 1% is 6, so 45 x 6 = 270.",
+    "120 + 270 = 390."
+   ],
+   "clerk-01-simplification-b-pyq#41": [
+    "1% of 600, 800 and 400 is 6, 8 and 4.",
+    "23 x 6 = 138. 33 x 8 = 264. 53 x 4 = 212.",
+    "138 + 264 = 402, and 402 - 212 = 190."
+   ],
+   "clerk-01-simplification-a-graded#23": [
+    "28% of 750 = 210. 36% of 450 = 162. Together 372.",
+    "1% of 930 is 9.3.",
+    "372 ÷ 9.3 = 40, so ? = 40."
+   ],
+   "clerk-01-simplification-b-pyq#29": [
+    "42% of 800 = 336. 18% of 600 = 108.",
+    "336 - ? = 108, so ? = 336 - 108 = 228."
+   ],
+   "clerk-01-simplification-b-pyq#108": [
+    "60% of 125 = 75. So 75% of ? = 450 - 75 = 375.",
+    "75% is three quarters. One quarter is 125.",
+    "? = 4 x 125 = 500."
+   ],
+   "clerk-01-simplification-b-pyq#50": [
+    "25% of the bracket is 150, so the bracket is 4 x 150 = 600.",
+    "? + 360 = 600, so ? = 240."
+   ],
+   "clerk-01-simplification-b-pyq#106": [
+    "15% of 300 = 45. So ?% of 120 = 57 - 45 = 12.",
+    "12 out of 120 is one tenth.",
+    "? = 10."
+   ],
+   "clerk-01-simplification-b-pyq#8": [
+    "225% of 2400: 1% is 24, so 225 x 24. Leave it like that.",
+    "24 x ? = 225 x 24, so ? = 225."
+   ],
+   "clerk-01-simplification-a-graded#15": [
+    "12.5% is 1/8: 968 ÷ 8 = 121.",
+    "37.5% is 3/8: 256 ÷ 8 = 32, and 3 x 32 = 96.",
+    "121 + 96 = 217."
+   ],
+   "clerk-01-simplification-b-pyq#13": [
+    "150% of 240 = 240 + 120 = 360.",
+    "25% of 160 = 40.",
+    "360 + 40 = 400."
+   ],
+   "clerk-01-simplification-b-pyq#115": [
+    "130% of 420 = 420 + 126 = 546.",
+    "170% of 240 = 240 + 168 = 408.",
+    "546 - 408 = 138."
+   ],
+   "clerk-01-simplification-b-pyq#159": [
+    "12.5% of 960 = 960 ÷ 8 = 120. Right side: 16 x 12 = 192.",
+    "So 12% of ? = 192 - 120 = 72.",
+    "1% = 6, so ? = 600."
+   ],
+   "clerk-01-simplification-b-pyq#53": [
+    "50% of 650 = 325. 60% of 325 = 195.",
+    "108 ÷ 9 = 12. So 195 - 12 = 183.",
+    "3 x ? = 183, so ? = 61."
+   ],
+   "clerk-01-simplification-a-graded#3": [
+    "√1764 = 42. √1089 = 33.",
+    "42 + 33 - 15 = 60."
+   ],
+   "clerk-01-simplification-a-graded#5": [
+    "14 squared = 196. 16 squared = 256.",
+    "196 + 256 - 152 = 300."
+   ],
+   "clerk-01-simplification-b-pyq#122": [
+    "√961 = 31. √676 = 26. √64 = 8.",
+    "31 + 26 - 8 = 49."
+   ],
+   "clerk-01-simplification-b-pyq#39": [
+    "Replace: √784 = 28, cube root of 343 = 7, √625 = 25, cube root of 1728 = 12.",
+    "28 ÷ 7 x 25 = 4 x 25 = 100.",
+    "100 - 12 = 88."
+   ],
+   "clerk-01-simplification-b-pyq#68": [
+    "35 squared = 1225. 41 squared = 1681. Together 2906.",
+    "√9409 = 97. So ? squared = 2906 - 97 = 2809.",
+    "2809 = 53 squared, so ? = 53."
+   ],
+   "clerk-01-simplification-a-graded#8": [
+    "∛1728 = 12. √196 = 14.",
+    "12 x 14 = 168."
+   ],
+   "clerk-01-simplification-b-pyq#151": [
+    "A power of 1/3 is a cube root: 9, 17 and 20.",
+    "9 - 17 + 20 = 12."
+   ],
+   "clerk-01-simplification-b-pyq#14": [
+    "√4900 = 70. ∛1728 = 12.",
+    "70 - 12 = 58, and half of 58 is 29."
+   ],
+   "clerk-01-simplification-b-pyq#110": [
+    "Innermost: √196 = 14.",
+    "130 + 14 = 144, and √144 = 12.",
+    "157 + 12 = 169, and √169 = 13."
+   ],
+   "clerk-01-simplification-a-graded#29": [
+    "√6561 = 81, and √81 = 9.",
+    "√729 = 27, and ∛27 = 3.",
+    "9 x 3 = 27."
+   ],
+   "clerk-01-simplification-a-graded#20": [
+    "47 squared - 33 squared = (47 + 33) x (47 - 33) = 80 x 14 = 1,120.",
+    "1,120 ÷ ? = 28, so ? = 40."
+   ],
+   "clerk-01-simplification-b-pyq#12": [
+    "140 squared - 60 squared = 200 x 80 = 16,000. Then 16,000 - 816 = 15,184.",
+    "96 squared = 9,216.",
+    "? = 15,184 - 9,216 = 5,968."
+   ],
+   "clerk-01-simplification-b-pyq#113": [
+    "17 squared = 289, 28 squared = 784, 33 squared = 1,089. So 289 + 784 - 1,089 = -16.",
+    "21 squared = 441. So ? - 441 = -16.",
+    "? = 425."
+   ],
+   "clerk-01-simplification-b-pyq#64": [
+    "24 squared = 576. Left side: 2500 + 576 - 51 = 3,025.",
+    "? squared - 111 = 3,025, so ? squared = 3,136.",
+    "3,136 = 56 squared, so ? = 56."
+   ],
+   "clerk-01-simplification-b-pyq#90": [
+    "Right side: 16 squared = 256, and 1107 ÷ 3 = 369. Together 625.",
+    "? squared - 289 + 238 = 625, so ? squared = 625 + 289 - 238 = 676.",
+    "676 = 26 squared, so ? = 26."
+   ],
+   "clerk-01-simplification-a-graded#4": [
+    "Cancel against the number: 1050 ÷ 7 = 150, and 150 ÷ 5 = 30.",
+    "What is left on top: 3 x 2 = 6.",
+    "6 x 30 = 180."
+   ],
+   "clerk-01-simplification-b-pyq#25": [
+    "Tops 3 x 8 x 27, bottoms 4 x 9 x 32. Cancel to 9/16.",
+    "4608 ÷ 16 = 288.",
+    "9 x 288 = 2592."
+   ],
+   "clerk-01-simplification-b-pyq#186": [
+    "102 ÷ 17 = 6. So the chain is 7 x 6 over 133, times 304.",
+    "133 = 7 x 19, so the 7s cancel: 6 over 19. And 304 ÷ 19 = 16.",
+    "6 x 16 = 96."
+   ],
+   "clerk-01-simplification-b-pyq#37": [
+    "3/5 of 250 = 150. 1/9 of 180 = 20.",
+    "150 + 20 = 170, and 170 = ? + 20.",
+    "? = 150."
+   ],
+   "clerk-01-simplification-b-pyq#84": [
+    "7/9 of 1080: 1080 ÷ 9 = 120, and 7 x 120 = 840.",
+    "23/19 of 684: 684 ÷ 19 = 36, and 23 x 36 = 828.",
+    "840 - 828 = 12, so ? = 12 + 262 = 274."
+   ],
+   "clerk-01-simplification-b-pyq#35": [
+    "Whole parts: 7 + 6 - 5 + 3 = 11.",
+    "Fractions with 6 underneath: 3/6 + 4/6 - 1/6 + 2/6 = 8/6 = 1 1/3.",
+    "11 + 1 1/3 = 12 1/3."
+   ],
+   "clerk-01-simplification-a-graded#26": [
+    "Whole parts: 5 - 2 + 3 - 1 = 5.",
+    "Fractions with 24 underneath: 9/24 - 20/24 + 14/24 - 6/24 = -3/24 = -1/8.",
+    "5 - 1/8 = 4 7/8."
+   ],
+   "clerk-01-simplification-b-pyq#94": [
+    "2 1/3 + 5 2/3 = 8. Then 8 - 3 3/4 = 4 1/4.",
+    "? - 8 3/4 = 4 1/4, so ? = 4 1/4 + 8 3/4.",
+    "? = 13."
+   ],
+   "clerk-01-simplification-a-graded#18": [
+    "Top-heavy: 22/5 x 15/4 ÷ 11/10. Turn the divisor over: 22/5 x 15/4 x 10/11.",
+    "Cancel: 22 and 11 leave 2. 15 and 5 leave 3. So 2 x 3 x 10 over 4 = 60/4.",
+    "= 15."
+   ],
+   "clerk-01-simplification-b-pyq#73": [
+    "3 1/13 = 40/13, and 40/13 x 65 = 40 x 5 = 200. The power of one-half is a square root: 50. Left side 250.",
+    "5 5/12 = 65/12, and 65/12 x 36 = 65 x 3 = 195.",
+    "? = 250 - 195 = 55."
+   ],
+   "clerk-01-simplification-a-graded#6": [
+    "Pair the easy ones: 124.75 - 68.35 = 56.4.",
+    "56.4 + 45.6 = 102."
+   ],
+   "clerk-01-simplification-b-pyq#48": [
+    "4.8 x 5 = 24.",
+    "8 x 0.75 is three quarters of 8 = 6.",
+    "24 + 6 = 30."
+   ],
+   "clerk-01-simplification-b-pyq#19": [
+    "Dividing by 12.5 is x 8 ÷ 100: 3750 x 8 = 30,000, and ÷ 100 = 300.",
+    "300 + 180 = 480."
+   ],
+   "clerk-01-simplification-a-graded#25": [
+    "15.6 ÷ 0.13: move the point two places in both: 1560 ÷ 13 = 120.",
+    "7.2 x 12.5 is x 100 ÷ 8: 720 ÷ 8 = 90.",
+    "120 + 90 = 210."
+   ],
+   "clerk-01-simplification-b-pyq#27": [
+    "36 ÷ 1.44 = 3600 ÷ 144 = 25.",
+    "16 ÷ 2.56 = 1600 ÷ 256 = 6.25.",
+    "25 + 6.25 + 20 = 51.25."
+   ],
+   "clerk-01-simplification-b-pyq#51": [
+    "32 = 2⁵ and 64 = 2⁶, so the right side is 2¹¹.",
+    "4 + ? = 11, so ? = 7."
+   ],
+   "clerk-01-simplification-a-graded#14": [
+    "49² = (7²)² = 7⁴. 343² = (7³)² = 7⁶.",
+    "Powers: 5 + 4 - 6 = 3.",
+    "? = 3."
+   ],
+   "clerk-01-simplification-b-pyq#198": [
+    "8 = 2³, so 8² = 2⁶, and 8² x 8² = 2¹².",
+    "Right side: 2^? x 2⁶ x 2⁴ = 2^(? + 10).",
+    "? + 10 = 12, so ? = 2."
+   ],
+   "clerk-01-simplification-b-pyq#141": [
+    "64⁵ ÷ 32⁵ = (64 ÷ 32)⁵ = 2⁵ = 32.",
+    "32 x 100 = 3,200. Right side: 25 x ?.",
+    "? = 3,200 ÷ 25 = 128."
+   ],
+   "clerk-01-simplification-b-pyq#149": [
+    "0.49 = 0.7², so (0.49)⁹³ = 0.7¹⁸⁶.",
+    "0.343 = 0.7³, so (0.343)⁴⁷ = 0.7¹⁴¹.",
+    "186 - 141 = 45, so ? = 45."
+   ],
+   "clerk-02-approximation-a-graded#1": [
+    "Round: 25 x 16 + 120.",
+    "400 + 120 = 520."
+   ],
+   "clerk-02-approximation-a-graded#3": [
+    "Round: 35% of 800 + 40.",
+    "35% of 800 = 280, and 280 + 40 = 320."
+   ],
+   "clerk-02-approximation-a-graded#4": [
+    "Round under each root: √625 + √1296.",
+    "25 + 36 = 61."
+   ],
+   "clerk-02-approximation-a-graded#13": [
+    "Round: 1728 ÷ 12 + 16 x 6 - 40.",
+    "144 + 96 - 40 = 200."
+   ],
+   "clerk-02-approximation-b-pyq#1": [
+    "Round: 32 squared - 35 squared + 19 squared = 1024 - 1225 + 361 = 160.",
+    "√255 is about √256 = 16. So ? squared = 160 - 16 = 144.",
+    "? = 12 or -12, written ± 12."
+   ],
+   "clerk-01-simplification-b-pyq#10": [
+    "65% of 1700 = 1105. Then 1105 ÷ 13 = 85.",
+    "17 squared = 289.",
+    "85 + 289 = 374."
+   ],
+   "clerk-01-simplification-a-graded#19": [
+    "65% of 840 = 546. 2/7 of 1463 = 418. 18 squared = 324.",
+    "546 + 418 - 324 = 640."
+   ],
+   "clerk-01-simplification-b-pyq#133": [
+    "25% of 480 = 120. 5/8 x 120 = 75. 25 squared = 625.",
+    "120 + 75 + ? = 625.",
+    "? = 430."
+   ],
+   "clerk-01-simplification-b-pyq#96": [
+    "55% of 1400 = 770. 12 cubed = 1728.",
+    "770 + ? squared + 282 = 1728, so ? squared = 676.",
+    "? = 26."
+   ],
+   "clerk-01-simplification-b-pyq#188": [
+    "423 ÷ 9 = 47, and 47 x 13 = 611. 11% of 5000 = 550. One third of 57 = 19.",
+    "The line is: √? - 611 + 550 = 19, so √? = 80.",
+    "? = 80 squared = 6400."
+   ]
+  }
+ }
+}

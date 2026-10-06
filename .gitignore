@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.DS_Store
+__pycache__/
+*_progress.json
+*_notes.json
+*_course.json

@@ -1,0 +1,353 @@
+{
+ "clerk-01-simplification-a-graded": {
+  "section": "Quant",
+  "topic": "1. Simplification",
+  "subtopic": "Graded practice",
+  "title": "Simplification – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-01-simplification-b-pyq": {
+  "section": "Quant",
+  "topic": "1. Simplification",
+  "subtopic": "Previous year papers",
+  "title": "Simplification – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 223,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-02-approximation-a-graded": {
+  "section": "Quant",
+  "topic": "2. Approximation",
+  "subtopic": "Graded practice",
+  "title": "Approximation – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-02-approximation-b-pyq": {
+  "section": "Quant",
+  "topic": "2. Approximation",
+  "subtopic": "Previous year papers",
+  "title": "Approximation – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 4,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-03-number-series-a-graded": {
+  "section": "Quant",
+  "topic": "3. Number Series",
+  "subtopic": "Graded practice",
+  "title": "Number Series – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-03-number-series-b-pyq": {
+  "section": "Quant",
+  "topic": "3. Number Series",
+  "subtopic": "Previous year papers",
+  "title": "Number Series – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 70,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-04-quadratic-equations-a-graded": {
+  "section": "Quant",
+  "topic": "4. Quadratic Equations",
+  "subtopic": "Graded practice",
+  "title": "Quadratic Equations – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-04-quadratic-equations-b-pyq": {
+  "section": "Quant",
+  "topic": "4. Quadratic Equations",
+  "subtopic": "Previous year papers",
+  "title": "Quadratic Equations – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 20,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-05-data-interpretation-a-graded": {
+  "section": "Quant",
+  "topic": "5. Data Interpretation",
+  "subtopic": "Graded practice",
+  "title": "Data Interpretation – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-05-data-interpretation-b-pyq": {
+  "section": "Quant",
+  "topic": "5. Data Interpretation",
+  "subtopic": "Previous year papers",
+  "title": "Data Interpretation – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 26,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-06-percentage-a-graded": {
+  "section": "Quant",
+  "topic": "6. Percentage",
+  "subtopic": "Graded practice",
+  "title": "Percentage – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-06-percentage-b-pyq": {
+  "section": "Quant",
+  "topic": "6. Percentage",
+  "subtopic": "Previous year papers",
+  "title": "Percentage – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 18,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-07-ratio-and-proportion-a-graded": {
+  "section": "Quant",
+  "topic": "7. Ratio and Proportion",
+  "subtopic": "Graded practice",
+  "title": "Ratio and Proportion – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-07-ratio-and-proportion-b-pyq": {
+  "section": "Quant",
+  "topic": "7. Ratio and Proportion",
+  "subtopic": "Previous year papers",
+  "title": "Ratio and Proportion – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 11,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-08-average-a-graded": {
+  "section": "Quant",
+  "topic": "8. Average",
+  "subtopic": "Graded practice",
+  "title": "Average – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-08-average-b-pyq": {
+  "section": "Quant",
+  "topic": "8. Average",
+  "subtopic": "Previous year papers",
+  "title": "Average – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 15,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-09-ages-a-graded": {
+  "section": "Quant",
+  "topic": "9. Ages",
+  "subtopic": "Graded practice",
+  "title": "Ages – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-09-ages-b-pyq": {
+  "section": "Quant",
+  "topic": "9. Ages",
+  "subtopic": "Previous year papers",
+  "title": "Ages – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 21,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-10-profit-and-loss-a-graded": {
+  "section": "Quant",
+  "topic": "10. Profit and Loss",
+  "subtopic": "Graded practice",
+  "title": "Profit and Loss – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-10-profit-and-loss-b-pyq": {
+  "section": "Quant",
+  "topic": "10. Profit and Loss",
+  "subtopic": "Previous year papers",
+  "title": "Profit and Loss – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 19,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-11-si-ci-a-graded": {
+  "section": "Quant",
+  "topic": "11. SI & CI",
+  "subtopic": "Graded practice",
+  "title": "SI & CI – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-11-si-ci-b-pyq": {
+  "section": "Quant",
+  "topic": "11. SI & CI",
+  "subtopic": "Previous year papers",
+  "title": "SI & CI – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 20,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-12-partnership-a-graded": {
+  "section": "Quant",
+  "topic": "12. Partnership",
+  "subtopic": "Graded practice",
+  "title": "Partnership – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-12-partnership-b-pyq": {
+  "section": "Quant",
+  "topic": "12. Partnership",
+  "subtopic": "Previous year papers",
+  "title": "Partnership – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 16,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-13-mixture-and-alligation-a-graded": {
+  "section": "Quant",
+  "topic": "13. Mixture and Alligation",
+  "subtopic": "Graded practice",
+  "title": "Mixture and Alligation – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-13-mixture-and-alligation-b-pyq": {
+  "section": "Quant",
+  "topic": "13. Mixture and Alligation",
+  "subtopic": "Previous year papers",
+  "title": "Mixture and Alligation – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 18,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-14-time-and-work-a-graded": {
+  "section": "Quant",
+  "topic": "14. Time and Work",
+  "subtopic": "Graded practice",
+  "title": "Time and Work – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-14-time-and-work-b-pyq": {
+  "section": "Quant",
+  "topic": "14. Time and Work",
+  "subtopic": "Previous year papers",
+  "title": "Time and Work – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 16,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-15-pipes-and-cisterns-a-graded": {
+  "section": "Quant",
+  "topic": "15. Pipes and Cisterns",
+  "subtopic": "Graded practice",
+  "title": "Pipes and Cisterns – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-15-pipes-and-cisterns-b-pyq": {
+  "section": "Quant",
+  "topic": "15. Pipes and Cisterns",
+  "subtopic": "Previous year papers",
+  "title": "Pipes and Cisterns – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 9,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-16-time-speed-and-distance-a-graded": {
+  "section": "Quant",
+  "topic": "16. Time, Speed and Distance",
+  "subtopic": "Graded practice",
+  "title": "Time, Speed and Distance – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-16-time-speed-and-distance-b-pyq": {
+  "section": "Quant",
+  "topic": "16. Time, Speed and Distance",
+  "subtopic": "Previous year papers",
+  "title": "Time, Speed and Distance – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 7,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-17-trains-a-graded": {
+  "section": "Quant",
+  "topic": "17. Trains",
+  "subtopic": "Graded practice",
+  "title": "Trains – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-17-trains-b-pyq": {
+  "section": "Quant",
+  "topic": "17. Trains",
+  "subtopic": "Previous year papers",
+  "title": "Trains – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 13,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-18-boats-and-streams-a-graded": {
+  "section": "Quant",
+  "topic": "18. Boats and Streams",
+  "subtopic": "Graded practice",
+  "title": "Boats and Streams – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-18-boats-and-streams-b-pyq": {
+  "section": "Quant",
+  "topic": "18. Boats and Streams",
+  "subtopic": "Previous year papers",
+  "title": "Boats and Streams – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 22,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-19-mensuration-a-graded": {
+  "section": "Quant",
+  "topic": "19. Mensuration",
+  "subtopic": "Graded practice",
+  "title": "Mensuration – Graded practice (basic → tricky)",
+  "questions": 30,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-19-mensuration-b-pyq": {
+  "section": "Quant",
+  "topic": "19. Mensuration",
+  "subtopic": "Previous year papers",
+  "title": "Mensuration – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 20,
+  "pages": 0,
+  "url": ""
+ },
+ "clerk-20-miscellaneous-b-pyq": {
+  "section": "Quant",
+  "topic": "20. Miscellaneous",
+  "subtopic": "Previous year papers",
+  "title": "Miscellaneous – Previous year papers (IBPS Clerk Prelims)",
+  "questions": 12,
+  "pages": 0,
+  "url": ""
+ }
+}

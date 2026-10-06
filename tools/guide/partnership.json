@@ -1,0 +1,798 @@
+{
+ "module": "partnership",
+ "intro": [
+  "When people run a business together, the profit is shared by a simple rule of fairness: **more money, and money left in for longer, earns more.**",
+  "These nine short lessons build that one idea step by step. The first two share by money alone, the third brings in time, and the rest are the ways the exam turns the same idea around. Go in order the first time."
+ ],
+ "needs": [
+  "ratio",
+  "join-ratios",
+  "percent-words"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the month table and every question type on one page, and the Course in each bank has many more.",
+  "If one thing stays with you, let it be this: write each partner's **capital x months**, make it a ratio, and the rest is the ratio work you already know."
+ ],
+ "lessons": [
+  {
+   "id": "same-time",
+   "code": "T1",
+   "title": "Sharing a profit when everyone invests for the same time",
+   "plain": "The starting point: partners put in money for the same period, and the profit is shared in the ratio of their money.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "A **partnership** is a business that two or more people put money into. The money each one puts in is called their **capital** or **investment**. At the end, the profit is shared out fairly.",
+    "What is fair? If everyone's money stayed in the business for the same length of time, the answer is simple: **the profit is shared in the same ratio as the money.** Someone who put in twice as much gets twice as much.",
+    "So this first kind is a ratio question, exactly like the ones in the Basics.",
+    "1. Write the capitals as a ratio and make it as small as you can. Rs 15,000 and Rs 25,000 is 15 : 25, which is 3 : 5. Always strike off the zeros first.",
+    "2. The question then gives one real number about the profit. Match it to parts, the same three ways as always: the **total** profit matches the parts added; a **difference** between two shares matches the parts subtracted; **one person's share** matches that person's parts.",
+    "3. Find one part, and read off whatever is asked."
+   ],
+   "example": {
+    "q": "A and B invest Rs 12,000 and Rs 18,000 in a business for one year. The profit is Rs 10,000. Find A's share.",
+    "steps": [
+     "Capitals: 12,000 : 18,000. Strike off the zeros and divide by 6: 2 : 3.",
+     "Same time for both, so the profit is shared 2 : 3.",
+     "The real number is the total profit, so add the parts: 2 + 3 = 5 parts = 10,000.",
+     "One part = 2,000. A has 2 parts: Rs 4,000."
+    ],
+    "answer": "A's share is Rs 4,000."
+   },
+   "check": {
+    "q": "P and Q invest in the ratio 3 : 5 for the same period. Q's share of the profit is Rs 4,500. What is the total profit?",
+    "options": {
+     "a": "Rs 2,700",
+     "b": "Rs 7,200",
+     "c": "Rs 7,500",
+     "d": "Rs 12,000"
+    },
+    "answer": "B",
+    "why": "Q has 5 parts and they are worth 4,500, so one part is 900. The total is 3 + 5 = 8 parts = 7,200. (2,700 is P's share.)"
+   },
+   "more": [
+    {
+     "tag": "Three partners, and one share is known",
+     "q": "A, B and C invest Rs 2,000, Rs 3,000 and Rs 5,000 for a year. B's share of the profit is Rs 1,200. What is C's share?",
+     "options": {
+      "a": "Rs 800",
+      "b": "Rs 1,800",
+      "c": "Rs 2,000",
+      "d": "Rs 4,000"
+     },
+     "answer": "C",
+     "why": "The ratio is 2 : 3 : 5. B's 3 parts are 1,200, so one part is 400. C has 5 parts: 2,000."
+    }
+   ],
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-a-graded#1",
+     "clerk-12-partnership-b-pyq#3",
+     "clerk-12-partnership-a-graded#4",
+     "clerk-12-partnership-a-graded#15",
+     "clerk-12-partnership-a-graded#2"
+    ],
+    "tags": [
+     "The total profit is given: find one share.",
+     "One share is given: find the other.",
+     "One share is given: find the total (and the answer is not among the numbers).",
+     "The difference between the shares is given.",
+     "Three partners, and the question asks for a difference."
+    ]
+   }
+  },
+  {
+   "id": "capital-disguises",
+   "code": "T1",
+   "title": "When the capitals are described, not given",
+   "plain": "New: same time for everyone still, but the money is described with fractions, \"twice\", percents or linked ratios.",
+   "needs": [
+    "join-ratios",
+    "percent-words"
+   ],
+   "teach": [
+    "The method has not changed: same time, so the profit ratio is the capital ratio. What changes is that the paper does not hand you the capitals as plain numbers. Your first job is to **turn the description into a clean ratio**. There are five common descriptions.",
+    "**Fractions.** \"They invest in the ratio 1/2 : 1/3 : 1/4.\" Multiply every fraction by a number all the bottoms go into. Here that is 12: the ratio becomes 6 : 4 : 3.",
+    "**\"Twice\" and \"three times\".** \"A's capital is twice B's, and B's is three times C's.\" Start from the smallest: C is 1, so B is 3 and A is 6.",
+    "**Two ratios sharing a name.** \"A : B = 5 : 6 and B : C = 3 : 4.\" Make B the same in both, as in the Basics: 5 : 6 : 8.",
+    "**Percent words.** \"A invests 50% more than B, and B invests 20% less than C.\" Start from the one the others are described against. C is 100, B is 80, A is 120. The ratio A : B : C is 120 : 80 : 100 = 6 : 4 : 5.",
+    "**\"Rs 5,000 more than\".** This one is not a ratio yet. Write the smallest as a base, the others as base plus extra, and use the total capital to find the base. Then you have real capitals and can make the ratio.",
+    "Once the ratio is clean, finish exactly as in the last lesson."
+   ],
+   "example": {
+    "q": "A invests 25% more than B, and C invests half of what B invests. The profit at the end of the year is Rs 11,000. Find A's share.",
+    "steps": [
+     "Both are described against B, so call B 100.",
+     "A is 25% more: 125. C is half of B: 50.",
+     "Ratio A : B : C = 125 : 100 : 50. Divide by 25: 5 : 4 : 2.",
+     "Parts added: 11 parts = 11,000, so one part = 1,000.",
+     "A has 5 parts: Rs 5,000."
+    ],
+    "answer": "A's share is Rs 5,000."
+   },
+   "check": {
+    "q": "Two partners invest in the ratio 1/3 : 1/4. What is this as a ratio of whole numbers?",
+    "options": {
+     "a": "3 : 4",
+     "b": "4 : 3",
+     "c": "1 : 1",
+     "d": "7 : 12"
+    },
+    "answer": "B",
+    "why": "Multiply both by 12: 12/3 = 4 and 12/4 = 3. The ratio is 4 : 3. A third is bigger than a quarter, so the first partner has the bigger number."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-a-graded#8",
+     "clerk-12-partnership-a-graded#6",
+     "clerk-12-partnership-a-graded#22",
+     "clerk-12-partnership-a-graded#24",
+     "clerk-12-partnership-a-graded#14"
+    ],
+    "tags": [
+     "\"Twice\" and \"three times\".",
+     "Fractions.",
+     "Two ratios that share a name.",
+     "Percent words in a chain.",
+     "\"Rs 5,000 more than\", with the total capital."
+    ]
+   }
+  },
+  {
+   "id": "different-months",
+   "code": "T2",
+   "title": "When the money stays for different lengths of time",
+   "plain": "New: someone joins late or leaves early. Now time matters as much as money.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Suppose A puts in Rs 20,000 for the whole year, and B puts in the same Rs 20,000 but only for the last six months. Sharing the profit equally would not be fair: A's money worked twice as long.",
+    "So a partner's claim on the profit depends on two things: **how much money**, and **for how long**. Multiply them together. We will call the result the partner's **weight**.",
+    "**weight = capital x months**",
+    "The profit is shared in the ratio of the weights. That is the only new idea in this lesson, and it is the heart of the whole topic.",
+    "The care needed is in counting the months. Read the phrase slowly:",
+    "| The question says | Months to use, in a 12-month year |",
+    "| starts the business | 12 |",
+    "| joins after 4 months | 8 |",
+    "| leaves after 4 months | 4 |",
+    "| leaves 4 months before the end | 8 |",
+    "\"After 4 months B joined\" means B missed the first 4 months, so B's money worked for 8. \"After 4 months B left\" means B's money worked for only 4. The same three words lead to opposite answers.",
+    "Also check how long the business ran. It is usually a year, but if the question says \"at the end of 2 years\", the full period is 24 months.",
+    "A tip that saves a lot of arithmetic: you only need the weights as a **ratio**, so strike off zeros and common factors before you multiply."
+   ],
+   "example": {
+    "q": "A starts a business with Rs 20,000. After 3 months B joins with Rs 40,000. The profit at the end of the year is Rs 25,000. Find B's share.",
+    "steps": [
+     "Months: A is there all year, 12 months. B joins after 3 months, so 9 months.",
+     "Weights, in thousands: A = 20 x 12 = 240. B = 40 x 9 = 360.",
+     "Ratio 240 : 360 = 2 : 3.",
+     "Parts added: 5 parts = 25,000, so one part = 5,000.",
+     "B has 3 parts: Rs 15,000."
+    ],
+    "answer": "B's share is Rs 15,000."
+   },
+   "check": {
+    "q": "A invests Rs 10,000 for 12 months and B invests Rs 15,000 for 8 months. In what ratio is the profit shared?",
+    "options": {
+     "a": "2 : 3",
+     "b": "3 : 2",
+     "c": "1 : 1",
+     "d": "3 : 4"
+    },
+    "answer": "C",
+    "why": "Weights: 10 x 12 = 120 and 15 x 8 = 120. They are equal, so the profit is shared 1 : 1. B put in more money, but for a shorter time. (2 : 3 uses the capitals alone and forgets the months.)"
+   },
+   "more": [
+    {
+     "tag": "\"Before the end\"",
+     "q": "A and B start a business with Rs 30,000 each. B leaves 4 months before the end of the year. In what ratio is the profit shared between A and B?",
+     "options": {
+      "a": "1 : 1",
+      "b": "3 : 1",
+      "c": "3 : 2",
+      "d": "2 : 3"
+     },
+     "answer": "C",
+     "why": "\"4 months before the end\" means B stayed for 12 - 4 = 8 months. Weights: 30 x 12 = 360 and 30 x 8 = 240, which is 3 : 2. (3 : 1 would be right if B had stayed only 4 months.)"
+    }
+   ],
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-a-graded#3",
+     "clerk-12-partnership-a-graded#5",
+     "clerk-12-partnership-b-pyq#2",
+     "clerk-12-partnership-a-graded#29",
+     "clerk-12-partnership-a-graded#23"
+    ],
+    "tags": [
+     "Both invest for part of the year.",
+     "One joins late.",
+     "One leaves early.",
+     "The business runs for two years.",
+     "Three partners, two of them leaving at different times."
+    ]
+   }
+  },
+  {
+   "id": "weights-as-ratios",
+   "code": "T2",
+   "title": "Weights without real rupees",
+   "plain": "New: the capitals and the months are themselves given as ratios, multiples or letters.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Last lesson you multiplied real capitals by real months. The exam often removes the real numbers and gives ratios instead. Nothing changes: **weight is still capital x time**, and you can multiply the ratio numbers just as you multiplied rupees.",
+    "**Ratios of both.** \"They invest in the ratio 2 : 3, for periods in the ratio 9 : 4.\" Multiply partner by partner: 2 x 9 = 18 and 3 x 4 = 12. The profit ratio is 18 : 12 = 3 : 2.",
+    "**Multiples of an unknown sum.** \"A invests a sum at the start. B invests double that sum after 6 months.\" Call A's sum 1. Then B's is 2. Weights: 1 x 12 = 12 and 2 x 6 = 12. You never need to know the sum.",
+    "**A letter.** \"They invest Rs 1.2p and Rs p.\" The p will cancel, so treat the capitals as 1.2 and 1. If the first invests for 8 months and the second for 12: 1.2 x 8 = 9.6 and 1 x 12 = 12, which is 4 : 5.",
+    "After that, match the real number in the question to the parts, as always. Remember that the real number may be a difference between two shares."
+   ],
+   "example": {
+    "q": "A and B invest in the ratio 2 : 3. A's money is used for 9 months and B's for 4 months. The profit is Rs 6,000. Find A's share.",
+    "steps": [
+     "Weight = capital x time, partner by partner.",
+     "A: 2 x 9 = 18. B: 3 x 4 = 12.",
+     "Profit ratio 18 : 12 = 3 : 2.",
+     "Parts added: 5 parts = 6,000, so one part = 1,200.",
+     "A has 3 parts: Rs 3,600."
+    ],
+    "answer": "A's share is Rs 3,600."
+   },
+   "check": {
+    "q": "Two partners invest in the ratio 3 : 4, for periods in the ratio 2 : 1. In what ratio do they share the profit?",
+    "options": {
+     "a": "3 : 2",
+     "b": "3 : 4",
+     "c": "2 : 1",
+     "d": "6 : 1"
+    },
+    "answer": "A",
+    "why": "Multiply partner by partner: 3 x 2 = 6 and 4 x 1 = 4. 6 : 4 = 3 : 2."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-a-graded#26",
+     "clerk-12-partnership-a-graded#17",
+     "clerk-12-partnership-b-pyq#7"
+    ],
+    "tags": [
+     "Three partners: a ratio of capitals and a ratio of times.",
+     "Multiples of one unknown sum, joining at different times.",
+     "A letter in the capitals, and a difference between the shares."
+    ]
+   }
+  },
+  {
+   "id": "working-backwards",
+   "code": "T3",
+   "title": "Working backwards from the profit",
+   "plain": "New: the profit ratio is known. A capital, or a number of months, is what is missing.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "So far you knew the money and the months and found the profit. The Clerk paper's favourite form turns this round: it **tells you how the profit was shared** and asks for a missing capital or a missing time.",
+    "The rule is the same one, read from the other side. Since weight = capital x months, and the profit ratio equals the weight ratio:",
+    "- missing **capital** = that partner's weight / months;",
+    "- missing **months** = that partner's weight / capital.",
+    "The steady way to do it:",
+    "1. Work out the weight of the partner you know everything about.",
+    "2. Use the profit ratio to find the other partner's weight. If the profit is shared 3 : 2 and the first weight is 360, the second weight is 240.",
+    "3. Divide that weight by whatever you know about the second partner, months or capital, to get the missing one.",
+    "When the question has **no real numbers**, only ratios, do the division partner by partner. \"Capitals are in the ratio 2 : 3 and profits in the ratio 4 : 3. Find the ratio of their times.\" Times = profit / capital: 4/2 and 3/3, which is 2 : 1.",
+    "One warning. In the last lessons you multiplied ratios. Going backwards you **divide** them. Multiplying here is the most common mistake in the topic."
+   ],
+   "example": {
+    "q": "A starts a business with Rs 30,000. After 4 months B joins with Rs X. At the end of the year the profit is shared between A and B in the ratio 3 : 2. Find X.",
+    "steps": [
+     "A's weight, in thousands: 30 x 12 = 360.",
+     "The profit ratio is 3 : 2, so the weights are 3 : 2. A's 360 is 3 parts, so one part is 120 and B's weight is 240.",
+     "B joined after 4 months, so B's money worked for 8 months.",
+     "B's capital = weight / months = 240 / 8 = 30.",
+     "X = Rs 30,000. Check: 30 x 8 = 240, and 360 : 240 = 3 : 2."
+    ],
+    "answer": "X is Rs 30,000."
+   },
+   "check": {
+    "q": "The capitals of A and B are in the ratio 2 : 3 and their profits are in the ratio 4 : 3. What is the ratio of the periods for which they invested?",
+    "options": {
+     "a": "2 : 1",
+     "b": "1 : 2",
+     "c": "8 : 9",
+     "d": "3 : 2"
+    },
+    "answer": "A",
+    "why": "Time = profit / capital, partner by partner: 4 / 2 = 2 and 3 / 3 = 1. The ratio is 2 : 1. (8 : 9 comes from multiplying instead of dividing.)"
+   },
+   "shortcut": {
+    "title": "When the profits are equal",
+    "text": [
+     "If two partners end up with **equal** profit, their weights are equal. So the one whose money stayed longer must have put in less, and by exactly the opposite ratio:",
+     "**capitals are in the opposite ratio of the months** (and months in the opposite ratio of the capitals).",
+     "A's money is used for 8 months and B's for 10, with equal profit: A : B capitals = 10 : 8 = 5 : 4.",
+     "A invests Rs 40,000 for 12 months and B invests Rs 60,000, with equal profit: the capitals are 2 : 3, so the months are 3 : 2. B's money worked for 8 months, which means B joined after 4."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-a-graded#9",
+     "clerk-12-partnership-a-graded#10",
+     "clerk-12-partnership-a-graded#7",
+     "clerk-12-partnership-a-graded#16",
+     "clerk-12-partnership-b-pyq#6"
+    ],
+    "tags": [
+     "Find a missing capital.",
+     "Find when the second partner joined.",
+     "Only ratios: find the ratio of times.",
+     "Only ratios, with months given: find the ratio of capitals.",
+     "A real paper: one leaves early, find the ratio of capitals."
+    ]
+   }
+  },
+  {
+   "id": "backwards-exam",
+   "code": "T3",
+   "title": "Working backwards, in exam wording",
+   "plain": "New: the same method. The profit ratio is hidden behind \"his share out of the total\", a percent, or a letter.",
+   "needs": [
+    "ratio",
+    "percent-of"
+   ],
+   "teach": [
+    "Recent papers rarely state the profit ratio plainly. You have to dig it out first. After that, everything is last lesson.",
+    "**\"B's share is Rs 21,000 out of a total profit of Rs 49,000.\"** This is not the ratio 21 : 49. That would compare B with the whole. Subtract to get A's share first: 49,000 - 21,000 = 28,000. Now the ratio A : B is 28 : 21, which is 4 : 3.",
+    "**The missing capital is asked as a percent.** \"B joined with x% of A's capital.\" Find B's capital in rupees as usual, and only at the end turn it into a percent of A's.",
+    "**The total capital is given, not each one.** \"P and Q invested a total of Rs 6,400 for 12 months and 9 months.\" Find the ratio of the capitals by dividing profit by months, partner by partner, and then split the total in that ratio.",
+    "**Letters, such as x and (x + 4,000).** Write each weight with the letter, set the weight ratio equal to the profit ratio, and cross-multiply. It is one line.",
+    "In every case the order of work is: **profit ratio first, then weights, then the missing piece.**"
+   ],
+   "example": {
+    "q": "A started a business with Rs 12,000. After 4 months B joined with Rs X. At the end of the year B's share is Rs 8,000 out of a total profit of Rs 20,000. Find X.",
+    "steps": [
+     "Dig out the profit ratio. A's share = 20,000 - 8,000 = 12,000. So A : B = 12 : 8 = 3 : 2.",
+     "A's weight, in thousands: 12 x 12 = 144. That is 3 parts, so one part is 48 and B's weight is 96.",
+     "B's money worked for 12 - 4 = 8 months.",
+     "B's capital = 96 / 8 = 12.",
+     "X = Rs 12,000."
+    ],
+    "answer": "X is Rs 12,000."
+   },
+   "check": {
+    "q": "B's share is Rs 6,000 out of a total profit of Rs 15,000 in a business with A. What is the ratio of A's share to B's share?",
+    "options": {
+     "a": "5 : 2",
+     "b": "3 : 2",
+     "c": "2 : 3",
+     "d": "2 : 5"
+    },
+    "answer": "B",
+    "why": "A's share = 15,000 - 6,000 = 9,000. A : B = 9 : 6 = 3 : 2. (5 : 2 compares the total with B, which is not what a profit ratio means.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-b-pyq#8",
+     "clerk-12-partnership-b-pyq#16",
+     "clerk-12-partnership-b-pyq#12",
+     "clerk-12-partnership-b-pyq#14",
+     "clerk-12-partnership-b-pyq#13"
+    ],
+    "tags": [
+     "A share \"out of\" the total.",
+     "The same, and the answer is wanted as a percent.",
+     "Only the total capital is known.",
+     "Three partners, ratios only.",
+     "Letters: x and (x + 4,000)."
+    ]
+   }
+  },
+  {
+   "id": "capital-changes",
+   "code": "T4",
+   "title": "When someone adds or withdraws money midway",
+   "plain": "New: a partner's capital changes during the year. Cut their time into stretches and add the pieces.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "\"A starts with Rs 10,000. After 4 months he adds Rs 5,000.\" Now A's capital is not one number for the whole year, so capital x months cannot be done in one step.",
+    "The fix is natural: **cut that partner's time into stretches, one for each amount of money, and add the weights of the stretches.**",
+    "- First 4 months at 10,000: 10 x 4 = 40.",
+    "- Remaining 8 months at 15,000: 15 x 8 = 120.",
+    "- A's weight for the year: 40 + 120 = 160.",
+    "A partner whose money never changed still has a single stretch, as before. Then share the profit in the ratio of the total weights.",
+    "The words to read carefully:",
+    "| The question says | What it means |",
+    "| adds Rs 5,000 | the capital goes up by 5,000 for the rest of the time |",
+    "| doubles his investment | twice the capital for the rest of the time |",
+    "| withdraws Rs 600 | the capital goes down by 600 |",
+    "| withdraws half, or one-fourth | half, or three-fourths, of it remains |",
+    "| withdraws 40% | 60% of it remains |",
+    "If only ratios are given, such as capitals of 4 : 5, use those numbers as the capitals. One-fourth withdrawn from 4 leaves 3; one-fifth withdrawn from 5 leaves 4.",
+    "A neat way to keep your working tidy is a small table: one row per partner, one column per stretch."
+   ],
+   "example": {
+    "q": "A and B start a business with Rs 10,000 each. After 4 months A adds Rs 5,000. The profit at the end of the year is Rs 14,000. Find A's share.",
+    "steps": [
+     "A has two stretches. First 4 months at 10 (thousand): 10 x 4 = 40.",
+     "Next 8 months at 15: 15 x 8 = 120. A's weight = 160.",
+     "B has one stretch: 10 x 12 = 120.",
+     "Ratio 160 : 120 = 4 : 3.",
+     "Parts added: 7 parts = 14,000, so one part = 2,000. A gets Rs 8,000."
+    ],
+    "answer": "A's share is Rs 8,000."
+   },
+   "check": {
+    "q": "A invests Rs 6,000 and doubles his investment after 6 months. What is his weight for the year, in thousand-months?",
+    "options": {
+     "a": "72",
+     "b": "108",
+     "c": "144",
+     "d": "216"
+    },
+    "answer": "B",
+    "why": "Two stretches: 6 x 6 = 36, then 12 x 6 = 72. Together 108. (144 would be right only if the money had been doubled from the first day.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-a-graded#11",
+     "clerk-12-partnership-b-pyq#11",
+     "clerk-12-partnership-b-pyq#15",
+     "clerk-12-partnership-a-graded#30",
+     "clerk-12-partnership-b-pyq#4"
+    ],
+    "tags": [
+     "One partner adds money.",
+     "One withdraws at the moment the other joins.",
+     "Doubling, with letters instead of rupees.",
+     "Both withdraw a fraction; only ratios are given.",
+     "Withdraws half, and half again, over two years."
+    ]
+   }
+  },
+  {
+   "id": "changes-unknown",
+   "code": "T5",
+   "title": "A changed capital with something to find",
+   "plain": "New: lessons 5 and 7 together. The capital changes midway, and a letter or a month is missing.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "This is the hardest form in the topic, and it has appeared in the Clerk paper once. It joins two things you can already do: stretches of time, and working backwards.",
+    "There is no clever trick here, and it is better to know that than to hunt for one. The honest method is short:",
+    "1. Build each partner's weight with stretches, **keeping the unknown as a letter**.",
+    "2. Dig out the profit ratio (subtract if it is given as a share out of a total).",
+    "3. Say the two things are equal: weight ratio = profit ratio. Cross-multiply and solve the one line.",
+    "When the unknown is a **month** (\"after how many months should A add money?\"), call it m. The first stretch lasts m months and the second lasts 12 - m.",
+    "Keep the numbers small by working in thousands and by cancelling before you multiply."
+   ],
+   "example": {
+    "q": "A and B invest Rs X and Rs (X + 2,000). After 6 months A withdraws half of his money. At the end of the year the profit is shared between A and B in the ratio 1 : 2. Find X.",
+    "steps": [
+     "A's stretches: X for 6 months is 6X. Half of X for the next 6 months is 3X. A's weight = 9X.",
+     "B's weight: (X + 2,000) for 12 months = 12X + 24,000.",
+     "Weight ratio = profit ratio: 9X : (12X + 24,000) = 1 : 2.",
+     "Cross-multiply: 2 x 9X = 12X + 24,000, so 18X = 12X + 24,000.",
+     "6X = 24,000, so X = 4,000.",
+     "Check: A's weight 36,000; B's 72,000. That is 1 : 2."
+    ],
+    "answer": "X is Rs 4,000."
+   },
+   "check": {
+    "q": "A invests Rs 8,000 and adds another Rs 8,000 after m months. B invests Rs 12,000 for the whole year. If they share the profit equally, what is m?",
+    "options": {
+     "a": "3",
+     "b": "4",
+     "c": "6",
+     "d": "8"
+    },
+    "answer": "C",
+    "why": "In thousands: A's weight = 8 x m + 16 x (12 - m) = 192 - 8m. B's weight = 12 x 12 = 144. Equal profit means equal weights: 192 - 8m = 144, so m = 6."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-b-pyq#9",
+     "clerk-12-partnership-a-graded#28"
+    ],
+    "tags": [
+     "A letter in the capitals, a withdrawal, and a share out of the total.",
+     "The missing piece is the month in which money was added."
+    ]
+   }
+  },
+  {
+   "id": "off-the-top",
+   "code": "T6",
+   "title": "When something is taken out before sharing",
+   "plain": "New: a salary for the working partner, a gift to charity, or a part shared equally comes off the profit first.",
+   "needs": [
+    "percent-of",
+    "ratio"
+   ],
+   "teach": [
+    "Sometimes the whole profit is not shared by weights. A slice is dealt with first, and only the rest is shared in the usual ratio. This kind has not appeared in the Clerk papers we checked, but it is common in practice sets and uses nothing new.",
+    "**A working partner's salary.** \"A, the working partner, gets 10% of the profit for managing the business. The rest is shared in the ratio of their capitals.\" Take the 10% out and give it to A. Share the other 90% in the capital ratio. A's total is his salary plus his share.",
+    "**Charity.** \"5% of the profit goes to charity.\" That 5% leaves the business. The remaining 95% is shared.",
+    "**A part shared equally.** \"40% of the profit is shared equally and the rest in the ratio of capitals.\" Do the two parts separately. Notice that the equal part gives both partners the same, so it creates no difference between them. Any difference in what they receive comes from the other part alone.",
+    "A good habit for these: **write each person's total as a percent of the whole profit.** If A gets 10% as salary and then three-fifths of the remaining 90%, that is 10 + 54 = 64% of the profit. Then one real number gives you everything.",
+    "The same weight idea also shares a **rent**. If three people graze cows on one field, each one's weight is cows x months, and the rent is split in that ratio, just like a profit."
+   ],
+   "example": {
+    "q": "A and B invest in the ratio 3 : 1. A is the working partner and gets 20% of the profit as salary. The rest is shared in the ratio of their capitals. If the profit is Rs 20,000, how much does A receive in all?",
+    "steps": [
+     "Salary first: 20% of 20,000 = 4,000, to A.",
+     "Left to share: 16,000, in the ratio 3 : 1.",
+     "4 parts = 16,000, so one part = 4,000. A's share is 3 parts = 12,000.",
+     "A in all: 4,000 + 12,000 = Rs 16,000.",
+     "As a percent of the profit: 20 + three-quarters of 80 = 80%, and 80% of 20,000 is 16,000."
+    ],
+    "answer": "A receives Rs 16,000."
+   },
+   "check": {
+    "q": "10% of the profit of a business goes to charity. The rest is shared between A and B in the ratio 2 : 1. If B gets Rs 1,500, what is the total profit?",
+    "options": {
+     "a": "Rs 4,050",
+     "b": "Rs 4,500",
+     "c": "Rs 5,000",
+     "d": "Rs 15,000"
+    },
+    "answer": "C",
+    "why": "90% is shared, and B gets one third of it: 30% of the profit. 30% = 1,500, so 1% = 50 and the profit is 5,000. (4,500 is the amount that was shared.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-12-partnership-a-graded#12",
+     "clerk-12-partnership-a-graded#18",
+     "clerk-12-partnership-a-graded#27",
+     "clerk-12-partnership-a-graded#21",
+     "clerk-12-partnership-a-graded#13"
+    ],
+    "tags": [
+     "A salary, then the rest: find what the working partner receives.",
+     "Charity first; work back from one share to the profit.",
+     "Salary and share together are given: find the profit.",
+     "A part shared equally, and a difference between the two partners.",
+     "Not a profit at all: sharing a rent by cows and months."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-12-partnership-a-graded#1": [
+    "Capitals 15,000 : 25,000 = 3 : 5.",
+    "Parts added: 8 parts = 9,600, so one part = 1,200.",
+    "A has 3 parts: Rs 3,600."
+   ],
+   "clerk-12-partnership-b-pyq#3": [
+    "Capitals 1,200 : 1,500 = 4 : 5.",
+    "A's 4 parts are 3,000, so one part = 750.",
+    "B has 5 parts: Rs 3,750."
+   ],
+   "clerk-12-partnership-a-graded#4": [
+    "The ratio is 4 : 7. A's 4 parts are 2,400, so one part = 600.",
+    "Total = 11 parts = 6,600.",
+    "Rs 6,600 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-12-partnership-a-graded#15": [
+    "The ratio is 7 : 4. The difference between the shares is 7 - 4 = 3 parts.",
+    "3 parts = 2,400, so one part = 800.",
+    "Total = 11 parts = Rs 8,800."
+   ],
+   "clerk-12-partnership-a-graded#2": [
+    "Capitals 20 : 30 : 50 = 2 : 3 : 5.",
+    "Parts added: 10 parts = 18,000, so one part = 1,800.",
+    "C minus A is 5 - 2 = 3 parts = Rs 5,400."
+   ],
+   "clerk-12-partnership-a-graded#8": [
+    "Start from the smallest: C is 1. B is three times C: 3. A is twice B: 6.",
+    "Ratio A : B : C = 6 : 3 : 1, which is 10 parts = 5,000. One part = 500.",
+    "B has 3 parts: Rs 1,500."
+   ],
+   "clerk-12-partnership-a-graded#6": [
+    "Multiply each fraction by 12: 1/2 : 1/3 : 1/4 becomes 6 : 4 : 3.",
+    "Parts added: 13 parts = 6,500, so one part = 500.",
+    "B has 4 parts: Rs 2,000."
+   ],
+   "clerk-12-partnership-a-graded#22": [
+    "B is 6 in one ratio and 3 in the other. Double the second: 3 : 4 becomes 6 : 8.",
+    "A : B : C = 5 : 6 : 8, which is 19 parts = 5,700. One part = 300.",
+    "C has 8 parts: Rs 2,400."
+   ],
+   "clerk-12-partnership-a-graded#24": [
+    "Start from C, the one the chain ends on: C is 100.",
+    "B is 20% less: 80. A is 50% more than B: 120.",
+    "A : B : C = 120 : 80 : 100 = 6 : 4 : 5, which is 15 parts = 12,000. One part = 800.",
+    "A has 6 parts: Rs 4,800."
+   ],
+   "clerk-12-partnership-a-graded#14": [
+    "Take C as the base. B is base + 5,000 and A is base + 10,000.",
+    "Three bases + 15,000 = 60,000, so C = 15,000, B = 20,000 and A = 25,000.",
+    "Ratio 25 : 20 : 15 = 5 : 4 : 3, which is 12 parts = 14,400. One part = 1,200.",
+    "A has 5 parts: Rs 6,000."
+   ],
+   "clerk-12-partnership-a-graded#3": [
+    "Weights, in thousands: A = 12 x 8 = 96. B = 16 x 9 = 144.",
+    "Ratio 96 : 144 = 2 : 3.",
+    "5 parts = 7,500, so one part = 1,500. B has 3 parts: Rs 4,500."
+   ],
+   "clerk-12-partnership-a-graded#5": [
+    "A is there for 12 months. B joins after 4 months, so 8 months.",
+    "Weights: 30 x 12 = 360 and 45 x 8 = 360.",
+    "They are equal, so the profit is shared 1 : 1."
+   ],
+   "clerk-12-partnership-b-pyq#2": [
+    "A stays 12 months. B leaves after 4 months, so B's money worked for 4.",
+    "Weights: 24 x 12 = 288 and 30 x 4 = 120. Ratio 12 : 5.",
+    "17 parts = 3,400, so one part = 200. B has 5 parts: Rs 1,000."
+   ],
+   "clerk-12-partnership-a-graded#29": [
+    "The business runs for 24 months. A is there for all 24. B joins after 6, so 18 months.",
+    "Weights: 20 x 24 = 480 and 30 x 18 = 540. Ratio 8 : 9.",
+    "17 parts = 34,000, so one part = 2,000. B has 9 parts: Rs 18,000."
+   ],
+   "clerk-12-partnership-a-graded#23": [
+    "Months: A 6, B 9, C 12.",
+    "Weights: 40 x 6 = 240, 50 x 9 = 450, 60 x 12 = 720. Ratio 8 : 15 : 24.",
+    "47 parts = 47,000, so one part = 1,000. C has 24 parts: Rs 24,000."
+   ],
+   "clerk-12-partnership-a-graded#26": [
+    "Multiply partner by partner: 3 x 4 = 12, 5 x 3 = 15, 7 x 2 = 14.",
+    "Profit ratio 12 : 15 : 14, which is 41 parts = 8,200. One part = 200.",
+    "B has 15 parts: Rs 3,000."
+   ],
+   "clerk-12-partnership-a-graded#17": [
+    "Call A's sum 1. Then B's is 2 and C's is 3.",
+    "Months: A 12, B 6 (joins after 6), C 4 (joins after 8).",
+    "Weights: 1 x 12 = 12, 2 x 6 = 12, 3 x 4 = 12. All equal.",
+    "Each gets one third of 27,000: Rs 9,000."
+   ],
+   "clerk-12-partnership-b-pyq#7": [
+    "The p cancels. Frenz: 1.2 x 8 = 9.6. Dolly: 1 x 12 = 12.",
+    "Ratio 9.6 : 12 = 4 : 5.",
+    "The difference is 1 part = 600.",
+    "Total = 9 parts = Rs 5,400."
+   ],
+   "clerk-12-partnership-a-graded#9": [
+    "A's weight, in thousands: 24 x 12 = 288.",
+    "Profit ratio 2 : 1, so B's weight is half of A's: 144.",
+    "B joined after 4 months, so 8 months. Capital = 144 / 8 = 18.",
+    "B invested Rs 18,000."
+   ],
+   "clerk-12-partnership-a-graded#10": [
+    "Equal shares mean equal weights. A's weight: 40 x 12 = 480.",
+    "B's months = 480 / 60 = 8.",
+    "B's money worked for 8 months, so B joined 12 - 8 = 4 months after the start."
+   ],
+   "clerk-12-partnership-a-graded#7": [
+    "Time = profit / capital, partner by partner.",
+    "A: 9 / 3 = 3. B: 8 / 4 = 2.",
+    "The ratio of their periods is 3 : 2."
+   ],
+   "clerk-12-partnership-a-graded#16": [
+    "Capital = profit / months, partner by partner.",
+    "A: 4 / 8 = 1/2. B: 3 / 12 = 1/4.",
+    "1/2 : 1/4 = 2 : 1."
+   ],
+   "clerk-12-partnership-b-pyq#6": [
+    "A left after 9 months, so A has 9 months and B has 12.",
+    "Capital = profit / months: A = 9 / 9 = 1. B = 16 / 12 = 4/3.",
+    "1 : 4/3 = 3 : 4."
+   ],
+   "clerk-12-partnership-b-pyq#8": [
+    "Dig out the profit ratio: A's share = 49,000 - 21,000 = 28,000. A : B = 28 : 21 = 4 : 3.",
+    "A's weight, in thousands: 8 x 12 = 96. That is 4 parts, so one part is 24 and B's weight is 72.",
+    "B joined after 6 months, so 6 months. Capital = 72 / 6 = 12.",
+    "X = 12,000."
+   ],
+   "clerk-12-partnership-b-pyq#16": [
+    "Profit ratio: A's share = 25,000 - 9,000 = 16,000. A : B = 16 : 9.",
+    "A's weight, in thousands: 10 x 12 = 120. That is 16 parts, so one part is 7.5 and B's weight is 67.5.",
+    "B joined after 3 months, so 9 months. Capital = 67.5 / 9 = 7.5, which is Rs 7,500.",
+    "As a percent of A's 10,000: 75%."
+   ],
+   "clerk-12-partnership-b-pyq#12": [
+    "Profit ratio: Q's share = 3,600 - 1,600 = 2,000. P : Q = 1,600 : 2,000 = 4 : 5.",
+    "Capital = profit / months: P = 4 / 12 = 1/3. Q = 5 / 9.",
+    "1/3 : 5/9 = 3 : 5. Split the total of 6,400 in 8 parts: one part = 800.",
+    "Q's investment = 5 x 800 = Rs 4,000."
+   ],
+   "clerk-12-partnership-b-pyq#14": [
+    "Time = profit / capital, partner by partner.",
+    "5 / 3, 4 / 2 = 2, and 2 / 1 = 2.",
+    "5/3 : 2 : 2. Multiply by 3: 5 : 6 : 6."
+   ],
+   "clerk-12-partnership-b-pyq#13": [
+    "Profit ratio: A's share = 2,400 - 1,440 = 960. A : B = 960 : 1,440 = 2 : 3.",
+    "Weights: A = 24 x, B = 16 (x + 4,000).",
+    "24x : 16 (x + 4,000) = 2 : 3. Cross-multiply: 72x = 32x + 1,28,000.",
+    "40x = 1,28,000, so x = 3,200."
+   ],
+   "clerk-12-partnership-a-graded#11": [
+    "A's stretches, in thousands: 20 x 6 = 120, then 30 x 6 = 180. Weight 300.",
+    "B: 30 x 12 = 360.",
+    "Ratio 300 : 360 = 5 : 6. 11 parts = 22,000, so one part = 2,000.",
+    "A has 5 parts: Rs 10,000."
+   ],
+   "clerk-12-partnership-b-pyq#11": [
+    "A's stretches, in hundreds: 18 x 3 = 54, then 12 x 9 = 108. Weight 162.",
+    "B joins after 3 months: 12 x 9 = 108.",
+    "Ratio 162 : 108 = 3 : 2. 5 parts = 500, so one part = 100.",
+    "A has 3 parts: Rs 300."
+   ],
+   "clerk-12-partnership-b-pyq#15": [
+    "Call X 1. A's stretches: 1 x 4 = 4, then 2 x 8 = 16. Weight 20.",
+    "B joins after 4 months with 2: 2 x 8 = 16.",
+    "Ratio 20 : 16 = 5 : 4. 9 parts = 13,950, so one part = 1,550.",
+    "A has 5 parts: Rs 7,750."
+   ],
+   "clerk-12-partnership-a-graded#30": [
+    "Use 4 and 5 as the capitals. A withdraws one-fourth, leaving 3. B withdraws one-fifth, leaving 4.",
+    "A: 4 x 3 + 3 x 9 = 39. B: 5 x 3 + 4 x 9 = 51.",
+    "Ratio 39 : 51 = 13 : 17. 30 parts = 60,000, so one part = 2,000.",
+    "A has 13 parts: Rs 26,000."
+   ],
+   "clerk-12-partnership-b-pyq#4": [
+    "Call Shikhar's sum 1, so Rohit starts with 2. The business runs 24 months.",
+    "Rohit's stretches of 8 months each: 2 x 8 = 16, then 1 x 8 = 8, then 0.5 x 8 = 4. Weight 28.",
+    "Shikhar: 1 x 24 = 24.",
+    "Rohit : Shikhar = 28 : 24 = 7 : 6."
+   ],
+   "clerk-12-partnership-b-pyq#9": [
+    "P's stretches: X for 3 months, then 60% of X for 9 months. 3X + 5.4X = 8.4X.",
+    "Q's weight: 12 (X + 100).",
+    "Profit ratio: Q's share = 530 - 210 = 320. P : Q = 21 : 32.",
+    "8.4X : 12 (X + 100) = 21 : 32. Cross-multiply: 268.8X = 252X + 25,200.",
+    "16.8X = 25,200, so X = 1,500."
+   ],
+   "clerk-12-partnership-a-graded#28": [
+    "Call the month m. In thousands, A's weight = 60 x m + 120 x (12 - m) = 1,440 - 60m.",
+    "B's weight = 90 x 12 = 1,080.",
+    "Equal profit means equal weights: 1,440 - 60m = 1,080.",
+    "60m = 360, so m = 6 months."
+   ],
+   "clerk-12-partnership-a-graded#12": [
+    "Salary first: 10% of 15,000 = 1,500, to A.",
+    "Left to share: 13,500, in the ratio 30 : 20 = 3 : 2. A's share = three fifths = 8,100.",
+    "A in all: 1,500 + 8,100 = Rs 9,600."
+   ],
+   "clerk-12-partnership-a-graded#18": [
+    "5% goes to charity, so 95% is shared 3 : 2.",
+    "A gets three fifths of 95% = 57% of the profit.",
+    "57% = 855, so 1% = 15.",
+    "The total profit is Rs 1,500."
+   ],
+   "clerk-12-partnership-a-graded#27": [
+    "A gets 20% as salary. The other 80% is shared 2 : 3, so A gets two fifths of it: 32%.",
+    "A in all: 20 + 32 = 52% of the profit.",
+    "52% = 5,200, so 1% = 100.",
+    "The total profit is Rs 10,000."
+   ],
+   "clerk-12-partnership-a-graded#21": [
+    "The 40% shared equally gives both the same, so it creates no difference.",
+    "The other 60% is shared 3 : 2. A is ahead by one fifth of it: 12% of the profit.",
+    "12% = 1,200, so 1% = 100.",
+    "The total profit is Rs 10,000."
+   ],
+   "clerk-12-partnership-a-graded#13": [
+    "Weight = cows x months. A: 12 x 5 = 60. B: 15 x 6 = 90. C: 10 x 9 = 90.",
+    "Ratio 60 : 90 : 90 = 2 : 3 : 3, which is 8 parts = 3,200. One part = 400.",
+    "A's share of the rent = 2 parts = Rs 800.",
+    "Rs 800 is not among the numbered options, so the answer is \"None of these\"."
+   ]
+  }
+ }
+}

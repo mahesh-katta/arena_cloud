@@ -1,0 +1,811 @@
+{
+ "module": "reasoning-series-and-miscellaneous",
+ "intro": [
+  "This topic is the group of short, quick questions that sit beside the puzzles: pairs of letters, a long row of letters, digits and symbols, a word changed by a rule, word formation, odd one out, and the five-word set. None of them is a puzzle. Each is a small routine that can be made nearly automatic.",
+  "**What these lessons rest on.** For what the exam asks, I used the earlier study of twelve IBPS Clerk Prelims memory-based papers and twelve sister papers that this topic's notes already contain; no new papers were opened this round. For how to solve, I wrote small programs for the three most regular kinds and ran them on all 393 Sreedhar questions of this topic.",
+  "| Kind of question | In the 12 Clerk papers | Checked by script on your bank |",
+  "| Pairs of letters or digits | 11 questions, in 11 of the 12 papers | 51 of 54 keys reproduced |",
+  "| A row: position, neighbours, operation first | 24 questions, in 6 of the 12 papers | 40 keys reproduced on the plainly worded ones |",
+  "| A word or number changed by a rule | 8 questions, in 7 papers | worked by hand |",
+  "| Word formation | 5 questions | worked by hand |",
+  "| Odd one out among letter groups | 5 questions | worked by hand |",
+  "| Five three-letter words | 5 questions in 1 Clerk paper; 15 in the sister papers | worked by hand |",
+  "**What the script showed about pairs.** The answer is 2 or 3 in 28 of the 51 questions and between 1 and 5 in 47; more than half of all pairs are letters that are neighbours or next-but-one in the alphabet. In three questions the bank's key differs from a direct count, and those are not used here.",
+  "There are nine short lessons. The first is the alphabet itself; each of the others is one kind of question, with five bank questions chosen so that each one changes a single thing."
+ ],
+ "needs": [],
+ "after": [
+  "That is every kind found in the Clerk papers studied. The **Quick revision** tab keeps the older notes, including sets of three-digit numbers, which fill part of your bank and appeared in none of the 24 papers.",
+  "In the exam these are the questions to do first in Reasoning: each is under a minute once the routine is fixed, and none depends on a long arrangement being right.",
+  "Coding and decoding, number series, and direction or blood-relation questions are separate topics in your bank and are not part of this one."
+ ],
+ "lessons": [
+  {
+   "id": "alphabet",
+   "code": "S1",
+   "title": "The alphabet as numbers",
+   "plain": "The starting point. Almost every question in this topic needs a letter's place in the alphabet, from the left or from the right. Learn five anchors and one sum.",
+   "needs": [],
+   "teach": [
+    "This topic is a collection of short questions: pairs of letters in a word, a long row of letters, digits and symbols, a word changed by a rule, and a few others. They are not puzzles; each is a small routine. What they share is the alphabet, so that comes first.",
+    "**Five anchors.** You do not need all 26 places by heart. Learn every fifth letter:",
+    "| E | J | O | T | Y |",
+    "| 5 | 10 | 15 | 20 | 25 |",
+    "Any other letter is one or two steps from an anchor. M is two before O: 13. R is two before T: 18. W is two before Y: 23.",
+    "**From the right end.** A letter's place from the right is **27 minus its place from the left**. T is 20th from the left, so 7th from the right. The 8th letter from the right is the 19th from the left: S.",
+    "**Opposite letters.** Two letters are opposite when their places add up to 27: A and Z, B and Y, G and T, M and N. Odd-one-out questions use this often. To find a letter's opposite, take its place away from 27.",
+    "**Letters between.** The number of letters between two letters is the difference of their places, minus 1. Between C (3) and I (9) there are 9 - 3 - 1 = 5 letters.",
+    "**Vowels** are A, E, I, O, U, at places 1, 5, 9, 15, 21. Everything else is a consonant. Many questions change vowels one way and consonants another, so it helps to notice two facts now:",
+    "- the letter **after** a vowel is always a consonant (B, F, J, P, V);",
+    "- the letter **before** A does not exist in these questions, and the letters before E, I, O, U are D, H, N, T, all consonants.",
+    "So when a rule says \"every vowel is changed to the next letter\", no vowel survives. The only way a vowel can appear afterwards is from a consonant that turns into one."
+   ],
+   "example": {
+    "q": "(1) Which letter is 8th from the right end of the alphabet? (2) Which letter is opposite to G? (3) How many letters are there between D and M?",
+    "steps": [
+     "(1) 27 - 8 = 19. The 19th letter is one before T (20): S.",
+     "(2) G is two after E (5), so 7. 27 - 7 = 20, which is T.",
+     "(3) D is 4 and M is 13. 13 - 4 - 1 = 8 letters."
+    ],
+    "answer": "S; T; 8."
+   },
+   "check": {
+    "q": "Which letter is 6th from the right end of the English alphabet?",
+    "options": {
+     "a": "T",
+     "b": "U",
+     "c": "V",
+     "d": "W"
+    },
+    "answer": "B",
+    "why": "27 - 6 = 21. The 21st letter is one after T (20): U."
+   },
+   "more": [
+    {
+     "tag": "Opposite",
+     "q": "Which letter is opposite to K, in the sense that their places add up to 27?",
+     "options": {
+      "a": "O",
+      "b": "P",
+      "c": "Q",
+      "d": "R"
+     },
+     "answer": "B",
+     "why": "K is one after J (10): 11. 27 - 11 = 16, which is one after O (15): P."
+    },
+    {
+     "tag": "After a change",
+     "q": "Every consonant in a word is changed to the next letter of the alphabet. Which of these consonants becomes a vowel?",
+     "options": {
+      "a": "B",
+      "b": "D",
+      "c": "G",
+      "d": "P"
+     },
+     "answer": "B",
+     "why": "The letter after D is E. A consonant becomes a vowel only if it stands just before one: D, H, N or T."
+    }
+   ]
+  },
+  {
+   "id": "pairs",
+   "code": "S2",
+   "title": "Pairs of letters in a word",
+   "plain": "New: the most regular question of all. For each letter, look only to its right, and walk the alphabet as you walk the word.",
+   "needs": [],
+   "teach": [
+    "\"How many such pairs of letters are there in the word CHAMPION, each of which has as many letters between them in the word as they have between them in the English alphabet?\"",
+    "In the earlier study of twelve IBPS Clerk papers, **eleven had exactly one question of this kind**. It is the surest two marks in the topic if you have a fixed routine, and a slow one if you do not.",
+    "**What a pair is.** Two letters of the word form a pair when the gap between them in the word equals the gap between them in the alphabet. O and N, side by side in CHAMPION, are also side by side in the alphabet: a pair. C and A have one letter between them in the word (H) and one between them in the alphabet (B): a pair.",
+    "**The routine.** Take each letter in turn, from the left, and look **only to its right**.",
+    "- The letter 1 place to its right would have to be its alphabet neighbour (the next letter, or the one before).",
+    "- The letter 2 places to its right would have to be 2 away in the alphabet.",
+    "- The letter 3 places to its right would have to be 3 away, and so on.",
+    "So you say the alphabet forwards and backwards from that letter while your finger moves along the word. From C: forwards D, E, F ... and backwards B, A. The word has H, A, M ...: at the second place you expect E or A, and there is an A. One pair.",
+    "**Forward and backward.** The pair C and A runs backwards (A comes before C in the alphabet but after it in the word). The question nearly always says \"in both forward and backward directions\", so both kinds count. If it says forward only, count only pairs that read left to right in alphabet order.",
+    "**What to expect.** I solved all 51 clean questions of this kind in your bank by script. The answer was **2 or 3 in 28 of them**, and between 1 and 5 in 47. More than half of all the pairs found were letters that are neighbours or next-but-one in the alphabet. So check the close letters with special care, and be a little suspicious of an answer of zero or of six.",
+    "The same question is asked about digits in a number. The routine is identical, with counting in place of the alphabet."
+   ],
+   "example": {
+    "q": "How many such pairs of letters are there in the word CHAMPION, each of which has as many letters between them in the word (in both forward and backward directions) as they have between them in the English alphabet?",
+    "steps": [
+     "C: to its right are H, A, M, P, I, O, N. Expected: D or B, then E or A, then F ... The second is A. Pair C-A.",
+     "H: expected I or G, J or F, K or E, L or D, M or C, N or B. The sixth letter to its right is N. Pair H-N.",
+     "A: nothing comes before A, so only forwards: B, C, D, E, F. The word has M, P, I, O, N. None.",
+     "M: expected N or L, O or K, P or J, Q or I. The word has P, I, O, N. None.",
+     "P and I: none. O: expected P or N, and the next letter is N. Pair O-N."
+    ],
+    "answer": "Three pairs: C-A, H-N and O-N."
+   },
+   "check": {
+    "q": "How many such pairs of letters are there in the word BANKER, each of which has as many letters between them in the word (in both forward and backward directions) as in the English alphabet?",
+    "options": {
+     "a": "None",
+     "b": "One",
+     "c": "Two",
+     "d": "Three"
+    },
+    "answer": "B",
+    "why": "B and A are neighbours in the word and in the alphabet. No other two letters match: for example K and E are two apart in the word but six apart in the alphabet. One pair."
+   },
+   "shortcut": {
+    "title": "Say the alphabet with your finger on the word",
+    "text": [
+     "Put a finger on the letter after the one you are testing, and say the alphabet from that letter, forwards: one letter per step of the finger. If the letter you say is ever the letter under your finger, that is a pair.",
+     "Then do it once more saying the alphabet backwards.",
+     "Two passes for each letter, and you only ever look to the right, so no pair is counted twice and none is missed."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-miscellaneous-reasoning#1",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-miscellaneous-reasoning#1",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-miscellaneous-reasoning#1",
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-miscellaneous-reasoning#1",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-miscellaneous-reasoning#1"
+    ],
+    "tags": [
+     "A seven-letter word with a single pair.",
+     "Two pairs, both forwards, sharing a letter.",
+     "One letter in two pairs, forwards and backwards.",
+     "Pairs with one letter between.",
+     "The same question with digits."
+    ]
+   }
+  },
+  {
+   "id": "row-position",
+   "code": "S3",
+   "title": "A long row: finding a position",
+   "plain": "New: a row of about 35 letters, digits and symbols, and a question such as \"sixth to the left of the fifteenth from the right end\". It is one addition or one subtraction.",
+   "needs": [],
+   "teach": [
+    "The second big family is the **row**: about 35 letters, digits and symbols in a line, with four or five questions on it. Half of the twelve Clerk papers studied had one. Your bank's rows are mostly between 33 and 40 long.",
+    "The questions on a row come in three kinds, one per lesson: find a position, count by neighbours, and do something to the row first. This lesson is the first kind.",
+    "\"Which element is **sixth to the left of the fifteenth from the right end**?\"",
+    "Do not count to the fifteenth and then count six more. Combine the two numbers first.",
+    "| The question says | It is the same as |",
+    "| Xth to the **left** of the Yth from the **right** end | (X + Y)th from the right end |",
+    "| Xth to the **right** of the Yth from the **left** end | (X + Y)th from the left end |",
+    "| Xth to the **right** of the Yth from the **right** end | (Y - X)th from the right end |",
+    "| Xth to the **left** of the Yth from the **left** end | (Y - X)th from the left end |",
+    "The rule behind the table: moving **away from** the end you are counting from **adds**; moving **towards** it **subtracts**.",
+    "Then count once, from whichever end is nearer. If the answer is \"21st from the right\" in a row of 34, it is quicker to count the 14th from the left, because **place from left + place from right = number of elements + 1**. To use that you need the length of the row, so count it once at the start and write it above the row. It pays for itself over five questions.",
+    "**\"Exactly in the middle of Y and N.\"** Find the two places, add them and halve. If Y is 6th and N is 16th, the middle is the 11th.",
+    "**Mark every fifth element.** Put a small tick under the 5th, 10th, 15th ... element when you first read the row. After that every count is a short hop from a tick."
+   ],
+   "example": {
+    "q": "Row (20 elements): K 7 @ R 4 E # 9 M $ T 2 B % 5 W 8 & J 3. Which element is fourth to the left of the ninth from the right end?",
+    "steps": [
+     "Left of something counted from the right moves away from the right end: add. 4 + 9 = 13th from the right end.",
+     "The row has 20 elements, so that is the 20 + 1 - 13 = 8th from the left.",
+     "Count eight from the left: K, 7, @, R, 4, E, #, 9."
+    ],
+    "answer": "The element is 9."
+   },
+   "check": {
+    "q": "A row has 34 elements. The sixth to the left of the fifteenth from the right end is which element counted from the left end?",
+    "options": {
+     "a": "9th",
+     "b": "14th",
+     "c": "21st",
+     "d": "20th"
+    },
+    "answer": "B",
+    "why": "6 + 15 = 21st from the right. From the left that is 34 + 1 - 21 = 14th."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#1",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#3",
+     "ibps-csa-xvi-prelims-2026-model-test-72-78392-alphanumeric-mixed-series#3",
+     "ibps-csa-xvi-prelims-2026-model-test-30-78350-alphanumeric-mixed-series#1",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#4"
+    ],
+    "tags": [
+     "Left of a place counted from the right: add.",
+     "Left of a place counted from the left: subtract.",
+     "Right of a place counted from the right: subtract.",
+     "The same with a longer row; count from the nearer end.",
+     "Exactly in the middle of two elements."
+    ]
+   }
+  },
+  {
+   "id": "row-neighbours",
+   "code": "S4",
+   "title": "A long row: counting by neighbours",
+   "plain": "New: \"how many numbers are immediately preceded by a letter and immediately followed by a symbol\". Turn it into a pattern of three and scan once.",
+   "needs": [],
+   "teach": [
+    "This was the most frequent row question in the Clerk papers studied (9 of the 24 row questions).",
+    "\"How many such **numbers** are there, each of which is immediately **preceded by a letter** and immediately **followed by a symbol**?\"",
+    "**Turn the sentence into a pattern of three, in the order they sit in the row.** Preceded by means on its left; followed by means on its right. So the pattern is:",
+    "**letter - number - symbol**",
+    "Write that pattern above the row before you look at the row at all. The sentence gives the middle one first and the left one second, which is exactly how mistakes happen.",
+    "**Scan by the rarest kind.** A row has many letters and fewer digits and symbols. Do not check every element. Run along the row stopping only at the kind that is in the **middle** of your pattern (here, each number), and glance left and right. If the middle kind is \"letter\", stop instead at whichever of the two neighbours is rarer.",
+    "**The words that change the pattern.**",
+    "| Wording | Meaning |",
+    "| immediately preceded by a consonant | the left neighbour is a letter that is not A, E, I, O, U |",
+    "| immediately followed by a symbol **but not** immediately preceded by a number | right neighbour a symbol; left neighbour anything except a number, or nothing at all |",
+    "| how many such **elements** | the middle one can be anything |",
+    "| only one side is mentioned | a pattern of two |",
+    "**The two ends.** The first element has nothing before it and the last has nothing after it. So neither can satisfy \"preceded by ... and followed by ...\". But the first element **does** satisfy \"not preceded by a number\".",
+    "Tick each hit under the row as you find it and count the ticks at the end. In the twenty bank questions of this kind that the script checked, the answer runs from none to six and is most often one, two or three."
+   ],
+   "example": {
+    "q": "Row: K 7 @ R 4 E # 9 M $ T 2 B % 5 W 8 & J 3. How many such numbers are there, each of which is immediately preceded by a letter and immediately followed by a symbol?",
+    "steps": [
+     "Pattern, left to right: letter - number - symbol.",
+     "Stop at each number. 7: K before, @ after. Yes.",
+     "4: R before, E after. No. 9: # before. No. 2: T before, B after. No. 5: % before. No.",
+     "8: W before, & after. Yes. 3: nothing after it. No."
+    ],
+    "answer": "Two (K 7 @ and W 8 &)."
+   },
+   "check": {
+    "q": "Row: T 5 # A 9 L @ 2 K. How many numbers are immediately preceded by a letter and immediately followed by a symbol?",
+    "options": {
+     "a": "None",
+     "b": "One",
+     "c": "Two",
+     "d": "Three"
+    },
+    "answer": "B",
+    "why": "Pattern: letter - number - symbol. T 5 # fits. A 9 L and @ 2 K do not. One."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#5",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#2",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#2",
+     "ibps-csa-xvi-prelims-2026-model-test-20-78340-alphanumeric-mixed-series#1",
+     "ibps-csa-xvi-prelims-2026-model-test-36-78356-alphanumeric-mixed-series#3"
+    ],
+    "tags": [
+     "The plain pattern: letter - number - symbol.",
+     "'Elements': the middle can be anything.",
+     "Vowel and consonant instead of letter.",
+     "Only one side is mentioned.",
+     "'But not': one neighbour must fit and the other must not."
+    ]
+   }
+  },
+  {
+   "id": "row-operation",
+   "code": "S5",
+   "title": "A long row: something is done to it first",
+   "plain": "New: \"if all the symbols are dropped, which is the fourteenth from the right end\". Do not rewrite the row. Count along the original and skip.",
+   "needs": [],
+   "teach": [
+    "The third kind of row question changes the row and then asks for a position or a count.",
+    "\"If all the symbols are dropped from the arrangement, which will be the fourteenth element from the right end?\"",
+    "**Do not write the new row out.** That costs half a minute and invites copying slips. Count along the **original** row from the end named, and simply **do not count** the elements that were dropped.",
+    "First combine the numbers exactly as in lesson 3 (\"fourth to the left of the tenth from the right\" is the fourteenth from the right). Then one pass with the finger, skipping.",
+    "| The operation | What to do |",
+    "| all symbols (or numbers, or letters) are dropped | count from the named end, skipping that kind |",
+    "| all symbols and numbers are dropped | count only the letters |",
+    "| all consonants are dropped | count everything except consonants: vowels, digits and symbols |",
+    "| every second element is dropped | the 1st, 3rd, 5th ... stay; each step is two places in the original |",
+    "| the first half is reversed, or the last fifteen are reversed | work out where the asked place falls; inside the reversed part, count from its other end |",
+    "**Every second element dropped.** In a row of 36, the elements that stay are the 1st, 3rd, ... 35th. The last one that stays is the 35th. The 11th from the right among them is ten steps of two before that: the 35 - 20 = 15th element of the original row.",
+    "**When the question then asks for neighbours** (\"if all the symbols are dropped, how many letters are immediately preceded by a number?\"), the neighbours are the nearest surviving elements on each side. Look past the dropped ones.",
+    "Only when the operation rearranges things by value (\"all the numbers are arranged in ascending order\") is it worth writing a short part of the row again, and then only the part that moves."
+   ],
+   "example": {
+    "q": "Row: K 7 @ R 4 E # 9 M $ T 2 B % 5 W 8 & J 3. If all the symbols are dropped, which element will be sixth from the right end?",
+    "steps": [
+     "Count from the right end of the original row, skipping symbols.",
+     "3 (one), J (two), skip &, 8 (three), W (four), 5 (five), skip %, B (six)."
+    ],
+    "answer": "The element is B."
+   },
+   "check": {
+    "q": "Row: H 3 @ P 6 # D 9 K. If all the numbers are dropped, which element is third from the right end?",
+    "options": {
+     "a": "#",
+     "b": "P",
+     "c": "D",
+     "d": "@"
+    },
+    "answer": "A",
+    "why": "Count from the right, skipping numbers: K (one), skip 9, D (two), # (three)."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#1",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#3",
+     "ibps-csa-xvi-prelims-2026-model-test-74-78394-alphanumeric-mixed-series#2",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-alphanumeric-mixed-series#3",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#4"
+    ],
+    "tags": [
+     "One kind dropped; count from the right and skip.",
+     "Two kinds dropped, and a position inside a position.",
+     "Counting from the left.",
+     "All consonants dropped: count everything else.",
+     "Every second element dropped: steps of two."
+    ]
+   }
+  },
+  {
+   "id": "changed",
+   "code": "S6",
+   "title": "A word or a number changed by a rule",
+   "plain": "New: \"each vowel is changed to the next letter and each consonant to the previous one, then the letters are arranged alphabetically\". Write the new letters under the old ones, once, and only then answer.",
+   "needs": [],
+   "teach": [
+    "Seven of the twelve Clerk papers studied had a question of this kind. A word (or a number) is given, a rule changes it, and something is asked about the result.",
+    "There are two operations, used alone or one after the other.",
+    "**1. Arrange.** \"The letters are arranged in alphabetical order from left to right.\" Write the word, and under it write the letters in order. For digits, ascending or descending.",
+    "- If it asks **how many letters keep their position**, compare the two lines column by column.",
+    "- If it asks for **the third from the right end**, you do not need the whole line. Find the three largest letters only.",
+    "**2. Replace.** \"Each vowel is changed to the next letter and each consonant to the previous letter.\" Write the new letter under each old one, working left to right. Use the anchors E 5, J 10, O 15, T 20, Y 25 to step one forward or one back without thinking.",
+    "For digits the same thing reads \"1 is added to each even digit and 1 is subtracted from each odd digit\".",
+    "**Then read the question's last words slowly.** After the same two operations the question may ask:",
+    "- which letter is third from the right end;",
+    "- how many letters appear more than once (count the letters that repeat, not the repeats);",
+    "- how many letters lie between two of the new letters in the alphabet;",
+    "- how many positions are unchanged compared with the **original** word.",
+    "**\"Arranged from right to left.\"** Ascending order from right to left is the same as descending order from left to right. Turn it into a left-to-right order before writing.",
+    "**Repeated letters.** If the word has a letter twice, both copies are changed and both are written. A rule that sends two different letters to the same one (G to F, and E to F) is how \"appears more than once\" questions are built."
+   ],
+   "example": {
+    "q": "Each vowel of the word PLANET is changed to the next letter of the alphabet and each consonant to the previous letter. The new letters are then arranged in alphabetical order from left to right. Which letter is second from the left end?",
+    "steps": [
+     "Write the changes under the word: P becomes O, L becomes K, A becomes B, N becomes M, E becomes F, T becomes S.",
+     "The new letters are O, K, B, M, F, S.",
+     "In alphabetical order: B, F, K, M, O, S."
+    ],
+    "answer": "The second from the left is F."
+   },
+   "check": {
+    "q": "The letters of the word BASKET are arranged in alphabetical order from left to right. How many letters remain in their original position?",
+    "options": {
+     "a": "None",
+     "b": "One",
+     "c": "Two",
+     "d": "Three"
+    },
+    "answer": "C",
+    "why": "In order: A, B, E, K, S, T. Under B, A, S, K, E, T, the fourth (K) and the sixth (T) match. Two."
+   },
+   "shortcut": {
+    "title": "Third from the right without sorting everything",
+    "text": [
+     "When the question asks for a place near one end after arranging, find only that end.",
+     "\"Third from the right end\" after alphabetical order means the **third largest** letter. Pick out the largest, then the next, then the next, counting a repeated letter each time it appears.",
+     "For MEDIUM changed to L, F, C, J, V, L: largest V, then L, then the other L. The third from the right is L, and you never wrote the sorted word."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-67-78387-miscellaneous-reasoning#3",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-miscellaneous-reasoning#2",
+     "ibps-csa-xvi-prelims-2026-model-test-59-78379-miscellaneous-reasoning#1",
+     "ibps-csa-xvi-prelims-2026-model-test-56-78376-miscellaneous-reasoning#1",
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-miscellaneous-reasoning#2"
+    ],
+    "tags": [
+     "Arrange only, then a position.",
+     "Arrange, then count the letters that stay.",
+     "Replace, then arrange, then a position.",
+     "Replace, then find what repeats.",
+     "The digit version, with two different amounts."
+    ]
+   }
+  },
+  {
+   "id": "word-formation",
+   "code": "S7",
+   "title": "Making a word from chosen letters",
+   "plain": "New: pick the named letters, then decide between one word, more than one, or none. The marks are in the instructions at the end of the question.",
+   "needs": [],
+   "teach": [
+    "\"If it is possible to make only one meaningful four letter English word with the second, the fifth, the seventh and the eighth letters of the word FREQUENT, which will be the third letter of that word? If no such word can be formed give X as your answer. If more than one such word can be formed give Z.\"",
+    "Five of the twelve Clerk papers studied had one of these. The question is long, and has three parts that each need care.",
+    "**1. Pick the letters.** Number the letters of the long word with small figures above them (every fifth is enough) and write the chosen ones in a row. For FREQUENT, the 2nd, 5th, 7th and 8th are R, U, N, T.",
+    "**2. Try to make words.** Look for common, everyday words; the examiners do not expect rare ones. A quick way: place each vowel in the second or third place and try the consonants around it. From R, U, N, T: RUNT, TURN. Two already.",
+    "**3. Read the instructions for the three outcomes.** They change from question to question, and this is where marks are lost.",
+    "| Outcome | What the question may ask for |",
+    "| exactly one word | its first, second or third letter, sometimes counted from the right end |",
+    "| no word | a named letter, often X, Y, Z or P |",
+    "| more than one word | another named letter, often Z, X or T |",
+    "The letter for \"more than one\" in one question is the letter for \"none\" in the next. Underline the two letters in the question before you start.",
+    "**Stop early.** As soon as you have two words, the answer is the \"more than one\" letter. You do not need to find them all.",
+    "**Before answering \"none\"**, try each letter as the first letter once. Four letters allow only 24 orders, and most can be dismissed at a glance.",
+    "In thirteen of your bank's questions of this kind, the keyed outcome is \"more than one word\" in eight, \"exactly one\" in three and \"none\" in two. So when a second word comes to mind quickly, trust it."
+   ],
+   "example": {
+    "q": "If it is possible to make only one meaningful four letter English word with the first, the second, the third and the fourth letters of the word WONDERFUL, which will be the third letter of that word from the left? If no such word can be formed give X; if more than one can be formed give Z.",
+    "steps": [
+     "The letters are W, O, N, D.",
+     "With the only vowel O in the second place: DOWN. Other orders (WOND, NOWD, ODWN ...) are not words.",
+     "Exactly one word: DOWN.",
+     "Its third letter from the left is W."
+    ],
+    "answer": "W."
+   },
+   "check": {
+    "q": "The four letters picked are T, A, E and M. The question says: give the first letter if exactly one word can be made, X if none, Z if more than one. What is the answer?",
+    "options": {
+     "a": "M",
+     "b": "T",
+     "c": "X",
+     "d": "Z"
+    },
+    "answer": "D",
+    "why": "TEAM, MEAT, MATE and TAME are all common words. More than one word: Z."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-miscellaneous-reasoning#2",
+     "ibps-csa-xvi-prelims-2026-model-test-68-78388-miscellaneous-reasoning#1",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-miscellaneous-reasoning#2",
+     "ibps-csa-xvi-prelims-2026-model-test-56-78376-miscellaneous-reasoning#3",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-miscellaneous-reasoning#2"
+    ],
+    "tags": [
+     "Exactly one word.",
+     "No word.",
+     "More than one word.",
+     "One word, with the letter counted from the right end.",
+     "A different letter stands for 'more than one'."
+    ]
+   }
+  },
+  {
+   "id": "odd-one",
+   "code": "S8",
+   "title": "Odd one out among letter groups",
+   "plain": "New: five groups of three letters; four follow one rule. Write the steps between the letters, and the odd one shows itself.",
+   "needs": [],
+   "teach": [
+    "\"Four of the following five are alike in a certain way based on their positions in the English alphabet. Which one does not belong?\" followed by five groups such as FIM, PSW, LRU, GJN, JMQ. Five of the twelve Clerk papers studied had one.",
+    "**Write the step from the first letter to the second, and from the second to the third**, under each group. Use + for forwards and - for backwards.",
+    "FIM: F to I is +3, I to M is +4. PSW: +3, +4. LRU: +6, +3. GJN: +3, +4. JMQ: +3, +4. The odd one is LRU.",
+    "You rarely need to finish all five. Do the first two groups fully; they tell you the rule. Then check only the **first step** of the others; go on to the second step only if all first steps agree.",
+    "**If the steps do not settle it**, there are three other rules the bank uses.",
+    "- **Opposite letters.** The first two letters add up to 27 (G and T, O and L, D and W), and the third is a fixed step from the second. A huge jump between the first two letters is the sign.",
+    "- **Direction.** Four groups go forwards and one goes backwards with the same sizes: FHJ, NPR, ACE, KMO against XVT.",
+    "- **Vowels.** Four groups contain exactly one vowel and one contains none or two. Try this last.",
+    "**Speed with the anchors.** To get a step, turn the letters into numbers only when they are far apart. For close letters, count on your fingers: F, g, h, I is three.",
+    "The same question is also asked about a row (\"based on their positions in the above arrangement\") or about a finished puzzle. There the steps are counted along the row or the stack instead of along the alphabet, and the method is the same."
+   ],
+   "example": {
+    "q": "Four of these five are alike in a certain way based on their positions in the English alphabet. Which one does not belong? CFI, MPS, TWZ, GJN, ADG",
+    "steps": [
+     "CFI: C to F is +3, F to I is +3.",
+     "MPS: +3, +3. So the rule is two steps of three.",
+     "TWZ: +3, +3. ADG: +3, +3.",
+     "GJN: G to J is +3, but J to N is +4."
+    ],
+    "answer": "GJN."
+   },
+   "check": {
+    "q": "Four of these five are alike. Which one does not belong? ACE, GIK, MOQ, SUX, PRT",
+    "options": {
+     "a": "GIK",
+     "b": "MOQ",
+     "c": "SUX",
+     "d": "PRT"
+    },
+    "answer": "C",
+    "why": "ACE, GIK, MOQ and PRT are two steps of +2. In SUX the second step, U to X, is +3."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-72-78392-miscellaneous-reasoning#3",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-miscellaneous-reasoning#2",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-miscellaneous-reasoning#3",
+     "ibps-csa-xvi-prelims-2026-model-test-69-78389-miscellaneous-reasoning#3",
+     "ibps-csa-xvi-prelims-2026-model-test-73-78393-miscellaneous-reasoning#1"
+    ],
+    "tags": [
+     "Same sizes, one group reversed.",
+     "Two different steps.",
+     "A backward step then a forward one.",
+     "The same shape with other sizes.",
+     "Opposite letters, then a step."
+    ]
+   }
+  },
+  {
+   "id": "three-letter",
+   "code": "S9",
+   "title": "Five three-letter words",
+   "plain": "New: five short words and five questions, each applying a small rule to all five. One tidy table answers the whole set.",
+   "needs": [],
+   "teach": [
+    "\"LED TIE ICE PAL ACE\", followed by five questions. In the papers studied this set was more common in SBI and RRB Clerk and IBPS PO (15 questions in twelve papers) than in IBPS Clerk (one paper), and your bank has a great many. It is a full five marks for about three minutes, because every question is a rule you already know, applied five times.",
+    "**Write the five words in a column**, with space to the right. Each question adds one column beside them.",
+    "The rules that come up:",
+    "| The question says | What to write beside each word |",
+    "| the words are arranged as in a dictionary | number them 1 to 5 in order |",
+    "| the letters within each word are arranged alphabetically | the sorted word; tick the ones that did not change |",
+    "| each letter is changed to the next letter | the new word; circle any vowel |",
+    "| vowels to the next letter, consonants to the previous | the new word; circle any vowel |",
+    "| the first and third letters are interchanged | the new word; tick if it is a real word |",
+    "| a letter is added before each word | tick if it makes a real word |",
+    "| letters between the second letter of the second word and ... | pick the two letters, then difference of places minus 1 |",
+    "**Dictionary order.** Compare first letters; where they are equal, compare second letters. ACE comes before ICE because A comes before I.",
+    "**Where can a vowel come from?** This is the quick way through the \"how many words will have a vowel\" questions (lesson 1).",
+    "- If every letter moves **forward** one place, a vowel appears only from D, H, N or T (giving E, I, O, U).",
+    "- If consonants move **back** one place, a vowel appears only from B, F, J, P or V (giving A, E, I, O, U).",
+    "- A vowel that is itself moved never stays a vowel.",
+    "So you do not need to change every letter. Look through the five words only for those few letters.",
+    "**\"Meaningful word\" questions** expect common words. RICE and RACE count; a word you have to argue for does not."
+   ],
+   "example": {
+    "q": "BAT HEN DIP MUG TOP. (1) If the letters within each word are arranged in alphabetical order, how many words remain unchanged? (2) If each letter of every word is changed to the next letter of the alphabet, how many of the new words contain a vowel?",
+    "steps": [
+     "(1) BAT becomes ABT, HEN becomes EHN, MUG becomes GMU, TOP becomes OPT. DIP is already in order. One word is unchanged.",
+     "(2) Moving forward one place, a vowel appears only from D, H, N or T.",
+     "BAT has T (becomes U). HEN has H and N (become I and O). DIP has D (becomes E). MUG has none of them. TOP has T (becomes U).",
+     "Four of the new words contain a vowel."
+    ],
+    "answer": "(1) One. (2) Four."
+   },
+   "check": {
+    "q": "BAT HEN DIP MUG TOP. If the words are arranged as they appear in a dictionary, which word comes last?",
+    "options": {
+     "a": "MUG",
+     "b": "HEN",
+     "c": "TOP",
+     "d": "DIP"
+    },
+    "answer": "C",
+    "why": "By first letter the order is BAT, DIP, HEN, MUG, TOP. The last is TOP."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#3",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#1",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#2",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#4",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#5"
+    ],
+    "tags": [
+     "Dictionary order.",
+     "Picking letters by position, then letters between.",
+     "A letter added in front.",
+     "Every letter moves forward one place.",
+     "Vowels forward, consonants back."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-miscellaneous-reasoning#1": [
+    "Take each letter and look to its right. T, H, U, N: no match.",
+    "D: the next letter is E, its alphabet neighbour. Pair D-E.",
+    "E, R: nothing further.",
+    "The answer is One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-miscellaneous-reasoning#1": [
+    "S: the next letter is T, its neighbour in the alphabet. Pair S-T.",
+    "T (the first one): no match to its right.",
+    "R is the 3rd letter and the second T is the 5th: two places apart. R to T is also two in the alphabet (R, S, T). Pair R-T.",
+    "A, T, E, G, Y: none.",
+    "The answer is Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-miscellaneous-reasoning#1": [
+    "C, A, P: no match.",
+    "T: the next letter is U, its neighbour. Pair T-U. Two places on is R, and T to R is two back in the alphabet. Pair T-R.",
+    "U, R: none.",
+    "E: the next letter is D, its neighbour backwards. Pair E-D.",
+    "The answer is Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-miscellaneous-reasoning#1": [
+    "G: two places on is I, and G to I is two in the alphabet. Pair G-I. Three places on is D, and G to D is three back. Pair G-D.",
+    "U, I, D: none.",
+    "A: two places on is C. Pair A-C.",
+    "N, C, E: none.",
+    "The answer is Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-miscellaneous-reasoning#1": [
+    "The number is 2 7 4 6 3 5 9.",
+    "2: two places on is 4. Pair 2-4.",
+    "7, 4: none (4 and 6 are neighbours in the number but two apart in counting).",
+    "6: three places on is 9. Pair 6-9.",
+    "3, 5: none (3 and 5 are neighbours in the number but two apart).",
+    "The answer is Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#1": [
+    "The row has 34 elements.",
+    "Sixth to the left of the fifteenth from the right is the 6 + 15 = 21st from the right end.",
+    "That is the 34 + 1 - 21 = 14th from the left.",
+    "The 14th from the left is @."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#3": [
+    "Fourth to the left of the seventeenth from the left is the 17 - 4 = 13th from the left end.",
+    "Count thirteen from the left: P, 2, Q, @, A, L, S, K, &, D, 9, J, 3.",
+    "The element is 3."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-72-78392-alphanumeric-mixed-series#3": [
+    "Seventh to the right of the eighteenth from the right is the 18 - 7 = 11th from the right end.",
+    "Count eleven from the right: K, 6, >, R, A, ?, E, P, Z, !, H.",
+    "The element is H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-30-78350-alphanumeric-mixed-series#1": [
+    "Ninth to the right of the eighteenth from the right is the 18 - 9 = 9th from the right end.",
+    "Count nine from the right: W, T, %, 4, Y, E, ©, 6, R.",
+    "The element is R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#4": [
+    "The row has 34 elements. Y is the 6th from the left and N is the 16th.",
+    "The middle is the (6 + 16) / 2 = 11th.",
+    "Count eleven from the left: F, 9, A, 8, T, Y, #, C, 6, E, G.",
+    "The element is G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#5": [
+    "Pattern, left to right: letter - number - symbol.",
+    "Stop at each number and look both ways: Q 2 @, M 4 % and B 3 & fit.",
+    "The others fail on one side (for example 9 is followed by a letter).",
+    "The answer is Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#2": [
+    "Pattern, left to right: symbol - anything - number.",
+    "Stop at each symbol and look two places on: # C 6 and © V 8 fit.",
+    "@ 5 N, ¥ Z X, % J B and & 6 S end in a letter.",
+    "The answer is Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#2": [
+    "Pattern, left to right: consonant - vowel - number.",
+    "Stop at each vowel: A (after @), O, E. Only W O 5 has a consonant before and a number after.",
+    "The answer is One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-20-78340-alphanumeric-mixed-series#1": [
+    "Pattern: symbol - number.",
+    "Stop at each symbol and look at the next element: ¥ 2 and & 6 fit.",
+    "The answer is Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-36-78356-alphanumeric-mixed-series#3": [
+    "Pattern: (not a number) - symbol - consonant.",
+    "Stop at each symbol. The one in the 12th place is followed by H and comes after F. © is followed by Z and comes after P. ∑ is followed by X and comes after M. ¥ is followed by R and comes after U. These four fit.",
+    "@ and $ are followed by consonants but come after numbers; the rest are not followed by consonants.",
+    "The answer is Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#1": [
+    "Count from the right end of the original row, leaving out the symbols.",
+    "T, E, 5, O, W, B, 7, V, C, X, Z, 6, N, M: that is fourteen.",
+    "The answer is M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-alphanumeric-mixed-series#3": [
+    "Fourth to the left of the tenth from the right is the 14th from the right.",
+    "Count only the letters from the right end: S, B, J, M, H, X, Z, J, V, N, Q, G, E, C.",
+    "The fourteenth is C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-74-78394-alphanumeric-mixed-series#2": [
+    "Fifth to the right of the ninth from the left is the 14th from the left.",
+    "Count from the left end, leaving out the numbers: Q, A, @, Z, X, S, W, E, %, C, V, &, F, R.",
+    "The fourteenth is R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-alphanumeric-mixed-series#3": [
+    "Count from the right end, leaving out every consonant (vowels, numbers and symbols all count).",
+    "I, ¥, 8, !, 6, U, 1, #, 9, ∑, 4, A, O: that is thirteen.",
+    "The answer is O."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-alphanumeric-mixed-series#4": [
+    "The row has 36 elements. The 1st, 3rd, 5th ... 35th stay.",
+    "The last one that stays is the 35th. The 11th from the right among them is ten steps of two earlier: the 35 - 20 = 15th element of the original row.",
+    "Count fifteen from the left: P, 2, Q, @, A, L, S, K, &, D, 9, J, 3, $, F.",
+    "The answer is F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-67-78387-miscellaneous-reasoning#3": [
+    "Descending order from left to right: 9, 8, 7, 6, 5, 4, 3, 2.",
+    "From the right end: 2, 3, 4, 5, 6.",
+    "The fifth from the right is 6."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-miscellaneous-reasoning#2": [
+    "The word: D, I, S, C, I, P, L, I, N, E.",
+    "In alphabetical order: C, D, E, I, I, I, L, N, P, S.",
+    "Compare place by place: the fifth (I) and the seventh (L) match.",
+    "The answer is Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-59-78379-miscellaneous-reasoning#1": [
+    "M becomes L, E becomes F, D becomes C, I becomes J, U becomes V, M becomes L.",
+    "The new letters: L, F, C, J, V, L. In order: C, F, J, L, L, V.",
+    "From the right end: V, L, L.",
+    "The third from the right is L."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-56-78376-miscellaneous-reasoning#1": [
+    "A becomes B, G becomes F, N becomes M, I becomes J, V becomes U, E becomes F, E becomes F, R becomes Q.",
+    "The new letters: B, F, M, J, U, F, F, Q.",
+    "Only one letter appears more than once: F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-miscellaneous-reasoning#2": [
+    "1 is taken from each even digit and 2 is added to each odd digit.",
+    "3 becomes 5, 8 becomes 7, 5 becomes 7, 4 becomes 3, 7 becomes 9, 1 becomes 3, 6 becomes 5, 2 becomes 1.",
+    "The new digits: 5, 7, 7, 3, 9, 3, 5, 1. The digits 5, 7 and 3 each appear twice.",
+    "The answer is Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-miscellaneous-reasoning#2": [
+    "The first, third, eighth and ninth letters of NEIGHBOUR are N, I, U, R.",
+    "They make RUIN, and no other common word.",
+    "The second letter of RUIN is U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-68-78388-miscellaneous-reasoning#1": [
+    "The third, fifth, seventh and ninth letters of PERSISTENCE are R, I, T, N.",
+    "With only one vowel, try I in the second or third place: RINT, TIRN, NIRT, TRIN. None is a word.",
+    "No word can be formed, and for that the question asks for Y."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-miscellaneous-reasoning#2": [
+    "The second, fifth, seventh and eighth letters of FREQUENT are R, U, N, T.",
+    "They make TURN and RUNT.",
+    "More than one word can be formed, and for that the question asks for Z."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-56-78376-miscellaneous-reasoning#3": [
+    "The first, fifth, eighth and eleventh letters of ENVIRONMENT are E, R, M, T.",
+    "They make TERM, and no other common word.",
+    "Counting from the right end of TERM: M, R, E.",
+    "The third letter from the right is E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-miscellaneous-reasoning#2": [
+    "The first, fifth, ninth and eleventh letters of INTELLIGENT are I, L, E, T.",
+    "They make TILE and LITE.",
+    "More than one word can be formed, and for that this question asks for Z."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-72-78392-miscellaneous-reasoning#3": [
+    "FHJ, NPR, ACE and KMO each go two letters forward, twice.",
+    "XVT goes two letters backward, twice.",
+    "The answer is XVT."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-miscellaneous-reasoning#2": [
+    "FIM: +3, +4. PSW: +3, +4. GJN: +3, +4. JMQ: +3, +4.",
+    "LRU: L to R is +6, R to U is +3.",
+    "The answer is LRU."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-miscellaneous-reasoning#3": [
+    "NMP: -1, +3. TSV: -1, +3. RQT: -1, +3. FEH: -1, +3.",
+    "KJL: -1, then J to L is only +2.",
+    "The answer is KJL."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-69-78389-miscellaneous-reasoning#3": [
+    "SPQ: -3, +1. DAB: -3, +1. MJK: -3, +1. WTU: -3, +1.",
+    "OMN: O to M is only -2, then +1.",
+    "The answer is OMN."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-73-78393-miscellaneous-reasoning#1": [
+    "The first two letters of each group add up to 27: G (7) and T (20), O (15) and L (12), D (4) and W (23), S (19) and H (8), E (5) and V (22).",
+    "The third letter is two before the second in GTR, OLJ, DWU and EVT.",
+    "In SHG the third letter is only one before the second.",
+    "The answer is SHG."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#3": [
+    "By first letters: A, I, L, P, T.",
+    "The order is ACE, ICE, LED, PAL, TIE.",
+    "The second from the left is ICE."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#1": [
+    "The second word from the left is TIE; its second letter is I. The fifth word is ACE; its second letter is C.",
+    "C is the 3rd letter and I is the 9th. Between them are 9 - 3 - 1 = 5 letters.",
+    "Five is More than four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#2": [
+    "R in front of each word gives RLED, RTIE, RICE, RPAL, RACE.",
+    "RICE and RACE are words.",
+    "The answer is Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#4": [
+    "Moving forward, a vowel appears only from D, H, N or T.",
+    "LED has D (it becomes E). TIE has T (it becomes U). ICE, PAL and ACE have none of those letters.",
+    "A vowel appears in Two of the new words."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-alphabet-series#5": [
+    "No vowel stays a vowel. A consonant moving back becomes a vowel only if it is B, F, J, P or V.",
+    "Only PAL has one of those: P becomes O.",
+    "A vowel appears in One of the new words."
+   ]
+  }
+ }
+}

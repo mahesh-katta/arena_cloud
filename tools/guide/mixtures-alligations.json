@@ -1,0 +1,911 @@
+{
+ "module": "mixtures-alligations",
+ "intro": [
+  "A mixture question is about two things in one vessel, usually milk and water, and what happens when you add something, take something out, or pour two vessels together.",
+  "There are eleven short lessons. The first seven stay with one vessel: reading it, adding to it, and replacing part of it. The last four mix two different lots and bring in the method called alligation. Please go in order the first time, because each lesson uses the one before it."
+ ],
+ "needs": [
+  "ratio",
+  "percent-of",
+  "percent-fractions",
+  "average"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has every rule on one page, and the Course in each bank has many more questions.",
+  "Whatever the wording, begin with one question to yourself: what did **not** change? In one vessel, it is the liquid that was not added. Follow that, and the rest is small arithmetic."
+ ],
+ "lessons": [
+  {
+   "id": "whats-inside",
+   "code": "M1",
+   "title": "Reading what is in the vessel",
+   "plain": "A mixture is a total split into shares. Turn the ratio or the percent into litres before doing anything else.",
+   "needs": [
+    "ratio",
+    "percent-of"
+   ],
+   "teach": [
+    "A mixture question always starts by telling you what is in the vessel, either as a **ratio** or as a **percent**. Your first job is to turn that into actual amounts.",
+    "**From a ratio.** Milk and water are in the ratio 7 : 2 and there are 54 litres. Add the ratio numbers: 7 + 2 = 9 parts. One part is 54 / 9 = 6 litres. So milk is 7 x 6 = 42 and water is 2 x 6 = 12.",
+    "**From a percent.** 40 litres with 10% water means 4 litres of water and 36 litres of milk.",
+    "Two things to keep in mind from the very first day:",
+    "- A percent in a mixture is **out of the whole mixture**, not out of the other liquid. 5 litres of water added to 20 litres of milk is 5 out of 25, which is 20%, not 25%.",
+    "- When you **take some mixture out**, you take milk and water together, in the same ratio they were in. So the ratio left behind does not change; only the total gets smaller.",
+    "That second point is used in almost every exam question later, so let it settle now: after removing 20 litres from 60 litres of a 3 : 2 mixture, the 40 litres left is still 3 : 2."
+   ],
+   "example": {
+    "q": "A vessel has 36 litres of milk and water in the ratio 5 : 4. If 9 litres of the mixture is taken out, how much milk is left?",
+    "steps": [
+     "Taking mixture out does not change the ratio. It is still 5 : 4.",
+     "What is left is 36 - 9 = 27 litres.",
+     "5 + 4 = 9 parts, so one part is 27 / 9 = 3 litres.",
+     "Milk = 5 x 3 = 15 litres."
+    ],
+    "answer": "15 litres."
+   },
+   "check": {
+    "q": "40 litres of mixture has milk and water in the ratio 3 : 1. If 8 litres of the mixture is taken out, how much milk is left?",
+    "options": {
+     "a": "24 litres",
+     "b": "22 litres",
+     "c": "30 litres",
+     "d": "26 litres"
+    },
+    "answer": "A",
+    "why": "32 litres are left, still 3 : 1. One part is 8, so milk is 24. (22 comes from taking all 8 litres out of the milk, but what you remove is a mixture.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#5",
+     "clerk-13-mixture-and-alligation-a-graded#8",
+     "clerk-13-mixture-and-alligation-b-pyq#16",
+     "clerk-13-mixture-and-alligation-b-pyq#8",
+     "clerk-13-mixture-and-alligation-b-pyq#13"
+    ],
+    "tags": [
+     "Ratio and total: turn it into litres.",
+     "A percent is out of the whole mixture.",
+     "Some mixture is taken out: what happens to the ratio?",
+     "Take mixture out, then put one thing in.",
+     "The same reading, done backwards from the final mixture."
+    ]
+   }
+  },
+  {
+   "id": "add-one",
+   "code": "M2",
+   "title": "Adding one thing: the other does not move",
+   "plain": "New: something is added. Whatever you did not add stays exactly as it was, and that fixed amount gives you the answer.",
+   "needs": [
+    "ratio",
+    "percent-words"
+   ],
+   "teach": [
+    "Last lesson you learned to read what is in the vessel. Now something is **poured in**.",
+    "The idea that solves every question of this kind is very simple: **if you add only water, the milk does not change.** If you add only milk, the water does not change.",
+    "So the method is always the same three steps:",
+    "- Work out the two amounts at the start.",
+    "- Hold on to the one that was **not** added. Use the new ratio to find what the other must become.",
+    "- Subtract to see how much was added.",
+    "For example: 60 litres in the ratio 2 : 1 is 40 milk and 20 water. To make it 1 : 2 by adding water, the milk stays 40. In 1 : 2, milk is 1 part, so one part is 40 and water must be 80. Water added = 80 - 20 = 60 litres.",
+    "The exam likes to describe the mixture in words instead of a ratio. Change the words to a ratio first: \"water is 25% of the milk\" means water : milk = 1 : 4, and \"milk is 75% more than water\" means milk = 1.75 times the water."
+   ],
+   "example": {
+    "q": "35 litres of mixture has milk and water in the ratio 4 : 3. How much water must be added to make the ratio 2 : 3?",
+    "steps": [
+     "7 parts = 35, so one part = 5. Milk = 20 litres and water = 15 litres.",
+     "Only water is added, so milk stays 20.",
+     "In the new ratio 2 : 3, milk is 2 parts. So one part = 10 and water must be 30 litres.",
+     "Water added = 30 - 15 = 15 litres."
+    ],
+    "answer": "15 litres."
+   },
+   "check": {
+    "q": "30 litres of mixture has milk and water in the ratio 2 : 1. How much water must be added to make the ratio 1 : 1?",
+    "options": {
+     "a": "5 litres",
+     "b": "10 litres",
+     "c": "15 litres",
+     "d": "20 litres"
+    },
+    "answer": "B",
+    "why": "Milk is 20 and water is 10. Milk stays 20, so for 1 : 1 the water must be 20. Add 10 litres."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#3",
+     "clerk-13-mixture-and-alligation-a-graded#10",
+     "clerk-13-mixture-and-alligation-b-pyq#1",
+     "clerk-13-mixture-and-alligation-b-pyq#7",
+     "clerk-13-mixture-and-alligation-b-pyq#14",
+     "clerk-13-mixture-and-alligation-b-pyq#5"
+    ],
+    "tags": [
+     "Water is added: milk stays fixed.",
+     "Milk is added instead: now water stays fixed.",
+     "The same thing with a real paper's ratios.",
+     "The mixture is described in words, not as a ratio.",
+     "The target is in words: \"75% more than\".",
+     "Two things are added: fix the one you know, then find the other."
+    ]
+   }
+  },
+  {
+   "id": "add-one-percent",
+   "code": "M3",
+   "title": "The same idea when the question speaks in percent",
+   "plain": "New: the mixture is given in percent. Follow the thing that did not change, and ask what percent it is now.",
+   "needs": [
+    "percent-of",
+    "percent-fractions"
+   ],
+   "teach": [
+    "This is the last lesson's idea again, with percent in place of a ratio. There is one small trap in it, and once you see it you will not fall in.",
+    "40 litres of mixture has 10% water. How much water must be added to make it 20% water?",
+    "The tempting answer is \"10% more, so 4 litres\". That is wrong, because when you pour water in, the **total grows too**.",
+    "Follow the thing that did **not** change instead. Milk is 36 litres before and after. At the end water is 20%, so milk is **80%** of the new mixture. If 36 litres is 80%, the whole mixture is 36 / 0.8 = 45 litres. So 45 - 40 = 5 litres were added.",
+    "So the steps are:",
+    "- Find the amount of the thing that is **not** added or removed.",
+    "- Work out what percent it is at the end.",
+    "- Amount / percent gives the new total. Compare the new total with the old one.",
+    "The same steps work when water is **boiled away**: then the salt is the thing that does not change, and the total gets smaller."
+   ],
+   "example": {
+    "q": "30 litres of a solution has 20% acid. How much water must be added so that acid becomes 15% of the solution?",
+    "steps": [
+     "Acid = 20% of 30 = 6 litres. Adding water does not change it.",
+     "At the end, 6 litres is 15% of the solution.",
+     "New total = 6 / 0.15 = 40 litres.",
+     "Water added = 40 - 30 = 10 litres."
+    ],
+    "answer": "10 litres."
+   },
+   "check": {
+    "q": "50 litres of mixture has 20% water. How much water must be added to make water 50% of the mixture?",
+    "options": {
+     "a": "15 litres",
+     "b": "25 litres",
+     "c": "30 litres",
+     "d": "40 litres"
+    },
+    "answer": "C",
+    "why": "Milk is 40 litres and does not change. At the end milk is 50%, so the total is 80 litres. 80 - 50 = 30 litres. (15 is 30% of the old 50, which forgets that the total grows.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#4",
+     "clerk-13-mixture-and-alligation-a-graded#25",
+     "clerk-13-mixture-and-alligation-a-graded#26"
+    ],
+    "tags": [
+     "Water is added: milk is the fixed thing.",
+     "The strong thing is added: now the rest is fixed.",
+     "Water is removed instead of added: the salt is fixed."
+    ]
+   }
+  },
+  {
+   "id": "one-part",
+   "code": "M4",
+   "title": "When no total is given: let the fixed side match",
+   "plain": "New: you are not told how many litres there are. Make the unchanged side the same number in both ratios, and the change is worth one clear number of parts.",
+   "needs": [
+    "ratio",
+    "join-ratios"
+   ],
+   "teach": [
+    "So far the question gave you the total. Often it does not. It only says how the **ratio changed** when something was added.",
+    "Milk and water are 5 : 1. After adding 5 litres of water the ratio is 5 : 2. How much milk is there?",
+    "Only water was added, so milk is the same before and after. Look at the two ratios: milk is 5 in both. So the parts are the same size in both, and water went from 1 part to 2 parts. That one extra part is the 5 litres you added. So one part = 5 litres and milk = 5 parts = 25 litres.",
+    "Sometimes the unchanged side does **not** show the same number. Then make it the same first.",
+    "Milk and water are 3 : 2. After adding milk the ratio is 2 : 1. Water did not change, but it shows as 2 and then as 1. Write 2 : 1 as **4 : 2**. Now water is 2 in both, and milk went from 3 to 4: one part was added.",
+    "So: **find the side that did not change, make its number equal in both ratios, then see how many parts the other side moved.** Those parts equal the litres added.",
+    "If the new mixture is given as a percent, turn it into a ratio first. \"Milk is 80%\" is milk : water = 4 : 1."
+   ],
+   "example": {
+    "q": "Milk and water are in the ratio 3 : 2. When 10 litres of milk is added, the ratio becomes 2 : 1. How much milk was there at first?",
+    "steps": [
+     "Only milk was added, so water did not change.",
+     "Water shows as 2 and then 1. Write the new ratio 2 : 1 as 4 : 2.",
+     "Now it is 3 : 2 before and 4 : 2 after. Milk grew by 1 part, and that is the 10 litres.",
+     "Milk at first = 3 parts = 30 litres."
+    ],
+    "answer": "30 litres."
+   },
+   "check": {
+    "q": "Milk and water are in the ratio 3 : 1. After adding 4 litres of water, the ratio becomes 3 : 2. How much milk is there?",
+    "options": {
+     "a": "4 litres",
+     "b": "8 litres",
+     "c": "12 litres",
+     "d": "16 litres"
+    },
+    "answer": "C",
+    "why": "Milk is 3 in both ratios, so water went from 1 part to 2 parts. One part = 4 litres, and milk = 3 parts = 12 litres."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#14",
+     "clerk-13-mixture-and-alligation-b-pyq#18",
+     "clerk-13-mixture-and-alligation-b-pyq#11",
+     "clerk-13-mixture-and-alligation-b-pyq#12"
+    ],
+    "tags": [
+     "The fixed side already matches.",
+     "The fixed side has to be made to match first.",
+     "The new mixture is given as a percent.",
+     "The same vessel, with a different thing asked."
+    ]
+   }
+  },
+  {
+   "id": "replace-once",
+   "code": "M5",
+   "title": "Take some out, then pour something in",
+   "plain": "New: two moves in a row. Taking out shrinks both liquids in the same ratio; pouring in changes only one. Do them one at a time.",
+   "needs": [
+    "ratio",
+    "percent-of"
+   ],
+   "teach": [
+    "Now the two things you know are joined into one question. Some mixture is **taken out**, and then something is **poured in**. When the same amount of water is poured back, this is called **replacing**.",
+    "Do not try to do both at once. Take them in order:",
+    "- **Step 1, take out.** Both liquids go down, and the ratio stays the same (lesson 1). Work out what is left of each.",
+    "- **Step 2, pour in.** Only one liquid goes up (lesson 2). Add it on.",
+    "60 litres at 3 : 1 is 45 milk and 15 water. Take out 12 litres: 48 litres are left, still 3 : 1, so 36 milk and 12 water. Now pour in 12 litres of water: 36 milk and 24 water, which is 3 : 2.",
+    "The mistake to avoid is taking the 12 litres out of the milk only, or out of the water only. What leaves the vessel is always **mixture**.",
+    "If the amount taken out is given as a percent, such as \"20% of the mixture is removed\", simply keep 80% of each liquid."
+   ],
+   "example": {
+    "q": "50 litres of mixture has milk and water in the ratio 4 : 1. 10 litres is taken out and replaced with water. What is the new ratio of milk to water?",
+    "steps": [
+     "At first: milk 40, water 10.",
+     "Take out 10 litres. 40 litres are left, still 4 : 1: milk 32, water 8.",
+     "Pour in 10 litres of water: milk 32, water 18.",
+     "32 : 18 = 16 : 9."
+    ],
+    "answer": "16 : 9."
+   },
+   "check": {
+    "q": "20 litres of mixture has milk and water in the ratio 3 : 1. 4 litres is taken out and replaced with water. What is the new ratio of milk to water?",
+    "options": {
+     "a": "3 : 2",
+     "b": "11 : 9",
+     "c": "2 : 1",
+     "d": "3 : 1"
+    },
+    "answer": "A",
+    "why": "16 litres are left at 3 : 1, so 12 milk and 4 water. Add 4 water: 12 : 8 = 3 : 2. (11 : 9 comes from taking all 4 litres out of the milk.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#9",
+     "clerk-13-mixture-and-alligation-b-pyq#3",
+     "clerk-13-mixture-and-alligation-b-pyq#2",
+     "clerk-13-mixture-and-alligation-b-pyq#15"
+    ],
+    "tags": [
+     "Replace with water.",
+     "Replace with milk instead.",
+     "The amount removed is a percent, and you choose how much to pour in.",
+     "The start is told in words, and what is poured in is unknown."
+    ]
+   }
+  },
+  {
+   "id": "replace-back",
+   "code": "M6",
+   "title": "Working backwards from a replacement",
+   "plain": "New: the result is given and you must find how much was replaced, or how much there was. Watch the liquid that was not poured back.",
+   "needs": [
+    "ratio",
+    "percent-fractions"
+   ],
+   "teach": [
+    "In the last lesson you were told how much was replaced and found the result. The exam often turns this round: it tells you the **result** and asks how much was replaced, or how big the vessel was.",
+    "Look at the liquid that is **not** poured back. It only goes through one change: some of it leaves with the mixture. Pouring the other liquid in does not touch it.",
+    "And when mixture is taken out, every liquid in it loses the **same fraction**. Take out a quarter of the mixture and you take out a quarter of the milk.",
+    "A can has 60 litres at milk : water = 2 : 1, so 40 litres of milk. Some mixture is replaced with water and the ratio becomes 1 : 1, so milk is now 30 litres. Milk went from 40 to 30: a **quarter** of it left. So a quarter of the mixture was taken out: 60 / 4 = 15 litres.",
+    "Some questions pour in a **different** amount from what was taken out. Then the fraction idea does not apply directly. Use the slower, safe way: call what is left after the removal 5k and 2k (in the old ratio), add what was poured in, and set up the new ratio."
+   ],
+   "example": {
+    "q": "A vessel has 60 litres of milk and water in the ratio 3 : 2. How many litres of the mixture must be replaced with water to make the ratio 1 : 1?",
+    "steps": [
+     "Milk now = 3/5 of 60 = 36 litres. Water is poured back, so milk only loses what is taken out.",
+     "At 1 : 1, milk must be 30 litres.",
+     "Milk goes from 36 to 30: it loses 6 out of 36, which is one-sixth.",
+     "So one-sixth of the mixture is taken out: 60 / 6 = 10 litres."
+    ],
+    "answer": "10 litres."
+   },
+   "check": {
+    "q": "Milk is 80% of a vessel. Some of the mixture is replaced with water and milk becomes 60%. What fraction of the mixture was replaced?",
+    "options": {
+     "a": "1/5",
+     "b": "1/4",
+     "c": "1/3",
+     "d": "3/4"
+    },
+    "answer": "B",
+    "why": "Milk left is 60 out of 80, which is 3/4 of what it was. So 1/4 was taken out. (3/4 is the part that stayed.)"
+   },
+   "shortcut": {
+    "title": "One line for \"how much was replaced\"",
+    "text": [
+     "When the amount taken out and the amount poured back are equal, and the liquid poured back is the **other** one:",
+     "**fraction left = new share / old share** of the liquid that was not poured back.",
+     "Milk share goes from 5/8 to 1/2: fraction left = (1/2) / (5/8) = 4/5, so 1/5 of the vessel was replaced.",
+     "It works with percents too: 40% falling to 30% means 3/4 is left and 1/4 was replaced.",
+     "Do not use it when the amounts out and in are different. Use the 5k and 2k way from the lesson there."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#19",
+     "clerk-13-mixture-and-alligation-b-pyq#17",
+     "clerk-13-mixture-and-alligation-a-graded#27",
+     "clerk-13-mixture-and-alligation-b-pyq#9",
+     "clerk-13-mixture-and-alligation-b-pyq#6"
+    ],
+    "tags": [
+     "How much to replace: the total is known.",
+     "The amount replaced is known: find the vessel.",
+     "The same, then one more step to the liquid asked for.",
+     "A different amount is poured back: use the safe way.",
+     "Two different things are poured back."
+    ]
+   }
+  },
+  {
+   "id": "replace-repeat",
+   "code": "M7",
+   "title": "Replacing again and again",
+   "plain": "New: the same replacement is done two or three times. Each round keeps the same fraction of the milk, so you multiply by that fraction each time.",
+   "needs": [
+    "percent-fractions"
+   ],
+   "teach": [
+    "Here the replacement from the last two lessons is done **more than once**. It looks long, but it becomes one short multiplication.",
+    "A vessel has 50 litres of pure milk. 10 litres is taken out and replaced with water. Each time, 10 out of 50 leaves: one-fifth goes, so **four-fifths of the milk stays**.",
+    "- After the first round: 50 x 4/5 = 40 litres of milk.",
+    "- After the second round: 40 x 4/5 = 32 litres of milk.",
+    "Notice that the second round does not remove 10 litres of milk. It removes 10 litres of **mixture**, which is only 8 litres of milk. That is why the answer is 32 and not 30.",
+    "So: **milk left = milk at the start x (fraction kept) x (fraction kept) ...**, once for each round. The fraction kept is 1 - (amount taken out / vessel size).",
+    "Going backwards: if after two rounds milk : water is 16 : 9, milk is 16/25 of the vessel. 16/25 is 4/5 x 4/5, so 4/5 is kept each round, and one-fifth of the vessel is taken out each time."
+   ],
+   "example": {
+    "q": "A vessel has 80 litres of pure milk. 20 litres is taken out and replaced with water, and this is done once more. How much milk is left?",
+    "steps": [
+     "Each round removes 20 out of 80, one-fourth. So three-fourths of the milk stays each time.",
+     "After round one: 80 x 3/4 = 60 litres.",
+     "After round two: 60 x 3/4 = 45 litres."
+    ],
+    "answer": "45 litres."
+   },
+   "check": {
+    "q": "A vessel has 40 litres of pure milk. 4 litres is taken out and replaced with water, and this is done once more. How much milk is left?",
+    "options": {
+     "a": "32 litres",
+     "b": "32.4 litres",
+     "c": "36 litres",
+     "d": "28.8 litres"
+    },
+    "answer": "B",
+    "why": "Nine-tenths stays each round: 40 x 0.9 = 36, then 36 x 0.9 = 32.4. (32 comes from taking 4 litres of milk both times, but the second 4 litres is mixture.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#15",
+     "clerk-13-mixture-and-alligation-a-graded#30"
+    ],
+    "tags": [
+     "Two rounds: find the milk left.",
+     "The result is given: find the size of the vessel."
+    ]
+   }
+  },
+  {
+   "id": "mix-two",
+   "code": "M8",
+   "title": "Mixing two lots: what the mixture is worth",
+   "plain": "New: two different things are mixed. Add up the totals and divide. The answer leans towards the bigger lot.",
+   "needs": [
+    "average",
+    "percent-of"
+   ],
+   "teach": [
+    "Until now there was one mixture. From here, **two different lots are mixed together**, and the question asks about the result: its price per kg, or its strength.",
+    "There is nothing new to learn for this, only care. **Add up the total value, add up the total quantity, and divide.**",
+    "3 kg of tea at 200 with 2 kg at 250: the total cost is 600 + 500 = 1100, the total weight is 5 kg, so the mixture costs 220 per kg.",
+    "It is not 225, the plain middle of 200 and 250. There is more of the cheaper tea, so the answer sits **closer to 200**. This is worth remembering as a quick check: the mixture always leans towards the bigger lot.",
+    "The same works for strength. 10 litres at 20% alcohol holds 2 litres of alcohol. 20 litres at 50% holds 10 litres. Together: 12 litres of alcohol in 30 litres = 40%.",
+    "When two vessels are given as **ratios**, change each ratio into \"what fraction is milk\" first. 3 : 1 means 3/4 is milk. 2 : 3 means 2/5 is milk. Then mix as above."
+   ],
+   "example": {
+    "q": "4 litres of a 30% acid solution is mixed with 6 litres of a 50% acid solution. What is the strength of the mixture?",
+    "steps": [
+     "Acid in the first = 30% of 4 = 1.2 litres.",
+     "Acid in the second = 50% of 6 = 3 litres.",
+     "Total acid = 4.2 litres in 10 litres.",
+     "4.2 / 10 = 42%."
+    ],
+    "answer": "42%."
+   },
+   "check": {
+    "q": "2 kg of rice at ₹30 per kg is mixed with 3 kg at ₹40 per kg. What is the price of the mixture per kg?",
+    "options": {
+     "a": "₹34",
+     "b": "₹35",
+     "c": "₹36",
+     "d": "₹38"
+    },
+    "answer": "C",
+    "why": "Total cost = 60 + 120 = 180 for 5 kg, so ₹36. (35 is the plain middle. There is more of the ₹40 rice, so the answer leans that way.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#2",
+     "clerk-13-mixture-and-alligation-a-graded#6",
+     "clerk-13-mixture-and-alligation-b-pyq#4",
+     "clerk-13-mixture-and-alligation-a-graded#12",
+     "clerk-13-mixture-and-alligation-a-graded#28",
+     "clerk-13-mixture-and-alligation-a-graded#18"
+    ],
+    "tags": [
+     "Two prices, two quantities.",
+     "The same with strength in percent.",
+     "One jar in percent, the other as a ratio.",
+     "Two ratios, equal quantities.",
+     "Three ratios, equal quantities.",
+     "The mixture's price is known: find a missing price."
+    ]
+   }
+  },
+  {
+   "id": "alligation",
+   "code": "M9",
+   "title": "Alligation: in what ratio should they be mixed?",
+   "plain": "New: the mixture you want is given, and the ratio is asked. Each lot is taken in proportion to how far the other one is from the target.",
+   "needs": [
+    "ratio",
+    "average"
+   ],
+   "teach": [
+    "The last lesson went from quantities to the mixture. This lesson goes the other way: you know the mixture you **want**, and must find the **ratio** to mix in. The method has a name, **alligation**, and it is one small picture.",
+    "Rice at 40 and rice at 55 should give a mixture worth 46.",
+    "Write the two prices on the left and right, and the target in the middle. Then find how far each one is from the target:",
+    "- 40 is **6** away from 46.",
+    "- 55 is **9** away from 46.",
+    "Now **swap them**: the cheap rice gets the 9 and the dear rice gets the 6. So cheap : dear = 9 : 6 = **3 : 2**.",
+    "Why swap? Because the target 46 is nearer to 40, so there must be **more of the 40 rice**. The lot that is closer to the target is always the bigger one. Use this to check you have the ratio the right way round.",
+    "Three notes for the exam:",
+    "- Always write the ratio in the order the question asks.",
+    "- It works for prices, percentages and \"fraction that is milk\" alike.",
+    "- **Water costs 0** and has 0% milk. Pure milk is 100% milk. Put those numbers in like any other."
+   ],
+   "example": {
+    "q": "In what ratio should tea at ₹60 per kg be mixed with tea at ₹90 per kg to get a mixture worth ₹72 per kg?",
+    "steps": [
+     "60 is 12 away from 72. 90 is 18 away from 72.",
+     "Swap: the ₹60 tea gets 18 and the ₹90 tea gets 12.",
+     "18 : 12 = 3 : 2.",
+     "Check: 72 is nearer to 60, so there should be more of the ₹60 tea. Yes."
+    ],
+    "answer": "3 : 2."
+   },
+   "check": {
+    "q": "In what ratio should sugar at ₹20 per kg be mixed with sugar at ₹30 per kg to get a mixture worth ₹24 per kg?",
+    "options": {
+     "a": "2 : 3",
+     "b": "3 : 2",
+     "c": "4 : 6",
+     "d": "1 : 1"
+    },
+    "answer": "B",
+    "why": "20 is 4 away and 30 is 6 away. Swap: 6 : 4 = 3 : 2. 24 is nearer to 20, so there is more of the ₹20 sugar. (2 : 3 is the same sum without the swap.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#1",
+     "clerk-13-mixture-and-alligation-a-graded#17",
+     "clerk-13-mixture-and-alligation-a-graded#20",
+     "clerk-13-mixture-and-alligation-a-graded#7",
+     "clerk-13-mixture-and-alligation-a-graded#24"
+    ],
+    "tags": [
+     "Two prices and a target: the plain case.",
+     "The same with strengths in percent.",
+     "Vessels given as ratios: use the fraction that is milk.",
+     "After the ratio, one quantity is given.",
+     "One of the two is water, which costs nothing."
+    ]
+   }
+  },
+  {
+   "id": "alligation-disguise",
+   "code": "M10",
+   "title": "Alligation where nothing is being mixed",
+   "plain": "New: no liquids at all, but still two rates and one overall rate. The same picture gives the split.",
+   "needs": [
+    "ratio",
+    "average"
+   ],
+   "teach": [
+    "This lesson has no new method. Its purpose is to help you **recognise** alligation when the question does not look like a mixture.",
+    "The sign to look for: **two rates, and one overall rate that lies between them.** Whenever you see that, the swap picture tells you how the whole is split.",
+    "- A trader sells part of his rice at 10% profit and the rest at 25% profit, and makes 16% overall. The two rates are 10 and 25; the overall is 16.",
+    "- A man lends part of his money at 6% and the rest at 10%, and earns 7.4% overall.",
+    "- A jar at 40% alcohol is partly replaced with 19% alcohol and ends at 26%. The part kept is at 40, the part poured in is at 19, and the result is 26.",
+    "In each one: find how far each rate is from the overall, swap, and you have the ratio of the two parts. Then share the total in that ratio.",
+    "If the overall rate is not given directly, find it first. Interest of 1,480 on 20,000 is 7.4%."
+   ],
+   "example": {
+    "q": "A shopkeeper has 60 kg of sugar. He sells part at 8% profit and the rest at 18% profit, and gains 14% on the whole. How much did he sell at 18% profit?",
+    "steps": [
+     "Two rates, 8 and 18. Overall 14.",
+     "8 is 6 away from 14. 18 is 4 away from 14.",
+     "Swap: the 8% part : the 18% part = 4 : 6 = 2 : 3.",
+     "The 18% part = 3/5 of 60 = 36 kg."
+    ],
+    "answer": "36 kg."
+   },
+   "check": {
+    "q": "A class of 30 students has an average mark of 60. The boys average 55 and the girls average 70. How many girls are there?",
+    "options": {
+     "a": "10",
+     "b": "15",
+     "c": "20",
+     "d": "12"
+    },
+    "answer": "A",
+    "why": "55 is 5 away and 70 is 10 away. Swap: boys : girls = 10 : 5 = 2 : 1. Girls = 1/3 of 30 = 10. The average 60 is nearer the boys' 55, so there are more boys."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#13",
+     "clerk-13-mixture-and-alligation-a-graded#16",
+     "clerk-13-mixture-and-alligation-a-graded#22"
+    ],
+    "tags": [
+     "Two profit rates and an overall profit.",
+     "Two interest rates: find the overall rate first.",
+     "A replacement seen as mixing two strengths."
+    ]
+   }
+  },
+  {
+   "id": "mixture-profit",
+   "code": "M11",
+   "title": "Mixtures that end in a profit",
+   "plain": "New: the mixture is sold. Find what one kg of the mixture cost first, then it is an ordinary profit question.",
+   "needs": [
+    "percent-of",
+    "percent-words"
+   ],
+   "teach": [
+    "This last lesson joins mixtures to Profit and Loss. There is always one extra step, and it comes either at the end or at the start.",
+    "**Profit asked at the end.** Two lots are mixed and sold. Find the total cost and the total selling price, and compare them. Profit percent is always measured **on the cost**.",
+    "26 kg at 20 and 30 kg at 36 cost 520 + 1080 = 1600. Sold as 56 kg at 30, that brings in 1680. Profit is 80 on 1600, which is 5%.",
+    "**Profit given at the start.** The question tells you the selling price and the gain, and asks for the mixing ratio. First **undo the profit** to find what the mixture must cost. Selling at 44 with a 10% gain means the mixture costs 44 / 1.1 = 40. Now it is a plain alligation with 40 as the target.",
+    "**Water sold as milk.** Water is free, so whatever a milkman is paid for the water is pure profit. Count only what he paid for the milk as his cost.",
+    "If Profit and Loss itself feels unsure, its first two lessons are enough for this one."
+   ],
+   "example": {
+    "q": "A shopkeeper mixes 20 kg of rice at ₹30 per kg with 30 kg at ₹40 per kg and sells the mixture at ₹45 per kg. What is his profit percent?",
+    "steps": [
+     "Total cost = 20 x 30 + 30 x 40 = 600 + 1200 = 1800 for 50 kg.",
+     "So the mixture costs 1800 / 50 = ₹36 per kg.",
+     "He sells at ₹45, so the profit is ₹9 on ₹36.",
+     "9 / 36 = 25%."
+    ],
+    "answer": "25%."
+   },
+   "check": {
+    "q": "A milkman adds 1 litre of water to every 5 litres of milk and sells the mixture at the cost price of milk. What is his gain percent?",
+    "options": {
+     "a": "16⅔%",
+     "b": "20%",
+     "c": "25%",
+     "d": "5%"
+    },
+    "answer": "B",
+    "why": "He pays for 5 litres and is paid for 6. The extra 1 litre is profit on a cost of 5 litres: 1/5 = 20%. (16⅔% is 1 out of 6, which measures on the selling side.)"
+   },
+   "shortcut": {
+    "title": "Water sold at the price of milk",
+    "text": [
+     "When a milkman sells the mixture at the **cost price of milk**, all of his gain is the water:",
+     "**gain % = water / milk x 100**",
+     "1 litre of water to every 4 litres of milk gives 25%. 1 to every 5 gives 20%.",
+     "Going the other way, a gain of 25% means water : milk = 25 : 100 = 1 : 4.",
+     "This is only for selling at milk's own cost price. If he also raises or lowers the price, work it out fully as in the lesson."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-13-mixture-and-alligation-a-graded#21",
+     "clerk-13-mixture-and-alligation-b-pyq#10",
+     "clerk-13-mixture-and-alligation-a-graded#23",
+     "clerk-13-mixture-and-alligation-a-graded#11",
+     "clerk-13-mixture-and-alligation-a-graded#29"
+    ],
+    "tags": [
+     "Mix, sell, find the profit.",
+     "The lots are given as a ratio instead of in kg.",
+     "One of the lots is water, which costs nothing.",
+     "Water and milk sold at milk's price: find the ratio.",
+     "The profit is given first: undo it, then alligate."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-13-mixture-and-alligation-a-graded#5": [
+    "7 + 2 = 9 parts, so one part = 54 / 9 = 6 litres.",
+    "Milk is 7 parts and water is 2 parts, so the difference is 5 parts.",
+    "5 x 6 = 30 litres."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#8": [
+    "The mixture is 20 + 5 = 25 litres.",
+    "Water is 5 out of 25 = 20%."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#16": [
+    "What is taken out is the same mixture, milk and water together.",
+    "So what stays behind has the same ratio as before: 3 : 2."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#8": [
+    "After removing 35 litres, 85 - 35 = 50 litres is left, still 40% soda.",
+    "Soda left = 40% of 50 = 20 litres.",
+    "Add 15 litres of soda: 20 + 15 = 35 litres."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#13": [
+    "The final mixture is 90 + 28 + 12 = 130 ml, in the ratio 7 : 6.",
+    "13 parts = 130, so one part = 10. Milk is 70 and water is 60.",
+    "Take away what was added: milk was 70 - 28 = 42 and water was 60 - 12 = 48.",
+    "42 : 48 = 7 : 8."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#3": [
+    "3 parts = 60, so milk = 40 and water = 20.",
+    "Milk stays 40. In 1 : 2 the water must be 80.",
+    "Water added = 80 - 20 = 60 litres."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#10": [
+    "3 parts = 45, so milk = 30 and water = 15.",
+    "Water stays 15. In 3 : 1 the milk must be 45.",
+    "Milk added = 45 - 30 = 15 litres, which is not among the first four options.",
+    "None of these."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#1": [
+    "7 parts = 56, so milk = 32 and water = 24.",
+    "Milk stays 32. In 8 : 7, 8 parts = 32, so one part = 4 and water must be 28.",
+    "Y = 28 - 24 = 4."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#7": [
+    "Water is 25% of the milk, so milk : water = 4 : 1.",
+    "5 parts = 120, so milk = 96 and water = 24.",
+    "After adding 12 litres, water = 36 and milk is still 96.",
+    "Water : milk = 36 : 96 = 3 : 8."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#14": [
+    "16 parts = 64, so milk = 36 and water = 28.",
+    "Water stays 28. Milk must be 75% more than 28 = 28 + 21 = 49.",
+    "x = 49 - 36 = 13."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#5": [
+    "8 parts = 208, so milk = 78 and water = 130.",
+    "Water becomes 130 + 70 = 200.",
+    "In 7 : 10, 10 parts = 200, so one part = 20 and milk must be 140.",
+    "X = 140 - 78 = 62."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#4": [
+    "Water = 10% of 40 = 4 litres, so milk = 36 litres.",
+    "At the end water is 20%, so milk is 80% of the new mixture.",
+    "New total = 36 / 0.8 = 45 litres.",
+    "Water added = 45 - 40 = 5 litres."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#25": [
+    "Alcohol = 15% of 400 = 60 ml, so the rest is 340 ml and it does not change.",
+    "At the end alcohol is 32%, so the rest is 68% of the new solution.",
+    "New total = 340 / 0.68 = 500 ml.",
+    "Alcohol added = 500 - 400 = 100 ml."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#26": [
+    "Salt = 5% of 80 = 4 kg. Boiling water away does not change it.",
+    "At the end 4 kg is 8% of the solution, so the solution is 4 / 0.08 = 50 kg.",
+    "Water evaporated = 80 - 50 = 30 kg. (50 kg is what remains, and it is sitting in the options as a trap.)",
+    "30 kg is not among the first four options: None of these."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#14": [
+    "Only water was added, so milk is fixed, and it is 5 in both ratios.",
+    "Water went from 1 part to 2 parts, so one part = 5 litres.",
+    "Milk = 5 parts = 25 litres."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#18": [
+    "Milk is fixed. Write 5 : 4 as 10 : 8 so that milk is 10 in both.",
+    "Water went from 8 parts to 9 parts, so one part = 2 litres.",
+    "New water = 9 parts = 18 L."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#11": [
+    "Milk 80% means milk : water = 4 : 1.",
+    "Water is fixed. Write 4 : 1 as 12 : 3 so that water is 3 in both.",
+    "Milk went from 7 parts to 12 parts. Those 5 parts are 50 litres, so one part = 10.",
+    "Milk at first = 7 parts = 70 litres."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#12": [
+    "Milk 80% means 4 : 1, which is 12 : 3. Water is 3 in both ratios.",
+    "Milk went from 7 to 12 parts, so 5 parts = 50 litres and one part = 10.",
+    "At first milk is 7 parts and water is 3 parts: the difference is 4 parts = 40."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#9": [
+    "At first: milk 45, water 15.",
+    "Take out 12: 48 litres left at 3 : 1, so milk 36 and water 12.",
+    "Add 12 water: 36 : 24 = 3 : 2."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#3": [
+    "At first: milk 24, water 16.",
+    "Take out 10: 30 litres left at 3 : 2, so milk 18 and water 12.",
+    "Add 10 milk: 28 : 12 = 7 : 3."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#2": [
+    "The mixture is 150 milk and 50 water.",
+    "Remove 20%: keep 80% of each, so milk 120 and water 40.",
+    "For water to be 50%, water must equal milk: 120.",
+    "y = 120 - 40 = 80."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#15": [
+    "Water is one-fourth of the mixture, so milk 90 is three-fourths. The mixture is 120 litres with 30 water.",
+    "Remove 36 of 120, which is 30%. Keep 70%: milk 63 and water 21.",
+    "In 7 : 4, 7 parts = 63, so one part = 9 and water must be 36.",
+    "x = 36 - 21 = 15."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#19": [
+    "Milk now = 40 litres. For 1 : 1 in 60 litres, milk must be 30.",
+    "Milk loses 10 out of 40, which is one-fourth.",
+    "So one-fourth of the mixture is replaced: 60 / 4 = 15 litres."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#17": [
+    "P is 5/8 of the mixture and must become 1/2.",
+    "Fraction of P left = (1/2) / (5/8) = 4/5. So 1/5 of the mixture was taken out.",
+    "1/5 of the mixture = 16 litres, so the mixture = 80 L."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#27": [
+    "A is 7/12 of the mixture and becomes 7/16.",
+    "Fraction of A left = (7/16) / (7/12) = 12/16 = 3/4. So 1/4 of the mixture was taken out.",
+    "1/4 of the mixture = 9 litres, so the mixture = 36 litres.",
+    "A at first = 7/12 of 36 = 21 litres."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#9": [
+    "Water is 40% of milk, so milk : water = 5 : 2. Taking mixture out keeps this ratio.",
+    "Call what is left 5k milk and 2k water. After adding 10 litres of water: 2k + 10 = 60% of 5k = 3k, so k = 10.",
+    "Milk left = 50 litres. The 28 litres removed held 5/7 of 28 = 20 litres of milk.",
+    "Milk at first = 50 + 20 = 70 litres."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#6": [
+    "Taking 56 litres out keeps the ratio 4 : 3. Call what is left 4k milk and 3k water.",
+    "After adding: (4k + 4) : (3k + 7) = 8 : 7, so 28k + 28 = 24k + 56 and k = 7.",
+    "Milk left = 28 litres. The 56 litres removed held 4/7 of 56 = 32 litres of milk.",
+    "Milk at first = 28 + 32 = 60 litres."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#15": [
+    "Each round removes 10 out of 50, so 4/5 of the milk stays.",
+    "50 x 4/5 = 40, then 40 x 4/5 = 32 litres."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#30": [
+    "Milk : water = 16 : 9, so milk is 16/25 of the vessel after two rounds.",
+    "16/25 = 4/5 x 4/5, so 4/5 stays each round and 1/5 is taken out.",
+    "1/5 of the vessel = 6 litres, so the vessel holds 30 litres."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#2": [
+    "Total cost = 3 x 200 + 2 x 250 = 1100.",
+    "Total weight = 5 kg, so the price is 1100 / 5 = ₹220.",
+    "₹220 is not among the first four options: None of these."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#6": [
+    "Alcohol = 20% of 10 + 50% of 20 = 2 + 10 = 12 litres.",
+    "Total = 30 litres.",
+    "12 / 30 = 40%."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#4": [
+    "Jar P: milk = 70% of 20 = 14 litres.",
+    "Jar Q: milk = 3/5 of 30 = 18 litres.",
+    "Total milk = 32 litres in 50 litres.",
+    "32 / 50 = 64%."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#12": [
+    "Milk is 3/4 of A and 2/5 of B. Take 20 litres of each (4 and 5 both divide 20).",
+    "Milk = 15 + 8 = 23 litres out of 40. Water = 17 litres.",
+    "Milk : water = 23 : 17."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#28": [
+    "Milk is 1/2, 2/3 and 3/4 of the three glasses. Take 12 litres in each.",
+    "Milk = 6 + 8 + 9 = 23 litres out of 36. Water = 13 litres.",
+    "Milk : water = 23 : 13."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#18": [
+    "Take 1 kg, 1 kg and 2 kg. The 4 kg of mixture costs 4 x 153 = 612.",
+    "The first two cost 126 + 135 = 261.",
+    "The 2 kg of the third variety cost 612 - 261 = 351.",
+    "Price per kg = 351 / 2 = ₹175.50."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#1": [
+    "40 is 6 away from 46. 55 is 9 away from 46.",
+    "Swap: ₹40 rice : ₹55 rice = 9 : 6 = 3 : 2."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#17": [
+    "30 is 10 away from 40. 60 is 20 away from 40.",
+    "Swap: 30% solution : 60% solution = 20 : 10 = 2 : 1."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#20": [
+    "Milk is 4/5 of A and 2/5 of B. The target 1 : 1 is 1/2 milk.",
+    "In tenths: A is 8, B is 4, target is 5. A is 3 away and B is 1 away.",
+    "Swap: A : B = 1 : 3."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#7": [
+    "42 is 12 away from 30. 24 is 6 away from 30.",
+    "Swap: ₹42 sugar : ₹24 sugar = 6 : 12 = 1 : 2.",
+    "The ₹24 sugar is 24 kg, which is 2 parts. So one part = 12 kg."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#24": [
+    "Water costs 0 and milk costs 50. The target is 40.",
+    "0 is 40 away. 50 is 10 away.",
+    "Swap: water : milk = 10 : 40 = 1 : 4.",
+    "Milk is 60 litres, which is 4 parts. So water = 15 litres."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#13": [
+    "10 is 6 away from 16. 25 is 9 away from 16.",
+    "Swap: the 10% part : the 25% part = 9 : 6 = 3 : 2.",
+    "The 25% part = 2/5 of 50 = 20 kg."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#16": [
+    "Overall rate = 1,480 / 20,000 = 7.4%.",
+    "6 is 1.4 away. 10 is 2.6 away.",
+    "Swap: at 6% : at 10% = 2.6 : 1.4 = 13 : 7.",
+    "At 6% = 13/20 of 20,000 = ₹13,000."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#22": [
+    "The whisky kept is 40%, the whisky poured in is 19%, and the result is 26%.",
+    "40 is 14 away from 26. 19 is 7 away from 26.",
+    "Swap: kept : poured in = 7 : 14 = 1 : 2.",
+    "The part replaced is 2 out of 3 = 2/3."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#21": [
+    "Total cost = 26 x 20 + 30 x 36 = 520 + 1080 = 1600.",
+    "Selling price = 56 x 30 = 1680.",
+    "Profit = 80 on 1600 = 5%, which is not among the first four options.",
+    "None of these."
+   ],
+   "clerk-13-mixture-and-alligation-b-pyq#10": [
+    "Take 7 litres and 5 litres. Cost = 7 x 30 + 5 x 54 = 210 + 270 = 480.",
+    "Cost per litre = 480 / 12 = 40.",
+    "Sold at 44: profit is 4 on 40 = 10%."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#23": [
+    "He pays only for the milk: 20 x 40 = 800.",
+    "He sells 25 litres at 44 = 1100.",
+    "Profit = 300 on 800 = 37.5%."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#11": [
+    "Let milk cost 100 a litre. He sells at 100 and gains 25%, so the mixture costs him 100 / 1.25 = 80 a litre.",
+    "Water costs 0, milk costs 100, target 80. Water is 80 away and milk is 20 away.",
+    "Swap: water : milk = 20 : 80 = 1 : 4."
+   ],
+   "clerk-13-mixture-and-alligation-a-graded#29": [
+    "Selling at 44 with a 10% gain means the mixture costs 44 / 1.1 = 40.",
+    "36 is 4 away from 40. 45 is 5 away from 40.",
+    "Swap: ₹36 pulses : ₹45 pulses = 5 : 4."
+   ]
+  }
+ }
+}

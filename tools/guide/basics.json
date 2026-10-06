@@ -1,0 +1,448 @@
+{
+  "title": "Basics",
+  "intro": [
+    "Nine small ideas that every arithmetic topic leans on. Each takes a few minutes.",
+    "If you already know one, answer its two quick questions and move on. If a lesson later feels hard, it will point you back to the idea it needs."
+  ],
+  "lessons": [
+    {
+      "id": "time-words",
+      "title": "Now, ago and hence",
+      "plain": "The words a question uses to move people forward and backward in time.",
+      "teach": [
+        "Every age question talks about three kinds of moments:",
+        "- **Present** or **now**: today.",
+        "- **Ago** or **before**: in the past. \"5 years ago\" means take 5 away from today's age.",
+        "- **Hence** or **after**: in the future. \"5 years hence\" means add 5 to today's age.",
+        "\"Hence\" is an old word that exam papers still love. Whenever you see it, read it as \"from now\".",
+        "One more thing to notice early: when two moments are on opposite sides of today, the years between them **add up**. From \"4 years ago\" to \"8 years hence\" is 4 + 8 = 12 years."
+      ],
+      "example": {
+        "q": "Riya is 20 years old now. How old was she 6 years ago, and how old will she be 6 years hence?",
+        "steps": [
+          "Ago means subtract: 20 - 6 = 14.",
+          "Hence means add: 20 + 6 = 26."
+        ],
+        "answer": "14 years, and 26 years."
+      },
+      "checks": [
+        {
+          "q": "Arun is 31 now. What will his age be 9 years hence?",
+          "options": {
+            "a": "22",
+            "b": "31",
+            "c": "40",
+            "d": "49"
+          },
+          "answer": "C",
+          "why": "Hence means from now, so add: 31 + 9 = 40."
+        },
+        {
+          "q": "How many years are there between \"3 years ago\" and \"7 years hence\"?",
+          "options": {
+            "a": "4",
+            "b": "7",
+            "c": "10",
+            "d": "21"
+          },
+          "answer": "C",
+          "why": "The two moments are on opposite sides of today, so the gaps add: 3 + 7 = 10."
+        }
+      ]
+    },
+    {
+      "id": "ratio",
+      "title": "What a ratio really says",
+      "plain": "A ratio counts equal parts. Find the size of one part and everything else follows.",
+      "teach": [
+        "\"The ages of A and B are in the ratio 3 : 5\" does **not** say A is 3 and B is 5.",
+        "It says: cut both ages into equal **parts**. A has 3 of those parts and B has 5. We do not yet know how big one part is.",
+        "So the whole job is to find **the size of one part**. You need one real number to do that, and you match it to the right number of parts:",
+        "| The question gives you | Match it to | Example with 3 : 5 |",
+        "| The sum of the two | parts added | sum 64 is 3 + 5 = 8 parts |",
+        "| The difference of the two | parts subtracted | difference 12 is 5 - 3 = 2 parts |",
+        "| One person's actual value | that person's parts | B is 40, and B has 5 parts |",
+        "Then divide: real number / matching parts = one part.",
+        "In these lessons \"one part\" and \"1 unit\" mean the same thing."
+      ],
+      "example": {
+        "q": "A and B are in the ratio 3 : 5 and together they add up to 64. Find B.",
+        "steps": [
+          "The real number is a sum, so match it to parts added: 3 + 5 = 8 parts.",
+          "One part = 64 / 8 = 8.",
+          "B has 5 parts, so B = 5 x 8 = 40.",
+          "Quick check: A = 3 x 8 = 24, and 24 + 40 = 64. It fits."
+        ],
+        "answer": "B = 40."
+      },
+      "checks": [
+        {
+          "q": "Two numbers are in the ratio 2 : 7 and their sum is 45. What is one part?",
+          "options": {
+            "a": "5",
+            "b": "9",
+            "c": "15",
+            "d": "45"
+          },
+          "answer": "A",
+          "why": "A sum matches parts added: 2 + 7 = 9 parts. One part = 45 / 9 = 5."
+        },
+        {
+          "q": "Two numbers are in the ratio 4 : 7 and the bigger one is 18 more than the smaller. What is the bigger number?",
+          "options": {
+            "a": "24",
+            "b": "36",
+            "c": "42",
+            "d": "63"
+          },
+          "answer": "C",
+          "why": "A difference matches parts subtracted: 7 - 4 = 3 parts = 18, so one part = 6. The bigger number is 7 x 6 = 42."
+        }
+      ]
+    },
+    {
+      "id": "join-ratios",
+      "title": "Joining two ratios",
+      "plain": "When one name appears in two ratios, make that name the same number in both.",
+      "teach": [
+        "Sometimes you get two ratios that share a name: A : B = 4 : 5 and B : C = 3 : 4.",
+        "B is 5 parts in the first and 3 parts in the second. Those are different-sized parts, so the two ratios cannot be read together yet.",
+        "Fix it by making B the **same number** in both. A number that both 5 and 3 go into is 15.",
+        "- Multiply the first ratio by 3: 4 : 5 becomes 12 : 15.",
+        "- Multiply the second ratio by 5: 3 : 4 becomes 15 : 20.",
+        "Now B is 15 in both, and you can write one line: A : B : C = 12 : 15 : 20.",
+        "Multiplying every number of a ratio by the same thing never changes the ratio. 4 : 5 and 12 : 15 are the same statement."
+      ],
+      "example": {
+        "q": "A : B = 2 : 3 and B : C = 4 : 5. Write A : B : C.",
+        "steps": [
+          "B is 3 in one ratio and 4 in the other. Both go into 12.",
+          "Multiply the first by 4: 2 : 3 becomes 8 : 12.",
+          "Multiply the second by 3: 4 : 5 becomes 12 : 15.",
+          "B is now 12 in both, so join them."
+        ],
+        "answer": "A : B : C = 8 : 12 : 15."
+      },
+      "checks": [
+        {
+          "q": "A : B = 1 : 2 and B : C = 3 : 4. What is A : B : C?",
+          "options": {
+            "a": "1 : 2 : 4",
+            "b": "3 : 6 : 8",
+            "c": "1 : 3 : 4",
+            "d": "3 : 2 : 4"
+          },
+          "answer": "B",
+          "why": "B is 2 and 3, so use 6. First ratio x 3 gives 3 : 6. Second ratio x 2 gives 6 : 8. Together: 3 : 6 : 8."
+        },
+        {
+          "q": "Is 6 : 10 the same ratio as 3 : 5?",
+          "options": {
+            "a": "Yes",
+            "b": "No"
+          },
+          "answer": "A",
+          "why": "Divide both numbers of 6 : 10 by 2 and you get 3 : 5. Multiplying or dividing both sides by the same number keeps the ratio."
+        }
+      ]
+    },
+    {
+      "id": "lcm",
+      "title": "A number that several numbers go into",
+      "plain": "Finding one convenient number that 10, 12 and 15 all divide exactly. Its formal name is the LCM.",
+      "teach": [
+        "Many questions become easy if you can find **one number that several given numbers all go into exactly**. For 10 and 15, the number 30 works: 30 / 10 = 3 and 30 / 15 = 2, with nothing left over.",
+        "The smallest such number is called the **LCM** (lowest common multiple). You do not need a formal method for it. This simple routine is enough:",
+        "1. Take the **biggest** of the numbers.",
+        "2. Go through its multiples: once, twice, three times it.",
+        "3. Stop at the first one that all the other numbers go into.",
+        "For 10, 12 and 15: the biggest is 15. Try 15 (10 does not go in), 30 (12 does not), 45 (no), 60. Yes: 60 / 10 = 6, 60 / 12 = 5, 60 / 15 = 4. So 60 is the number.",
+        "If you cannot spot the smallest one quickly, any common multiple will do the job. For 10 and 15, using 150 instead of 30 gives the same final answer; the numbers along the way are just bigger."
+      ],
+      "example": {
+        "q": "Find a number that 12 and 18 both go into exactly.",
+        "steps": [
+          "Take the bigger number, 18, and go through its multiples.",
+          "18: does 12 go into it? No.",
+          "36: does 12 go into it? Yes, 3 times."
+        ],
+        "answer": "36."
+      },
+      "checks": [
+        {
+          "q": "What is the smallest number that 6 and 8 both go into exactly?",
+          "options": {
+            "a": "14",
+            "b": "24",
+            "c": "36",
+            "d": "48"
+          },
+          "answer": "B",
+          "why": "Multiples of 8: 8 (6 does not go in), 16 (no), 24 (yes, 4 times). 48 also works but is not the smallest."
+        },
+        {
+          "q": "What is the smallest number that 10, 15 and 20 all go into exactly?",
+          "options": {
+            "a": "30",
+            "b": "40",
+            "c": "60",
+            "d": "300"
+          },
+          "answer": "C",
+          "why": "Multiples of 20: 20 (15 does not go in), 40 (no), 60. 60 / 10 = 6, 60 / 15 = 4, 60 / 20 = 3."
+        }
+      ]
+    },
+    {
+      "id": "average",
+      "title": "Average means total",
+      "plain": "The moment you see an average, turn it into a total. Totals are easy to work with.",
+      "teach": [
+        "The average of a group is the total shared out equally: average = total / number of people.",
+        "Turn that around and you get the only form you will ever need:",
+        "**total = average x number of people**",
+        "Make this a habit. When a question says \"the average age of A, B and C is 30\", write \"total = 90\" straight away and forget the 30. Averages are awkward to move around; totals simply add and subtract.",
+        "One more rule about totals and time. Each person grows 1 year per year, so a group's total grows by **people x years**. Three people, 5 years later: the total is 15 more, not 5 more."
+      ],
+      "example": {
+        "q": "The average age of A, B and C is 30 years. A is 25 and B is 28. Find C.",
+        "steps": [
+          "Average to total: 30 x 3 = 90.",
+          "A and B use up 25 + 28 = 53.",
+          "C is what is left: 90 - 53 = 37."
+        ],
+        "answer": "C = 37 years."
+      },
+      "checks": [
+        {
+          "q": "The average age of 4 friends is 22. What is the total of their ages?",
+          "options": {
+            "a": "22",
+            "b": "26",
+            "c": "66",
+            "d": "88"
+          },
+          "answer": "D",
+          "why": "Total = average x people = 22 x 4 = 88."
+        },
+        {
+          "q": "Three sisters have a total age of 60 today. What will their total age be 4 years hence?",
+          "options": {
+            "a": "64",
+            "b": "68",
+            "c": "72",
+            "d": "76"
+          },
+          "answer": "C",
+          "why": "Each of the three grows 4 years, so the total grows 3 x 4 = 12. 60 + 12 = 72."
+        }
+      ]
+    },
+    {
+      "id": "percent-of",
+      "title": "A percent of a number",
+      "plain": "Finding 24% of 5,000 without a calculator, by going through 1% and 10%.",
+      "teach": [
+        "\"Percent\" means \"out of a hundred\". 24% of something is 24 of its hundredths.",
+        "The easiest way to find any percent is to find **1%** first. 1% of a number is the number divided by 100: move the decimal point two places left. 1% of 5,000 is 50.",
+        "Then multiply. 24% of 5,000 = 24 x 50 = 1,200.",
+        "For bigger percents, **10%** is a handy stepping stone (divide by 10). 30% of 1,600 is 3 lots of 160 = 480.",
+        "You will also use this backwards all the time: if you know that 36% of a sum is 1,440, then 1% is 1,440 / 36 = 40, and the whole sum, which is 100%, is 4,000.",
+        "That backwards step, \"find 1%, then multiply by 100\", is the most useful single move in arithmetic for this exam."
+      ],
+      "example": {
+        "q": "15% of a number is 90. What is the number?",
+        "steps": [
+          "Find 1%: 90 / 15 = 6.",
+          "The whole number is 100%: 100 x 6 = 600.",
+          "Check: 10% of 600 is 60 and 5% is 30. Together 90."
+        ],
+        "answer": "The number is 600."
+      },
+      "checks": [
+        {
+          "q": "What is 12% of 2,500?",
+          "options": {
+            "a": "25",
+            "b": "120",
+            "c": "300",
+            "d": "3,000"
+          },
+          "answer": "C",
+          "why": "1% of 2,500 is 25. 12 x 25 = 300."
+        },
+        {
+          "q": "20% of a sum is Rs 800. What is the sum?",
+          "options": {
+            "a": "Rs 160",
+            "b": "Rs 1,600",
+            "c": "Rs 4,000",
+            "d": "Rs 16,000"
+          },
+          "answer": "C",
+          "why": "1% is 800 / 20 = 40. The sum is 100 x 40 = 4,000."
+        }
+      ]
+    },
+    {
+      "id": "percent-fractions",
+      "title": "Percents that are simple fractions",
+      "plain": "25% is a quarter, 20% is a fifth. Knowing a few of these makes awkward percents easy.",
+      "teach": [
+        "Some percents are just familiar fractions wearing a different coat. 50% is a half. 25% is a quarter. When you recognise them, you can divide instead of multiplying, which is quicker and safer.",
+        "\"25% of 480\" is a quarter of 480: 120. No need to go through 1%.",
+        "This matters most for the percents that look ugly as decimals. Exam papers write 16.66% or 16 2/3% when they mean **one sixth**, and 33.33% or 33 1/3% when they mean **one third**. Treat them as the fraction and they become easy.",
+        "Here are the ones worth knowing. Read through them now; they will settle in as you meet them in questions.",
+        "| Percent | Fraction |",
+        "| 50% | 1/2 |",
+        "| 33 1/3% | 1/3 |",
+        "| 66 2/3% | 2/3 |",
+        "| 25% | 1/4 |",
+        "| 75% | 3/4 |",
+        "| 20% | 1/5 |",
+        "| 16 2/3% | 1/6 |",
+        "| 12.5% | 1/8 |",
+        "| 10% | 1/10 |",
+        "| 5% | 1/20 |",
+        "A percent above 100 works the same way: 125% is 100% + 25%, which is one and a quarter, or 5/4."
+      ],
+      "example": {
+        "q": "What is 16 2/3% of 180?",
+        "steps": [
+          "16 2/3% is one sixth.",
+          "One sixth of 180 is 180 / 6 = 30."
+        ],
+        "answer": "30."
+      },
+      "checks": [
+        {
+          "q": "What is 12.5% of 640?",
+          "options": {
+            "a": "64",
+            "b": "80",
+            "c": "125",
+            "d": "160"
+          },
+          "answer": "B",
+          "why": "12.5% is one eighth, and 640 / 8 = 80."
+        },
+        {
+          "q": "66 2/3% of a number is 160. What is the number?",
+          "options": {
+            "a": "106 2/3",
+            "b": "240",
+            "c": "320",
+            "d": "480"
+          },
+          "answer": "B",
+          "why": "66 2/3% is two thirds. If two thirds is 160, one third is 80, and the whole is 240."
+        }
+      ]
+    },
+    {
+      "id": "percent-words",
+      "title": "Percent and fraction words",
+      "plain": "How to turn \"25% more than\" or \"two-thirds of\" into a simple ratio.",
+      "teach": [
+        "Questions often compare two people with a percent instead of a ratio. You can always turn it into a ratio, and then it is an ordinary ratio question.",
+        "The method: call the person you are comparing **with** 100. Then write the other person next to it.",
+        "- \"A is 25% **more than** B\": B is 100, A is 125. A : B = 125 : 100 = 5 : 4.",
+        "- \"A is 20% **less than** B\": B is 100, A is 80. A : B = 80 : 100 = 4 : 5.",
+        "- \"A is 120% **of** B\": B is 100, A is 120. A : B = 6 : 5.",
+        "The one trap worth learning now: **\"more than\" adds to the 100, \"of\" does not.** \"200% more than B\" is 300 against 100, which is 3 : 1. \"200% of B\" is 200 against 100, which is 2 : 1. Read that small word carefully.",
+        "Fractions work the same way. \"A is 2/3 of B\" means A : B = 2 : 3.",
+        "You do not need to memorise the table below. It is here so you can look things up until they stick.",
+        "| The words say A is ... B | A : B |",
+        "| 20% more than | 6 : 5 |",
+        "| 25% more than | 5 : 4 |",
+        "| 40% more than | 7 : 5 |",
+        "| 50% more than | 3 : 2 |",
+        "| 75% more than | 7 : 4 |",
+        "| 100% more than, or twice | 2 : 1 |",
+        "| 150% more than | 5 : 2 |",
+        "| 200% more than | 3 : 1 |",
+        "| 20% less than | 4 : 5 |",
+        "| 25% less than | 3 : 4 |",
+        "| 1/3 of | 1 : 3 |",
+        "| 125% of | 5 : 4 |"
+      ],
+      "example": {
+        "q": "A's age is 40% more than B's age. Write A : B.",
+        "steps": [
+          "Call B 100.",
+          "40% more means add 40: A is 140.",
+          "A : B = 140 : 100. Divide both by 20."
+        ],
+        "answer": "A : B = 7 : 5."
+      },
+      "checks": [
+        {
+          "q": "\"P is 50% more than Q.\" What is P : Q?",
+          "options": {
+            "a": "1 : 2",
+            "b": "2 : 1",
+            "c": "3 : 2",
+            "d": "5 : 1"
+          },
+          "answer": "C",
+          "why": "Q is 100, P is 150. 150 : 100 = 3 : 2."
+        },
+        {
+          "q": "\"P is 200% more than Q.\" How many times Q is P?",
+          "options": {
+            "a": "2 times",
+            "b": "3 times",
+            "c": "200 times",
+            "d": "Half"
+          },
+          "answer": "B",
+          "why": "\"More than\" adds to the 100: Q is 100, P is 100 + 200 = 300. That is 3 times."
+        }
+      ]
+    },
+    {
+      "id": "check-options",
+      "title": "Let the options help you",
+      "plain": "Every question comes with five answers. Use them to check your work, and sometimes to find it.",
+      "teach": [
+        "In this exam you never have to produce an answer from nothing. One of the five options is right, and that is useful in two ways.",
+        "**1. Check before you move on.** Put your answer back into the question. If every sentence of the question is still true, you are done. This takes a few seconds and catches most slips.",
+        "**2. Test options when you are stuck.** Ages come out as whole numbers. If a person has 8 parts of a ratio, that person's age must be a multiple of 8. Options that are not can be crossed out without solving anything.",
+        "And always read the **last line** again before you mark. The question may ask for the age 5 years ago, or for the sum, when you have just found today's age of one person. The option for today's age is usually sitting there waiting."
+      ],
+      "example": {
+        "q": "The ages of M and T are in the ratio 5 : 8. T's age five years ago was one of: 30, 35, 40, 45. Which can it be?",
+        "steps": [
+          "T has 8 parts today, so T's age today is a multiple of 8.",
+          "Add 5 to each option to get today's age: 35, 40, 45, 50.",
+          "Only 40 is a multiple of 8."
+        ],
+        "answer": "35 (T is 40 today)."
+      },
+      "checks": [
+        {
+          "q": "You solved a question and found B = 42 today. The question asks for \"B's age 4 years ago\". What do you mark?",
+          "options": {
+            "a": "42",
+            "b": "46",
+            "c": "38",
+            "d": "4"
+          },
+          "answer": "C",
+          "why": "The last line asks for 4 years ago: 42 - 4 = 38. Marking 42 is the most common slip in this topic."
+        },
+        {
+          "q": "A's age is 7 parts of a ratio. Which of these can be A's age?",
+          "options": {
+            "a": "30",
+            "b": "36",
+            "c": "40",
+            "d": "42"
+          },
+          "answer": "D",
+          "why": "A's age must be a multiple of 7. Only 42 = 7 x 6 is."
+        }
+      ]
+    }
+  ]
+}

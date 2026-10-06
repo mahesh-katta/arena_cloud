@@ -1,0 +1,926 @@
+{
+ "module": "percentages",
+ "intro": [
+  "A percent is a fraction of a whole, written out of a hundred. Almost every mistake in this topic comes from one place: forgetting **which whole** a percent is measured against.",
+  "So these ten short lessons keep returning to one question: \"percent of what?\" The first three build the tools. The rest are the settings the exam uses, one at a time. Go in order the first time."
+ ],
+ "needs": [
+  "percent-of",
+  "percent-words",
+  "percent-fractions",
+  "ratio"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the fraction table and every question type on one page, and the Course in each bank has many more.",
+  "The ideas here are also the foundation for Profit & Loss, Interest and Data Interpretation, so time spent making them comfortable is repaid several times over."
+ ],
+ "lessons": [
+  {
+   "id": "percent-basics",
+   "code": "P1",
+   "title": "A percent of a number, forwards and backwards",
+   "plain": "The starting point: what 1% is worth, and three small questions that everything else is built from.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "Percent means \"out of a hundred\". The whole of anything is 100%, and the surest way to work with it is to find what **1%** is worth.",
+    "Three small questions come up again and again. Learn to tell them apart and this topic becomes calm.",
+    "**1. Find a percent of a number.** \"What is 24% of 450?\" 1% of 450 is 4.5, so 24% is 24 x 4.5 = 108.",
+    "**2. Find the whole from a part.** \"35% of a number is 168.\" Go backwards: 1% is 168 / 35 = 4.8, so the number is 480. If a question then asks for 60% of that number, you do not even need the 480: 60 x 4.8 = 288.",
+    "**3. Find what percent one number is of another.** \"72 is what percent of 450?\" Put the part over the whole and multiply by 100: 72 / 450 x 100 = 16%.",
+    "A **percent change** is the third question in disguise: the change, over the **starting** value. A price that goes from Rs 400 to Rs 500 has changed by 100, and 100 / 400 = 25%. Always divide by where it started, not where it ended.",
+    "The same thinking handles shares of one whole. If 40% of students chose science and 25% chose sports, the rest are 100 - 40 - 25 = 35%. Give that 35% its real number and you have 1%."
+   ],
+   "example": {
+    "q": "18% of a number is 81. What is 40% of the same number?",
+    "steps": [
+     "18% of the number is 81, so 1% is 81 / 18 = 4.5.",
+     "We want 40%: 40 x 4.5 = 180.",
+     "There was no need to find the number itself. (It is 450, if you want to check: 40% of 450 = 180.)"
+    ],
+    "answer": "180."
+   },
+   "check": {
+    "q": "45 is what percent of 180?",
+    "options": {
+     "a": "4%",
+     "b": "20%",
+     "c": "25%",
+     "d": "40%"
+    },
+    "answer": "C",
+    "why": "Part over whole: 45 / 180 = 1/4, and one quarter is 25%."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#2",
+     "clerk-06-percentage-a-graded#7",
+     "clerk-06-percentage-a-graded#1",
+     "clerk-06-percentage-a-graded#5",
+     "clerk-06-percentage-b-pyq#1"
+    ],
+    "tags": [
+     "What percent is one number of another?",
+     "A percent change.",
+     "A part is known: jump straight to another part.",
+     "The number after an increase is known.",
+     "Shares of one whole."
+    ]
+   },
+   "more": [
+    {
+     "tag": "Two percents of the same number",
+     "q": "The difference between 62% of a number and 38% of the same number is 96. What is the number?",
+     "options": {
+      "a": "96",
+      "b": "240",
+      "c": "384",
+      "d": "400"
+     },
+     "answer": "D",
+     "why": "Both percents are of the same number, so subtract them first: 62 - 38 = 24%. 24% = 96, so 1% = 4 and the number is 400."
+    }
+   ],
+   "shortcut": {
+    "title": "Swap the two numbers",
+    "text": [
+     "**x% of y is always the same as y% of x.** So when a percent looks awkward, try it the other way round.",
+     "16% of 25 looks fiddly. But 25% of 16 is a quarter of 16, which is 4. Same answer.",
+     "36% of 50 = 50% of 36 = 18. And 48% of 12.5 = 12.5% of 48 = one eighth of 48 = 6.",
+     "It works because both are just x times y, divided by 100."
+    ]
+   }
+  },
+  {
+   "id": "more-less",
+   "code": "P5",
+   "title": "\"More than\", \"less than\", and which one is the 100",
+   "plain": "New: two things are compared by a percent. The whole skill is knowing which of them counts as 100.",
+   "needs": [
+    "percent-words"
+   ],
+   "teach": [
+    "\"A's income is 60% more than B's income.\" Sentences like this compare two things, and the percent is always measured against the one that comes **after \"than\"**. So B is the 100, and A is 160.",
+    "This small habit removes most of the confusion in the topic: **find the word \"than\" (or \"of\"), call that thing 100, and write the other one beside it.**",
+    "Now the classic trap. \"A is 60% more than B. B is what percent less than A?\" It is tempting to say 60%. But the second sentence has a different thing after \"than\": now **A** is the base.",
+    "- A is 160 and B is 100. The gap is 60.",
+    "- Measured against A, that is 60 / 160 = 37.5%.",
+    "The gap in numbers is the same both ways. The percent is different because the base is different.",
+    "When three things are involved, give the 100 to the one the others are described against. \"Two numbers are 20% and 50% more than a third number\": the third is 100, so the two are 120 and 150. Now any question about them is ordinary arithmetic.",
+    "If the description is a chain, such as \"A is 30% less than B, and B is 50% more than C\", start from the end of the chain: C is 100, so B is 150, and A is 30% less than 150, which is 105."
+   ],
+   "example": {
+    "q": "P is 20% more than Q, and R is 40% less than Q. P is what percent of R?",
+    "steps": [
+     "Both are described against Q, so Q is the 100.",
+     "P is 20% more: 120.",
+     "R is 40% less: 60.",
+     "P as a percent of R: 120 / 60 x 100 = 200%."
+    ],
+    "answer": "P is 200% of R."
+   },
+   "check": {
+    "q": "A's salary is 25% more than B's salary. B's salary is what percent less than A's salary?",
+    "options": {
+     "a": "20%",
+     "b": "25%",
+     "c": "33 1/3%",
+     "d": "80%"
+    },
+    "answer": "A",
+    "why": "B is 100 and A is 125. The gap is 25, but now A is the base: 25 / 125 = 20%. (25% is the tempting wrong answer.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#3",
+     "clerk-06-percentage-a-graded#8",
+     "clerk-06-percentage-a-graded#20",
+     "clerk-06-percentage-a-graded#15"
+    ],
+    "tags": [
+     "The classic turn-around.",
+     "Two things described against a third.",
+     "A chain of three.",
+     "A percentage error."
+    ]
+   },
+   "more": [
+    {
+     "tag": "The turn-around the other way",
+     "q": "A is 20% less than B. B is what percent more than A?",
+     "options": {
+      "a": "20%",
+      "b": "25%",
+      "c": "80%",
+      "d": "125%"
+     },
+     "answer": "B",
+     "why": "B is 100 and A is 80. The gap is 20, but now A is the base: 20 / 80 = 25%."
+    }
+   ],
+   "shortcut": {
+    "title": "The turn-around as fractions",
+    "text": [
+     "If A is **1/n more** than B, then B is **1/(n + 1) less** than A. The bottom number simply goes up by one.",
+     "25% more is 1/4 more, so the way back is 1/5 less: 20%. And 50% more (1/2) turns into 1/3 less: 33 1/3%.",
+     "It also runs in reverse. If A is 1/n less than B, then B is 1/(n - 1) more than A: 20% less (1/5) turns into 1/4 more, which is 25%."
+    ]
+   }
+  },
+  {
+   "id": "equal-percents",
+   "code": "P5",
+   "title": "\"40% of A equals 60% of B\"",
+   "plain": "New: two different percents of two numbers are equal. That sentence is really a ratio.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "\"40% of A is equal to 60% of B.\" A smaller share of A matches a bigger share of B, so A must be the bigger number. How much bigger? **Swap the two percents and you have the ratio.**",
+    "A : B = 60 : 40 = 3 : 2.",
+    "Why it works: try it. If A is 3 and B is 2, then 40% of 3 is 1.2 and 60% of 2 is 1.2. They match. Each number takes the other one's percent.",
+    "Once the sentence has become a ratio, you are back in familiar country. The question will give one real number, and you match it to parts exactly as in the Basics:",
+    "- one of the numbers itself;",
+    "- their sum or their difference;",
+    "- their average, which is half the parts added together.",
+    "Find one part, and every number in the question follows.",
+    "Some questions hide the sentence a little: \"5% of X is 25% more than Y\". Translate one phrase at a time. 5% of X is X / 20. \"25% more than Y\" is 1.25 Y. So X / 20 = 1.25 Y, which gives X = 25 Y, a ratio of 25 : 1."
+   ],
+   "example": {
+    "q": "40% of X is equal to 50% of Y, and the sum of X and Y is 180. Find X.",
+    "steps": [
+     "Swap the percents to get the ratio: X : Y = 50 : 40 = 5 : 4.",
+     "The real number is a sum, so add the parts: 5 + 4 = 9 parts = 180.",
+     "One part = 20.",
+     "X = 5 x 20 = 100.",
+     "Check: Y is 80. 40% of 100 is 40, and 50% of 80 is 40."
+    ],
+    "answer": "X is 100."
+   },
+   "check": {
+    "q": "30% of A is equal to 20% of B. What is the ratio A : B?",
+    "options": {
+     "a": "3 : 2",
+     "b": "2 : 3",
+     "c": "1 : 1",
+     "d": "3 : 5"
+    },
+    "answer": "B",
+    "why": "Swap the percents: A : B = 20 : 30 = 2 : 3. A needs the bigger percent to keep up, so A is the smaller number."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-b-pyq#4",
+     "clerk-06-percentage-a-graded#24",
+     "clerk-06-percentage-b-pyq#7",
+     "clerk-06-percentage-b-pyq#11",
+     "clerk-06-percentage-b-pyq#18"
+    ],
+    "tags": [
+     "One of the numbers is given.",
+     "No numbers at all: one as a percent of the other.",
+     "The difference is given.",
+     "The average is given.",
+     "The sentence itself is in disguise."
+    ]
+   }
+  },
+  {
+   "id": "successive",
+   "code": "P4",
+   "title": "One change after another",
+   "plain": "New: a value goes up or down by a percent, and then changes again. The second change is taken on the new value.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "A town's population rises 10% this year and falls 20% next year. It is tempting to add them and say \"10% down overall\". That is not right, and seeing why is the whole lesson.",
+    "The second change is 20% of the **new** population, not of the original one. The base has moved.",
+    "The safe method is to go **one step at a time**. Start with 25,000. Up 10%: add 2,500 to get 27,500. Down 20%: 20% of 27,500 is 5,500, leaving 22,000.",
+    "There is a tidy way to write each step. A rise of 10% turns 100 into 110, which is multiplying by 1.1. A fall of 20% turns 100 into 80, which is multiplying by 0.8. So the two years together are 25,000 x 1.1 x 0.8 = 22,000.",
+    "| The change | Multiply by |",
+    "| up 10% | 1.1 |",
+    "| up 20% | 1.2 |",
+    "| up 25% | 1.25 |",
+    "| down 10% | 0.9 |",
+    "| down 20% | 0.8 |",
+    "| down 25% | 0.75 |",
+    "This also explains a famous surprise: up 20% and then down 20% does not bring you back. 1.2 x 0.8 = 0.96, which is a 4% fall.",
+    "**Going backwards.** If you are given the value **after** the changes and asked for the value before, divide instead of multiplying. A machine worth Rs 81,000 after losing 10% a year for two years was worth 81,000 / 0.9 / 0.9 = Rs 1,00,000."
+   ],
+   "example": {
+    "q": "The population of a town is 20,000. It increases by 10% in the first year and by 25% in the second year. Find the population after two years.",
+    "steps": [
+     "Year 1: 10% of 20,000 is 2,000. The population is 22,000.",
+     "Year 2: 25% of 22,000 is 5,500. The population is 27,500.",
+     "As one line: 20,000 x 1.1 x 1.25 = 27,500."
+    ],
+    "answer": "27,500."
+   },
+   "check": {
+    "q": "The price of a shirt is raised by 10% and then reduced by 10%. What is the net change?",
+    "options": {
+     "a": "No change",
+     "b": "1% increase",
+     "c": "1% decrease",
+     "d": "20% decrease"
+    },
+    "answer": "C",
+    "why": "1.1 x 0.9 = 0.99, so 100 becomes 99: a 1% decrease. The fall is taken on the higher price, so it removes a little more than the rise added."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#4",
+     "clerk-06-percentage-a-graded#12",
+     "clerk-06-percentage-b-pyq#12",
+     "clerk-06-percentage-a-graded#22",
+     "clerk-06-percentage-b-pyq#6"
+    ],
+    "tags": [
+     "Up and down by the same percent.",
+     "A population over two years.",
+     "The story begins \"two years ago\".",
+     "Backwards: find the earlier value.",
+     "Two rises, and then he spends a share."
+    ]
+   },
+   "shortcut": {
+    "title": "Two changes in one line",
+    "text": [
+     "For two changes of **a%** and **b%** one after the other, the overall change is:",
+     "**a + b + (a x b) / 100**",
+     "Write a fall as a negative number. Up 10% then down 20%: 10 - 20 + (10 x -20) / 100 = -10 - 2 = -12%. So 25,000 falls by 12% to 22,000.",
+     "Up 20% then down 20%: 20 - 20 - 4 = -4%. The last piece, (a x b) / 100, is the part that simple adding forgets."
+    ]
+   }
+  },
+  {
+   "id": "remaining",
+   "code": "P3",
+   "title": "\"Of the remaining\"",
+   "plain": "New: money is spent in stages, and each stage takes a percent of what is left, not of the whole.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"A man spends 20% of his income on rent and 25% **of the remaining** on food.\" The two words \"of the remaining\" matter. The 25% is not a quarter of his income; it is a quarter of what is left after rent.",
+    "This is last lesson's idea wearing different clothes: each stage works on a new, smaller base. So the method is the same. **Keep track of what is left after each stage.**",
+    "- Start with 100%.",
+    "- Rent takes 20%, so 80% is left.",
+    "- Food takes 25% of that 80%, which is 20%. So 60% is left.",
+    "The 60% that is left is his saving. If the question says he saves Rs 19,800, then 60% is 19,800, so 1% is 330 and his income is Rs 33,000.",
+    "In multiplying form: what is left = 0.8 x 0.75 = 0.6 of the income.",
+    "Two things to watch for.",
+    "**Fixed amounts mixed in.** If a stage is a plain number of rupees (\"he spends Rs 12,000 on his children\"), subtract it as rupees at that point and carry on. This kind is easier to do in rupees from the start.",
+    "**Which pieces the question compares.** Sometimes it gives the difference between two of the pieces, not the saving. Write every piece as a percent of the income first, and then compare the pieces the question names."
+   ],
+   "example": {
+    "q": "A woman spends 30% of her salary on rent and 20% of the remaining on travel. She saves the rest, which is Rs 28,000. Find her salary.",
+    "steps": [
+     "Start with 100%. Rent takes 30%, so 70% is left.",
+     "Travel takes 20% of that 70%, which is 14%. So 70 - 14 = 56% is left.",
+     "That 56% is her saving: 56% = 28,000.",
+     "1% = 500, so her salary is Rs 50,000.",
+     "Check: rent 15,000 leaves 35,000; travel 7,000 leaves 28,000."
+    ],
+    "answer": "Her salary is Rs 50,000."
+   },
+   "check": {
+    "q": "A man spends 40% of his income on rent and 50% of the remaining on food. He saves the rest, which is Rs 6,000. What is his income?",
+    "options": {
+     "a": "Rs 10,000",
+     "b": "Rs 15,000",
+     "c": "Rs 20,000",
+     "d": "Rs 60,000"
+    },
+    "answer": "C",
+    "why": "After rent, 60% is left. Food takes half of that, so 30% is left. 30% = 6,000, so 1% = 200 and the income is 20,000."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#13",
+     "clerk-06-percentage-b-pyq#14",
+     "clerk-06-percentage-b-pyq#9",
+     "clerk-06-percentage-b-pyq#15",
+     "clerk-06-percentage-a-graded#26"
+    ],
+    "tags": [
+     "The saving is given.",
+     "What is left is given.",
+     "The difference between two of the pieces is given.",
+     "Rupees and a fraction mixed in.",
+     "Not money at all: people sorted in layers."
+    ]
+   }
+  },
+  {
+   "id": "income-savings",
+   "code": "P6",
+   "title": "Income, expenditure and savings",
+   "plain": "New: three amounts tied together by one fact: what you earn is what you spend plus what you save.",
+   "needs": [
+    "percent-words"
+   ],
+   "teach": [
+    "Every question of this kind stands on a single line:",
+    "**income = expenditure + savings**",
+    "Know any two and you have the third. The percent words just tell you how two of them compare, and you already know how to read those from lesson 2.",
+    "\"His income is 25% more than his expenditure.\" Expenditure comes after \"than\", so it is the 100. Income is 125. Savings are the gap: 25.",
+    "The harder form changes two of the three and asks about the third: \"He saves 25% of his income. His income rises by 20% and his expenditure by 10%. By what percent do his savings change?\"",
+    "Do not try to combine the percents in your head. **Call the income 100 and write all three numbers, before and after.**",
+    "| | Before | After |",
+    "| Income | 100 | 120 |",
+    "| Expenditure | 75 | 82.5 |",
+    "| Savings | 25 | 37.5 |",
+    "Savings went from 25 to 37.5. The change is 12.5 on a starting value of 25, which is 50%. Savings always swing by more than income does, because they are the small number left over."
+   ],
+   "example": {
+    "q": "A man saves 25% of his income. His income increases by 20% and his expenditure increases by 10%. By what percent do his savings increase?",
+    "steps": [
+     "Call the income 100. He saves 25, so he spends 75.",
+     "New income: 20% more than 100 is 120.",
+     "New expenditure: 10% more than 75 is 82.5.",
+     "New savings: 120 - 82.5 = 37.5.",
+     "Change in savings: 37.5 - 25 = 12.5, measured against the starting 25. 12.5 / 25 = 50%."
+    ],
+    "answer": "His savings increase by 50%."
+   },
+   "check": {
+    "q": "A person's income is 20% more than his expenditure. If his monthly expenditure is Rs 15,000, what are his monthly savings?",
+    "options": {
+     "a": "Rs 3,000",
+     "b": "Rs 3,600",
+     "c": "Rs 12,000",
+     "d": "Rs 18,000"
+    },
+    "answer": "A",
+    "why": "Expenditure is the 100, so income is 120 and savings are 20, which is one fifth of the expenditure. One fifth of 15,000 is 3,000. (18,000 is the income.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-b-pyq#3",
+     "clerk-06-percentage-a-graded#6",
+     "clerk-06-percentage-a-graded#18"
+    ],
+    "tags": [
+     "Income described against expenditure.",
+     "Spending as a percent of salary.",
+     "Income and expenditure both change."
+    ]
+   },
+   "more": [
+    {
+     "tag": "A ratio instead of a percent",
+     "q": "A man's income and expenditure are in the ratio 5 : 3. If he saves Rs 8,000 a month, what is his income?",
+     "options": {
+      "a": "Rs 12,000",
+      "b": "Rs 13,333",
+      "c": "Rs 20,000",
+      "d": "Rs 32,000"
+     },
+     "answer": "C",
+     "why": "Savings are the gap between income and expenditure: 5 - 3 = 2 parts. 2 parts = 8,000, so one part = 4,000 and the income is 5 x 4,000 = 20,000."
+    }
+   ]
+  },
+  {
+   "id": "price-consumption",
+   "code": "P8",
+   "title": "Price, quantity and spending",
+   "plain": "New: the price changes, and the question asks how much you can now buy, or how much less you must use.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "Here too one line holds everything together:",
+    "**money spent = price x quantity**",
+    "There are two kinds of question.",
+    "**Kind 1: keep the spending under control.** \"The price of sugar rises by 20%. By what percent must a family cut its use so that its spending rises by only 8%?\" Use the multipliers from lesson 4. The price is multiplied by 1.2. The spending is to be multiplied by 1.08. So the quantity must be multiplied by 1.08 / 1.2 = 0.9, which is a cut of 10%.",
+    "If the spending is to stay exactly the same, the quantity must be multiplied by 1 / 1.2. A 25% rise in price, for example, needs 1 / 1.25 = 0.8: a 20% cut.",
+    "**Kind 2: \"a fall in price lets him buy 5 kg more for Rs 800\".** This one looks awkward but has a lovely shortcut. Think about the money, not the percent.",
+    "- If the price falls by 20%, then buying the **old** quantity now costs 20% less. On Rs 800 that frees up Rs 160.",
+    "- That freed money is what buys the extra 5 kg, at the **new** price.",
+    "- So the new price is 160 / 5 = Rs 32 a kg.",
+    "- The new price is 80% of the old one, so the old price was 32 / 0.8 = Rs 40.",
+    "Read the last line carefully: some questions ask for the new price and some for the original."
+   ],
+   "example": {
+    "q": "A 25% fall in the price of sugar enables a person to buy 4 kg more for Rs 480. Find the original price per kg.",
+    "steps": [
+     "A 25% fall frees up 25% of the money: 25% of 480 = Rs 120.",
+     "That Rs 120 buys the extra 4 kg at the new price. New price = 120 / 4 = Rs 30 a kg.",
+     "The new price is 75% of the original. Original price = 30 / 0.75 = Rs 40.",
+     "Check: at Rs 40 he bought 12 kg; at Rs 30 he buys 16 kg. That is 4 kg more."
+    ],
+    "answer": "The original price was Rs 40 per kg."
+   },
+   "check": {
+    "q": "The price of tea rises by 25%. By what percent must a family reduce its consumption so that its spending on tea stays the same?",
+    "options": {
+     "a": "20%",
+     "b": "25%",
+     "c": "33 1/3%",
+     "d": "80%"
+    },
+    "answer": "A",
+    "why": "The price is multiplied by 1.25, so the quantity must be multiplied by 1 / 1.25 = 0.8. That is a 20% cut. (Not 25%: the cut is measured against the new, higher spending.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#9",
+     "clerk-06-percentage-a-graded#17",
+     "clerk-06-percentage-b-pyq#10"
+    ],
+    "tags": [
+     "Keep the rise in spending small.",
+     "A price fall buys more.",
+     "The same, with a percent that is really a fraction."
+    ]
+   },
+   "more": [
+    {
+     "tag": "A price rise buys less",
+     "q": "A 25% rise in the price of oil means a person gets 2 litres less for Rs 400. What is the new price per litre?",
+     "options": {
+      "a": "Rs 40",
+      "b": "Rs 45",
+      "c": "Rs 50",
+      "d": "Rs 200"
+     },
+     "answer": "C",
+     "why": "The same thinking, turned round. His old quantity would now cost 25% more: Rs 500. He has only Rs 400, so he is Rs 100 short, and that Rs 100 is the 2 litres he must give up. New price = 100 / 2 = Rs 50. (Old price was 40: 10 litres then, 8 litres now.)"
+    }
+   ],
+   "shortcut": {
+    "title": "Price up, use down",
+    "text": [
+     "To keep spending unchanged when the price rises by **1/n**, cut the quantity by **1/(n + 1)**. It is the same turn-around as in lesson 2.",
+     "Price up 25% (1/4): use 1/5 less, which is 20%. Price up 20% (1/5): use 1/6 less, 16 2/3%. Price up 50% (1/2): use 1/3 less.",
+     "And if the price falls by 1/n, you can use 1/(n - 1) more: a 20% fall (1/5) lets you buy 25% more."
+    ]
+   }
+  },
+  {
+   "id": "two-groups",
+   "code": "P7",
+   "title": "Two groups, each with its own percent",
+   "plain": "New: boys and girls, men and women. Each group has a different percent, and the question mixes them.",
+   "needs": [
+    "percent-of",
+    "ratio"
+   ],
+   "teach": [
+    "\"In a town of 8,000 people, 55% are males. 40% of the males and 30% of the females are graduates.\" There are two groups, and each has its own percent. The important rule is simple: **a percent belongs to its own group.** 40% of the males is 40% of the number of males, never 40% of the town.",
+    "So the first move is always to **split the total into the two groups**, and only then apply each group's percent.",
+    "- Males: 55% of 8,000 = 4,400. Females: the other 3,600.",
+    "- Graduates: 40% of 4,400 = 1,760, and 30% of 3,600 = 1,080. Together 2,840.",
+    "A small table keeps this tidy, with one row for each group. Fill in whatever the question gives you and work towards the empty boxes.",
+    "The harder form hides the sizes of the groups. \"A village has 5,000 people. The men increase by 10% and the women by 15%, and the population becomes 5,600.\" Use the same trick as the two-deposit questions in the interest topic: **pretend everyone grew at the lower percent.**",
+    "- If all 5,000 grew by 10%, the rise would be 500.",
+    "- The real rise is 600, which is 100 more.",
+    "- That extra comes only from the women, who grew by 15 - 10 = 5% more than we pretended.",
+    "- So 5% of the women is 100: there are 2,000 women and 3,000 men."
+   ],
+   "example": {
+    "q": "A village has 6,000 people. If the number of men increases by 5% and the number of women by 10%, the population becomes 6,400. How many men are there?",
+    "steps": [
+     "Pretend everyone grew by the lower percent, 5%. The rise would be 5% of 6,000 = 300.",
+     "The real rise is 6,400 - 6,000 = 400, which is 100 more.",
+     "That extra comes from the women, who grew 10 - 5 = 5% more than we pretended.",
+     "5% of the women is 100, so there are 2,000 women.",
+     "Men = 6,000 - 2,000 = 4,000.",
+     "Check: men rise by 200, women by 200. Total rise 400."
+    ],
+    "answer": "There are 4,000 men."
+   },
+   "check": {
+    "q": "A school has 500 students, of whom 60% are boys. 50% of the boys and 40% of the girls play a sport. How many students play a sport?",
+    "options": {
+     "a": "220",
+     "b": "230",
+     "c": "250",
+     "d": "450"
+    },
+    "answer": "B",
+    "why": "Split first: 300 boys and 200 girls. 50% of 300 = 150, and 40% of 200 = 80. Together 230."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#19",
+     "clerk-06-percentage-a-graded#25",
+     "clerk-06-percentage-a-graded#29",
+     "clerk-06-percentage-b-pyq#5",
+     "clerk-06-percentage-b-pyq#13"
+    ],
+    "tags": [
+     "Both group sizes can be found at once.",
+     "Group sizes hidden: each group grows differently.",
+     "One group stays fixed while the other grows.",
+     "Work backwards from those who passed.",
+     "No numbers at all: call the class 100."
+    ]
+   }
+  },
+  {
+   "id": "constant-part",
+   "code": "P9",
+   "title": "The part that does not change",
+   "plain": "New: water dries out of fruit, or water is poured into a solution. One ingredient stays exactly the same.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"Fresh grapes contain 80% water. Dry grapes contain 20% water. How much dry grapes come from 40 kg of fresh grapes?\"",
+    "Both percents in this question are about water, and that is what makes it confusing, because the water is the thing that changes. The way through is to **follow the part that does not change.**",
+    "When grapes dry, only water leaves. The solid part, the pulp, stays exactly the same weight. So:",
+    "1. Find the pulp in the fresh grapes. They are 80% water, so 20% pulp: 20% of 40 kg = 8 kg.",
+    "2. That same 8 kg of pulp is in the dry grapes. Dry grapes are 20% water, so 80% pulp.",
+    "3. So 8 kg is 80% of the dry grapes. 1% is 0.1 kg and the dry grapes weigh 10 kg.",
+    "Notice that the percent of pulp changed from 20% to 80% while the pulp itself never changed. The percent moved only because the total around it shrank.",
+    "The same idea solves **adding water to a solution**. A 60-litre solution is 20% alcohol, so it holds 12 litres of alcohol. Pour in water and the alcohol is still 12 litres. If it must now be 15% of the mixture, then 15% is 12 litres, so the mixture is 80 litres, and 20 litres of water were added.",
+    "Whenever a question has a \"before\" and an \"after\" percent, ask: **which ingredient was not touched?** Work with that one."
+   ],
+   "example": {
+    "q": "A 50-litre solution contains 30% acid. How many litres of water must be added so that acid becomes 20% of the new solution?",
+    "steps": [
+     "Which part does not change? The acid. Acid now = 30% of 50 = 15 litres.",
+     "After adding water, the acid is still 15 litres, and it must be 20% of the new solution.",
+     "20% = 15 litres, so 1% = 0.75 and the new solution is 75 litres.",
+     "Water added = 75 - 50 = 25 litres."
+    ],
+    "answer": "25 litres of water."
+   },
+   "check": {
+    "q": "Fresh fruit contains 90% water and dry fruit contains 10% water. How much dry fruit can be obtained from 45 kg of fresh fruit?",
+    "options": {
+     "a": "4.5 kg",
+     "b": "5 kg",
+     "c": "9 kg",
+     "d": "40.5 kg"
+    },
+    "answer": "B",
+    "why": "The pulp does not change. Fresh fruit is 10% pulp: 4.5 kg. Dry fruit is 90% pulp, so 4.5 kg is 90% of it and the dry fruit weighs 5 kg. (4.5 kg is the pulp alone.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#28",
+     "clerk-06-percentage-b-pyq#16",
+     "clerk-06-percentage-a-graded#23"
+    ],
+    "tags": [
+     "Drying: water leaves.",
+     "The same, from a real paper, with awkward percents.",
+     "Diluting: water is added."
+    ]
+   },
+   "more": [
+    {
+     "tag": "Milk and water",
+     "q": "A 40-litre mixture of milk and water contains 10% water. How many litres of water must be added so that water becomes 25% of the mixture?",
+     "options": {
+      "a": "6 litres",
+      "b": "8 litres",
+      "c": "10 litres",
+      "d": "15 litres"
+     },
+     "answer": "B",
+     "why": "Water is being added, so the milk is the part that does not change: 90% of 40 = 36 litres. Afterwards milk is 75% of the mixture, so the mixture is 36 / 0.75 = 48 litres. Water added = 8 litres."
+    }
+   ]
+  },
+  {
+   "id": "settings",
+   "code": "P12",
+   "title": "Marks, votes, overlaps and fractions",
+   "plain": "New: four familiar exam settings. Each one is an idea you already have, in a particular costume.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "These last four are less about new ideas than about recognising old ones. Three of them have not appeared in the Clerk papers we checked, but all are regulars in practice sets.",
+    "**1. Pass marks.** \"A student with 30% fails by 30 marks. Another with 45% gets 15 marks more than the pass mark.\" Both are measured against the same pass mark. The first is 30 below it and the second 15 above, so they are 45 marks apart. They are also 45 - 30 = 15% apart. So 15% of the maximum is 45 marks, and the maximum is 300.",
+    "**2. Elections.** Votes come in layers, and each percent belongs to its own layer, just like lesson 5. Total votes, then valid votes, then each candidate's share **of the valid votes**. With two candidates, if the winner has 58% of the valid votes the loser has 42%, so the winning margin is 16% of the valid votes.",
+    "**3. Failed in one subject or both.** \"35% failed in English, 25% failed in Maths, 10% failed in both.\" Adding 35 and 25 counts the \"both\" students twice, so take them off once: 35 + 25 - 10 = 50% failed in at least one subject. The rest, 50%, passed in both.",
+    "**4. A fraction whose top and bottom change.** \"The numerator is decreased by 25% and the denominator increased by 250%.\" Use multipliers. Down 25% is x 0.75. Up 250% is x 3.5 (the original 1, plus 2.5 more). So new fraction = old fraction x 0.75 / 3.5. To get the old fraction back, undo that: multiply the new fraction by 3.5 / 0.75."
+   ],
+   "example": {
+    "q": "In an election between two candidates, 10% of the votes polled were invalid. The winner got 60% of the valid votes and won by 1,800 votes. How many votes were polled?",
+    "steps": [
+     "Work in layers. Call the votes polled 100%. Valid votes are 90% of them.",
+     "Of the valid votes, the winner has 60% and the loser 40%. The margin is 20% of the valid votes.",
+     "20% of 90% is 18% of the votes polled.",
+     "18% = 1,800, so 1% = 100.",
+     "Votes polled = 10,000.",
+     "Check: 9,000 valid; 5,400 against 3,600; margin 1,800."
+    ],
+    "answer": "10,000 votes were polled."
+   },
+   "check": {
+    "q": "A student who scores 40% fails by 20 marks. Another who scores 55% gets 10 marks more than the pass mark. What are the maximum marks?",
+    "options": {
+     "a": "100",
+     "b": "150",
+     "c": "200",
+     "d": "300"
+    },
+    "answer": "C",
+    "why": "One is 20 below the pass mark and the other 10 above, so they are 30 marks apart. They are also 55 - 40 = 15% apart. 15% = 30 marks, so the maximum is 200."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-06-percentage-a-graded#10",
+     "clerk-06-percentage-a-graded#11",
+     "clerk-06-percentage-a-graded#27",
+     "clerk-06-percentage-a-graded#16",
+     "clerk-06-percentage-b-pyq#17"
+    ],
+    "tags": [
+     "Pass marks.",
+     "Votes, with invalid ones removed first.",
+     "Voters who stayed at home.",
+     "Failed in one subject or both.",
+     "A fraction changed top and bottom."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-06-percentage-a-graded#2": [
+    "Part over whole: 72 / 450.",
+    "72 / 450 = 0.16, which is 16%."
+   ],
+   "clerk-06-percentage-a-graded#7": [
+    "The change is 600 - 480 = 120.",
+    "Measure it against the starting price: 120 / 480 = 1/4.",
+    "One quarter is 25%."
+   ],
+   "clerk-06-percentage-a-graded#1": [
+    "35% of the number is 168, so 1% is 168 / 35 = 4.8.",
+    "60% is 60 x 4.8 = 288."
+   ],
+   "clerk-06-percentage-a-graded#5": [
+    "After a 15% increase the number is 115% of itself.",
+    "115% = 345, so 1% = 3.",
+    "The number is 100 x 3 = 300."
+   ],
+   "clerk-06-percentage-b-pyq#1": [
+    "Science 40% and sports 25%, so cultural events are 100 - 40 - 25 = 35%.",
+    "35% = 315 students, so 1% = 9 students.",
+    "Science and sports differ by 40 - 25 = 15%, which is 15 x 9 = 135."
+   ],
+   "clerk-06-percentage-a-graded#3": [
+    "B comes after \"than\", so B is 100 and A is 160.",
+    "The gap is 60. Now the base is A: 60 / 160 = 37.5%."
+   ],
+   "clerk-06-percentage-a-graded#8": [
+    "Call the third number 100. The first is 120 and the second is 150.",
+    "First as a percent of the second: 120 / 150 = 80%."
+   ],
+   "clerk-06-percentage-a-graded#20": [
+    "Start from the end of the chain: C is 100.",
+    "B is 50% more than C: 150.",
+    "A is 30% less than B: 70% of 150 = 105.",
+    "A is 105 against C's 100, so A is 5% more."
+   ],
+   "clerk-06-percentage-a-graded#15": [
+    "Pick an easy number that divides by both 3 and 5: 15.",
+    "Correct result: 15 x 5/3 = 25. His result: 15 x 3/5 = 9.",
+    "The error is 25 - 9 = 16, measured against the correct 25.",
+    "16 / 25 = 64%."
+   ],
+   "clerk-06-percentage-b-pyq#4": [
+    "50% of A is 10, because A is 20.",
+    "So 25% of B is 10, which means B is 40.",
+    "A + B = 20 + 40 = 60."
+   ],
+   "clerk-06-percentage-a-graded#24": [
+    "Swap the percents: A : B = 60 : 40 = 3 : 2.",
+    "B as a percent of A: 2 / 3 = 66 2/3%."
+   ],
+   "clerk-06-percentage-b-pyq#7": [
+    "Swap the percents: bigger : smaller = 60 : 50 = 6 : 5.",
+    "The difference is 1 part, and it is 2. So one part = 2.",
+    "The bigger number is 6 x 2 = 12."
+   ],
+   "clerk-06-percentage-b-pyq#11": [
+    "Swap the percents: X : Y = 60 : 45 = 4 : 3.",
+    "The average is half of 4 + 3, which is 3.5 parts. It is 20 less than X, which is 4 parts.",
+    "So 0.5 part = 20 and one part = 40. Y = 3 x 40 = 120.",
+    "60% of Y = 72."
+   ],
+   "clerk-06-percentage-b-pyq#18": [
+    "5% of X is X / 20. \"25% more than Y\" is 1.25 Y.",
+    "So X / 20 = 1.25 Y, which gives X = 25 Y.",
+    "The difference is 24 Y = 96, so Y = 4.",
+    "X = 25 x 4 = 100."
+   ],
+   "clerk-06-percentage-a-graded#4": [
+    "Up 20% is x 1.2. Down 20% is x 0.8.",
+    "1.2 x 0.8 = 0.96, so 100 becomes 96.",
+    "That is a 4% decrease."
+   ],
+   "clerk-06-percentage-a-graded#12": [
+    "Year 1, up 20%: 25,000 + 5,000 = 30,000.",
+    "Year 2, down 10%: 30,000 - 3,000 = 27,000."
+   ],
+   "clerk-06-percentage-b-pyq#12": [
+    "Start from the population two years ago: 15,000.",
+    "Year 1, down 10%: 15,000 - 1,500 = 13,500.",
+    "Year 2, up 20%: 13,500 + 2,700 = 16,200."
+   ],
+   "clerk-06-percentage-a-graded#22": [
+    "Losing 10% a year multiplies the value by 0.9 each year. Two years: 0.9 x 0.9 = 0.81.",
+    "We are going backwards, so divide: 81,000 / 0.81.",
+    "The value two years ago was Rs 1,00,000."
+   ],
+   "clerk-06-percentage-b-pyq#6": [
+    "April 2020: 20% more than 17,500 is 21,000.",
+    "April 2021: 20% more than 21,000 is 25,200.",
+    "He spends 60%, so he keeps 40%: 40% of 25,200 = 10,080."
+   ],
+   "clerk-06-percentage-a-graded#13": [
+    "Rent takes 20%, so 80% is left.",
+    "Food takes 25% of that 80%, which is 20%. So 60% is left.",
+    "60% = 19,800, so 1% = 330.",
+    "His income is Rs 33,000."
+   ],
+   "clerk-06-percentage-b-pyq#14": [
+    "LIC takes 15%, so 85% is left.",
+    "Household expenses take 10% of that 85%, which is 8.5%. So 76.5% is left.",
+    "76.5% = 30,600, so 1% = 400.",
+    "His salary is Rs 40,000."
+   ],
+   "clerk-06-percentage-b-pyq#9": [
+    "Accommodation is 60%, so 40% is left.",
+    "Entertainment is 15% of that 40%, which is 6%. Savings are 40 - 6 = 34%.",
+    "Accommodation minus savings: 60 - 34 = 26%.",
+    "26% = 3,510, so 1% = 135 and the salary is Rs 13,500."
+   ],
+   "clerk-06-percentage-b-pyq#15": [
+    "Work in rupees. Monthly salary = 7,68,000 / 12 = 64,000.",
+    "After the children: 64,000 - 12,000 = 52,000.",
+    "Food is one-thirteenth of that: 4,000. Left: 48,000.",
+    "After mutual funds: 48,000 - 8,000 = Rs 40,000 saved."
+   ],
+   "clerk-06-percentage-a-graded#26": [
+    "5% are ineligible, so 95% are eligible.",
+    "85% of the eligible are general, so 15% of the eligible are other categories.",
+    "15% of 95% is 14.25% of all applicants. 14.25% = 4,275, so 1% = 300.",
+    "There were 30,000 applicants. That is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-06-percentage-b-pyq#3": [
+    "Expenditure is the 100, so income is 125 and savings are 25.",
+    "Savings are one quarter of the expenditure: 24,000 / 4 = Rs 6,000."
+   ],
+   "clerk-06-percentage-a-graded#6": [
+    "He spends 65%, so he saves 35%.",
+    "35% of 24,000 = 8,400.",
+    "Rs 8,400 is not among the numbered options, so the answer is \"None of these\". (Rs 15,600 is what he spends.)"
+   ],
+   "clerk-06-percentage-a-graded#18": [
+    "Call the income 100. He saves 20 and spends 80.",
+    "New income: 125. New expenditure: 20% more than 80 is 96.",
+    "New savings: 125 - 96 = 29.",
+    "Change: 29 - 20 = 9, measured against 20. 9 / 20 = 45%."
+   ],
+   "clerk-06-percentage-a-graded#9": [
+    "Price is multiplied by 1.2. Spending is to be multiplied by 1.08.",
+    "Quantity must be multiplied by 1.08 / 1.2 = 0.9.",
+    "That is a 10% reduction."
+   ],
+   "clerk-06-percentage-a-graded#17": [
+    "A 20% fall frees up 20% of the money: 20% of 800 = Rs 160.",
+    "That buys the extra 5 kg at the new price: 160 / 5 = Rs 32 a kg.",
+    "The new price is 80% of the original: 32 / 0.8 = Rs 40."
+   ],
+   "clerk-06-percentage-b-pyq#10": [
+    "16.66% is one sixth. One sixth of Rs 180 is Rs 30 freed up.",
+    "That buys the extra 3 kg at the new price: 30 / 3 = Rs 10 a kg.",
+    "The new price is five sixths of the original: 10 x 6 / 5 = Rs 12."
+   ],
+   "clerk-06-percentage-a-graded#19": [
+    "Split first: males are 55% of 8,000 = 4,400, so females are 3,600.",
+    "Graduates: 40% of 4,400 = 1,760, and 30% of 3,600 = 1,080.",
+    "Together: 2,840."
+   ],
+   "clerk-06-percentage-a-graded#25": [
+    "Pretend everyone grew by 10%: the rise would be 500.",
+    "The real rise is 600, which is 100 more.",
+    "That extra comes from the women, who grew 5% more than we pretended. 5% of the women = 100, so there are 2,000 women.",
+    "Men = 5,000 - 2,000 = 3,000."
+   ],
+   "clerk-06-percentage-a-graded#29": [
+    "The boys do not change. They are 60% of the old class and 50% of the new class.",
+    "The new class has 20 more students. If the old class is N: 60% of N = 50% of (N + 20).",
+    "0.6 N = 0.5 N + 10, so N = 100.",
+    "Boys = 60% of 100 = 60."
+   ],
+   "clerk-06-percentage-b-pyq#5": [
+    "66 2/3% is two thirds. Two thirds of the passed boys is 160, so 240 boys passed.",
+    "360 passed in all, so 120 girls passed.",
+    "240 is 60% of the boys: 400 boys. 120 is 40% of the girls: 300 girls.",
+    "Total students = 700."
+   ],
+   "clerk-06-percentage-b-pyq#13": [
+    "Call the class 100. 60 passed: 30 boys and 30 girls.",
+    "40 failed. Failed boys are 200% more than failed girls, which is 3 times as many.",
+    "So the 40 split 3 : 1. Failed girls = 10.",
+    "That is 10% of the class."
+   ],
+   "clerk-06-percentage-a-graded#28": [
+    "The pulp does not change. Fresh grapes are 20% pulp: 20% of 40 kg = 8 kg.",
+    "Dry grapes are 80% pulp, so 8 kg is 80% of them.",
+    "Dry grapes = 8 / 0.8 = 10 kg."
+   ],
+   "clerk-06-percentage-b-pyq#16": [
+    "The pulp does not change. Fresh fruit is 32% pulp: 32 kg in 100 kg.",
+    "Dry fruit is 80% pulp, so 32 kg is 80% of it.",
+    "Dry fruit = 32 / 0.8 = 40 kg."
+   ],
+   "clerk-06-percentage-a-graded#23": [
+    "The alcohol does not change: 20% of 60 = 12 litres.",
+    "It must become 15% of the new solution: 15% = 12 litres, so the new solution is 80 litres.",
+    "Water added = 80 - 60 = 20 litres."
+   ],
+   "clerk-06-percentage-a-graded#10": [
+    "One student is 30 below the pass mark and the other 15 above: 45 marks apart.",
+    "They are also 45 - 30 = 15% apart.",
+    "15% = 45 marks, so 1% = 3.",
+    "Maximum marks = 300."
+   ],
+   "clerk-06-percentage-a-graded#11": [
+    "Valid votes are 80% of the votes polled.",
+    "The winner has 58% of the valid votes and the loser 42%: a margin of 16% of the valid votes.",
+    "16% of 80% is 12.8% of the votes polled. 12.8% = 1,920, so 1% = 150.",
+    "Votes polled = 15,000."
+   ],
+   "clerk-06-percentage-a-graded#27": [
+    "Here every percent is of the voters on the list. 80% of them voted.",
+    "The winner got 45% of the list, so the loser got 80 - 45 = 35%.",
+    "The margin is 10% of the list = 600 votes.",
+    "Voters on the list = 6,000."
+   ],
+   "clerk-06-percentage-a-graded#16": [
+    "Failed in at least one subject: 35 + 25 - 10 = 50%.",
+    "Everyone else passed in both: 100 - 50 = 50%."
+   ],
+   "clerk-06-percentage-b-pyq#17": [
+    "Down 25% is x 0.75. Up 250% is x 3.5.",
+    "So new fraction = original x 0.75 / 3.5. Undo it: original = 6/5 x 3.5 / 0.75.",
+    "3.5 / 0.75 = 14/3, and 6/5 x 14/3 = 28/5."
+   ]
+  }
+ }
+}

@@ -1,0 +1,788 @@
+{
+ "module": "trains",
+ "new": {
+  "title": "Trains",
+  "part": "quant",
+  "after": "speed-time-distance",
+  "sample": [
+   "This topic was split out of **Speed, Time & Distance** so that trains could be taught on their own. The paper counts, the question types and the timed drills for trains are in that topic's Quick revision tab."
+  ],
+  "revision": [
+   "**One idea:** a train has length. Decide the distance, decide the speed, then distance = speed x time.",
+   "| The train passes | Distance | Speed |",
+   "| a pole, a signal, a standing man | its own length | its own speed |",
+   "| a platform, a bridge, a tunnel, a standing train | its own length + that length | its own speed |",
+   "| a walking man | its own length | add if approaching, subtract if same way |",
+   "| another moving train | both lengths added | add if opposite, subtract if same way |",
+   "| a man sitting in another train | its own length only | add or subtract as for two trains |",
+   "**Units.** Every 18 km/h is 5 m/s: 36 is 10, 54 is 15, 72 is 20, 90 is 25, 108 is 30.",
+   "**Pole and platform together.** Speed = platform / extra time. Train : platform = pole time : extra time.",
+   "**Completely inside a tunnel.** Distance = tunnel - train.",
+   "**Opposite and same direction both given.** One gives the speeds added, the other subtracted. Faster = half of (sum + difference).",
+   "**Traps.**",
+   "- Leaving the speed in km/h when the lengths are in metres.",
+   "- Giving the total distance when the platform or tunnel alone was asked.",
+   "- Stopping at the combined speed when the train's own speed was asked.",
+   "- Adding both lengths when a passenger, not a train, is being passed.",
+   "- Treating a station-to-station question (km and hours) as a train-length question."
+  ]
+ },
+ "intro": [
+  "A train question is a Speed, Time and Distance question with one extra thought: a train is long, so passing something means travelling its whole length past it.",
+  "There are nine short lessons. Each one changes just one thing: first what is being passed (a pole, a platform, a walking man, another train), then how the exam joins these together. Please go in order the first time. If distance = speed x time is not yet comfortable, do the first lesson of Speed, Time and Distance before this."
+ ],
+ "needs": [
+  "time-words",
+  "ratio",
+  "percent-words"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the table of who-passes-what on one page.",
+  "For any train question, ask yourself three things in order: are the units metres and seconds, whose lengths must go by, and are the speeds added or subtracted? With those answered, only one division is left."
+ ],
+ "lessons": [
+  {
+   "id": "train-pole",
+   "code": "R1",
+   "title": "A train has length: passing a pole",
+   "plain": "The one new thought in this topic. To pass a pole, a train must move forward by its own length.",
+   "needs": [
+    "time-words"
+   ],
+   "teach": [
+    "Train questions are Speed, Time and Distance with one extra thought: **a train has length**. A car is treated as a dot. A train is not.",
+    "Picture a train passing a signal pole. The crossing begins when the **front** of the train reaches the pole, and ends when the **back** of the train goes by. In that time the train has moved forward by exactly **its own length**.",
+    "So for a pole, a signal, a tree or a man standing still:",
+    "**distance travelled = length of the train**",
+    "After that it is the usual relation, distance = speed x time. Three things can be asked: the time, the length, or the speed. Fill in the two you know.",
+    "**Please watch the units.** Lengths are in metres and times are in seconds, so the speed must be in **metres per second**. The question usually gives km/h.",
+    "- km/h to m/s: multiply by 5/18. So 54 km/h = 15 m/s.",
+    "- m/s to km/h: multiply by 18/5. So 20 m/s = 72 km/h.",
+    "Examiners put the unchanged number in the options on purpose. If a train's speed works out to 20 m/s and the options are in km/h, \"20 km/h\" will be sitting there waiting.",
+    "One more thing you already know from Speed, Time and Distance: for the same train (the same distance), a higher speed means less time, in the opposite ratio. If the speed becomes 3/2 times, the time becomes 2/3."
+   ],
+   "example": {
+    "q": "A train 240 metres long runs at 54 km/h. How long does it take to pass a signal pole?",
+    "steps": [
+     "Change the speed: 54 x 5/18 = 15 m/s.",
+     "To pass a pole the train travels its own length: 240 metres.",
+     "Time = 240 / 15 = 16 seconds."
+    ],
+    "answer": "16 seconds."
+   },
+   "check": {
+    "q": "A train running at 72 km/h crosses a pole in 9 seconds. What is the length of the train?",
+    "options": {
+     "a": "8 m",
+     "b": "162 m",
+     "c": "180 m",
+     "d": "648 m"
+    },
+    "answer": "C",
+    "why": "72 km/h is 20 m/s. Passing a pole, the train travels its own length: 20 x 9 = 180 metres. (648 comes from multiplying 72 by 9 without changing the units.)"
+   },
+   "shortcut": {
+    "title": "km/h to m/s without multiplying",
+    "text": [
+     "Every **18 km/h is 5 m/s**. The exam uses the same few speeds again and again, so it is worth knowing them by sight:",
+     "| km/h | 18 | 36 | 54 | 72 | 90 | 108 |",
+     "| m/s | 5 | 10 | 15 | 20 | 25 | 30 |",
+     "For any other speed, break it up. 126 = 108 + 18, so 30 + 5 = 35 m/s.",
+     "If the speed is not a multiple of 18 (say 78 km/h), leave it as a fraction, 78 x 5/18 = 65/3 m/s. It nearly always cancels in the next step."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-a-graded#1",
+     "clerk-17-trains-a-graded#2",
+     "clerk-17-trains-a-graded#4",
+     "clerk-17-trains-a-graded#24",
+     "clerk-17-trains-b-pyq#5"
+    ],
+    "tags": [
+     "Length and speed given: find the time.",
+     "Speed and time given: find the length.",
+     "Find the speed, with the unit trap waiting in the options.",
+     "No length at all: the speed changes, so use the ratio.",
+     "The speed changes, and the two speeds are in different units."
+    ]
+   }
+  },
+  {
+   "id": "train-platform",
+   "code": "R2",
+   "title": "A platform, a bridge, a tunnel",
+   "plain": "New: the thing being passed is long too. The train travels its own length plus the length of that thing.",
+   "needs": [
+    "time-words"
+   ],
+   "teach": [
+    "Last lesson the train passed a pole, which has no length. Now it passes something **long**: a platform, a bridge or a tunnel.",
+    "The crossing begins when the front of the train reaches the platform. It ends when the **back** of the train leaves the far end. Follow the front of the train: it runs the whole platform, and then one more train-length so that the back clears.",
+    "**distance travelled = length of the train + length of the platform**",
+    "| The train passes | Distance it travels |",
+    "| a pole, a signal, a standing man | its own length |",
+    "| a platform, a bridge, a tunnel | its own length + the length of that thing |",
+    "When the question asks for the platform or the tunnel, find the whole distance first (speed x time) and then **take away the train**. The whole distance is always in the options as a trap.",
+    "Two small variations appear now and then:",
+    "- **\"For how long is the train completely inside the tunnel?\"** The train is fully inside from the moment its back enters until its front reaches the far end. The front travels the tunnel **minus** the train's length.",
+    "- **A man crosses the platform.** A man has no length, so the distance is the platform alone. Always ask who is doing the crossing."
+   ],
+   "example": {
+    "q": "A train 120 metres long runs at 36 km/h. How long does it take to cross a platform 180 metres long?",
+    "steps": [
+     "Change the speed: 36 km/h = 10 m/s.",
+     "The train travels its own length plus the platform: 120 + 180 = 300 metres.",
+     "Time = 300 / 10 = 30 seconds."
+    ],
+    "answer": "30 seconds."
+   },
+   "check": {
+    "q": "A train 200 metres long running at 20 m/s crosses a bridge in 25 seconds. How long is the bridge?",
+    "options": {
+     "a": "300 m",
+     "b": "500 m",
+     "c": "700 m",
+     "d": "250 m"
+    },
+    "answer": "A",
+    "why": "In 25 seconds the train travels 20 x 25 = 500 metres. That is the train and the bridge together, so the bridge is 500 - 200 = 300 metres. (500 forgets to take away the train.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-a-graded#3",
+     "clerk-17-trains-a-graded#14",
+     "clerk-17-trains-a-graded#5",
+     "clerk-17-trains-a-graded#19",
+     "clerk-17-trains-a-graded#28",
+     "clerk-17-trains-b-pyq#6"
+    ],
+    "tags": [
+     "Train and platform given: find the time.",
+     "Find the tunnel: take the train away from the total.",
+     "A pole first to get the speed, then a platform.",
+     "Train and platform are equally long.",
+     "Completely inside the tunnel: tunnel minus train.",
+     "It is a man who crosses the platform, not the train."
+    ]
+   }
+  },
+  {
+   "id": "pole-and-platform",
+   "code": "R3",
+   "title": "A pole and a platform in one question",
+   "plain": "New: the same train passes a pole and a platform, and neither its length nor its speed is given. The extra time is spent on the platform alone.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "\"A train crosses a pole in 24 seconds and a 200-metre platform in 36 seconds.\" Neither the train's length nor its speed is given. The Clerk papers come back to this form often, and it has a very pleasant way in. **Compare the two crossings.**",
+    "- Passing the pole, the train travels its own length.",
+    "- Passing the platform, it travels its own length **and** the platform.",
+    "So the only difference between the two is the platform. The extra distance is 200 metres, and the extra time is 36 - 24 = 12 seconds.",
+    "**speed = length of the platform / extra time**",
+    "Here that is 200 / 12 = 50/3 m/s. And the train's length is what it travels while passing the pole: 50/3 x 24 = 400 metres.",
+    "The same comparison works whichever piece is missing.",
+    "- If the **speed** is given and the platform is asked: platform = speed x extra time.",
+    "- If there are **two platforms** and no pole: the extra distance is the difference between the platforms, and the extra time is the difference between the two times.",
+    "- A **standing train** is just a platform. \"Train A crosses a stationary train B\" means A travels its own length plus B's length."
+   ],
+   "example": {
+    "q": "A train crosses a pole in 10 seconds and a platform 150 metres long in 25 seconds. Find the length of the train.",
+    "steps": [
+     "Compare the two crossings. The extra distance is the platform: 150 metres.",
+     "The extra time is 25 - 10 = 15 seconds.",
+     "Speed = 150 / 15 = 10 m/s.",
+     "Passing the pole, the train travels its own length: 10 x 10 = 100 metres."
+    ],
+    "answer": "The train is 100 metres long."
+   },
+   "check": {
+    "q": "A train crosses a pole in 8 seconds and a bridge 300 metres long in 20 seconds. What is the speed of the train?",
+    "options": {
+     "a": "12 m/s",
+     "b": "15 m/s",
+     "c": "25 m/s",
+     "d": "37.5 m/s"
+    },
+    "answer": "C",
+    "why": "The extra distance is the bridge, 300 metres, covered in the extra 20 - 8 = 12 seconds. 300 / 12 = 25 m/s. (15 m/s divides 300 by the whole 20 seconds, forgetting the train's own length.)"
+   },
+   "shortcut": {
+    "title": "The train's length in one line",
+    "text": [
+     "When a train passes a pole in **p** seconds and a platform in **t** seconds, the lengths are in the ratio of the times:",
+     "**train : platform = p : (t - p)**",
+     "Pole 24 seconds, 200-metre platform 36 seconds: train : platform = 24 : 12 = 2 : 1, so the train is 400 metres.",
+     "It is the lesson's idea with the speed skipped: at one speed, twice the time means twice the length."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-b-pyq#10",
+     "clerk-17-trains-b-pyq#1",
+     "clerk-17-trains-a-graded#9",
+     "clerk-17-trains-a-graded#18",
+     "clerk-17-trains-a-graded#16",
+     "clerk-17-trains-a-graded#26"
+    ],
+    "tags": [
+     "Pole and platform: find the train.",
+     "The same, with the speed asked too.",
+     "The train is known this time: find the platform.",
+     "The speed is given: platform = speed x extra time.",
+     "Two platforms and no pole.",
+     "A standing train plays the part of the platform."
+    ]
+   }
+  },
+  {
+   "id": "train-man",
+   "code": "R4",
+   "title": "A train passing someone who is walking",
+   "plain": "New: the person moves too. The distance is still one train-length, but the speeds now combine: add if they approach, subtract if they go the same way.",
+   "needs": [
+    "time-words"
+   ],
+   "teach": [
+    "So far the thing being passed stood still. Now it is a **person who is walking**.",
+    "A person has no length. So the distance is still **the train's own length**, as with a pole.",
+    "What changes is the speed. What matters is how fast the train moves **compared with the person**:",
+    "- walking **towards** the train: they close in on each other, so **add** the speeds;",
+    "- walking **the same way** as the train: the train only gains slowly, so **subtract** the speeds.",
+    "**time = length of the train / (speeds added or subtracted)**",
+    "It is easiest to add or subtract in km/h first, and change to m/s once.",
+    "When the **train's speed is asked**, work backwards in the same order. \"A train 125 metres long passes a man running at 5 km/h in the same direction in 10 seconds.\" The train gains on him at 125 / 10 = 12.5 m/s, which is 45 km/h. That 45 is the **difference** of the two speeds, so the train is doing 45 + 5 = 50 km/h.",
+    "Please do not stop at the 45. It is the speed of the train **as the man sees it**, not the train's real speed, and it is always among the options."
+   ],
+   "example": {
+    "q": "A train 200 metres long passes a man walking at 6 km/h in the same direction in 12 seconds. Find the speed of the train.",
+    "steps": [
+     "The man has no length, so the distance is the train's length: 200 metres.",
+     "The train gains on him at 200 / 12 = 50/3 m/s.",
+     "In km/h: 50/3 x 18/5 = 60 km/h.",
+     "Same direction, so that is the difference of the speeds. Train = 60 + 6 = 66 km/h."
+    ],
+    "answer": "66 km/h."
+   },
+   "check": {
+    "q": "A train 150 metres long runs at 50 km/h. How long does it take to pass a man running at 4 km/h in the opposite direction?",
+    "options": {
+     "a": "9 seconds",
+     "b": "10 seconds",
+     "c": "10.8 seconds",
+     "d": "12 seconds"
+    },
+    "answer": "B",
+    "why": "Opposite directions: 50 + 4 = 54 km/h = 15 m/s. The distance is the train's length, 150 metres. 150 / 15 = 10 seconds."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-a-graded#10",
+     "clerk-17-trains-a-graded#8",
+     "clerk-17-trains-a-graded#25",
+     "clerk-17-trains-a-graded#22",
+     "clerk-17-trains-b-pyq#3"
+    ],
+    "tags": [
+     "The man comes towards the train: find the time.",
+     "The man goes the same way: find the train's speed.",
+     "Get the train's real speed from the man, then use it on a platform.",
+     "Two walkers, one train: its length is the same both times.",
+     "Exam wording: a platform gives the speed, the speed changes, then a man."
+    ]
+   }
+  },
+  {
+   "id": "two-trains",
+   "code": "R5",
+   "title": "Two trains passing each other",
+   "plain": "New: the other thing is a moving train. Both lengths are added, and the speeds are added or subtracted as before.",
+   "needs": [
+    "time-words"
+   ],
+   "teach": [
+    "Now put the last two lessons together. The thing being passed is long (like a platform) **and** it is moving (like the walking man).",
+    "**The distance** is the sum of the two lengths. Each train has to get completely clear of the other.",
+    "**The speed** combines exactly as it did with the walking man:",
+    "- running in **opposite** directions: **add** the speeds;",
+    "- running in the **same** direction (one overtaking the other): **subtract** the speeds.",
+    "**time = (length of one + length of the other) / (speeds added or subtracted)**",
+    "Combine the speeds in km/h first and change to m/s once. 40 km/h and 50 km/h in opposite directions give 90 km/h, which is 25 m/s.",
+    "Overtaking is slow, because the difference in speeds is small. If your answer for the same direction comes out shorter than for opposite directions, the speeds have been combined the wrong way round.",
+    "If the question asks for the **other train's speed**, find the combined speed first (total length / time), change it to km/h, and then take away, or add back, the speed you know.",
+    "If a train's speed is not given but its time to pass a pole is, that is lesson 1: speed = its length / that time."
+   ],
+   "example": {
+    "q": "Two trains 100 metres and 200 metres long run in opposite directions at 36 km/h and 72 km/h. How long do they take to cross each other?",
+    "steps": [
+     "Distance = both lengths: 100 + 200 = 300 metres.",
+     "Opposite directions, so add the speeds: 36 + 72 = 108 km/h.",
+     "Change to m/s: 108 km/h = 30 m/s.",
+     "Time = 300 / 30 = 10 seconds."
+    ],
+    "answer": "10 seconds."
+   },
+   "check": {
+    "q": "The same two trains, 100 metres and 200 metres long, now run in the same direction at 36 km/h and 72 km/h. How long does the faster train take to pass the slower one?",
+    "options": {
+     "a": "8 1/3 seconds",
+     "b": "10 seconds",
+     "c": "20 seconds",
+     "d": "30 seconds"
+    },
+    "answer": "D",
+    "why": "The distance is still 300 metres. Same direction, so subtract: 72 - 36 = 36 km/h, which is 10 m/s. 300 / 10 = 30 seconds, three times as long as before."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-a-graded#6",
+     "clerk-17-trains-a-graded#7",
+     "clerk-17-trains-a-graded#11",
+     "clerk-17-trains-a-graded#15",
+     "clerk-17-trains-b-pyq#11",
+     "clerk-17-trains-a-graded#23"
+    ],
+    "tags": [
+     "Opposite directions: add the speeds.",
+     "Same direction: subtract the speeds.",
+     "Equal trains: the distance is two lengths.",
+     "Find the other train's speed.",
+     "The same, with only the sum of the lengths given.",
+     "No speeds given: get each one from its pole time."
+    ]
+   }
+  },
+  {
+   "id": "man-in-train",
+   "code": "R6",
+   "title": "A person sitting in the other train",
+   "plain": "New: two trains again, but the question is about a passenger. A passenger is a dot, so only one length counts.",
+   "needs": [
+    "time-words"
+   ],
+   "teach": [
+    "This is a short lesson about one trap that catches a great many people.",
+    "\"A man sitting in a train sees a goods train pass him in 9 seconds.\" There are two trains in the story, so it is tempting to add both lengths. Please do not.",
+    "The man is a **dot**. He has no length, and the length of the train he is sitting in has nothing to do with it. The goods train has passed him once **its own length** has gone by his window.",
+    "But he is **moving**, at the speed of his own train. So the speeds combine as usual: add if the trains run in opposite directions, subtract if they run the same way.",
+    "So this is really lesson 4, a train passing a moving person. The person just happens to be travelling fast.",
+    "For every train question, these two checks are enough:",
+    "1. **Whose length must go by?** Only the thing doing the passing, plus the length of what is passed if that is a long thing. A person adds nothing.",
+    "2. **Are they approaching or going the same way?** Add or subtract."
+   ],
+   "example": {
+    "q": "A man sitting in a train travelling at 40 km/h sees a train 250 metres long, coming the opposite way, pass him in 9 seconds. Find the speed of that train.",
+    "steps": [
+     "The man is a dot. The distance is the other train's length: 250 metres.",
+     "Combined speed = 250 / 9 m/s. In km/h: 250/9 x 18/5 = 100 km/h.",
+     "Opposite directions, so that is the two speeds added.",
+     "Other train = 100 - 40 = 60 km/h."
+    ],
+    "answer": "60 km/h."
+   },
+   "check": {
+    "q": "Two trains, 200 metres and 300 metres long, run in the same direction at 72 km/h and 54 km/h. How long does the faster train (200 m) take to pass a man sitting in the slower train?",
+    "options": {
+     "a": "40 seconds",
+     "b": "60 seconds",
+     "c": "100 seconds",
+     "d": "28 seconds"
+    },
+    "answer": "A",
+    "why": "Only the faster train's 200 metres must go by the man. Same direction: 72 - 54 = 18 km/h = 5 m/s. 200 / 5 = 40 seconds. (100 seconds uses both lengths.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-a-graded#13",
+     "clerk-17-trains-a-graded#29"
+    ],
+    "tags": [
+     "Opposite directions: find the other train's speed.",
+     "Same direction, with the slower train's length given only to mislead."
+    ]
+   }
+  },
+  {
+   "id": "both-ways",
+   "code": "R7",
+   "title": "Opposite and same direction in one question",
+   "plain": "New: the same two trains are described twice. One sentence gives the speeds added, the other gives them subtracted.",
+   "needs": [
+    "ratio",
+    "average"
+   ],
+   "teach": [
+    "Here the question gives the same two trains crossing **twice**, or ties their speeds together with a ratio. Each sentence gives you one fact about the two speeds.",
+    "\"Two trains, each 100 metres long, cross in 8 seconds going opposite ways and in 40 seconds going the same way.\"",
+    "- Opposite: 200 / 8 = 25 m/s. That is the two speeds **added**.",
+    "- Same way: 200 / 40 = 5 m/s. That is the two speeds **subtracted**.",
+    "When you know the sum and the difference of two numbers, the bigger one is half of (sum + difference) and the smaller one is half of (sum - difference). So the faster train does (25 + 5) / 2 = 15 m/s and the slower does 10 m/s.",
+    "If you have done Boat and Stream, this is the same step as finding the boat and the stream from the downstream and upstream speeds.",
+    "**Speeds tied by a ratio or a percent.** \"B is 20% faster than A; they cross in opposite directions in 24 seconds.\" Find the speeds added together from total length / time. Then share that sum in the ratio of the speeds, here 5 : 6.",
+    "In both forms the first step is the same: turn each crossing into one combined speed."
+   ],
+   "example": {
+    "q": "Two trains, each 150 metres long, cross each other in 6 seconds when running in opposite directions and in 30 seconds when running in the same direction. Find the speed of the faster train.",
+    "steps": [
+     "Distance each time = 150 + 150 = 300 metres.",
+     "Opposite: 300 / 6 = 50 m/s, the speeds added.",
+     "Same way: 300 / 30 = 10 m/s, the speeds subtracted.",
+     "Faster = (50 + 10) / 2 = 30 m/s, which is 108 km/h."
+    ],
+    "answer": "30 m/s (108 km/h)."
+   },
+   "check": {
+    "q": "Two trains, each 120 metres long, cross in 8 seconds when running in opposite directions and in 24 seconds when running in the same direction. What is the speed of the faster train?",
+    "options": {
+     "a": "10 m/s",
+     "b": "20 m/s",
+     "c": "30 m/s",
+     "d": "40 m/s"
+    },
+    "answer": "B",
+    "why": "Distance = 240 metres. Added: 240 / 8 = 30 m/s. Subtracted: 240 / 24 = 10 m/s. Faster = (30 + 10) / 2 = 20 m/s."
+   },
+   "shortcut": {
+    "title": "Three times and nothing else",
+    "text": [
+     "Two trains pass a standing man in **t1** and **t2** seconds, and pass each other (opposite directions) in **t** seconds. Then:",
+     "**speed of first : speed of second = (t - t2) : (t1 - t)**",
+     "With 27, 17 and 23: (23 - 17) : (27 - 23) = 6 : 4 = 3 : 2.",
+     "It is the swap from alligation: 23 is the mixture of 27 and 17, and each train gets the other one's distance from 23.",
+     "This form comes up only now and then, so learn it only if the lesson's own way feels slow to you."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-a-graded#21",
+     "clerk-17-trains-b-pyq#9",
+     "clerk-17-trains-a-graded#20"
+    ],
+    "tags": [
+     "Two crossings: the sum and the difference of the speeds.",
+     "One crossing, and the speeds tied by a percent.",
+     "Only times are given: write each length as speed x time."
+    ]
+   }
+  },
+  {
+   "id": "trains-exam",
+   "code": "R8",
+   "title": "Two sentences, two trains: exam wording",
+   "plain": "New: nothing new in the ideas. Each sentence is a small train question of its own; solve the one with a single unknown first.",
+   "needs": [
+    "ratio",
+    "percent-words"
+   ],
+   "teach": [
+    "The newest papers take the ideas you now have and link several of them in one long question. No new formula is needed. The method is to **take one sentence at a time**.",
+    "**Write one line for each crossing**, always in the same shape:",
+    "**distance to be covered = speed x time**",
+    "Then look for the line that has only **one** thing missing. Solve it, and carry its answer into the next line.",
+    "\"Train A, 200 metres long, crosses train B in the same direction in 100 seconds. The difference of their speeds is 6 m/s. B crosses a 480-metre platform in 40 seconds.\"",
+    "- First sentence: (200 + B's length) = 6 x 100. Only B's length is missing: 400 metres.",
+    "- Last sentence: (400 + 480) = B's speed x 40. So B does 22 m/s.",
+    "- A is the one overtaking, so A is faster: 22 + 6 = 28 m/s.",
+    "**Lengths in a ratio, speeds in a ratio.** \"A is half as long as B; their speeds are 4 : 3; they cross the same 100-metre platform in 5 and 10 seconds.\" Call the lengths L and 2L and the speeds 4v and 3v. The two lines are L + 100 = 20v and 2L + 100 = 30v. Double the first and compare it with the second, and one letter drops out.",
+    "These questions are long, not hard. In the exam, if one looks like it will take more than a minute and a half, it is quite all right to mark it and come back."
+   ],
+   "example": {
+    "q": "Train A is 150 metres long and overtakes train B, running in the same direction, in 50 seconds. A is 7 m/s faster than B. Train B crosses a 400-metre platform in 30 seconds. Find the speed of train A.",
+    "steps": [
+     "Overtaking: 150 + B's length = 7 x 50 = 350, so B is 200 metres long.",
+     "B and the platform: 200 + 400 = 600 metres in 30 seconds, so B does 20 m/s.",
+     "A is 7 m/s faster: 27 m/s."
+    ],
+    "answer": "27 m/s."
+   },
+   "check": {
+    "q": "Train P is twice as long as train Q, and both run at the same speed. Q passes a pole in 6 seconds. How long does P take to pass a pole?",
+    "options": {
+     "a": "3 seconds",
+     "b": "6 seconds",
+     "c": "12 seconds",
+     "d": "18 seconds"
+    },
+    "answer": "C",
+    "why": "Passing a pole, each train travels its own length. At the same speed, twice the length takes twice the time: 12 seconds."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-b-pyq#2",
+     "clerk-17-trains-b-pyq#7",
+     "clerk-17-trains-b-pyq#8",
+     "clerk-17-trains-b-pyq#4"
+    ],
+    "tags": [
+     "Overtaking gives a length, a platform gives a speed.",
+     "Lengths in a ratio and speeds in a ratio.",
+     "The same shape with different numbers: do not reuse the last answer.",
+     "Three sentences: find B's speed, write A's, then the overtaking."
+    ]
+   }
+  },
+  {
+   "id": "station-to-station",
+   "code": "R9",
+   "title": "Station to station: when the length does not matter",
+   "plain": "New: a way to recognise the train questions that are not train questions. Over kilometres, a train is a dot again.",
+   "needs": [
+    "time-words"
+   ],
+   "teach": [
+    "One last thing, and it is about **recognising** rather than calculating.",
+    "Some questions mention trains but give **no lengths in metres and no seconds**. They speak of stations, kilometres, hours and clock times: \"A train leaves A at 7 am at 60 km/h. Another leaves B at 8 am...\"",
+    "Over 300 km, a train a few hundred metres long is a dot. So these are **not** train-length questions. They are the two-travellers questions from Speed, Time and Distance, and everything stays in km and hours.",
+    "A short reminder of how those go:",
+    "- **Towards each other:** the gap closes at the two speeds **added**. Time to meet = gap / sum of speeds.",
+    "- **One chasing the other:** the gap closes at the speeds **subtracted**.",
+    "- **One starts earlier:** let the early train run alone first. See how far it gets, and what gap is left. From then on it is one of the two cases above.",
+    "So the first thing to do with any train question is to look at the units. **Metres and seconds: lengths matter. Kilometres and hours: they do not.**",
+    "These ideas are taught slowly in Speed, Time and Distance, lessons 6 to 8. The questions below are the same ones you will find there."
+   ],
+   "example": {
+    "q": "Stations A and B are 300 km apart. A train leaves A at 6 am at 50 km/h towards B. Another leaves B at 7 am at 75 km/h towards A. When do they meet?",
+    "steps": [
+     "From 6 am to 7 am the first train runs alone: 50 km.",
+     "At 7 am the gap is 300 - 50 = 250 km.",
+     "Now they approach each other: 50 + 75 = 125 km/h.",
+     "250 / 125 = 2 hours after 7 am, which is 9 am."
+    ],
+    "answer": "9 am."
+   },
+   "check": {
+    "q": "Two trains start at the same time from stations 240 km apart and run towards each other at 50 km/h and 70 km/h. After how long do they meet?",
+    "options": {
+     "a": "2 hours",
+     "b": "4 hours",
+     "c": "12 hours",
+     "d": "3.4 hours"
+    },
+    "answer": "A",
+    "why": "They approach at 50 + 70 = 120 km/h. 240 / 120 = 2 hours. (12 hours comes from subtracting the speeds, which is for chasing.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-17-trains-b-pyq#12",
+     "clerk-17-trains-b-pyq#13",
+     "clerk-17-trains-a-graded#12",
+     "clerk-17-trains-a-graded#17",
+     "clerk-17-trains-a-graded#30"
+    ],
+    "tags": [
+     "Start together, towards each other.",
+     "One starts an hour earlier.",
+     "The same with other numbers, and an answer not in the options.",
+     "Same direction: the later train chases.",
+     "No speeds at all: only how long each journey takes."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-17-trains-a-graded#1": [
+    "54 km/h = 15 m/s.",
+    "Passing a pole, the train travels its own length: 150 m.",
+    "150 / 15 = 10 seconds."
+   ],
+   "clerk-17-trains-a-graded#2": [
+    "72 km/h = 20 m/s.",
+    "Length = 20 x 12 = 240 m."
+   ],
+   "clerk-17-trains-a-graded#4": [
+    "To pass a pole the train travels its own length: 180 metres in 9 seconds.",
+    "Speed = 180 / 9 = 20 m/s.",
+    "In km/h: 20 x 18/5 = 72 km/h. (20 km/h in the options is the m/s figure with the wrong unit.)",
+    "72 km/h is not among the first four options: None of these."
+   ],
+   "clerk-17-trains-a-graded#24": [
+    "The train's length does not change, so speed and time move in opposite ratios.",
+    "Speed up by 50% means the speed becomes 3/2 times.",
+    "So the time becomes 2/3 of 18 = 12 seconds."
+   ],
+   "clerk-17-trains-b-pyq#5": [
+    "72 km/h = 20 m/s. Length = 20 x 16 = 320 m.",
+    "New speed = 20 + 12 = 32 m/s.",
+    "320 / 32 = 10 seconds."
+   ],
+   "clerk-17-trains-a-graded#3": [
+    "90 km/h = 25 m/s.",
+    "Distance = 200 + 300 = 500 m.",
+    "500 / 25 = 20 seconds."
+   ],
+   "clerk-17-trains-a-graded#14": [
+    "78 km/h = 78 x 5/18 = 65/3 m/s. In 60 seconds the train travels 1,300 m.",
+    "That is its own length plus the tunnel.",
+    "Tunnel = 1,300 - 800 = 500 m."
+   ],
+   "clerk-17-trains-a-graded#5": [
+    "Passing the pole: 160 m in 8 seconds, so the speed is 20 m/s.",
+    "Passing the platform: 160 + 240 = 400 m.",
+    "400 / 20 = 20 seconds."
+   ],
+   "clerk-17-trains-a-graded#19": [
+    "90 km/h = 25 m/s. In one minute the train travels 25 x 60 = 1500 metres.",
+    "That is the train plus the platform, and the two are equal.",
+    "So the train is 1500 / 2 = 750 metres. (1500 is the total, sitting in the options.)",
+    "750 m is not among the first four options: None of these."
+   ],
+   "clerk-17-trains-a-graded#28": [
+    "The train is completely inside from when its back enters until its front reaches the far end.",
+    "In that time the front travels 1000 - 400 = 600 metres.",
+    "72 km/h = 20 m/s, so the time is 600 / 20 = 30 seconds."
+   ],
+   "clerk-17-trains-b-pyq#6": [
+    "1 minute 5 seconds is 65 seconds. Train speed = 780 / 65 = 12 m/s.",
+    "Train : man = 6 : 1, so the man walks at 2 m/s.",
+    "A man has no length: 240 / 2 = 120 seconds."
+   ],
+   "clerk-17-trains-b-pyq#10": [
+    "The extra 200 m takes the extra 36 - 24 = 12 seconds, so the speed is 200 / 12 = 50/3 m/s.",
+    "Length = speed x time past the pole = 50/3 x 24 = 400 m."
+   ],
+   "clerk-17-trains-b-pyq#1": [
+    "The extra 240 m takes the extra 28 - 16 = 12 seconds: 20 m/s, which is 72 km/h.",
+    "Length = 20 x 16 = 320 m.",
+    "320 & 72."
+   ],
+   "clerk-17-trains-a-graded#9": [
+    "Passing the pole: 300 m in 18 seconds, so the speed is 50/3 m/s.",
+    "In 39 seconds the train travels 50/3 x 39 = 650 m.",
+    "Platform = 650 - 300 = 350 m."
+   ],
+   "clerk-17-trains-a-graded#18": [
+    "54 km/h = 15 m/s. A man standing on the platform counts as a pole.",
+    "The extra time on the platform is 36 - 20 = 16 seconds.",
+    "Platform = 15 x 16 = 240 m."
+   ],
+   "clerk-17-trains-a-graded#16": [
+    "The second platform is 100 m longer and takes 5 seconds longer, so the speed is 20 m/s.",
+    "In 15 seconds the train travels 300 m, which is its length plus the 100 m platform.",
+    "Train = 200 m."
+   ],
+   "clerk-17-trains-a-graded#26": [
+    "Passing the pole, A travels its own length in 20 seconds.",
+    "Passing the standing train B, it travels A + B in 50 seconds. So B alone takes the extra 30 seconds.",
+    "At one speed, lengths are in the ratio of the times: A : B = 20 : 30 = 2 : 3."
+   ],
+   "clerk-17-trains-a-graded#10": [
+    "Opposite directions: 60 + 6 = 66 km/h = 55/3 m/s.",
+    "The distance is the train's length, 110 m.",
+    "110 divided by 55/3 = 6 seconds."
+   ],
+   "clerk-17-trains-a-graded#8": [
+    "The train gains on him at 125 / 10 = 12.5 m/s = 45 km/h.",
+    "Same direction, so that is the difference of the speeds.",
+    "Train = 45 + 5 = 50 km/h."
+   ],
+   "clerk-17-trains-a-graded#25": [
+    "The train gains on the man at 150 / 18 = 25/3 m/s, which is 30 km/h.",
+    "Same direction, so the train's own speed is 30 + 6 = 36 km/h = 10 m/s.",
+    "To cross the platform it travels 150 + 250 = 400 metres: 400 / 10 = 40 seconds.",
+    "40 seconds is not among the first four options: None of these."
+   ],
+   "clerk-17-trains-a-graded#22": [
+    "The same train length is covered both times. With the train at v km/h: (v - 2) x 9 = (v - 4) x 10.",
+    "9v - 18 = 10v - 40, so v = 22 km/h.",
+    "Past the first man the train gains at 20 km/h = 50/9 m/s. Length = 50/9 x 9 = 50 m."
+   ],
+   "clerk-17-trains-b-pyq#3": [
+    "From the platform: speed = (300 + 190) / 14 = 35 m/s.",
+    "Raised by 20%: 35 x 1.2 = 42 m/s.",
+    "The man walks at 10.8 km/h = 3 m/s towards the train, so add: 45 m/s.",
+    "Time = 300 / 45 = 6.67 seconds."
+   ],
+   "clerk-17-trains-a-graded#6": [
+    "Distance = 120 + 180 = 300 m.",
+    "Opposite: 40 + 50 = 90 km/h = 25 m/s.",
+    "300 / 25 = 12 seconds."
+   ],
+   "clerk-17-trains-a-graded#7": [
+    "Distance = 150 + 250 = 400 m.",
+    "Same direction: 72 - 36 = 36 km/h = 10 m/s.",
+    "400 / 10 = 40 seconds."
+   ],
+   "clerk-17-trains-a-graded#11": [
+    "Same direction: 46 - 36 = 10 km/h = 25/9 m/s.",
+    "In 36 seconds: 25/9 x 36 = 100 m, which is both lengths together.",
+    "Each train is 50 m."
+   ],
+   "clerk-17-trains-a-graded#15": [
+    "Distance = 150 + 170 = 320 m in 8 seconds: 40 m/s, which is 144 km/h.",
+    "Opposite directions, so that is the two speeds added.",
+    "Second train = 144 - 60 = 84 km/h."
+   ],
+   "clerk-17-trains-b-pyq#11": [
+    "600 m in 20 seconds: 30 m/s, which is 108 km/h.",
+    "Opposite directions, so that is the two speeds added.",
+    "Train B = 108 - 36 = 72 km/h."
+   ],
+   "clerk-17-trains-a-graded#23": [
+    "Speed of A = 100 / 5 = 20 m/s. Speed of B = 300 / 15 = 20 m/s.",
+    "Opposite directions: 20 + 20 = 40 m/s.",
+    "Distance = 100 + 300 = 400 metres, so the time is 400 / 40 = 10 seconds."
+   ],
+   "clerk-17-trains-a-graded#13": [
+    "Only the goods train's length counts: 280 m in 9 seconds = 280/9 m/s, which is 112 km/h.",
+    "Opposite directions, so that is the two speeds added.",
+    "Goods train = 112 - 50 = 62 km/h."
+   ],
+   "clerk-17-trains-a-graded#29": [
+    "Only the faster train's length counts: 300 m. (The 200 m is not needed.)",
+    "Same direction: 72 - 36 = 36 km/h = 10 m/s.",
+    "300 / 10 = 30 seconds."
+   ],
+   "clerk-17-trains-a-graded#21": [
+    "Distance each time = 100 + 100 = 200 metres.",
+    "Opposite: 200 / 8 = 25 m/s, the speeds added. Same way: 200 / 40 = 5 m/s, the speeds subtracted.",
+    "Faster = (25 + 5) / 2 = 15 m/s.",
+    "15 x 18/5 = 54 km/h."
+   ],
+   "clerk-17-trains-b-pyq#9": [
+    "Distance = 720 + 600 = 1,320 m in 24 seconds: 55 m/s, the two speeds added.",
+    "B is 20% more than A, so A : B = 5 : 6. Eleven parts = 55, so one part = 5.",
+    "B = 30 m/s = 108 km/h."
+   ],
+   "clerk-17-trains-a-graded#20": [
+    "Call the speeds a and b. Passing a standing man, each train travels its own length: the lengths are 27a and 17b.",
+    "Crossing each other: (27a + 17b) / (a + b) = 23.",
+    "So 27a + 17b = 23a + 23b, which gives 4a = 6b.",
+    "a : b = 6 : 4 = 3 : 2."
+   ],
+   "clerk-17-trains-b-pyq#2": [
+    "Same direction, so the difference of speeds, 6 m/s, does the passing. In 100 seconds: 600 m, which is both lengths. Train B is 600 - 200 = 400 m long.",
+    "B crosses the platform: 400 + 480 = 880 m in 40 seconds, so B does 22 m/s.",
+    "A is the faster one: 22 + 6 = 28 m/s."
+   ],
+   "clerk-17-trains-b-pyq#7": [
+    "Let A be L metres and B be 2L. Let the speeds be 4v and 3v.",
+    "A: L + 100 = 4v x 5 = 20v. B: 2L + 100 = 3v x 10 = 30v.",
+    "So 2L + 100 is one and a half times L + 100: 2L + 100 = 1.5L + 150, which gives L = 100.",
+    "Train B = 2L = 200 m."
+   ],
+   "clerk-17-trains-b-pyq#8": [
+    "Call the lengths L and 2L, and the speeds 2v and 3v.",
+    "A: L + 100 = 2v x 5 = 10v. B: 2L + 100 = 3v x 6 = 18v.",
+    "Double the first line: 2L + 200 = 20v. Take away the second: 100 = 2v, so v = 50.",
+    "L = 10 x 50 - 100 = 400, so train B is 800 metres."
+   ],
+   "clerk-17-trains-b-pyq#4": [
+    "B: (330 + 550) / 40 = 22 m/s.",
+    "Call A's length L. A's speed = (L + 594) / 45.",
+    "Overtaking: 330 + L = 136.5 x (22 - (L + 594) / 45) = 136.5 x (396 - L) / 45.",
+    "Multiply out: 30(330 + L) = 91(396 - L), so 121L = 26136 and L = 216 m."
+   ]
+  }
+ }
+}

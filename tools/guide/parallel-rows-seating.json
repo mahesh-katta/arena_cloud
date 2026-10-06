@@ -1,0 +1,777 @@
+{
+ "module": "parallel-rows-seating",
+ "intro": [
+  "Two rows of five facing each other, and clues about who sits where. These lessons are built from the puzzles the clerk papers actually set, in the same way as Box Puzzles and the Month, Date and Day topic.",
+  "**What I studied first.** Nine real clerk-level puzzles from memory-based papers (SBI Clerk 2021 to 2026 and RRB Clerk 2024), eight officer-level ones for contrast, and 15 standard sets from your Sreedhar bank. Eight of the nine clerk puzzles and all 15 bank sets were written out as exact conditions and each has exactly one arrangement by script.",
+  "| What was measured | Real clerk papers |",
+  "| Size | five in each row, in all 9 (officer level: six or seven in each row) |",
+  "| Names already split into the two rows | all 17 puzzles found |",
+  "| Vacant seats, a second fact per person, both rows facing the same way | none found |",
+  "| Puzzles with a clue about an end | 3 of 8 (one says \"at an end\", two say \"not at an end\") |",
+  "| Puzzles containing a step of three | 7 of 8 |",
+  "| Cases left by the best opening clue | 2 in 7 of the 8 |",
+  "| Clues that link the two rows | about 3 in every 7 |",
+  "| How often it appears | in 6 of about 30 clerk shift papers opened for 2024 to 2026, all SBI Clerk or RRB Clerk |",
+  "**What this means.** At clerk level this is a small puzzle: five columns, and an opening clue that leaves two drawings. The marks are lost on left and right for the row that faces you, and on the long \"the one who faces\" clues. So the lessons spend their time there: one fixed way of drawing, one way of reading a crossing clue, and the order in which to take the clues.",
+  "A note on honesty: the paper puzzles are candidates' reconstructions, and one of the nine did not give exactly one arrangement as remembered, so it is not used. In the IBPS Clerk shift papers I could open for 2024 and 2025 there was no parallel-rows set at all; those shifts had a single row, a circle or a square instead."
+ ],
+ "needs": [],
+ "after": [
+  "That is the parallel-rows puzzle as the clerk papers set it. The **Quick revision** tab keeps the older short notes.",
+  "The order of work for every set: south-facing row on top, columns numbered from your left, the widest step first, then always a clue that shares a name with the drawing, crossing clues read from the last name backwards, and \"does not face\" or \"not neighbours\" for the last two seats.",
+  "Still to come, as insurance: rows facing the same way, rows of unequal length, people facing either way within a row, and sets with a second fact per person. Your bank has a few of each; none appeared in the papers studied."
+ ],
+ "lessons": [
+  {
+   "id": "draw",
+   "code": "R1",
+   "title": "One drawing, five columns, and whose left is it",
+   "plain": "The starting point. Draw the two rows once, number the columns from your own left, and settle left and right for each row before reading a single clue.",
+   "needs": [],
+   "teach": [
+    "A parallel-rows puzzle seats ten people in two rows of five. One row faces north, the other faces south, so each person looks straight at one person of the other row. The clerk papers always tell you which five names are in which row.",
+    "Nearly every wrong answer in this topic comes from one thing: **mixing up left and right for the row that faces you.** So the drawing comes first, and it is always the same drawing.",
+    "**How to draw it.**",
+    "- Draw two rows of five blanks, one above the other.",
+    "- Put the row that faces **south on top**, and the row that faces **north at the bottom**. Now the two rows look at each other across the gap, just as the puzzle says.",
+    "- Number the **columns 1 to 5 from your own left**. Column 1 is the left edge of your paper for both rows.",
+    "**Whose left?** Left and right in a clue always belong to the **person sitting**, not to you.",
+    "| Row | They face | Their right is | Their left is |",
+    "| Bottom row | north, away from you | your right (higher column) | your left (lower column) |",
+    "| Top row | south, towards you | your **left** (lower column) | your **right** (higher column) |",
+    "So for the bottom row nothing changes. For the top row, everything flips. Write a small **R** at the left end of the top row and at the right end of the bottom row, as a reminder of where each row's right-hand side is.",
+    "**Facing.** Two people face each other when they are in the **same column**. That is the whole meaning of \"faces\" or \"sits opposite\".",
+    "**The step words** are the same as in every seating puzzle:",
+    "| The clue says | Columns apart |",
+    "| X sits to the immediate right (or left) of Y | 1 |",
+    "| X sits second to the right of Y | 2 |",
+    "| X sits third to the left of Y | 3 |",
+    "| Only two persons sit between X and Y | 3, either side |",
+    "| X sits to the left of Y | some number, not known |",
+    "Write each clue as a short note with the direction already turned into columns. For a bottom-row pair, \"B is third to the left of D\" becomes **B = D - 3**. For a top-row pair, \"S is second to the right of Q\" becomes **S = Q - 2**, because their right is towards column 1."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 22 February 2025, shift 3. Row 1: A, B, C, D, E face north. Row 2: P, Q, R, S, T face south. B sits third to the left of D. The one who sits opposite D sits immediately to the left of R. Two persons sit between P and R. S sits second to the right of Q. A does not sit at an end. R does not face A. E and D are not immediate neighbours.",
+    "steps": [
+     "Draw: P to T on top (facing south), A to E at the bottom (facing north). Columns 1 to 5 from your left.",
+     "Bottom row: B = D - 3. So B 1 with D 4, or B 2 with D 5.",
+     "The person in D's column is immediately left of R. In the top row, left is a higher column: so D's column = R + 1, or R = D - 1. D 4 gives R 3; D 5 gives R 4.",
+     "P and R are 3 apart. From column 3 that is impossible in five columns. So R 4, P 1, and D 5, B 2.",
+     "Top row: S = Q - 2. Free columns 2, 3, 5: Q 5, S 3. T takes 2.",
+     "Bottom row: free 1, 3, 4. A is not at an end and not facing R (column 4): A 3. E is not next to D: E 1, C 4."
+    ],
+    "answer": "Top row (facing south), from your left: P, T, S, R, Q. Bottom row (facing north), from your left: E, B, A, C, D."
+   },
+   "check": {
+    "q": "P, Q, R, S and T sit in a row facing south. On your paper, from your left, the order is P, Q, R, S, T. Who sits to the immediate right of R?",
+    "options": {
+     "a": "Q",
+     "b": "S",
+     "c": "P",
+     "d": "T"
+    },
+    "answer": "A",
+    "why": "They face south, towards you, so their right is your left. The person on your left of R is Q."
+   },
+   "more": [
+    {
+     "tag": "The other way",
+     "q": "In the same row (facing south; from your left P, Q, R, S, T), who sits second to the left of Q?",
+     "options": {
+      "a": "P",
+      "b": "R",
+      "c": "S",
+      "d": "T"
+     },
+     "answer": "C",
+     "why": "Their left is your right. Two places to your right of Q is S."
+    },
+    {
+     "tag": "Facing",
+     "q": "The top row, from your left, is P, T, S, R, Q. The bottom row, from your left, is E, B, A, C, D. Who faces C?",
+     "options": {
+      "a": "S",
+      "b": "R",
+      "c": "T",
+      "d": "Q"
+     },
+     "answer": "B",
+     "why": "C is in column 4. The person in column 4 of the other row is R."
+    },
+    {
+     "tag": "A clue as columns",
+     "q": "Five persons sit in a row facing north. B sits third to the left of D. Which columns can D be in?",
+     "options": {
+      "a": "4 or 5",
+      "b": "1 or 2",
+      "c": "3 only",
+      "d": "2 or 3"
+     },
+     "answer": "A",
+     "why": "Facing north, left is a lower column: B = D - 3. B must be at least 1, so D is 4 or 5."
+    }
+   ]
+  },
+  {
+   "id": "widest",
+   "code": "R2",
+   "title": "Start with the widest step",
+   "plain": "New: where to begin. In five seats a step of three fits only two ways, so that clue is the start of almost every clerk puzzle.",
+   "needs": [],
+   "teach": [
+    "These puzzles rarely fix anyone outright. Of the eight real clerk puzzles I solved by script, only one says \"B sits at an end\"; five give no clue about the ends at all. So, as with boxes, you start from a relative clue. But here there is a very reliable one.",
+    "**Count how many ways a pair can sit in five columns.**",
+    "| Columns apart | Wording | Ways, if the direction is given | Ways, if only \"between\" |",
+    "| 4 | fourth to the right; three between | 1 | 2 |",
+    "| 3 | third to the left; two between | **2** | 4 |",
+    "| 2 | second to the right; one between | 3 | 6 |",
+    "| 1 | immediate left; neighbours | 4 | 8 |",
+    "A clue such as \"S sits third to the left of Q\" leaves just **two** drawings. **Seven of the eight real puzzles contain a step of three**, and in seven of the eight the best opening clue leaves exactly two cases.",
+    "So the routine is:",
+    "- Scan the clues for the widest step with a direction: \"third to the left\", \"third to the right\". Start there and draw the two cases side by side.",
+    "- Take the next clue that names one of those two people. With only five columns, most second clues remove one case at once, because something falls off the end of the row.",
+    "- Carry on along the chain of names.",
+    "The step-three clue is sometimes wrapped in a facing clue: \"A faces the one who sits third to the right of T\". It is still a step of three, between A's column and T's column, and it still leaves two cases. The next lesson shows how to read those.",
+    "Starting anywhere else costs time. Taken in printed order, three of your bank's ten five-a-side sets reach 14, 52 and 78 open cases; started well and followed along the chain of names, those same three never go above 3."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims (2023 paper). Row 1: P, Q, R, S, T face north. Row 2: G, H, I, J, K face south. S sits third to the left of Q. One person sits between S and the one who faces H. I sits second to the right of J. Q does not face J. T faces the one who sits second to the right of K. P sits to the left of R.",
+    "steps": [
+     "Draw G to K on top (south), P to T at the bottom (north).",
+     "Widest step: S = Q - 3. Two cases: (S 1, Q 4) or (S 2, Q 5).",
+     "H's column is 2 from S: with S 1, H is at 3; with S 2, H is at 4.",
+     "Top row: I = J - 2 (their right is a lower column). J must not be in Q's column.",
+     "Case S 1, Q 4, H 3: J can be 4 or 5. J 4 faces Q; J 5 needs I at 3, which H has. Out.",
+     "Case S 2, Q 5, H 4: J 3, I 1 (J 5 would face Q).",
+     "T's column = K - 2. K is at 2 or 5: K 5 gives T 3. G takes 2. P is left of R: P 1, R 4."
+    ],
+    "answer": "Top row (facing south), from your left: I, G, J, H, K. Bottom row (facing north), from your left: P, S, T, R, Q."
+   },
+   "check": {
+    "q": "Five persons sit in a row. S sits third to the left of Q. In how many ways can S and Q be placed?",
+    "options": {
+     "a": "1",
+     "b": "2",
+     "c": "3",
+     "d": "4"
+    },
+    "answer": "B",
+    "why": "A step of 3 in five columns: S and Q take columns 1 and 4, or 2 and 5 (which of each pair is S depends on the way the row faces). Two ways."
+   },
+   "shortcut": {
+    "title": "The two-case table for five seats",
+    "text": [
+     "Before reading the clues in order, run your eye down them for the numbers:",
+     "- **\"third\"** with a direction: 2 cases. Start here.",
+     "- **\"two persons between\"**: 4 cases alone, but usually 2 once the next clue is added.",
+     "- **\"second\"**: 3 cases. Use it second, not first.",
+     "- **\"immediate\"**: 4 cases. Never start here.",
+     "If two clues share a name, add their steps in your head: third to the left and then immediate left of the same person makes a block four columns wide, which fits only two ways."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#5"
+    ],
+    "tags": [
+     "Set A (5 + 5): a step of three, then every clue removes or places.",
+     "Set A (5 + 5), question 2: read it off the same drawing.",
+     "Set A (5 + 5), question 3: read it off the same drawing.",
+     "Set A (5 + 5), question 4: read it off the same drawing.",
+     "Set A (5 + 5), question 5: read it off the same drawing.",
+     "Set B (5 + 5): two small blocks, one in each row.",
+     "Set B (5 + 5), question 2: read it off the same drawing.",
+     "Set B (5 + 5), question 3: read it off the same drawing.",
+     "Set B (5 + 5), question 4: read it off the same drawing.",
+     "Set B (5 + 5), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "faces",
+   "code": "R3",
+   "title": "Clues that cross the rows",
+   "plain": "New: \"the one who faces Q sits third to the right of E\". Read it from the end, work inside one row, then drop straight across to the other.",
+   "needs": [],
+   "teach": [
+    "About three clues in every seven join the two rows. They look long, and they are the reason this puzzle feels harder than a single row. They are not harder once you see what they are.",
+    "A crossing clue is an ordinary step clue with one extra hop, and the hop costs nothing, because **facing means the same column**.",
+    "\"The one who faces Q sits third to the right of E.\"",
+    "- Start at the **end** of the sentence: E.",
+    "- \"Third to the right of E\": stay in **E's row**, and use **E's row's** idea of right. That gives a column.",
+    "- \"The one who faces Q\" is in that column. So **Q is in that column too**, in the other row.",
+    "So the clue simply says: Q's column = E's column moved three to E's right. One short note: if E's row faces south, **Q = E - 3**.",
+    "The only care needed is this: **the direction always belongs to the row of the person named after \"of\"**. In \"third to the right of E\", it is E's right, whichever row Q is in.",
+    "The other common forms, all read the same way:",
+    "| The clue says | As columns |",
+    "| The one who sits second to the left of D faces S | S = the column two to D's left |",
+    "| One person sits between A and the one who faces Q | A's column and Q's column are 2 apart |",
+    "| D faces one of the immediate neighbours of P | D's column and P's column are 1 apart |",
+    "| X sits diagonally opposite Y | X and Y are at opposite ends, in different rows |",
+    "Once you write crossing clues as plain column notes, the two rows become one strip of five columns with two names in each, and you chain through it exactly as before."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 20 September 2025, shift 2. Row 1: A, B, C, D, E face south. Row 2: P, Q, R, S, T face north. The one who sits second to the left of D faces S. T sits to the immediate right of S. Two persons sit between T and Q. The one who faces Q sits third to the right of E. One person sits between E and C, who sits to the left of A. A does not face P.",
+    "steps": [
+     "Draw A to E on top (south), P to T at the bottom (north).",
+     "Widest step, a crossing one: Q = the column three to E's right. E's row faces south, so Q = E - 3. Cases: (E 4, Q 1) or (E 5, Q 2).",
+     "T is 3 from Q: Q 1 gives T 4; Q 2 gives T 5. S is immediately left of T in the bottom row: S = T - 1.",
+     "S = the column two to D's left. D's row faces south, so that is D + 2: D = S - 2.",
+     "C is 2 from E, and C is to A's left, which in the top row means a higher column than A.",
+     "Case E 4, Q 1, T 4, S 3, D 1: C is at 2, and A would need a column lower than 2, but D has column 1. Out.",
+     "Case E 5, Q 2, T 5, S 4, D 2: C is at 3, A at 1, B at 4. A does not face P: P 3, R 1."
+    ],
+    "answer": "Top row (facing south), from your left: A, D, C, B, E. Bottom row (facing north), from your left: R, Q, P, S, T."
+   },
+   "check": {
+    "q": "The top row faces south and the bottom row faces north. E sits in column 5 of the top row (the right edge of your paper). The one who faces Q sits third to the right of E. In which column is Q?",
+    "options": {
+     "a": "Column 2",
+     "b": "Column 3",
+     "c": "Column 4",
+     "d": "There is no such column"
+    },
+    "answer": "A",
+    "why": "E faces south, so E's right is towards column 1. Three to the right of column 5 is column 2, and Q is in that same column in the other row."
+   },
+   "shortcut": {
+    "title": "Read the long clue backwards",
+    "text": [
+     "For any clue with \"the one who\", read from the last name towards the first, one hop at a time:",
+     "\"R sits third to the right of the one who faces the one who sits second to the right of M.\"",
+     "- M. Second to M's right: a column.",
+     "- The one who faces that person: same column, other row.",
+     "- Third to the right of that person (now using the other row's right): a column. R is there.",
+     "Each hop is either \"move so many columns\" or \"same column, other row\". Write the column number after each hop and the sentence cannot confuse you."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#5"
+    ],
+    "tags": [
+     "Set A (5 + 5): four crossing clues out of eight.",
+     "Set A (5 + 5), question 2: read it off the same drawing.",
+     "Set A (5 + 5), question 3: read it off the same drawing.",
+     "Set A (5 + 5), question 4: read it off the same drawing.",
+     "Set A (5 + 5), question 5: read it off the same drawing.",
+     "Set B (5 + 5): a block of three in one row decides the other row.",
+     "Set B (5 + 5), question 2: read it off the same drawing.",
+     "Set B (5 + 5), question 3: read it off the same drawing.",
+     "Set B (5 + 5), question 4: read it off the same drawing.",
+     "Set B (5 + 5), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "ends",
+   "code": "R4",
+   "title": "Ends, and the clues that say no",
+   "plain": "New: \"sits at an extreme end\", \"not at an end\", \"does not face\", \"not neighbours\", \"to the left of\". Know which of these to use early and which to keep for last.",
+   "needs": [],
+   "teach": [
+    "Besides steps, the papers use a handful of other clues. Each has a best moment.",
+    "**Use early.**",
+    "- **\"X sits at an extreme end.\"** Two columns: 1 or 5. Combined with any step clue about X, it is as good as a step of three. \"B is at an end, and one person sits between A and B\" puts A in column 3 whichever end B is at.",
+    "- **\"X does not sit at an end\", joined to a step.** \"P is second to the left of R, and R is not at an end\" leaves R in 3 or 4 only: two cases.",
+    "- **\"X sits diagonally opposite Y.\"** Both are at ends, at opposite corners. Two cases.",
+    "**Use in the middle.**",
+    "- **\"X faces Y\"** with no step: once either is placed, the other is placed.",
+    "- **\"X is an immediate neighbour of both E and A\"**: X is in the middle of those two, so X is not at an end.",
+    "**Keep for last.**",
+    "- **\"X sits to the left of Y\"** with no number. It only orders two people. With two free columns left it decides them.",
+    "- **\"X does not face Y\"** and **\"X and Y are not immediate neighbours\"**. These never place anyone. They exist to choose between the last two people for the last two columns. In the real papers, these are the final clues of the puzzle in almost every case.",
+    "A warning about \"to the left of\" in the top row: left there is a **higher** column. \"C sits to the left of A\" in a south-facing row means C is nearer your right hand than A.",
+    "**Two free columns, two people.** When a row is down to its last two people, look straight for a \"does not face\" or \"not neighbours\" clue naming one of them. It will be there."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 18 August 2024, shift 4. Row 1: A, B, F, D, E face north. Row 2: J, K, L, M, N face south. B sits at an extreme end. One person sits between A and B. L sits opposite the one who sits second to the left of A. One person sits between L and M. F sits second to the right of E. J sits to the immediate right of N. D sits to the right of A.",
+    "steps": [
+     "Draw J to N on top (south), A, B, F, D, E at the bottom (north).",
+     "B is at 1 or 5. A is 2 from B: column 3 either way.",
+     "F = E + 2. With A at 3, E and F can only be 2 and 4. That leaves D the remaining end. D is to the right of A, so D 5 and B 1.",
+     "L is opposite the person second to A's left: column 1. So L 1.",
+     "M is 2 from L: M 3.",
+     "J is immediately right of N in the top row: J = N - 1. Free 2, 4, 5: N 5, J 4. K takes 2."
+    ],
+    "answer": "Top row (facing south), from your left: L, K, M, J, N. Bottom row (facing north), from your left: B, E, A, F, D."
+   },
+   "check": {
+    "q": "Five persons sit in a row facing north. P sits second to the left of R, and R does not sit at an end. Which columns can P be in?",
+    "options": {
+     "a": "1 or 2",
+     "b": "2 or 3",
+     "c": "1 only",
+     "d": "3 only"
+    },
+    "answer": "A",
+    "why": "P = R - 2. R is not at 5 and must be at least 3: R is 3 or 4, so P is 1 or 2."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#5"
+    ],
+    "tags": [
+     "Set A (5 + 5): an end clue plus a crossing step gives two cases.",
+     "Set A (5 + 5), question 2: read it off the same drawing.",
+     "Set A (5 + 5), question 3: read it off the same drawing.",
+     "Set A (5 + 5), question 4: read it off the same drawing.",
+     "Set A (5 + 5), question 5: read it off the same drawing.",
+     "Set B (5 + 5): 'does not face' used early, because it names four people.",
+     "Set B (5 + 5), question 2: read it off the same drawing.",
+     "Set B (5 + 5), question 3: read it off the same drawing.",
+     "Set B (5 + 5), question 4: read it off the same drawing.",
+     "Set B (5 + 5), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "order",
+   "code": "R5",
+   "title": "Follow the names, not the printed order",
+   "plain": "New: the order of attack. After the opening clue, always take the clue that shares a name with what is already drawn.",
+   "needs": [],
+   "teach": [
+    "You now have every piece. This lesson is about using them in the right order, because in this puzzle the order decides whether you carry two cases or twenty.",
+    "The rule is simple:",
+    "**After the opening clue, the next clue must mention someone who is already in your drawing.**",
+    "A clue about two people who are both still unplaced adds cases. A clue that touches the drawing removes them. So you move through the clues along a chain of shared names, jumping around the printed list as needed.",
+    "I measured this on your bank's ten five-a-side sets. Read strictly in printed order, the number of open cases at the worst moment was 78 in one set, 52 in another and 14 in a third. Followed along the chain of names, the worst moment in those same three sets was 2, 3 and 3.",
+    "**How to keep track.** As you write the short notes, number them. After placing someone, circle that name wherever it appears in the notes. The next clue to use is one with a circled name and one uncircled name.",
+    "**When two clues tie**, prefer:",
+    "- the one with the wider step (fewer ways to fit);",
+    "- then the one that crosses rows (it starts the second row moving);",
+    "- then anything about an end.",
+    "**A strong opener hiding in plain sight.** \"More than two persons sit between T and R\" in a row of five means a step of four: T and R are at the two ends. That is two cases, as good as any \"third to the left\"."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims (2022 paper). Row 1: P, Q, R, S, T face south. Row 2: A, B, C, D, E face north. A faces the one who sits third to the right of T. Two persons sit between A and B. The one who sits second to the left of B faces the one who sits to the immediate left of P. More than two persons sit between T and R. D sits second to the left of C, who does not face Q.",
+    "steps": [
+     "Draw P to T on top (south), A to E at the bottom (north).",
+     "Opening: A's column = three to T's right. T's row faces south, so A = T - 3: (T 4, A 1) or (T 5, A 2).",
+     "Next clue with T in it: more than two between T and R means T and R are at the ends. So T 5, R 1, and A 2.",
+     "Next with A: B is 3 from A: B 5.",
+     "Next with B: the column two to B's left (bottom row: 5 - 2 = 3) is the column immediately left of P (top row: P + 1). So P 2.",
+     "D = C - 2 from the free columns 1, 3, 4: D 1, C 3. E takes 4.",
+     "C does not face Q: Q 4, S 3."
+    ],
+    "answer": "Top row (facing south), from your left: R, P, S, Q, T. Bottom row (facing north), from your left: D, A, C, E, B."
+   },
+   "check": {
+    "q": "Five persons sit in each row. Which of these three clues leaves the fewest ways to place its two people? (1) D sits second to the left of C. (2) More than two persons sit between T and R. (3) Two persons sit between A and B.",
+    "options": {
+     "a": "Clue 1",
+     "b": "Clue 2",
+     "c": "Clue 3",
+     "d": "They are equal"
+    },
+    "answer": "B",
+    "why": "Clue 2 forces T and R to the two ends: 2 ways. Clue 1 has 3 ways. Clue 3 has 4 (two pairs of columns, either way round)."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#5"
+    ],
+    "tags": [
+     "Set A (5 + 5): nine clues; in printed order it reaches 52 cases, along the chain 3.",
+     "Set A (5 + 5), question 2: read it off the same drawing.",
+     "Set A (5 + 5), question 3: read it off the same drawing.",
+     "Set A (5 + 5), question 4: read it off the same drawing.",
+     "Set A (5 + 5), question 5: read it off the same drawing.",
+     "Set B (5 + 5): one clue holds three facts; unpack it and no cases are needed.",
+     "Set B (5 + 5), question 2: read it off the same drawing.",
+     "Set B (5 + 5), question 3: read it off the same drawing.",
+     "Set B (5 + 5), question 4: read it off the same drawing.",
+     "Set B (5 + 5), question 5: read it off the same drawing."
+    ]
+   }
+  },
+  {
+   "id": "six",
+   "code": "R6",
+   "title": "Six in a row",
+   "plain": "New: the same puzzle with six columns, as in your bank and in officer-level papers. Only the counting table changes.",
+   "needs": [],
+   "teach": [
+    "Every real clerk puzzle I found had five in a row. Rows of six and seven belong to the officer-level papers and to your bank (5 of its 15 standard sets have six). This lesson is insurance, and it is short, because nothing in the method changes.",
+    "**What changes is the table.** With six columns there is more room, so each step fits one more way.",
+    "| Columns apart | Ways in a row of 5 | Ways in a row of 6 |",
+    "| 5 | none | 1 |",
+    "| 4 | 1 | 2 |",
+    "| 3 | 2 | 3 |",
+    "| 2 | 3 | 4 |",
+    "So \"third to the right\" is no longer a two-case opener. In a row of six, look for one of these:",
+    "- a step of **four** (\"fourth to the left\", \"three persons between\" with a direction);",
+    "- an **end clue** joined to a step;",
+    "- **\"third from one of the ends\"**, which in six columns means column 3 or column 4;",
+    "- \"more than three persons between\", which forces the two ends.",
+    "**There is no middle seat.** In five columns, \"one person between A and B, and B is at an end\" puts A in column 3 either way. In six it does not: A is at 3 or 4, and you carry both.",
+    "Everything else is the same: south-facing row on top, columns from your left, crossing clues read from the end, names followed along the chain, \"does not face\" kept for last. Expect one or two more cases than in a row of five, and about a minute longer."
+   ],
+   "example": {
+    "q": "RRB Officer Scale I Prelims, 4 August 2024, shift 2. Row 1: A, B, C, D, E, F face north. Row 2: P, Q, R, S, T, U face south. F sits at an end and faces T. One person sits between C and F. C sits to the immediate left of E. R faces an immediate neighbour of C. R sits second to the left of Q. Q does not sit at an end. B sits second to the right of A. The one who faces B sits to the immediate right of P. S sits exactly between Q and U.",
+    "steps": [
+     "Draw P to U on top (south), A to F at the bottom (north). Columns 1 to 6.",
+     "F and T share column 1 or column 6. C is 2 from F and E = C + 1: (F 1, C 3, E 4) or (F 6, C 4, E 5).",
+     "R is second to the left of Q; in the top row that is R = Q + 2. Q is not at an end, so R is 4, 5 or 6. R's column is next to C's.",
+     "F 1, T 1, C 3: R 4, Q 2. S must sit between Q and U: S 3 needs U at 4, S 1 is T's seat. Out.",
+     "F 6, T 6, C 4: R 5, Q 3 (R 3 would put Q at an end). S between Q and U: S 2, U 1. P takes 4.",
+     "The person facing B is immediately right of P: in the top row that is column 3. So B 3. B = A + 2: A 1. D takes 2."
+    ],
+    "answer": "Top row (facing south), from your left: U, S, Q, P, R, T. Bottom row (facing north), from your left: A, D, B, C, E, F."
+   },
+   "check": {
+    "q": "Six persons sit in a row. O sits third from one of the ends. Which columns can O be in?",
+    "options": {
+     "a": "Column 3 or 4",
+     "b": "Column 3 only",
+     "c": "Column 2 or 5",
+     "d": "Column 4 only"
+    },
+    "answer": "A",
+    "why": "Third from the left end is column 3. Third from the right end of six is column 4."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#5"
+    ],
+    "tags": [
+     "Set A (6 + 6): 'third from an end' opens; each clue hands over the next person.",
+     "Set A (6 + 6), question 2: read it off the same drawing.",
+     "Set A (6 + 6), question 3: read it off the same drawing.",
+     "Set A (6 + 6), question 4: read it off the same drawing.",
+     "Set A (6 + 6), question 5: read it off the same drawing.",
+     "Set B (6 + 6): an end clue with two cases; the second row closes it.",
+     "Set B (6 + 6), question 2: read it off the same drawing.",
+     "Set B (6 + 6), question 3: read it off the same drawing.",
+     "Set B (6 + 6), question 4: read it off the same drawing.",
+     "Set B (6 + 6), question 5: read it off the same drawing."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#1": [
+    "Draw P to T on top (facing south), A to E at the bottom (facing north). Columns 1 to 5 from your left.",
+    "Widest step: C = B + 3. Cases: (B 1, C 4) or (B 2, C 5).",
+    "Q's column is 2 from C's column. S is immediately left of Q; in the top row that is S = Q + 1. D is immediately left of the person facing S; in the bottom row that is D = S - 1.",
+    "B 2, C 5: Q 3, S 4, D 3. E is 3 from D: no column. Out.",
+    "B 1, C 4: Q 2, S 3, D 2. E is 3 from D: column 5. A takes 3.",
+    "Top row: P is immediately right of R, so P = R - 1. Free 1, 4, 5: P 4, R 5. T takes 1.",
+    "The arrangement. Row facing south, from your left: T, Q, S, P, R. Row facing north, from your left: B, D, A, C, E.",
+    "E is at the right end of the bottom row. Diagonally opposite is the left end of the top row: T."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: T, Q, S, P, R. Row facing north, from your left: B, D, A, C, E.",
+    "S is in column 3, and so is A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: T, Q, S, P, R. Row facing north, from your left: B, D, A, C, E.",
+    "D (2) is second to the left of C (4); one person is between T and S; P (4) is on S's left; Q faces D. All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: T, Q, S, P, R. Row facing north, from your left: B, D, A, C, E.",
+    "The one who faces R is E, in column 5. D is in column 2 of the same row, three places to E's left: Third to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: T, Q, S, P, R. Row facing north, from your left: B, D, A, C, E.",
+    "P, A, S and D are not at an end of a row. B is: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#1": [
+    "Draw P to T on top (facing south), A to E at the bottom (facing north).",
+    "Widest step: B = E - 3. Cases: (B 1, E 4) or (B 2, E 5).",
+    "Top row block: Q = S - 2 and T = S + 1 (T is immediately left of S). So Q, S, T are at (1, 3, 4) or (2, 4, 5).",
+    "P is second to the right of the person facing C: P = C - 2, so C = P + 2.",
+    "Q 1, S 3, T 4: P is 2 or 5. P 5 gives no C. P 2 gives C 4, so E must be 5 and B 2, and then B faces P. Out.",
+    "Q 2, S 4, T 5: P is 1 or 3, giving C 3 or C 5.",
+    "B 2, E 5: C 3, P 1. A and D share 1 and 4. D must face a neighbour of P, which is only column 2. Out.",
+    "B 1, E 4: P 1 would face B, so P 3, C 5. D faces a neighbour of P: column 2. A takes 3, not next to C. R takes 1.",
+    "The arrangement. Row facing south, from your left: R, Q, P, S, T. Row facing north, from your left: B, D, A, E, C.",
+    "R is in column 1 and the one who faces E is S, in column 4. Between them are Two people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: R, Q, P, S, T. Row facing north, from your left: B, D, A, E, C.",
+    "The one who faces T is C, in column 5. Second to C's left is column 3: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: R, Q, P, S, T. Row facing north, from your left: B, D, A, E, C.",
+    "Column 1 holds B and R, column 5 holds C and T. Of the pairs offered, the one at the ends is R - C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: R, Q, P, S, T. Row facing north, from your left: B, D, A, E, C.",
+    "B is at the left end of the bottom row. Diagonally opposite is the right end of the top row: T."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-80-78400-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: R, Q, P, S, T. Row facing north, from your left: B, D, A, E, C.",
+    "S, D, Q and E are in columns 2 and 4, next to an end. C is at an end: C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#1": [
+    "Draw A to E on top (facing south), P to T at the bottom (facing north).",
+    "C is second to the left of the person facing P. C's row faces south, so C = P + 2. P is not at an end: (P 2, C 4) or (P 3, C 5).",
+    "B is 3 from C: C 4 gives B 1; C 5 gives B 2. T's column is 2 from B's: B 1 gives T 3; B 2 gives T 4.",
+    "Q is immediately left of the person facing E. Q's row faces north, so Q = E - 1. S is next to Q.",
+    "P 3, C 5, B 2, T 4: E 3 gives Q 2, S 1. A and D share 1 and 4; D must not face T, so D 1, A 4, and A is next to E. Out.",
+    "P 2, C 4, B 1, T 3: E 5 gives Q 4, S 5 (E 2 would put S on P's seat). R takes 1.",
+    "A and D share 2 and 3; D must not face T (column 3): D 2, A 3.",
+    "The arrangement. Row facing south, from your left: B, D, A, C, E. Row facing north, from your left: R, P, T, Q, S.",
+    "A is in column 3, and so is T."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: B, D, A, C, E. Row facing north, from your left: R, P, T, Q, S.",
+    "One person (S) is to the right of Q. In the top row, right is towards column 1, so the person with one to the right is in column 2: D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: B, D, A, C, E. Row facing north, from your left: R, P, T, Q, S.",
+    "The one who faces D is P, in column 2. S is in column 5 of the same row, three places to P's right: Third to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: B, D, A, C, E. Row facing north, from your left: R, P, T, Q, S.",
+    "In DT, AQ, BP and CS the second person is one column to your right of the first. R and E are in columns 1 and 5: RE."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: B, D, A, C, E. Row facing north, from your left: R, P, T, Q, S.",
+    "R is at the left end of the row facing north, so everyone else in the row is to its right: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#1": [
+    "Draw K to O on top (facing south), V to Z at the bottom (facing north).",
+    "Top row: L is second to the right of K, so L = K - 2. O is 3 from L. So (L 1, K 3, O 4) or (L 2, K 4, O 5).",
+    "V is second to the left of the person facing O. V's row faces north: V = O - 2. X is 2 from V.",
+    "Z is immediately right of the person facing N: Z = N + 1. W is next to Z, and W does not face O.",
+    "L 1, K 3, O 4: V 2, X 4. N is at 2 or 5, so Z is 3 (6 does not exist). W needs column 2 or 4, both taken. Out.",
+    "L 2, K 4, O 5: V 3, and X is 1 or 5. N is 1 or 3, so Z is 2 or 4.",
+    "Z 4 would need W at 5, facing O (3 is taken). So Z 2, N 1, W 1, X 5, Y 4. M takes 3.",
+    "The arrangement. Row facing south, from your left: N, L, M, K, O. Row facing north, from your left: W, Z, V, Y, X.",
+    "V is in column 3, and so is M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: N, L, M, K, O. Row facing north, from your left: W, Z, V, Y, X.",
+    "Z is in column 2 and the one who faces O is X, in column 5. Between them are two people: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: N, L, M, K, O. Row facing north, from your left: W, Z, V, Y, X.",
+    "N (1) is on L's right in the row facing south; one person is between W and V; O faces X; W is second to the left of V. All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: N, L, M, K, O. Row facing north, from your left: W, Z, V, Y, X.",
+    "The one who faces M is V, in column 3. Immediately to V's right is column 4: Y."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: N, L, M, K, O. Row facing north, from your left: W, Z, V, Y, X.",
+    "N – V, K – Z, X – M and L – Y are each two columns apart. W (1) and K (4) are three apart: W – K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#1": [
+    "Draw A to E on top (facing south), J to N at the bottom (facing north).",
+    "L is at 1 or 5. D's column is 3 from L's: L 1 gives D 4; L 5 gives D 2.",
+    "B is immediately left of D in the top row: B = D + 1. B faces J.",
+    "E is second to the left of the person facing M: E = M + 2.",
+    "L 1, D 4, B 5, J 5: M is 2, 3 or 4, giving E at 4, 5 or 6. All taken or off the row. Out.",
+    "L 5, D 2, B 3, J 3: M 2 gives E 4 (M 1 would put E on B's seat; M 4 would need column 6).",
+    "K and N share 1 and 4. K does not face E: K 1, N 4.",
+    "A and C share 1 and 5. A is not next to E: A 1, C 5.",
+    "The arrangement. Row facing south, from your left: A, D, B, E, C. Row facing north, from your left: K, M, J, N, L.",
+    "B is in column 3 and E in column 4. In the row facing south, a higher column is to the left: Immediate left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: A, D, B, E, C. Row facing north, from your left: K, M, J, N, L.",
+    "M is not at an end. A faces K, and A is next to D. Both 2 and 3."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: A, D, B, E, C. Row facing north, from your left: K, M, J, N, L.",
+    "L is in column 5 and the one who faces B is J, in column 3. Between them is one person: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: A, D, B, E, C. Row facing north, from your left: K, M, J, N, L.",
+    "E is in column 4, and so is N."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: A, D, B, E, C. Row facing north, from your left: K, M, J, N, L.",
+    "A, L, C and K sit at ends. E does not: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#1": [
+    "Draw U to Y on top (facing south), E, F, G, H, J at the bottom (facing north).",
+    "Widest step: U is third to the right of Y in the top row: U = Y - 3. (Y 4, U 1) or (Y 5, U 2).",
+    "E = J - 2, and neither E nor J is in U's or Y's column.",
+    "Y 5, U 2: E and J must avoid columns 2 and 5: E 1, J 3. G is at an end: G 5. F is 3 from G: F 2. H takes 4. Top row: X = V - 2 from free columns 1, 3, 4: V 3, X 1, and then V is next to U. Out.",
+    "Y 4, U 1: E and J avoid columns 1 and 4: E 3, J 5. G is at an end: G 1. F is 3 from G: F 4. H takes 2.",
+    "Top row: X is second to the right of V, so X = V - 2. Free 2, 3, 5: V 5, X 3. U and V are not neighbours. W takes 2.",
+    "The arrangement. Row facing south, from your left: U, W, X, Y, V. Row facing north, from your left: G, H, E, F, J.",
+    "U, V, G and J sit at ends. X does not: X."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: U, W, X, Y, V. Row facing north, from your left: G, H, E, F, J.",
+    "H is in column 2, and so is W."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: U, W, X, Y, V. Row facing north, from your left: G, H, E, F, J.",
+    "G is in column 1 and J in column 5. Between them are three people: Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: U, W, X, Y, V. Row facing north, from your left: G, H, E, F, J.",
+    "W is in column 2 and Y in column 4. In the row facing south, a lower column is to the right: Second to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: U, W, X, Y, V. Row facing north, from your left: G, H, E, F, J.",
+    "(A) W's immediate right is U, and G faces U. (B) The one who faces Y is F; two people are between G and F. (C) W is second to the right of Y. All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#1": [
+    "Draw E, F, G, H, I on top (facing south), J to N at the bottom (facing north).",
+    "E is second to the left of the person facing L: E = L + 2. E is not at an end: (L 1, E 3) or (L 2, E 4).",
+    "Clue with E: H is 2 from E. Clue with E: F is not next to E. The person facing F is second to the left of M: F = M - 2.",
+    "L 1, E 3: H is 1 or 5. F is 1, 2 or 3 and not next to E: F 1 with M 3, so H 5. A neighbour of H faces N: N 4. I is next to H: I 4, facing N. Out.",
+    "L 2, E 4: H 2. F is M - 2 and not next to E: F 1, M 3.",
+    "A neighbour of H faces N: N is in column 1 or 3, and 3 is M's: N 1. I is next to H: column 3, not facing N. G takes 5.",
+    "As many between F and E as between N and J: F (1) and E (4) have two between, so J is at 4. K takes 5.",
+    "The arrangement. Row facing south, from your left: F, H, I, E, G. Row facing north, from your left: N, L, M, J, K.",
+    "G is in column 5 and faces K, who is next to J: G faces the one of the immediate neighbors of J."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: F, H, I, E, G. Row facing north, from your left: N, L, M, J, K.",
+    "F, G, N and K sit at ends. I sits in the middle: I."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: F, H, I, E, G. Row facing north, from your left: N, L, M, J, K.",
+    "N is in column 1, and so is F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: F, H, I, E, G. Row facing north, from your left: N, L, M, J, K.",
+    "Row I faces south, so its extreme right end is column 1, where F sits. Immediately to F's left is column 2: H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-63-78383-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: F, H, I, E, G. Row facing north, from your left: N, L, M, J, K.",
+    "L is in column 2 and M in column 3 of the row facing north: Immediate left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#1": [
+    "Draw A to E on top (facing south), P to T at the bottom (facing north).",
+    "P is second from an end: column 2 or 4. T is second to the right of P: T = P + 2, so P 2, T 4.",
+    "Q is 3 from P: Q 5. R is next to P: column 1 or 3.",
+    "B faces P: B 2. A is 2 from B: A 4.",
+    "The person facing Q is second to the left of D. D's row faces south, so Q's column = D + 2: D 3.",
+    "The person facing S is second to the right of D: S = D - 2 = 1. So R 3.",
+    "E does not face Q: E 1, C 5.",
+    "The arrangement. Row facing south, from your left: E, B, D, A, C. Row facing north, from your left: S, P, R, T, Q.",
+    "D is in column 3 of the row facing south. Second to its right is column 1: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: E, B, D, A, C. Row facing north, from your left: S, P, R, T, Q.",
+    "Q is in column 5, and so is C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: E, B, D, A, C. Row facing north, from your left: S, P, R, T, Q.",
+    "T is in column 4 and the one who faces E is S, in column 1. Between them are two people: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: E, B, D, A, C. Row facing north, from your left: S, P, R, T, Q.",
+    "R, B, T and A are not at an end. S is: S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: E, B, D, A, C. Row facing north, from your left: S, P, R, T, Q.",
+    "S is in column 1 and R in column 3 of the row facing north, so the true statement is: S sits to the left of R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#1": [
+    "Draw U to Z on top (facing south), M to R at the bottom (facing north). Columns 1 to 6.",
+    "O is at 3 or 4. P is 3 from O: O 3 gives P 6; O 4 gives P 1.",
+    "The person facing P is next to W: W's column is 1 from P's. Y is immediately right of W in the top row: Y = W - 1. Z is 3 from Y. M faces Z.",
+    "O 4, P 1: W 2, Y 1, Z 4, and M would be in column 4 with O. Out.",
+    "O 3, P 6: W 5, Y 4, Z 1, M 1.",
+    "X is immediately right of V: X = V - 1. Free top columns 2, 3, 6: V 3, X 2. U takes 6. X faces Q: Q 2.",
+    "Bottom row: free 4 and 5. N is to the left of R: N 4, R 5.",
+    "The arrangement. Row facing south, from your left: Z, X, V, Y, W, U. Row facing north, from your left: M, Q, O, N, R, P.",
+    "W is in column 5, and so is R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: Z, X, V, Y, W, U. Row facing north, from your left: M, Q, O, N, R, P.",
+    "M is in column 1 and R in column 5. Between them are three people: Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: Z, X, V, Y, W, U. Row facing north, from your left: M, Q, O, N, R, P.",
+    "V, R, N and O are not at an end. U is: U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: Z, X, V, Y, W, U. Row facing north, from your left: M, Q, O, N, R, P.",
+    "V is in column 3 of the row facing south. Its immediate left is column 4: Y."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-62-78382-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: Z, X, V, Y, W, U. Row facing north, from your left: M, Q, O, N, R, P.",
+    "X is in column 2 and W in column 5 of the row facing south, where a lower column is to the right: Third to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#1": [
+    "Draw A to F on top (facing south), P to U at the bottom (facing north). Columns 1 to 6.",
+    "P is at 1 or 6. T is 3 from P: P 1 gives T 4; P 6 gives T 3.",
+    "C is immediately right of the person facing T; C's row faces south, so C = T - 1. C is second to the right of E: E = C + 2. E faces R. B is next to E.",
+    "Q is immediately left of the person facing D: Q = D - 1. A faces S, and A is not at an end.",
+    "P 6, T 3: C 2, E 4, R 4. D is 3 with Q 2, or 6 with Q 5. With D 3, B is at 5 and A is left with an end. With D 6, A and S need a shared free column that is not an end: none. Out.",
+    "P 1, T 4: C 3, E 5, R 5. Q = D - 1 from the free columns: D 4, Q 3. B is next to E: column 6.",
+    "A faces S and is not at an end: column 2 for both. F takes 1 and U takes 6.",
+    "The arrangement. Row facing south, from your left: F, A, C, D, E, B. Row facing north, from your left: P, S, Q, T, R, U.",
+    "D is in column 4 of the row facing south. Third to its right is column 1: F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#2": [
+    "The arrangement. Row facing south, from your left: F, A, C, D, E, B. Row facing north, from your left: P, S, Q, T, R, U.",
+    "B is in column 6, and so is U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#3": [
+    "The arrangement. Row facing south, from your left: F, A, C, D, E, B. Row facing north, from your left: P, S, Q, T, R, U.",
+    "Column 1 holds F and P; column 6 holds B and U. Of the pairs offered, the one at the ends is B, P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#4": [
+    "The arrangement. Row facing south, from your left: F, A, C, D, E, B. Row facing north, from your left: P, S, Q, T, R, U.",
+    "Row I from the left is P, S, Q, T, R, U. In alphabetical order it would be P, Q, R, S, T, U. The first and the last stay: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-51-78371-parallel-row-arrangement#5": [
+    "The arrangement. Row facing south, from your left: F, A, C, D, E, B. Row facing north, from your left: P, S, Q, T, R, U.",
+    "The one who faces T is D, in column 4. Immediately to D's right in the row facing south is column 3: C."
+   ]
+  }
+ }
+}

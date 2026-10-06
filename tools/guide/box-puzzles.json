@@ -1,0 +1,1225 @@
+{
+ "module": "box-puzzles",
+ "intro": [
+  "A box puzzle is a stack of seven or eight boxes and about six clues. Most teaching for it stops at \"find a fixed box, connect the clues, eliminate\". That is true, but it is too general to make you fast. These lessons are built from the puzzles themselves.",
+  "**What I studied first.** Ten real clerk-level puzzles from memory-based papers (IBPS Clerk 2020, 2023, 2024, 2025; SBI Clerk 2022 and two from 2025; RRB Clerk 2021 and two from 2025), and 32 single-stack sets from your bank. Each was written out as exact conditions and solved by a script, so every number below was counted and none is a guess.",
+  "| What was measured | Real papers (10) | Your bank (32) |",
+  "| Number of boxes | 8 in IBPS and recent SBI Clerk, 7 in RRB Clerk | 8 in 17 sets, 7 in 7, 9 or 10 in 7, 6 in 1 |",
+  "| Puzzles that fix a box's place outright | 1 | 3 |",
+  "| Puzzles with no clue about a single box at all | 6 | 12 |",
+  "| Ways the main block fits, typically | 2 or 3 | 2 or 3 |",
+  "| Open cases when clues are taken in printed order | about 8 | about 8 |",
+  "| Open cases when the block is built first | about 4 | about 3 |",
+  "**What this means.** There is usually no fixed box to begin with, so the puzzle has to be started from the clues that lock boxes to each other. That is what the ten lessons teach, one piece at a time. Every worked example is a real paper puzzle, and every practice set comes from your bank with a full walk-through.",
+  "A note on honesty: memory-based papers are reconstructions by candidates. All ten puzzles used here have exactly one arrangement when checked by script, which is good evidence that they were remembered correctly, but the exact wording may differ slightly from the exam."
+ ],
+ "needs": [],
+ "after": [
+  "That is the single-stack box puzzle, which is the only kind found in the clerk-level papers studied. The **Quick revision** tab keeps the short tables.",
+  "For every set, the order is the same: short notes, hub, block, shapes, count the fits, columns, mirror and room clues, closers, then check one unused clue before answering.",
+  "Still to come for this topic, as insurance: boxes with a second fact (a colour or an item in each box), a vacant shelf, and two stacks side by side. None of the clerk papers studied had these, though your bank and the PO papers do."
+ ],
+ "lessons": [
+  {
+   "id": "numbers",
+   "code": "X1",
+   "title": "Turn every clue into a number",
+   "plain": "The starting point. Number the stack from the bottom, and read each clue as \"so many places apart\". Nothing is placed yet.",
+   "needs": [],
+   "teach": [
+    "A box puzzle gives you seven or eight boxes \"kept one above another\" and a handful of clues. Before any solving, there is a small language to learn. Each clue, however it is worded, says one of only a few things, and each of those is a **number**.",
+    "**Number the places from the bottom.** Place 1 is the lowest box. In a stack of 8, place 8 is the top. (If the puzzle itself says \"the top box is numbered 1\", follow the puzzle. One real paper did that.)",
+    "Now the clue words. Call the number of places between two boxes their **step**.",
+    "| The clue says | What it means | Step |",
+    "| X is immediately (or just) above Y | no box between them | X is 1 above Y |",
+    "| Only two boxes are between X and Y | two boxes sit in the middle | 3 apart, either way round |",
+    "| X is three boxes above Y | count three places up from Y | X is 3 above Y |",
+    "| X is adjacent to Y | next to each other | 1 apart, either way round |",
+    "| X is above Y | somewhere higher | not known |",
+    "Two of these are confused all the time, so please look at them once more:",
+    "- **\"Two boxes between\"** is a step of **3**. Add one to the number in the clue.",
+    "- **\"Two boxes above\"** is a step of **2**. Use the number as it is.",
+    "You may wonder whether \"three boxes above\" could mean three boxes in between. I checked rather than guessed. In your bank, 14 single-stack sets use this wording. Read as a plain step, every one of them has exactly one arrangement, and in each set I checked against its answer key it is the keyed one; read the other way, most of them have no arrangement at all. In the three real papers where the final arrangement is known (IBPS Clerk 2024, SBI Clerk 20 and 21 September 2025), the same reading fits. So you can rely on it.",
+    "**Clues that count boxes above or below.** These give a place directly.",
+    "| The clue says | Place, in a stack of N |",
+    "| Only two boxes are below X | place 3 |",
+    "| Only two boxes are above X | place N - 2 |",
+    "| As many boxes above X as below X | the middle place (only when N is odd) |",
+    "The habit this lesson is building: as you read each clue, write it in short form beside the puzzle, such as **T = R + 2** or **W, R: 4 apart**. From the next lesson on, you will solve from these short notes and hardly look at the sentences again."
+   ],
+   "example": {
+    "q": "Write each clue of this real puzzle as a number. (IBPS Clerk Prelims, 4 October 2025, shift 1, as candidates remembered it.) Three boxes are placed between W and R. T is placed two boxes above R. P is placed just below T but above W. Two boxes are placed between P and V. S is placed three boxes below V. Q is placed adjacent to W.",
+    "steps": [
+     "Three boxes between W and R: **W, R are 4 apart** (which is higher is not said).",
+     "T two boxes above R: **T = R + 2**.",
+     "P just below T: **P = T - 1**. And P is above W: no number, keep it aside.",
+     "Two boxes between P and V: **P, V are 3 apart**.",
+     "S three boxes below V: **S = V - 3**.",
+     "Q adjacent to W: **Q, W are 1 apart**."
+    ],
+    "answer": "Six short notes. You will solve this same puzzle from them in the next lesson."
+   },
+   "check": {
+    "q": "In a stack of 8 boxes numbered from the bottom, \"only two boxes are kept above X\". Where is X?",
+    "options": {
+     "a": "Place 2",
+     "b": "Place 3",
+     "c": "Place 6",
+     "d": "Place 7"
+    },
+    "answer": "C",
+    "why": "Two boxes above X means places 7 and 8 are above it, so X is at place 6. (Place 3 would be \"two boxes below X\".)"
+   },
+   "more": [
+    {
+     "tag": "Between",
+     "q": "Only three boxes are kept between P and Q. P is at place 2. Where is Q?",
+     "options": {
+      "a": "Place 5",
+      "b": "Place 6",
+      "c": "Place 4",
+      "d": "Place 7"
+     },
+     "answer": "B",
+     "why": "Three boxes between means a step of 4. 2 + 4 = 6. (Place 5 uses a step of 3, which would leave only two boxes between.)"
+    },
+    {
+     "tag": "Boxes above",
+     "q": "R is kept three boxes above S. S is at place 2. Where is R?",
+     "options": {
+      "a": "Place 4",
+      "b": "Place 5",
+      "c": "Place 6",
+      "d": "Place 3"
+     },
+     "answer": "B",
+     "why": "\"Three boxes above\" is a step of 3, used as it is: 2 + 3 = 5."
+    },
+    {
+     "tag": "A count on both sides",
+     "q": "In a stack of 7 boxes, as many boxes are above M as below M. Where is M?",
+     "options": {
+      "a": "Place 3",
+      "b": "Place 4",
+      "c": "Place 5",
+      "d": "It cannot be found"
+     },
+     "answer": "B",
+     "why": "Three above and three below: the middle, place 4. A real RRB Clerk paper (7 December 2025) opened with exactly this clue."
+    },
+    {
+     "tag": "At least",
+     "q": "In a stack of 7, more than two boxes are kept between X and Y, and X is at place 1. Where can Y be?",
+     "options": {
+      "a": "Place 4, 5, 6 or 7",
+      "b": "Place 5, 6 or 7",
+      "c": "Place 6 or 7",
+      "d": "Place 4 only"
+     },
+     "answer": "B",
+     "why": "More than two between means three or more between: a step of at least 4. From place 1 that is place 5, 6 or 7."
+    }
+   ]
+  },
+  {
+   "id": "block",
+   "code": "X2",
+   "title": "The block: join the clues before touching the stack",
+   "plain": "New: do not look for a box to place. Join the clues that share a box into one rigid block, away from the stack.",
+   "needs": [],
+   "teach": [
+    "Most advice for puzzles begins with \"find the fixed clue and place it first\". For box puzzles at clerk level, that advice usually has nothing to work on.",
+    "I checked 10 real clerk-level puzzles (IBPS Clerk, SBI Clerk and RRB Clerk, 2020 to 2025) and 32 sets in your bank. **Only one paper puzzle in the 10, and three bank sets in the 32, tell you outright where a box is.** Six of the 10 paper puzzles give no clue at all about a single box's place.",
+    "So the puzzle has to be started another way. Here it is.",
+    "**Clues that share a box can be joined.** If T = R + 2 and P = T - 1, then all three are locked together: P = R + 1. You do not yet know where they are in the stack, but you know exactly how they sit **relative to each other**. That locked group is a **block**.",
+    "**How to build it.**",
+    "- Pick the box that appears in the most clues. Call its place 0.",
+    "- Take each clue that mentions a box already in the block, and write the new box as a number above (+) or below (-) the 0.",
+    "- When a clue allows two ways (\"4 apart\" can be +4 or -4), see whether the block already rules one out: the spot may be taken, or a plain \"above\" clue may forbid it.",
+    "- Keep going until no remaining clue touches the block.",
+    "Then look at the **height** of the block: from its highest box to its lowest, counting both. If the height equals the number of boxes in the stack, the block **is** the stack, and the puzzle is finished without a single case.",
+    "This is not rare. In the 2025 IBPS Clerk puzzle below, seven of the eight boxes fall into one block that fills the stack."
+   ],
+   "example": {
+    "q": "Solve the IBPS Clerk Prelims puzzle of 4 October 2025 (eight boxes P, Q, R, S, T, U, V, W) from the notes of the last lesson: W, R are 4 apart. T = R + 2. P = T - 1, and P is above W. P, V are 3 apart. S = V - 3. Q, W are 1 apart.",
+    "steps": [
+     "R is in two clues and T links to P, so start there. Let R = 0. Then T = +2 and P = +1.",
+     "W is 4 from R: +4 or -4. But P is above W, and P is at +1. So W cannot be at +4. **W = -4.**",
+     "V is 3 from P (+1): +4 or -2. S = V - 3. If V = +4, S = +1, which is P's spot. So **V = -2 and S = -5.**",
+     "The block now runs from T (+2) down to S (-5). That is 8 places: the whole stack. So T is at place 8 and S at place 1.",
+     "Fill in: T 8, P 7, R 6, V 4, W 2, S 1. Q is next to W: place 3 (place 1 is S). U takes place 5."
+    ],
+    "answer": "Top to bottom: T, P, R, U, V, Q, W, S. No cases were needed."
+   },
+   "check": {
+    "q": "P is two boxes above Q. R is just below Q. Three boxes are between P and S, and S is below P. How many places does this block take, from its top box to its bottom box?",
+    "options": {
+     "a": "4",
+     "b": "5",
+     "c": "6",
+     "d": "7"
+    },
+    "answer": "B",
+    "why": "Let Q = 0. P = +2, R = -1, S = P - 4 = -2. The block runs from +2 to -2: five places."
+   },
+   "shortcut": {
+    "title": "Which box to start from",
+    "text": [
+     "Start the block from the **hub**: the box named in the most clues that give an exact step (immediately, n between, n boxes above).",
+     "A quick way to find it: as you write the short notes, put a tick over a box's letter each time it appears. The letter with the most ticks is the hub.",
+     "In the 17 bank sets practised in these lessons, the main block holds about 4 of the boxes on average. That is half the puzzle done before the stack is drawn."
+    ]
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "box-based-puzzle-single-variable-set-2-prelims-1#1",
+     "box-based-puzzle-single-variable-set-2-prelims-1#2",
+     "box-based-puzzle-single-variable-set-2-prelims-1#3",
+     "box-based-puzzle-single-variable-set-2-prelims-1#4",
+     "box-based-puzzle-single-variable-set-2-prelims-1#5"
+    ],
+    "tags": [
+     "Set A (8 boxes): seven boxes join into one block.",
+     "Set A (8 boxes), question 2: read it off the same stack.",
+     "Set A (8 boxes), question 3: read it off the same stack.",
+     "Set A (8 boxes), question 4: read it off the same stack.",
+     "Set A (8 boxes), question 5: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "slide",
+   "code": "X3",
+   "title": "Sliding the block up and down",
+   "plain": "New: the block is shorter than the stack. Count how many places it can sit in, draw one column for each, and let the other clues remove columns.",
+   "needs": [],
+   "teach": [
+    "Last lesson the block filled the whole stack. More often it is a little shorter, so it can **slide**.",
+    "**How many places can it sit in?** A block of height H in a stack of N boxes fits in",
+    "**N - H + 1 ways.**",
+    "A block 7 tall in a stack of 8 fits 2 ways: touching the top, or touching the bottom. A block 6 tall fits 3 ways.",
+    "This is the number of **cases** you face, and you know it before drawing anything. In the 32 bank sets and 10 real paper puzzles I worked through, the main block most often fits in **2 or 3 ways**. Working clue by clue in the order they are printed, the same puzzles typically reach about 8 open cases at their worst point. That difference is the time this method saves.",
+    "**What to do.**",
+    "- Draw one column for each fit, side by side, with the block written in.",
+    "- In each column, list the free places.",
+    "- Take the remaining clues one at a time and ask of each column: can this clue still be satisfied with the free places left? Strike out a column the moment the answer is no.",
+    "The best clues for striking out columns are the ones that need **room**: \"U is immediately above Q\" needs two free places next to each other; \"two boxes between L and K\" needs two free places 3 apart; \"I is above F but below K\" needs free places in a certain order. Look at the free places, not at the letters."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 20 September 2025, shift 2 (eight boxes F, G, H, I, J, K, L, M). J is three boxes above M. Two boxes are between L and K. G is just below J. Two boxes are between M and H. I is above F but below K. More than two boxes are between G and L.",
+    "steps": [
+     "Block from J: G = J - 1, M = J - 3. H is 3 from M: that is J itself (taken) or J - 6. So H = J - 6.",
+     "Height from J down to H: 7 places. In a stack of 8 it fits 8 - 7 + 1 = 2 ways.",
+     "Fit 1, block touching the top: J 8, G 7, M 5, H 2. Fit 2, block touching the bottom: J 7, G 6, M 4, H 1.",
+     "Fit 2: free places 8, 5, 3, 2. L and K are 3 apart: (8, 5) or (5, 2). G is at 6 and L must be at least 4 away from it, so L = 2 and K = 5. Free: 8 and 3. I is below K, so I = 3, and F must be below I: nothing free. Fit 2 is out.",
+     "Fit 1: free places 6, 4, 3, 1. L and K 3 apart: (6, 3) or (4, 1). L is at least 4 from G (place 7): L = 3 with K = 6, or L = 1 with K = 4.",
+     "K = 4, L = 1 leaves 6 and 3; I must be below K, so I = 3, and F below I has no place. Out. So K = 6, L = 3, then I = 4 and F = 1."
+    ],
+    "answer": "Top to bottom: J, G, K, M, I, L, H, F."
+   },
+   "check": {
+    "q": "A block is 6 places tall. The stack has 8 boxes. In how many ways can the block sit in the stack?",
+    "options": {
+     "a": "2",
+     "b": "3",
+     "c": "6",
+     "d": "8"
+    },
+    "answer": "B",
+    "why": "N - H + 1 = 8 - 6 + 1 = 3: with its top at place 8, 7 or 6."
+   },
+   "shortcut": {
+    "title": "Read the free places, not the letters",
+    "text": [
+     "After the block is in, write the free places of each column as plain numbers, for example **free: 6, 4, 3, 1**. Then test the remaining clues against those numbers:",
+     "- \"immediately above\" needs two free numbers that differ by 1;",
+     "- \"two boxes between\" needs two free numbers that differ by 3;",
+     "- \"X above Y above Z\" needs three free numbers, and tells you which box gets the highest.",
+     "A column where the needed pair of numbers does not exist is dead at once. You do not have to try any letters in it."
+    ]
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "box-based-puzzle-single-variable-set-1-prelims-1#6",
+     "box-based-puzzle-single-variable-set-1-prelims-1#7",
+     "box-based-puzzle-single-variable-set-1-prelims-1#8",
+     "box-based-puzzle-single-variable-set-1-prelims-1#9",
+     "box-based-puzzle-single-variable-set-1-prelims-1#10"
+    ],
+    "tags": [
+     "Set A (8 boxes): a block of five that can also change shape.",
+     "Set A (8 boxes), question 2: read it off the same stack.",
+     "Set A (8 boxes), question 3: read it off the same stack.",
+     "Set A (8 boxes), question 4: read it off the same stack.",
+     "Set A (8 boxes), question 5: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "shape",
+   "code": "X4",
+   "title": "When the block can take more than one shape",
+   "plain": "New: a \"between\" clue does not say which box is higher, so the block may flip. Plain words like above, below and top settle it.",
+   "needs": [],
+   "teach": [
+    "A clue such as \"three boxes between S and V\" gives a step of 4 but not the **direction**. V may be 4 above S or 4 below. So a block with such a clue in it can have two shapes, and each shape slides on its own.",
+    "Before you draw columns for every shape, let the cheap clues work. Three kinds of clue choose the shape for you.",
+    "**1. A plain \"above\" or \"below\" about two boxes already in the block.** \"P is above W\", with P at +1: W cannot be at +4. These clues look weak, but inside a block they are exact.",
+    "**2. The edges of the stack.** A shape that is taller than the stack cannot exist. Work out the height of each shape; often one of them is 9 tall in a stack of 8.",
+    "**3. Clues about the top or bottom.** \"At least two boxes are above C\" or \"D is not at the bottom\" cut off the highest or lowest fits of a shape.",
+    "So the order of work is: build the block, write down each shape it can take, strike out shapes with rules 1 to 3, and only then slide what is left.",
+    "The real papers often give this partner clue in the very next sentence (\"Two boxes are between B and G. G is below B.\"), so look for it straight away."
+   ],
+   "example": {
+    "q": "RRB Clerk (Office Assistant) Prelims, 8 August 2021 (seven boxes A to G). Two boxes are between B and G. G is below B. A is just below G. More than three boxes are between A and E. C is not above G. Two boxes are between F and C.",
+    "steps": [
+     "B, G are 3 apart, and \"G is below B\" gives the direction at once: G = B - 3. Then A = G - 1 = B - 4. One shape only.",
+     "Height from B to A: 5 places. In a stack of 7 it fits 3 ways: A at place 3, 2 or 1.",
+     "\"More than three between A and E\" is a step of at least 5. With A at 3, E would need place 8. Out.",
+     "A at 1: then G is at 2, and C must be below G. Only place 1 is below, and A has it. Out.",
+     "A at 2: G 3, B 6, and E = 7. C is below G: place 1. F is 3 from C: place 4. D takes 5."
+    ],
+    "answer": "Top to bottom: E, B, D, F, G, A, C."
+   },
+   "check": {
+    "q": "Three boxes are between K and L. M is immediately above K. M is above L. What do you know about L?",
+    "options": {
+     "a": "L is four places below K",
+     "b": "L is four places above K",
+     "c": "L may be four above or four below K",
+     "d": "L is three places below K"
+    },
+    "answer": "A",
+    "why": "Let K = 0, so M = +1. L is at +4 or -4. If L were at +4 it would be above M. So L = -4: four places below K."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 boxes): three shapes on paper, edges remove one.",
+     "Set A (7 boxes), question 2: read it off the same stack.",
+     "Set A (7 boxes), question 3: read it off the same stack.",
+     "Set A (7 boxes), question 4: read it off the same stack.",
+     "Set A (7 boxes), question 5: read it off the same stack.",
+     "Set B (8 boxes): a top-and-bottom clue trims the fits.",
+     "Set B (8 boxes), question 2: read it off the same stack.",
+     "Set B (8 boxes), question 3: read it off the same stack.",
+     "Set B (8 boxes), question 4: read it off the same stack.",
+     "Set B (8 boxes), question 5: read it off the same stack.",
+     "Set C (8 boxes): two shapes, and a 'more than two between' clue as the closer.",
+     "Set C (8 boxes), question 2: read it off the same stack.",
+     "Set C (8 boxes), question 3: read it off the same stack.",
+     "Set C (8 boxes), question 4: read it off the same stack.",
+     "Set C (8 boxes), question 5: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "mirror",
+   "code": "X5",
+   "title": "The mirror clue: as many above X as below Y",
+   "plain": "New: one clue that looks vague and is in fact exact. The two places always add up to one more than the number of boxes.",
+   "needs": [],
+   "teach": [
+    "\"As many boxes are kept above N as below G.\" This clue appears in more than half of the bank sets (18 of 32) and, in one form or another, in three of the ten real papers. It looks loose. It is one of the strongest clues in the puzzle.",
+    "Think of a stack of 7. If N is at the top, no box is above it, so no box is below G: G is at the bottom. If N is second from the top, G is second from the bottom. The two boxes sit at **mirror** places.",
+    "In numbers: **place of N + place of G = number of boxes + 1.**",
+    "| Stack | The mirror pairs |",
+    "| 7 boxes (sum 8) | 1 and 7, 2 and 6, 3 and 5 |",
+    "| 8 boxes (sum 9) | 1 and 8, 2 and 7, 3 and 6, 4 and 5 |",
+    "Three things follow, and each one saves time.",
+    "- **The moment one of the two is placed, the other is placed too.** So in every column of your block, the partner's place is forced. If that place is already taken by the block, the column is dead.",
+    "- **In a stack of 7 they can never both be at place 4**, since they are different boxes. In a stack of 8 the pair 4 and 5 are neighbours.",
+    "- The box named after \"above\" is the higher one whenever the count is less than half. \"As many above N as below G\" with only one or two boxes above N means N is near the top and G near the bottom.",
+    "**Variations.** \"The number of boxes above S is two more than the number below V\": work out the count for one and add two. \"As many boxes above M as below M\" (the same box): M is exactly in the middle."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 6 December 2025, shift 2 (seven boxes A to G). Three boxes are between B and D. A is immediately below B. The number of boxes below A is the same as the number above G. One box is between G and C, and C is above G. E is not at the bottom.",
+    "steps": [
+     "Mirror clue in a stack of 7: place of A + place of G = 8.",
+     "Short notes: B = A + 1. B, D are 4 apart. C = G + 2.",
+     "Run A through its places. A 6: G 2, B 7, D 3, C 4. All different. Keep.",
+     "A 5: G 3, B 6, C 5, which is A's place. Out. A 4: G would be 4 too. Out.",
+     "A 3: B 4, and D would need place 8 or 0. Out. A 2: G 6, C 8. Out. A 1: G 7, C 9. Out.",
+     "So B 7, A 6, C 4, D 3, G 2. Free: 5 and 1. E is not at the bottom: E 5, F 1."
+    ],
+    "answer": "Top to bottom: B, A, E, C, D, G, F."
+   },
+   "check": {
+    "q": "In a stack of 8 boxes, as many boxes are above X as below Y. X is at place 6. Where is Y?",
+    "options": {
+     "a": "Place 2",
+     "b": "Place 3",
+     "c": "Place 6",
+     "d": "Place 5"
+    },
+    "answer": "B",
+    "why": "The places add up to 9. 9 - 6 = 3. (Check: two boxes are above place 6, and two are below place 3.)"
+   },
+   "shortcut": {
+    "title": "Use the mirror first when it touches the block",
+    "text": [
+     "If one of the two mirror boxes is in your block, do not wait. As soon as the columns are drawn, write the partner's forced place in each one.",
+     "In all four practice sets of this lesson it removes at least one column on the spot, before any other clue is read.",
+     "To find the partner without thinking: partner's place = (number of boxes + 1) - this place. In 8 boxes: 9 minus. In 7 boxes: 8 minus."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#5"
+    ],
+    "tags": [
+     "Set A (6 boxes): a small stack to feel the mirror at work.",
+     "Set A (6 boxes), question 2: read it off the same stack.",
+     "Set A (6 boxes), question 3: read it off the same stack.",
+     "Set A (6 boxes), question 4: read it off the same stack.",
+     "Set A (6 boxes), question 5: read it off the same stack.",
+     "Set B (7 boxes): the mirror turns three columns into one.",
+     "Set B (7 boxes), question 2: read it off the same stack.",
+     "Set B (7 boxes), question 3: read it off the same stack.",
+     "Set B (7 boxes), question 4: read it off the same stack.",
+     "Set B (7 boxes), question 5: read it off the same stack.",
+     "Set C (8 boxes): a count clue first, then the mirror.",
+     "Set C (8 boxes), question 2: read it off the same stack.",
+     "Set C (8 boxes), question 3: read it off the same stack.",
+     "Set C (8 boxes), question 4: read it off the same stack.",
+     "Set C (8 boxes), question 5: read it off the same stack.",
+     "Set D (9 boxes): a tall block, and the mirror picks its place.",
+     "Set D (9 boxes), question 2: read it off the same stack.",
+     "Set D (9 boxes), question 3: read it off the same stack.",
+     "Set D (9 boxes), question 4: read it off the same stack.",
+     "Set D (9 boxes), question 5: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "soft",
+   "code": "X6",
+   "title": "Soft anchors: even, odd, prime, not at the top",
+   "plain": "New: clues about one box that do not fix it but narrow it. Use them to cut the list of places for the block, before drawing columns.",
+   "needs": [],
+   "teach": [
+    "Clerk papers rarely say \"T is at place 4\". What they do say, quite often, is something softer about one box:",
+    "- \"T is at an even numbered place\"",
+    "- \"A is kept in an odd numbered place\"",
+    "- \"U is third from either of the ends\"",
+    "- \"at least two boxes are above C\"",
+    "- \"B is not at the top\", \"E is not at the bottom\"",
+    "None of these places a box. Each of them **cuts down the places the block can sit in**, and that is how to use them: join the soft clue to the block **before** counting the fits.",
+    "\"S is at an even place but not below the fourth\" leaves 4, 6 and 8. If the block also says V is 3 above S, then S = 8 is impossible (V would be at 11) and S = 6 too (V at 9). One place is left, and you never drew a column.",
+    "For quick use:",
+    "| Words | Places in a stack of 8 |",
+    "| even | 2, 4, 6, 8 |",
+    "| odd | 1, 3, 5, 7 |",
+    "| prime | 2, 3, 5, 7 (1 is not a prime) |",
+    "| third from either end | 3 or 6 |",
+    "| at least two above | 6 or lower |",
+    "**Two soft clues on boxes of the same block multiply.** If Q is even and T, three places from Q, is also even, that cannot happen: an odd step changes even to odd. Checking **even against odd** like this is a very fast test. A step of 1 or 3 switches between even and odd; a step of 2 or 4 keeps it.",
+    "And the weakest ones, \"not at the top\" and \"not at the bottom\": keep them for the very end. In the real papers they are nearly always what decides between the last two boxes."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 19 November 2022, shift 1 (seven boxes P to V). U is third from either of the ends. P is adjacent to U. Three boxes are between P and S. The number of boxes above S is two more than the number below V. Q is above R, which is not below S.",
+    "steps": [
+     "U is at place 3 or place 5.",
+     "P is next to U: 2 or 4 (with U at 3), or 4 or 6 (with U at 5). S is 4 from P.",
+     "P at 4 would put S at 8 or 0. So P is 2 or 6: either (U 3, P 2, S 6) or (U 5, P 6, S 2).",
+     "Count clue. S at 6: one box above it, so V would have minus one box below. Out.",
+     "S at 2: five boxes above, so three below V: V at 4.",
+     "Free: 7, 3, 1. Q is above R, and R is above S: R 3, Q 7. T takes 1."
+    ],
+    "answer": "Top to bottom: Q, P, U, V, R, S, T."
+   },
+   "check": {
+    "q": "Eight boxes. S is at an even numbered place, but not below the fourth. V is three boxes above S. Where is S?",
+    "options": {
+     "a": "Place 4",
+     "b": "Place 6",
+     "c": "Place 8",
+     "d": "It cannot be found"
+    },
+    "answer": "A",
+    "why": "S can be 4, 6 or 8. V = S + 3 must exist in a stack of 8, so S cannot be 6 or 8. S is at place 4."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 boxes): two 'even' clues do nearly all the work.",
+     "Set A (7 boxes), question 2: read it off the same stack.",
+     "Set A (7 boxes), question 3: read it off the same stack.",
+     "Set A (7 boxes), question 4: read it off the same stack.",
+     "Set A (7 boxes), question 5: read it off the same stack.",
+     "Set B (8 boxes): odd places, a mirror, and a 'not adjacent' closer.",
+     "Set B (8 boxes), question 2: read it off the same stack.",
+     "Set B (8 boxes), question 3: read it off the same stack.",
+     "Set B (8 boxes), question 4: read it off the same stack.",
+     "Set B (8 boxes), question 5: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "fewest",
+   "code": "X7",
+   "title": "Start where the choices are fewest",
+   "plain": "New: the biggest block is not always the best start. Count the places each group can take, and begin with the smallest count.",
+   "needs": [],
+   "teach": [
+    "So far the plan has been: build the biggest block, then slide it. In some puzzles the biggest block is small (two or three boxes) and slides in six or seven ways. Starting there would give you seven columns.",
+    "The better rule is the general one behind everything so far:",
+    "**Begin with the group of clues that leaves the fewest possible places.**",
+    "Three kinds of clue are much tighter than they look, and are worth checking before you choose where to begin.",
+    "**1. A wide gap.** \"More than four boxes between M and T\" in a stack of 8 means a step of at least 6. Only three pairs of places allow that: 1 and 7, 1 and 8, 2 and 8. A clue that sounded vague has pinned two boxes to the ends of the stack.",
+    "| Clue in a stack of 8 | Pairs of places that allow it |",
+    "| more than four between | 3 pairs |",
+    "| more than three between | 6 pairs |",
+    "| more than two between | 10 pairs |",
+    "**2. A mirror clue joined to an exact step.** \"S is three above Y, and as many boxes are above S as below R\": S can only be at 4, 5, 7 or 8, and each choice places three boxes at once.",
+    "**3. A chain of plain \"above\" clues.** \"K is above R, and R is above V\" is three boxes in a fixed order. If only three free places are left for them, they are placed with no thought at all. The more boxes in the chain, the earlier it helps.",
+    "And then the **closers**: \"not adjacent\" clues. They never help you start, but they are almost always what removes the last wrong column. Read them last, and check them against every column that is still alive.",
+    "In the IBPS Clerk puzzle of 2024 below, starting from the three-box block gives nine columns. Starting from the wide gap gives four, and each one closes quickly."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 25 August 2024, shift 3 (eight boxes A, B, F, K, M, P, T, V, numbered 1 at the bottom). P is three boxes above V. Only two boxes are between K and A. More than four boxes are between M and T. B is above F but not at an odd numbered place. T is just below A. F and M are not adjacent. B is not at the top.",
+    "steps": [
+     "Wide gap first: M and T are at 1 and 7, 1 and 8, or 2 and 8.",
+     "T has A just above it, so T is not at 8. That leaves four columns: (T 1, M 7), (T 1, M 8), (T 2, M 8) and (T 7, M 1).",
+     "T 7, A 8, M 1: K is 3 from A, so K 5. P = V + 3 with free places 2, 3, 4, 6: V 3, P 6. Left: 2 and 4. B above F: B 4, F 2, but F is next to M. Out.",
+     "T 2, A 3, M 8: K 6. Free 1, 4, 5, 7: (V 1, P 4) leaves 5 and 7; (V 4, P 7) leaves 1 and 5. B must be even and not at 8: no even place in either. Out.",
+     "T 1, A 2, K 5, M 7: free 3, 4, 6, 8. V 3, P 6 only. Left: 4 and 8. B above F would put B at 8. Out.",
+     "T 1, A 2, K 5, M 8: free 3, 4, 6, 7. V 3, P 6 leaves 4 and 7: B would be 7, odd. Out. V 4, P 7 leaves 3 and 6: B 6, F 3. F is not next to M. It works."
+    ],
+    "answer": "Top to bottom: M, P, B, K, V, F, A, T."
+   },
+   "check": {
+    "q": "In a stack of 7 boxes, more than three boxes are kept between A and E. How many pairs of places allow this?",
+    "options": {
+     "a": "2",
+     "b": "3",
+     "c": "4",
+     "d": "6"
+    },
+    "answer": "B",
+    "why": "More than three between is a step of at least 5: places 1 and 6, 1 and 7, or 2 and 7. Three pairs."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#4"
+    ],
+    "tags": [
+     "Set A (8 boxes): mirror plus a step beats the three-box block.",
+     "Set A (8 boxes), question 2: read it off the same stack.",
+     "Set A (8 boxes), question 3: read it off the same stack.",
+     "Set A (8 boxes), question 4: read it off the same stack.",
+     "Set A (8 boxes), question 5: read it off the same stack.",
+     "Set B (8 boxes): twelve clues, mostly 'not adjacent'. Two columns, then closers.",
+     "Set B (8 boxes), question 2: read it off the same stack.",
+     "Set B (8 boxes), question 3: read it off the same stack.",
+     "Set B (8 boxes), question 4: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "same-gap",
+   "code": "X8",
+   "title": "Same-gap clues, and the midpoint",
+   "plain": "New: \"as many boxes between A and B as between C and D\". Keep it for last, unless the two pairs share a box. Then it is a midpoint.",
+   "needs": [],
+   "teach": [
+    "\"The number of boxes between K and M is the same as the number between L and P.\" This clue names four boxes and gives no step at all. On its own it cannot start anything.",
+    "**The usual case: use it last.** By the time the block is placed, one of the two pairs is normally already in the stack. Read off its step. The other pair must have the same step, and you look for two free places that far apart. It works exactly like a \"between\" clue whose number you find out late.",
+    "A very common result is a step of 1: if K and M turn out to be neighbours, there are no boxes between them, so L and P must be neighbours as well.",
+    "**The special case: the two pairs share a box.** \"As many boxes between B and E as between E and C.\" Now E is named twice, and this is quite different:",
+    "- B and C are different boxes, so they cannot both be on the same side of E at the same distance.",
+    "- So E is **exactly halfway** between B and C. One is above E, the other the same number of places below.",
+    "That is an exact clue, and it belongs **in the block**. If B is 4 above E, then C is 4 below E. In one of your bank's ten-box sets this single observation makes the block fill the whole stack, and a puzzle that looks like the hardest in the paper is done with no cases.",
+    "So when you see a same-gap clue, look first at one thing: is a box repeated? If yes, block. If no, last."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 7 December 2025, shift 1 (seven boxes K, L, M, N, P, R, S). As many boxes are above M as below M. One box is between M and R. S is immediately above R. Three boxes are between S and K. The number of boxes between K and M equals the number between L and P. P is not at the bottom.",
+    "steps": [
+     "M is in the middle of 7: place 4.",
+     "R is 2 from M: 6 or 2. S is just above R: 7 or 3. K is 4 from S: with S 7, K 3; with S 3, K 7.",
+     "Column 1: S 7, R 6, M 4, K 3. K and M are neighbours, so L and P must be neighbours. Free: 5, 2, 1. L and P take 2 and 1; P is not at the bottom, so P 2, L 1, and N takes 5.",
+     "Column 2: K 7, M 4, S 3, R 2. K and M have two boxes between them, so L and P must be 3 apart. Free: 6, 5, 1. No such pair. Out."
+    ],
+    "answer": "Top to bottom: S, R, N, M, K, P, L."
+   },
+   "check": {
+    "q": "Ten boxes. The number of boxes between B and E is the same as the number between E and C. B is at place 9 and E is at place 6. Where is C?",
+    "options": {
+     "a": "Place 2",
+     "b": "Place 3",
+     "c": "Place 4",
+     "d": "Place 5"
+    },
+    "answer": "B",
+    "why": "E is halfway between B and C. B is 3 above E, so C is 3 below: place 3."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#5"
+    ],
+    "tags": [
+     "Set A (10 boxes): the midpoint makes the block fill the whole stack.",
+     "Set A (10 boxes), question 2: read it off the same stack.",
+     "Set A (10 boxes), question 3: read it off the same stack.",
+     "Set A (10 boxes), question 4: read it off the same stack.",
+     "Set A (10 boxes), question 5: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "together",
+   "code": "X9",
+   "title": "Putting it together: two blocks, and nine boxes",
+   "plain": "New: nothing new in the ideas. Two separate blocks have to fit around each other, and the stack may be longer. The same steps, with more care.",
+   "needs": [],
+   "teach": [
+    "Sometimes the exact clues do not all connect. You get **two blocks** of three boxes each, and neither is tied to the other. The SBI Clerk paper of 21 September 2025 was like this.",
+    "Do not try to slide both at once. The way through is:",
+    "- Build both blocks on the side and note the height of each.",
+    "- Place the **taller** one, or the one with a soft anchor or an \"above\" clue attached. It has fewer fits.",
+    "- For each fit, write the free places as numbers, and ask whether the second block's pattern exists among them. A block needing places u, u - 1 and u - 3 either finds those three numbers free or it does not.",
+    "- Then the closers.",
+    "Most columns die at the third step without any further work, because a second rigid block is very hard to fit into scattered free places.",
+    "**Nine and ten boxes.** Your bank has several; the clerk papers I found had only 7 or 8, and the longer stacks appeared at PO level. If you meet one, the method does not change, but judge it first:",
+    "- If the main block is 7 or more tall, the long stack is actually **easier**, because the block has very little room to slide.",
+    "- If the biggest block is only 2 or 3 boxes and there are five or more loose boxes, it will take over five minutes. In the exam, do the other puzzles first and come back.",
+    "A sensible target once the method is familiar: about 3 minutes for the stack and 15 to 20 seconds for each question."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 21 September 2025, shift 1 (eight boxes A to H). Four boxes are between A and E, and E is below A. G is above A. F is four boxes above E. Three boxes are between G and B, which is just above D. C is below H. H is below A.",
+    "steps": [
+     "Block 1: E = 0, F = +4, A = +5. Height 6, so E is at 1, 2 or 3. G is above A, so A is not at 8: E is 1 or 2.",
+     "Block 2: G, B (4 from G), D = B - 1.",
+     "E 2: A 7, F 6, so G 8, B 4, D 3. Free: 5 and 1. H is below A, C below H: H 5, C 1. It works.",
+     "E 1: A 6, F 5. G is 7 or 8. G 7 gives B 3, D 2, leaving 4 and 8: H 4, and C has nothing free below. G 8 gives B 4, D 3, leaving 2 and 7: H 2, and C has nothing below. Out."
+    ],
+    "answer": "Top to bottom: G, A, F, H, B, D, E, C."
+   },
+   "check": {
+    "q": "A block needs the three places u, u - 1 and u - 3. The free places in a column are 1, 3, 4, 5 and 7. Where can the block's top box (at u) sit?",
+    "options": {
+     "a": "Place 4 only",
+     "b": "Place 5 only",
+     "c": "Place 4 or 5",
+     "d": "Place 7"
+    },
+    "answer": "A",
+    "why": "u = 4 needs 4, 3 and 1: all free. u = 5 needs 5, 4 and 2: 2 is not free. u = 7 needs 6. Only place 4."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "box-based-puzzle-single-variable-set-4-prelims-1#1",
+     "box-based-puzzle-single-variable-set-4-prelims-1#2",
+     "box-based-puzzle-single-variable-set-4-prelims-1#3",
+     "box-based-puzzle-single-variable-set-4-prelims-1#4",
+     "box-based-puzzle-single-variable-set-4-prelims-1#5",
+     "box-based-puzzle-single-variable-set-1-prelims-1#11",
+     "box-based-puzzle-single-variable-set-1-prelims-1#12",
+     "box-based-puzzle-single-variable-set-1-prelims-1#13",
+     "box-based-puzzle-single-variable-set-1-prelims-1#14",
+     "box-based-puzzle-single-variable-set-1-prelims-1#15",
+     "box-based-puzzle-single-variable-set-5-prelims-1#1",
+     "box-based-puzzle-single-variable-set-5-prelims-1#2",
+     "box-based-puzzle-single-variable-set-5-prelims-1#3",
+     "box-based-puzzle-single-variable-set-5-prelims-1#4",
+     "box-based-puzzle-single-variable-set-5-prelims-1#5"
+    ],
+    "tags": [
+     "Set A (8 boxes): two blocks of three that must fit around each other.",
+     "Set A (8 boxes), question 2: read it off the same stack.",
+     "Set A (8 boxes), question 3: read it off the same stack.",
+     "Set A (8 boxes), question 4: read it off the same stack.",
+     "Set A (8 boxes), question 5: read it off the same stack.",
+     "Set B (9 boxes): a tall block in a long stack, with a same-gap closer.",
+     "Set B (9 boxes), question 2: read it off the same stack.",
+     "Set B (9 boxes), question 3: read it off the same stack.",
+     "Set B (9 boxes), question 4: read it off the same stack.",
+     "Set B (9 boxes), question 5: read it off the same stack.",
+     "Set C (8 boxes): three small blocks, a mirror and a 'not prime' clue.",
+     "Set C (8 boxes), question 2: read it off the same stack.",
+     "Set C (8 boxes), question 3: read it off the same stack.",
+     "Set C (8 boxes), question 4: read it off the same stack.",
+     "Set C (8 boxes), question 5: read it off the same stack."
+    ]
+   }
+  },
+  {
+   "id": "questions",
+   "code": "X10",
+   "title": "The five questions: reading the answers off quickly",
+   "plain": "New: the stack is built. A few habits make the five questions take seconds each.",
+   "needs": [],
+   "teach": [
+    "Once the stack is right, the five questions should be the quickest marks in the section. I sorted the 216 questions asked on single-stack sets in your bank, and the same few kinds keep returning. The real papers ask the same kinds.",
+    "| Kind of question | Share in the bank |",
+    "| Which box is above, below or at a given place | about 1 in 3 |",
+    "| How many boxes between, above or below | about 1 in 5 |",
+    "| Four of the five are alike: find the odd one | about 1 in 8 |",
+    "| Which statement is true or false | about 1 in 10 |",
+    "| As many boxes above X as below which box | about 1 in 12 |",
+    "| Rearranged alphabetically, or two boxes swapped | about 1 in 12 |",
+    "**Write the place numbers beside the final stack.** Every one of these questions is then a small subtraction, not counting with a finger.",
+    "- **Boxes between X and Y** = difference of the two places, minus 1.",
+    "- **Boxes above X** = number of boxes minus X's place. **Boxes below X** = X's place minus 1.",
+    "- **As many above X as below which box?** This is the mirror: the answer is the box at place (number of boxes + 1 - X's place).",
+    "- **Odd one out, given as pairs.** Find the step for each pair. Four pairs share it; one does not. If the steps do not separate them, look at direction (first box above or below the second), and then at even and odd places.",
+    "- **Odd one out, given as single boxes.** It is nearly always even places against odd places, or prime places against non-prime.",
+    "- **Arranged in alphabetical order, how many stay unchanged?** Write the alphabetical column right beside your stack and compare row by row. Check whether it says from the top or from the bottom.",
+    "- **Statements.** Check the shortest statement first; in \"which is true\" questions you can stop at the first true one unless an option says \"both\".",
+    "One last habit: before answering, test your finished stack against the **one clue you used least**, usually a \"not adjacent\" one. It takes five seconds and protects all five answers."
+   ],
+   "example": {
+    "q": "The final stack, from top to bottom, is R, T, V, P, S, W, U, Q (eight boxes). Answer: (1) How many boxes are between T and W? (2) As many boxes are above V as below which box? (3) Which pair is the odd one: R-T, V-P, T-P, U-Q?",
+    "steps": [
+     "Write the places: R 8, T 7, V 6, P 5, S 4, W 3, U 2, Q 1.",
+     "(1) T is 7 and W is 3. 7 - 3 - 1 = 3 boxes.",
+     "(2) Mirror of place 6 in 8 boxes: 9 - 6 = 3. The box at place 3 is W.",
+     "(3) Steps: R-T 1, V-P 1, T-P 2, U-Q 1. The odd one is T-P."
+    ],
+    "answer": "Three; W; T-P."
+   },
+   "check": {
+    "q": "The final stack, from top to bottom, is G, F, D, H, B, A, E, C (eight boxes). As many boxes are kept above F as below which box?",
+    "options": {
+     "a": "Box C",
+     "b": "Box E",
+     "c": "Box A",
+     "d": "Box H"
+    },
+    "answer": "B",
+    "why": "F is at place 7. Its mirror in 8 boxes is 9 - 7 = 2, and the box at place 2 is E. (One box is above F, and one is below E.)"
+   },
+   "more": [
+    {
+     "tag": "Odd one out",
+     "q": "The stack, top to bottom, is T, U, Q, S, P, W, R, V. Four of these are alike in their places: S, R, W, U, Q. Which is the odd one?",
+     "options": {
+      "a": "S",
+      "b": "R",
+      "c": "U",
+      "d": "Q"
+     },
+     "answer": "D",
+     "why": "Places: S 5, R 2, W 3, U 7, Q 6. Four are at prime places. Q, at place 6, is not."
+    },
+    {
+     "tag": "Alphabetical order",
+     "q": "The stack, top to bottom, is X, S, V, T, Y, W, R, U. If the boxes are rearranged in alphabetical order from top to bottom, how many stay where they are?",
+     "options": {
+      "a": "None",
+      "b": "One",
+      "c": "Two",
+      "d": "Three"
+     },
+     "answer": "C",
+     "why": "Alphabetical from the top: R, S, T, U, V, W, X, Y. Compared row by row with X, S, V, T, Y, W, R, U, the second (S) and the sixth (W) match: two."
+    }
+   ]
+  }
+ ],
+ "work": {
+  "guidely": {
+   "box-based-puzzle-single-variable-set-2-prelims-1#1": [
+    "Short notes: A = G + 4 (three between, A above). D, A are 2 apart. B, D are 1 apart. E = G + 1. F = G - 1. F, H are 3 apart.",
+    "Let G = 0. Then E = +1, F = -1, A = +4.",
+    "H is 3 from F (-1): +2 or -4. D is 2 from A (+4): +6 or +2.",
+    "If H = -4, the block already runs from -4 to +4, nine places, too tall for 8 boxes. So H = +2, and then D cannot be +2: D = +6.",
+    "The block runs from F (-1) to D (+6): 8 places, the whole stack. F 1, G 2, E 3, H 4, A 6, D 8.",
+    "B is next to D: place 7. C takes place 5.",
+    "So the stack, from top to bottom, is: D, B, A, C, H, E, G, F.",
+    "Just below A (place 6) is place 5: Box C."
+   ],
+   "box-based-puzzle-single-variable-set-2-prelims-1#2": [
+    "The stack, from top to bottom: D, B, A, C, H, E, G, F.",
+    "Between B (place 7) and G (place 2) are four boxes: More than three."
+   ],
+   "box-based-puzzle-single-variable-set-2-prelims-1#3": [
+    "The stack, from top to bottom: D, B, A, C, H, E, G, F.",
+    "E is at place 3; just above it, at place 4, is Box H."
+   ],
+   "box-based-puzzle-single-variable-set-2-prelims-1#4": [
+    "The stack, from top to bottom: D, B, A, C, H, E, G, F.",
+    "Statement (b) says D is not at the top, but D is at the top. Statements (a) and (c) are true. So only (b) is not true: Box D does not keep at the top of all the boxes."
+   ],
+   "box-based-puzzle-single-variable-set-2-prelims-1#5": [
+    "The stack, from top to bottom: D, B, A, C, H, E, G, F.",
+    "Third from the bottom is place 3: Box E."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#6": [
+    "Short notes: P, W are 2 apart. S = W + 1. R = V + 2. W, V are 3 apart. R and W are not adjacent. U = Q + 1. U is below S.",
+    "Let W = 0. S = +1. V is +3 or -3, and R = V + 2. If V = -3, R = -1, right next to W, which is not allowed. So V = +3, R = +5.",
+    "P is +2 or -2. With P = +2 the block (W, S, P, V, R at 0, 1, 2, 3, 5) is 6 tall: W can be at place 1, 2 or 3. With P = -2 it is 8 tall: one way, W at 3.",
+    "The remaining clue needs room: U and Q need two free places next to each other, both below S.",
+    "W at 1 or 2: at most one free place below S. Out. P = -2 (P 1, W 3, S 4): only place 2 is free below S. Out.",
+    "W at 3 with P = +2: W 3, S 4, P 5, V 6, R 8. Free: 1, 2, 7. So U 2, Q 1, and T takes 7.",
+    "So the stack, from top to bottom, is: R, T, V, P, S, W, U, Q.",
+    "The fourth shelf holds S: the box which is kept immediately above box W."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#7": [
+    "The stack, from top to bottom: R, T, V, P, S, W, U, Q.",
+    "P is at place 5, so the boxes below it are Four."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#8": [
+    "The stack, from top to bottom: R, T, V, P, S, W, U, Q.",
+    "T is at place 7; three boxes below is place 4, which is S. U is at place 2, and two boxes above U is place 4 as well. So the answer is the box which is kept two boxes above box U."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#9": [
+    "The stack, from top to bottom: R, T, V, P, S, W, U, Q.",
+    "I: T (7) is above U (2), so false. II: U (2) and W (3) are adjacent, true. III: P is at place 5, odd, true. Both II and III."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#10": [
+    "The stack, from top to bottom: R, T, V, P, S, W, U, Q.",
+    "In alphabetical order from the top the stack would be P, Q, R, S, T, U, V, W. Compare place by place with R, T, V, P, S, W, U, Q: no box matches. None."
+   ],
+   "box-based-puzzle-single-variable-set-4-prelims-1#1": [
+    "Short notes: W = Z + 2. Z, V are 4 apart. S = U - 3. Y = U - 1. Boxes between Y and T = boxes between X and S. X is not next to U or W.",
+    "Block 1: U, Y just below, S three below (places u, u - 1, u - 3). Block 2: Z, W two above, and V four above or four below Z.",
+    "Block 2 with V above (Z, W, V at z, z + 2, z + 4): z can be 1, 2, 3 or 4. With V below: (V 1, Z 5, W 7) or (V 2, Z 6, W 8).",
+    "For each, look for block 1 among the free places. It fits only in three of the six: z = 1 (U 7, Y 6, S 4), z = 2 (U 8, Y 7, S 5), and V 2, Z 6, W 8 (U 4, Y 3, S 1).",
+    "z = 1: free 2 and 8 for X; 8 is next to U and 2 is next to W (3). Out. The V-below fit: free 5 and 7; 5 is next to U and 7 next to W. Out.",
+    "z = 2: Z 2, W 4, V 6, U 8, Y 7, S 5. Free 1 and 3. X cannot be next to W (4): X 1, T 3. Check the same-gap clue: Y (7) to T (3) has three between, X (1) to S (5) has three between.",
+    "So the stack, from top to bottom, is: U, Y, V, S, W, T, Z, X.",
+    "Between V (6) and X (1) are Four boxes."
+   ],
+   "box-based-puzzle-single-variable-set-4-prelims-1#2": [
+    "The stack, from top to bottom: U, Y, V, S, W, T, Z, X.",
+    "The box just below T is Z (place 2). Four boxes above that is place 6: Box V."
+   ],
+   "box-based-puzzle-single-variable-set-4-prelims-1#3": [
+    "The stack, from top to bottom: U, Y, V, S, W, T, Z, X.",
+    "Three boxes are above S (place 5). Between V (6) and Z (2) are three boxes: Boxes kept between V and Z."
+   ],
+   "box-based-puzzle-single-variable-set-4-prelims-1#4": [
+    "The stack, from top to bottom: U, Y, V, S, W, T, Z, X.",
+    "Z, U, W and V are at even places (2, 8, 4, 6). S is at place 5: Box S."
+   ],
+   "box-based-puzzle-single-variable-set-4-prelims-1#5": [
+    "The stack, from top to bottom: U, Y, V, S, W, T, Z, X.",
+    "Five boxes are above T (place 3). Five boxes are below place 6, which is Box V."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#11": [
+    "Short notes: T = N + 5. L = T + 2. N, O are 2 apart. P = M + 1. Boxes between M and T = boxes between Q and S. Q is not next to T or N.",
+    "Let N = 0. T = +5, L = +7. O = -2 would make the block 10 tall, so O = +2. The block is 8 tall: N is at 1 or 2.",
+    "N 2: O 4, T 7, L 9. Free 1, 3, 5, 6, 8. P and M are neighbours: P 6, M 5. M to T has one box between, so Q and S are 2 apart: 1 and 3. But both 1 and 3 are next to N. Out.",
+    "N 1: O 3, T 6, L 8. Free 2, 4, 5, 7, 9. P 5, M 4. M to T has one box between, so Q and S are 2 apart: 7 and 9.",
+    "Q is not next to T (6), so Q 9, S 7. R takes 2.",
+    "So the stack, from top to bottom, is: Q, L, S, T, P, M, O, R, N.",
+    "The lowermost shelf holds Box N."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#12": [
+    "The stack, from top to bottom: Q, L, S, T, P, M, O, R, N.",
+    "I: L (8) is immediately above S (7), true. II: Q (9) and S (7) have one box between, false. III: P (5) and S (7) have one box between, true. IV: L (8) and P (5) have two between, false. Only (I) and (III)."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#13": [
+    "The stack, from top to bottom: Q, L, S, T, P, M, O, R, N.",
+    "Between N (1) and T (6) are four boxes: Four."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#14": [
+    "The stack, from top to bottom: Q, L, S, T, P, M, O, R, N.",
+    "First R and M change places: M goes to 2 and R to 4. Then M and T change places: M goes to 6 and T to 2. Immediately below M (6) is place 5: Box P."
+   ],
+   "box-based-puzzle-single-variable-set-1-prelims-1#15": [
+    "The stack, from top to bottom: Q, L, S, T, P, M, O, R, N.",
+    "S is at place 7 of 9, which is third from the top: Third."
+   ],
+   "box-based-puzzle-single-variable-set-5-prelims-1#1": [
+    "Short notes: Q = V + 5. P = Q - 2. Place of P + place of S = 9. S, T are 3 apart, T not at a prime place. W = R + 1.",
+    "V, P, Q are at (1, 4, 6), (2, 5, 7) or (3, 6, 8).",
+    "Mirror: P 4 gives S 5. P 5 gives S 4. P 6 gives S 3, which is V's place. Out.",
+    "T is 3 from S and not at 2, 3, 5 or 7. With S 5: T 8. With S 4: T 1.",
+    "V 2, P 5, Q 7, S 4, T 1: free 3, 6, 8. W and R need two places next to each other. Out.",
+    "V 1, P 4, S 5, Q 6, T 8: free 2, 3, 7. W 3, R 2, and U takes 7.",
+    "So the stack, from top to bottom, is: T, U, Q, S, P, W, R, V.",
+    "Immediately above Q (place 6) is place 7: Box U."
+   ],
+   "box-based-puzzle-single-variable-set-5-prelims-1#2": [
+    "The stack, from top to bottom: T, U, Q, S, P, W, R, V.",
+    "Between T (8) and W (3) are four boxes. Four boxes are also above P (place 4). So: As many boxes kept above P."
+   ],
+   "box-based-puzzle-single-variable-set-5-prelims-1#3": [
+    "The stack, from top to bottom: T, U, Q, S, P, W, R, V.",
+    "S, R, W and U are at prime places (5, 2, 3, 7). Q is at place 6: Q."
+   ],
+   "box-based-puzzle-single-variable-set-5-prelims-1#4": [
+    "The stack, from top to bottom: T, U, Q, S, P, W, R, V.",
+    "S is at place 5; three boxes below is place 2, which is R, the box just above V: The one which is kept immediately above V."
+   ],
+   "box-based-puzzle-single-variable-set-5-prelims-1#5": [
+    "The stack, from top to bottom: T, U, Q, S, P, W, R, V.",
+    "W is at place 3 and V at place 1, so \"W is kept below V\" is false."
+   ]
+  },
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#1": [
+    "Short notes: S, V are 4 apart. Q, T are 3 apart. T = S - 1. T sits between U and Q. P, R are 2 apart with R above P.",
+    "Let S = 0, T = -1. V is +4 or -4. Q is 3 from T: +2 or -4.",
+    "V = +4 with Q = -4 would be 9 tall. V and Q cannot both be -4. So the shapes are (V +4, Q +2), 6 tall, or (V -4, Q +2), 7 tall.",
+    "Shape 1 fits with T at place 1 or 2. T at 1: Q is above T, so U must be below T, and there is no place. Out.",
+    "Shape 1 with T at 2: S 3, Q 5, V 7, and U at 1. Free: 4 and 6. R above P, 2 apart: R 6, P 4. It works.",
+    "Shape 2 (V 1, T 4, S 5, Q 7): free 2, 3, 6. P and R need two free places 2 apart: none. Out.",
+    "So the stack, from top to bottom, is: V, R, Q, P, S, T, U.",
+    "U is at place 1 and Q at place 5: between them are Three boxes."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#2": [
+    "The stack, from top to bottom: V, R, Q, P, S, T, U.",
+    "T is at place 2 and R at place 6; exactly in the middle is place 4: Box P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#3": [
+    "The stack, from top to bottom: V, R, Q, P, S, T, U.",
+    "The top box is Box V."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#4": [
+    "The stack, from top to bottom: V, R, Q, P, S, T, U.",
+    "R-P, Q-S, S-U and V-Q each have one box between them. S (3) and P (4) are adjacent. The odd one is Box S - Box P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-box-puzzle#5": [
+    "The stack, from top to bottom: V, R, Q, P, S, T, U.",
+    "Between R (6) and S (3) are two boxes. Between V (7) and P (4) are also two: Box V - Box P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#1": [
+    "Short notes: C, A are 4 apart. H = C + 1. At least two boxes above C. H is above A. H, G are 3 apart. E = F + 4. A, D are 1 apart. B is above H. B and E are not adjacent.",
+    "Let C = 0, H = +1. H is above A, so A = -4, not +4. The block from H to A is 6 tall.",
+    "B must be above H, so H cannot be at the top: C is at place 5 or 6 (A at 1 or 2).",
+    "C at 5: H 6, A 1, so D 2. G is 3 from H: place 3. Free: 4, 7, 8. E = F + 4 gives E 8, F 4, and B gets 7, next to E. Not allowed. Out.",
+    "C at 6: H 7, A 2, B 8. G is 3 from H: place 4. D is next to A: place 3 or 1.",
+    "D at 1 leaves 3 and 5 free; E and F need to be 4 apart. Out. D at 3 leaves 5 and 1: E 5, F 1, and B (8), E (5) are not adjacent.",
+    "So the stack, from top to bottom, is: B, H, C, E, G, D, A, F.",
+    "H is at place 7, so above it there is One box."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#2": [
+    "The stack, from top to bottom: B, H, C, E, G, D, A, F.",
+    "The top of the stack is Box B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#3": [
+    "The stack, from top to bottom: B, H, C, E, G, D, A, F.",
+    "G is at place 4; immediately above it, at place 5, is Box E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#4": [
+    "The stack, from top to bottom: B, H, C, E, G, D, A, F.",
+    "A is at place 2: Second from the bottom."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-box-puzzle#5": [
+    "The stack, from top to bottom: B, H, C, E, G, D, A, F.",
+    "BC, ED, DF and GA each have one box between them. C (6) and E (5) are adjacent. The odd one is CE."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#1": [
+    "Short notes: D, E are 4 apart. F = D + 1. C, B are 3 apart. G = H + 3. D, G are 2 apart. H is above B. C, D are at least 4 apart.",
+    "Let D = 0, F = +1. G is +2 or -2, and H = G - 3.",
+    "Shape 1: G = +2, H = -1. That makes G, F, D, H four in a row. Shape 2: G = -2, H = -5.",
+    "Shape 2 is 7 tall (F +1 down to H -5), so D is at 6 or 7. D at 6 puts H at 1, with nothing below for B. D at 7 gives F 8, G 5, H 2, E 3, B 1; C would be at 4, only 3 from D. Out.",
+    "Shape 1 with E = -4 is 7 tall: D at 6 or 5. D at 5: G 7, F 6, H 4, E 1; free 8, 3, 2. B is below H: 3 or 2, and C would need place 6 or 5. Out.",
+    "D at 6: G 8, F 7, H 5, E 2; free 4, 3, 1. B and C are 3 apart: places 4 and 1. C must be at least 4 from D (6), so C = 1 and B = 4. A takes 3.",
+    "Shape 1 with E = +4 (D at 2, 3 or 4): H is then at 1, 2 or 3, B has to be below H, and C, three places above B, always lands on a place the block already holds. Out.",
+    "So the stack, from top to bottom, is: G, F, D, H, B, A, E, C.",
+    "B is at place 4; immediately below it, at place 3, is Box A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#2": [
+    "The stack, from top to bottom: G, F, D, H, B, A, E, C.",
+    "Between G (8) and B (4) are Three boxes."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#3": [
+    "The stack, from top to bottom: G, F, D, H, B, A, E, C.",
+    "One box is above F (place 7). One box is below place 2, which is Box E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#4": [
+    "The stack, from top to bottom: G, F, D, H, B, A, E, C.",
+    "From bottom to top, alphabetical order would be A, B, C, D, E, F, G, H. The stack from the bottom is C, E, A, B, H, D, F, G. No place matches: None."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-box-puzzle#5": [
+    "The stack, from top to bottom: G, F, D, H, B, A, E, C.",
+    "B is at 4 and F at 7, with two boxes between them. So the true statement is: Only two boxes are kept between box B and box F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#1": [
+    "Short notes: A, B are 4 apart. C = B - 1. G, C are 2 apart. Place of G + place of H = 7. H is above B.",
+    "A and B are 4 apart in a stack of 6, and C is just below B. So B is at 2 (A 6, C 1), at 5 (A 1, C 4) or at 6 (A 2, C 5).",
+    "B at 6: H cannot be above it. Out.",
+    "B at 5: G is 2 from C (4), so G is 6 or 2. Mirror: H is 1 or 5. Neither is above B and free. Out.",
+    "B at 2: G is 2 from C (1), so G = 3, and the mirror gives H = 4, which is above B. K takes 5.",
+    "So the stack, from top to bottom, is: A, K, H, G, B, C.",
+    "K is at place 5; three boxes below is place 2: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#2": [
+    "The stack, from top to bottom: A, K, H, G, B, C.",
+    "Between H (4) and C (1) are Two boxes."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#3": [
+    "The stack, from top to bottom: A, K, H, G, B, C.",
+    "Between H (4) and A (6) there is one box. Between G (3) and K (5) there is also one: G, K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#4": [
+    "The stack, from top to bottom: A, K, H, G, B, C.",
+    "H is at place 4 in a stack of 6, which is third from the top: Box H is third from the top."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-box-puzzle#5": [
+    "The stack, from top to bottom: A, K, H, G, B, C.",
+    "H-A, C-G, B-H and K-G each have one box between them. B (2) and G (3) are adjacent: B, G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#1": [
+    "Short notes: N = D + 4. Place of N + place of G = 8. G, M are 3 apart. F = O + 1. E is below O.",
+    "N = D + 4, so N is at 5, 6 or 7. The mirror then gives G at 3, 2 or 1.",
+    "N 6: D is at 2 and G is at 2 as well. Out.",
+    "N 5: D 1, G 3, so M 6. Free: 2, 4, 7. F and O need two places next to each other. Out.",
+    "N 7: D 3, G 1, M 4. Free: 2, 5, 6. F 6, O 5, and E below O: place 2.",
+    "So the stack, from top to bottom, is: N, F, O, M, D, E, G.",
+    "D is at place 3, so above it there are Four boxes."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#2": [
+    "The stack, from top to bottom: N, F, O, M, D, E, G.",
+    "Exactly between G (1) and N (7) is place 4: Box M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#3": [
+    "The stack, from top to bottom: N, F, O, M, D, E, G.",
+    "The topmost box is Box N."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#4": [
+    "The stack, from top to bottom: N, F, O, M, D, E, G.",
+    "M and G, F and D, N and M, O and E each have two boxes between them. N (7) and G (1) have five. The odd one is Box N and G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-box-puzzle#5": [
+    "The stack, from top to bottom: N, F, O, M, D, E, G.",
+    "Two boxes are above O (place 5). Two boxes are below place 3, which is Box D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#1": [
+    "Short notes: more than two boxes above A, so A is at 5 or lower. D = A - 3. D, E are 2 apart. Place of E + place of B = 9. C = H + 3. G, C at least 4 apart.",
+    "D = A - 3 needs A at 4 or higher. So A is 4 or 5.",
+    "A 5: D 2, E 4 (place 0 does not exist). Mirror: B = 5, which is A's place. Out.",
+    "A 4: D 1, E 3, and the mirror gives B = 6. Free: 2, 5, 7, 8.",
+    "C = H + 3: C 8 with H 5, or C 5 with H 2. G must be at least 4 from C.",
+    "C 5, H 2 leaves 7 and 8 for G: too close. So C 8, H 5, G 2, and F takes 7.",
+    "So the stack, from top to bottom, is: C, F, B, H, A, E, G, D.",
+    "F is at place 7, so above it there is One box."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#2": [
+    "The stack, from top to bottom: C, F, B, H, A, E, G, D.",
+    "Exactly between C (8) and A (4) is place 6: Box B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#3": [
+    "The stack, from top to bottom: C, F, B, H, A, E, G, D.",
+    "The top of the stack is Box C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#4": [
+    "The stack, from top to bottom: C, F, B, H, A, E, G, D.",
+    "F-A, H-G, A-D and E-B each have two boxes between them. C (8) and B (6) have one. The odd one is Box C - Box B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-28-78348-box-puzzle#5": [
+    "The stack, from top to bottom: C, F, B, H, A, E, G, D.",
+    "Between C (8) and H (5) are two boxes. Between E (3) and B (6) are also two: Box E - Box B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#1": [
+    "Short notes: A, G are 5 apart. C = G + 1. B = F + 4. F = A + 3. Place of C + place of J = 10. D is above E and not at the top.",
+    "Let A = 0. F = +3, B = +7. G is +5 or -5; -5 would make the block 13 tall, so G = +5 and C = +6.",
+    "The block runs from A (0) to B (+7): 8 tall, so in a stack of 9 it fits 2 ways. A is at 1 or 2.",
+    "A 2: C is at 8, and the mirror puts J at 2, which is A's place. Out.",
+    "A 1: F 4, G 6, C 7, B 8, and J at 3. Free: 2, 5, 9.",
+    "D is above E and not at the top: D 5, E 2, and H takes 9.",
+    "So the stack, from top to bottom, is: H, B, C, G, D, F, J, E, A.",
+    "Between F (4) and E (2) there is One box."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#2": [
+    "The stack, from top to bottom: H, B, C, G, D, F, J, E, A.",
+    "Exactly in the middle of C (7) and A (1) is place 4: Box F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#3": [
+    "The stack, from top to bottom: H, B, C, G, D, F, J, E, A.",
+    "The top of the stack is Box H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#4": [
+    "The stack, from top to bottom: H, B, C, G, D, F, J, E, A.",
+    "F-A, H-G, C-F and G-J each have two boxes between them. C (7) and B (8) are adjacent. The odd one is Box C - Box B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-24-78344-box-puzzle#5": [
+    "The stack, from top to bottom: H, B, C, G, D, F, J, E, A.",
+    "Between C (7) and H (9) there is one box. Between G (6) and F (4) there is also one: Box G - Box F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#1": [
+    "Short notes: T, R are 3 apart. T is even. U = S + 2. T, U are 1 apart. P, Q are 4 apart. Q = S + 1, and Q is even.",
+    "S, Q, U are three in a row (S, then Q, then U above). Q is even: so they are at (1, 2, 3), (3, 4, 5) or (5, 6, 7).",
+    "T is next to U and even. U at 3: T = 4. U at 5: T = 6. U at 7: T = 6, which is Q's place. Out.",
+    "R is 3 from T. With T at 6: R = 3, which is S's place. Out. With T at 4: R = 7 (place 1 is S).",
+    "So S 1, Q 2, U 3, T 4, R 7. P is 4 from Q: place 6. V takes 5.",
+    "So the stack, from top to bottom, is: R, P, V, T, U, Q, S.",
+    "The top of the stack is R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#2": [
+    "The stack, from top to bottom: R, P, V, T, U, Q, S.",
+    "Between V (5) and Q (2) are Two boxes."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#3": [
+    "The stack, from top to bottom: R, P, V, T, U, Q, S.",
+    "Five boxes are above Q (place 2). Five boxes are below place 6, which is P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#4": [
+    "The stack, from top to bottom: R, P, V, T, U, Q, S.",
+    "R (7) and V (5) have one box between them, and so have S (1) and U (3). P is at 6, so its partner is at 4: T."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-box-puzzle#5": [
+    "The stack, from top to bottom: R, P, V, T, U, Q, S.",
+    "SQ, RP, VT and QU are adjacent pairs. P (6) and U (3) are not: PU."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#1": [
+    "Short notes: W = T + 1. T is at 1, 3 or 5. Place of W + place of V = 9. X = S + 1, X not at the top, S is odd. Y, Z are 3 apart. U is not next to Z or V.",
+    "T 1: W 2, V 7. T 3: W 4, V 5. T 5: W 6, V 3. Three columns.",
+    "T 3 (W 4, V 5): S must be odd with X just above: only S 1, X 2. Free 6, 7, 8: Y and Z cannot be 3 apart. Out.",
+    "T 1 (W 2, V 7): S 3 with X 4 leaves 5, 6, 8; Y and Z take 8 and 5, and U gets 6, next to V. Out. S 5 with X 6 leaves 3, 4, 8: no pair 3 apart. Out.",
+    "T 5 (W 6, V 3): S 1, X 2. Free 4, 7, 8. Y and Z take 7 and 4, U takes 8.",
+    "U is not next to Z, so Z is not at 7: Z 4, Y 7.",
+    "So the stack, from top to bottom, is: U, Y, W, T, Z, V, X, S.",
+    "Between U (8) and V (3) are Four boxes."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#2": [
+    "The stack, from top to bottom: U, Y, W, T, Z, V, X, S.",
+    "One box is above Y (place 7). One box is below place 2, which is X."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#3": [
+    "The stack, from top to bottom: U, Y, W, T, Z, V, X, S.",
+    "U is at place 8; four boxes below is place 4: Z."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#4": [
+    "The stack, from top to bottom: U, Y, W, T, Z, V, X, S.",
+    "U is at 8 and Y at 7, so the correct statement is: Box U is kept immediately above box Y."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-box-puzzle#5": [
+    "The stack, from top to bottom: U, Y, W, T, Z, V, X, S.",
+    "In X-V, T-W, S-X and V-Z the first box is just below the second. In U-Y the first is just above the second: U-Y."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#1": [
+    "Short notes: U, T are 4 apart. S = Y + 3. T, X at least 3 apart. V = T + 1. U is not next to S or Y. Place of S + place of R = 9. W, X not adjacent.",
+    "The block T, V, U would slide 7 ways. Start instead with S, Y and the mirror: (S 4, Y 1, R 5), (S 5, Y 2, R 4), (S 7, Y 4, R 2), (S 8, Y 5, R 1). S 6 fails because Y and R would both be at 3.",
+    "S 5: T needs V just above and U 4 away. Only T 7, V 8, U 3 fits the free places, and U is next to Y. Out.",
+    "S 4: the fits are T 2, V 3, U 6 (others put U next to S or Y). Then X and W are left with 7 and 8, adjacent. Out.",
+    "S 8: T 6, V 7, U 2 leaves 3 and 4 for X and W, adjacent. The other fits put U next to S or Y. Out.",
+    "S 7, Y 4, R 2: T 5, V 6, U 1. Free: 3 and 8. X must have at least two boxes between it and T: X 8, W 3.",
+    "So the stack, from top to bottom, is: X, S, V, T, Y, W, R, U.",
+    "V is at place 6, so above it there are Two boxes."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#2": [
+    "The stack, from top to bottom: X, S, V, T, Y, W, R, U.",
+    "Y is at place 4; immediately below, at place 3, is Box W."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#3": [
+    "The stack, from top to bottom: X, S, V, T, Y, W, R, U.",
+    "X-S, R-U, Y-W and V-T are adjacent in the stack. S (7) and W (3) are not: S - W."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#4": [
+    "The stack, from top to bottom: X, S, V, T, Y, W, R, U.",
+    "Three boxes are above T (place 5). Three boxes are below place 4, which is Y."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-79-78399-box-puzzle#5": [
+    "The stack, from top to bottom: X, S, V, T, Y, W, R, U.",
+    "From top to bottom, alphabetical order would be R, S, T, U, V, W, X, Y. The stack is X, S, V, T, Y, W, R, U. S (second) and W (sixth) match: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#1": [
+    "Short notes: at least two above M. M = D + 3. D not at the bottom. Q above M. J = B + 1. B is not next to M or D. R is not next to M. B, R at least 4 apart. K above R above V.",
+    "M = D + 3, D is not at 1, and M is at 6 or lower: (D 2, M 5) or (D 3, M 6). Two columns.",
+    "D 3, M 6: B cannot be at 2, 4, 5 or 7, so B is 1 or 8, and needs J just above: B 1, J 2. R must be at least 4 from B and not next to M: R 8. Then K cannot be above R. Out.",
+    "D 2, M 5: B cannot be at 1, 3, 4 or 6: B 7, J 8. Q is above M: Q 6.",
+    "Free: 4, 3, 1, for the chain K above R above V: K 4, R 3, V 1. R (3) is not next to M (5), and is 4 from B.",
+    "So the stack, from top to bottom, is: J, B, Q, M, K, R, D, V.",
+    "Q is at place 6; immediately above it, at place 7, is Box B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#2": [
+    "The stack, from top to bottom: J, B, Q, M, K, R, D, V.",
+    "K (4) and R (3) are adjacent: None."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#3": [
+    "The stack, from top to bottom: J, B, Q, M, K, R, D, V.",
+    "From bottom to top, alphabetical order would be B, D, J, K, M, Q, R, V. The stack from the bottom is V, D, R, K, M, Q, B, J. Places 2, 4, 5 and 6 match: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-75-78395-box-puzzle#4": [
+    "The stack, from top to bottom: J, B, Q, M, K, R, D, V.",
+    "K-D, B-M, V-R and K-Q each have one box between them. J (8) and M (5) have two: J – M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#1": [
+    "Short notes: T = S - 4. E = S - 1. R is below S. Q, R at least 5 apart. E is halfway between B and C, with C below E. D is above E. S, B are 3 apart. P is below C.",
+    "Let S = 0. E = -1, T = -4. C is below E, so B is above E: B = +3 (not -3).",
+    "B is 4 above E, so C is 4 below E: C = -5. P is below C: at least -6.",
+    "From B (+3) to P (-6) is already 10 places: the whole stack. So B 10, S 7, E 6, T 3, C 2, P 1.",
+    "Free: 9, 8, 5, 4. D is above E: 8 or 9. R is below S: 4 or 5. Q and R are at least 5 apart: R 4, Q 9. So D 8 and A 5.",
+    "So the stack, from top to bottom, is: B, Q, D, S, E, A, R, T, C, P.",
+    "R is at place 4; immediately above it, at place 5, is Box A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#2": [
+    "The stack, from top to bottom: B, Q, D, S, E, A, R, T, C, P.",
+    "Between D (8) and C (2) are five boxes: More than four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#3": [
+    "The stack, from top to bottom: B, Q, D, S, E, A, R, T, C, P.",
+    "From top to bottom, alphabetical order would be A, B, C, D, E, P, Q, R, S, T. The stack is B, Q, D, S, E, A, R, T, C, P. Only E (fifth) matches: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#4": [
+    "The stack, from top to bottom: B, Q, D, S, E, A, R, T, C, P.",
+    "B-D, P-T, S-A and E-R each have one box between them. Q (9) and D (8) are adjacent: Q - D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-38-78358-box-puzzle#5": [
+    "The stack, from top to bottom: B, Q, D, S, E, A, R, T, C, P.",
+    "After the swaps E is at 10 and B at 6; Q is at 2 and C at 9. Exactly between E (10) and Q (2) is place 6: Box B."
+   ]
+  }
+ }
+}

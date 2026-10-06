@@ -1,0 +1,1061 @@
+{
+ "module": "month-date-and-day-puzzles",
+ "intro": [
+  "Day puzzles, month puzzles and month-with-date puzzles are one family: people placed in time order along a line. These lessons are built from the puzzles the clerk papers actually set, in the same way as Box Puzzles.",
+  "**What I studied first.** Twenty real clerk-level puzzles from memory-based papers of 2024 to 2026 (IBPS Clerk, SBI Clerk, RRB Clerk), and 37 single-variable sets from your Sreedhar bank. Fifteen of the paper puzzles and 36 of the bank sets were written out as exact conditions and each has exactly one arrangement by script; those 51 are what the numbers below come from.",
+  "| What was measured | Real clerk papers |",
+  "| Kinds found (20 puzzles) | month with two dates 8, months only 6, days of the week 6 |",
+  "| Year or age puzzles | none at clerk level (5 of the 15 officer-level puzzles found) |",
+  "| A second fact per person (city, colour, subject) | 1 of 20 at clerk level; most officer-level ones |",
+  "| Size | 7 days; 7 or 8 months; 3 months x 2 dates (RRB) or 4 months x 2 dates (SBI, IBPS) |",
+  "| Puzzles with a definite clue about one person | 13 of 15 |",
+  "| Month and month-with-date puzzles using a 30-day or odd/even-date clue | 7 of 10 |",
+  "| Open cases at the worst point, starting from that clue | usually 2 |",
+  "**What this means.** Unlike box puzzles, these nearly always hand you a starting point, and it is very often a calendar clue (\"a month having an even number of days\", \"an odd date\"). The skill is turning calendar words into place numbers quickly and without slips. That is what the seven lessons train, one piece at a time, each with a real paper puzzle worked through and bank sets to practise on.",
+  "A note on honesty: memory-based papers are written down by candidates after the exam. Five of the twenty puzzles found were incomplete or did not give exactly one arrangement as remembered, so they are not used as examples."
+ ],
+ "needs": [],
+ "after": [
+  "That covers the three kinds found in the clerk papers. The **Quick revision** tab keeps the older short notes.",
+  "The order of work for every set: draw the line and number it, mark the 30-day months and the odd or even date, place the person with the definite clue, chain the exact steps from that person, use the mirror clue as soon as one of its two people is placed, and keep plain \"before\" and \"after\" for the last free places.",
+  "For the five questions, the habits in the last lesson of Box Puzzles apply unchanged: write the place numbers, and each question becomes a small subtraction.",
+  "Still to come, as insurance: year and age puzzles, sets with a second fact per person, and sets with a vacant date. None of these were in the clerk papers studied; they belong to officer-level papers and to your Guidely bank."
+ ],
+ "lessons": [
+  {
+   "id": "line",
+   "code": "C1",
+   "title": "One line, earliest on the left",
+   "plain": "The starting point. Days, months and dates are all the same thing: a line of numbered places in time order. Learn to read every clue as a place or a step on that line.",
+   "needs": [],
+   "teach": [
+    "Day puzzles, month puzzles and month-with-date puzzles look like three topics. They are one. In each of them some people are put **in time order**, one after another, and the clues say who is earlier, who is later and how far apart.",
+    "So the first move is always the same: **draw one line of places, earliest on the left, and number them.** Monday to Sunday is places 1 to 7. Eight months in a list are places 1 to 8.",
+    "If you have done Box Puzzles, this is a stack lying on its side, and everything you learned there still works. If you have not, this lesson gives you all you need.",
+    "**Reading the clue words.** Call the number of places between two people their **step**.",
+    "| The clue says | What it means on the line |",
+    "| X is immediately after (just after) Y | X is 1 place to the right of Y |",
+    "| Only two persons are between X and Y | 3 places apart, either way round |",
+    "| X is three persons after Y; X is two days after Y | X is 3 (or 2) places to the right of Y |",
+    "| X is after Y | somewhere to the right, distance not known |",
+    "| Only two persons are before X | X is at place 3 |",
+    "| Only two persons are after X | X is third from the end |",
+    "| As many persons before X as after Y | the two places add up to (number of places + 1) |",
+    "Two points that cost marks if you miss them:",
+    "- **\"Two between\" is a step of 3; \"two after\" is a step of 2.** Add one only for \"between\".",
+    "- In birth puzzles, **older means born earlier**, so older is to the **left**. \"G is two months older than C\" puts G to the left of C. \"E is just younger than F\" puts E immediately to the right of F. \"The youngest\" is the last place.",
+    "**Start from what is fixed.** Here these puzzles differ from box puzzles in a helpful way. I solved 15 real clerk puzzles of this kind by script: **13 of the 15 tell you something definite about one person** (a named day, \"after Thursday\", \"two persons before S\", a month with 30 days). So look for that clue first, place it, and attach the others to it.",
+    "When a clue leaves two possible places, draw the line twice, one under the other, and carry both until a later clue removes one."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 13 December 2025, shift 1. Seven persons P, Q, R, S, T, U and V play a game on different days from Monday to Sunday. Two persons play before S. One person plays between S and Q. R plays three persons before P. T plays before P but not on Thursday. V plays on Sunday.",
+    "steps": [
+     "Two before S: S is at place 3, Wednesday. V is at place 7, Sunday.",
+     "One between S and Q: Q is at 1 or 5. Two lines.",
+     "Q at 1: free places 2, 4, 5, 6. R and P are 3 apart: R 2, P 5. T must be before P: only place 4 is free, and that is Thursday. Out.",
+     "Q at 5: free places 1, 2, 4, 6. R and P 3 apart: R 1, P 4. T before P: place 2. U takes 6."
+    ],
+    "answer": "Monday R, Tuesday T, Wednesday S, Thursday P, Friday Q, Saturday U, Sunday V."
+   },
+   "check": {
+    "q": "Seven persons attend a class on different days from Monday to Sunday. Only two persons attend after X. On which day does X attend?",
+    "options": {
+     "a": "Tuesday",
+     "b": "Wednesday",
+     "c": "Friday",
+     "d": "Saturday"
+    },
+    "answer": "C",
+    "why": "Two persons after X fill Saturday and Sunday, so X is on Friday. (Wednesday would be \"two persons before X\".)"
+   },
+   "more": [
+    {
+     "tag": "Older and younger",
+     "q": "Seven persons were born in seven different months of one year. G is two persons older than C. C was born in the fifth month of the list. In which place is G?",
+     "options": {
+      "a": "Third",
+      "b": "Fourth",
+      "c": "Sixth",
+      "d": "Seventh"
+     },
+     "answer": "A",
+     "why": "Older means born earlier, so G is to the left of C: 5 - 2 = 3."
+    },
+    {
+     "tag": "Persons before",
+     "q": "R plays three persons before P, and P plays on Thursday (Monday to Sunday). On which day does R play?",
+     "options": {
+      "a": "Monday",
+      "b": "Tuesday",
+      "c": "Sunday",
+      "d": "Friday"
+     },
+     "answer": "A",
+     "why": "Thursday is place 4. Three places to the left is place 1: Monday."
+    }
+   ],
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 days): a count clue fixes the first person.",
+     "Set A (7 days), question 2: read it off the same line.",
+     "Set A (7 days), question 3: read it off the same line.",
+     "Set A (7 days), question 4: read it off the same line.",
+     "Set A (7 days), question 5: read it off the same line.",
+     "Set B (7 days): a named day, then three short clues chained to it.",
+     "Set B (7 days), question 2: read it off the same line.",
+     "Set B (7 days), question 3: read it off the same line.",
+     "Set B (7 days), question 4: read it off the same line.",
+     "Set B (7 days), question 5: read it off the same line."
+    ]
+   }
+  },
+  {
+   "id": "days",
+   "code": "C2",
+   "title": "Days of the week: fix one person, then chain",
+   "plain": "New: nothing new in the ideas. Practise the plain day puzzle until fixing one person and chaining the rest feels automatic.",
+   "needs": [],
+   "teach": [
+    "The day puzzle is the plainest form: seven persons, Monday to Sunday, places 1 to 7. In the papers I studied it appeared in SBI Clerk and RRB Clerk, and it is the one to become quick at first.",
+    "**The fixed clue comes in four kinds.** Learn to spot each.",
+    "| Kind | Example | What you get |",
+    "| A named day | F gets leave on Thursday | one place |",
+    "| A count | only two persons before S | one place |",
+    "| A side | L takes a class after Friday | two places (Saturday, Sunday) |",
+    "| A ban | B does not go on Thursday | keep for the end |",
+    "**Then chain.** Take the clue that mentions the person you have just placed. It gives the next person one or two places. Then the clue that mentions that person, and so on. You are following a chain of names through the clues, not reading them in printed order.",
+    "The edges do a great deal of work in a line of only 7. \"Three persons between D and E\" is a step of 4, and from place 4 that reaches neither end. From Saturday, a step of 4 can only go left. Before you write two cases, check whether one of them falls off the line.",
+    "**A pattern to recognise.** \"As many persons between F and B as between D and F\": F is named twice, so B and D are the same distance from F on **opposite sides**. If D is 3 to the right of F, B is 3 to the left.",
+    "Leave the plain \"X is after Y\" clues until the free places are few. With two free places and \"G is after E\", there is nothing to think about."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 16 September 2026. Seven persons A to G get leave on different days from Monday to Sunday. F gets leave on Thursday. Only two persons get leave between F and D. As many persons get leave between F and B as between D and F. Only one person gets leave between A and B. C gets leave two days before D. G gets leave after E.",
+    "steps": [
+     "F is at place 4, Thursday.",
+     "D is 3 from F: place 1 or 7. B is the same distance from F on the other side: the other end.",
+     "C is two days before D, so D cannot be at 1. D 7, C 5, and B 1.",
+     "A is 2 from B: place 3.",
+     "Free: 2 and 6. G is after E: E 2, G 6."
+    ],
+    "answer": "Monday B, Tuesday E, Wednesday A, Thursday F, Friday C, Saturday G, Sunday D."
+   },
+   "check": {
+    "q": "Seven lecturers take classes from Monday to Sunday. L takes a class after Friday. Only three classes are taken between L and O. On which day can O take a class?",
+    "options": {
+     "a": "Tuesday only",
+     "b": "Wednesday only",
+     "c": "Tuesday or Wednesday",
+     "d": "Monday or Tuesday"
+    },
+    "answer": "C",
+    "why": "L is on Saturday or Sunday. Three between is a step of 4, and it can only go left: Saturday gives Tuesday, Sunday gives Wednesday."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 days): a named day and a ban.",
+     "Set A (7 days), question 2: read it off the same line.",
+     "Set A (7 days), question 3: read it off the same line.",
+     "Set A (7 days), question 4: read it off the same line.",
+     "Set A (7 days), question 5: read it off the same line.",
+     "Set B (7 days): a count clue, then an order clue removes a case at once.",
+     "Set B (7 days), question 2: read it off the same line.",
+     "Set B (7 days), question 3: read it off the same line.",
+     "Set B (7 days), question 4: read it off the same line.",
+     "Set B (7 days), question 5: read it off the same line."
+    ]
+   }
+  },
+  {
+   "id": "days-free",
+   "code": "C3",
+   "title": "When no day is named",
+   "plain": "New: a few puzzles fix nobody. Then use the block and the order chains: count how many people must be before and after someone.",
+   "needs": [],
+   "teach": [
+    "Two of the 15 real puzzles I solved fix nobody at all (SBI Clerk, 22 February 2025 shift 3 and 20 September 2025 shift 2). Both are day puzzles. There are two tools for these, and you already know the first.",
+    "**Tool 1: the block.** Join the clues that give an exact step. \"Cricket is three days after Chess; Badminton is two days before Chess\" locks three things together: Badminton, then Chess two later, then Cricket three after that. From first to last the block covers 6 places, so in a week of 7 it can sit in only **2** ways (7 - 6 + 1). Draw both and let the other clues decide.",
+    "**Tool 2: count the people who must be on each side.** A chain of plain \"before\" clues is stronger than it looks. Suppose F is before C, C is before G, G is before B and B is before E.",
+    "- At least two people (F and C) are before G, so G is at place 3 or later.",
+    "- At least two people (B and E) are after G, so G is at place 5 or earlier.",
+    "Out of seven days, G has only three possible places, from clues that named no day. Add one exact clue about G (\"G goes three persons after A\") and it is nearly fixed: A is also before G, which makes three people before it.",
+    "So for any person in a chain, write two small numbers: **how many must come before, how many must come after.** The person's place is between (before + 1) and (7 - after).",
+    "Use whichever tool the puzzle offers. If there are two or three exact steps sharing a name, build the block. If the clues are mostly \"before\" and \"after\", count the sides."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 20 September 2025, shift 2. Seven persons A to G go to watch a show on different days from Monday to Sunday. G goes before B but after C. G goes three persons after A. B goes before E. Two persons go between E and D. C goes after F.",
+    "steps": [
+     "Chain: F, then C, then G, then B, then E.",
+     "Before G: F, C and also A (A is three places before G). That is three people, so G is at place 4 or later. After G: B and E, so G is at place 5 or earlier.",
+     "G at 4: A is at 1, F and C take 2 and 3, and B, E, D share 5, 6, 7. E is after B, so E is 6 or 7, and D is 3 from E: place 3 or 4, both taken. Out.",
+     "G at 5: A is at 2. After G only 6 and 7 are left: B 6, E 7. D is 3 from E: place 4.",
+     "F and C take 1 and 3 in that order."
+    ],
+    "answer": "Monday F, Tuesday A, Wednesday C, Thursday D, Friday G, Saturday B, Sunday E."
+   },
+   "check": {
+    "q": "Seven persons, Monday to Sunday. F goes before C, C before G, G before B, and B before E. What is the earliest day G can go?",
+    "options": {
+     "a": "Tuesday",
+     "b": "Wednesday",
+     "c": "Thursday",
+     "d": "Friday"
+    },
+    "answer": "B",
+    "why": "Two people (F and C) must be before G, so the earliest place for G is the third: Wednesday."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 days): only a 'side' clue; the block does the work.",
+     "Set A (7 days), question 2: read it off the same line.",
+     "Set A (7 days), question 3: read it off the same line.",
+     "Set A (7 days), question 4: read it off the same line.",
+     "Set A (7 days), question 5: read it off the same line.",
+     "Set B (7 days): a block of three and a mirror clue.",
+     "Set B (7 days), question 2: read it off the same line.",
+     "Set B (7 days), question 3: read it off the same line.",
+     "Set B (7 days), question 4: read it off the same line.",
+     "Set B (7 days), question 5: read it off the same line.",
+     "Set C (7 days): two cases from a count clue, the mirror fills each.",
+     "Set C (7 days), question 2: read it off the same line.",
+     "Set C (7 days), question 3: read it off the same line.",
+     "Set C (7 days), question 4: read it off the same line.",
+     "Set C (7 days), question 5: read it off the same line."
+    ]
+   }
+  },
+  {
+   "id": "months",
+   "code": "C4",
+   "title": "Months: mark the 30-day months first",
+   "plain": "New: the places now carry a property. Write the month list, mark which months have 30 days, and a \"month having an even number of days\" clue becomes two or three places.",
+   "needs": [],
+   "teach": [
+    "A month puzzle gives seven or eight months, **usually with some missing**, and one person per month. According to the shift analyses it was in all four IBPS Clerk shifts on 4 October 2025, so it deserves care.",
+    "The line is the month list exactly as the puzzle gives it. If the list is January, March, April, June, then March is place 2 and June is place 4. Number them as listed.",
+    "**The new clue.** Month puzzles nearly always include one of these:",
+    "- \"A was born in a month having an **even number of days**\" (or \"having 30 days\")",
+    "- \"B was born in a month having an **odd number of days**\" (or \"having 31 days\")",
+    "So before reading any clue, write the list and put a mark under each month with an even number of days.",
+    "| Even number of days | Odd number of days (31) |",
+    "| April, June, September, November (30 each), and February (28) | January, March, May, July, August, October, December |",
+    "Then the clue \"A was born in a month having an even number of days\" is no longer vague. With the list March to September it means April, June or September: places 2, 4 or 7. That is your fixed clue.",
+    "**Shrink it straight away.** Take the next clue about the same person and test each marked place against the edges. \"Three persons between A and C\" is a step of 4: from place 4 in a line of 7 that reaches neither end, so place 4 is gone before you have drawn anything.",
+    "In the two real month puzzles that use it and the nine bank sets I solved by script, the marked-month clue leaves **2 or 3 places** in every one, and one more clue about the same person usually brings it down to one or two.",
+    "Everything else is as before: older is left, younger is right, chain the clues, and keep plain \"after\" clues for the end."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 6 December 2025, shift 2. A, B, C, D, E, F and G were born in different months: March, April, May, June, July, August and September. A was born in a month having an even number of days. Three persons were born between A and C. G is two months older than C. E was born immediately after G. Two persons were born between E and B. D is younger than B.",
+    "steps": [
+     "The list is places 1 to 7. Even-day months: April (2), June (4), September (7).",
+     "A is at 2, 4 or 7. C is 4 from A: from 2 it is 6; from 4 nothing fits; from 7 it is 3.",
+     "G is two places before C, and E is just after G.",
+     "A 2, C 6: G 4, E 5. B is 3 from E: place 2 (taken) or 8. Out.",
+     "A 7, C 3: G 1, E 2. B is 3 from E: place 5. D is younger than B, so later: place 6. F takes 4."
+    ],
+    "answer": "March G, April E, May C, June F, July B, August D, September A."
+   },
+   "check": {
+    "q": "The months are January, March, April, June, July, August, November and December. H was born in a month having an even number of days, after April. Which months are possible for H?",
+    "options": {
+     "a": "June or November",
+     "b": "June only",
+     "c": "April, June or November",
+     "d": "July or August"
+    },
+    "answer": "A",
+    "why": "The even-day months in the list are April, June and November. After April leaves June and November."
+   },
+   "shortcut": {
+    "title": "The 30-day months, without counting knuckles",
+    "text": [
+     "Only four months have exactly 30 days: **April, June, September, November.** February has 28. Every other month has 31.",
+     "So \"even number of days\" means those four and February. \"Odd number of days\" means the other seven.",
+     "As soon as you copy the month list, put a small **E** under April, June, September, November and February wherever they appear. In the lists used by the real papers, between two and four months end up marked."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 months): the marked months give three places, an edge removes one.",
+     "Set A (7 months), question 2: read it off the same line.",
+     "Set A (7 months), question 3: read it off the same line.",
+     "Set A (7 months), question 4: read it off the same line.",
+     "Set A (7 months), question 5: read it off the same line.",
+     "Set B (8 months): two mirror clues close it with no guessing.",
+     "Set B (8 months), question 2: read it off the same line.",
+     "Set B (8 months), question 3: read it off the same line.",
+     "Set B (8 months), question 4: read it off the same line.",
+     "Set B (8 months), question 5: read it off the same line.",
+     "Set C (8 months): a midpoint clue and a 'not more than' closer.",
+     "Set C (8 months), question 2: read it off the same line.",
+     "Set C (8 months), question 3: read it off the same line.",
+     "Set C (8 months), question 4: read it off the same line.",
+     "Set C (8 months), question 5: read it off the same line."
+    ]
+   }
+  },
+  {
+   "id": "months-gap",
+   "code": "C5",
+   "title": "\"Months after\" is not \"persons after\"",
+   "plain": "New: one wording trap, and puzzles with two calendar clues. A gap in months is counted on the calendar; a gap in persons is counted on your line.",
+   "needs": [],
+   "teach": [
+    "When months are missing from the list, two clues that sound alike mean different things.",
+    "Take the list January, April, May, August, September, October, November, December, and suppose Q was born in May.",
+    "- \"V was born three **persons** after Q\": count places on your line. May is place 3, so V is at place 6, **October**.",
+    "- \"V was born three **months** after Q\": count on the calendar. May plus three months is **August**, which is the very next place.",
+    "The real IBPS Clerk puzzle of 24 August 2024 used exactly this, twice. Read as calendar months it has one arrangement; that is how I know which reading the paper intended.",
+    "So write the **calendar number** of each month under the list (January 1, April 4, May 5 ...). For a \"months\" clue, subtract calendar numbers. For a \"persons\" clue, subtract place numbers.",
+    "A \"months\" clue is also a strong filter, because many months have no partner in the list. \"U was born one month before P\": P cannot be April in that list, since March is not there.",
+    "**One wording I could not settle.** \"There is a gap of three months between D and C\" could mean the calendar numbers differ by 3, or that three months lie in between. The two papers that use it were not remembered clearly enough for the script to decide. Try the plain difference first, and if no arrangement survives, try the other.",
+    "**Two calendar clues in one puzzle.** Bank sets often give two: \"D was born in a month with an even number of days\" and \"B was born in a month with an odd number of days\". Write both lists of places, and look for the clue that connects the two people. Checking each pair of places against it is quicker than drawing cases."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 24 August 2024. Eight persons P to W were born in January, April, May, August, September, October, November and December. P was born in a month having an even number of days. U was born one month before P. As many persons were born before V as after W. V was born three months after Q. Two persons were born between R and S, who was born after R.",
+    "steps": [
+     "Places 1 to 8. Even-day months: April (2), September (5), November (7).",
+     "U is one calendar month before P. April would need March, which is not in the list. So (P September, U August) or (P November, U October).",
+     "V is three calendar months after Q: the pairs in this list are January and April, May and August, August and November, September and December.",
+     "P 5, U 4: only (Q January, V April) is free. One person is before V, so one is after W: W 7. Free: 3, 6, 8. S is 3 after R: R 3, S 6. T takes 8. It works.",
+     "P 7, U 6: (Q 3, V 4) gives W 5 and leaves 1, 2, 8 with no pair 3 apart. (Q 5, V 8) gives W 1 and leaves 2, 3, 4. (Q 1, V 2) needs W at 7. All out."
+    ],
+    "answer": "January Q, April V, May R, August U, September P, October S, November W, December T."
+   },
+   "check": {
+    "q": "The months are January, April, May, August, September, October, November and December. Q was born in May, and V was born three months after Q. In which month was V born?",
+    "options": {
+     "a": "August",
+     "b": "September",
+     "c": "October",
+     "d": "November"
+    },
+    "answer": "A",
+    "why": "Three months after May on the calendar is August. (October would be three persons after Q, counted along the list.)"
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#5"
+    ],
+    "tags": [
+     "Set A (7 months): one person in an even-day month, another in an odd-day month.",
+     "Set A (7 months), question 2: read it off the same line.",
+     "Set A (7 months), question 3: read it off the same line.",
+     "Set A (7 months), question 4: read it off the same line.",
+     "Set B (8 months): three calendar clues, and a wide gap that fixes a person.",
+     "Set B (8 months), question 2: read it off the same line.",
+     "Set B (8 months), question 3: read it off the same line.",
+     "Set B (8 months), question 4: read it off the same line.",
+     "Set B (8 months), question 5: read it off the same line."
+    ]
+   }
+  },
+  {
+   "id": "pairs",
+   "code": "C6",
+   "title": "Month with two dates: a line of pairs",
+   "plain": "New: each month now has two dates, so it has two places. It is still one line, and a month is a pair of neighbouring places.",
+   "needs": [],
+   "teach": [
+    "This was the most common kind in the real clerk papers I found: 8 of 20. \"Eight persons were born on two dates, 8th and 27th, of four months.\" RRB Clerk uses three months (6 persons); SBI and IBPS Clerk use four (8 persons).",
+    "It is still one line in time order. Each month simply takes **two places**: its first date, then its second.",
+    "| Place | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |",
+    "| | first month, first date | first month, second date | second month, first date | second month, second date | third, first | third, second | fourth, first | fourth, second |",
+    "Draw the line with a small gap after every second place, so that the pairs are visible. Then the new clue words all become simple statements about pairs.",
+    "| The clue says | On the line |",
+    "| X and Y were born in the same month | they are the two places of one pair: (1, 2), (3, 4), (5, 6) or (7, 8) |",
+    "| X and Y were born on the same date | both in odd places, or both in even places |",
+    "| X was born immediately before Y, and both in the same month | X is in an odd place, Y in the next one |",
+    "| X was born immediately before Y, but not in the same month | X is in an even place, Y in the next one |",
+    "| X was born in March | the two places of that pair |",
+    "**Careful with \"same month\" and neighbours.** Places 2 and 3 are next to each other on the line, but they are different months. Places 3 and 4 are the same month.",
+    "**\"Persons between\" counts along the whole line**, across months, exactly as before. \"Two persons between C and A\" is a step of 3.",
+    "**Odd and even dates.** \"F was born on an even date\" depends on the two dates in the puzzle. With 12th and 22nd both are even, and the clue tells you nothing. With 8th and 17th, the even date is the **first** of each pair, so it means places 1, 3, 5, 7. Always check which of the two dates is the even one before you write places."
+   ],
+   "example": {
+    "q": "RRB Clerk Prelims, 17 August 2024, shift 2. Six persons A to F were born on the 12th or 22nd of March, April and May. A was born in March. Two persons were born between C and A. B and C were born in the same month. F was born on the 22nd. E and F were not born in the same month. D was born before C.",
+    "steps": [
+     "Places: 1 and 2 are March, 3 and 4 are April, 5 and 6 are May. The 22nd is the second place of each pair: 2, 4, 6.",
+     "A is at 1 or 2. C is 3 from A: place 4 or 5. B shares C's month: C 4 with B 3, or C 5 with B 6.",
+     "A 1, C 4, B 3: free 2, 5, 6. D is before C: place 2. F is on the 22nd: place 6. E gets 5, the same month as F. Out.",
+     "A 2, C 5, B 6: free 1, 3, 4. F is on the 22nd: place 4. E is not in April with F: E 1, D 3. D is before C."
+    ],
+    "answer": "12 March E, 22 March A, 12 April D, 22 April F, 12 May C, 22 May B."
+   },
+   "check": {
+    "q": "Eight persons were born on the 8th or 17th of April, May, August and November. N was born on an even date in a month having 30 days. Which dates are possible for N?",
+    "options": {
+     "a": "8 April or 8 November",
+     "b": "17 April or 17 November",
+     "c": "8 May or 8 August",
+     "d": "8 April only"
+    },
+    "answer": "A",
+    "why": "The even date is the 8th. The 30-day months in the list are April and November. So 8 April or 8 November: places 1 and 7."
+   },
+   "shortcut": {
+    "title": "Number the pairs once",
+    "text": [
+     "On the rough sheet, write the months across the top and the two dates down the side, and then number the eight boxes **across the dates first**: first month 1 and 2, second month 3 and 4, and so on.",
+     "From then on, think only in those numbers:",
+     "- odd number = first date, even number = second date;",
+     "- same month = an odd number and the number after it;",
+     "- persons between = difference of the numbers, minus 1.",
+     "At the end, turn the numbers back into dates to answer the questions."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#5"
+    ],
+    "tags": [
+     "Set A (4 months x 2 dates): two possible places that lead to the same next step.",
+     "Set A (4 months x 2 dates), question 2: read it off the same line.",
+     "Set A (4 months x 2 dates), question 3: read it off the same line.",
+     "Set A (4 months x 2 dates), question 4: read it off the same line.",
+     "Set A (4 months x 2 dates), question 5: read it off the same line.",
+     "Set B (4 months x 2 dates): a prime date, and a count clue with 'one more'.",
+     "Set B (4 months x 2 dates), question 2: read it off the same line.",
+     "Set B (4 months x 2 dates), question 3: read it off the same line.",
+     "Set B (4 months x 2 dates), question 4: read it off the same line.",
+     "Set B (4 months x 2 dates), question 5: read it off the same line.",
+     "Set C (4 months x 2 dates): 'same month' used as a pair.",
+     "Set C (4 months x 2 dates), question 2: read it off the same line.",
+     "Set C (4 months x 2 dates), question 3: read it off the same line.",
+     "Set C (4 months x 2 dates), question 4: read it off the same line.",
+     "Set C (4 months x 2 dates), question 5: read it off the same line."
+    ]
+   }
+  },
+  {
+   "id": "double",
+   "code": "C7",
+   "title": "Two properties at once: the date and the month",
+   "plain": "New: one clue names both the kind of date and the kind of month. It is the strongest clue in the puzzle, and leaves one or two places.",
+   "needs": [],
+   "teach": [
+    "The month-with-date puzzles in SBI Clerk like to open with a clue that has two halves:",
+    "\"R attends on an **odd date** in a month having an **even number of days**.\"",
+    "Each half cuts the eight places down, and together they leave very few. Take the list September, October, November, December with dates 5 and 26.",
+    "- Odd date: the 5th, which is the first of each pair: places 1, 3, 5, 7.",
+    "- Month with an even number of days: September and November: places 1, 2, 5, 6.",
+    "- Both together: **places 1 and 5** only.",
+    "In the 13 bank sets of this kind that I solved, 9 contain a double clue like this. So the routine for a month-with-date puzzle is:",
+    "- Number the pairs. Mark the 30-day months. Note which date is odd and which is even.",
+    "- Find the double clue and write its one or two places.",
+    "- Chain from that person, as in every lesson so far.",
+    "**Negative wording.** The same clue is often written backwards: \"on an odd date but **not** in a month having an odd number of days\". Not odd means even. Turn it into the positive form before you look for places.",
+    "**A closer that belongs to this kind.** \"No one is between S and W, and they are not in the same month.\" Neighbours on the line that are in different months must sit across a boundary: places 2 and 3, 4 and 5, or 6 and 7. That is only three possibilities out of seven neighbouring pairs."
+   ],
+   "example": {
+    "q": "SBI Clerk Prelims, 26 September 2026, shift 1. Eight persons R, S, T, U, V, W, X and Y attend events on the 5th or 26th of September, October, November and December. R attends on an odd date in a month having an even number of days. Two persons attend between S and R. No one attends between S and W, and they do not attend in the same month. As many persons attend before T as after Y. V attends just after Y, and not on an odd date. U does not attend after X.",
+    "steps": [
+     "Places: September 1 and 2, October 3 and 4, November 5 and 6, December 7 and 8. Odd date (5th) is the first of each pair. Even-day months: September and November.",
+     "R is at 1 or 5.",
+     "R 5: S is 3 away, at 2 or 8. S 8 would need W at 7, the same month. S 2 gives W 3. V is in an even place just after Y: the only free fit is Y 7, V 8; then one person is after Y, so one is before T: T 2, which S has. Out.",
+     "R 1: S 4. W is next to S in another month: place 5.",
+     "Free: 2, 3, 6, 7, 8. V is in an even place just after Y: Y 7, V 8. One person is after Y, so one is before T: T 2.",
+     "U is not after X: U 3, X 6."
+    ],
+    "answer": "5 September R, 26 September T, 5 October U, 26 October S, 5 November W, 26 November X, 5 December Y, 26 December V."
+   },
+   "check": {
+    "q": "The dates are the 5th and 26th of September, October, November and December. S attends on 26 October. W attends immediately before or after S, but not in the same month. When does W attend?",
+    "options": {
+     "a": "5 October",
+     "b": "5 November",
+     "c": "26 November",
+     "d": "26 September"
+    },
+    "answer": "B",
+    "why": "26 October is place 4. Its neighbours are place 3 (5 October, the same month) and place 5 (5 November). So W attends on 5 November."
+   },
+   "shortcut": {
+    "title": "Cross the two lists",
+    "text": [
+     "For a double clue, do not think in dates. Write two short lists of place numbers and keep what is in both.",
+     "- Kind of date: all odd places, or all even places (after checking which date is which).",
+     "- Kind of month: the two places of each marked month.",
+     "With four months, each list has four numbers, and they share at most two. With three months they often share one, and the person is placed outright."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#5",
+     "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#1",
+     "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#2",
+     "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#3",
+     "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#4",
+     "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#5"
+    ],
+    "tags": [
+     "Set A (4 months x 2 dates): a double clue written backwards.",
+     "Set A (4 months x 2 dates), question 2: read it off the same line.",
+     "Set A (4 months x 2 dates), question 3: read it off the same line.",
+     "Set A (4 months x 2 dates), question 4: read it off the same line.",
+     "Set A (4 months x 2 dates), question 5: read it off the same line.",
+     "Set B (4 months x 2 dates): 'same month and immediately after' as a pair.",
+     "Set B (4 months x 2 dates), question 2: read it off the same line.",
+     "Set B (4 months x 2 dates), question 3: read it off the same line.",
+     "Set B (4 months x 2 dates), question 4: read it off the same line.",
+     "Set B (4 months x 2 dates), question 5: read it off the same line.",
+     "Set C (4 months x 2 dates): two double clues, one of them written with two 'nots'.",
+     "Set C (4 months x 2 dates), question 2: read it off the same line.",
+     "Set C (4 months x 2 dates), question 3: read it off the same line.",
+     "Set C (4 months x 2 dates), question 4: read it off the same line.",
+     "Set C (4 months x 2 dates), question 5: read it off the same line."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#1": [
+    "Short notes: two before A, so A is at place 3 (Wednesday). A, C are 2 apart. F is just after C. Before F = after G. E is 3 after D. F and B are next to each other.",
+    "C is at 1 or 5, and F is just after it: (C 1, F 2) or (C 5, F 6).",
+    "C 1, F 2: B must be next to F, but places 1 and 3 are taken. Out.",
+    "C 5, F 6: five persons are before F, so five are after G: G is at place 2. B is next to F: place 7.",
+    "Free: 1 and 4. E is 3 after D: D 1, E 4.",
+    "So the order is: Monday D, Tuesday G, Wednesday A, Thursday E, Friday C, Saturday F, Sunday B.",
+    "On Monday: D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#2": [
+    "The order: Monday D, Tuesday G, Wednesday A, Thursday E, Friday C, Saturday F, Sunday B.",
+    "B travels on Sunday."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#3": [
+    "The order: Monday D, Tuesday G, Wednesday A, Thursday E, Friday C, Saturday F, Sunday B.",
+    "Between B (place 7) and A (place 3) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#4": [
+    "The order: Monday D, Tuesday G, Wednesday A, Thursday E, Friday C, Saturday F, Sunday B.",
+    "Immediately after D (Monday) is G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-81-78401-day-puzzle#5": [
+    "The order: Monday D, Tuesday G, Wednesday A, Thursday E, Friday C, Saturday F, Sunday B.",
+    "G, B, A and E each travel the day after the day written with them. C travels on Friday itself: Friday – C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#1": [
+    "Short notes: L is at place 3 (Wednesday). N, M are 4 apart. H, J are 2 apart. L, N are 2 apart. K is just after J. H is before N.",
+    "N is 2 from L: place 1 or 5. H must be before N, so N is not at 1: N is at 5.",
+    "M is 4 from N: place 1.",
+    "H is before N: place 2 or 4. J is 2 from H, with K just after J.",
+    "H 2: J would be 4 and K 5, which is N's place. Out. H 4: J 6, K 7 (J 2 would put K at 3, L's place).",
+    "I takes place 2.",
+    "So the order is: Monday M, Tuesday I, Wednesday L, Thursday H, Friday N, Saturday J, Sunday K.",
+    "I has a lecture on Tuesday."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#2": [
+    "The order: Monday M, Tuesday I, Wednesday L, Thursday H, Friday N, Saturday J, Sunday K.",
+    "Between H (place 4) and K (place 7) are Two persons."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#3": [
+    "The order: Monday M, Tuesday I, Wednesday L, Thursday H, Friday N, Saturday J, Sunday K.",
+    "Between J (6) and I (2) are three persons, not one. So the statement that is not true is: Only one person lecture between J and I."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#4": [
+    "The order: Monday M, Tuesday I, Wednesday L, Thursday H, Friday N, Saturday J, Sunday K.",
+    "Thursday is H's day; immediately before it is Wednesday: L."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-53-78373-day-puzzle#5": [
+    "The order: Monday M, Tuesday I, Wednesday L, Thursday H, Friday N, Saturday J, Sunday K.",
+    "I, J, L and M have their lectures on a day next to the day written with them. H (Thursday) is not next to Saturday: Saturday – H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#1": [
+    "Short notes: D is at place 3 (Wednesday). D, A are 2 apart. A, F are 3 apart. F and G are next to each other. B before E before C. B is not on Thursday.",
+    "A is at 1 or 5. F is 3 from A: with A 1, F 4; with A 5, F 2.",
+    "A 5, F 2: G is next to F, so G 1 (3 is taken). Free: 4, 6, 7 for B, E, C in that order. B would be on Thursday. Out.",
+    "A 1, F 4: G is next to F, so G 5. Free: 2, 6, 7. B 2, E 6, C 7.",
+    "So the order is: Monday A, Tuesday B, Wednesday D, Thursday F, Friday G, Saturday E, Sunday C.",
+    "On Friday: G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#2": [
+    "The order: Monday A, Tuesday B, Wednesday D, Thursday F, Friday G, Saturday E, Sunday C.",
+    "Two persons go before D (place 3). Two persons go after place 5, which is G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#3": [
+    "The order: Monday A, Tuesday B, Wednesday D, Thursday F, Friday G, Saturday E, Sunday C.",
+    "(A) Three people go after F, true. (B) B goes on Tuesday, false. (C) Between G (5) and B (2) are two people, true. So: Both (A) and (C)."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#4": [
+    "The order: Monday A, Tuesday B, Wednesday D, Thursday F, Friday G, Saturday E, Sunday C.",
+    "Between C (7) and A (1) are five people: More than three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-65-78385-day-puzzle#5": [
+    "The order: Monday A, Tuesday B, Wednesday D, Thursday F, Friday G, Saturday E, Sunday C.",
+    "A-B, F-G, G-E and C-E are next to each other. B (2) and F (4) are not: B-F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#1": [
+    "Short notes: two persons after D, so D is at place 5 (Friday). D, G are 2 apart. B and G are next to each other. B, E are 3 apart. A before C. C not on Friday or Wednesday. G before F before E.",
+    "G is at 3 or 7. But F and E come after G, so G is not last: G is at 3.",
+    "B is next to G: 2 or 4. E is 3 from B. B 2 would put E at 5, D's place. So B 4, E 7.",
+    "F is between G and E: place 6.",
+    "Free: 1 and 2. A before C: A 1, C 2.",
+    "So the order is: Monday A, Tuesday C, Wednesday G, Thursday B, Friday D, Saturday F, Sunday E.",
+    "Between C (place 2) and F (place 6) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#2": [
+    "The order: Monday A, Tuesday C, Wednesday G, Thursday B, Friday D, Saturday F, Sunday E.",
+    "Born on Thursday: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#3": [
+    "The order: Monday A, Tuesday C, Wednesday G, Thursday B, Friday D, Saturday F, Sunday E.",
+    "G (3) is related to A (1), two places earlier. E (7) is related to D (5), two places earlier. F is at 6, so it is related to place 4: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#4": [
+    "The order: Monday A, Tuesday C, Wednesday G, Thursday B, Friday D, Saturday F, Sunday E.",
+    "G–A, B–F, D–E and B–C each have one person between them. G (3) and B (4) are next to each other: G – B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-12-78332-day-puzzle#5": [
+    "The order: Monday A, Tuesday C, Wednesday G, Thursday B, Friday D, Saturday F, Sunday E.",
+    "G was born on Wednesday, two people are between F and G, and D is before E. All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#1": [
+    "Short notes: R, W are 3 apart and W is on Saturday or Sunday. U, T are 4 apart. S, V are 3 apart. V is just after R. P is before U.",
+    "W 6 gives R 3 and V 4. W 7 gives R 4 and V 5.",
+    "W 7, R 4, V 5: S is 3 from V, so S 2. Free: 1, 3, 6. U and T need to be 4 apart: no such pair. Out.",
+    "W 6, R 3, V 4: S is 1 or 7. With S 1 the free places are 2, 5, 7: no pair 4 apart. So S 7.",
+    "Free: 1, 2, 5. U and T take 1 and 5. P must be before U, so U 5, T 1, P 2.",
+    "So the order is: Monday T, Tuesday P, Wednesday R, Thursday V, Friday U, Saturday W, Sunday S.",
+    "On Friday: U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#2": [
+    "The order: Monday T, Tuesday P, Wednesday R, Thursday V, Friday U, Saturday W, Sunday S.",
+    "Between S (place 7) and R (place 3) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#3": [
+    "The order: Monday T, Tuesday P, Wednesday R, Thursday V, Friday U, Saturday W, Sunday S.",
+    "S attends on Sunday."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#4": [
+    "The order: Monday T, Tuesday P, Wednesday R, Thursday V, Friday U, Saturday W, Sunday S.",
+    "W, T, V and R (with Thursday) each attend the day before the day written with them. R does not attend the day before Monday: R - Monday."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-day-puzzle#5": [
+    "The order: Monday T, Tuesday P, Wednesday R, Thursday V, Friday U, Saturday W, Sunday S.",
+    "i: S is on Sunday, true. ii: between P (2) and W (6) are three people, false. iii: U (5) is immediately before W (6), true. Only I and III."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#1": [
+    "Short notes: L is on Saturday or Sunday. L, O are 4 apart. O is just after H. Before H = after P. S is just after G, and S is not on Friday.",
+    "L 6 gives O 2, H 1. L 7 gives O 3, H 2.",
+    "Mirror: with H at 1 nobody is before it, so nobody is after P: P 7. With H at 2, one person is after P: P 6.",
+    "L 7, O 3, H 2, P 6: free 1, 4, 5. G and S need two days in a row: G 4, S 5, and S would be on Friday. Out.",
+    "L 6, O 2, H 1, P 7: free 3, 4, 5. G 3, S 4 (G 4, S 5 would put S on Friday). K takes 5.",
+    "So the order is: Monday H, Tuesday O, Wednesday G, Thursday S, Friday K, Saturday L, Sunday P.",
+    "K takes a class on Friday."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#2": [
+    "The order: Monday H, Tuesday O, Wednesday G, Thursday S, Friday K, Saturday L, Sunday P.",
+    "HG, OS, KP and SL each have one lecturer between them. G (3) and S (4) are next to each other: GS."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#3": [
+    "The order: Monday H, Tuesday O, Wednesday G, Thursday S, Friday K, Saturday L, Sunday P.",
+    "Between O (place 2) and S (place 4) there is One lecturer."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#4": [
+    "The order: Monday H, Tuesday O, Wednesday G, Thursday S, Friday K, Saturday L, Sunday P.",
+    "Immediately after G (Wednesday) is S."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-day-puzzle#5": [
+    "The order: Monday H, Tuesday O, Wednesday G, Thursday S, Friday K, Saturday L, Sunday P.",
+    "H is on Monday and O on Tuesday, so the true statement is: H takes a class an immediately before O."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#1": [
+    "Short notes: at least three after D, so D is at 4 or earlier. D, E are 4 apart. After B = before E. C, A are 2 apart. C is just after G.",
+    "D 1 gives E 5, D 2 gives E 6, D 3 gives E 7. (D 4 has no place 4 away.)",
+    "Mirror: E 5 gives B 3. E 6 gives B 2, which is D's place. Out. E 7 gives B 1.",
+    "D 1, E 5, B 3: free 2, 4, 6, 7. G and C in a row: 6 and 7. A is 2 from C (7): place 5, taken. Out.",
+    "D 3, E 7, B 1: free 2, 4, 5, 6. G 5, C 6 gives A at 4 (G 4, C 5 would need A at 3 or 7, both taken). F takes 2.",
+    "So the order is: Monday B, Tuesday F, Wednesday D, Thursday A, Friday G, Saturday C, Sunday E.",
+    "Born on Tuesday: F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#2": [
+    "The order: Monday B, Tuesday F, Wednesday D, Thursday A, Friday G, Saturday C, Sunday E.",
+    "Between G (place 5) and B (place 1) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#3": [
+    "The order: Monday B, Tuesday F, Wednesday D, Thursday A, Friday G, Saturday C, Sunday E.",
+    "A was born on Thursday."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#4": [
+    "The order: Monday B, Tuesday F, Wednesday D, Thursday A, Friday G, Saturday C, Sunday E.",
+    "E, A, D and C were each born two days after the day written with them. G was born on Friday, the day before Saturday: Saturday – G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-17-78337-day-puzzle#5": [
+    "The order: Monday B, Tuesday F, Wednesday D, Thursday A, Friday G, Saturday C, Sunday E.",
+    "B is on Monday, one person is between A and F, D is before C, and E is immediately after C. All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#1": [
+    "The list March to September is places 1 to 7. Even-day months: April (2), June (4), September (7).",
+    "Short notes: A is at 2, 4 or 7. After C = before H. B is before G. C is just after A. D is 3 after G.",
+    "C is just after A, so A is not at 7: (A 2, C 3) or (A 4, C 5).",
+    "Mirror: C 3 has four after it, so H has four before it: H 5. C 5 has two after it: H 3.",
+    "A 4, C 5, H 3: free 1, 2, 6, 7. G and D need to be 3 apart: no such pair. Out.",
+    "A 2, C 3, H 5: free 1, 4, 6, 7. G 4, D 7 (G 1 would leave no place for B before it). B 1, F 6.",
+    "So the order is: March B, April A, May C, June G, July H, August F, September D.",
+    "Born in August: F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#2": [
+    "The order: March B, April A, May C, June G, July H, August F, September D.",
+    "Between B (place 1) and H (place 5) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#3": [
+    "The order: March B, April A, May C, June G, July H, August F, September D.",
+    "C is in May and G in June, so the true statement is: C was born just before G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#4": [
+    "The order: March B, April A, May C, June G, July H, August F, September D.",
+    "B was born in March."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-77-78397-month-puzzle#5": [
+    "The order: March B, April A, May C, June G, July H, August F, September D.",
+    "C–H, A–G, B–C and G–F each have one person between them. F (6) and D (7) are next to each other: F – D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#1": [
+    "The list March to October is places 1 to 8. Even-day months: April (2), June (4), September (7).",
+    "Short notes: Q is at 2, 4 or 7. V is just after Q. After V = before W. V, R are 3 apart. U, T are 4 apart. After U = before P, and U, P are not neighbours.",
+    "V is at 3, 5 or 8. Mirror: V 3 gives W 6. V 5 gives W 4, which is Q's place. Out. V 8 gives W 1.",
+    "V 3, W 6: R is 3 from V, which is place 6 again. Out.",
+    "V 8, Q 7, W 1: R is at 5. Free: 2, 3, 4, 6.",
+    "U and T are 4 apart: 2 and 6. If U is 2, six are after it and P would be at 7, taken. So U 6, T 2, and two are after U: P 3. S takes 4.",
+    "So the order is: March W, April T, May P, June S, July R, August U, September Q, October V.",
+    "Seven persons joined before V: More than six."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#2": [
+    "The order: March W, April T, May P, June S, July R, August U, September Q, October V.",
+    "Joined in August: U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#3": [
+    "The order: March W, April T, May P, June S, July R, August U, September Q, October V.",
+    "Q joined in September."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#4": [
+    "The order: March W, April T, May P, June S, July R, August U, September Q, October V.",
+    "\"Before five persons\" means five joined after: place 3, which is P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-66-78386-month-puzzle#5": [
+    "The order: March W, April T, May P, June S, July R, August U, September Q, October V.",
+    "W, V, P and R joined in months with 31 days. T joined in April, which has 30: T."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#1": [
+    "The list is January, March, May, June, July, August, October, November: places 1 to 8. Months with 30 days: June (4) and November (8).",
+    "Short notes: T is at 4 or 8. T, S are 3 apart. V is just after S. After V = before W. W, P are 4 apart. R is exactly halfway between V and Q. At most two persons between Q and S.",
+    "T 4: S is 1 or 7. S 1, V 2 gives W 7, P 3; then R 5 would need Q at 8, with six persons between Q and S. Out. S 7, V 8 gives W 1, P 5; no free place is halfway between V and a free Q. Out.",
+    "T 8: S 5, V 6. Two persons are after V, so W is at 3 and P at 7.",
+    "Free: 1, 2, 4. R is halfway between V (6) and Q: Q 2, R 4. Q and S have two persons between them, which is allowed. U takes 1.",
+    "So the order is: January U, March Q, May W, June R, July S, August V, October P, November T.",
+    "Born in January: U."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#2": [
+    "The order: January U, March Q, May W, June R, July S, August V, October P, November T.",
+    "Between P (place 7) and R (place 4) are Two people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#3": [
+    "The order: January U, March Q, May W, June R, July S, August V, October P, November T.",
+    "Q was born in March."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#4": [
+    "The order: January U, March Q, May W, June R, July S, August V, October P, November T.",
+    "V is in August, one person is between U and W, R is just before S, and W is before P. All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-18-78338-month-puzzle#5": [
+    "The order: January U, March Q, May W, June R, July S, August V, October P, November T.",
+    "Q, P, W and S were born in months with 31 days. R was born in June, which has 30: R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#1": [
+    "The list is January, March, May, June, August, September, December: places 1 to 7. Even-day months: June (4), September (6).",
+    "Short notes: D is at 4 or 6. B is in an odd-day month: 1, 2, 3, 5 or 7. G, B are 3 apart. G is before D. Before B = after F. F is after G. E is before C and before B, and E is not first.",
+    "Pair B with G (3 apart) and the mirror for F: B 1 (G 4, F 7), B 2 (G 5, F 6), B 3 (G 6, F 5), B 5 (G 2, F 3), B 7 (G 4, F 1).",
+    "B 1: nobody can be before B, but E must be. Out. B 2: D would need 6, which F has. Out. B 3: G at 6 cannot be before D. Out. B 7: F at 1 is not after G. Out.",
+    "B 5, G 2, F 3: E is before B and not first: place 4. So D is at 6. C is after E: place 7. A takes 1.",
+    "So the order is: January A, March G, May F, June E, August B, September D, December C.",
+    "The eldest is the first place: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#2": [
+    "The order: January A, March G, May F, June E, August B, September D, December C.",
+    "Between F (place 3) and D (place 6) are Two people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#3": [
+    "The order: January A, March G, May F, June E, August B, September D, December C.",
+    "E was born in June."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-78-78398-month-puzzle#4": [
+    "The order: January A, March G, May F, June E, August B, September D, December C.",
+    "The third place is May, and F is there: May - F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#1": [
+    "The list March to October is places 1 to 8. Even-day months: April (2), June (4), September (7).",
+    "Short notes: D, A are 4 apart. A is in an odd-day month but not October: 1, 3, 5 or 6. E and B are each at 2, 4 or 7. E is before D. C, E are at least 5 apart. F, B are 3 apart. G before H before F.",
+    "Wide gap first: C is at least 5 from E. From place 4 that is impossible, and from 7 it needs C at 1 or 2. But E must be before D, and D cannot be at 8, so E is not at 7. E is at 2, and C is at 7 or 8.",
+    "A 5 or 6 would put D at 1 or 2, with no room for E before it. A 3 puts D at 7; A 1 puts D at 5.",
+    "B is at 4 or 7, and F is 3 from B. G and H must both be before F.",
+    "A 3, D 7: B 4, and F would be at 1. Out. A 1, D 5: B 4 gives F 7, then C 8, and G, H take 3 and 6. (B 7 gives F 4, with only place 3 free before it. Out.)",
+    "So the order is: March A, April E, May G, June B, July D, August H, September F, October C.",
+    "Born in May: G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#2": [
+    "The order: March A, April E, May G, June B, July D, August H, September F, October C.",
+    "Between F (place 7) and A (place 1) are five people: More than four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#3": [
+    "The order: March A, April E, May G, June B, July D, August H, September F, October C.",
+    "H was born in August."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#4": [
+    "The order: March A, April E, May G, June B, July D, August H, September F, October C.",
+    "A-B, D-C, E-D and G-H each have two people between them. B (4) and C (8) have three: B-C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-month-puzzle#5": [
+    "The order: March A, April E, May G, June B, July D, August H, September F, October C.",
+    "E (April) is just after A (March), and two people are between E and D, the one born just before H. Both the given statements (2) and (4) are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#1": [
+    "Places: April 8 and 17 are 1 and 2, May 3 and 4, August 5 and 6, November 7 and 8. The even date is the 8th, the first of each pair.",
+    "Short notes: N is on an even date in a 30-day month: place 1 or 7. N, M are 3 apart. T is just before M. After T = before S. Q is after M. P is 4 after O.",
+    "N 1 gives M 4. N 7 also gives M 4. So M is at 4 either way, and T is at 3.",
+    "Five persons are after T, so five are before S: S 6.",
+    "N 1: free 2, 5, 7, 8. O and P need to be 4 apart: no such pair. Out.",
+    "N 7: free 1, 2, 5, 8. O 1, P 5. Q is after M: place 8. R takes 2.",
+    "So the order is: 8 April O, 17 April R, 8 May T, 17 May M, 8 August P, 17 August S, 8 November N, 17 November Q.",
+    "Born on April 17th: R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#2": [
+    "The order: 8 April O, 17 April R, 8 May T, 17 May M, 8 August P, 17 August S, 8 November N, 17 November Q.",
+    "Between R (place 2) and M (place 4) there is one person. Between T (3) and P (5) there is also one: T – P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#3": [
+    "The order: 8 April O, 17 April R, 8 May T, 17 May M, 8 August P, 17 August S, 8 November N, 17 November Q.",
+    "Q is at place 8: November – 17th."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#4": [
+    "The order: 8 April O, 17 April R, 8 May T, 17 May M, 8 August P, 17 August S, 8 November N, 17 November Q.",
+    "I: between M (4) and S (6) is one person, false. II: T is before Q, true. III: P was born on 8 August, an even date, false. Only II."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-33-78353-month-with-date-puzzle#5": [
+    "The order: 8 April O, 17 April R, 8 May T, 17 May M, 8 August P, 17 August S, 8 November N, 17 November Q.",
+    "R, N, O and Q were born in months with 30 days (April and November). M was born in May: M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#1": [
+    "Places: March 5 and 21 are 1 and 2, June 3 and 4, August 5 and 6, November 7 and 8. The prime date is the 5th, the first of each pair.",
+    "Short notes: R is on the 5th of a 30-day month: place 3 or 7. R, T are 2 apart. M is just before T. N is 2 after P. O is just before Q. After T = before Q, plus one.",
+    "R 3: T is 1 or 5. T 1 leaves no place for M. T 5, M 4: three persons are after T, so two are before Q: Q 3, which is R's place. Out.",
+    "R 7: T 5, M 4 (T cannot be 9). Three after T, so two before Q: Q 3, O 2.",
+    "Free: 1, 6, 8. N is 2 after P: P 6, N 8. S takes 1.",
+    "So the order is: 5 March S, 21 March O, 5 June Q, 21 June M, 5 August T, 21 August P, 5 November R, 21 November N.",
+    "Place 4 is 21 June, and M is there: June 21st – M."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#2": [
+    "The order: 5 March S, 21 March O, 5 June Q, 21 June M, 5 August T, 21 August P, 5 November R, 21 November N.",
+    "N is at place 8: November - 21."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#3": [
+    "The order: 5 March S, 21 March O, 5 June Q, 21 June M, 5 August T, 21 August P, 5 November R, 21 November N.",
+    "Between S (place 1) and T (place 5) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#4": [
+    "The order: 5 March S, 21 March O, 5 June Q, 21 June M, 5 August T, 21 August P, 5 November R, 21 November N.",
+    "Born on August 21st: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-32-78352-month-with-date-puzzle#5": [
+    "The order: 5 March S, 21 March O, 5 June Q, 21 June M, 5 August T, 21 August P, 5 November R, 21 November N.",
+    "SQ, RT, NP and OM each have one person between them. O (2) and P (6) have three: OP."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#1": [
+    "Places: January 12 and 23 are 1 and 2, March 3 and 4, June 5 and 6, September 7 and 8. The even date is the 12th, the first of each pair.",
+    "Short notes: C is at 1, 3, 5 or 7. D is just before C. D, A are 3 apart. A is after March: place 5 or later. B and F are one pair. F, E are 4 apart. Before H = after E. B is before H.",
+    "D just before C: (D 2, C 3), (D 4, C 5) or (D 6, C 7). A is 3 from D and at 5 or later: D 2 gives A 5; D 4 gives A 7; D 6 gives nothing.",
+    "D 2, C 3, A 5: the only free pair for B and F is 7 and 8. F 7 would put E at 3; F 8 puts E at 4, then four are after E and H would be at 5. Both taken. Out.",
+    "D 4, C 5, A 7: the free pair is 1 and 2. F 1 would put E at 5. So F 2, B 1, E 6.",
+    "Two persons are after E, so two are before H: H 3, and B is before H. G takes 8.",
+    "So the order is: 12 January B, 23 January F, 12 March H, 23 March D, 12 June C, 23 June E, 12 September A, 23 September G.",
+    "September holds A and G; of the options, the answer is G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#2": [
+    "The order: 12 January B, 23 January F, 12 March H, 23 March D, 12 June C, 23 June E, 12 September A, 23 September G.",
+    "Between D (place 4) and G (place 8) are three people, and between H (3) and A (7) also three: Same as the people attend between H and A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#3": [
+    "The order: 12 January B, 23 January F, 12 March H, 23 March D, 12 June C, 23 June E, 12 September A, 23 September G.",
+    "G is at place 8: 23rd September."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#4": [
+    "The order: 12 January B, 23 January F, 12 March H, 23 March D, 12 June C, 23 June E, 12 September A, 23 September G.",
+    "G, D, E and F attend on the 23rd. H attends on the 12th: H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-20-78340-month-with-date-puzzle#5": [
+    "The order: 12 January B, 23 January F, 12 March H, 23 March D, 12 June C, 23 June E, 12 September A, 23 September G.",
+    "Just after C (place 5) is place 6: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#1": [
+    "Places: March 11 and 24 are 1 and 2, June 3 and 4, August 5 and 6, November 7 and 8. The odd date is the 11th, the first of each pair. Even-day months: June and November.",
+    "Short notes: nobody is after D, so D is at 8. B is on an odd date in a month that does not have an odd number of days: place 3 or 7. E, B are 4 apart. B is after G. G, H are 3 apart. C and F are one pair. Before B = after F.",
+    "B 7: six are before it, so six are after F: F 2, and C 1. E is at 3. G must be before B with H 3 away: from the free places 4, 5, 6 nothing fits. Out.",
+    "B 3: two are before it, so two are after F: F 6, and C 5. E is at 7.",
+    "G is before B: place 1 or 2. H is 3 from G: G 1 gives H 4 (G 2 would need place 5). A takes 2.",
+    "So the order is: 11 March G, 24 March A, 11 June B, 24 June H, 11 August C, 24 August F, 11 November E, 24 November D.",
+    "June is places 3 and 4: B, H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#2": [
+    "The order: 11 March G, 24 March A, 11 June B, 24 June H, 11 August C, 24 August F, 11 November E, 24 November D.",
+    "Between A (place 2) and C (place 5) are Two people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#3": [
+    "The order: 11 March G, 24 March A, 11 June B, 24 June H, 11 August C, 24 August F, 11 November E, 24 November D.",
+    "March 24th is place 2: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#4": [
+    "The order: 11 March G, 24 March A, 11 June B, 24 June H, 11 August C, 24 August F, 11 November E, 24 November D.",
+    "E, G, C and B were born on the 11th. H was born on the 24th: H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-76-78396-month-with-date-puzzle#5": [
+    "The order: 11 March G, 24 March A, 11 June B, 24 June H, 11 August C, 24 August F, 11 November E, 24 November D.",
+    "From eldest to youngest, alphabetical order would be A, B, C, D, E, F, G, H. The real order is G, A, B, H, C, F, E, D. Only F, in the sixth place, matches: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#1": [
+    "Places: January 12 and 27 are 1 and 2, April 3 and 4, May 5 and 6, October 7 and 8. The only 30-day month is April.",
+    "Short notes: C is at 3 or 4. C, Y are 4 apart. Y, A are 5 apart. X is just after B in the same month, so B is in an odd place. B is after A. C and Z are neighbours. A and W are in different months.",
+    "C 4: Y 8, A 3. Z is next to C: place 5. B and X need a whole pair after A: 5 and 6 or 7 and 8, and each has a place taken. Out.",
+    "C 3: Y 7, A 2. Z is next to C: place 4. B and X take the pair 5 and 6.",
+    "Free: 1 and 8. W is not in January with A: W 8, D 1.",
+    "So the order is: 12 January D, 27 January A, 12 April C, 27 April Z, 12 May B, 27 May X, 12 October Y, 27 October W.",
+    "Between A (place 2) and W (place 8) are Five people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#2": [
+    "The order: 12 January D, 27 January A, 12 April C, 27 April Z, 12 May B, 27 May X, 12 October Y, 27 October W.",
+    "Places 7 and 8 are both October: Y, W."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#3": [
+    "The order: 12 January D, 27 January A, 12 April C, 27 April Z, 12 May B, 27 May X, 12 October Y, 27 October W.",
+    "X is at place 6: May-27th."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#4": [
+    "The order: 12 January D, 27 January A, 12 April C, 27 April Z, 12 May B, 27 May X, 12 October Y, 27 October W.",
+    "D-Z, B-W, Z-Y and C-X each have two people between them. A (2) and Z (4) have one: A-Z."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-month-with-date-puzzle#5": [
+    "The order: 12 January D, 27 January A, 12 April C, 27 April Z, 12 May B, 27 May X, 12 October Y, 27 October W.",
+    "Immediately before B (place 5) is place 4: Z."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#1": [
+    "Places: May 13 and 28 are 1 and 2, June 3 and 4, September 5 and 6, October 7 and 8. The odd date is the 13th, the first of each pair. Even-day months: June and September.",
+    "Short notes: S is on an odd date in an even-day month: place 3 or 5. Z is on an even date in an odd-day month (May or October): place 2 or 8. S, T are 3 apart. X is just before T. After X = before W. Y is just after V. U is on an odd date and not first: 3, 5 or 7.",
+    "S 5: T is 2 or 8. T 2, X 1 gives W 8, and then Z has no place. T 8, X 7 gives W 2, and again Z has no place. Out.",
+    "S 3: T 6, X 5. Three are after X, so three are before W: W 4.",
+    "U is at 3, 5 or 7, and only 7 is free. V and Y need two places in a row from 1, 2, 8: V 1, Y 2. Z takes 8.",
+    "So the order is: 13 May V, 28 May Y, 13 June S, 28 June W, 13 September X, 28 September T, 13 October U, 28 October Z.",
+    "Between Y (place 2) and T (place 6) are Three people."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#2": [
+    "The order: 13 May V, 28 May Y, 13 June S, 28 June W, 13 September X, 28 September T, 13 October U, 28 October Z.",
+    "U is at place 7: October."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#3": [
+    "The order: 13 May V, 28 May Y, 13 June S, 28 June W, 13 September X, 28 September T, 13 October U, 28 October Z.",
+    "Places 7 and 8 are both October: U-Z."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#4": [
+    "The order: 13 May V, 28 May Y, 13 June S, 28 June W, 13 September X, 28 September T, 13 October U, 28 October Z.",
+    "Y attended in May, which has 31 days, an odd number. So the statement that is not true is: Y has attended the meeting in the month having even number of days."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-14-78334-month-with-date-puzzle#5": [
+    "The order: 13 May V, 28 May Y, 13 June S, 28 June W, 13 September X, 28 September T, 13 October U, 28 October Z.",
+    "V-S, T-Z, U-X and W-Y each have one person between them. W (4) and U (7) have two: W-U."
+   ]
+  }
+ }
+}

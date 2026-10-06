@@ -1,0 +1,976 @@
+{
+ "module": "profit-loss",
+ "intro": [
+  "A shopkeeper buys, puts a price on the tag, gives a discount and sells. This topic is those three prices in a row, and one habit handles nearly all of it: **call the cost price 100 and walk along the row.**",
+  "There are twelve short lessons. The first four build the row and are where most exam questions come from. The rest take one variation each. Go in order the first time."
+ ],
+ "needs": [
+  "percent-of",
+  "percent-words",
+  "percent-fractions",
+  "ratio"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the fraction table and every question type on one page, and the Course in each bank has many more.",
+  "When a question feels crowded, ask the same question of every percent in it: percent of what? Profit and mark-up are on the cost; discount is on the marked price."
+ ],
+ "lessons": [
+  {
+   "id": "cp-sp",
+   "code": "P1",
+   "title": "Cost price, selling price and profit percent",
+   "plain": "The starting point: three words, and the rule that profit and loss are always measured on what the thing cost.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "A shopkeeper buys something and sells it. Three words describe what happens.",
+    "- **Cost price (CP)**: what he paid for it. If he also pays for repairs or transport, those are part of the cost.",
+    "- **Selling price (SP)**: what he sells it for.",
+    "- **Profit** if he sells for more than it cost; **loss** if he sells for less. Profit = SP - CP.",
+    "The one rule to fix in your mind: **profit percent and loss percent are always measured on the cost price.** The cost is the 100.",
+    "So the easiest way to think is: **call the cost price 100%.**",
+    "- A profit of 16% means the selling price is 116% of the cost.",
+    "- A loss of 8% means the selling price is 92% of the cost.",
+    "With that, the three basic questions are the three percent questions you already know.",
+    "**Find the profit percent.** Bought for 800, sold for 920: profit 120, measured on the cost. 120 / 800 = 15%.",
+    "**Find the selling price.** Cost 1,250, profit 16%: 116% of 1,250 = 1,450.",
+    "**Find the cost price.** \"Sold for 780 at a gain of 30%.\" The 780 is 130% of the cost. So 1% is 6 and the cost is 600. Going backwards like this is the one that needs care: never take 30% of the selling price."
+   ],
+   "example": {
+    "q": "By selling an article for Rs 780, a man gains 30%. What is the cost price?",
+    "steps": [
+     "Call the cost 100%. A gain of 30% makes the selling price 130%.",
+     "130% of the cost is Rs 780.",
+     "1% = 780 / 130 = 6.",
+     "Cost price = 100 x 6 = Rs 600.",
+     "Check: 30% of 600 is 180, and 600 + 180 = 780."
+    ],
+    "answer": "The cost price is Rs 600."
+   },
+   "check": {
+    "q": "An article bought for Rs 400 is sold for Rs 500. What is the profit percent?",
+    "options": {
+     "a": "20%",
+     "b": "25%",
+     "c": "100%",
+     "d": "125%"
+    },
+    "answer": "B",
+    "why": "Profit = 100, measured on the cost: 100 / 400 = 25%. (20% measures it on the selling price, which is the common slip.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#1",
+     "clerk-10-profit-and-loss-a-graded#2",
+     "clerk-10-profit-and-loss-a-graded#3",
+     "clerk-10-profit-and-loss-a-graded#5",
+     "clerk-10-profit-and-loss-a-graded#23"
+    ],
+    "tags": [
+     "Find the profit percent.",
+     "Find the selling price.",
+     "Backwards from a loss: find the cost.",
+     "Repairs are part of the cost.",
+     "Some of the goods are spoiled."
+    ]
+   }
+  },
+  {
+   "id": "two-prices",
+   "code": "P8",
+   "title": "One article, two selling prices",
+   "plain": "New: the same article is imagined sold at two different prices. The gap in rupees is the gap in percent.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"An article is sold at a loss of 10%. Had it been sold for Rs 60 more, there would have been a gain of 5%.\" The cost has not changed. Only the selling price has moved.",
+    "Keep the cost at 100%.",
+    "- At a loss of 10%, the selling price is 90%.",
+    "- At a gain of 5%, the selling price is 105%.",
+    "The two selling prices are 15% of the cost apart, and the question says they are Rs 60 apart. So 15% of the cost is Rs 60, 1% is Rs 4, and the cost is Rs 400.",
+    "This is the \"what is the only thing that changed?\" idea again. **The gap in rupees matches the gap in percent.**",
+    "When one is a loss and the other a gain, the gap is the two percents **added** (10 + 5). When both are gains, or both losses, it is their difference.",
+    "A close relative: \"He sells for Rs 450 at a loss of 10%. At what price should he sell to gain 20%?\" Here 90% is 450, so 1% is 5, and 120% is 600. You never need to stop at the cost; go straight from one percent to the other.",
+    "And one disguise worth knowing: \"The profit on selling at Rs 832 equals the loss on selling at Rs 448.\" If the profit and the loss are equal, the cost sits exactly **halfway** between the two prices."
+   ],
+   "example": {
+    "q": "An article is sold at a loss of 10%. Had it been sold for Rs 60 more, there would have been a gain of 5%. Find the cost price.",
+    "steps": [
+     "Cost = 100%. First selling price: 90%. Second selling price: 105%.",
+     "The gap is 105 - 90 = 15% of the cost.",
+     "15% of the cost = Rs 60, so 1% = Rs 4.",
+     "Cost price = Rs 400."
+    ],
+    "answer": "The cost price is Rs 400."
+   },
+   "check": {
+    "q": "A man sells an article for Rs 450 at a loss of 10%. At what price should he sell it to gain 20%?",
+    "options": {
+     "a": "Rs 540",
+     "b": "Rs 594",
+     "c": "Rs 600",
+     "d": "Rs 650"
+    },
+    "answer": "C",
+    "why": "90% of the cost is 450, so 1% is 5. A gain of 20% needs 120%: 120 x 5 = 600. (540 adds 20% to the selling price instead of working from the cost.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#8",
+     "clerk-10-profit-and-loss-a-graded#11",
+     "clerk-10-profit-and-loss-b-pyq#11",
+     "clerk-10-profit-and-loss-a-graded#18",
+     "clerk-10-profit-and-loss-a-graded#21"
+    ],
+    "tags": [
+     "From a loss to a gain: find the new price.",
+     "A loss and a gain, and the rupee gap between them.",
+     "The same, as a real paper asked it.",
+     "The profit at one price equals the loss at another.",
+     "No rupees at all: the price doubles and the profit trebles."
+    ]
+   }
+  },
+  {
+   "id": "marked-price",
+   "code": "P2",
+   "title": "Marked price and discount",
+   "plain": "New: a third price, the one on the tag. Discount is measured on the tag; profit is still measured on the cost.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "Shops rarely sell at the price on the tag. That tag price is the **marked price (MP)**. The shopkeeper takes a **discount** off it, and what is left is the selling price.",
+    "So there are now three prices in a row:",
+    "**cost price, then marked price, then selling price**",
+    "And two different percents, each with its own base. This is the heart of the whole topic:",
+    "- **Mark-up** and **profit** are measured on the **cost price**.",
+    "- **Discount** is measured on the **marked price**.",
+    "Keep the cost at 100 and walk along the row.",
+    "\"A shopkeeper marks an article 50% above cost and allows a discount of 20%.\"",
+    "- Cost: 100.",
+    "- Marked price: 50% above cost, so 150.",
+    "- Discount: 20% **of 150**, which is 30. Selling price: 120.",
+    "- Profit: 120 - 100 = 20 on a cost of 100, so 20%.",
+    "Notice the answer is not 50 - 20 = 30%. The discount was 20% of the bigger number, 150, so it took away more than 20.",
+    "You can walk the row in either direction. If you know the selling price and the discount, go back to the marked price by dividing: a 10% discount leaves 90%, so marked price = selling price / 0.9."
+   ],
+   "example": {
+    "q": "A shopkeeper marks an article 50% above its cost price and allows a discount of 20%. What is his profit percent?",
+    "steps": [
+     "Call the cost 100.",
+     "Marked 50% above cost: marked price = 150.",
+     "Discount is 20% of the marked price: 20% of 150 = 30.",
+     "Selling price = 150 - 30 = 120.",
+     "Profit = 20 on a cost of 100: 20%."
+    ],
+    "answer": "20% profit."
+   },
+   "check": {
+    "q": "The marked price of an article is Rs 800 and a discount of 15% is allowed. What is the selling price?",
+    "options": {
+     "a": "Rs 120",
+     "b": "Rs 680",
+     "c": "Rs 785",
+     "d": "Rs 920"
+    },
+    "answer": "B",
+    "why": "15% of 800 is 120. Selling price = 800 - 120 = 680. (120 is the discount itself.)"
+   },
+   "shortcut": {
+    "title": "Mark-up, discount and profit in one line",
+    "text": [
+     "With the cost as 100, a mark-up of **m%**, a discount of **d%** and a profit of **p%** are tied together by:",
+     "**(100 + m) x (100 - d) = 100 x (100 + p)**",
+     "Marked 40% up with a 25% discount: 140 x 75 = 10,500, so 100 + p = 105 and the profit is 5%.",
+     "Discount 10% and profit 20%: (100 + m) x 90 = 12,000, so 100 + m = 133 1/3 and the mark-up is 33 1/3%.",
+     "It is the walk along the row written as one multiplication."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#4",
+     "clerk-10-profit-and-loss-a-graded#9",
+     "clerk-10-profit-and-loss-a-graded#15",
+     "clerk-10-profit-and-loss-b-pyq#3",
+     "clerk-10-profit-and-loss-b-pyq#17"
+    ],
+    "tags": [
+     "Marked price and discount only: find the selling price.",
+     "Walk the whole row: mark-up, discount, profit.",
+     "Backwards: discount and profit are known, find the mark-up.",
+     "A loss instead of a profit, in rupees.",
+     "The same goods at two different discounts."
+    ]
+   }
+  },
+  {
+   "id": "marked-price-rupees",
+   "code": "P2",
+   "title": "Marked price questions, in exam wording",
+   "plain": "New: the same row of three prices, with one rupee figure to match and often a second article or a second scenario.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "The Clerk papers set this form more than any other in the topic. It is the walk along the row from the last lesson, plus one step you know from every earlier topic: **match the rupee figure to units.**",
+    "1. Call the cost 100 units. Walk to the marked price and the selling price in units.",
+    "2. The question gives one rupee figure: the profit, the discount, or a difference between two selling prices. Find how many **units** that same thing is.",
+    "3. Rupees / units gives the value of one unit. The cost is 100 of them.",
+    "\"Marked 30% above cost, 10% discount, and the profit is Rs 68.\" Cost 100, marked price 130, selling price 117. Profit is 17 units, and it is Rs 68. One unit is Rs 4, so the cost is Rs 400.",
+    "The disguises:",
+    "- **The rupee figure is the discount**, not the profit. The discount in units is marked price minus selling price.",
+    "- **Two scenarios for the same article** (\"had he marked it 50% above and given 12% discount...\"). Work out the selling price in units for each, and match the rupee gap to the gap in units.",
+    "- **A second article** whose cost is described from the first (\"the cost of B is 40% more than that of A\"). Finish article A completely first; B is then a fresh, short question.",
+    "- **The discount percent changes** (\"from 5% to 10%\"). The change in profit is simply that extra slice of the marked price."
+   ],
+   "example": {
+    "q": "A shopkeeper marks an article 30% above its cost price and allows a discount of 10%. If his profit is Rs 68, find the cost price.",
+    "steps": [
+     "Call the cost 100 units. Marked price = 130 units.",
+     "Discount = 10% of 130 = 13 units. Selling price = 117 units.",
+     "Profit = 17 units, and the question says it is Rs 68.",
+     "One unit = 68 / 17 = Rs 4.",
+     "Cost = 100 units = Rs 400."
+    ],
+    "answer": "The cost price is Rs 400."
+   },
+   "check": {
+    "q": "A shopkeeper marks an article 20% above its cost price and allows a discount of 5%. If the discount is Rs 30, what is the cost price?",
+    "options": {
+     "a": "Rs 150",
+     "b": "Rs 500",
+     "c": "Rs 570",
+     "d": "Rs 600"
+    },
+    "answer": "B",
+    "why": "Cost 100 units, marked price 120 units. The discount is 5% of 120 = 6 units. 6 units = Rs 30, so one unit is Rs 5 and the cost is Rs 500. (600 is the marked price.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-b-pyq#1",
+     "clerk-10-profit-and-loss-b-pyq#6",
+     "clerk-10-profit-and-loss-b-pyq#18",
+     "clerk-10-profit-and-loss-b-pyq#7",
+     "clerk-10-profit-and-loss-a-graded#30"
+    ],
+    "tags": [
+     "The profit in rupees, then a second article.",
+     "Two ways of pricing the same article.",
+     "The discount percent changes.",
+     "Two articles tied by ratios, with equal discounts in rupees.",
+     "No rupees: the discount percent equals the profit percent."
+    ]
+   }
+  },
+  {
+   "id": "ratios",
+   "code": "P10",
+   "title": "When the prices are given as a ratio",
+   "plain": "New: instead of percents, the three prices are compared as a ratio. Turn the percent into the same ratio and line them up.",
+   "needs": [
+    "ratio",
+    "join-ratios"
+   ],
+   "teach": [
+    "\"The ratio of the marked price to the selling price is 8 : 7, and the article is sold at a 40% profit.\" Two facts, in two different languages. Put them into one.",
+    "A 40% profit is itself a ratio: selling price to cost price = 140 : 100 = 7 : 5.",
+    "Now you have two ratios that share the selling price:",
+    "- marked price : selling price = 8 : 7",
+    "- selling price : cost price = 7 : 5",
+    "The selling price is 7 in both, so they join at once: **marked : selling : cost = 8 : 7 : 5**. If the shared number were different in the two ratios, you would first make it the same, as in the Basics lesson on joining ratios.",
+    "After that it is a plain ratio question. The real number in the question (a difference between two of the prices, usually) matches a number of parts.",
+    "This lesson is also the place to settle a small trap. **A percent means nothing until you know what it is a percent of.**",
+    "- \"A profit of 20%\" means 20% of the **cost**, by default.",
+    "- \"A profit of 20% **calculated on the selling price**\" is different: selling price 100, profit 20, so the cost is 80, and the profit on cost is 20 / 80 = 25%.",
+    "- \"He gains the selling price of 9 metres\" means the profit is described in units of selling price. Write everything in those units before you compare."
+   ],
+   "example": {
+    "q": "The ratio of the marked price to the cost price of an article is 3 : 2. A discount of 20% is allowed. What is the profit percent?",
+    "steps": [
+     "Take the marked price as 3 parts and the cost as 2 parts.",
+     "A 20% discount leaves 80% of the marked price: 80% of 3 = 2.4 parts. That is the selling price.",
+     "Profit = 2.4 - 2 = 0.4 parts, measured on a cost of 2 parts.",
+     "0.4 / 2 = 20%."
+    ],
+    "answer": "20% profit."
+   },
+   "check": {
+    "q": "The profit on an article is 25% of its selling price. What is the profit percent on the cost price?",
+    "options": {
+     "a": "20%",
+     "b": "25%",
+     "c": "33 1/3%",
+     "d": "75%"
+    },
+    "answer": "C",
+    "why": "Take the selling price as 100. The profit is 25, so the cost is 75. Profit on cost = 25 / 75 = 33 1/3%."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-b-pyq#9",
+     "clerk-10-profit-and-loss-b-pyq#8",
+     "clerk-10-profit-and-loss-b-pyq#12",
+     "clerk-10-profit-and-loss-a-graded#17",
+     "clerk-10-profit-and-loss-a-graded#27"
+    ],
+    "tags": [
+     "Marked to selling as a ratio, with a profit percent.",
+     "The same, where the shared number has to be made equal first.",
+     "Marked to cost as a ratio: find the discount.",
+     "A profit measured on the selling price.",
+     "A profit described as \"the selling price of 9 metres\"."
+    ]
+   }
+  },
+  {
+   "id": "successive-discounts",
+   "code": "P3",
+   "title": "One discount after another",
+   "plain": "New: two discounts in a row. The second is taken on the already reduced price, so they do not simply add.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"Two successive discounts of 20% and 10%.\" **Successive** means one after the other. The second discount is taken on what is left after the first, not on the original price.",
+    "You met this idea in Percentages (one change after another). The safe method is the same: **go one step at a time.**",
+    "On a marked price of 100: the first discount takes 20, leaving 80. The second takes 10% **of 80**, which is 8, leaving 72. Altogether 28 has come off, so the two discounts are worth a single discount of **28%**, not 30%.",
+    "As multipliers: 0.8 x 0.9 = 0.72.",
+    "Two successive discounts are always worth a little **less** than their sum, because the second one bites on a smaller price. The order does not matter: 10% then 20% also leaves 72.",
+    "Once you have the single discount, the question is an ordinary marked-price question, and the whole of the last two lessons applies:",
+    "- find the selling price;",
+    "- find a missing second discount (divide what he actually paid by the price after the first discount);",
+    "- carry on to the cost using the profit percent."
+   ],
+   "example": {
+    "q": "An article marked at Rs 1,000 is sold after two successive discounts of 20% and 5%. What is the selling price?",
+    "steps": [
+     "First discount: 20% of 1,000 = 200. Price now 800.",
+     "Second discount: 5% of 800 = 40. Price now 760.",
+     "As one line: 1,000 x 0.8 x 0.95 = 760."
+    ],
+    "answer": "Rs 760."
+   },
+   "check": {
+    "q": "Two successive discounts of 10% and 10% are equivalent to a single discount of:",
+    "options": {
+     "a": "19%",
+     "b": "20%",
+     "c": "21%",
+     "d": "100%"
+    },
+    "answer": "A",
+    "why": "On 100: the first discount leaves 90. The second takes 10% of 90 = 9, leaving 81. Altogether 19 has come off."
+   },
+   "shortcut": {
+    "title": "Two discounts in one line",
+    "text": [
+     "Two successive discounts of **a%** and **b%** equal a single discount of:",
+     "**a + b - (a x b) / 100**",
+     "20% and 10%: 30 - 2 = 28%. 15% and 20%: 35 - 3 = 32%.",
+     "It is the \"two changes in one line\" rule from Percentages with both changes negative."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#6",
+     "clerk-10-profit-and-loss-a-graded#22",
+     "clerk-10-profit-and-loss-b-pyq#2",
+     "clerk-10-profit-and-loss-a-graded#26",
+     "clerk-10-profit-and-loss-b-pyq#10"
+    ],
+    "tags": [
+     "Find the single equivalent discount.",
+     "A single discount against two successive ones, in rupees.",
+     "The second discount is the missing one.",
+     "Two discounts, then on to the cost.",
+     "The total discount in rupees, and a small profit."
+    ]
+   }
+  },
+  {
+   "id": "offers",
+   "code": "P3",
+   "title": "Offers that are discounts in disguise",
+   "plain": "New: \"buy 4, get 1 free\", and a discount given as a fraction. Turn each into an ordinary discount percent.",
+   "needs": [
+    "percent-fractions"
+   ],
+   "teach": [
+    "Shops do not always state a discount as a percent. Two disguises are common.",
+    "**\"Buy 4, get 1 free.\"** The customer takes home 5 articles and pays for 4. So 1 out of every 5 is given away: a discount of 1/5, which is 20%.",
+    "Be careful which number goes underneath. It is the number **taken home** (5), not the number paid for (4). \"Buy 3, get 1 free\" is 1 out of 4, a 25% discount.",
+    "After that, an offer behaves exactly like a discount. \"He marks his goods 50% above cost and offers buy 3, get 1 free\": cost 100, marked price 150, a 25% discount leaves 112.5. Profit 12.5%.",
+    "**Discounts written as fraction-percents.** A paper may write 11 1/9% or 16 2/3%. These are 1/9 and 1/6 (the Basics lesson on percents that are simple fractions has the list). Treat them as fractions and the arithmetic is light: a discount of 11 1/9% leaves 8/9 of the price.",
+    "**Discount compared with profit.** A favourite last line is \"the difference between the discount and the profit is Rs 200\". Write both in units of the cost and subtract. Discount = marked price - selling price. Profit = selling price - cost price."
+   ],
+   "example": {
+    "q": "A shop offers \"Buy 2, get 1 free\". What is the effective discount percent?",
+    "steps": [
+     "The customer takes home 3 articles and pays for 2.",
+     "1 out of 3 is free: a discount of 1/3.",
+     "1/3 as a percent is 33 1/3%."
+    ],
+    "answer": "33 1/3%."
+   },
+   "check": {
+    "q": "A shopkeeper marks his goods 60% above the cost price and offers \"Buy 3, get 1 free\". What is his profit percent?",
+    "options": {
+     "a": "20%",
+     "b": "35%",
+     "c": "45%",
+     "d": "60%"
+    },
+    "answer": "A",
+    "why": "Buy 3, get 1 free is 1 out of 4: a 25% discount. Cost 100, marked price 160, selling price 75% of 160 = 120. Profit 20%."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#16",
+     "clerk-10-profit-and-loss-a-graded#29",
+     "clerk-10-profit-and-loss-b-pyq#13"
+    ],
+    "tags": [
+     "Turn an offer into a discount percent.",
+     "A mark-up followed by an offer.",
+     "Fraction discounts, and discount compared with profit."
+    ]
+   }
+  },
+  {
+   "id": "two-articles",
+   "code": "P5",
+   "title": "Two articles with the same cost",
+   "plain": "New: two things bought at the same price, sold at different profit or loss percents. Find the overall result.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "\"Two articles have the same cost price. One is sold at a 25% profit and the other at a 15% loss.\" What happened overall?",
+    "Because the costs are equal, give **each** a cost of 100.",
+    "- The first sells for 125. The second sells for 85.",
+    "- Together they cost 200 and sold for 210.",
+    "- Overall profit: 10 on 200, which is **5%**.",
+    "The step people forget is that the total cost is **200**, not 100. A gain of 10 units on two articles is 5%, not 10%.",
+    "With equal costs, the overall percent is simply the average of the two percents: (25 - 15) / 2 = 5%. Count a loss as negative.",
+    "If the question gives the overall profit or loss **in rupees**, match it to units as usual. An overall gain of 10 units that is worth Rs 60 makes one unit Rs 6, so each article cost Rs 600.",
+    "**Unequal amounts of goods.** \"He sells two-thirds of his goods at 15% profit and the rest at 6% loss.\" Now the two parts are different sizes, so weight them: two-thirds of 15 is 10, and one-third of 6 is 2. Overall 10 - 2 = 8% profit.",
+    "Finally, read on after the overall result. Papers like to finish with a fresh small question about one of the articles (\"at what price should B be sold to gain 40%?\"), which uses the cost you have just found."
+   ],
+   "example": {
+    "q": "Two articles have the same cost price. One is sold at a 25% profit and the other at a 15% loss, giving an overall profit of Rs 60. Find the cost price of each.",
+    "steps": [
+     "Give each a cost of 100 units. Total cost 200 units.",
+     "Selling prices: 125 and 85. Total 210 units.",
+     "Overall profit = 10 units, and the question says it is Rs 60.",
+     "One unit = Rs 6.",
+     "Each article cost 100 units = Rs 600."
+    ],
+    "answer": "Rs 600 each."
+   },
+   "check": {
+    "q": "Two articles are bought at the same price. One is sold at a 30% profit and the other at a 10% loss. What is the overall profit percent?",
+    "options": {
+     "a": "10%",
+     "b": "15%",
+     "c": "20%",
+     "d": "40%"
+    },
+    "answer": "A",
+    "why": "Costs 100 each: 200 in all. Selling prices 130 and 90: 220. Profit 20 on 200 = 10%. (20% forgets that the total cost is 200.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#28",
+     "clerk-10-profit-and-loss-b-pyq#4",
+     "clerk-10-profit-and-loss-b-pyq#5",
+     "clerk-10-profit-and-loss-b-pyq#16",
+     "clerk-10-profit-and-loss-a-graded#20"
+    ],
+    "tags": [
+     "Equal costs, the same percent up and down.",
+     "An overall loss in rupees, then a new question about A.",
+     "The same pattern, then a new question about B.",
+     "The second selling price is described from the first.",
+     "Unequal parts of the goods."
+    ]
+   }
+  },
+  {
+   "id": "same-selling-price",
+   "code": "P5",
+   "title": "Two articles sold at the same price, and break-even pairs",
+   "plain": "New: this time the selling prices are equal, not the costs. One gains x% and the other loses x%, and the result is always a loss.",
+   "needs": [
+    "percent-of",
+    "ratio"
+   ],
+   "teach": [
+    "\"A man sells two articles for Rs 1,980 each. On one he gains 10% and on the other he loses 10%.\" It sounds as if he breaks even. He does not.",
+    "The two articles did **not** cost the same. The one sold at a loss cost more (1,980 is only 90% of its cost), so 10% of it is a bigger amount than 10% of the cheaper one. The loss outweighs the gain.",
+    "There is a tidy result for exactly this situation. When two articles are sold at the **same price**, one at a gain of **x%** and the other at a loss of **x%**:",
+    "**there is always an overall loss, of (x times x) / 100 percent.**",
+    "At 10%: a loss of 1%. At 20%: a loss of 4%. At 25%: a loss of 6.25%.",
+    "To turn that into rupees: the total selling price is (100 minus that loss) percent of the total cost. With two articles at Rs 1,980 the total is 3,960, which is 99% of the cost. So the cost was 4,000 and the loss is Rs 40.",
+    "The rule also runs backwards. If you are told the overall loss is 6.25%, then x times x is 625, so x is 25.",
+    "**Break-even pairs.** A different question with a similar look: \"He sells one article at a 20% profit and the other at a 10% loss, and on the whole neither gains nor loses.\" Here the rupees gained on one equal the rupees lost on the other. So 20% of the first cost = 10% of the second cost. You know this form from Percentages: swap the percents to get the ratio. The costs are in the ratio 10 : 20 = 1 : 2."
+   ],
+   "example": {
+    "q": "A man sells two fans for Rs 1,200 each. On one he gains 20% and on the other he loses 20%. Find his overall loss in rupees.",
+    "steps": [
+     "Same selling price, 20% up and 20% down: an overall loss of (20 x 20) / 100 = 4%.",
+     "Total selling price = 2,400, which is 96% of the total cost.",
+     "1% = 25, so the total cost is Rs 2,500.",
+     "Loss = 2,500 - 2,400 = Rs 100."
+    ],
+    "answer": "A loss of Rs 100."
+   },
+   "check": {
+    "q": "Two articles are sold at the same price. One is sold at a gain of 10% and the other at a loss of 10%. What is the overall result?",
+    "options": {
+     "a": "No profit, no loss",
+     "b": "1% loss",
+     "c": "1% gain",
+     "d": "10% loss"
+    },
+    "answer": "B",
+    "why": "Same selling price, x% up and x% down: always a loss of (x times x) / 100 = 1%."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#10",
+     "clerk-10-profit-and-loss-b-pyq#14",
+     "clerk-10-profit-and-loss-a-graded#19"
+    ],
+    "tags": [
+     "The rule, turned into rupees.",
+     "The rule backwards: the overall loss is given.",
+     "A break-even pair."
+    ]
+   }
+  },
+  {
+   "id": "bought-cheaper",
+   "code": "P8",
+   "title": "\"Had he bought it for less...\"",
+   "plain": "New: the imagined scenario changes the cost as well as the selling price. Build both scenarios side by side.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "In lesson 2 only the selling price moved. Here the question imagines a different **cost** too: \"He sold it at a 25% profit. Had he bought it for 20% less and sold it for Rs 30 more, he would have gained 75%.\"",
+    "It reads like a tangle, but it unties in the same way as everything else: **call the real cost 100 units, and build the two scenarios side by side.**",
+    "| | What really happened | What is imagined |",
+    "| Cost | 100 | 20% less: 80 |",
+    "| Profit | 25% | 75% |",
+    "| Selling price | 125 | 175% of 80 = 140 |",
+    "The imagined selling price is 140 - 125 = 15 units higher, and the question says that is Rs 30. So one unit is Rs 2 and the real cost is Rs 200.",
+    "The one place to slow down: the imagined profit percent is measured on the **imagined cost** (80), not on the original 100. Profit always follows its own cost."
+   ],
+   "example": {
+    "q": "A man sold an article at a profit of 25%. Had he bought it for 20% less and sold it for Rs 30 more, he would have gained 75%. Find the cost price.",
+    "steps": [
+     "Real: cost 100 units, profit 25%, selling price 125.",
+     "Imagined: cost 20% less = 80 units. Profit 75% of 80 = 60. Selling price 140.",
+     "The imagined selling price is 140 - 125 = 15 units more.",
+     "15 units = Rs 30, so one unit = Rs 2.",
+     "Real cost = 100 units = Rs 200."
+    ],
+    "answer": "The cost price is Rs 200."
+   },
+   "check": {
+    "q": "A man sold an article at a profit of 10%. Had he bought it for 10% less and sold it for Rs 8 more, he would have gained 40%. What is the cost price?",
+    "options": {
+     "a": "Rs 40",
+     "b": "Rs 50",
+     "c": "Rs 80",
+     "d": "Rs 100"
+    },
+    "answer": "B",
+    "why": "Real: cost 100 units, selling price 110. Imagined: cost 90, selling price 140% of 90 = 126. The gap is 16 units = Rs 8, so one unit is Rs 0.50 and the cost is Rs 50."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#24",
+     "clerk-10-profit-and-loss-b-pyq#15"
+    ],
+    "tags": [
+     "The plain form.",
+     "The same, as a real paper asked it."
+    ]
+   }
+  },
+  {
+   "id": "counting-and-chains",
+   "code": "P4",
+   "title": "Counting articles, and sales passed along a chain",
+   "plain": "New: \"the cost of 20 articles equals the selling price of 16\", and an article sold from A to B to C.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "Two settings that have not appeared in the Clerk papers we checked but are regulars in practice sets.",
+    "**Counting articles.** \"The cost price of 20 articles is equal to the selling price of 16 articles.\" No rupees are given, so choose your own. Say each article **costs Re 1**.",
+    "- Then 20 articles cost Rs 20.",
+    "- That same Rs 20 is what he gets for selling 16. So he sells 16 articles, which cost him Rs 16, for Rs 20.",
+    "- Profit of 4 on a cost of 16: 25%.",
+    "The same trick handles \"he buys 11 for Rs 10 and sells 10 for Rs 11\". Work out the cost of one and the selling price of one, or better, choose a number of articles that suits both: 110. He buys 110 for Rs 100 and sells 110 for Rs 121. Profit 21%.",
+    "**A chain of sales.** \"A sells to B at a 20% profit, and B sells to C at a 25% profit. C pays Rs 1,500.\" Each seller's profit is on what **they** paid, so the prices multiply along the chain:",
+    "- A's cost x 1.2 = what B paid;",
+    "- what B paid x 1.25 = what C paid.",
+    "Going forwards, multiply. Here the end is known and the start is wanted, so **divide your way back**: 1,500 / 1.25 = 1,200, and 1,200 / 1.2 = 1,000."
+   ],
+   "example": {
+    "q": "The cost price of 18 articles is equal to the selling price of 15 articles. What is the profit percent?",
+    "steps": [
+     "Say each article costs Re 1. Then 18 articles cost Rs 18.",
+     "He receives that same Rs 18 for selling 15 articles.",
+     "Those 15 articles cost him Rs 15. Profit = 3.",
+     "3 / 15 = 20%."
+    ],
+    "answer": "20% profit."
+   },
+   "check": {
+    "q": "The cost price of 10 articles is equal to the selling price of 8 articles. What is the profit percent?",
+    "options": {
+     "a": "20%",
+     "b": "25%",
+     "c": "80%",
+     "d": "125%"
+    },
+    "answer": "B",
+    "why": "Say each costs Re 1. He sells 8 articles, costing Rs 8, for Rs 10. Profit 2 on 8 = 25%. (20% divides by 10, the wrong number.)"
+   },
+   "shortcut": {
+    "title": "Cost of x = selling price of y",
+    "text": [
+     "If the cost price of **x** articles equals the selling price of **y** articles:",
+     "**profit percent = (x - y) / y x 100**",
+     "20 and 16: 4 / 16 = 25% profit. 18 and 15: 3 / 15 = 20% profit.",
+     "If y is the bigger number the answer comes out negative, which means a loss. The number underneath is always the number **sold**."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#7",
+     "clerk-10-profit-and-loss-a-graded#13",
+     "clerk-10-profit-and-loss-a-graded#14"
+    ],
+    "tags": [
+     "Cost of 20 = selling price of 16.",
+     "Bought at 11 for Rs 10, sold at 10 for Rs 11.",
+     "A chain of two sales, worked backwards."
+    ]
+   }
+  },
+  {
+   "id": "dishonest-dealer",
+   "code": "P7",
+   "title": "The dishonest dealer",
+   "plain": "New: a dealer who claims to sell at cost but gives less than a full kilogram. His profit is hidden in the weight.",
+   "needs": [
+    "percent-fractions"
+   ],
+   "teach": [
+    "\"A dealer says he sells at cost price, but uses a weight of 900 grams in place of 1 kilogram.\" He charges the customer for 1,000 grams and hands over 900. Where is his profit?",
+    "Think about what he **gives** and what he **gets paid for**.",
+    "- He gives 900 grams. That is what the goods cost him: the value of 900 grams.",
+    "- He is paid the price of 1,000 grams.",
+    "- So on goods costing \"900\", he receives \"1,000\". His gain is 100, on a cost of 900.",
+    "- 100 / 900 = 11 1/9%.",
+    "The cost is what he actually parts with, so the number underneath is the weight he **gives**, not the full kilogram.",
+    "**gain percent = weight he keeps back / weight he actually gives x 100**",
+    "With 800 grams for a kilogram: 200 / 800 = 25%.",
+    "**If he also raises the price.** \"He sells at 10% above cost and also uses 800 grams for a kilogram.\" For every kilogram he claims to sell he is paid 110% of the price of 1,000 grams, which is the price of 1,100 grams. He gives 800 grams. So on a cost of 800 he receives 1,100: 1,100 / 800 = 1.375, a gain of 37.5%."
+   ],
+   "example": {
+    "q": "A dishonest dealer professes to sell his goods at cost price but uses a weight of 750 grams in place of 1 kilogram. What is his gain percent?",
+    "steps": [
+     "He is paid for 1,000 grams and gives 750 grams.",
+     "His cost is the 750 grams he gives. His gain is the 250 grams he keeps back.",
+     "250 / 750 = 1/3.",
+     "As a percent: 33 1/3%."
+    ],
+    "answer": "33 1/3%."
+   },
+   "check": {
+    "q": "A dealer claims to sell at cost price but uses a weight of 960 grams for a kilogram. What is his gain percent?",
+    "options": {
+     "a": "4%",
+     "b": "4 1/6%",
+     "c": "4.5%",
+     "d": "40%"
+    },
+    "answer": "B",
+    "why": "He keeps back 40 grams and gives 960. 40 / 960 = 1/24, which is 4 1/6%. (4% divides by the full 1,000 grams.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-10-profit-and-loss-a-graded#12",
+     "clerk-10-profit-and-loss-b-pyq#19",
+     "clerk-10-profit-and-loss-a-graded#25"
+    ],
+    "tags": [
+     "900 grams for a kilogram.",
+     "800 grams for a kilogram, from a real paper.",
+     "A false weight and a raised price together."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-10-profit-and-loss-a-graded#1": [
+    "Profit = 920 - 800 = 120.",
+    "Measured on the cost: 120 / 800 = 15%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#2": [
+    "A profit of 16% makes the selling price 116% of the cost.",
+    "1% of 1,250 is 12.5. 116 x 12.5 = Rs 1,450."
+   ],
+   "clerk-10-profit-and-loss-a-graded#3": [
+    "A loss of 8% makes the selling price 92% of the cost.",
+    "92% = 1,104, so 1% = 12 and the cost is Rs 1,200.",
+    "Rs 1,200 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-10-profit-and-loss-a-graded#5": [
+    "Total cost = 4,500 + 500 = 5,000.",
+    "Profit = 5,750 - 5,000 = 750.",
+    "750 / 5,000 = 15%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#23": [
+    "Total cost = 200 x 30 = Rs 6,000.",
+    "10% spoil, so he sells 180 kg at Rs 40 = Rs 7,200.",
+    "Profit = 1,200 on a cost of 6,000: 20%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#8": [
+    "A loss of 10% means 90% of the cost is 540, so 1% is 6.",
+    "A gain of 15% needs 115%: 115 x 6 = Rs 690."
+   ],
+   "clerk-10-profit-and-loss-a-graded#11": [
+    "Selling prices: 92% and 107% of the cost. The gap is 15%.",
+    "15% = 120, so 1% = 8.",
+    "Cost price = Rs 800."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#11": [
+    "Selling prices: 75% and 120% of the cost. The gap is 45%.",
+    "45% = 378, so 1% = 8.4.",
+    "Cost price = Rs 840."
+   ],
+   "clerk-10-profit-and-loss-a-graded#18": [
+    "Equal profit and loss put the cost exactly halfway: (832 + 448) / 2 = 640.",
+    "A profit of 20% needs 120% of 640.",
+    "Rs 768."
+   ],
+   "clerk-10-profit-and-loss-a-graded#21": [
+    "Call the cost C and the profit P. The selling price is C + P.",
+    "Doubled, it is 2C + 2P. The new profit is that minus the cost: C + 2P. The question says this is 3P.",
+    "So C = P: the profit equals the cost, which is 100%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#4": [
+    "12% of 1,500 = 180.",
+    "Selling price = 1,500 - 180 = Rs 1,320."
+   ],
+   "clerk-10-profit-and-loss-a-graded#9": [
+    "Cost 100. Marked price 140.",
+    "Discount 25% of 140 = 35. Selling price 105.",
+    "Profit 5%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#15": [
+    "Cost 100. A profit of 20% makes the selling price 120.",
+    "A 10% discount leaves 90% of the marked price: marked price = 120 / 0.9 = 133 1/3.",
+    "The marked price is 33 1/3% above cost."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#3": [
+    "Selling price = 75% of 180 = Rs 135.",
+    "A loss of 10% means 135 is 90% of the cost.",
+    "Cost = 135 / 0.9 = Rs 150."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#17": [
+    "Cost 100. With a 20% discount the selling price is 130, so the marked price is 130 / 0.8 = 162.5.",
+    "With a 30% discount: 70% of 162.5 = 113.75.",
+    "Profit = 13.75%."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#1": [
+    "Article A: cost 100 units, marked price 125, selling price 90% of 125 = 112.5. Profit 12.5 units = Rs 75, so one unit is Rs 6 and A costs Rs 600.",
+    "Article B costs 40% more: Rs 840.",
+    "A 20% loss on B: 80% of 840 = Rs 672."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#6": [
+    "Cost 100 units. First way: marked price 140, selling price 80% of it = 112.",
+    "Second way: marked price 150, selling price 88% of it = 132.",
+    "The gap is 20 units = Rs 90, so one unit is Rs 4.50 and the cost is Rs 450.",
+    "130% of the cost = Rs 585."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#18": [
+    "Cost 100 units, marked price 120 units.",
+    "Raising the discount from 5% to 10% takes another 5% of 120 = 6 units off the profit. 6 units = Rs 21, so one unit is Rs 3.50.",
+    "With a 20% discount the selling price is 96 units: a loss of 4 units.",
+    "4 x 3.50 = Rs 14 loss."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#7": [
+    "Selling prices are 7 : 9 and A sells for Rs 280, so B sells for Rs 360.",
+    "Call B's marked price M. Then A's is 0.8 M. Equal discounts: 0.8 M - 280 = M - 360.",
+    "0.2 M = 80, so M = Rs 400."
+   ],
+   "clerk-10-profit-and-loss-a-graded#30": [
+    "Cost 100, marked price 150. Call the discount d%.",
+    "Selling price = 150 less d% of 150 = 150 - 1.5 d. It must also equal 100 + d.",
+    "150 - 1.5 d = 100 + d gives 2.5 d = 50, so d = 20%."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#9": [
+    "A 40% profit means selling : cost = 7 : 5. With marked : selling = 8 : 7, the three are 8 : 7 : 5.",
+    "Selling minus cost = 2 parts = Rs 200, so one part is Rs 100.",
+    "Cost = 5 parts = Rs 500."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#8": [
+    "Marked : selling = 5 : 3 and selling : cost = 7 : 5. Make the selling price 21 in both: 35 : 21 and 21 : 15.",
+    "Marked : selling : cost = 35 : 21 : 15. Marked minus cost = 20 parts = Rs 400, so one part is Rs 20.",
+    "Cost = 15 parts = Rs 300."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#12": [
+    "Marked price 5 parts, cost 3 parts. A 20% profit makes the selling price 3.6 parts.",
+    "Discount = 5 - 3.6 = 1.4 parts, measured on the marked price.",
+    "1.4 / 5 = 28%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#17": [
+    "Take the selling price as 100. The profit is 20, so the cost is 80.",
+    "Profit on cost = 20 / 80 = 25%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#27": [
+    "Selling price of 45 metres minus cost of 45 metres = selling price of 9 metres.",
+    "So the cost of 45 metres equals the selling price of 36 metres.",
+    "On a cost worth 36, the profit is 9: 9 / 36 = 25%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#6": [
+    "On 100: 20% off leaves 80. Then 10% of 80 = 8 off leaves 72.",
+    "28 has come off: a single discount of 28%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#22": [
+    "20% then 10% is a single discount of 28%. The other offer is 30%.",
+    "The difference is 2% of 5,000 = Rs 100.",
+    "Rs 100 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#2": [
+    "After the first discount of 10%: 90% of 1,050 = Rs 945.",
+    "He paid 756. 756 / 945 = 0.8, so he paid 80% of that.",
+    "The second discount is 20%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#26": [
+    "2,000 x 0.9 = 1,800. Then 1,800 x 0.95 = 1,710.",
+    "A gain of 14% means 1,710 is 114% of the cost: cost = Rs 1,500.",
+    "Rs 1,500 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#10": [
+    "15% then 20% leaves 0.85 x 0.8 = 0.68, a single discount of 32%.",
+    "32% of the marked price = 192, so the marked price is Rs 600 and the selling price is Rs 408.",
+    "A 2% profit means 408 is 102% of the cost: cost = Rs 400."
+   ],
+   "clerk-10-profit-and-loss-a-graded#16": [
+    "The customer takes home 5 and pays for 4.",
+    "1 out of 5 is free: 20%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#29": [
+    "Buy 3, get 1 free is 1 out of 4: a 25% discount.",
+    "Cost 100, marked price 150, selling price 75% of 150 = 112.5.",
+    "Profit 12.5%."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#13": [
+    "Cost 100 units, marked price 150. A discount of 11 1/9% leaves 8/9: 133 1/3. Then 10% off leaves 120.",
+    "Discount = 150 - 120 = 30 units. Profit = 120 - 100 = 20 units. The difference is 10 units = Rs 200.",
+    "One unit is Rs 20, so the marked price, 150 units, is Rs 3,000."
+   ],
+   "clerk-10-profit-and-loss-a-graded#28": [
+    "Costs 2,500 each. One sells for 3,000 and the other for 2,000.",
+    "Total cost 5,000, total selling price 5,000.",
+    "No profit, no loss."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#4": [
+    "Costs 100 units each. Selling prices 115 and 80: 195 against 200. Loss 5 units = Rs 40, so one unit is Rs 8.",
+    "Each costs Rs 800.",
+    "A at a 25% profit: 125% of 800 = Rs 1,000."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#5": [
+    "Costs 100 units each. Selling prices 120 and 70: 190 against 200. Loss 10 units = Rs 50, so one unit is Rs 5.",
+    "Each costs Rs 500.",
+    "B at a 40% profit: 140% of 500 = Rs 700."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#16": [
+    "Costs 100 each. The first sells for 140.",
+    "The second sells for 25% less than that: 105.",
+    "Total 245 against 200: a profit of 45 on 200 = 22 1/2%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#20": [
+    "Two-thirds at 15% profit contributes two-thirds of 15 = 10.",
+    "One-third at 6% loss contributes one-third of 6 = 2, as a loss.",
+    "Overall: 10 - 2 = 8% profit."
+   ],
+   "clerk-10-profit-and-loss-a-graded#10": [
+    "Same selling price, 10% up and 10% down: an overall loss of 1%.",
+    "Total selling price 3,960 is 99% of the cost, so the cost is 4,000.",
+    "Loss = Rs 40."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#14": [
+    "A loss of 6.25% means x times x = 625, so x = 25.",
+    "One pen: 300 is 125% of its cost, so it cost Rs 240. The other: 300 is 75% of its cost, so it cost Rs 400.",
+    "Difference = Rs 160."
+   ],
+   "clerk-10-profit-and-loss-a-graded#19": [
+    "Rupees gained = rupees lost: 20% of the first cost = 10% of the second.",
+    "Swap the percents: first : second = 10 : 20 = 1 : 2.",
+    "3 parts = 6,000, so the article sold at a loss cost 2 parts = Rs 4,000."
+   ],
+   "clerk-10-profit-and-loss-a-graded#24": [
+    "Real: cost 100 units, selling price 120. Imagined: cost 90, selling price 140% of 90 = 126.",
+    "The gap is 6 units = Rs 18, so one unit is Rs 3.",
+    "Cost = Rs 300."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#15": [
+    "Real: cost 100 units, selling price 120. Imagined: cost 80, selling price 175% of 80 = 140.",
+    "The gap is 20 units = Rs 40, so one unit is Rs 2.",
+    "Cost = Rs 200."
+   ],
+   "clerk-10-profit-and-loss-a-graded#7": [
+    "Say each costs Re 1. He sells 16 articles, costing Rs 16, for Rs 20.",
+    "Profit 4 on 16 = 25% profit."
+   ],
+   "clerk-10-profit-and-loss-a-graded#13": [
+    "Take 110 toffees. He buys them for Rs 100 and sells them for Rs 121.",
+    "Profit 21%.",
+    "21% is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-10-profit-and-loss-a-graded#14": [
+    "C paid 1,500, which is 125% of what B paid: B paid 1,200.",
+    "1,200 is 120% of what A paid.",
+    "A paid Rs 1,000."
+   ],
+   "clerk-10-profit-and-loss-a-graded#12": [
+    "He keeps back 100 grams and gives 900.",
+    "100 / 900 = 1/9 = 11 1/9%."
+   ],
+   "clerk-10-profit-and-loss-b-pyq#19": [
+    "He keeps back 200 grams and gives 800.",
+    "200 / 800 = 1/4 = 25%."
+   ],
+   "clerk-10-profit-and-loss-a-graded#25": [
+    "He is paid 110% of the price of 1,000 grams, which is the price of 1,100 grams.",
+    "He gives 800 grams.",
+    "1,100 / 800 = 1.375: a gain of 37.5%."
+   ]
+  }
+ }
+}

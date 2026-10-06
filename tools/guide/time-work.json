@@ -1,0 +1,1090 @@
+{
+ "module": "time-work",
+ "intro": [
+  "This topic covers people doing a job and pipes filling a tank. They are the same thing, and one idea handles both: **give the job a number of units, and count how many units each worker does in a day.**",
+  "There are twelve short lessons. The first four build that idea for workers and for pipes. The rest are the ways the exam varies it. Go in order the first time; the later lessons lean on the earlier ones."
+ ],
+ "needs": [
+  "lcm",
+  "ratio",
+  "percent-words"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the efficiency table and every question type on one page, and the Course in each bank has many more.",
+  "Whatever the story, begin the same way: units for the job, units per day for each worker. If you can write those down, the question is already half done."
+ ],
+ "lessons": [
+  {
+   "id": "units",
+   "code": "W1",
+   "title": "Turning a job into units",
+   "plain": "The starting point: give the whole job a number of units, and see how many each person finishes in a day.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "\"A can do a piece of work in 10 days and B can do it in 15 days. How long will they take together?\" The answer is not 25, and it is not 12.5. Days cannot be added or averaged, because two people working together are **faster**, not slower.",
+    "What you can add is **how much each one gets done in a day**. To make that easy, give the whole job a size.",
+    "1. **Pick a number of units for the whole job** that all the given days go into. 10 and 15 both go into 30, so call the job 30 units. (Think of it as 30 bricks to lay.)",
+    "2. **Find each person's units per day.** A finishes 30 units in 10 days, so A does 3 a day. B finishes 30 in 15 days, so B does 2 a day.",
+    "3. **Add the daily units** of everyone working together: 3 + 2 = 5 a day.",
+    "4. **Time = units to be done / units per day.** 30 / 5 = 6 days.",
+    "That is the whole method, and almost every question in this topic is these four steps with a small twist. The number you pick in step 1 can be any number the days go into; the smallest such number keeps the arithmetic light.",
+    "If the question tells you about **part** of the job (\"A does one-fourth of the work in 6 days\"), first work out the time for the whole job: four quarters take 4 x 6 = 24 days."
+   ],
+   "example": {
+    "q": "A can do a piece of work in 12 days and B can do it in 24 days. In how many days can they do it together?",
+    "steps": [
+     "Pick the units: 12 and 24 both go into 24. Call the job 24 units.",
+     "A does 24 / 12 = 2 units a day. B does 24 / 24 = 1 unit a day.",
+     "Together they do 2 + 1 = 3 units a day.",
+     "Time = 24 / 3 = 8 days."
+    ],
+    "answer": "8 days."
+   },
+   "check": {
+    "q": "A can do a job in 6 days and B can do it in 12 days. In how many days can they do it together?",
+    "options": {
+     "a": "3 days",
+     "b": "4 days",
+     "c": "9 days",
+     "d": "18 days"
+    },
+    "answer": "B",
+    "why": "Call the job 12 units. A does 2 a day and B does 1 a day, so together 3 a day. 12 / 3 = 4 days. (9 is the average and 18 is the sum; neither means anything here.)"
+   },
+   "shortcut": {
+    "title": "Product over sum, for two workers",
+    "text": [
+     "For exactly **two** people who take **a** days and **b** days alone, the time together is:",
+     "**(a x b) / (a + b)**",
+     "10 days and 15 days: 150 / 25 = 6 days. 12 and 24: 288 / 36 = 8 days.",
+     "It is the units method done in one line. It works only for two workers doing the whole job together, so keep the units method for everything else."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#1",
+     "clerk-14-time-and-work-a-graded#3",
+     "clerk-14-time-and-work-a-graded#7",
+     "clerk-14-time-and-work-a-graded#6",
+     "clerk-14-time-and-work-a-graded#26"
+    ],
+    "tags": [
+     "The plain form: two people, find the time together.",
+     "Three people instead of two.",
+     "It asks what fraction is left, not how long.",
+     "Each person's time is hidden in a part of the job.",
+     "Not work at all: money that pays wages."
+    ]
+   }
+  },
+  {
+   "id": "pipes",
+   "code": "W1",
+   "title": "Pipes and tanks: the same idea",
+   "plain": "New: pipes filling a tank are workers. A pipe that empties the tank is a worker who undoes the work.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "A pipe that fills a tank in 20 minutes is just a worker who finishes a job in 20 minutes. So everything from the last lesson carries over: give the tank a number of units, find each pipe's units per minute (or per hour), and add.",
+    "There is one new thing. Some pipes **empty** the tank. An emptying pipe, an outlet, a drain or a leak takes water away, so its units are **subtracted**.",
+    "Pipe A fills a tank in 6 hours. Pipe B empties it in 10 hours. Both are open.",
+    "- Call the tank 30 units.",
+    "- A adds 5 units an hour. B removes 3 units an hour.",
+    "- Each hour the tank gains 5 - 3 = 2 units.",
+    "- Time to fill = 30 / 2 = 15 hours.",
+    "If the tank's size is given in **litres**, you do not need to invent units: the litres are the units. A 240-litre tank filled by a pipe in 16 hours gets 240 / 16 = 15 litres an hour from it.",
+    "And if the tank is **already partly full**, only the empty part is the job. A half-full tank of 30 units has 15 units left to fill."
+   ],
+   "example": {
+    "q": "Pipes A and B can fill a tank in 12 hours and 15 hours. Pipe C can empty the full tank in 20 hours. If all three are opened together, how long will the empty tank take to fill?",
+    "steps": [
+     "Call the tank 60 units: 12, 15 and 20 all go into 60.",
+     "A adds 5 an hour, B adds 4 an hour, and C removes 3 an hour.",
+     "Each hour the tank gains 5 + 4 - 3 = 6 units.",
+     "Time = 60 / 6 = 10 hours."
+    ],
+    "answer": "10 hours."
+   },
+   "check": {
+    "q": "A pipe can fill a tank in 8 hours and an outlet can empty it in 24 hours. If both are open, in how many hours will the empty tank be full?",
+    "options": {
+     "a": "6 hours",
+     "b": "12 hours",
+     "c": "16 hours",
+     "d": "32 hours"
+    },
+    "answer": "B",
+    "why": "Call the tank 24 units. The pipe adds 3 an hour and the outlet removes 1, so the tank gains 2 an hour. 24 / 2 = 12 hours. (6 hours would be right if both pipes were filling.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-a-graded#1",
+     "clerk-15-pipes-and-cisterns-a-graded#2",
+     "clerk-15-pipes-and-cisterns-b-pyq#2",
+     "clerk-15-pipes-and-cisterns-a-graded#5",
+     "clerk-15-pipes-and-cisterns-b-pyq#9"
+    ],
+    "tags": [
+     "The plain form: two filling pipes.",
+     "One pipe fills while the other empties.",
+     "Two fill and one empties, as a real paper asked it.",
+     "It asks for the fraction filled in a few minutes.",
+     "The tank is given in litres, and it asks how much is still needed."
+    ]
+   }
+  },
+  {
+   "id": "group-minus",
+   "code": "W2",
+   "title": "A group, minus part of the group",
+   "plain": "New: you know how fast a group works and how fast part of it works. Subtract to find the one who is missing.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "This is the single most repeated pattern in the Clerk papers for this topic, and it is one subtraction.",
+    "\"A, B and C together can finish a job in 12 days. B and C together can finish it in 20 days. How long would A take alone?\"",
+    "Nobody's own time is given. But units per day can be added, so they can also be **subtracted**.",
+    "- Call the job 60 units.",
+    "- All three together do 60 / 12 = 5 units a day.",
+    "- B and C together do 60 / 20 = 3 units a day.",
+    "- The difference is what A does: 5 - 3 = 2 units a day.",
+    "- A alone takes 60 / 2 = 30 days.",
+    "The same subtraction works for two people: \"A and B together take 8 days and A alone takes 12 days\" gives B's units as the difference.",
+    "**The pairs form.** \"A and B take 12 days, B and C take 15 days, C and A take 20 days.\" Add all three pairs. Each person has been counted twice, so the sum is two lots of A + B + C. Halve it to get what all three do in a day.",
+    "Finish by reading the last line. It may ask for only part of the job: if A takes 10 days for the whole job, A takes 6 days for 60% of it."
+   ],
+   "example": {
+    "q": "A and B together can do a piece of work in 6 days. A alone can do it in 10 days. In how many days can B alone do it?",
+    "steps": [
+     "Call the job 30 units.",
+     "A and B together do 30 / 6 = 5 units a day.",
+     "A alone does 30 / 10 = 3 units a day.",
+     "So B does 5 - 3 = 2 units a day.",
+     "B alone takes 30 / 2 = 15 days."
+    ],
+    "answer": "15 days."
+   },
+   "check": {
+    "q": "A, B and C together can finish a job in 6 days. A and B together can finish it in 9 days. In how many days can C alone finish it?",
+    "options": {
+     "a": "3 days",
+     "b": "15 days",
+     "c": "18 days",
+     "d": "54 days"
+    },
+    "answer": "C",
+    "why": "Call the job 18 units. All three do 3 a day; A and B do 2 a day. So C does 1 a day and takes 18 days. (3 comes from subtracting the days, which has no meaning.)"
+   },
+   "shortcut": {
+    "title": "The one-line version",
+    "text": [
+     "If a group finishes in **t** days and part of the group alone would take **a** days (a is the bigger number), the missing worker takes:",
+     "**(a x t) / (a - t)**",
+     "Together 6 days, A alone 10 days: 60 / 4 = 15 days for B.",
+     "It is the cousin of \"product over sum\" from lesson 1: product over **difference**. The same line finds a leak in the next lesson."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#2",
+     "clerk-14-time-and-work-b-pyq#3",
+     "clerk-14-time-and-work-b-pyq#4",
+     "clerk-14-time-and-work-b-pyq#7",
+     "clerk-14-time-and-work-a-graded#9"
+    ],
+    "tags": [
+     "Two people: the pair and one of them.",
+     "Three people: the group and a pair.",
+     "A fraction for the days, and it asks for part of the job.",
+     "The pair's time is hidden in a percent.",
+     "Three pairs, and no single person."
+    ]
+   }
+  },
+  {
+   "id": "leaks",
+   "code": "W2",
+   "title": "Leaks and drain pipes",
+   "plain": "New: last lesson's subtraction, with tanks. The missing one is a leak or a drain.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "\"A pipe can fill a tank in 12 hours. Because of a leak, it takes 18 hours.\" The leak is a hidden worker who undoes some of the pipe's work. You find it exactly as you found the missing person in the last lesson.",
+    "- Call the tank 36 units.",
+    "- The pipe alone adds 36 / 12 = 3 units an hour.",
+    "- With the leak, the tank gains only 36 / 18 = 2 units an hour.",
+    "- So the leak removes 3 - 2 = 1 unit an hour.",
+    "- A full tank of 36 units would drain through the leak in 36 hours.",
+    "Read these questions as \"what the pipes should add\" against \"what the tank actually gains\". The gap is the drain.",
+    "The disguises are the same as for people:",
+    "- a third pipe C that is \"also open\", where the tank fills more slowly than A and B alone would manage, so C must be emptying;",
+    "- two outlets, one of them known;",
+    "- three pairs of pipes;",
+    "- a last line that asks about **half** the tank or some other part."
+   ],
+   "example": {
+    "q": "A pipe can fill a tank in 10 hours. Because of a leak in the bottom, it takes 15 hours. If the tank is full, how long will the leak take to empty it?",
+    "steps": [
+     "Call the tank 30 units.",
+     "The pipe alone adds 3 units an hour.",
+     "With the leak the tank gains 30 / 15 = 2 units an hour.",
+     "So the leak removes 3 - 2 = 1 unit an hour.",
+     "A full tank is 30 units: the leak empties it in 30 hours."
+    ],
+    "answer": "30 hours."
+   },
+   "check": {
+    "q": "Pipes A and B together can fill a tank in 4 hours. When a drain pipe C is also open, the tank fills in 6 hours. In how many hours can C alone empty the full tank?",
+    "options": {
+     "a": "2 hours",
+     "b": "10 hours",
+     "c": "12 hours",
+     "d": "24 hours"
+    },
+    "answer": "C",
+    "why": "Call the tank 12 units. A and B add 3 an hour; with C open the tank gains 2. So C removes 1 an hour and empties 12 units in 12 hours."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-b-pyq#4",
+     "clerk-15-pipes-and-cisterns-b-pyq#5",
+     "clerk-15-pipes-and-cisterns-b-pyq#6",
+     "clerk-15-pipes-and-cisterns-b-pyq#8",
+     "clerk-15-pipes-and-cisterns-a-graded#11"
+    ],
+    "tags": [
+     "A leak slows one pipe down.",
+     "A third pipe that turns out to be emptying.",
+     "The same, and it asks about half the tank.",
+     "Two outlets, one of them known.",
+     "Three pairs of pipes."
+    ]
+   }
+  },
+  {
+   "id": "efficiency",
+   "code": "W3",
+   "title": "Faster workers take less time",
+   "plain": "New: workers are compared by how good they are: \"twice as efficient\", \"50% more efficient\".",
+   "needs": [
+    "ratio",
+    "percent-words"
+   ],
+   "teach": [
+    "**Efficiency** means how much work someone does in a day. It is exactly the \"units per day\" you have been using. So a sentence about efficiency hands you the daily units directly.",
+    "\"A is twice as efficient as B.\" Give B 1 unit a day; then A does 2. That is all the sentence says.",
+    "Percent words work as in the Basics. \"B is 50% more efficient than A\": A is 100 and B is 150, so their daily units are in the ratio 2 : 3.",
+    "The one fact to hold on to: **efficiency and time run in opposite directions.** The better worker takes fewer days. If the efficiencies are 2 : 3, the times are 3 : 2.",
+    "Two kinds of question follow.",
+    "**The total time together is given.** \"A is twice as efficient as B, and together they finish in 14 days.\" Together they do 2 + 1 = 3 units a day, so the job is 3 x 14 = 42 units. A alone takes 42 / 2 = 21 days.",
+    "**One person's time is given.** \"A takes 30 minutes; B is 50% more efficient.\" Efficiencies 2 : 3 mean times 3 : 2. A's 30 minutes is 3 parts, so B takes 20 minutes.",
+    "If the question gives a ratio of **times** for three people, such as 4 : 6 : 3, turn each into units per day by dividing a common number by it. Using 12: the daily units are 3, 2 and 4."
+   ],
+   "example": {
+    "q": "A is three times as efficient as B. Working together they finish a job in 9 days. In how many days can A alone finish it?",
+    "steps": [
+     "Give B 1 unit a day. Then A does 3 units a day.",
+     "Together they do 4 units a day.",
+     "They take 9 days, so the job is 4 x 9 = 36 units.",
+     "A alone: 36 / 3 = 12 days."
+    ],
+    "answer": "12 days."
+   },
+   "check": {
+    "q": "A can do a job in 20 days. B is 25% more efficient than A. In how many days can B do the same job?",
+    "options": {
+     "a": "5 days",
+     "b": "15 days",
+     "c": "16 days",
+     "d": "25 days"
+    },
+    "answer": "C",
+    "why": "A is 100 and B is 125, so their efficiencies are 4 : 5 and their times are 5 : 4. A's 20 days is 5 parts, so one part is 4 and B takes 16 days. (15 comes from taking 25% off the days, which is the common mistake.)"
+   },
+   "more": [
+    {
+     "tag": "\"Less efficient\"",
+     "q": "B is 20% less efficient than A. A can finish a job in 12 days. In how many days can B finish it?",
+     "options": {
+      "a": "9.6 days",
+      "b": "14.4 days",
+      "c": "15 days",
+      "d": "16 days"
+     },
+     "answer": "C",
+     "why": "A is 100 and B is 80, so efficiencies are 5 : 4 and times are 4 : 5. A's 12 days is 4 parts, so one part is 3 and B takes 15 days. (14.4 adds 20% to the days; the time goes up by a quarter, not a fifth.)"
+    }
+   ],
+   "shortcut": {
+    "title": "The turn-around again",
+    "text": [
+     "If someone is **1/n more efficient**, they take **1/(n + 1) less time**. It is the same turn-around you met in Percentages.",
+     "25% more efficient is 1/4 more, so 1/5 less time: 20 days becomes 16.",
+     "50% more efficient is 1/2 more, so 1/3 less time: 30 minutes becomes 20.",
+     "Twice as efficient is 100% more, so half the time."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#5",
+     "clerk-15-pipes-and-cisterns-a-graded#7",
+     "clerk-15-pipes-and-cisterns-a-graded#26",
+     "clerk-14-time-and-work-b-pyq#15",
+     "clerk-14-time-and-work-b-pyq#10"
+    ],
+    "tags": [
+     "\"Twice as efficient\", with the time together.",
+     "The same with pipes: \"three times as fast\".",
+     "Percent words, and one time is given.",
+     "A chain: A to B by efficiency, B to C by days.",
+     "A ratio of times for three people."
+    ]
+   }
+  },
+  {
+   "id": "efficiency-exam",
+   "code": "W3",
+   "title": "Efficiency, in exam wording",
+   "plain": "New: nothing new in the idea. The efficiency is tied to \"takes 60 days less\", a part of the job, or a third worker.",
+   "needs": [
+    "ratio",
+    "percent-words"
+   ],
+   "teach": [
+    "Real papers combine the efficiency sentence with something else. There are two combinations worth knowing well.",
+    "**\"...and therefore takes 60 days less.\"** \"A is three times as good a workman as B and takes 60 days less.\" Turn the efficiencies round to get the times: 1 : 3. The difference between the times is 3 - 1 = 2 parts, and that is the 60 days. So one part is 30: A takes 30 days and B takes 90. Now it is lesson 1.",
+    "This is the same \"match the real number to the parts\" move you know from ratios. Here the real number is a difference in **days**, so it must be matched to the parts of the **time** ratio, not the efficiency ratio.",
+    "**A group's time, with efficiencies inside it.** \"A and B together finish two-thirds of a job in 20 days, and A is 50% more efficient than B.\" Take it in order:",
+    "1. Get the time for the **whole** job: two-thirds in 20 days means the whole in 30 days.",
+    "2. Give the job units and find the group's units per day.",
+    "3. Split the group's daily units between its members in the ratio of their efficiencies.",
+    "After that every person has their own units per day, and any question about any combination of them is an addition and a division.",
+    "A sentence like \"C takes half the time taken by A\" is efficiency in disguise: half the time means twice the daily units."
+   ],
+   "example": {
+    "q": "A is twice as good a workman as B and takes 15 days less than B to do a job. In how many days can they do it working together?",
+    "steps": [
+     "Efficiencies are 2 : 1, so times are 1 : 2.",
+     "The difference in time is 2 - 1 = 1 part, and it is 15 days.",
+     "So A takes 15 days and B takes 30 days.",
+     "Call the job 30 units. A does 2 a day and B does 1: together 3.",
+     "30 / 3 = 10 days."
+    ],
+    "answer": "10 days."
+   },
+   "check": {
+    "q": "A is 50% more efficient than B and takes 10 days less than B to finish a job. In how many days can B alone finish it?",
+    "options": {
+     "a": "15 days",
+     "b": "20 days",
+     "c": "25 days",
+     "d": "30 days"
+    },
+    "answer": "D",
+    "why": "Efficiencies are 3 : 2, so times are 2 : 3. The difference is 1 part = 10 days. B has 3 parts: 30 days. (20 is A.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#21",
+     "clerk-14-time-and-work-b-pyq#16",
+     "clerk-14-time-and-work-b-pyq#9",
+     "clerk-14-time-and-work-b-pyq#11",
+     "clerk-14-time-and-work-b-pyq#12"
+    ],
+    "tags": [
+     "\"Thrice as good\" and \"60 days less\".",
+     "The same with a decimal multiple, and an awkward answer.",
+     "A part of the job, an efficiency, and a third worker.",
+     "\"100% more efficient\", and it asks for the part done.",
+     "\"Half the time\" as an efficiency."
+    ]
+   }
+  },
+  {
+   "id": "phases",
+   "code": "W4",
+   "title": "Work done in stages",
+   "plain": "New: the team changes partway through. Someone leaves, or someone joins.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "\"A and B work together for 4 days, and then A leaves. How long will B take to finish?\" The job is now done in **stages**, with a different team in each stage.",
+    "The units method was made for this. Units already done can simply be taken away from the total.",
+    "1. Give the job units and find each person's units per day, as always.",
+    "2. **Stage one:** units done = team's units per day x days worked.",
+    "3. **Subtract** to find the units left.",
+    "4. **Stage two:** time = units left / units per day of whoever is working now.",
+    "If there are more stages, repeat steps 2 and 3. A quick sketch helps: write the total at the top and subtract each stage beneath it.",
+    "The questions are turned around in two ways.",
+    "**Find the newcomer.** \"A works alone for 10 days, then B joins and they finish in 8 more days.\" Work out the units left and divide by the 8 days. That gives what A and B do in a day together; take A's units away and you have B's.",
+    "**A percent of the job.** \"A completes 60% of a work in 15 days.\" Calling the job 100 units makes this easy: A does 60 units in 15 days, which is 4 a day, and 40 units are left.",
+    "Then check the last line. \"How many more days\" is the second stage only. \"In how many days is the work completed\" is all the stages added."
+   ],
+   "example": {
+    "q": "A can do a job in 10 days and B can do it in 15 days. They work together for 3 days and then B leaves. In how many more days will A finish the job?",
+    "steps": [
+     "Call the job 30 units. A does 3 a day and B does 2.",
+     "Stage one: together they do 5 a day for 3 days = 15 units.",
+     "Units left: 30 - 15 = 15.",
+     "Stage two: A alone does 3 a day. 15 / 3 = 5 days."
+    ],
+    "answer": "5 more days."
+   },
+   "check": {
+    "q": "A can do a job in 20 days. He works alone for 5 days, and then B finishes the rest alone in 12 days. In how many days could B do the whole job alone?",
+    "options": {
+     "a": "12 days",
+     "b": "15 days",
+     "c": "16 days",
+     "d": "48 days"
+    },
+    "answer": "C",
+    "why": "Call the job 20 units; A does 1 a day. In 5 days A does 5, leaving 15. B does those 15 in 12 days, which is 1.25 a day. Whole job: 20 / 1.25 = 16 days."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#10",
+     "clerk-14-time-and-work-b-pyq#5",
+     "clerk-14-time-and-work-a-graded#15",
+     "clerk-14-time-and-work-a-graded#22",
+     "clerk-14-time-and-work-b-pyq#2"
+    ],
+    "tags": [
+     "Together first, then one leaves.",
+     "One starts alone and the other takes over.",
+     "Find the one who joined.",
+     "A percent of the job comes first.",
+     "Three people; one leaves as another joins; it asks for the total time."
+    ]
+   }
+  },
+  {
+   "id": "phases-pipes",
+   "code": "W4",
+   "title": "Pipes opened and closed at different times",
+   "plain": "New: the stages idea with tanks. A pipe is closed early, or opened late.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "Stages work the same way for tanks. A pipe being **closed** is a worker leaving; a pipe being **opened later** is a worker joining. Find the units added in each stage and subtract from the tank.",
+    "Two forms are particular to pipes.",
+    "**\"After how many minutes should B be closed so that the tank is full in exactly 9 minutes?\"** Look at it from pipe A's side. A is open for all 9 minutes, so you know exactly how much A adds. Whatever is still missing must come from B, and B's units per minute tell you how long B needs to be open.",
+    "**A drain that is closed, or opened, partway.** While the drain is open its units are subtracted; once it is closed, they are not. Treat the two stretches as two stages with different net units.",
+    "Pipe questions more often ask for the **total** time than work questions do, so remember to add the first stage back at the end when the question says \"in how many hours in total\"."
+   ],
+   "example": {
+    "q": "Pipes A and B can fill a tank in 12 minutes and 18 minutes. Both are opened together, and after 4 minutes A is closed. In how many more minutes will B fill the tank?",
+    "steps": [
+     "Call the tank 36 units. A adds 3 a minute and B adds 2.",
+     "Stage one: 5 a minute for 4 minutes = 20 units.",
+     "Units left: 36 - 20 = 16.",
+     "Stage two: B alone adds 2 a minute. 16 / 2 = 8 minutes."
+    ],
+    "answer": "8 more minutes."
+   },
+   "check": {
+    "q": "Pipe A can fill a tank in 10 hours and pipe B in 15 hours. A is opened first, and after 5 hours B is also opened. In how many hours in total is the tank full?",
+    "options": {
+     "a": "3 hours",
+     "b": "6 hours",
+     "c": "8 hours",
+     "d": "11 hours"
+    },
+    "answer": "C",
+    "why": "Call the tank 30 units. A adds 3 an hour: 15 units in 5 hours. The other 15 are filled by both at 5 an hour, which takes 3 hours. Total 5 + 3 = 8 hours. (3 is only the second stage.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-15-pipes-and-cisterns-b-pyq#1",
+     "clerk-15-pipes-and-cisterns-a-graded#9",
+     "clerk-15-pipes-and-cisterns-a-graded#15",
+     "clerk-15-pipes-and-cisterns-a-graded#13",
+     "clerk-15-pipes-and-cisterns-a-graded#19"
+    ],
+    "tags": [
+     "Both open, then one is closed.",
+     "The same, with an answer that is not a whole number.",
+     "One pipe is opened late, and it asks for the total time.",
+     "When should a pipe be closed?",
+     "A drain that is closed partway."
+    ]
+   }
+  },
+  {
+   "id": "men-days",
+   "code": "W5",
+   "title": "Many workers: men and days",
+   "plain": "New: teams of equal workers. More people means fewer days, and the work is people multiplied by days.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "When a question talks about \"12 men\" or \"20 women\", every worker in the group is taken to be equally good. Then there is a very simple way to measure a job: **how many days of one person's work it needs.**",
+    "12 men working for 15 days put in 12 x 15 = 180 days of one man's work. We call that 180 **man-days**. The job needs 180 man-days however they are arranged, so 20 men would need 180 / 20 = 9 days.",
+    "**work = workers x days**",
+    "If hours per day are mentioned, they multiply in too: workers x days x hours.",
+    "This one line handles all the usual stories.",
+    "**Some workers leave partway.** Find the total man-days. Subtract the man-days already done. Divide what is left by the workers who remain.",
+    "**Some workers join partway.** Find the man-days left and the days allowed. Dividing gives the number of workers needed; subtract those already there.",
+    "**Only part of the job is done.** \"40 men did one-third of the work in 30 days.\" That third cost 40 x 30 = 1,200 man-days, so the remaining two-thirds needs 2,400.",
+    "**The job itself changes size.** A wall twice as long needs twice the man-days. Work out the man-days for one metre, or simply scale the total.",
+    "Notice the direction: more workers, fewer days. If your answer has more workers taking longer, something has been divided the wrong way round."
+   ],
+   "example": {
+    "q": "16 men can finish a job in 9 days. In how many days can 12 men finish the same job?",
+    "steps": [
+     "Total work = 16 x 9 = 144 man-days.",
+     "With 12 men: 144 / 12 = 12 days.",
+     "Fewer men, more days. That is the right direction."
+    ],
+    "answer": "12 days."
+   },
+   "check": {
+    "q": "10 men working 6 hours a day can finish a job in 12 days. In how many days can 8 men working 9 hours a day finish it?",
+    "options": {
+     "a": "8 days",
+     "b": "10 days",
+     "c": "15 days",
+     "d": "16 days"
+    },
+    "answer": "B",
+    "why": "Work = 10 x 6 x 12 = 720 man-hours. The new team does 8 x 9 = 72 man-hours a day. 720 / 72 = 10 days."
+   },
+   "more": [
+    {
+     "tag": "The job itself is bigger",
+     "q": "8 men can build a wall 40 metres long in 5 days. In how many days can 10 men build a similar wall 80 metres long?",
+     "options": {
+      "a": "4 days",
+      "b": "6.25 days",
+      "c": "8 days",
+      "d": "10 days"
+     },
+     "answer": "C",
+     "why": "40 metres needs 8 x 5 = 40 man-days, which is 1 man-day a metre. So 80 metres needs 80 man-days. With 10 men: 8 days."
+    }
+   ],
+   "shortcut": {
+    "title": "One line for both sides",
+    "text": [
+     "When a question compares two teams, you can write both sides at once:",
+     "**(men x days x hours) / work  is the same on both sides**",
+     "10 men build 100 metres in 6 days; how long for 15 men to build 200 metres? (10 x 6) / 100 = (15 x days) / 200. So 15 x days = 120, and days = 8.",
+     "Leave out anything the question does not mention. It is the man-days idea, written so that nothing gets forgotten."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#4",
+     "clerk-14-time-and-work-a-graded#12",
+     "clerk-14-time-and-work-a-graded#23",
+     "clerk-14-time-and-work-b-pyq#14",
+     "clerk-14-time-and-work-a-graded#18"
+    ],
+    "tags": [
+     "The plain form: more men, fewer days.",
+     "Hours per day are part of the work.",
+     "Some men leave partway.",
+     "Some join partway: how many?",
+     "Only part of the job is done, and there is a deadline."
+    ]
+   }
+  },
+  {
+   "id": "two-kinds",
+   "code": "W5",
+   "title": "Two kinds of workers",
+   "plain": "New: men and women, or men and boys, who do not work at the same speed. Turn everyone into one kind.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "\"3 men **or** 5 women can do a job in 12 days.\" The little word \"or\" is the key. It says that 3 men do the same as 5 women. So you can **swap one for the other**: 3 men = 5 women.",
+    "Use that to turn the whole team into one kind of worker, and the question becomes last lesson.",
+    "\"How long will 6 men and 5 women take?\" 6 men is two lots of 3 men, so it equals 10 women. The team is worth 10 + 5 = 15 women. The job is 5 women x 12 days = 60 woman-days, so 15 women take 4 days.",
+    "If the question says \"**and**\" instead of \"or\", you are not told the swap directly. \"4 men and 6 women finish in 8 days; 3 men and 7 women finish in 10 days.\" Both teams do the same job, so their man-days are equal:",
+    "- (4 men + 6 women) x 8 = (3 men + 7 women) x 10",
+    "- 32 men + 48 women = 30 men + 70 women",
+    "- 2 men = 22 women, so 1 man = 11 women.",
+    "Now you have the swap, and can carry on.",
+    "**Identical pipes** are the same idea in a tank. \"12 identical pipes fill a tank in 40 minutes\" means the tank needs 12 x 40 = 480 pipe-minutes."
+   ],
+   "example": {
+    "q": "2 men or 3 women can do a job in 10 days. In how many days can 4 men and 9 women do it?",
+    "steps": [
+     "\"Or\" gives the swap: 2 men = 3 women.",
+     "So 4 men = 6 women. The team is worth 6 + 9 = 15 women.",
+     "The job is 3 women x 10 days = 30 woman-days.",
+     "15 women take 30 / 15 = 2 days."
+    ],
+    "answer": "2 days."
+   },
+   "check": {
+    "q": "6 identical pipes can fill a tank in 30 minutes. In how many minutes can 9 such pipes fill it?",
+    "options": {
+     "a": "15 minutes",
+     "b": "20 minutes",
+     "c": "25 minutes",
+     "d": "45 minutes"
+    },
+    "answer": "B",
+    "why": "The tank needs 6 x 30 = 180 pipe-minutes. With 9 pipes: 180 / 9 = 20 minutes."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#11",
+     "clerk-14-time-and-work-a-graded#17",
+     "clerk-14-time-and-work-a-graded#29",
+     "clerk-15-pipes-and-cisterns-a-graded#14",
+     "clerk-15-pipes-and-cisterns-a-graded#21"
+    ],
+    "tags": [
+     "\"Or\" gives the swap directly.",
+     "\"And\": the swap has to be worked out.",
+     "It asks only for the swap, as a ratio.",
+     "Identical pipes, some out of order.",
+     "Identical pipes, with more opened halfway."
+    ]
+   }
+  },
+  {
+   "id": "turns",
+   "code": "W7",
+   "title": "Taking turns, and leaving before the end",
+   "plain": "New: two patterns of who works when. They work on alternate days, or one stops a few days before the finish.",
+   "needs": [
+    "lcm"
+   ],
+   "teach": [
+    "Two more arrangements of the stages idea. Each has appeared once in the papers we checked, and each has a neat way in.",
+    "**Alternate days.** \"A and B work on alternate days, starting with A.\" Think in **rounds**. One round is one day of A and one day of B.",
+    "1. Find the units done in one round.",
+    "2. See how many **whole** rounds fit into the job.",
+    "3. Finish the last few units by hand, one day at a time, in the right order: A's day first, then B's.",
+    "Step 3 matters. The last day is often only part of a day, and it is done at the speed of whoever's turn it is, not at the average speed.",
+    "The same works for pipes opened alternately for an hour each, and for \"A is helped by B and C every third day\": a round is three days, and on the third day all three work.",
+    "**Leaving before the end.** \"A and B start together, but A leaves 5 days before the work is completed.\" You do not know how long they worked together, but you do know how the job **ended**: the last 5 days were B alone. So work backwards.",
+    "1. Units done in the last stretch = B's units per day x 5.",
+    "2. Take those off the total. Everything else was done by both together.",
+    "3. Divide by their combined units for the days together, and add the 5 days back.",
+    "Compare the wording with lesson 7. \"A leaves **after** 5 days\" tells you the first stage. \"A leaves 5 days **before the end**\" tells you the last stage."
+   ],
+   "example": {
+    "q": "A can do a job in 10 days and B can do it in 15 days. They work on alternate days, starting with A. In how many days will the job be finished?",
+    "steps": [
+     "Call the job 30 units. A does 3 a day and B does 2.",
+     "One round (A's day, then B's day) = 5 units in 2 days.",
+     "30 / 5 = 6 whole rounds, with nothing left over.",
+     "6 rounds x 2 days = 12 days."
+    ],
+    "answer": "12 days."
+   },
+   "check": {
+    "q": "A and B can do a job in 20 days and 30 days. They start together, but B leaves 5 days before the job is completed. In how many days is the whole job completed?",
+    "options": {
+     "a": "9 days",
+     "b": "12 days",
+     "c": "14 days",
+     "d": "17 days"
+    },
+    "answer": "C",
+    "why": "Call the job 60 units; A does 3 a day and B does 2. The last 5 days are A alone: 15 units. The other 45 were done together at 5 a day: 9 days. Total 9 + 5 = 14 days."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#14",
+     "clerk-15-pipes-and-cisterns-a-graded#12",
+     "clerk-14-time-and-work-a-graded#20",
+     "clerk-14-time-and-work-a-graded#19"
+    ],
+    "tags": [
+     "Alternate days, with part of a day at the end.",
+     "Pipes opened alternately.",
+     "Help arrives every third day.",
+     "One leaves a few days before the finish."
+    ]
+   }
+  },
+  {
+   "id": "pay-and-puzzles",
+   "code": "W8",
+   "title": "Sharing the pay, and when no one's time is given",
+   "plain": "New: two last settings. Wages follow the work done; and some questions are best solved from the options.",
+   "needs": [
+    "ratio",
+    "check-options"
+   ],
+   "teach": [
+    "**Sharing the pay.** When people are paid for a job done together, the fair rule is: **money follows work**. Each person's share is in the ratio of the units they did.",
+    "If everyone works for the same number of days, the units done are in the ratio of their units per day. \"A takes 10 days and B takes 15 days; together they earn Rs 3,000.\" Call the job 30 units: A does 3 a day and B does 2. The pay is shared 3 : 2, so A gets Rs 1,800.",
+    "Notice it is **not** shared in the ratio of the days, 10 : 15. The one who needs fewer days is the better worker and earns more.",
+    "If a helper C joins so that the job is done faster, find C's units per day by subtraction (lesson 3), and then share in the ratio of all three.",
+    "**When nobody's time is given.** A few questions give no one's days outright: \"A takes 10 days less than B. Together they take 12 days. How long does A take?\"",
+    "Solving this properly needs a heavier equation than anything else in the topic. It is fair to say so, and it is fair not to use it. **The options are part of the question.** Try them.",
+    "- Take an option for A, say 20 days. Then B takes 30.",
+    "- Check with the units method: job 60 units, A does 3 a day, B does 2, together 5 a day, 12 days. It matches.",
+    "Start with a middle option. If the time together comes out too long, the true answer is a smaller number; if too short, a larger one. Two tries are usually enough."
+   ],
+   "example": {
+    "q": "A can do a job in 6 days and B can do it in 12 days. They do it together and are paid Rs 900. What is B's share?",
+    "steps": [
+     "Call the job 12 units. A does 2 a day and B does 1.",
+     "They work the same days, so the work done is in the ratio 2 : 1.",
+     "Money follows work: 3 parts = 900, so one part = 300.",
+     "B has 1 part: Rs 300."
+    ],
+    "answer": "B's share is Rs 300."
+   },
+   "check": {
+    "q": "A takes 5 days less than B to do a job. Working together they take 6 days. In how many days can A alone do it?",
+    "options": {
+     "a": "10 days",
+     "b": "12 days",
+     "c": "15 days",
+     "d": "20 days"
+    },
+    "answer": "A",
+    "why": "Try 10 for A, so B takes 15. Job 30 units: A does 3 a day and B does 2, together 5 a day, which is 6 days. It matches. (15 is B.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-14-time-and-work-a-graded#8",
+     "clerk-14-time-and-work-a-graded#16",
+     "clerk-14-time-and-work-a-graded#13",
+     "clerk-15-pipes-and-cisterns-a-graded#16",
+     "clerk-14-time-and-work-b-pyq#13"
+    ],
+    "tags": [
+     "Two workers share the pay.",
+     "A helper joins: find the helper's share.",
+     "No one's time is given: try the options.",
+     "The same puzzle with pipes.",
+     "A real paper's version: \"6 days more than twice the time together\"."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-14-time-and-work-a-graded#1": [
+    "Call the job 30 units: both 10 and 15 go into 30.",
+    "A does 3 units a day and B does 2.",
+    "Together 5 a day: 30 / 5 = 6 days."
+   ],
+   "clerk-14-time-and-work-a-graded#3": [
+    "Call the job 60 units.",
+    "A does 6 a day, B does 5 and C does 4. Together 15 a day.",
+    "60 / 15 = 4 days. That is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-14-time-and-work-a-graded#7": [
+    "Call the job 60 units. A does 3 a day and B does 2: together 5.",
+    "In 6 days they do 30 units.",
+    "30 of the 60 are left, which is 1/2."
+   ],
+   "clerk-14-time-and-work-a-graded#6": [
+    "A does a quarter in 6 days, so the whole job takes A 24 days. B does a third in 4 days, so B takes 12 days.",
+    "Call the job 24 units. A does 1 a day and B does 2: together 3.",
+    "24 / 3 = 8 days."
+   ],
+   "clerk-14-time-and-work-a-graded#26": [
+    "Treat the money as the job. It lasts A 21 days and B 28 days. Call it 84 units.",
+    "A uses 4 units a day and B uses 3. Together 7 a day.",
+    "84 / 7 = 12 days."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#1": [
+    "Call the tank 60 units.",
+    "A adds 3 a minute and B adds 2: together 5.",
+    "60 / 5 = 12 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#2": [
+    "Call the tank 30 units.",
+    "A adds 5 an hour and B removes 3. The tank gains 2 an hour.",
+    "30 / 2 = 15 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#2": [
+    "Call the tank 60 units.",
+    "A adds 6, B adds 4 and C removes 3. The tank gains 7 an hour.",
+    "60 / 7 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#5": [
+    "Call the tank 90 units. A adds 3 a minute and B adds 2: together 5.",
+    "In 6 minutes they add 30 units, which is 30 / 90 = 1/3 of the tank.",
+    "1/3 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#9": [
+    "The litres are the units. A adds 240 / 16 = 15 litres an hour. B adds 240 / 12 = 20.",
+    "In 2 hours they add 35 x 2 = 70 litres.",
+    "Still needed: 240 - 70 = 170 litres."
+   ],
+   "clerk-14-time-and-work-a-graded#2": [
+    "Call the job 24 units.",
+    "Together they do 3 a day. A alone does 2 a day.",
+    "B does 1 a day, so B takes 24 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#3": [
+    "Call the job 60 units.",
+    "All three do 5 a day. B and C do 3 a day.",
+    "A does 2 a day, so A takes 30 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#4": [
+    "Call the job 20 units. All three do 20 / 4 = 5 a day. B and C do 20 divided by 20/3, which is 3 a day.",
+    "A does 2 a day, so the whole job takes A 10 days.",
+    "60% of the job takes 60% of 10 = 6 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#7": [
+    "37.5% less than 40 days is 25 days. That is the time for Ram and Shyam together.",
+    "Call the job 200 units. Ram does 5 a day; together they do 8 a day.",
+    "Shyam does 3 a day, so he takes 200 / 3 = 66 2/3 days."
+   ],
+   "clerk-14-time-and-work-a-graded#9": [
+    "Call the job 60 units. The pairs do 5, 4 and 3 units a day.",
+    "Add them: 12. Each person is counted twice, so all three together do 6 a day.",
+    "60 / 6 = 10 days."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#4": [
+    "Call the tank 36 units.",
+    "The pipe adds 3 an hour. With the leak the tank gains 2 an hour.",
+    "The leak removes 1 an hour, so it empties the full tank in 36 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#5": [
+    "Call the tank 12 units. A adds 3 an hour and B adds 2: together 5.",
+    "With C open the tank gains only 12 / 3 = 4 an hour.",
+    "C removes 1 an hour, so it empties the tank in 12 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#6": [
+    "Call the tank 12 units. A and B add 4 an hour. With C the tank gains 3 an hour.",
+    "C removes 1 an hour: 12 hours for the whole tank.",
+    "Half the tank takes 6 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#8": [
+    "Call the tank 80 units. A adds 5 an hour. B removes 2 an hour.",
+    "With all three open the tank gains 80 / 80 = 1 an hour.",
+    "So C removes 5 - 2 - 1 = 2 an hour, and empties the tank in 40 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#11": [
+    "Call the tank 30 units. The pairs add 5, 3 and 4 units an hour.",
+    "Add them: 12. Each pipe is counted twice, so all three add 6 an hour.",
+    "C = all three minus A and B = 6 - 5 = 1 an hour. C alone takes 30 hours."
+   ],
+   "clerk-14-time-and-work-a-graded#5": [
+    "Give B 1 unit a day; A does 2. Together 3 a day.",
+    "The job is 3 x 14 = 42 units.",
+    "A alone: 42 / 2 = 21 days."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#7": [
+    "Give B 1 unit a minute; A adds 3. Together 4 a minute.",
+    "The tank is 4 x 12 = 48 units.",
+    "A alone: 48 / 3 = 16 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#26": [
+    "A is 100 and B is 150: efficiencies 2 : 3, so times 3 : 2. A's 30 minutes is 3 parts, so B takes 20 minutes.",
+    "Call the tank 60 units. A adds 2 a minute and B adds 3: together 5.",
+    "60 / 5 = 12 minutes."
+   ],
+   "clerk-14-time-and-work-b-pyq#15": [
+    "B is 20% more efficient: efficiencies 5 : 6, so times 6 : 5. A's 24 days is 6 parts, so B takes 20 days.",
+    "C takes 10 days more than B: 30 days.",
+    "A and C: call the job 120 units. A does 5 a day and C does 4: together 9. 120 / 9 = 40/3 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#10": [
+    "Times 4 : 6 : 3. Divide 12 by each: daily units are 3, 2 and 4.",
+    "Together 9 a day for 8 days: the job is 72 units.",
+    "A alone: 72 / 3 = 24 days for the whole job, so three-fourths takes 18 days."
+   ],
+   "clerk-14-time-and-work-a-graded#21": [
+    "Efficiencies 3 : 1, so times 1 : 3. The difference is 2 parts = 60 days, so one part is 30.",
+    "A takes 30 days and B takes 90.",
+    "Call the job 90 units. A does 3 a day and B does 1: together 4. 90 / 4 = 22 1/2 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#16": [
+    "Efficiencies 2.5 : 1 = 5 : 2, so times 2 : 5. The difference is 3 parts = 50 days, so one part is 50/3.",
+    "A takes 100/3 days. A does 5 units a day, so the job is 5 x 100/3 = 500/3 units.",
+    "Together they do 7 a day: 500/3 divided by 7 = 500/21 = 23 17/21 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#9": [
+    "A and B do two-thirds in 20 days, so the whole job in 30 days. Call the job 30 units: A and B do 1 a day.",
+    "All three finish in 10 days, so they do 3 a day. C does 2.",
+    "A : B = 3 : 2, so B does 0.4 of the 1 unit. B and C do 2.4 a day.",
+    "30 / 2.4 = 12.5 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#11": [
+    "Call the job 72 units. A does 72 / 9 = 8 a day. B and C together do 72 divided by 8/3, which is 27 a day.",
+    "C is twice as efficient as B, so B does 9 and C does 18.",
+    "A and B do 17 a day. In 4 days: 68 units out of 72.",
+    "68 / 72 = 17/18."
+   ],
+   "clerk-14-time-and-work-b-pyq#12": [
+    "A : B = 1.5 : 1 = 3 : 2. Together they do 5 units a day.",
+    "Half the job takes 2 2/5 days, so the whole job takes 4.8 days. The job is 5 x 4.8 = 24 units.",
+    "C takes half A's time, so C does twice A's units: 6 a day. A and C do 9 a day.",
+    "24 / 9 = 2 2/3 days."
+   ],
+   "clerk-14-time-and-work-a-graded#10": [
+    "Call the job 36 units. A does 3 a day and B does 2.",
+    "Stage one: 5 a day for 4 days = 20 units. Left: 16.",
+    "B alone does 2 a day: 16 / 2 = 8 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#5": [
+    "Call the job 90 units. A does 6 a day and B does 5.",
+    "A works 5 days: 30 units. Left: 60.",
+    "B alone: 60 / 5 = 12 days."
+   ],
+   "clerk-14-time-and-work-a-graded#15": [
+    "Call the job 30 units; A does 1 a day. In 10 days A does 10. Left: 20.",
+    "Those 20 are done in 8 days, so A and B together do 2.5 a day.",
+    "B does 1.5 a day. Whole job: 30 / 1.5 = 20 days."
+   ],
+   "clerk-14-time-and-work-a-graded#22": [
+    "Call the job 100 units. A does 60 in 15 days, which is 4 a day.",
+    "The remaining 40 are done in 5 days, so A and B together do 8 a day.",
+    "B does 4 a day. Whole job: 100 / 4 = 25 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#2": [
+    "Call the job 60 units. X does 4 a day and Y does 5. X and Z together do 5, so Z does 1.",
+    "Stage one: X and Y do 9 a day for 5 days = 45. Left: 15.",
+    "Stage two: Y and Z do 6 a day. 15 / 6 = 2.5 days.",
+    "Total: 5 + 2.5 = 7.5 days."
+   ],
+   "clerk-15-pipes-and-cisterns-b-pyq#1": [
+    "Call the tank 8 units. A adds 2 an hour and B adds 1.",
+    "Stage one: 3 an hour for 2 hours = 6 units. Left: 2.",
+    "B alone: 2 / 1 = 2 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#9": [
+    "Call the tank 30 units. A adds 3 a minute and B adds 2.",
+    "Stage one: 5 a minute for 3 minutes = 15 units. Left: 15.",
+    "B alone: 15 / 2 = 7 1/2 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#15": [
+    "Call the tank 60 units. A adds 3 an hour and B adds 2.",
+    "A alone for 5 hours: 15 units. Left: 45.",
+    "Both together: 45 / 5 = 9 hours. Total: 5 + 9 = 14 hours."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#13": [
+    "Call the tank 48 units. A adds 4 a minute and B adds 3.",
+    "A is open for all 9 minutes: 36 units.",
+    "The other 12 must come from B: 12 / 3 = 4 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#19": [
+    "Call the tank 300 units. A adds 20 an hour, B adds 15 and C removes 12.",
+    "Stage one: 23 an hour for 10 hours = 230 units. Left: 70.",
+    "Stage two, C closed: 35 an hour. 70 / 35 = 2 hours. Total: 12 hours."
+   ],
+   "clerk-14-time-and-work-a-graded#4": [
+    "Total work = 12 x 15 = 180 man-days.",
+    "With 20 men: 180 / 20 = 9 days."
+   ],
+   "clerk-14-time-and-work-a-graded#12": [
+    "Total work = 15 x 8 x 21 = 2,520 man-hours.",
+    "The new team does 21 x 6 = 126 man-hours a day.",
+    "2,520 / 126 = 20 days."
+   ],
+   "clerk-14-time-and-work-a-graded#23": [
+    "Total work = 24 x 20 = 480 man-days.",
+    "In 8 days, 24 men do 192. Left: 288.",
+    "16 men remain: 288 / 16 = 18 days."
+   ],
+   "clerk-14-time-and-work-b-pyq#14": [
+    "Total work = 20 x 12 = 240 woman-days.",
+    "In 3 days, 20 women do 60. Left: 180.",
+    "It must be done in 6 days, so 180 / 6 = 30 women are needed. 10 joined."
+   ],
+   "clerk-14-time-and-work-a-graded#18": [
+    "In 30 days, 40 men did one-third: that cost 40 x 30 = 1,200 man-days.",
+    "The other two-thirds needs 2,400 man-days, and 30 days are left.",
+    "2,400 / 30 = 80 men are needed. He has 40, so 40 more."
+   ],
+   "clerk-14-time-and-work-a-graded#11": [
+    "3 men = 5 women, so 6 men = 10 women. The team is worth 15 women.",
+    "The job is 5 women x 12 days = 60 woman-days.",
+    "60 / 15 = 4 days. That is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-14-time-and-work-a-graded#17": [
+    "Same job, so (4 men + 6 women) x 8 = (3 men + 7 women) x 10.",
+    "32 men + 48 women = 30 men + 70 women, so 2 men = 22 women and 1 man = 11 women.",
+    "The first team is worth 44 + 6 = 50 women, for 8 days: 400 woman-days.",
+    "10 women take 400 / 10 = 40 days."
+   ],
+   "clerk-14-time-and-work-a-graded#29": [
+    "5 men + 2 boys do 4 times what 1 man + 1 boy do: 5 men + 2 boys = 4 men + 4 boys.",
+    "So 1 man = 2 boys.",
+    "A man does twice a boy's work: 2 : 1."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#14": [
+    "The tank needs 12 x 40 = 480 pipe-minutes.",
+    "10 pipes are working: 480 / 10 = 48 minutes."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#21": [
+    "One pipe fills the tank in 6 hours, so half the tank takes it 3 hours.",
+    "The other half needs 3 pipe-hours. With 4 pipes open: 3/4 of an hour, which is 45 minutes.",
+    "Total: 3 hours 45 minutes."
+   ],
+   "clerk-14-time-and-work-a-graded#14": [
+    "Call the job 36 units. A does 3 a day and B does 2. One round = 5 units in 2 days.",
+    "7 rounds = 35 units in 14 days. 1 unit is left.",
+    "It is A's turn, and A does 3 a day, so 1 unit takes 1/3 of a day.",
+    "Total: 14 1/3 days."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#12": [
+    "Call the tank 12 units. A adds 2 an hour and B adds 3. One round = 5 units in 2 hours.",
+    "2 rounds = 10 units in 4 hours. 2 units are left.",
+    "It is A's turn, and A adds 2 an hour: 1 more hour.",
+    "Total: 5 hours."
+   ],
+   "clerk-14-time-and-work-a-graded#20": [
+    "Call the job 60 units. A does 3 a day, B does 2 and C does 1.",
+    "One round is 3 days: A alone, A alone, then all three. That is 3 + 3 + 6 = 12 units.",
+    "60 / 12 = 5 rounds, which is 15 days."
+   ],
+   "clerk-14-time-and-work-a-graded#19": [
+    "Call the job 60 units. A does 3 a day and B does 2.",
+    "The last 5 days are B alone: 10 units. The other 50 were done together at 5 a day: 10 days.",
+    "Total: 10 + 5 = 15 days. That is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-14-time-and-work-a-graded#8": [
+    "Call the job 30 units. A does 3 a day and B does 2.",
+    "Money follows work: 3 : 2.",
+    "5 parts = 3,000, so A's 3 parts = Rs 1,800."
+   ],
+   "clerk-14-time-and-work-a-graded#16": [
+    "Call the job 60 units. A does 5 a day and B does 4.",
+    "To finish in 5 days they need 12 a day, so C does 3.",
+    "C's share is 3 parts out of 12: one quarter of 2,400 = Rs 600."
+   ],
+   "clerk-14-time-and-work-a-graded#13": [
+    "Try A = 20 days, so B = 30 days.",
+    "Job 60 units: A does 3 a day and B does 2. Together 5 a day: 12 days. It matches.",
+    "A takes 20 days."
+   ],
+   "clerk-15-pipes-and-cisterns-a-graded#16": [
+    "Try A = 10 hours, so B = 15 hours.",
+    "Tank 30 units: A adds 3 an hour and B adds 2. Together 5 an hour: 6 hours. It matches.",
+    "A takes 10 hours."
+   ],
+   "clerk-14-time-and-work-b-pyq#13": [
+    "Try B = 30 days. A takes 20.",
+    "Job 60 units: A does 3 a day and B does 2. Together 5 a day: 12 days.",
+    "Twice 12, plus 6, is 30. It matches, so B takes 30 days."
+   ]
+  }
+ }
+}

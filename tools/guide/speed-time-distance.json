@@ -1,0 +1,700 @@
+{
+ "module": "speed-time-distance",
+ "intro": [
+  "Everything in this topic comes from one relation: **distance = speed x time**. The questions differ only in which of the three is the same for both parts of the story.",
+  "There are eight short lessons, about people and vehicles on the move. Go in order the first time. **Trains** now have a topic of their own, which adds one idea (a train has length); it is the natural one to do straight after this."
+ ],
+ "needs": [
+  "ratio",
+  "lcm",
+  "percent-words"
+ ],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the km/h to m/s table and every question type on one page, and the Course in each bank has many more.",
+  "When a question looks tangled, come back to two plain checks: are my units the same, and what exactly is the distance being covered?"
+ ],
+ "lessons": [
+  {
+   "id": "dst",
+   "code": "T1",
+   "title": "Distance, speed and time",
+   "plain": "The starting point: one small relation, and the habit of keeping the units the same.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "**Speed** tells you how much distance is covered in each unit of time. 60 km/h means 60 kilometres in every hour. From that one sentence you get the only relation this topic needs:",
+    "**distance = speed x time**",
+    "Know any two and you have the third: speed = distance / time, and time = distance / speed.",
+    "Nearly every slip in the early questions is a **units** slip. Before you multiply or divide, make sure the units agree.",
+    "- If the speed is in km/h, the time must be in hours and the distance in km.",
+    "- If the speed is in m/s (metres per second), the time must be in seconds and the distance in metres.",
+    "To change between the two kinds of speed:",
+    "- **km/h to m/s: multiply by 5/18.** 72 km/h is 72 x 5/18 = 20 m/s.",
+    "- **m/s to km/h: multiply by 18/5.** 10 m/s is 36 km/h.",
+    "Where does 5/18 come from? One kilometre is 1,000 metres and one hour is 3,600 seconds, and 1,000 / 3,600 = 5/18. A handy anchor: **18 km/h is 5 m/s**, so 36 is 10, 54 is 15, 72 is 20 and 90 is 25.",
+    "For minutes, remember that 30 minutes is half an hour and 50 minutes is 50/60 = 5/6 of an hour."
+   ],
+   "example": {
+    "q": "A bus is moving at 54 km/h. How many metres does it cover in 20 seconds?",
+    "steps": [
+     "The time is in seconds and the answer is wanted in metres, so change the speed to m/s.",
+     "54 x 5/18 = 15 m/s.",
+     "Distance = speed x time = 15 x 20 = 300 metres."
+    ],
+    "answer": "300 metres."
+   },
+   "check": {
+    "q": "A man walks 900 metres in 10 minutes. What is his speed in km/h?",
+    "options": {
+     "a": "1.5 km/h",
+     "b": "5.4 km/h",
+     "c": "9 km/h",
+     "d": "90 km/h"
+    },
+    "answer": "B",
+    "why": "10 minutes is 600 seconds, so his speed is 900 / 600 = 1.5 m/s. In km/h: 1.5 x 18/5 = 5.4. (1.5 is the speed in m/s.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#1",
+     "clerk-16-time-speed-and-distance-a-graded#7",
+     "clerk-16-time-speed-and-distance-a-graded#12",
+     "clerk-16-time-speed-and-distance-b-pyq#2",
+     "clerk-16-time-speed-and-distance-b-pyq#4"
+    ],
+    "tags": [
+     "km/h and seconds: change the speed first.",
+     "Find a speed, and give it in km/h.",
+     "Two speeds to compare.",
+     "One speed found from another through a ratio.",
+     "A letter for the distance, and a percent cut in the time."
+    ]
+   }
+  },
+  {
+   "id": "same-distance",
+   "code": "T6",
+   "title": "The same distance at two speeds",
+   "plain": "New: two people, or one person on two days, cover the same distance. Faster means less time, in the opposite ratio.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "When the **distance is the same**, speed and time pull in opposite directions. Go twice as fast and you need half the time.",
+    "So if two speeds are in the ratio 3 : 4, the times for the same distance are in the ratio **4 : 3**. Just turn the ratio round.",
+    "This turns a whole family of questions into ratio questions. They never tell you the distance; they tell you a **gap in time**.",
+    "\"The speeds of A and B are in the ratio 2 : 3. A takes 15 minutes more than B for the same distance.\"",
+    "- Times are 3 : 2.",
+    "- The gap in time is 3 - 2 = 1 part, and it is 15 minutes.",
+    "- So A takes 45 minutes and B takes 30.",
+    "The same idea covers one person changing speed. \"Walking at three-fourths of his usual speed, a man is 20 minutes late.\" His speed is 3/4 of usual, so his time is **4/3** of usual. The extra one-third of his usual time is the 20 minutes, so his usual time is 60 minutes.",
+    "Words such as \"twice as fast\" are a speed ratio in disguise: 2 : 1. A chain of them (\"A is twice as fast as B, and B is thrice as fast as C\") is built up from the slowest: C is 1, B is 3, A is 6."
+   ],
+   "example": {
+    "q": "The speeds of A and B are in the ratio 2 : 3. To cover the same distance, A takes 15 minutes more than B. How long does B take?",
+    "steps": [
+     "Same distance, so turn the speed ratio round: times are 3 : 2.",
+     "The gap in time is 3 - 2 = 1 part = 15 minutes.",
+     "B has 2 parts: 30 minutes."
+    ],
+    "answer": "B takes 30 minutes."
+   },
+   "check": {
+    "q": "Walking at four-fifths of his usual speed, a man reaches his office 10 minutes late. What is his usual time?",
+    "options": {
+     "a": "8 minutes",
+     "b": "30 minutes",
+     "c": "40 minutes",
+     "d": "50 minutes"
+    },
+    "answer": "C",
+    "why": "Speed is 4/5 of usual, so time is 5/4 of usual. The extra quarter is 10 minutes, so the usual time is 40 minutes. (50 is today's time.)"
+   },
+   "shortcut": {
+    "title": "A change in speed as a fraction",
+    "text": [
+     "If the speed goes up by **1/n**, the time comes down by **1/(n + 1)**. If the speed comes down by 1/n, the time goes up by 1/(n - 1). It is the turn-around from Percentages once more.",
+     "Speed up by 1/4 (25% faster): time is 1/5 less. Speed down by 1/4: time is 1/3 more.",
+     "So \"at three-fourths of his speed he is 20 minutes late\": the speed is down by 1/4, the time is up by 1/3, and 1/3 of the usual time is 20 minutes."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#4",
+     "clerk-16-time-speed-and-distance-b-pyq#7",
+     "clerk-16-time-speed-and-distance-a-graded#15",
+     "clerk-16-time-speed-and-distance-a-graded#10",
+     "clerk-17-trains-a-graded#27"
+    ],
+    "tags": [
+     "A speed ratio and a gap in time.",
+     "The same, as a real paper asked it, in hours.",
+     "A chain of \"twice\" and \"thrice\".",
+     "One person, slower than usual.",
+     "A train below its usual speed: how much time would be saved?"
+    ]
+   }
+  },
+  {
+   "id": "late-early",
+   "code": "T4",
+   "title": "Late, early, and changing the speed",
+   "plain": "New: the gap in time comes from being late one day and early another, or the speed must change to save time.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "\"At 40 km/h he reaches office 10 minutes late. At 50 km/h he reaches 5 minutes early.\" This is last lesson's question with the gap in time hidden.",
+    "Late on one day and early on the other: the two journeys differ by 10 + 5 = **15 minutes**. (If he were late on both days, by 10 and by 4 minutes, the gap would be the difference, 6 minutes.)",
+    "Now proceed as before.",
+    "- Speeds 40 : 50 = 4 : 5, so times are 5 : 4.",
+    "- The gap is 1 part = 15 minutes.",
+    "- At 40 km/h he takes 5 parts = 75 minutes, which is 1.25 hours.",
+    "- Distance = 40 x 1.25 = 50 km.",
+    "**Changing the speed to save time.** \"A car covers 450 km in 9 hours. By how much must its speed rise to do it in 7.5 hours?\" Find both speeds and subtract. Present speed 50, needed speed 60: a rise of 10 km/h. Read whether the question wants the **new speed** or the **increase**.",
+    "If the time is to be cut by a fraction, think of what is **left**. Cutting the time by three-fifths leaves two-fifths of it, so the speed must become 5/2 of what it was, which is 150% more.",
+    "**When only a difference in speed and a difference in time are given**, such as \"10 km/h faster would save 1 hour over 200 km\", the proper method is a heavier equation. Test the options instead: try a speed, work out both times, and see whether they differ by an hour."
+   ],
+   "example": {
+    "q": "Travelling at 30 km/h a man reaches his office 10 minutes late. Travelling at 40 km/h he reaches 5 minutes early. Find the distance to his office.",
+    "steps": [
+     "Late one day, early the other: the journeys differ by 10 + 5 = 15 minutes.",
+     "Speeds 30 : 40 = 3 : 4, so times are 4 : 3.",
+     "The gap is 1 part = 15 minutes.",
+     "At 30 km/h he takes 4 parts = 60 minutes = 1 hour.",
+     "Distance = 30 x 1 = 30 km."
+    ],
+    "answer": "30 km."
+   },
+   "check": {
+    "q": "A car covers a certain distance in 6 hours at 50 km/h. At what speed must it travel to cover the same distance in 5 hours?",
+    "options": {
+     "a": "41 2/3 km/h",
+     "b": "55 km/h",
+     "c": "60 km/h",
+     "d": "62.5 km/h"
+    },
+    "answer": "C",
+    "why": "Distance = 50 x 6 = 300 km. In 5 hours: 300 / 5 = 60 km/h."
+   },
+   "shortcut": {
+    "title": "Late and early in one line",
+    "text": [
+     "For two speeds **a** and **b** over the same distance, with a time gap **t** between the journeys:",
+     "**distance = (a x b x t) / (b - a)**",
+     "Use hours for t. With 40 km/h and 50 km/h and a gap of 15 minutes (1/4 hour): (40 x 50 x 1/4) / 10 = 50 km.",
+     "It is the ratio method with the steps folded together. If you forget it, the ratio method is always there."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#9",
+     "clerk-16-time-speed-and-distance-a-graded#2",
+     "clerk-16-time-speed-and-distance-b-pyq#5",
+     "clerk-16-time-speed-and-distance-a-graded#13",
+     "clerk-16-time-speed-and-distance-a-graded#17"
+    ],
+    "tags": [
+     "Late at one speed, early at another.",
+     "How much faster to save time?",
+     "The time is cut by a fraction; it asks for a percent.",
+     "Only differences are given: test the options.",
+     "Walking and riding, both ways."
+    ]
+   }
+  },
+  {
+   "id": "average-speed",
+   "code": "T2",
+   "title": "Average speed",
+   "plain": "New: a journey at two or more speeds. The average speed is total distance over total time, never the average of the speeds.",
+   "needs": [
+    "lcm",
+    "average"
+   ],
+   "teach": [
+    "\"A man goes from A to B at 40 km/h and returns at 60 km/h. What is his average speed?\" The tempting answer is 50. It is wrong, and seeing why is the lesson.",
+    "He spends **more time** on the slow leg than on the fast one, so the slow speed counts for more. The honest definition is:",
+    "**average speed = total distance / total time**",
+    "When the distance is not given, **choose one that suits you**. Pick a number both speeds go into: 120 km each way.",
+    "- Going: 120 / 40 = 3 hours. Returning: 120 / 60 = 2 hours.",
+    "- Total distance 240 km, total time 5 hours.",
+    "- Average speed = 240 / 5 = 48 km/h.",
+    "Any distance you choose gives 48. It is a little below 50, as it should be.",
+    "First check **what is equal** in the question.",
+    "- **Equal distances** (there and back, or \"one-third of the way at each speed\"): choose a convenient distance, as above.",
+    "- **Times are given** (\"5 km/h for 2 hours, then 15 km/h for 3 hours\"): simply add up the distances and divide by the total time.",
+    "Average speed also works backwards. If the average speed for a return trip is 48 km/h and the trip takes 5 hours, the total distance is 240 km, so one way is 120 km."
+   ],
+   "example": {
+    "q": "A man goes to a town at 30 km/h and comes back at 20 km/h. What is his average speed for the whole journey?",
+    "steps": [
+     "Equal distances, so choose one that both speeds go into: 60 km each way.",
+     "Going: 60 / 30 = 2 hours. Returning: 60 / 20 = 3 hours.",
+     "Total distance 120 km, total time 5 hours.",
+     "Average speed = 120 / 5 = 24 km/h."
+    ],
+    "answer": "24 km/h."
+   },
+   "check": {
+    "q": "A car travels at 30 km/h for 2 hours and then at 60 km/h for 1 hour. What is its average speed?",
+    "options": {
+     "a": "40 km/h",
+     "b": "45 km/h",
+     "c": "50 km/h",
+     "d": "90 km/h"
+    },
+    "answer": "A",
+    "why": "Here the times are given, so add the distances: 60 + 60 = 120 km in 3 hours. 120 / 3 = 40 km/h. (45 is the plain average of the speeds.)"
+   },
+   "shortcut": {
+    "title": "Two equal distances",
+    "text": [
+     "For two **equal distances** at speeds **a** and **b**, the average speed is:",
+     "**(2 x a x b) / (a + b)**",
+     "40 and 60: 4,800 / 100 = 48 km/h. 60 and 90: 10,800 / 150 = 72 km/h.",
+     "Use it only when the two distances are equal. If the two **times** are equal instead, the average speed really is the plain average of the two speeds."
+    ]
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#3",
+     "clerk-16-time-speed-and-distance-b-pyq#1",
+     "clerk-16-time-speed-and-distance-a-graded#6",
+     "clerk-16-time-speed-and-distance-a-graded#16",
+     "clerk-16-time-speed-and-distance-a-graded#29"
+    ],
+    "tags": [
+     "There and back.",
+     "The same, as a real paper asked it.",
+     "Times are given, not distances.",
+     "Three equal parts.",
+     "Backwards: the total time is given, find the distance."
+    ]
+   }
+  },
+  {
+   "id": "parts",
+   "code": "T2",
+   "title": "A journey in parts",
+   "plain": "New: the journey is split into stretches, and the question asks about one stretch, the total time, or the speed still needed.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "Longer journey questions break the trip into stretches. The method is bookkeeping: **for each stretch, write its distance, its speed and its time.** Two of the three are usually given, and the third is one division away. Then add up what the question asks for.",
+    "A small table keeps it tidy.",
+    "| Stretch | Distance | Speed | Time |",
+    "| first | ... | ... | ... |",
+    "| second | ... | ... | ... |",
+    "Three forms come up.",
+    "**What speed is needed for the rest?** \"He must cover 120 km in 4 hours. He does the first 60 km at 20 km/h.\" That stretch took 3 hours. So 60 km remain and only 1 hour is left: he needs 60 km/h.",
+    "**Two speeds, total distance and total time given.** \"400 km in 6 hours, partly at 80 km/h and partly at 60 km/h.\" Use the \"pretend\" idea you have met before. Pretend the whole 6 hours was at the slower speed: 360 km. The real distance is 40 km more. Each hour at the faster speed adds 20 km extra, so 2 hours were at 80 km/h, which is 160 km.",
+    "**Equal distances, total time given.** \"Three equal distances at 3, 4 and 5 km/h take 47 minutes in all.\" Choose a convenient distance for each part, find the time that would take, and scale to the real time."
+   ],
+   "example": {
+    "q": "A man travels 300 km in 5 hours, partly at 50 km/h and partly at 70 km/h. What distance does he cover at 70 km/h?",
+    "steps": [
+     "Pretend all 5 hours were at the slower speed: 50 x 5 = 250 km.",
+     "The real distance is 300 km, which is 50 km more.",
+     "Each hour at 70 km/h adds 70 - 50 = 20 km extra.",
+     "So the time at 70 km/h is 50 / 20 = 2.5 hours.",
+     "Distance at 70 km/h = 70 x 2.5 = 175 km."
+    ],
+    "answer": "175 km."
+   },
+   "check": {
+    "q": "A man has to cover 120 km in 4 hours. He covers the first 60 km at 20 km/h. At what speed must he cover the rest to arrive on time?",
+    "options": {
+     "a": "30 km/h",
+     "b": "40 km/h",
+     "c": "60 km/h",
+     "d": "120 km/h"
+    },
+    "answer": "C",
+    "why": "The first 60 km takes 3 hours. That leaves 60 km and 1 hour: 60 km/h. (30 km/h is the speed for the whole trip, which is no longer enough.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#18",
+     "clerk-16-time-speed-and-distance-a-graded#21",
+     "clerk-16-time-speed-and-distance-a-graded#26",
+     "clerk-16-time-speed-and-distance-a-graded#30",
+     "clerk-16-time-speed-and-distance-b-pyq#6"
+    ],
+    "tags": [
+     "Two speeds, total distance and total time.",
+     "What speed is needed for the rest?",
+     "Two equal halves, and the total time is given.",
+     "Three equal distances, total time in minutes.",
+     "Four stretches given as percents of the distance."
+    ]
+   }
+  },
+  {
+   "id": "two-bodies",
+   "code": "T5",
+   "title": "Two people moving at once",
+   "plain": "New: two moving people or vehicles. What matters is how fast the gap between them shrinks.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "When two things move at the same time, stop watching each one and **watch the gap between them**.",
+    "**Moving towards each other.** If A walks at 25 km/h and B at 35 km/h towards each other, every hour the gap shrinks by 25 + 35 = 60 km. So when they approach, **add the speeds**.",
+    "**One chasing the other.** If a policeman runs at 12 km/h after a thief running at 10 km/h, every hour the gap shrinks by only 12 - 10 = 2 km. So when they move the same way, **subtract the speeds**.",
+    "Either way:",
+    "**time to meet = gap between them / speed at which the gap shrinks**",
+    "The speed at which the gap changes is called the **relative speed**. It is not a new kind of speed; it is just how the two speeds combine.",
+    "Once you know **when** they meet, anything else follows from the first lesson. How far has A gone? A's speed x that time. How far has A still to go? The total minus that.",
+    "Two neat disguises:",
+    "- **On a circular track**, going opposite ways, they first meet when they have covered one full lap between them. The gap is the length of the track.",
+    "- **One reaches the end and turns back.** By the time they meet, the two together have covered **twice** the distance between the ends. Divide that by the sum of their speeds.",
+    "Keep the units the same here too. A gap of 500 metres with speeds in km/h should be written as 0.5 km."
+   ],
+   "example": {
+    "q": "Two cyclists are 90 km apart and ride towards each other at 12 km/h and 18 km/h. After how long do they meet?",
+    "steps": [
+     "They are approaching, so add the speeds: the gap shrinks by 12 + 18 = 30 km every hour.",
+     "Time = gap / that speed = 90 / 30 = 3 hours.",
+     "Check: in 3 hours they ride 36 km and 54 km, which is 90 km together."
+    ],
+    "answer": "3 hours."
+   },
+   "check": {
+    "q": "A is 200 metres behind B. A runs at 6 m/s and B runs at 4 m/s in the same direction. After how many seconds will A catch B?",
+    "options": {
+     "a": "20 seconds",
+     "b": "50 seconds",
+     "c": "100 seconds",
+     "d": "200 seconds"
+    },
+    "answer": "C",
+    "why": "Same direction, so subtract: the gap shrinks by 2 metres each second. 200 / 2 = 100 seconds. (20 seconds comes from adding the speeds, which is for approaching.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#5",
+     "clerk-16-time-speed-and-distance-a-graded#8",
+     "clerk-17-trains-b-pyq#12",
+     "clerk-16-time-speed-and-distance-a-graded#25",
+     "clerk-16-time-speed-and-distance-a-graded#20"
+    ],
+    "tags": [
+     "Towards each other.",
+     "A chase, with the gap in metres.",
+     "After they meet: how far has one still to go?",
+     "A circular track, opposite directions.",
+     "One reaches the end and turns back."
+    ]
+   }
+  },
+  {
+   "id": "head-start",
+   "code": "T5",
+   "title": "When one starts earlier",
+   "plain": "New: the two do not start together. Let the early one move alone first, then it is last lesson.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "\"A train leaves A at 7 am. Another leaves B at 8 am towards it.\" The two-body method needs both to be moving. So deal with the lonely stretch first.",
+    "1. **Let the early starter travel alone** until the other one starts. Work out how far it goes.",
+    "2. **Find the gap at that moment.** If they are approaching, the gap is the distance between the towns **minus** what the early one has covered. If one is chasing the other, the gap **is** what the early one has covered: that is its lead.",
+    "3. **Now both are moving.** Time to meet = gap / speed at which it shrinks (add for approaching, subtract for chasing).",
+    "4. **Count that time from the later start**, and give the answer as a clock time or a distance, whichever is asked.",
+    "Step 4 is where marks are lost. If the second train left at 8 am and they meet 2 hours after that, the answer is 10 am, not 9 am.",
+    "If the question asks **how far from the start** the faster one overtakes, multiply the faster one's speed by the time it has been moving."
+   ],
+   "example": {
+    "q": "A leaves a town at 9 am at 30 km/h. B leaves the same town at 11 am at 50 km/h in the same direction. At what time does B overtake A?",
+    "steps": [
+     "A travels alone from 9 to 11: 30 x 2 = 60 km. That is A's lead.",
+     "From 11 am both are moving the same way, so subtract: the gap shrinks by 50 - 30 = 20 km an hour.",
+     "Time to close 60 km = 60 / 20 = 3 hours.",
+     "Count from 11 am: B overtakes A at 2 pm."
+    ],
+    "answer": "2 pm."
+   },
+   "check": {
+    "q": "Towns X and Y are 200 km apart. A train leaves X at 8 am towards Y at 40 km/h. Another leaves Y at 9 am towards X at 40 km/h. At what time do they meet?",
+    "options": {
+     "a": "10:00 am",
+     "b": "10:30 am",
+     "c": "11:00 am",
+     "d": "11:30 am"
+    },
+    "answer": "C",
+    "why": "By 9 am the first train has covered 40 km, so 160 km separate them. They approach at 80 km an hour: 2 hours. Counting from 9 am, they meet at 11 am."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#14",
+     "clerk-17-trains-b-pyq#13",
+     "clerk-17-trains-a-graded#12",
+     "clerk-16-time-speed-and-distance-a-graded#19",
+     "clerk-17-trains-a-graded#17"
+    ],
+    "tags": [
+     "Approaching, one hour apart.",
+     "The same with trains, from a real paper.",
+     "The same again, and the answer is not among the times.",
+     "A chase with a half-hour lead.",
+     "A chase, and it asks how far from the start."
+    ]
+   }
+  },
+  {
+   "id": "stops-and-after",
+   "code": "T3",
+   "title": "Two last settings: stoppages, and what happens after they meet",
+   "plain": "New: a bus that stops along the way, and two travellers who carry on after passing each other.",
+   "needs": [
+    "ratio"
+   ],
+   "teach": [
+    "Two smaller ideas to finish. They come up less often than the rest, and each is quick to learn.",
+    "**Stoppages.** \"Without stops a bus averages 60 km/h. With stops it averages 48 km/h. How many minutes does it stop in each hour?\"",
+    "Think about one hour of the journey. Without stopping the bus would cover 60 km. With stops it covers only 48 km, so it has **lost 12 km**. The time it stood still is the time it would have needed to drive those 12 km at its running speed: 12 / 60 of an hour, which is 12 minutes.",
+    "**minutes stopped per hour = (distance lost / running speed) x 60**",
+    "**After they meet.** \"A and B start at the same time towards each other. After they meet, A takes 4 hours to reach the other end and B takes 9 hours. A's speed is 45 km/h; find B's.\"",
+    "There is a neat result for this exact situation. The two speeds are in the ratio of the **square roots of the two times, swapped over**:",
+    "**A's speed : B's speed = square root of B's time : square root of A's time**",
+    "Here that is the square root of 9 to the square root of 4, which is 3 : 2. A's 45 km/h is 3 parts, so B does 30 km/h.",
+    "The times in these questions are always chosen to be perfect squares (1, 4, 9, 16, 25), which is the clue that this result is wanted.",
+    "A related question gives two trains that each take the same number of hours for the journey but start at different times. That one is a head start in disguise (lesson 7): take each journey as a number of units, and let the early train go alone first."
+   ],
+   "example": {
+    "q": "Excluding stoppages the speed of a bus is 50 km/h, and including stoppages it is 40 km/h. For how many minutes does the bus stop per hour?",
+    "steps": [
+     "In one hour without stops it would cover 50 km. With stops it covers 40 km.",
+     "It has lost 10 km.",
+     "At its running speed of 50 km/h, 10 km takes 10 / 50 of an hour.",
+     "That is 1/5 of an hour = 12 minutes."
+    ],
+    "answer": "12 minutes per hour."
+   },
+   "check": {
+    "q": "Two cars start at the same time towards each other. After they meet, the first takes 1 hour to finish its journey and the second takes 4 hours. If the first car's speed is 60 km/h, what is the second car's speed?",
+    "options": {
+     "a": "15 km/h",
+     "b": "30 km/h",
+     "c": "120 km/h",
+     "d": "240 km/h"
+    },
+    "answer": "B",
+    "why": "Speeds are in the ratio of the square roots of the times, swapped: square root of 4 to square root of 1, which is 2 : 1. The first car's 60 km/h is 2 parts, so the second does 30 km/h."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-16-time-speed-and-distance-a-graded#11",
+     "clerk-16-time-speed-and-distance-a-graded#28",
+     "clerk-17-trains-a-graded#30"
+    ],
+    "tags": [
+     "Stoppages.",
+     "After they meet.",
+     "Equal journey times, different starts: a head start in disguise."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-16-time-speed-and-distance-a-graded#1": [
+    "72 km/h = 72 x 5/18 = 20 m/s.",
+    "Distance = 20 x 15 = 300 m."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#7": [
+    "5 minutes = 300 seconds. Speed = 600 / 300 = 2 m/s.",
+    "2 x 18/5 = 7.2 km/h."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#12": [
+    "A: 150 / 2.5 = 60 km/h. B: 180 / 4 = 45 km/h.",
+    "60 : 45 = 4 : 3."
+   ],
+   "clerk-16-time-speed-and-distance-b-pyq#2": [
+    "Truck: 80 / 5 = 16 km/h.",
+    "Truck : car = 2 : 5, so the car does 40 km/h.",
+    "In 4 hours: 160 km."
+   ],
+   "clerk-16-time-speed-and-distance-b-pyq#4": [
+    "50 minutes is 5/6 of an hour. D = 36 x 5/6 = 30 km, so 2D = 60 km.",
+    "40% less than 50 minutes is 30 minutes, which is half an hour.",
+    "Speed = 60 / 0.5 = 120 km/h."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#4": [
+    "Speeds 3 : 4, so times 4 : 3.",
+    "The gap is 1 part = 20 minutes.",
+    "A has 4 parts: 80 minutes."
+   ],
+   "clerk-16-time-speed-and-distance-b-pyq#7": [
+    "Speeds 3 : 4, so times 4 : 3.",
+    "The gap is 1 part = 30 minutes.",
+    "A has 4 parts: 120 minutes = 2 hours."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#15": [
+    "Start from the slowest: C is 1, B is 3 and A is 6.",
+    "A is 6 times as fast as C, so A needs one-sixth of the time.",
+    "54 / 6 = 9 minutes."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#10": [
+    "Speed is 3/4 of usual, so time is 4/3 of usual.",
+    "The extra one-third is 20 minutes.",
+    "Usual time = 60 minutes."
+   ],
+   "clerk-17-trains-a-graded#27": [
+    "Speed is 7/11 of usual, so time is 11/7 of usual.",
+    "11/7 of the usual time is 22 hours, so the usual time is 14 hours.",
+    "Time saved = 22 - 14 = 8 hours."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#9": [
+    "Late and early: the gap is 10 + 5 = 15 minutes.",
+    "Speeds 4 : 5, so times 5 : 4. One part = 15 minutes.",
+    "At 40 km/h he takes 75 minutes = 1.25 hours. Distance = 40 x 1.25 = 50 km."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#2": [
+    "Present speed = 450 / 9 = 50 km/h.",
+    "Needed speed = 450 / 7.5 = 60 km/h.",
+    "The increase is 10 km/h."
+   ],
+   "clerk-16-time-speed-and-distance-b-pyq#5": [
+    "Cutting the time by three-fifths leaves two-fifths of it.",
+    "Time becomes 2/5, so speed becomes 5/2 = 2.5 times.",
+    "That is 150% more. (The 20 km and 5 km/h are not needed.)"
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#13": [
+    "Try 40 km/h: 200 km takes 5 hours. At 50 km/h it takes 4 hours. One hour less: it fits.",
+    "So the original speed is 40 km/h.",
+    "40 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#17": [
+    "Riding both ways takes 6 - 2 = 4 hours, so riding one way takes 2 hours.",
+    "Walking one way and riding back takes 6, so walking one way takes 4 hours.",
+    "Walking both ways: 8 hours."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#3": [
+    "Choose 120 km each way. Going takes 3 hours and returning takes 2.",
+    "240 km in 5 hours.",
+    "Average speed = 48 km/h."
+   ],
+   "clerk-16-time-speed-and-distance-b-pyq#1": [
+    "Choose 180 km each way. Going takes 3 hours and returning takes 2.",
+    "360 km in 5 hours.",
+    "Average speed = 72 km/h."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#6": [
+    "Walking: 5 x 2 = 10 km. Cycling: 15 x 3 = 45 km.",
+    "55 km in 5 hours: 11 km/h.",
+    "11 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#16": [
+    "Choose 60 km for each third.",
+    "Times: 60 / 20 = 3 hours, 60 / 30 = 2 hours, 60 / 60 = 1 hour.",
+    "180 km in 6 hours: 30 km/h."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#29": [
+    "Average speed there and back at 40 and 60 is 48 km/h.",
+    "In 5 hours the total distance is 48 x 5 = 240 km.",
+    "One way: 120 km."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#18": [
+    "Pretend all 6 hours were by car: 60 x 6 = 360 km.",
+    "The real distance is 40 km more. Each hour by train adds 20 km extra, so 2 hours were by train.",
+    "Distance by train = 80 x 2 = 160 km."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#21": [
+    "Half the distance is 40 km. Three-fifths of the time is 6 hours.",
+    "So 40 km remain and 4 hours are left: 10 km/h.",
+    "10 is not among the numbered options, so the answer is \"None of these\"."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#26": [
+    "Choose 168 km for each half (both 21 and 24 go into it). Times: 8 hours and 7 hours.",
+    "That is 336 km in 15 hours. The real journey takes 10 hours, which is two-thirds as long.",
+    "Distance = 336 x 2/3 = 224 km. It is not among the numbered options: \"None of these\"."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#30": [
+    "Choose 60 km for each part. Times: 20, 15 and 12 hours, 47 hours in all.",
+    "The real time is 47 minutes, one-sixtieth of that, so each part is 1 km.",
+    "Total distance = 3 km."
+   ],
+   "clerk-16-time-speed-and-distance-b-pyq#6": [
+    "Bus: 6 1/4% of 640 = 40 km at 80 km/h = 1/2 hour. Car: 25% = 160 km at 120 km/h = 4/3 hours.",
+    "Bicycle: 30% = 192 km at 32 km/h = 6 hours. Train: the rest, 248 km, at 62 km/h = 4 hours.",
+    "Total = 1/2 + 4/3 + 6 + 4 = 71/6 hours."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#5": [
+    "Approaching: add the speeds. The gap shrinks by 60 km an hour.",
+    "120 / 60 = 2 hours."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#8": [
+    "The gap is 500 m = 0.5 km. Same direction: subtract. The gap shrinks by 2 km an hour.",
+    "0.5 / 2 = 1/4 hour = 15 minutes."
+   ],
+   "clerk-17-trains-b-pyq#12": [
+    "Approaching: 40 + 50 = 90 km an hour. They meet after 180 / 90 = 2 hours.",
+    "Train X has covered 40 x 2 = 80 km.",
+    "It still has 180 - 80 = 100 km to go."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#25": [
+    "They first meet when they have covered one lap between them: 400 m.",
+    "Opposite directions: add. 6 + 4 = 10 m/s.",
+    "400 / 10 = 40 seconds."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#20": [
+    "When they meet, the two together have covered twice the 50 km: 100 km.",
+    "Together they cover 8 + 12 = 20 km an hour, so they meet after 5 hours.",
+    "A has walked 8 x 5 = 40 km. That is the distance from P to R."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#14": [
+    "A travels alone from 8 to 9: 40 km. The gap at 9 am is 310 - 40 = 270 km.",
+    "Approaching: 40 + 50 = 90 km an hour. 270 / 90 = 3 hours.",
+    "Count from 9 am: 12:00 noon."
+   ],
+   "clerk-17-trains-b-pyq#13": [
+    "The first train travels alone from 7 to 8: 60 km. The gap at 8 am is 270 km.",
+    "Approaching: 60 + 75 = 135 km an hour. 270 / 135 = 2 hours.",
+    "Count from 8 am: 10 am."
+   ],
+   "clerk-17-trains-a-graded#12": [
+    "The first train travels alone from 7 to 8: 20 km. The gap at 8 am is 90 km.",
+    "Approaching: 45 km an hour. 90 / 45 = 2 hours, so they meet at 10:00 am.",
+    "10:00 am is not among the numbered options: \"None of these\"."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#19": [
+    "The thief drives alone from 2:30 to 3:00: 60 x 1/2 = 30 km lead.",
+    "Same direction: the gap shrinks by 75 - 60 = 15 km an hour. 30 / 15 = 2 hours.",
+    "Count from 3:00 pm: 5:00 pm."
+   ],
+   "clerk-17-trains-a-graded#17": [
+    "Train A travels alone from 5 to 7: 120 km lead.",
+    "The gap shrinks by 80 - 60 = 20 km an hour: 6 hours.",
+    "Train B has travelled 80 x 6 = 480 km from the station."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#11": [
+    "In one hour the bus loses 60 - 48 = 12 km.",
+    "At 60 km/h, 12 km takes 12 / 60 of an hour.",
+    "That is 12 minutes."
+   ],
+   "clerk-16-time-speed-and-distance-a-graded#28": [
+    "The times after meeting are 4 hours for A and 9 hours for B.",
+    "A's speed : B's speed = square root of 9 : square root of 4 = 3 : 2.",
+    "A's 45 km/h is 3 parts, so B does 30 km/h."
+   ],
+   "clerk-17-trains-a-graded#30": [
+    "Each train takes 5 hours, so each covers one-fifth of the distance every hour. Call the distance 5 units.",
+    "The first train travels alone from 6 to 7: 1 unit. 4 units separate them at 7 am.",
+    "Approaching, they close 2 units an hour: 2 hours. Count from 7 am: 9:00 am."
+   ]
+  }
+ }
+}
