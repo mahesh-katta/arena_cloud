@@ -1,0 +1,660 @@
+{
+ "module": "number-series",
+ "intro": [
+  "A number series hides one rule. Find it with a short list of tests, always in the same order: **gaps, gaps of gaps, ratios, multiply-and-add, taking turns**.",
+  "There are eight short lessons: one per rule family, then the two question forms (wrong number, blank inside). Go in order the first time.",
+  "What the papers ask (Stage A count in Quick revision: 70 IBPS Clerk questions from 15 papers, and about 24 in 7 sister papers, all memory-based):",
+  "| Rule | Label | Lesson |",
+  "| Gaps steady or growing evenly (NS1) | Confirmed, 11 Clerk papers | NS1 (two lessons) |",
+  "| Gaps that are squares, cubes, primes, doubling (NS2) | Confirmed, 9 Clerk papers | NS2 |",
+  "| Multiply or divide by changing numbers (NS4) | Confirmed, 11 Clerk papers | NS4 |",
+  "| Multiply, then add (NS3) | Confirmed, 8 Clerk papers | NS3 |",
+  "| Two patterns taking turns (NS6) | Confirmed, 8 Clerk papers | NS6 |"
+ ],
+ "needs": [],
+ "after": [
+  "That is the whole topic. The **Quick revision** tab has the tests in order and the drills.",
+  "Speed comes from the first glance: slow growth means gaps; fast growth means ratios."
+ ],
+ "lessons": [
+  {
+   "id": "differences",
+   "code": "NS1",
+   "title": "Look at the differences",
+   "plain": "The starting point: subtract each term from the next and see what the gaps do.",
+   "needs": [],
+   "teach": [
+    "Write the gaps between neighbours under the series. Most series show their rule right there.",
+    "- Gaps all the same: add that gap again. 97, 90, 83, 76, 69: gaps -7, so 62.",
+    "- Gaps that grow by the same amount (+3, +6, +9, +12): the next gap grows again (+15).",
+    "**Size check first.** If the terms grow slowly (less than double), it is a difference series. If they jump (x2, x3, x4 ...), go to the multiply lessons.",
+    "Checked papers: difference series were in 11 of the IBPS Clerk papers in the sample."
+   ],
+   "example": {
+    "q": "21, 24, 32, 45, 63, ?",
+    "steps": [
+     "Differences: 3, 8, 13, 18. They grow by 5.",
+     "Next difference 23: 63 + 23 = 86."
+    ],
+    "answer": "86 (IBPS Clerk Prelims 2016, memory-based)."
+   },
+   "check": {
+    "q": "Find the missing number: 7, 11, 19, 31, 47, ?",
+    "options": {
+     "a": "63",
+     "b": "67",
+     "c": "65",
+     "d": "71"
+    },
+    "answer": "B",
+    "why": "Gaps 4, 8, 12, 16: next 20, so 67. (63 repeats the gap of 16.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-a-graded#4",
+     "clerk-03-number-series-a-graded#1",
+     "clerk-03-number-series-b-pyq#69",
+     "clerk-03-number-series-b-pyq#27",
+     "clerk-03-number-series-b-pyq#28",
+     "clerk-03-number-series-b-pyq#55"
+    ],
+    "tags": [
+     "Gaps all the same.",
+     "Gaps grow by 3.",
+     "A real paper: gaps grow by 5.",
+     "Gaps grow by 14.",
+     "Gaps shrink by 1.",
+     "Going down, gaps grow."
+    ]
+   }
+  },
+  {
+   "id": "second-differences",
+   "code": "NS1",
+   "title": "When the differences need a second look",
+   "plain": "New: the gaps are not steady at first glance; take the gaps of the gaps.",
+   "needs": [],
+   "teach": [
+    "Write a second row of differences under the first. If that row is steady, the rule is found.",
+    "5, 6, 10, 19, 35: gaps 1, 4, 9, 16 (squares, or gaps-of-gaps 3, 5, 7). Next gap 25: 60.",
+    "If even the second row is uneven, try a third row before giving up; the papers' series rarely need more."
+   ],
+   "example": {
+    "q": "13, 77, 126, 162, 187, ?",
+    "steps": [
+     "Differences: 64, 49, 36, 25: squares going down.",
+     "Next 16: 187 + 16 = 203."
+    ],
+    "answer": "203 (IBPS Clerk Prelims 2017 model paper, memory-based)."
+   },
+   "check": {
+    "q": "Find the missing number: 2, 5, 11, 22, 40, ?",
+    "options": {
+     "a": "58",
+     "b": "67",
+     "c": "64",
+     "d": "70"
+    },
+    "answer": "B",
+    "why": "Gaps 3, 6, 11, 18; their gaps 3, 5, 7: next 9, so the gap is 27 and the term 67."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-a-graded#3",
+     "clerk-03-number-series-a-graded#13",
+     "clerk-03-number-series-b-pyq#64",
+     "clerk-03-number-series-b-pyq#65",
+     "clerk-03-number-series-b-pyq#24"
+    ],
+    "tags": [
+     "Gaps of gaps are odd numbers.",
+     "Gaps of gaps grow too.",
+     "A real paper.",
+     "Squares hidden in the gaps.",
+     "Large gaps."
+    ]
+   }
+  },
+  {
+   "id": "difference-patterns",
+   "code": "NS2",
+   "title": "Gaps that are squares, cubes, primes or doubling",
+   "plain": "New: the gaps follow a named pattern rather than a steady step.",
+   "needs": [],
+   "teach": [
+    "Know these by sight:",
+    "| Gaps look like | Pattern |",
+    "| 2, 4, 8, 16 | doubling (the series itself is about x2 + something) |",
+    "| 1, 4, 9, 16, 25 | squares |",
+    "| 1, 8, 27, 64 | cubes |",
+    "| 2, 3, 5, 7, 11, 13 | primes |",
+    "| 4, 9, 25, 49, 121 | squares of primes |",
+    "| 1, 2, 6, 24, 120 | each gap x2, x3, x4 ... |",
+    "Checked papers: in 9 IBPS Clerk papers in the sample."
+   ],
+   "example": {
+    "q": "48, 52, 61, 86, 135, ?",
+    "steps": [
+     "Differences: 4, 9, 25, 49: squares of the primes 2, 3, 5, 7.",
+     "Next 11 x 11 = 121: 135 + 121 = 256."
+    ],
+    "answer": "256 (IBPS Clerk Prelims 12 Dec 2021, memory-based)."
+   },
+   "check": {
+    "q": "Find the missing number: 2, 3, 7, 16, 32, ?",
+    "options": {
+     "a": "57",
+     "b": "48",
+     "c": "52",
+     "d": "64"
+    },
+    "answer": "A",
+    "why": "Gaps 1, 4, 9, 16: next 25, so 57. (48 repeats 16.)"
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-a-graded#5",
+     "clerk-03-number-series-b-pyq#26",
+     "clerk-03-number-series-b-pyq#23",
+     "clerk-03-number-series-b-pyq#22",
+     "clerk-03-number-series-b-pyq#40",
+     "clerk-03-number-series-b-pyq#6"
+    ],
+    "tags": [
+     "Gaps double.",
+     "Gaps double, a real paper.",
+     "Gaps are cubes.",
+     "Gaps are primes.",
+     "Gaps are squares of primes.",
+     "Gaps x2, x3, x4."
+    ]
+   }
+  },
+  {
+   "id": "multiply",
+   "code": "NS4",
+   "title": "Multiply or divide by changing numbers",
+   "plain": "New: the terms jump. Divide each term by the one before to find the multipliers.",
+   "needs": [],
+   "teach": [
+    "When the terms grow (or shrink) fast, look at the **ratios**: next / previous.",
+    "| Ratios | Rule |",
+    "| 3, 4, 5, 6 | multiply by numbers going up by 1 |",
+    "| 1/7, 1/6, 1/5, 1/4 | divide by 7, 6, 5, 4 |",
+    "| 0.5, 1, 1.5, 2 | multiply by halves going up |",
+    "| 0.5, 1, 2, 4 | the multiplier doubles |",
+    "Checked papers: in 11 IBPS Clerk papers in the sample."
+   ],
+   "example": {
+    "q": "12600, 1800, 300, 60, ?, 5",
+    "steps": [
+     "12600 / 7 = 1800, / 6 = 300, / 5 = 60.",
+     "Next / 4: 15. Check: 15 / 3 = 5."
+    ],
+    "answer": "15 (IBPS Clerk Prelims 24 Aug 2024, memory-based)."
+   },
+   "check": {
+    "q": "Find the missing number: 3, 3, 6, 18, 72, ?",
+    "options": {
+     "a": "288",
+     "b": "360",
+     "c": "144",
+     "d": "432"
+    },
+    "answer": "B",
+    "why": "x1, x2, x3, x4: next x5, so 360."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-b-pyq#11",
+     "clerk-03-number-series-b-pyq#5",
+     "clerk-03-number-series-b-pyq#8",
+     "clerk-03-number-series-b-pyq#13",
+     "clerk-03-number-series-b-pyq#59",
+     "clerk-03-number-series-a-graded#10"
+    ],
+    "tags": [
+     "Multipliers 3, 4, 5, 6.",
+     "Multipliers 2, 3, 4.",
+     "Dividing by 7, 6, 5.",
+     "Dividing by 6, 5, 4.",
+     "The multiplier doubles.",
+     "Halves going up."
+    ]
+   }
+  },
+  {
+   "id": "multiply-add",
+   "code": "NS3",
+   "title": "Multiply, then add",
+   "plain": "New: each step multiplies and then adds (or takes away) a small number.",
+   "needs": [],
+   "teach": [
+    "If plain ratios are not whole, try **x then +**. Divide roughly to guess the multiplier, then see what is left over.",
+    "| Steps | Example |",
+    "| x2 + 1, x2 + 2, x2 + 3 | 5, 11, 24, 51, 106 |",
+    "| x1 + 1, x2 + 2, x3 + 3 | 5, 6, 14, 45, 184 |",
+    "| x1 + 1², x2 + 2², x3 + 3² | 3, 4, 12, 45, 196 |",
+    "| x1 + 2, x2 + 2, x3 + 2 | 19, 21, 44, 134 |",
+    "Checked papers: in 8 IBPS Clerk papers in the sample."
+   ],
+   "example": {
+    "q": "19, 21, 44, 134, ?, 2692",
+    "steps": [
+     "19 x 1 + 2 = 21; 21 x 2 + 2 = 44; 44 x 3 + 2 = 134.",
+     "134 x 4 + 2 = 538; check 538 x 5 + 2 = 2692."
+    ],
+    "answer": "538 (IBPS Clerk Prelims 4 Oct 2025, memory-based)."
+   },
+   "check": {
+    "q": "Find the missing number: 2, 5, 11, 23, 47, ?",
+    "options": {
+     "a": "94",
+     "b": "95",
+     "c": "97",
+     "d": "93"
+    },
+    "answer": "B",
+    "why": "x2 + 1 each time: 47 x 2 + 1 = 95."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-a-graded#22",
+     "clerk-03-number-series-a-graded#11",
+     "clerk-03-number-series-b-pyq#1",
+     "clerk-03-number-series-b-pyq#4",
+     "clerk-03-number-series-b-pyq#62",
+     "clerk-03-number-series-b-pyq#14"
+    ],
+    "tags": [
+     "x2 and growing additions.",
+     "x1 + 1, x2 + 2 ...",
+     "Growing multipliers, same addition.",
+     "A real paper.",
+     "Add squares.",
+     "A decimal start."
+    ]
+   }
+  },
+  {
+   "id": "taking-turns",
+   "code": "NS6",
+   "title": "Two patterns taking turns",
+   "plain": "New: the series goes up and down, or two series are woven together.",
+   "needs": [],
+   "teach": [
+    "If the series zig-zags, look at the gaps with their signs: +9, -13, +17, -21 grow by 4 in size.",
+    "Or split it: the 1st, 3rd, 5th terms make one series; the 2nd, 4th, 6th another.",
+    "Or two operations take turns: x2, +3, x2, +3.",
+    "Checked papers: in 8 IBPS Clerk papers in the sample."
+   ],
+   "example": {
+    "q": "69, 78, 65, 82, 61, ?",
+    "steps": [
+     "Gaps: +9, -13, +17, -21: sizes grow by 4, signs take turns.",
+     "Next +25: 86."
+    ],
+    "answer": "86 (IBPS Clerk Prelims 2024, memory-based)."
+   },
+   "check": {
+    "q": "Find the missing number: 10, 20, 15, 30, 25, ?",
+    "options": {
+     "a": "50",
+     "b": "35",
+     "c": "40",
+     "d": "45"
+    },
+    "answer": "A",
+    "why": "x2 then -5 taking turns: 25 x 2 = 50."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-b-pyq#57",
+     "clerk-03-number-series-b-pyq#12",
+     "clerk-03-number-series-b-pyq#54",
+     "clerk-03-number-series-b-pyq#43",
+     "clerk-03-number-series-a-graded#20",
+     "clerk-03-number-series-b-pyq#17"
+    ],
+    "tags": [
+     "Gaps shrink, signs turn.",
+     "Gaps grow, signs turn.",
+     "Gaps are squares, signs turn.",
+     "Two series woven together.",
+     "Two operations take turns.",
+     "Gaps from two patterns."
+    ]
+   }
+  },
+  {
+   "id": "wrong-number",
+   "code": "NS1",
+   "title": "Find the wrong number",
+   "plain": "New: one term breaks the rule. Find the rule from the others.",
+   "needs": [],
+   "teach": [
+    "Use the same tests (gaps, ratios, multiply-add). The wrong term shows itself as the one place where the rule fails; usually two neighbouring gaps go wrong together.",
+    "Check the term before and after it: when the rule works again after one correction, you have it.",
+    "Some series use named families: primes (11, 13, 17, 19, 23), squares (81, 100, 121, 144, 169).",
+    "Checked papers: wrong-number series appeared in 5 of the IBPS Clerk papers in the sample (2019, 2021, Dec 2021, Sep 2022)."
+   ],
+   "example": {
+    "q": "Find the wrong number: 5, 8, 16, 26, 50, 98, 194",
+    "steps": [
+     "Gaps: 3, 8, 10, 24, 48, 96. From 24 on they double; going back: 12, 6, 3.",
+     "So the gaps should be 3, 6, 12, 24: the third term should be 5 + 3 + 6 = 14.",
+     "16 is wrong."
+    ],
+    "answer": "16 (IBPS Clerk Prelims 2019, memory-based)."
+   },
+   "check": {
+    "q": "Find the wrong number: 3, 6, 12, 24, 46, 96",
+    "options": {
+     "a": "46",
+     "b": "24",
+     "c": "12",
+     "d": "96"
+    },
+    "answer": "A",
+    "why": "Each term doubles; 24 x 2 = 48, not 46."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-b-pyq#31",
+     "clerk-03-number-series-b-pyq#35",
+     "clerk-03-number-series-b-pyq#49",
+     "clerk-03-number-series-b-pyq#38",
+     "clerk-03-number-series-b-pyq#36",
+     "clerk-03-number-series-a-graded#8"
+    ],
+    "tags": [
+     "Gaps grow evenly.",
+     "The last term is wrong.",
+     "Gaps double.",
+     "Multipliers 2, 3, 4.",
+     "Two series woven together.",
+     "Prime numbers."
+    ]
+   }
+  },
+  {
+   "id": "blank-inside",
+   "code": "NS2",
+   "title": "When the blank is in the middle",
+   "plain": "New: the question mark is not the last term. Work from both sides.",
+   "needs": [],
+   "teach": [
+    "Find the rule from the terms you have on either side of the blank; then fill it and check it fits **both** its neighbours.",
+    "A blank first or second: work backwards (subtract instead of add, divide instead of multiply).",
+    "Checked papers: about half of the missing-number series in the sample have the blank inside."
+   ],
+   "example": {
+    "q": "8, 18, 38, 78, ?, 318",
+    "steps": [
+     "Gaps: 10, 20, 40, so they double.",
+     "Next gap 80: 78 + 80 = 158; check 158 + 160 = 318."
+    ],
+    "answer": "158 (IBPS Clerk Prelims 2022, memory-based)."
+   },
+   "check": {
+    "q": "Find the missing number: 5, 9, ?, 33, 65",
+    "options": {
+     "a": "15",
+     "b": "17",
+     "c": "19",
+     "d": "21"
+    },
+    "answer": "B",
+    "why": "Gaps 4, 8, 16, 32 double: 9 + 8 = 17, and 17 + 16 = 33 checks."
+   },
+   "practice": {
+    "bank": "clerk",
+    "keys": [
+     "clerk-03-number-series-b-pyq#20",
+     "clerk-03-number-series-b-pyq#21",
+     "clerk-03-number-series-b-pyq#3",
+     "clerk-03-number-series-b-pyq#25",
+     "clerk-03-number-series-b-pyq#2",
+     "clerk-03-number-series-b-pyq#10"
+    ],
+    "tags": [
+     "The blank second; gaps shrink.",
+     "Gaps double.",
+     "Gaps are primes, going down.",
+     "Cubes going down.",
+     "Multiply, then take away.",
+     "The blank second, multiply-add."
+    ]
+   }
+  }
+ ],
+ "work": {
+  "clerk": {
+   "clerk-03-number-series-a-graded#4": [
+    "Differences: -7, -7, -7, -7, -7.",
+    "So ? = 62."
+   ],
+   "clerk-03-number-series-a-graded#1": [
+    "Differences: 3, 6, 9, 12, 15.",
+    "Their differences: 3, 3, 3, 3, a steady step.",
+    "So ? = 57."
+   ],
+   "clerk-03-number-series-b-pyq#69": [
+    "Differences: 3, 8, 13, 18, 23.",
+    "Their differences: 5, 5, 5, 5, a steady step.",
+    "So ? = 86."
+   ],
+   "clerk-03-number-series-b-pyq#27": [
+    "Differences: 14, 28, 42, 56, 70.",
+    "Their differences: 14, 14, 14, 14, a steady step.",
+    "So ? = 218."
+   ],
+   "clerk-03-number-series-b-pyq#28": [
+    "Differences: 8, 7, 6, 5, 4.",
+    "Their differences: -1, -1, -1, -1, a steady step.",
+    "So ? = 45."
+   ],
+   "clerk-03-number-series-b-pyq#55": [
+    "Differences: -7, -14, -21, -28, -35.",
+    "Their differences: -7, -7, -7, -7, a steady step.",
+    "So ? = 130."
+   ],
+   "clerk-03-number-series-a-graded#3": [
+    "Differences: 1, 4, 9, 16, 25.",
+    "Their differences: 3, 5, 7, 9, a steady step.",
+    "So ? = 60."
+   ],
+   "clerk-03-number-series-a-graded#13": [
+    "Differences: 3, 6, 11, 18, 27.",
+    "Again: 3, 5, 7, 9; once more: 2, 2, 2.",
+    "So ? = 72."
+   ],
+   "clerk-03-number-series-b-pyq#64": [
+    "Differences: 0, 2, 6, 12, 20.",
+    "Again: 2, 4, 6, 8; once more: 2, 2, 2.",
+    "So ? = 45."
+   ],
+   "clerk-03-number-series-b-pyq#65": [
+    "Differences: 64, 49, 36, 25, 16.",
+    "Their differences: -15, -13, -11, -9, a steady step.",
+    "So ? = 203."
+   ],
+   "clerk-03-number-series-b-pyq#24": [
+    "Differences: 25, 100, 225, 400, 625.",
+    "Again: 75, 125, 175, 225; once more: 50, 50, 50.",
+    "So ? = 1385."
+   ],
+   "clerk-03-number-series-a-graded#5": [
+    "Differences: 4, 8, 16, 32, 64: each one doubles.",
+    "So ? = 127."
+   ],
+   "clerk-03-number-series-b-pyq#26": [
+    "Differences: 6, 12, 24, 48, 96: each one doubles.",
+    "So ? = 190."
+   ],
+   "clerk-03-number-series-b-pyq#23": [
+    "Differences: 8, 27, 64, 125, 216: they are cubes.",
+    "So ? = 441."
+   ],
+   "clerk-03-number-series-b-pyq#22": [
+    "Differences: 5, 7, 11, 13, 17: they are primes.",
+    "So ? = 46."
+   ],
+   "clerk-03-number-series-b-pyq#40": [
+    "Differences: 4, 9, 25, 49, 121: they are squares of primes.",
+    "So ? = 256."
+   ],
+   "clerk-03-number-series-b-pyq#6": [
+    "Differences: 1, 2, 6, 24, 120: they multiply by numbers that change evenly.",
+    "So ? = 253."
+   ],
+   "clerk-03-number-series-b-pyq#11": [
+    "2 x 3 = 6; 6 x 4 = 24; 24 x 5 = 120;",
+    "120 x 6 = 720; 720 x 7 = 5040.",
+    "So ? = 5040."
+   ],
+   "clerk-03-number-series-b-pyq#5": [
+    "8 x 2 = 16; 16 x 3 = 48; 48 x 4 = 192;",
+    "192 x 5 = 960; 960 x 6 = 5760.",
+    "So ? = 960."
+   ],
+   "clerk-03-number-series-b-pyq#8": [
+    "12,600 / 7 = 1800; 1800 / 6 = 300; 300 / 5 = 60;",
+    "60 / 4 = 15; 15 / 3 = 5.",
+    "So ? = 15."
+   ],
+   "clerk-03-number-series-b-pyq#13": [
+    "3600 / 6 = 600; 600 / 5 = 120; 120 / 4 = 30;",
+    "30 / 3 = 10; 10 / 2 = 5.",
+    "So ? = 10."
+   ],
+   "clerk-03-number-series-b-pyq#59": [
+    "8 / 2 = 4; 4 x 1 = 4; 4 x 2 = 8;",
+    "8 x 4 = 32; 32 x 8 = 256.",
+    "So ? = 256."
+   ],
+   "clerk-03-number-series-a-graded#10": [
+    "16 / 2 = 8; 8 x 1 = 8; 8 x 1.5 = 12;",
+    "12 x 2 = 24; 24 x 2.5 = 60.",
+    "So ? = 60."
+   ],
+   "clerk-03-number-series-a-graded#22": [
+    "5 x 2 + 1 = 11; 11 x 2 + 2 = 24; 24 x 2 + 3 = 51;",
+    "51 x 2 + 4 = 106; 106 x 2 + 5 = 217.",
+    "So ? = 217."
+   ],
+   "clerk-03-number-series-a-graded#11": [
+    "5 x 1 + 1 = 6; 6 x 2 + 2 = 14; 14 x 3 + 3 = 45;",
+    "45 x 4 + 4 = 184; 184 x 5 + 5 = 925.",
+    "So ? = 925."
+   ],
+   "clerk-03-number-series-b-pyq#1": [
+    "19 x 1 + 2 = 21; 21 x 2 + 2 = 44; 44 x 3 + 2 = 134;",
+    "134 x 4 + 2 = 538; 538 x 5 + 2 = 2692.",
+    "So ? = 538."
+   ],
+   "clerk-03-number-series-b-pyq#4": [
+    "12 x 1 + 1 = 13; 13 x 2 + 2 = 28; 28 x 3 + 3 = 87;",
+    "87 x 4 + 4 = 352; 352 x 5 + 5 = 1765.",
+    "So ? = 352."
+   ],
+   "clerk-03-number-series-b-pyq#62": [
+    "3 x 1 + 1 = 4; 4 x 2 + 4 = 12; 12 x 3 + 9 = 45;",
+    "45 x 4 + 16 = 196; 196 x 5 + 25 = 1005.",
+    "So ? = 1005."
+   ],
+   "clerk-03-number-series-b-pyq#14": [
+    "2.5 x 2 + 2 = 7; 7 x 3 + 3 = 24; 24 x 4 + 4 = 100;",
+    "100 x 5 + 5 = 505; 505 x 6 + 6 = 3036.",
+    "So ? = 3036."
+   ],
+   "clerk-03-number-series-b-pyq#57": [
+    "Differences: -25, 20, -15, 10, -5: the signs take turns.",
+    "So ? = 240."
+   ],
+   "clerk-03-number-series-b-pyq#12": [
+    "Differences: 9, -13, 17, -21, 25: the signs take turns.",
+    "So ? = 86."
+   ],
+   "clerk-03-number-series-b-pyq#54": [
+    "Differences: 4, -9, 16, -25, 36: the signs take turns.",
+    "So ? = 72."
+   ],
+   "clerk-03-number-series-b-pyq#43": [
+    "Odd places: 250, 200, 160. Even places: 50, 40, 32.",
+    "So ? = 32."
+   ],
+   "clerk-03-number-series-a-graded#20": [
+    "Odd places: 6, 15, 33, 69. Even places: 12, 30, 66.",
+    "So ? = 69."
+   ],
+   "clerk-03-number-series-b-pyq#17": [
+    "Odd places: 148, 200, 260. Even places: 185, 241, 305.",
+    "So ? = 305."
+   ],
+   "clerk-03-number-series-b-pyq#31": [
+    "Differences: -16, -32, -48, -64, -80, -96.",
+    "Their differences: -16, -16, -16, -16, -16, a steady step.",
+    "The wrong number is 671; the rule gives 670 there."
+   ],
+   "clerk-03-number-series-b-pyq#35": [
+    "Differences: 20, 23, 26, 29, 32, 35.",
+    "Their differences: 3, 3, 3, 3, 3, a steady step.",
+    "The wrong number is 223; the rule gives 221 there."
+   ],
+   "clerk-03-number-series-b-pyq#49": [
+    "Differences: 3, 6, 12, 24, 48, 96: each one doubles.",
+    "The wrong number is 16; the rule gives 14 there."
+   ],
+   "clerk-03-number-series-b-pyq#38": [
+    "4 x 2 = 8; 8 x 3 = 24; 24 x 4 = 96;",
+    "96 x 5 = 480; 480 x 6 = 2880; 2880 x 7 = 20,160.",
+    "The wrong number is 485; the rule gives 480 there."
+   ],
+   "clerk-03-number-series-b-pyq#36": [
+    "Odd places: 15, 30, 60, 120. Even places: 90, 180, 360.",
+    "The wrong number is 480; the rule gives 360 there."
+   ],
+   "clerk-03-number-series-a-graded#8": [
+    "11, 13, 17, 19, ... are the primes in order.",
+    "After 19 comes 23, not 21.",
+    "The wrong number is 21."
+   ],
+   "clerk-03-number-series-b-pyq#20": [
+    "Differences: -70, -56, -42, -28, -14.",
+    "Their differences: 14, 14, 14, 14, a steady step.",
+    "So ? = 145."
+   ],
+   "clerk-03-number-series-b-pyq#21": [
+    "Differences: 10, 20, 40, 80, 160: each one doubles.",
+    "So ? = 158."
+   ],
+   "clerk-03-number-series-b-pyq#3": [
+    "Differences: 37, 31, 29, 23, 19: they are primes.",
+    "So ? = 87."
+   ],
+   "clerk-03-number-series-b-pyq#25": [
+    "Differences going down: 216, 125, 64, 27, 8: cubes 6 to 2.",
+    "444 - 216 = 228; check 228 - 125 = 103.",
+    "So ? = 228."
+   ],
+   "clerk-03-number-series-b-pyq#2": [
+    "12 x 1 - 2 = 10; 10 x 2 - 3 = 17; 17 x 3 - 4 = 47;",
+    "47 x 4 - 5 = 183; 183 x 5 - 6 = 909.",
+    "So ? = 183."
+   ],
+   "clerk-03-number-series-b-pyq#10": [
+    "21 x 2 + 2 = 44; 44 x 3 + 3 = 135; 135 x 4 + 4 = 544;",
+    "544 x 5 + 5 = 2725; 2725 x 6 + 6 = 16,356.",
+    "So ? = 44."
+   ]
+  }
+ }
+}

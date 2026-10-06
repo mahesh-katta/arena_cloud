@@ -135,6 +135,11 @@ Three files joined into one: the Quant Speed Mastery Modules, the Quant Pattern 
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>2 IBPS Clerk Prelims PYQs (2018, Dec 2021), none in the 12 sister papers + 182 bank questions</td>
+<td>19</td>
+<td>Number Series</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>70 IBPS Clerk Prelims PYQs (15 paper labels) + about 24 sister-exam questions (7 papers) + 100 clerk bank questions</td>
 </tr>
 </table>
 The archetype counts, labels and question IDs for every module are kept in the companion file “Bank Clerk Quant - Pattern Index”.
@@ -8784,6 +8789,50 @@ Ten archetypes. "Papers" counts paper labels, IBPS Clerk and sister papers toget
 ### Non-linear warnings
 - Drawing two at once is not (1/2) x (1/2): the second draw has one fewer.
 - "Either" with an overlap double-counts unless the overlap is removed.
+# Number Series - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 70 IBPS Clerk Prelims number series questions from 15 paper labels (in your bank as PYQ-SER-01 to 70; 42 missing-number, 28 wrong-number), and about 24 sister-exam questions from 7 papers (SBI Clerk Feb 2025, IBPS RRB Clerk Dec 2025 three shifts, IBPS PO 2025 and 2026). Bank questions used: 100 clerk questions (30 constructed, 70 PYQ), every one classified by a rule-finding script. The floor is met many times over. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** A series hides one rule. Test in a fixed order and stop at the first that fits: **gaps, gaps of gaps, ratios, multiply-and-add, taking turns**. The size of the growth tells you where to start.
+### The test order
+1. **Growth under double each step:** write the gaps. Steady gaps or evenly growing gaps settle most of these.
+2. **Gaps uneven:** write the gaps of the gaps; or recognise the gaps as squares, cubes, primes or doubling.
+3. **Growth x2 or more each step:** write the ratios (next / previous). Ratios 2, 3, 4 ...; 1/7, 1/6, 1/5 ...; 0.5, 1, 1.5 ...
+4. **Ratios almost whole:** multiply-and-add. Guess the multiplier, see what is left over: x2 + 1, x1 + 1, x2 + 2, x3 + 3 ...
+5. **Zig-zag:** gaps with alternating signs, or two series woven together, or two operations taking turns.
+### Recognition grid
+<table header-row="true">
+<tr>
+<td>Gaps or ratios</td>
+<td>Rule</td>
+</tr>
+<tr>
+<td>1, 4, 9, 16, 25</td>
+<td>squares</td>
+</tr>
+<tr>
+<td>1, 8, 27, 64, 125</td>
+<td>cubes</td>
+</tr>
+<tr>
+<td>2, 3, 5, 7, 11, 13</td>
+<td>primes</td>
+</tr>
+<tr>
+<td>4, 9, 25, 49, 121</td>
+<td>squares of primes</td>
+</tr>
+<tr>
+<td>1, 2, 6, 24, 120</td>
+<td>x2, x3, x4 ... on the gaps</td>
+</tr>
+<tr>
+<td>ratios 0.5, 1, 2, 4</td>
+<td>the multiplier doubles</td>
+</tr>
+</table>
+### Non-linear warnings
+- A wrong number spoils **two** neighbouring gaps; one corrected term must fix both.
+- With the blank inside, check the filled value against both neighbours.
 ## 2. Archetypes
 <table header-row="true">
 <tr>
@@ -8948,6 +8997,29 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>Confirmed (8 papers)</td>
 <td>5</td>
 <td>3</td>
+<td>NS1</td>
+<td>Gaps steady or growing evenly</td>
+<td>Confirmed (11 Clerk papers)</td>
+<td>20</td>
+<td>5</td>
+<td>28</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>NS4</td>
+<td>Multiply or divide by changing numbers</td>
+<td>Confirmed (11 Clerk papers)</td>
+<td>12</td>
+<td>3</td>
+<td>15</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>NS2</td>
+<td>Gaps that are squares, cubes, primes or doubling</td>
+<td>Confirmed (9 Clerk papers)</td>
+<td>16</td>
+<td>7</td>
 <td>21</td>
 <td>Core</td>
 </tr>
@@ -9010,6 +9082,11 @@ The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% ri
 <td>Seen once (inside the 2018 question)</td>
 <td>1</td>
 <td>0</td>
+<td>NS3</td>
+<td>Multiply, then add</td>
+<td>Confirmed (8 Clerk papers)</td>
+<td>13</td>
+<td>5</td>
 <td>20</td>
 <td>Core</td>
 </tr>
@@ -9507,6 +9584,72 @@ Two cards are drawn one after the other without replacement. What is the probabi
 - **30-second exam method.** 4/52 x 3/51 = 12/2652 = 1/221. **Answer (A).**
 - **Option elimination hack.** Must be below (1/13)² = 1/169: (A), (D) or (E); compute.
 - **IBPS trap warning.** (B) assumes replacement.
+<td>NS6</td>
+<td>Two patterns taking turns</td>
+<td>Confirmed (8 Clerk papers)</td>
+<td>9</td>
+<td>3</td>
+<td>13</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>NS5</td>
+<td>Named families (primes, n² ± 1, each term the sum of two before)</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>Insurance</td>
+</tr>
+</table>
+Sister counts were classified by hand from the paper text, without options; treat them as close, not exact.
+### Core archetypes (Confirmed)
+**NS1. Gaps. Confirmed.** *Shortcut engine:* gaps, then gaps of gaps. *Worked example (IBPS Clerk Prelims 2016):* 21, 24, 32, 45, 63: gaps 3, 8, 13, 18 grow by 5; next 23, so 86.
+**NS4. Multiply or divide. Confirmed.** *Shortcut engine:* ratios. *Worked example (IBPS Clerk Prelims 24 Aug 2024 Shift 1):* 12600, 1800, 300, 60, ?, 5: divide by 7, 6, 5, 4, 3: 15.
+**NS2. Gap patterns. Confirmed.** *Shortcut engine:* name the gaps from the recognition grid. *Worked example (IBPS Clerk Prelims 12 Dec 2021 Set 1):* 48, 52, 61, 86, 135: gaps 4, 9, 25, 49 (squares of primes); next 121: 256.
+**NS3. Multiply then add. Confirmed.** *Shortcut engine:* guess the multiplier from rough division, the remainder gives the addition. *Worked example (IBPS Clerk Prelims 4 Oct 2025 Shift 3):* 19, 21, 44, 134: x1 + 2, x2 + 2, x3 + 2; next x4 + 2 = 538.
+**NS6. Taking turns. Confirmed.** *Shortcut engine:* signed gaps, or split odd and even places. *Worked example (IBPS Clerk Prelims 2024):* 69, 78, 65, 82, 61: +9, -13, +17, -21; next +25 = 86.
+### Insurance archetype (Bank only)
+**NS5. Named families.** Primes in order; n² + 1 and n² - 1 taking turns; each term the sum of the two before.
+## 3. Drill Set
+Six original questions, one per Confirmed archetype and the wrong-number form; every answer was checked by the rule-finding script, and the script found exactly one option that fits.
+### Drill 1. Easy cutoff-buster (NS1)
+17, 20, 26, 35, 47, ?
+1. 62 (B) 60 (C) 59 (D) 65 (E) 64
+- **Conventional method.** Gaps 3, 6, 9, 12; next 15.
+- **30-second exam method.** 47 + 15 = 62. **Answer (A).**
+- **Option elimination hack.** Every gap is a multiple of 3, so the answer leaves remainder 2 on division by 3, like 47: 62, 59 and 65 qualify; only 62 continues the gaps.
+- **IBPS trap warning.** (B) 60 adds 13 by misreading the step.
+### Drill 2. Gap pattern (NS2)
+4, 9, 25, 49, 121, ?
+1. 144 (B) 169 (C) 196 (D) 225 (E) 256
+- **30-second exam method.** The terms are squares of the primes 2, 3, 5, 7, 11; next 13² = 169. **Answer (B).**
+- **Option elimination hack.** Only squares of primes qualify: 169.
+- **IBPS trap warning.** (A) 144 = 12² continues "squares" without the primes.
+### Drill 3. Multiply (NS4)
+7, 7, 14, 42, 168, ?
+1. 504 (B) 672 (C) 840 (D) 1008 (E) 336
+- **30-second exam method.** x1, x2, x3, x4; next x5 = 840. **Answer (C).**
+- **Option elimination hack.** The answer is 168 times a whole number above 4: only 840.
+- **IBPS trap warning.** (A) 504 repeats x3.
+### Drill 4. Multiply then add (NS3)
+6, 13, 40, 161, 806, ?
+1. 4837 (B) 4842 (C) 4830 (D) 4841 (E) 4846
+- **30-second exam method.** x2 + 1, x3 + 1, x4 + 1, x5 + 1; next 806 x 6 + 1 = 4837. **Answer (A).**
+- **Option elimination hack.** The answer is one more than a multiple of 806 x 6 = 4836: only 4837.
+- **IBPS trap warning.** (C) 4830 drops the +1 and miscounts.
+### Drill 5. Taking turns (NS6)
+40, 47, 36, 51, 32, ?
+1. 53 (B) 55 (C) 57 (D) 49 (E) 51
+- **30-second exam method.** +7, -11, +15, -19: sizes grow by 4; next +23: 55. **Answer (B).**
+- **Option elimination hack.** The next step is up, and bigger than 19: above 51: (B) or (C).
+- **IBPS trap warning.** (E) 51 repeats the last peak.
+### Drill 6. Wrong number (NS2)
+3, 5, 9, 17, 33, 66, 129
+1. 66 (B) 33 (C) 17 (D) 129 (E) 9
+- **30-second exam method.** Gaps 2, 4, 8, 16 double; next 32 gives 65, not 66; then 65 + 64 = 129 fits. **Answer (A).**
+- **Option elimination hack.** One fix must repair two gaps: changing 66 to 65 makes 32 and 64.
+- **IBPS trap warning.** (D) 129 looks odd but is correct.
 ## 4. Cheat Sheet & 30-Second Recall Matrix
 <table header-row="true">
 <tr>
@@ -9739,6 +9882,35 @@ Two cards are drawn one after the other without replacement. What is the probabi
 ## 5. Practice Ladder
 11 bank questions in three rungs. IDs: G-name-n is question n of the Guidely probability set with that name.
 **Rung 1. Untimed until all correct.**
+<td>NS1</td>
+<td>slow, steady growth</td>
+<td>gaps; gaps of gaps</td>
+</tr>
+<tr>
+<td>NS2</td>
+<td>slow growth, uneven gaps</td>
+<td>name the gaps (squares, cubes, primes, doubling)</td>
+</tr>
+<tr>
+<td>NS4</td>
+<td>fast growth, whole ratios</td>
+<td>ratios</td>
+</tr>
+<tr>
+<td>NS3</td>
+<td>fast growth, ratios not whole</td>
+<td>x then +</td>
+</tr>
+<tr>
+<td>NS6</td>
+<td>zig-zag</td>
+<td>signed gaps, or split odd and even places</td>
+</tr>
+</table>
+**Fallback.** If nothing fits after the five tests, split odd and even places; then try the gaps of the gaps once more.
+## 5. Practice Ladder
+23 bank questions in three rungs. IDs: CON-SER and PYQ-SER are `source.id` values in `clerk/questions.json`.
+**Rung 1. Untimed until all correct.** One test each.
 <table header-row="true">
 <tr>
 <td>ID</td>
@@ -9876,6 +10048,32 @@ Two cards are drawn one after the other without replacement. What is the probabi
 </tr>
 </table>
 **Rung 2. 60 seconds each.** The Confirmed archetypes as the papers set them.
+<td>CON-SER-04</td>
+<td>NS1</td>
+<td>62</td>
+</tr>
+<tr>
+<td>CON-SER-01</td>
+<td>NS1</td>
+<td>57</td>
+</tr>
+<tr>
+<td>PYQ-SER-30</td>
+<td>NS1</td>
+<td>86</td>
+</tr>
+<tr>
+<td>PYQ-SER-38</td>
+<td>NS4</td>
+<td>5040</td>
+</tr>
+<tr>
+<td>CON-SER-05</td>
+<td>NS2</td>
+<td>127</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.** Missing numbers from the papers.
 <table header-row="true">
 <tr>
 <td>ID</td>
@@ -10381,6 +10579,57 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 </tr>
 </table>
 **Rung 2. 60 seconds each.**
+<td>PYQ-SER-29</td>
+<td>NS1</td>
+<td>43</td>
+</tr>
+<tr>
+<td>PYQ-SER-27</td>
+<td>NS1</td>
+<td>99</td>
+</tr>
+<tr>
+<td>PYQ-SER-31</td>
+<td>NS2</td>
+<td>52</td>
+</tr>
+<tr>
+<td>PYQ-SER-20</td>
+<td>NS2</td>
+<td>46</td>
+</tr>
+<tr>
+<td>PYQ-SER-42</td>
+<td>NS4</td>
+<td>192</td>
+</tr>
+<tr>
+<td>PYQ-SER-54</td>
+<td>NS4</td>
+<td>128</td>
+</tr>
+<tr>
+<td>PYQ-SER-60</td>
+<td>NS3</td>
+<td>417</td>
+</tr>
+<tr>
+<td>PYQ-SER-28</td>
+<td>NS3</td>
+<td>385</td>
+</tr>
+<tr>
+<td>PYQ-SER-17</td>
+<td>NS6</td>
+<td>180</td>
+</tr>
+<tr>
+<td>PYQ-SER-43</td>
+<td>NS6</td>
+<td>27.5</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.** Wrong numbers from the papers.
 <table header-row="true">
 <tr>
 <td>ID</td>
@@ -10526,6 +10775,44 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>G-same-or-different-colour-3</td>
 <td>PB4</td>
 <td>1/13</td>
+<td>PYQ-SER-65</td>
+<td>NS1</td>
+<td>73</td>
+</tr>
+<tr>
+<td>PYQ-SER-09</td>
+<td>NS1</td>
+<td>627</td>
+</tr>
+<tr>
+<td>PYQ-SER-62</td>
+<td>NS2</td>
+<td>50</td>
+</tr>
+<tr>
+<td>PYQ-SER-69</td>
+<td>NS2</td>
+<td>49</td>
+</tr>
+<tr>
+<td>PYQ-SER-37</td>
+<td>NS3</td>
+<td>40</td>
+</tr>
+<tr>
+<td>PYQ-SER-66</td>
+<td>NS3</td>
+<td>68</td>
+</tr>
+<tr>
+<td>PYQ-SER-34</td>
+<td>NS4</td>
+<td>156.5</td>
+</tr>
+<tr>
+<td>PYQ-SER-61</td>
+<td>NS4</td>
+<td>250</td>
 </tr>
 </table>
 ## 6. Verification Log
@@ -10582,6 +10869,24 @@ Built 6 Oct 2026.
 - PB6: G-variables-1, 5, 8 · G-balls-13, 16
 - PB7: G-with-replacement-1, 4, 7 · G-without-replacement-1, 2
 - PB8: G-cards-4 · G-dice-2
+- **Answers and archetypes.** A rule-finding script tried every family on all 100 clerk questions with each option in place. On 89 questions exactly the keyed option fits a rule; that rule names the archetype. The other 11 were solved by hand (rules the script does not hold: primes as terms, n² ± 1 taking turns, sum of the two before, cubes counting down, squares of primes going down, signed gaps of n(n + 1)); all 11 agree with their keys.
+- **Lesson workings.** The working of every practice question is generated from the rule found, and its last line is checked to show the keyed option.
+- **Drills.** All 6 were checked by the script, and the script found exactly one fitting option in each.
+### What failed and was fixed
+- The first script matched "differences are squares" on an empty list for decimal series and misled the count; it now needs at least three gaps.
+- Drill 4's first options did not include the answer (4837); they were rewritten.
+### What could not be opened or checked
+- The sister-paper series were read from the extracted text without their options and sorted by hand.
+- Guidely and Sreedhar series sets were not used; the 100 clerk questions already cover every archetype.
+### Source links (pages opened)
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json`; the 12 sister papers are listed in the Simple & Compound Interest module.
+## 7. Pattern Index: archetypes and question IDs
+- NS1: PYQ-SER-05, 06, 09, 10, 22, 23, 27, 29, 30, 45, 46, 49, 50, 51, 53, 58, 59, 63, 65, 67 · CON-SER-01, 02, 03, 04, 07, 13, 14, 25
+- NS2: PYQ-SER-03, 04, 12, 13, 19, 20, 21, 31, 35, 47, 48, 52, 62, 64, 68, 69 · CON-SER-05, 09, 12, 17, 30
+- NS3: PYQ-SER-01, 02, 14, 18, 25, 28, 32, 36, 37, 41, 56, 60, 66 · CON-SER-11, 16, 19, 22, 23, 24, 27
+- NS4: PYQ-SER-08, 15, 16, 26, 33, 34, 38, 40, 42, 54, 61, 70 · CON-SER-06, 10, 18
+- NS5: CON-SER-08, 26, 29
+- NS6: PYQ-SER-07, 11, 17, 24, 39, 43, 44, 55, 57 · CON-SER-15, 20, 21, 28
 # Reasoning: Series and Miscellaneous - Speed Mastery Module
 **Sample.** Added on request. This is a Reasoning topic, not Quant, and it combines three bank sections into one: alphanumeric / mixed series, alphabet series, and miscellaneous reasoning. Your bank holds no previous-year Reasoning questions, so every statement about what the exam asks comes from papers opened on the web: 12 IBPS Clerk Prelims memory-based papers (4 Oct 2025 Shifts 1 to 4, 5 Oct 2025 Shift 1 in its Hindi version, 24 Aug 2024 Shift 1, and the 2023, 2022, 2021, 2020, 2019 and 2018 papers) giving 59 questions of these kinds, plus the same 12 sister papers as before (4 SBI Clerk, 4 IBPS RRB Clerk, 4 IBPS PO Prelims) giving 65. Bank questions used: 933 practice questions (540 Guidely + 393 Sreedhar). The floor of 8 target-exam shifts and 6 to 10 sister questions is met. Memory-based papers are reconstructions, not official papers.
 ## 1. Core Mental Model, Mechanics and Conversion Grid
