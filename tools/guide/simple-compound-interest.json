@@ -2,7 +2,7 @@
  "module": "simple-compound-interest",
  "intro": [
   "Interest is the extra money you get back for lending. This topic has two kinds, and one habit handles both: **call the sum 100% and find what 1% is worth.**",
-  "There are nine short lessons. The first four are about simple interest, the fifth introduces compound interest, and the rest put the two together the way the exam does. Go in order the first time."
+  "There are ten short lessons. The first four are about simple interest, the fifth introduces compound interest, and the rest put the two together the way the exam does. Go in order the first time."
  ],
  "needs": [
   "percent-of",
@@ -572,6 +572,62 @@
    }
   },
   {
+   "id": "second-scheme",
+   "code": "L3",
+   "title": "Money moved to a second scheme",
+   "plain": "New: what comes out of one scheme is put into another. Only the order of the steps is new.",
+   "needs": [
+    "percent-of"
+   ],
+   "teach": [
+    "The question runs two schemes one after the other. **Work them in the order the money moves**, and before you start the second, ask one thing: **does the interest move, or the whole amount?**",
+    "| The question says | What goes into scheme 2 |",
+    "| \"received the total amount and invested it\" | sum + interest |",
+    "| \"the interest obtained is invested\" | interest only |",
+    "| \"25% of the interest is invested\" | a part of the interest |",
+    "Going forwards it is two short steps, each with a percent you know. Going **backwards** (the final figure is given and the start is asked), undo the **last** scheme first: divide by its multiplier, then deal with the first scheme.",
+    "Checked papers: one IBPS PO Prelims paper (2025) set this; no Clerk paper in the sample did. It is here because it joins everything the topic has taught."
+   ],
+   "example": {
+    "q": "Rs 12,500 is lent at r% simple interest for 2 years. The interest is then put at 10% compound interest for 2 years and becomes Rs 3,630. Find r.",
+    "steps": [
+     "Undo the last scheme first: 10% CI for 2 years multiplies by 1.21.",
+     "The interest that went in was 3,630 / 1.21 = 3,000.",
+     "3,000 on 12,500 is 24% in 2 years.",
+     "So r = 12."
+    ],
+    "answer": "r = 12% (IBPS PO Prelims, 24 Aug 2025, Shift 1, memory-based)."
+   },
+   "check": {
+    "q": "Rs 5,000 is invested at 20% compound interest for 2 years. The whole amount is then put at 10% simple interest for 3 years. What is the simple interest?",
+    "options": {
+     "a": "Rs 1,500",
+     "b": "Rs 2,160",
+     "c": "Rs 2,200",
+     "d": "Rs 9,360"
+    },
+    "answer": "B",
+    "why": "5,000 x 1.44 = 7,200 moves on; 30% of 7,200 = 2,160. (1,500 uses the original 5,000; 9,360 is the final amount.)"
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "si-and-ci-based-on-different-schems-set-1-prelims-1#1",
+     "si-and-ci-based-on-total-amount-or-interest-set-1-prelims-1#6",
+     "si-and-ci-based-on-total-amount-or-interest-set-1-prelims-1#7",
+     "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#2",
+     "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#9"
+    ],
+    "tags": [
+     "The whole amount moves, CI then SI.",
+     "SI first, then the whole amount into CI.",
+     "CI at 15%, then SI.",
+     "Backwards: find the second scheme's rate.",
+     "CI for 3 years, then SI; the final amount is asked."
+    ]
+   }
+  },
+  {
    "id": "extras",
    "code": "K4",
    "title": "Three smaller ideas to finish",
@@ -849,6 +905,33 @@
     "726 / 660 = 1.1, so the rate is 10%.",
     "The 2nd year's interest, 660, is 10% of the money at the end of year 1. So that money was 6,600.",
     "Year 1 multiplied the sum by 1.1, so the sum = 6,600 / 1.1 = Rs 6,000."
+   ]
+  },
+  "guidely": {
+   "si-and-ci-based-on-different-schems-set-1-prelims-1#1": [
+    "Scheme A: 8,000 at 20% CI for 2 years: 144%, so 11,520 moves on.",
+    "Scheme B: 15 x 4 = 60% of 11,520.",
+    "Simple interest = Rs.6912."
+   ],
+   "si-and-ci-based-on-total-amount-or-interest-set-1-prelims-1#6": [
+    "Scheme A: 12 x 5 = 60%, so 160% of 12,000 = 19,200 moves on.",
+    "10% CI for 2 years is 21% of 19,200.",
+    "Compound interest = Rs.4032."
+   ],
+   "si-and-ci-based-on-total-amount-or-interest-set-1-prelims-1#7": [
+    "15% CI for 2 years is 132.25%: 7,500 becomes 9,918.75.",
+    "8% SI for 4 years is 32% of 9,918.75.",
+    "Simple interest = Rs.3174."
+   ],
+   "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#2": [
+    "18,000 at 15% CI for 2 years: 132.25%, so 23,805 moves on.",
+    "9,522 / 23,805 = 40% in 4 years.",
+    "k = 10%."
+   ],
+   "si-and-ci-based-on-compounded-and-annually-set-1-prelims-1#9": [
+    "4,000 at 20% CI for 3 years: 172.8%, so 6,912 moves on.",
+    "10% SI for 3 years: 130% of 6,912.",
+    "Final amount = Rs.8985.6."
    ]
   }
  }
