@@ -125,6 +125,11 @@ Three files joined into one: the Quant Speed Mastery Modules, the Quant Pattern 
 <td>Done</td>
 <td>6 Oct 2026</td>
 <td>No PYQ found in 35 papers; 10 third-party bank questions + 30 constructed and script-checked</td>
+<td>17</td>
+<td>Permutations & Combinations</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>2 IBPS Clerk Prelims PYQs (2 paper labels, 2017 and 2018), none in the 12 sister papers + 131 bank questions</td>
 </tr>
 </table>
 The archetype counts, labels and question IDs for every module are kept in the companion file “Bank Clerk Quant - Pattern Index”.
@@ -8653,6 +8658,52 @@ Ten archetypes. "Papers" counts paper labels, IBPS Clerk and sister papers toget
 ### Non-linear warnings
 - HCF x LCM = product holds for two numbers only.
 - "How many times together in 3 hours" depends on whether the starting moment counts; read it.
+# Permutations & Combinations - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025) and the same 12 sister papers. PYQs found: 2 IBPS Clerk Prelims questions from 2 papers (2017 model, Guidely: a committee with one person always included; 2018, Guidely: arrangements of MANAGEMENT); none in the 2019 to 2025 Clerk papers and none in the 12 sister papers. Bank questions used: 131 (129 Guidely in 13 sets, 2 Sreedhar); the clerk bank has none. One Guidely set (letters with repetition, 10 questions) has impossible keys (for example 1,562.5 ways) and is not used. The 8-shift floor is met in papers opened, but the topic is thinly asked. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** Count choices place by place and multiply. Then ask two questions: does order matter (arrange) or not (select)? Is there a rule (fixed place, together, at least, always in)?
+### Base operations
+1. **And multiplies, or adds.** 9 first digits and 5 second digits: 45 codes.
+2. **Arrange all n different things:** n!. With repeats: n! / (a! b! ...).
+3. **Arrange r of n:** nPr = n x (n - 1) x ... (r factors).
+4. **Select r of n:** nCr = nPr / r!; nCr = nC(n - r).
+5. **Together:** tie into a block, arrange units, multiply by arrangements inside.
+6. **At least one:** all - none.
+7. **Round a table:** (n - 1)!.
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Words in the question</td>
+<td>Rule</td>
+</tr>
+<tr>
+<td>words, numbers, codes, seating, ranks</td>
+<td>arrange (order matters)</td>
+</tr>
+<tr>
+<td>team, committee, group, handful</td>
+<td>select (order does not matter)</td>
+</tr>
+<tr>
+<td>always together</td>
+<td>block</td>
+</tr>
+<tr>
+<td>never all together</td>
+<td>all - together</td>
+</tr>
+<tr>
+<td>at least one</td>
+<td>all - none</td>
+</tr>
+<tr>
+<td>always included / excluded</td>
+<td>put in / take out of the pool</td>
+</tr>
+</table>
+### Non-linear warnings
+- 5! = 120, 6! = 720, 7! = 5,040, 8! = 40,320, 9! = 362,880, 10! = 3,628,800: the numbers grow fast, so a slip of one factor is never close.
+- Selecting counts AB and BA once; arranging counts them twice.
 ## 2. Archetypes
 <table header-row="true">
 <tr>
@@ -9191,6 +9242,105 @@ Two numbers are in the ratio 5 : 8 and their LCM is 480. Find their HCF.
 - **30-second exam method.** 40h = 480, h = 12. **Answer (A).**
 - **Option elimination hack.** 40 x HCF must equal 480: only 12.
 - **IBPS trap warning.** (E) 60 is the smaller number.
+<td>PN2</td>
+<td>Arranging all letters, with repeats</td>
+<td>Seen once (2018)</td>
+<td>1</td>
+<td>0</td>
+<td>30</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>PN9</td>
+<td>Selection with someone always included or excluded</td>
+<td>Seen once (2017)</td>
+<td>1</td>
+<td>0</td>
+<td>10</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>PN7</td>
+<td>Selecting from one or two groups</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>31</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PN5</td>
+<td>Together; two groups each together</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>20</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PN1</td>
+<td>Counting numbers and codes</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>10</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PN4</td>
+<td>Fixed places</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>10</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>PN8</td>
+<td>At least, at most</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>10</td>
+<td>Insurance</td>
+</tr>
+</table>
+Bank counts are by Guidely set; PN3 (arranging some letters) and PN6 (apart, alternate, round table) sit inside the PN2 and PN5 sets. The 2017 and 2018 questions each come from a single paper, so neither archetype reaches Confirmed.
+### Core archetypes (Seen once)
+**PN2. Arranging all letters. Seen once.** *Shortcut engine:* n! divided by the factorial of each repeat. *Worked example (IBPS Clerk Prelims 2018, Guidely):* MANAGEMENT has M, A, N, E twice each: 10! / 16 = 226,800.
+**PN9. Always included. Seen once.** *Shortcut engine:* put them in and choose the rest from the others. *Worked example (IBPS Clerk Prelims 2017 model, Guidely):* 4 from 7 men and 8 women with one particular woman always in: 14C3 = 364.
+### Insurance archetypes (Bank only)
+**PN7.** nCr, multiplied across groups. **PN5.** Block method. **PN1.** Place by place, rule first. **PN4.** Fill fixed places first. **PN8.** Add cases, or all minus none.
+## 3. Drill Set
+Four original questions; every answer was checked by script.
+### Drill 1. Repeated letters (PN2)
+In how many ways can the letters of COMMITTEE be arranged?
+1. 45360 (B) 90720 (C) 362880 (D) 22680 (E) 181440
+- **Conventional method.** 9 letters with M, T, E twice each.
+- **30-second exam method.** 9! / (2! x 2! x 2!) = 362,880 / 8 = 45,360. **Answer (A).**
+- **Option elimination hack.** The answer is 9! divided by a power of 2: (A) is 9!/8, (B) 9!/4, (E) 9!/2; three pairs of repeats means 8.
+- **IBPS trap warning.** (B) divides for only two of the three repeated letters.
+### Drill 2. Always included (PN9)
+A team of 5 is chosen from 11 players with one particular player always included. How many teams?
+1. 210 (B) 462 (C) 252 (D) 120 (E) 330
+- **Conventional method.** List with and without him; only "with" is allowed.
+- **30-second exam method.** Choose 4 more from 10: 10C4 = 210. **Answer (A).**
+- **Option elimination hack.** It must be less than 11C5 = 462: rule out (B).
+- **IBPS trap warning.** (B) ignores the condition.
+### Drill 3. At least one (PN8)
+From 6 men and 4 women, a committee of 3 is chosen with at least one woman. How many committees?
+1. 100 (B) 120 (C) 96 (D) 80 (E) 116
+- **Conventional method.** 1 woman + 2 women + 3 women = 60 + 36 + 4.
+- **30-second exam method.** All 10C3 = 120, minus all-men 6C3 = 20: 100. **Answer (A).**
+- **Option elimination hack.** Must be 120 minus a selection count: 100 = 120 - 20.
+- **IBPS trap warning.** (B) 120 forgets to remove the all-men committees.
+### Drill 4. Together (PN5)
+In how many ways can the letters of GARDEN be arranged so that the vowels are together?
+1. 240 (B) 120 (C) 720 (D) 480 (E) 48
+- **Conventional method.** Count all 720 and subtract arrangements with A and E apart (480).
+- **30-second exam method.** AE as a block + G, R, D, N: 5! x 2 = 240. **Answer (A).**
+- **Option elimination hack.** The answer is a multiple of 2 x 5! = 240.
+- **IBPS trap warning.** (B) forgets that the block can be AE or EA.
 ## 4. Cheat Sheet & 30-Second Recall Matrix
 <table header-row="true">
 <tr>
@@ -9356,6 +9506,44 @@ Two numbers are in the ratio 5 : 8 and their LCM is 480. Find their HCF.
 **Fallback.** When unsure which one, ask: is the answer bigger than the numbers (LCM) or smaller (HCF)?
 ## 5. Practice Ladder
 19 questions in three rungs. IDs: CON-LCM are `source.id` values in `clerk/questions.json` (constructed for this course); S-MTm-q is question q of Sreedhar model test m.
+<td>PN1</td>
+<td>digits, codes</td>
+<td>place by place, rule first</td>
+</tr>
+<tr>
+<td>PN2</td>
+<td>arrange all letters</td>
+<td>n! / repeats!</td>
+</tr>
+<tr>
+<td>PN4</td>
+<td>begins with, ends with</td>
+<td>fix, arrange the rest</td>
+</tr>
+<tr>
+<td>PN5</td>
+<td>together</td>
+<td>block x inside</td>
+</tr>
+<tr>
+<td>PN7</td>
+<td>team from groups</td>
+<td>nCr x nCr</td>
+</tr>
+<tr>
+<td>PN8</td>
+<td>at least one</td>
+<td>all - none</td>
+</tr>
+<tr>
+<td>PN9</td>
+<td>always in / out</td>
+<td>shrink the pool</td>
+</tr>
+</table>
+**Fallback.** Write the places as blanks, put the number of choices in each, multiply; divide by r! if order does not matter.
+## 5. Practice Ladder
+12 bank questions in three rungs. IDs: G-name-n is question n of the Guidely permutation and combination set with that name.
 **Rung 1. Untimed until all correct.**
 <table header-row="true">
 <tr>
@@ -9960,6 +10148,24 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>CON-LCM-22</td>
 <td>LH5</td>
 <td>12</td>
+<td>G-numbers-4</td>
+<td>PN1</td>
+<td>45</td>
+</tr>
+<tr>
+<td>G-letters-different-ways-6</td>
+<td>PN2</td>
+<td>360</td>
+</tr>
+<tr>
+<td>G-ends-and-starts-2</td>
+<td>PN4</td>
+<td>120</td>
+</tr>
+<tr>
+<td>G-committee-2</td>
+<td>PN7</td>
+<td>300</td>
 </tr>
 </table>
 **Rung 2. 60 seconds each.**
@@ -10003,6 +10209,29 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>CON-LCM-26</td>
 <td>LH6</td>
 <td>86</td>
+<td>G-letter-without-repetition-2</td>
+<td>PN2</td>
+<td>226800</td>
+</tr>
+<tr>
+<td>G-included-and-excluded-1</td>
+<td>PN9</td>
+<td>210</td>
+</tr>
+<tr>
+<td>G-included-and-excluded-2</td>
+<td>PN9</td>
+<td>1287</td>
+</tr>
+<tr>
+<td>G-selection-4</td>
+<td>PN8</td>
+<td>155</td>
+</tr>
+<tr>
+<td>G-ends-and-starts-1</td>
+<td>PN4</td>
+<td>2520</td>
 </tr>
 </table>
 **Rung 3. 45 seconds each.**
@@ -10041,6 +10270,19 @@ Built 6 Oct 2026. This module is checked, not guaranteed.
 <td>CON-LCM-28</td>
 <td>LH7</td>
 <td>20/3</td>
+<td>G-committee-1</td>
+<td>PN8</td>
+<td>531</td>
+</tr>
+<tr>
+<td>G-persons-6</td>
+<td>PN8</td>
+<td>96</td>
+</tr>
+<tr>
+<td>G-numbers-10</td>
+<td>PN1</td>
+<td>84</td>
 </tr>
 </table>
 ## 6. Verification Log
@@ -10063,6 +10305,22 @@ Built 6 Oct 2026.
 - LH5: CON-LCM-18, 19, 20, 21, 22
 - LH6: CON-LCM-23, 24, 25, 26, 27, 30
 - LH7: CON-LCM-28, 29
+- **Search.** All 35 papers were converted to text and searched for "in how many ways", "number of ways", "arrangement" and "committee"; the two questions above are the only counting questions (other hits were puzzle and series wording).
+- **Answers.** Every Guidely question used on the lesson path (42) was re-computed by formula in the build script; all agree with their keys.
+- **Bank faults found.** The "letters with repetition" set has keys such as 1,562.5 and 607.2 ways, which cannot be counts; it is excluded. The ENCAPSULATION question's key treats repeated letters as different.
+- **Drills.** All 4 drills were computed by script.
+### What could not be opened or checked
+- Guidely questions off the lesson path were not re-solved.
+- No Mains papers were used.
+### Source links (pages opened)
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json`; the 2017 and 2018 Guidely papers are among them. The 12 sister papers are listed in the Simple & Compound Interest module.
+## 7. Pattern Index: archetypes and question IDs
+- PN1: G-numbers-1, 2, 4, 10
+- PN2: G-letters-different-ways-4, 5, 6, 10 · G-letter-without-repetition-2
+- PN4: G-ends-and-starts-1, 2, 3, 4, 5
+- PN7: G-persons-1 · G-committee-2, 3 · G-selection-1
+- PN8: G-selection-4, 8 · G-committee-1 · G-persons-5, 6
+- PN9: G-included-and-excluded-1, 2, 3, 6, 8
 # Reasoning: Series and Miscellaneous - Speed Mastery Module
 **Sample.** Added on request. This is a Reasoning topic, not Quant, and it combines three bank sections into one: alphanumeric / mixed series, alphabet series, and miscellaneous reasoning. Your bank holds no previous-year Reasoning questions, so every statement about what the exam asks comes from papers opened on the web: 12 IBPS Clerk Prelims memory-based papers (4 Oct 2025 Shifts 1 to 4, 5 Oct 2025 Shift 1 in its Hindi version, 24 Aug 2024 Shift 1, and the 2023, 2022, 2021, 2020, 2019 and 2018 papers) giving 59 questions of these kinds, plus the same 12 sister papers as before (4 SBI Clerk, 4 IBPS RRB Clerk, 4 IBPS PO Prelims) giving 65. Bank questions used: 933 practice questions (540 Guidely + 393 Sreedhar). The floor of 8 target-exam shifts and 6 to 10 sister questions is met. Memory-based papers are reconstructions, not official papers.
 ## 1. Core Mental Model, Mechanics and Conversion Grid
