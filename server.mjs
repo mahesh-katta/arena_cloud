@@ -11,6 +11,7 @@
  *     /data/...                  playbook.json and chart images
  *     GET  /api/q?keys=bank:key,...   questions with their workings
  *     GET  /api/pool?topic=id    the topic's questions in every bank, with a type each
+ *     GET  /api/index            question counts per topic and Practice source
  *     GET  /api/progress         the progress document
  *     POST /api/progress         replace it ({lessons, answers, review})
  */
@@ -92,6 +93,25 @@ function pool(topic) {
   return res;
 }
 
+/* How many questions each topic has in each Practice source. */
+const SOURCES = {
+  all: () => true,
+  papers: (x) => x.pyq,
+  clerk: (x) => x.bank === "clerk" && !x.pyq,
+  guidely: (x) => x.bank === "guidely",
+  sreedhar: (x) => x.bank === "sreedhar",
+};
+let indexCache = null;
+function index() {
+  if (indexCache) return indexCache;
+  indexCache = {};
+  for (const t of Object.keys(POOLS)) {
+    const items = pool(t).items;
+    indexCache[t] = Object.fromEntries(Object.entries(SOURCES).map(([k, f]) => [k, items.filter(f).length]));
+  }
+  return indexCache;
+}
+
 async function readProgress() {
   try { return JSON.parse(await readFile(PROGRESS, "utf8")); }
   catch { return { version: 1, lessons: {}, answers: {}, review: [] }; }
@@ -124,6 +144,7 @@ createServer(async (req, res) => {
       const keys = (url.searchParams.get("keys") || "").split(",").filter(Boolean);
       return send(res, 200, keys.map((k) => { const i = k.indexOf(":"); return slim(k.slice(0, i), k.slice(i + 1)); }));
     }
+    if (p === "/api/index") return send(res, 200, index());
     if (p === "/api/pool") return send(res, 200, pool(url.searchParams.get("topic") || ""));
     if (p === "/api/progress" && req.method === "GET") return send(res, 200, await readProgress());
     if (p === "/api/progress" && req.method === "POST") {

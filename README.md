@@ -12,11 +12,12 @@ npm run build        # only after changing src/; dist/ is committed
 
 Progress is saved beside the repo in `../arena_cloud_progress.json`, so a pull never touches it.
 
-- **Course**: Quant / Reasoning, ordered by suggested (parent topics first), most asked, or easiest. Each topic has Lessons (one suggested, none locked), Quick revision and Papers.
-- **Lesson**: Learn, Example (step by step), Check, Practice (the lesson's disguise questions, with a running timer), Done. After each answer: Next question, Skip, or Practise more.
-- **Practise more**: the topic's questions from the clerk, Guidely and Sreedhar banks, filtered by source and type (`src/pools.js` maps topics to bank sets).
-- **Review**: every question answered wrong, until it is answered right.
-- **Mocks**: placeholder for later.
+Four tabs (a sidebar on a laptop, a bottom bar on a phone):
+
+- **Course**: Quant / Reasoning, ordered by suggested (parent topics first), most asked, or easiest. Each topic has Lessons (one suggested, none locked), Quick revision and Papers. A lesson runs Learn, Example, Check, Practice (the lesson's disguise questions, with a running timer), Done; every step can be skipped or opened directly, and "Skip lesson" moves on.
+- **Practice**: pick a source (all, previous papers, clerk graded sets, Guidely, Sreedhar, or My mistakes), then a topic, then work question by question with a type filter. `src/pools.js` maps topics to bank sets.
+- **Mocks**: coming soon.
+- **Settings**: light / dark, reset one topic, reset all progress.
 
 Read `docs/HANDOVER.md`, then `docs/PIPELINE.md`. The lesson format (`tools/guide/*.json`) is unchanged.
 

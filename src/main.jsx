@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import Home, { useCourse } from "./Home.jsx";
-import Topic from "./Topic.jsx";
+import { CourseHome, TopicRail, TopicDetail, LessonList } from "./Course.jsx";
 import Lesson from "./Lesson.jsx";
-import More from "./More.jsx";
-import Review from "./Review.jsx";
-import { loadPlaybook, loadProgress, useProgress, doneCount, lessonsOf } from "./store.js";
+import { PracticeHome, PracticePick, PracticeRun, Mistakes } from "./Practice.jsx";
+import { Settings, Mocks } from "./Settings.jsx";
+import { loadPlaybook, loadProgress, useProgress, applyTheme } from "./store.js";
+import { ICONS } from "./Icons.jsx";
+
+applyTheme();
 
 function useRoute() {
   const read = () => {
@@ -22,23 +24,27 @@ function useRoute() {
   return r;
 }
 
-function Side({ book, current }) {
+const TABS = [
+  ["course", "Course", "#/"],
+  ["practice", "Practice", "#/practice"],
+  ["mocks", "Mocks", "#/mocks"],
+  ["settings", "Settings", "#/settings"],
+];
+
+function Nav({ tab }) {
   const p = useProgress();
-  const all = useCourse(book);
-  const part = book.byId[current]?.part || "quant";
   return (
-    <aside className="side">
-      <div className="eyebrow">{part === "reasoning" ? "Reasoning" : "Quant"} topics</div>
-      {all.filter((t) => t.mod.part === part).map((t) => {
-        const n = lessonsOf(t.mod).length;
-        const d = doneCount(p, t.mod);
-        return (
-          <a key={t.id} href={"#/topic/" + t.id} className={"srow" + (t.id === current ? " on" : "")}>
-            <span>{t.mod.title}</span><span className="muted">{n ? (d === n ? "Done" : d + "/" + n) : "notes"}</span>
-          </a>
-        );
-      })}
-    </aside>
+    <nav className="nav glass" aria-label="Main">
+      <a className="brand" href="#/"><span className="logo">A</span><span className="brand-text">Arena</span></a>
+      {TABS.map(([id, name, href]) => (
+        <a key={id} href={href} className={"navitem" + (tab === id ? " on" : "")} aria-current={tab === id ? "page" : undefined}>
+          {ICONS[id]}
+          <span>{name}</span>
+          {id === "mocks" && <em className="pill">Soon</em>}
+          {id === "practice" && p.review.length > 0 && <em className="count">{p.review.length}</em>}
+        </a>
+      ))}
+    </nav>
   );
 }
 
@@ -46,36 +52,46 @@ function App() {
   const [book, setBook] = useState(null);
   const [err, setErr] = useState(null);
   const { parts, query } = useRoute();
-  const p = useProgress();
   useEffect(() => { loadPlaybook().then(setBook, (e) => setErr(String(e))); loadProgress(); }, []);
 
   const [view, a, b] = parts;
-  const tab = view === "review" ? "review" : view === "mocks" ? "mocks" : "course";
-  let body = null, current = null;
+  if (view === "more" && a) { location.replace("#/practice/all/" + a); return null; }
+  if (view === "review") { location.replace("#/practice/mistakes"); return null; }
+  const tab = view === "practice" ? "practice" : view === "mocks" ? "mocks" : view === "settings" ? "settings" : "course";
+
+  let body;
   if (err) body = <div className="page">Could not load the lessons: {err}</div>;
   else if (!book) body = <div className="page muted">Loading the course...</div>;
-  else if (view === "topic") { current = a; body = <Topic book={book} topic={a} />; }
-  else if (view === "lesson") { current = a; body = <Lesson book={book} topic={a} id={b} />; }
-  else if (view === "more") { current = a; body = <More key={a + query} book={book} topic={a} query={query} />; }
-  else if (view === "review") body = <Review book={book} />;
-  else if (view === "mocks") body = <div className="page"><h2>Mocks</h2><p className="muted">Full mock tests come here later.</p></div>;
-  else body = <Home book={book} />;
+  else if (view === "topic") body = (
+    <div className="cols two">
+      {a !== "basics" && <TopicRail book={book} current={a} />}
+      <TopicDetail book={book} topic={a} />
+    </div>
+  );
+  else if (view === "lesson") body = (
+    <div className={"cols" + (a === "basics" ? " two" : " three")}>
+      {a !== "basics" && <TopicRail book={book} current={a} />}
+      <aside className="col rail-lessons glass">
+        <div className="col-head"><a className="eyebrow" href={"#/topic/" + a}>{book.byId[a]?.title}</a></div>
+        <div className="col-scroll"><LessonList book={book} topic={a} current={b} compact /></div>
+      </aside>
+      <Lesson book={book} topic={a} id={b} />
+    </div>
+  );
+  else if (view === "practice" && a === "mistakes") body = <Mistakes book={book} />;
+  else if (view === "practice" && a && b) body = <PracticeRun key={a + b} book={book} src={a} topic={b} query={query} />;
+  else if (view === "practice" && a) body = <PracticePick book={book} src={a} />;
+  else if (view === "practice") body = <PracticeHome book={book} />;
+  else if (view === "mocks") body = <Mocks />;
+  else if (view === "settings") body = <Settings book={book} />;
+  else body = <CourseHome book={book} />;
 
   return (
-    <>
-      <header className="top">
-        <a className="brand" href="#/">Arena Course</a>
-        <nav aria-label="Main">
-          <a href="#/" className={tab === "course" ? "on" : ""}>Course</a>
-          <a href="#/review" className={tab === "review" ? "on" : ""}>Review{p.review.length ? " · " + p.review.length : ""}</a>
-          <a href="#/mocks" className={tab === "mocks" ? "on" : ""}>Mocks <span className="soon">soon</span></a>
-        </nav>
-      </header>
-      <div className={"shell" + (current && current !== "basics" && book ? " withside" : "")}>
-        {current && current !== "basics" && book && <Side book={book} current={current} />}
-        <main>{body}</main>
-      </div>
-    </>
+    <div className="app">
+      <div className="bg" aria-hidden="true"><i /><i /><i /></div>
+      <Nav tab={tab} />
+      <main>{body}</main>
+    </div>
   );
 }
 

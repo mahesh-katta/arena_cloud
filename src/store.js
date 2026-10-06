@@ -36,7 +36,8 @@ function save() {
 }
 
 export function update(fn) {
-  progress = fn(structuredClone(progress)) || progress;
+  const copy = structuredClone(progress);
+  progress = fn(copy) || copy;
   emit();
   save();
 }
@@ -99,3 +100,42 @@ export async function fetchPool(topic) {
 
 export const lessonsOf = (m) => m?.guide?.lessons || [];
 export const doneCount = (p, m) => lessonsOf(m).filter((l) => p.lessons[lessonKey(m.id, l.id)]?.done).length;
+
+let indexP = null;
+export const fetchIndex = () => (indexP ||= fetch("/api/index").then((r) => r.json()));
+
+export const SOURCES = [
+  { id: "all", name: "All sources", note: "Every bank together" },
+  { id: "papers", name: "Previous papers", note: "IBPS Clerk Prelims, memory-based" },
+  { id: "clerk", name: "Clerk graded sets", note: "Built and checked for this course" },
+  { id: "guidely", name: "Guidely", note: "Topic-wise sets from the Guidely PDFs" },
+  { id: "sreedhar", name: "Sreedhar", note: "Questions from 81 full mock tests" },
+];
+export const inSource = (src) => (x) =>
+  src === "all" || (src === "papers" ? x.pyq : src === "clerk" ? x.bank === "clerk" && !x.pyq : x.bank === src);
+
+export function resetAll() {
+  update(() => ({ version: 1, lessons: {}, answers: {}, review: [], last: null }));
+}
+
+export function resetTopic(topic) {
+  update((p) => {
+    for (const k of Object.keys(p.lessons)) if (k.startsWith(topic + "/")) delete p.lessons[k];
+    p.review = p.review.filter((r) => r.topic !== topic);
+    if (p.last?.topic === topic) p.last = null;
+    return p;
+  });
+}
+
+export function setTheme(t) {
+  try { localStorage.setItem("arena-theme", t); } catch {}
+  applyTheme();
+}
+export function getTheme() {
+  try { return localStorage.getItem("arena-theme") || "auto"; } catch { return "auto"; }
+}
+export function applyTheme() {
+  const t = getTheme();
+  if (t === "auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme", t);
+}
