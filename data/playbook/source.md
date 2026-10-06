@@ -104,6 +104,13 @@ Three files joined into one: the Quant Speed Mastery Modules, the Quant Pattern 
 <td>6 Oct 2026</td>
 <td>No PYQs in the bank; 59 questions from 12 IBPS Clerk Prelims papers opened on the web + 65 sister-exam questions (12 papers) + 933 bank practice questions</td>
 </tr>
+<tr>
+<td>13</td>
+<td>Ratio & Proportion</td>
+<td>Done</td>
+<td>6 Oct 2026</td>
+<td>11 IBPS Clerk Prelims PYQs (9 paper labels) + 4 sister-exam questions (4 papers) + 239 bank questions</td>
+</tr>
 </table>
 The archetype counts, labels and question IDs for every module are kept in the companion file “Bank Clerk Quant - Pattern Index”.
 ---
@@ -8392,6 +8399,500 @@ The 1,564 practice-question IDs are not listed here because the list would run t
 **Sister questions by archetype:** S1 20, S3 21, S4 13, S5 16, S7 9, A0 9, S6 0. Approximation appeared only in the four IBPS PO papers.
 **Notes.** 1,753 machine-checked and agreeing; 4 wrong keys (S-MT26-54, S-MT22-58, S-MT21-65, S-MT10-58); 34 unconfirmed (13 approximation near-misses, 20 questions (19 Guidely, 1 Sreedhar) with flattened powers, roots or fractions, 1 with no key); 436 image questions unread. 84 exact repeats. In 155 of the 227 PYQs the question mark is buried inside the expression.
 ---
+# Ratio & Proportion - Speed Mastery Module
+**Sample.** Papers opened: 23 IBPS Clerk Prelims memory-based papers (2016 to Oct 2025, the source PDFs stored with your bank) and the same 12 sister papers as the other modules (4 SBI Clerk, 4 IBPS RRB Clerk, 4 IBPS PO Prelims). PYQs found: 11 IBPS Clerk Prelims ratio questions from 9 paper labels (already in your bank as PYQ-RAT-01 to 11) and 4 sister-exam questions from 4 papers. Bank questions used: 239 (41 clerk, 37 Sreedhar, 161 Guidely; 20 of them are really averages, alloys or profit questions and are left out). The floor of 8 target-exam shifts is met; the sister count (4) is below the 6-10 target, because most ratio wording in those papers sits inside Ages, Mixtures, Speed and DI questions, which belong to those topics. All papers are memory-based reconstructions.
+## 1. Core Mental Model, Exact Mechanics & Conversion Grid
+**Central law.** A ratio is a count of equal parts. "A : B = 3 : 5" means A is 3 parts and B is 5 parts of the same size. Every question is solved by finding **what one part is worth** and then counting parts. Letters are not needed.
+### Base operations
+1. **One part.** Known amount / its number of parts. A : B = 3 : 5 and B = 40: one part = 40 / 5 = 8, so A = 24.
+2. **Total or difference.** Total of 3 : 5 is 8 parts; difference is 2 parts. Rs 1,560 split 5 : 8: one part = 1,560 / 13 = 120.
+3. **Joining two ratios.** Make the shared term equal. A : B = 3 : 4 and B : C = 8 : 9: double the first to 6 : 8, so A : B : C = 6 : 8 : 9.
+4. **Fractions to a ratio.** Multiply every term by the LCM of the denominators. 1/3 : 1/4 : 1/6, times 12, is 4 : 3 : 2. "2A = 3B = 4C" means A : B : C = 1/2 : 1/3 : 1/4 = 6 : 4 : 3.
+5. **Percent to a ratio.** "A is 25% more than B" means A : B = 125 : 100 = 5 : 4. "20% less" is 80 : 100 = 4 : 5.
+6. **Same change to both terms.** Adding the same number to both terms keeps the **difference** of the two terms. Make the differences equal and read off the parts. 5 : 7 becomes 3 : 4 after adding 8: differences 2 and 1, so write 3 : 4 as 6 : 8; 5 parts became 6 parts by adding 8, so one part is 8.
+7. **Income, expenditure, savings.** Income = expenditure + savings, part by part. When two people save the same amount, their income parts minus expenditure parts must be equal.
+8. **Proportion.** a : b = c : d means a x d = b x c. Fourth proportional to a, b, c is b x c / a. Third proportional to a, b is b x b / a. Mean proportional of a and b is the square root of a x b.
+### Conversion grid
+<table header-row="true">
+<tr>
+<td>Phrase</td>
+<td>Ratio</td>
+</tr>
+<tr>
+<td>A is 25% more than B</td>
+<td>5 : 4</td>
+</tr>
+<tr>
+<td>A is 20% less than B</td>
+<td>4 : 5</td>
+</tr>
+<tr>
+<td>A is 2/3 of B</td>
+<td>2 : 3</td>
+</tr>
+<tr>
+<td>4/15 of A = 2/5 of B</td>
+<td>A : B = 2/5 : 4/15 = 3 : 2</td>
+</tr>
+<tr>
+<td>2A = 3B = 4C</td>
+<td>6 : 4 : 3</td>
+</tr>
+<tr>
+<td>Income : savings = 16 : 3</td>
+<td>income : expenditure : savings = 16 : 13 : 3</td>
+</tr>
+</table>
+### Non-linear warnings
+- **Parts x parts = parts squared.** Numbers in 3 : 4 : 5 with squares adding to 1,250: 9 + 16 + 25 = 50 squared parts, so one squared part is 25 and one part is 5, not 25.
+- **Percent changes do not add to a ratio.** Salaries 4 : 5 with rises of 25% and 20% become 5 : 6, not 29 : 25 or 4 : 5.
+- **"Added to each" changes the ratio but not the difference; "multiplied" changes both.**
+## 2. Archetypes
+Ten archetypes cover the bank and the papers. "Papers" counts paper labels, IBPS Clerk and sister papers together. Bank counts: clerk questions by hand, Sreedhar questions by hand, Guidely by the name of the set each question sits in.
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>Archetype</td>
+<td>Label</td>
+<td>IBPS Clerk PYQs</td>
+<td>Sister PYQs</td>
+<td>Bank questions</td>
+<td>Group</td>
+</tr>
+<tr>
+<td>RP3</td>
+<td>Adding or taking away changes the ratio</td>
+<td>Confirmed (4 papers)</td>
+<td>2</td>
+<td>2</td>
+<td>26</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>RP1</td>
+<td>Joining ratios; ratio with a total or an average</td>
+<td>Confirmed (3 papers)</td>
+<td>4</td>
+<td>0</td>
+<td>64</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>RP4</td>
+<td>Income, expenditure and savings</td>
+<td>Confirmed (3 papers)</td>
+<td>2</td>
+<td>1</td>
+<td>17</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>RP2</td>
+<td>Dividing an amount in a ratio</td>
+<td>Confirmed (2 papers)</td>
+<td>1</td>
+<td>1</td>
+<td>32</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>RP5</td>
+<td>Groups inside a group (boys and girls, literate and not)</td>
+<td>Confirmed (2 papers)</td>
+<td>2</td>
+<td>0</td>
+<td>13</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>RP6</td>
+<td>A different percent change on each term</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>26</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>RP7</td>
+<td>Coins, and shares per head</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>25</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>RP10</td>
+<td>Harder share forms (mistaken ratio, reduced shares, squares, LCM)</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>7</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>RP9</td>
+<td>Ratio basics: simplify, compare, fractions, expressions</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>Insurance</td>
+</tr>
+<tr>
+<td>RP8</td>
+<td>Proportion: third, fourth and mean proportional</td>
+<td>Bank only</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>Insurance</td>
+</tr>
+</table>
+What stands out: the papers ask ratio as a **one-step story with numbers that move** (RP3), or as the **glue in a three-person question** (RP1). Coins, proportionals and percent changes on ratio terms did not appear in any paper opened.
+### Core archetypes (Confirmed)
+**RP3. Adding or taking away changes the ratio. Confirmed (4 papers).** *Pattern clues:* "if 16 is subtracted from A and added to B", "8 is added to each", "A gives Rs 150 to B", "40 more girls join". *Shortcut engine:* (a) Same number added to both: the difference is unchanged, so scale the two ratios to the same difference; the change in one term's parts gives one part. (b) Moved from one to the other: the **total** is unchanged, so scale both ratios to the same total. (c) Only one term changes: the other term's parts are fixed; scale to match it. *Worked example (IBPS Clerk Prelims 4 Oct 2025 Shift 1):* A : B = 3 : 2; 16 moves from A to B and the ratio becomes 19 : 26. Totals 5 and 45, so write 3 : 2 as 27 : 18. A drops from 27 parts to 19 parts, 8 parts = 16, one part = 2. A = 27 x 2 = 54.
+**RP1. Joining ratios; ratio with a total or an average. Confirmed (3 papers).** *Pattern clues:* "A : B = 1 : 2 and A : C = 2 : 3", "the average of X, Y and Z is 24", "incomes are in the ratio 4 : 5 : 7 and their average is". *Shortcut engine:* make the common term equal, write one three-term ratio, turn the average into a total (average x count), divide by the total parts. *Worked example (IBPS Clerk Prelims 5 Oct 2025 Shift 1):* A : B = 1 : 2 = 2 : 4 and A : C = 2 : 3, so A : B : C = 2 : 4 : 3, 9 parts. Total weight = 18 x 3 = 54, one part = 6, B = 24.
+**RP4. Income, expenditure and savings. Confirmed (3 papers).** *Pattern clues:* "spends 3/11 of his salary", "income to savings is 16 : 3", "each saves Rs 4,000", "spends 25% on rent, 20% of the rest on". *Shortcut engine:* write all three in parts (income = expenditure + savings). Equal savings: income parts minus expenditure parts must match, so scale the two ratios until they do. Successive spends: multiply the "left" fractions. *Worked example (IBPS Clerk Prelims 2021):* income : savings = 16 : 3, so expenditure is 13. Savings rise by one-third to 4 and expenditure by one-half to 19.5. New income = 23.5 parts against 16, which is 47 : 32.
+**RP2. Dividing an amount in a ratio. Confirmed (2 papers).** *Pattern clues:* "Rs 25,500 is divided among A, B and C", "gives to her mother and father in the ratio 3 : 1", "A gets Rs 4,000 more than B". *Shortcut engine:* total / total parts = one part. When the shares are described by differences, take the differences off the total first and split the rest equally. *Worked example (IBPS PO Prelims 24 Aug 2025 Shift 1):* 30% and 50% of the salary are spent, 20% is left and split 3 : 1. The difference is 2 of 4 parts, i.e. half of 20% = 10% of the salary = Rs 4,000. Salary = Rs 40,000.
+**RP5. Groups inside a group. Confirmed (2 papers).** *Pattern clues:* "boys and girls", "literate and illiterate", "the number of girls in both sections is the same". *Shortcut engine:* fix the outer split first (as a number or a percent), then split each part by its own ratio. A shared count (same girls in two sections) means the **difference of totals equals the difference of the other group**. *Worked example (IBPS Clerk Prelims 2024):* sections of 180 and 220 with equal girls, boys 3 : 4. Boys differ by 220 - 180 = 40 = 1 part, so boys are 120 and 160, girls 60.
+### Insurance archetypes (Bank only)
+**RP6. A different percent change on each term. Bank only.** *Shortcut engine:* multiply each term by its own factor, then simplify. 6 : 5 with +40% and +60%: 6 x 1.4 : 5 x 1.6 = 8.4 : 8 = 21 : 20.
+**RP7. Coins, and shares per head. Bank only.** *Shortcut engine:* value of one set = number ratio x face value, added. Coins of Rs 1, Rs 2, Rs 5 in 5 : 3 : 2: one set is worth 5 + 6 + 10 = Rs 21. Shares per head: multiply the per-head ratio by the head count before dividing.
+**RP10. Harder share forms. Bank only.** Mistaken ratio: work out both divisions and subtract. Shares reduced by fixed amounts: take the reductions off the total first. Squares: parts squared. Two numbers with a known LCM: LCM = ratio terms multiplied by one part (when the terms have no common factor).
+**RP9. Ratio basics. Bank only.** Compare ratios by cross-multiplying or turning them into decimals; expressions like (4x + 3y) : (4x - 3y) take x = 5, y = 3 straight in.
+**RP8. Proportion. Bank only.** Fourth proportional b x c / a; third proportional b x b / a; to make four numbers proportional after subtracting x, test the options in a x d = b x c.
+## 3. Drill Set
+Six original questions: one per Core archetype and the percent-change trap. Every answer and every elimination hack was checked by script. Try each before reading the method.
+### Drill 1. Easy cutoff-buster (RP3)
+Two numbers are in the ratio 5 : 7. If 6 is added to each, the ratio becomes 3 : 4. Find the larger number.
+1. 30 (B) 36 (C) 42 (D) 48 (E) 54
+- **Conventional method.** (5x + 6) / (7x + 6) = 3/4, so 20x + 24 = 21x + 18 and x = 6. Larger = 42.
+- **30-second exam method.** Differences: 7 - 5 = 2 and 4 - 3 = 1. Write 3 : 4 as 6 : 8. The smaller number went from 5 parts to 6 parts by adding 6, so one part = 6. Larger = 7 x 6 = 42. **Answer (C).**
+- **Option elimination hack.** The larger number is 7 parts, so it must be a multiple of 7. Only 42 is. Back-check: 30 + 6 = 36, 42 + 6 = 48, 36 : 48 = 3 : 4.
+- **IBPS trap warning.** Option (A) 30 is the smaller number.
+### Drill 2. Joining ratios (RP1)
+A : B = 2 : 3 and B : C = 4 : 5. The average of A, B and C is 35. Find C.
+1. 36 (B) 40 (C) 45 (D) 50 (E) 54
+- **Conventional method.** Write A and C in terms of B, add the three, set the total to 105; three fractions to clear.
+- **30-second exam method.** Make B equal: 2 : 3 = 8 : 12 and 4 : 5 = 12 : 15, so A : B : C = 8 : 12 : 15, 35 parts. Total = 35 x 3 = 105, one part = 3, C = 45. **Answer (C).**
+- **Option elimination hack.** C is 15 parts, so it must divide by 15. Only 45 does. Back-check: 24, 36, 45 average 35.
+- **IBPS trap warning.** Joining 2 : 3 and 4 : 5 as 2 : 3 : 5 (without making B equal) gives C = 52.5, not an option, and wastes time.
+### Drill 3. Equal savings (RP4)
+The incomes of A and B are in the ratio 5 : 4 and their expenditures in the ratio 7 : 5. Each saves Rs 3,000. Find A's income (in Rs).
+1. 8,000 (B) 10,000 (C) 12,000 (D) 15,000 (E) 9,000
+- **Conventional method.** 5x - 3,000 : 4x - 3,000 = 7 : 5, so 25x - 15,000 = 28x - 21,000 and x = 2,000.
+- **30-second exam method.** Equal savings means income parts minus expenditure parts stand for the same rupees. Try incomes 10 : 8 (double 5 : 4) against expenditures 7 : 5: both leave 3. So 3 units = 3,000, one unit = 1,000, A's income = 10 units = 10,000. **Answer (B).**
+- **Option elimination hack.** A's expenditure = income - 3,000 must be a multiple of 7 (in thousands, from the 7 parts). Only 10,000 - 3,000 = 7,000 works. Back-check: B = 8,000, expenditures 7,000 and 5,000 = 7 : 5.
+- **IBPS trap warning.** Do not apply the income ratio to the savings: equal savings say nothing about 5 : 4.
+### Drill 4. Shares from differences (RP2)
+Rs 7,200 is divided among A, B and C. A gets Rs 600 more than B, and C gets Rs 300 less than B. Find A : B : C.
+1. 29 : 23 : 20 (B) 23 : 29 : 20 (C) 20 : 23 : 29 (D) 29 : 20 : 23 (E) None of these
+- **Conventional method.** B + 600 + B + B - 300 = 7,200, so 3B = 6,900.
+- **30-second exam method.** Take the differences out: 7,200 - 600 + 300 = 6,900 shared equally, B = 2,300. A = 2,900, C = 2,000. Ratio 29 : 23 : 20. **Answer (A).**
+- **Option elimination hack.** A is the largest and C the smallest; only (A) orders them so.
+- **IBPS trap warning.** Adding the 300 instead of taking it back gives B = 2,100 and a wrong set of shares.
+### Drill 5. Groups inside a group (RP5)
+In a class, boys and girls are in the ratio 5 : 3. 20% of the boys and 40% of the girls wear glasses. What percent of the class wears glasses?
+1. 25% (B) 27.5% (C) 30% (D) 32.5% (E) 35%
+- **Conventional method.** Take 80 students: 50 boys and 30 girls; 10 + 12 = 22 wear glasses, 22 / 80 = 27.5%.
+- **30-second exam method.** Weighted: (5 x 20 + 3 x 40) / 8 = 220 / 8 = 27.5%. **Answer (B).**
+- **Option elimination hack.** The answer lies between 20 and 40 and nearer 20, because there are more boys, so it is below 30: (A) or (B). Back-check with 80 students picks 27.5.
+- **IBPS trap warning.** The plain average of 20% and 40% is 30%, option (C).
+### Drill 6. Percent-change trap (RP6)
+The salaries of P and Q are in the ratio 4 : 5. P gets a 25% rise and Q a 20% rise. What is the new ratio of their salaries?
+1. 5 : 6 (B) 4 : 5 (C) 20 : 21 (D) 1 : 1 (E) 6 : 5
+- **Conventional method.** P = 400, Q = 500; new 500 and 600.
+- **30-second exam method.** 4 x 1.25 = 5 and 5 x 1.2 = 6. **Answer (A).**
+- **Option elimination hack.** P's rise is bigger, so P gains on Q: the new ratio is above 4 : 5 = 0.8 and below 1. Only 5 : 6 = 0.83 and 20 : 21 = 0.95 qualify; the factor check picks 5 : 6.
+- **IBPS trap warning.** Percent changes are multiplied into each term; they are not added to the ratio.
+## 4. Cheat Sheet & 30-Second Recall Matrix
+<table header-row="true">
+<tr>
+<td>Code</td>
+<td>When you see</td>
+<td>Do this</td>
+</tr>
+<tr>
+<td>RP1</td>
+<td>two ratios sharing a person; an average</td>
+<td>make the shared term equal; average x count = total; total / parts</td>
+</tr>
+<tr>
+<td>RP2</td>
+<td>an amount shared; "more than" between shares</td>
+<td>total / parts; take differences off the total first</td>
+</tr>
+<tr>
+<td>RP3</td>
+<td>added to each / moved across / joined</td>
+<td>keep the difference / the total / the fixed term equal across the two ratios</td>
+</tr>
+<tr>
+<td>RP4</td>
+<td>income, spends, saves</td>
+<td>income = expenditure + savings in parts; equal savings means equal (income - expenditure) parts</td>
+</tr>
+<tr>
+<td>RP5</td>
+<td>boys and girls inside sections</td>
+<td>outer split first, then each inner ratio; a shared count gives the difference</td>
+</tr>
+<tr>
+<td>RP6</td>
+<td>different % on each term</td>
+<td>multiply each term by its own factor</td>
+</tr>
+<tr>
+<td>RP7</td>
+<td>coins; shares per head</td>
+<td>value of one set; per-head ratio x heads</td>
+</tr>
+<tr>
+<td>RP8</td>
+<td>third / fourth / mean proportional</td>
+<td>b x b / a; b x c / a; square root of a x b</td>
+</tr>
+</table>
+**Traps.** Which person is asked (the smaller number, B's share). Squares of parts. Percent changes added to a ratio. Saving ratio confused with income ratio.
+**Fallback.** When a new form appears, write every quantity as parts of one person and use the single fact the question gives (a total, a difference, an unchanged term) to find one part.
+## 5. Practice Ladder
+36 bank questions in three rungs. Do not move up until a rung is fully correct. IDs: CON-RAT and PYQ-RAT are `source.id` values in `clerk/questions.json`; G-name-n is question n of the Guidely ratio set with that name.
+**Rung 1. Untimed until all correct.** One engine, small numbers.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>CON-RAT-04</td>
+<td>RP9</td>
+<td>11 : 14</td>
+</tr>
+<tr>
+<td>CON-RAT-06</td>
+<td>RP9</td>
+<td>6 : 4 : 3</td>
+</tr>
+<tr>
+<td>CON-RAT-07</td>
+<td>RP9</td>
+<td>4 : 3 : 2</td>
+</tr>
+<tr>
+<td>CON-RAT-08</td>
+<td>RP9</td>
+<td>29 : 11</td>
+</tr>
+<tr>
+<td>CON-RAT-01</td>
+<td>RP1</td>
+<td>6 : 8 : 9</td>
+</tr>
+<tr>
+<td>CON-RAT-25</td>
+<td>RP1</td>
+<td>20 : 27</td>
+</tr>
+<tr>
+<td>CON-RAT-02</td>
+<td>RP2</td>
+<td>₹960</td>
+</tr>
+<tr>
+<td>CON-RAT-14</td>
+<td>RP2</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-RAT-09</td>
+<td>RP3</td>
+<td>96</td>
+</tr>
+<tr>
+<td>CON-RAT-16</td>
+<td>RP3</td>
+<td>10 : 7</td>
+</tr>
+</table>
+**Rung 2. 60 seconds each.** The Confirmed archetypes in exam wording.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>PYQ-RAT-02</td>
+<td>RP1</td>
+<td>9 : 4 : 5</td>
+</tr>
+<tr>
+<td>PYQ-RAT-03</td>
+<td>RP1</td>
+<td>24</td>
+</tr>
+<tr>
+<td>PYQ-RAT-05</td>
+<td>RP1</td>
+<td>12</td>
+</tr>
+<tr>
+<td>PYQ-RAT-10</td>
+<td>RP1</td>
+<td>Rs 31,500</td>
+</tr>
+<tr>
+<td>PYQ-RAT-01</td>
+<td>RP3</td>
+<td>54</td>
+</tr>
+<tr>
+<td>PYQ-RAT-07</td>
+<td>RP3</td>
+<td>420</td>
+</tr>
+<tr>
+<td>CON-RAT-21</td>
+<td>RP3</td>
+<td>₹2,250</td>
+</tr>
+<tr>
+<td>CON-RAT-28</td>
+<td>RP3</td>
+<td>150</td>
+</tr>
+<tr>
+<td>PYQ-RAT-09</td>
+<td>RP4</td>
+<td>8 : 3</td>
+</tr>
+<tr>
+<td>PYQ-RAT-04</td>
+<td>RP4</td>
+<td>47 : 32</td>
+</tr>
+<tr>
+<td>CON-RAT-10</td>
+<td>RP4</td>
+<td>₹10,000</td>
+</tr>
+<tr>
+<td>CON-RAT-24</td>
+<td>RP4</td>
+<td>1 : 1</td>
+</tr>
+<tr>
+<td>PYQ-RAT-08</td>
+<td>RP5</td>
+<td>60</td>
+</tr>
+<tr>
+<td>PYQ-RAT-06</td>
+<td>RP5</td>
+<td>3 : 1</td>
+</tr>
+<tr>
+<td>CON-RAT-18</td>
+<td>RP5</td>
+<td>78%</td>
+</tr>
+<tr>
+<td>PYQ-RAT-11</td>
+<td>RP2</td>
+<td>17 : 9 : 25</td>
+</tr>
+<tr>
+<td>CON-RAT-17</td>
+<td>RP2</td>
+<td>₹2,400</td>
+</tr>
+</table>
+**Rung 3. 45 seconds each.** Mixed, including Insurance.
+<table header-row="true">
+<tr>
+<td>ID</td>
+<td>Engine</td>
+<td>Answer</td>
+</tr>
+<tr>
+<td>G-percentage-10</td>
+<td>RP6</td>
+<td>105: 92: 75</td>
+</tr>
+<tr>
+<td>G-percentage-7</td>
+<td>RP6</td>
+<td>6:7</td>
+</tr>
+<tr>
+<td>G-increase-decrease-5</td>
+<td>RP6</td>
+<td>12:5</td>
+</tr>
+<tr>
+<td>G-coins-2</td>
+<td>RP7</td>
+<td>240</td>
+</tr>
+<tr>
+<td>G-coins-8</td>
+<td>RP7</td>
+<td>400</td>
+</tr>
+<tr>
+<td>CON-RAT-19</td>
+<td>RP10</td>
+<td>₹280</td>
+</tr>
+<tr>
+<td>CON-RAT-22</td>
+<td>RP10</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-RAT-29</td>
+<td>RP10</td>
+<td>None of these</td>
+</tr>
+<tr>
+<td>CON-RAT-30</td>
+<td>RP10</td>
+<td>6</td>
+</tr>
+</table>
+## 6. Verification Log
+Built 6 Oct 2026. This module is checked, not guaranteed; a new exam variant can still fall outside it.
+### What was tested
+- **Answers.** All 41 clerk questions (30 constructed, 11 PYQ) were re-solved by script from their own numbers and compared with the bank key: 41 of 41 agree (four keys are "None of these", and the script confirms the true value is not among the options: CON-RAT-05 gives 64, CON-RAT-14 gives 4,500, CON-RAT-22 gives 515, CON-RAT-29 gives 484).
+- **Guidely questions on the lesson path.** The 10 used for practice were re-solved by script; all agree with their keys.
+- **Sister-exam questions.** All 4 were solved by hand and checked: IBPS PO 24 Aug 2025 S1 Q79 (Rs 40,000, matches the printed key), SBI Clerk 20 Sep 2025 S1 Q42 (320), SBI Clerk 20 Sep 2025 S2 Q51 (15 : 19), IBPS RRB Clerk 13 Dec 2025 S2 Q54 (Rs 22,500). The three Clerk-level papers printed no key in the text extracted; the answers are computed.
+- **Methods.** The equal-difference rule (RP3a) and the equal-total rule (RP3b) were applied to every RP3 clerk question and give the keyed answer on all 6. The equal-savings rule (RP4) gives the keyed answer on all 5 RP4 clerk questions.
+- **Drills.** All 6 drill answers were solved by script, and each elimination hack was checked to leave exactly one option (Drill 6 leaves two by range and is finished by the factor check, as stated).
+### What failed and was fixed
+- A first check matched CON-RAT-18 to 77.5% instead of 78% because the comparison allowed rounding; the check now takes the nearest option and agrees with the key.
+- Drill 3's first "30-second method" tried to scale the two ratios directly, which does not work when only the savings are equal; the method now states the equal (income - expenditure) rule.
+### What could not be opened or checked
+- The 126 Guidely and 37 Sreedhar ratio questions off the lesson path were classified by their set names and stems, not re-solved one by one.
+- No Mains papers were used. This module reflects Prelims only.
+- Paper counts use paper labels; "IBPS Clerk Prelims 2024, Guidely" carries two of the PYQs (RAT-08 and RAT-09) and is counted once.
+- The method books and channels in your Priority 3 list were not read or watched. The methods here are the standard parts and unit methods.
+### Source links (pages opened)
+- The 12 sister papers are the same Adda247 PDFs listed in the Simple & Compound Interest module's Verification Log.
+- The IBPS Clerk paper links are stored with each question in `clerk/questions.json` (`source.url`).
+## 7. Pattern Index: archetypes and question IDs
+- RP1: PYQ-RAT-02, 03, 05, 10 · CON-RAT-01, 25
+- RP2: PYQ-RAT-11 · CON-RAT-02, 14, 17
+- RP3: PYQ-RAT-01, 07 · CON-RAT-09, 16, 21, 28
+- RP4: PYQ-RAT-04, 09 · CON-RAT-10, 24, 26
+- RP5: PYQ-RAT-06, 08 · CON-RAT-18
+- RP6: CON-RAT-13 · G-percentage-7, 8, 10 · G-increase-decrease-5 · G-boys-girls-4
+- RP7: CON-RAT-11, 27 · G-coins-1, 2, 8 · G-boys-girls-6 · G-choclate-6
+- RP8: CON-RAT-03, 12, 15
+- RP9: CON-RAT-04, 06, 07, 08, 23
+- RP10: CON-RAT-05, 19, 20, 22, 29, 30
 # Reasoning: Series and Miscellaneous - Speed Mastery Module
 **Sample.** Added on request. This is a Reasoning topic, not Quant, and it combines three bank sections into one: alphanumeric / mixed series, alphabet series, and miscellaneous reasoning. Your bank holds no previous-year Reasoning questions, so every statement about what the exam asks comes from papers opened on the web: 12 IBPS Clerk Prelims memory-based papers (4 Oct 2025 Shifts 1 to 4, 5 Oct 2025 Shift 1 in its Hindi version, 24 Aug 2024 Shift 1, and the 2023, 2022, 2021, 2020, 2019 and 2018 papers) giving 59 questions of these kinds, plus the same 12 sister papers as before (4 SBI Clerk, 4 IBPS RRB Clerk, 4 IBPS PO Prelims) giving 65. Bank questions used: 933 practice questions (540 Guidely + 393 Sreedhar). The floor of 8 target-exam shifts and 6 to 10 sister questions is met. Memory-based papers are reconstructions, not official papers.
 ## 1. Core Mental Model, Mechanics and Conversion Grid
