@@ -56,7 +56,10 @@ Keep this repository private: the Guidely and Sreedhar banks are third-party mat
 | 22 | Number Series | yes | 8 |
 | 23 | Quadratic Equations | kept short | 4 |
 
-Reasoning: seven puzzle topics; six have lessons, Circular and Square Seating has revision notes only.
+Reasoning: 13 topics with guided lessons, each with a Stage A module in Part B of `data/playbook/source.md`:
+Floor and Flat, Month/Date/Day, Box, Linear, Parallel Rows, Series and Miscellaneous, Circular Seating, Square Seating,
+Triangular Arrangement (bank only: none found in papers), Designation Puzzles, Direction Sense and Blood Relations.
+The combined Circular and Square Seating module (Module 2) is kept as revision notes.
 
 Checks: `python3 -B tools/check_guides.py` (every practice question exists, has a working, and the working ends on the keyed option).
 
