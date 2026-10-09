@@ -69,6 +69,65 @@ function Head({ id, title, rank, sub, data, known, total, practise }) {
   );
 }
 
+/* ---------------- Listen: the list read aloud, one item after another ---------------- */
+
+const canSpeak = typeof window !== "undefined" && "speechSynthesis" in window;
+
+function pickVoice() {
+  const vs = window.speechSynthesis.getVoices();
+  return vs.find((v) => /en-IN/i.test(v.lang)) || vs.find((v) => /en-GB/i.test(v.lang)) || vs.find((v) => /^en/i.test(v.lang)) || null;
+}
+
+function Podcast({ items, textOf, idOf, label }) {
+  const [on, setOn] = useState(false);
+  const [i, setI] = useState(0);
+  const [rate, setRate] = usePref("en-rate", "1");
+  const [playing, setPlaying] = useState(false);
+  useEffect(() => () => canSpeak && window.speechSynthesis.cancel(), []);
+  useEffect(() => { if (on) { window.speechSynthesis.cancel(); setI(0); setPlaying(false); } }, [items]);
+  useEffect(() => {
+    if (!on || !playing || !items[i]) return;
+    const u = new SpeechSynthesisUtterance(textOf(items[i]));
+    const v = pickVoice(); if (v) u.voice = v;
+    u.rate = +rate;
+    u.onend = () => { if (i + 1 < items.length) setI(i + 1); else setPlaying(false); };
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(u);
+    document.getElementById("en-" + idOf(items[i]))?.scrollIntoView({ behavior: "smooth", block: "center" });
+    return () => { u.onend = null; };
+  }, [on, playing, i, rate]);
+  useEffect(() => {
+    document.querySelectorAll(".speaking").forEach((e) => e.classList.remove("speaking"));
+    if (on && items[i]) document.getElementById("en-" + idOf(items[i]))?.classList.add("speaking");
+  }, [on, i, items]);
+  if (!canSpeak || !items.length) return null;
+  if (!on) return <button className="btn soft" onClick={() => { setOn(true); setPlaying(true); }}>▶ Listen to {items.length}</button>;
+  const go = (n) => { window.speechSynthesis.cancel(); setI(Math.max(0, Math.min(items.length - 1, n))); };
+  const stop = () => { window.speechSynthesis.cancel(); setOn(false); setPlaying(false); };
+  const toggle = () => { if (playing) { window.speechSynthesis.cancel(); setPlaying(false); } else setPlaying(true); };
+  return (
+    <div className="podbar glass" role="region" aria-label="Listen">
+      <button className="pbtn" onClick={() => go(i - 1)} aria-label="Previous">⏮</button>
+      <button className="pbtn main" onClick={toggle} aria-label={playing ? "Pause" : "Play"}>{playing ? "⏸" : "▶"}</button>
+      <button className="pbtn" onClick={() => go(i + 1)} aria-label="Next">⏭</button>
+      <div className="grow pinfo"><span className="small strong">{i + 1} / {items.length}</span><span className="muted small ellipsis">{label(items[i])}</span></div>
+      <select value={rate} onChange={(e) => setRate(e.target.value)} aria-label="Speed">
+        {["0.8", "1", "1.2", "1.5"].map((r) => <option key={r} value={r}>{r}×</option>)}
+      </select>
+      <button className="pbtn" onClick={stop} aria-label="Stop">✕</button>
+    </div>
+  );
+}
+
+const sayRule = (r) => ["Rule " + r.n + ". " + r.title + ".", r.rule, "Wrong: " + r.wrong, "Right: " + r.right, r.tip].filter(Boolean).join(" ");
+const spell = (w) => w.toUpperCase().split("").filter((c) => /[A-Z]/.test(c)).join(", ");
+const SAY = {
+  words: (x) => [x.w + ".", x.pos + ".", x.meaning + ".", x.syn?.length ? "Same as: " + x.syn.join(", ") + "." : "", x.ant?.length ? "Opposite: " + x.ant.join(", ") + "." : ""].join(" "),
+  oneword: (x) => x.meaning + ". One word: " + x.w + ".",
+  spelling: (x) => x.right + ". Spelt: " + spell(x.right) + ". " + (x.tip || ""),
+  confusables: (x) => x.words.join(" and ") + ". " + x.diff,
+};
+
 /* ---------------- Grammar ---------------- */
 
 /* The full list behind one of the most-asked rules, with its own search. */
@@ -99,21 +158,23 @@ export function Grammar() {
   const rules = useMemo(() => {
     if (!d) return [];
     const s = q.trim().toLowerCase();
-    let r = d.rules.filter((x) => (mode === "all" || x.core) && (cat === "all" || x.cat === cat));
+    const hits = (x) => x.bank + x.papers;
+    let r = d.rules.filter((x) => (mode === "all" || (mode === "ten" ? hits(x) >= 10 : x.core)) && (cat === "all" || x.cat === cat));
     if (s) r = r.filter((x) => [x.title, x.rule, x.wrong, x.right, x.tip].join(" ").toLowerCase().includes(s));
-    if (mode === "core") r = [...r].sort((a, b) => b.bank + b.papers - (a.bank + a.papers) || a.n - b.n);
+    if (mode !== "all") r = [...r].sort((a, b) => b.bank + b.papers - (a.bank + a.papers) || a.n - b.n);
     return r;
   }, [d, mode, cat, q]);
   if (!d) return <div className="page muted">Loading the rules...</div>;
   const catName = Object.fromEntries(d.categories.map((c) => [c.id, c.name]));
   const nCore = d.rules.filter((x) => x.core).length;
+  const nTen = d.rules.filter((x) => x.bank + x.papers >= 10).length;
   const known = d.rules.filter((x) => p.known?.["g:" + x.id]).length;
   return (
     <div className="page wide en">
       <Head id="grammar" title="Grammar" rank={0} data={d} known={known} total={d.rules.length} practise="#/practice/all/grammar"
         sub={d.rules.length + " rules in " + d.categories.length + " groups · " + nCore + " in the exam short list"} />
       <div className="toolbar">
-        <Seg value={mode} onChange={setMode} items={[["core", "Exam short list (" + nCore + ")"], ["all", "All " + d.rules.length + " rules"]]} />
+        <Seg value={mode} onChange={setMode} items={[["ten", "Asked 10+ times (" + nTen + ")"], ["core", "Exam short list (" + nCore + ")"], ["all", "All " + d.rules.length + " rules"]]} />
         <label className="sel">
           <span>Group</span>
           <select value={cat} onChange={(e) => setCat(e.target.value)}>
@@ -123,10 +184,11 @@ export function Grammar() {
         </label>
         <Search value={q} onChange={setQ} placeholder="a word, e.g. each" />
       </div>
-      <div className="muted small">{rules.length} rules shown{mode === "core" ? ", most asked first" : ", in study order"}</div>
+      <div className="muted small">{rules.length} rules shown{mode !== "all" ? ", most asked first" : ", in study order"}</div>
+      <Podcast items={rules} textOf={sayRule} idOf={(r) => r.id} label={(r) => r.n + ". " + r.title} />
       <div className="rules">
         {rules.map((r) => (
-          <article key={r.id} className="rule glass">
+          <article key={r.id} id={"en-" + r.id} className="rule glass">
             <div className="rule-top">
               <span className="rnum">{r.n}</span>
               <div className="grow">
@@ -170,7 +232,7 @@ function WordCard({ x }) {
 
 function Card({ tab, x }) {
   return (
-    <article className="wcard glass">
+    <article id={"en-" + keyOf(tab, x).replace(/[^a-z0-9]+/gi, "-")} className="wcard glass">
       {tab === "words" && <WordCard x={x} />}
       {tab === "oneword" && <><div className="muted">{x.meaning}</div><b className="word">{x.w}</b></>}
       {tab === "spelling" && (
@@ -276,6 +338,7 @@ export function Vocabulary() {
             {tab !== "confusables" && items.length > 0 && <button className="btn primary" onClick={() => setFlash(true)}>Test me ({items.length})</button>}
           </div>
           <div className="muted small">{items.length} shown</div>
+          <Podcast items={items} textOf={SAY[tab]} idOf={(x) => keyOf(tab, x).replace(/[^a-z0-9]+/gi, "-")} label={(x) => x.w || x.right || x.words.join(" / ")} />
           <div className="wgrid">{items.map((x) => <Card key={keyOf(tab, x)} tab={tab} x={x} />)}</div>
         </>
       )}

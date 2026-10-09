@@ -67,6 +67,7 @@ Checks: `python3 -B tools/check_guides.py` (every practice question exists, has 
 
 - **Grammar** (`data/english/grammar.json`): 120 rules in 18 groups, each with a wrong and a corrected sentence; 38 form the exam short list (33 by count of bank and paper questions they decide, 5 classic traps by judgement).
 - **Vocabulary** (`data/english/vocabulary.json`): 500 words (250 short list), 120 one-word substitutes, 120 spelling traps, 80 confusables. Ranked by counts from the banks' RC word, vocabulary, word-usage and misspelt-word questions; entries marked `src: "web"` come from standard bank-exam lists and are not in the banks.
+- Grammar filter "Asked 10+ times" (19 rules, each with a full list: prepositions, irregular verbs, word families, modals, determiners and so on). "Listen" reads the shown list aloud, one rule or word after another (browser speech, no setup).
 - Printable copies: `docs/english/grammar.md`, `docs/english/vocabulary.md` (`python3 -B tools/english/to_markdown.py`). Checks: `tools/english/check_grammar.py`, `tools/english/check_vocabulary.py`.
 
 ## Working rules
