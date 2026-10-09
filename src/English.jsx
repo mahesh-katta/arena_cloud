@@ -71,6 +71,24 @@ function Head({ id, title, rank, sub, data, known, total, practise }) {
 
 /* ---------------- Grammar ---------------- */
 
+/* The full list behind one of the most-asked rules, with its own search. */
+function MoreList({ m }) {
+  const [q, setQ] = useState("");
+  const s = q.trim().toLowerCase();
+  const rows = s ? m.rows.filter((r) => r.join(" ").toLowerCase().includes(s)) : m.rows;
+  return (
+    <details className="fold inner more">
+      <summary>{m.title} ({m.rows.length})</summary>
+      {m.note && <p className="muted small">{m.note}</p>}
+      {m.rows.length > 15 && <input className="minisearch" type="search" placeholder="Search this list" value={q} onChange={(e) => setQ(e.target.value)} />}
+      <div className="tablewrap"><table>
+        <thead><tr>{m.cols.map((c, i) => <th key={i}>{c}</th>)}</tr></thead>
+        <tbody>{rows.map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} className={j === 0 ? "strong" : ""}>{c}</td>)}</tr>)}</tbody>
+      </table></div>
+    </details>
+  );
+}
+
 export function Grammar() {
   const p = useProgress();
   const [d, setD] = useState(null);
@@ -124,6 +142,7 @@ export function Grammar() {
               <div className="ex ok"><span>✓</span>{r.right}</div>
             </div>
             {r.tip && <div className="tip">{r.tip}</div>}
+            {r.more && <MoreList m={r.more} />}
             <div className="actions tight"><Known k={"g:" + r.id} /></div>
           </article>
         ))}

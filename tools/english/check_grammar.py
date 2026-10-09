@@ -26,7 +26,12 @@ assert len(R) == 120, len(R)
 assert [r["n"] for r in R] == list(range(1, 121))
 assert len({r["id"] for r in R}) == 120, "ids not unique"
 for r in R:
-    assert set(r) == KEYS, (r.get("id"), set(r) ^ KEYS)
+    assert set(r) - {"more"} == KEYS, (r.get("id"), (set(r) - {"more"}) ^ KEYS)
+    if "more" in r:  # full list behind a most-asked rule (tools/english/core_lists.py)
+        m = r["more"]
+        assert m["title"] and m["cols"] and m["rows"], r["id"]
+        assert all(len(row) == len(m["cols"]) and all(c.strip() for c in row) for row in m["rows"]), (r["id"], "ragged or empty cell")
+        assert len({row[0] for row in m["rows"]}) == len(m["rows"]) or r["n"] == 52, (r["id"], "duplicate first column")
     assert r["cat"] in cat_ids, r["id"]
     assert re.fullmatch(rf"{r['cat']}-\d+", r["id"]), r["id"]
     for f in ("title", "rule", "wrong", "right"):
