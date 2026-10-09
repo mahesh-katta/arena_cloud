@@ -35,6 +35,8 @@ export const TOPIC_ICON = {
   "designation-puzzles": <><rect x="9" y="2.5" width="6" height="4.5" rx="1" /><rect x="3" y="16.5" width="6" height="4.5" rx="1" /><rect x="15" y="16.5" width="6" height="4.5" rx="1" /><path d="M12 7v4.5M6 16.5v-3h12v3" /></>,
   "direction-sense": <><circle cx="12" cy="12" r="9" /><path d="M14.8 9.2l-1.6 4-4 1.6 1.6-4z" /><path d="M12 3v2M12 19v2M3 12h2M19 12h2" /></>,
   "blood-relations": <><circle cx="12" cy="4.5" r="2.2" /><circle cx="5.5" cy="18.5" r="2.2" /><circle cx="18.5" cy="18.5" r="2.2" /><path d="M12 6.7V11M5.5 16.3V13.5h13v2.8M12 11v2.5" /></>,
+  grammar: <><path d="M4 19V6.5A2.5 2.5 0 0 1 6.5 4H20v13H6.5A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20" /><path d="M9 14l2.5-6 2.5 6M9.8 12h3.4" /></>,
+  vocabulary: <><path d="M4 5h7v14H4zM13 5h7v14h-7z" /><path d="M6.5 9h2M6.5 12h2M15.5 9h2M15.5 12h2" /></>,
   "box-puzzles": <><rect x="7" y="3" width="10" height="6" rx="1" /><rect x="4" y="9" width="16" height="6" rx="1" /><rect x="6" y="15" width="12" height="6" rx="1" /></>,
   "floor-and-flat-puzzles": <><rect x="5" y="3" width="14" height="18" rx="1.5" /><path d="M5 9h14M5 15h14M12 3v18" /></>,
   "month-date-and-day-puzzles": <><rect x="3" y="5" width="18" height="16" rx="2.5" /><path d="M3 10h18M8 3v4M16 3v4" /><rect x="7" y="13" width="3" height="3" rx=".5" {...F} /></>,
