@@ -4,6 +4,7 @@ import { CourseHome, TopicRail, TopicDetail, LessonList } from "./Course.jsx";
 import Lesson from "./Lesson.jsx";
 import { PracticeHome, PracticePick, PracticeRun, Mistakes } from "./Practice.jsx";
 import { Settings, Mocks } from "./Settings.jsx";
+import { Grammar, Vocabulary } from "./English.jsx";
 import { loadPlaybook, loadProgress, useProgress, applyTheme } from "./store.js";
 import { ICONS } from "./Icons.jsx";
 
@@ -62,6 +63,12 @@ function App() {
   let body;
   if (err) body = <div className="page">Could not load the lessons: {err}</div>;
   else if (!book) body = <div className="page muted">Loading the course...</div>;
+  else if (view === "english" || ((view === "topic") && book.byId[a]?.english)) body = (
+    <div className="cols two">
+      <TopicRail book={book} current={a} />
+      {a === "grammar" ? <Grammar /> : <Vocabulary />}
+    </div>
+  );
   else if (view === "topic") body = (
     <div className="cols two">
       {a !== "basics" && <TopicRail book={book} current={a} />}

@@ -2,6 +2,8 @@
    Names are matched case-insensitively, with any leading "12. " dropped. */
 const SICI = ["SI & CI"];
 export const POOLS = {
+  "grammar": ["Error spotting / detection", "Sentence improvement", "Single fillers / preposition", "Double fillers"],
+  "vocabulary": ["Vocabulary", "Misspelt & inappropriate word", "Word usage", "Pairs of words"],
   "simplification": ["Simplification"],
   "approximations": ["Approximation"],
   "percentages": ["Percentage"],

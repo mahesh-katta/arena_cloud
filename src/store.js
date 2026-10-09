@@ -77,6 +77,8 @@ export async function loadPlaybook() {
   book = await r.json();
   book.byId = Object.fromEntries(book.modules.map((m) => [m.id, m]));
   book.byId.basics = { id: "basics", part: "basics", title: book.basics.title, sections: [], guide: { intro: book.basics.intro, lessons: book.basics.lessons } };
+  for (const [id, title] of [["grammar", "Grammar"], ["vocabulary", "Vocabulary"]])
+    book.byId[id] = { id, part: "english", title, english: true, sections: [], guide: { lessons: [] } };
   return book;
 }
 
@@ -115,7 +117,7 @@ export const inSource = (src) => (x) =>
   src === "all" || (src === "papers" ? x.pyq : src === "clerk" ? x.bank === "clerk" && !x.pyq : x.bank === src);
 
 export function resetAll() {
-  update(() => ({ version: 1, lessons: {}, answers: {}, review: [], last: null }));
+  update(() => ({ version: 1, lessons: {}, answers: {}, review: [], last: null, known: {} }));
 }
 
 export function resetTopic(topic) {
@@ -149,4 +151,20 @@ export function setLessonDone(topic, id, done) {
       p.last = { topic, lesson: id };
     } else delete p.lessons[k];
   });
+}
+
+/* English: rule and word lists (data/english/*.json), loaded on demand. */
+const enCache = {};
+export const loadEnglish = (id) => (enCache[id] ||= fetch("/data/english/" + id + ".json").then((r) => r.json()));
+
+/* "I know this" marks for English rules and words: known["g:<rule id>"], known["v:<word>"]. */
+export function setKnown(k, on) {
+  update((p) => {
+    p.known = p.known || {};
+    if (on) p.known[k] = Date.now(); else delete p.known[k];
+  });
+}
+
+export function clearKnown() {
+  update((p) => { p.known = {}; });
 }

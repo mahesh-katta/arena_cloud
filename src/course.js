@@ -8,6 +8,8 @@ export const ASK = [
 export const LEVEL = ["", "Easy start", "Medium", "Harder"];
 
 const ROWS = [
+  ["grammar", 0, 1],
+  ["vocabulary", 0, 1],
   ["simplification", 0, 1],
   ["approximations", 1, 1, "simplification"],
   ["percentages", 0, 1],

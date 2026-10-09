@@ -1,0 +1,11250 @@
+{
+ "title": "Vocabulary",
+ "intro": [
+  "Vocabulary in IBPS prelims is tested through reading-comprehension word questions (closest or opposite meaning), word usage, pairs of words, misspelt words, and the choice of word in fillers, cloze tests and word swaps. This topic gives four lists: words, one-word substitutions, spellings and easily confused words.",
+  "The words list was ranked by a script that counted each headword across the two question banks and the cached memory-based papers. Counts are small: no word appears more than 3 times in the meaning questions, so learn meanings broadly rather than chasing 'repeat' words. A word's count adds its appearances as a tested or keyed word in meaning questions to its appearances as a keyed, vocabulary-level answer in fillers, cloze tests and word swaps. Very common words that the real papers sometimes ask (such as safe, watch, form) were left out because learners already know them.",
+  "Of the 500 words, 410 come from the bank counts (src \"bank\") and 90 come from standard bank-exam word lists that the harvest did not find (src \"web\", count 0). The 250 core words are the top of the count ranking (ties: words tested in meaning questions before filler-only words, then source-list order); 0 of them are web items.",
+  "One-word substitutions are not a topic in these banks, so their count only says how often the word appears anywhere in English question text; core picks prefer those found (7 core items are web). Spellings come first from misspelt-word questions (count = times the word was the misspelt answer), then standard traps (0 core items are web). Confusables are marked \"bank\" when two of the words appear together as options in one bank question (31 core items are web).",
+  "All meanings, tips and differences are written in plain words with British spelling. Synonyms and antonyms fit the main sense given; many words have other senses."
+ ],
+ "measured": [
+  [
+   "What was measured",
+   "Count"
+  ],
+  [
+   "RC 'most similar / most opposite' word questions (both banks)",
+   162
+  ],
+  [
+   "Vocabulary topic word questions (idioms and phrases excluded)",
+   24
+  ],
+  [
+   "Word usage questions with a headword",
+   128
+  ],
+  [
+   "Pairs of words questions",
+   67
+  ],
+  [
+   "Misspelt & inappropriate word questions with a keyed word",
+   267
+  ],
+  [
+   "Memory-based paper word-meaning questions (stems only)",
+   33
+  ],
+  [
+   "Memory-based paper spelling explanations naming a correct form",
+   6
+  ],
+  [
+   "Distinct headwords tested or keyed in those meaning questions",
+   588
+  ],
+  [
+   "Distinct vocabulary-level keyed words in fillers, cloze and word swap",
+   526
+  ],
+  [
+   "Distinct correct forms recovered from misspelt-word questions",
+   139
+  ],
+  [
+   "Highest count for any single headword",
+   3
+  ],
+  [
+   "Words list: entries with bank count > 0",
+   410
+  ],
+  [
+   "Words list: entries filled from standard lists (count 0)",
+   90
+  ],
+  [
+   "Words list: entries with count 2 or more",
+   104
+  ],
+  [
+   "Bank-counted candidate words left out to make room for listed words",
+   136
+  ],
+  [
+   "One-word substitutions found anywhere in English bank or paper text",
+   53
+  ],
+  [
+   "Spelling entries harvested from misspelt-word questions",
+   91
+  ],
+  [
+   "Confusable sets appearing together as options in one bank question",
+   9
+  ]
+ ],
+ "words": [
+  {
+   "w": "exacerbate",
+   "pos": "verb",
+   "meaning": "to make a problem worse",
+   "syn": [
+    "aggravate",
+    "worsen",
+    "intensify"
+   ],
+   "ant": [
+    "alleviate",
+    "ease"
+   ],
+   "core": true,
+   "count": 4,
+   "src": "bank"
+  },
+  {
+   "w": "grapple",
+   "pos": "verb",
+   "meaning": "to struggle to deal with something",
+   "syn": [
+    "struggle",
+    "wrestle",
+    "contend"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 4,
+   "src": "bank"
+  },
+  {
+   "w": "opulent",
+   "pos": "adjective",
+   "meaning": "showing great wealth",
+   "syn": [
+    "lavish",
+    "luxurious",
+    "sumptuous"
+   ],
+   "ant": [
+    "shabby",
+    "poor"
+   ],
+   "core": true,
+   "count": 4,
+   "src": "bank"
+  },
+  {
+   "w": "aggravate",
+   "pos": "verb",
+   "meaning": "to make a bad situation worse",
+   "syn": [
+    "worsen",
+    "exacerbate",
+    "inflame"
+   ],
+   "ant": [
+    "alleviate",
+    "ease"
+   ],
+   "core": true,
+   "count": 4,
+   "src": "bank"
+  },
+  {
+   "w": "deteriorate",
+   "pos": "verb",
+   "meaning": "to become worse",
+   "syn": [
+    "worsen",
+    "decline",
+    "degenerate"
+   ],
+   "ant": [
+    "improve",
+    "recover"
+   ],
+   "core": true,
+   "count": 4,
+   "src": "bank"
+  },
+  {
+   "w": "witness",
+   "pos": "verb",
+   "meaning": "to see an event happen",
+   "syn": [
+    "observe",
+    "see",
+    "watch"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 4,
+   "src": "bank"
+  },
+  {
+   "w": "certainty",
+   "pos": "noun",
+   "meaning": "the state of being completely sure",
+   "syn": [
+    "sureness",
+    "conviction",
+    "assurance"
+   ],
+   "ant": [
+    "doubt",
+    "uncertainty"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "decline",
+   "pos": "verb",
+   "meaning": "to become smaller or weaker; also, to refuse politely",
+   "syn": [
+    "decrease",
+    "dwindle",
+    "refuse"
+   ],
+   "ant": [
+    "increase",
+    "accept"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "diligent",
+   "pos": "adjective",
+   "meaning": "careful and hard-working",
+   "syn": [
+    "industrious",
+    "assiduous",
+    "painstaking"
+   ],
+   "ant": [
+    "lazy",
+    "negligent"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "viable",
+   "pos": "adjective",
+   "meaning": "able to work or succeed",
+   "syn": [
+    "feasible",
+    "workable",
+    "practicable"
+   ],
+   "ant": [
+    "unworkable",
+    "impractical"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "abysmal",
+   "pos": "adjective",
+   "meaning": "extremely bad",
+   "syn": [
+    "dreadful",
+    "appalling",
+    "terrible"
+   ],
+   "ant": [
+    "excellent",
+    "superb"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "futile",
+   "pos": "adjective",
+   "meaning": "having no useful result",
+   "syn": [
+    "pointless",
+    "vain",
+    "fruitless"
+   ],
+   "ant": [
+    "effective",
+    "fruitful"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "narrow",
+   "pos": "adjective",
+   "meaning": "small in width; limited in range",
+   "syn": [
+    "thin",
+    "restricted",
+    "limited"
+   ],
+   "ant": [
+    "wide",
+    "broad"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "ominous",
+   "pos": "adjective",
+   "meaning": "suggesting that something bad will happen",
+   "syn": [
+    "threatening",
+    "menacing",
+    "sinister"
+   ],
+   "ant": [
+    "promising",
+    "auspicious"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "sporadic",
+   "pos": "adjective",
+   "meaning": "happening at irregular times, not often",
+   "syn": [
+    "occasional",
+    "intermittent",
+    "irregular"
+   ],
+   "ant": [
+    "frequent",
+    "continuous"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "mitigate",
+   "pos": "verb",
+   "meaning": "to make something less severe",
+   "syn": [
+    "alleviate",
+    "lessen",
+    "ease"
+   ],
+   "ant": [
+    "aggravate",
+    "worsen"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "gloomy",
+   "pos": "adjective",
+   "meaning": "dark, or sad and without hope",
+   "syn": [
+    "dismal",
+    "sombre",
+    "dejected"
+   ],
+   "ant": [
+    "cheerful",
+    "bright"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "boost",
+   "pos": "verb",
+   "meaning": "to help something increase or improve",
+   "syn": [
+    "increase",
+    "raise",
+    "bolster"
+   ],
+   "ant": [
+    "reduce",
+    "lower"
+   ],
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "abate",
+   "pos": "verb",
+   "meaning": "to become less strong",
+   "syn": [
+    "subside",
+    "diminish",
+    "ease"
+   ],
+   "ant": [
+    "intensify",
+    "increase"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "ambiguous",
+   "pos": "adjective",
+   "meaning": "having more than one possible meaning",
+   "syn": [
+    "unclear",
+    "equivocal",
+    "vague"
+   ],
+   "ant": [
+    "clear",
+    "explicit"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "annihilate",
+   "pos": "verb",
+   "meaning": "to destroy completely",
+   "syn": [
+    "obliterate",
+    "eradicate",
+    "demolish"
+   ],
+   "ant": [
+    "create",
+    "preserve"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "audacity",
+   "pos": "noun",
+   "meaning": "bold daring that may seem rude",
+   "syn": [
+    "boldness",
+    "nerve",
+    "temerity"
+   ],
+   "ant": [
+    "timidity",
+    "caution"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "conventional",
+   "pos": "adjective",
+   "meaning": "following accepted custom",
+   "syn": [
+    "traditional",
+    "orthodox",
+    "customary"
+   ],
+   "ant": [
+    "unconventional",
+    "radical"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "curtail",
+   "pos": "verb",
+   "meaning": "to cut short or limit",
+   "syn": [
+    "reduce",
+    "restrict",
+    "shorten"
+   ],
+   "ant": [
+    "extend",
+    "expand"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "deliberate",
+   "pos": "adjective",
+   "meaning": "done on purpose",
+   "syn": [
+    "intentional",
+    "planned",
+    "calculated"
+   ],
+   "ant": [
+    "accidental",
+    "unintentional"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "dwindle",
+   "pos": "verb",
+   "meaning": "to become gradually smaller",
+   "syn": [
+    "shrink",
+    "diminish",
+    "wane"
+   ],
+   "ant": [
+    "grow",
+    "increase"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "emerge",
+   "pos": "verb",
+   "meaning": "to come out or become known",
+   "syn": [
+    "appear",
+    "arise",
+    "surface"
+   ],
+   "ant": [
+    "disappear",
+    "vanish"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "expand",
+   "pos": "verb",
+   "meaning": "to become or make larger",
+   "syn": [
+    "enlarge",
+    "extend",
+    "broaden"
+   ],
+   "ant": [
+    "contract",
+    "shrink"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "feasibility",
+   "pos": "noun",
+   "meaning": "how possible or practical something is",
+   "syn": [
+    "practicability",
+    "viability",
+    "possibility"
+   ],
+   "ant": [
+    "impracticability"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "flourish",
+   "pos": "verb",
+   "meaning": "to grow or develop well",
+   "syn": [
+    "thrive",
+    "prosper",
+    "bloom"
+   ],
+   "ant": [
+    "wither",
+    "decline"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "harsh",
+   "pos": "adjective",
+   "meaning": "severe, cruel or unpleasantly rough",
+   "syn": [
+    "severe",
+    "stern",
+    "rough"
+   ],
+   "ant": [
+    "gentle",
+    "mild"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "hostile",
+   "pos": "adjective",
+   "meaning": "unfriendly and aggressive",
+   "syn": [
+    "antagonistic",
+    "unfriendly",
+    "belligerent"
+   ],
+   "ant": [
+    "friendly",
+    "amicable"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "intensify",
+   "pos": "verb",
+   "meaning": "to make or become stronger",
+   "syn": [
+    "heighten",
+    "escalate",
+    "strengthen"
+   ],
+   "ant": [
+    "weaken",
+    "lessen"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "labyrinthine",
+   "pos": "adjective",
+   "meaning": "complicated, like a maze",
+   "syn": [
+    "intricate",
+    "convoluted",
+    "tortuous"
+   ],
+   "ant": [
+    "simple",
+    "straightforward"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "liability",
+   "pos": "noun",
+   "meaning": "a debt or legal responsibility; a disadvantage",
+   "syn": [
+    "obligation",
+    "responsibility",
+    "burden"
+   ],
+   "ant": [
+    "asset"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "myriad",
+   "pos": "adjective",
+   "meaning": "very many; countless",
+   "syn": [
+    "countless",
+    "innumerable",
+    "numerous"
+   ],
+   "ant": [
+    "few"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "obscure",
+   "pos": "adjective",
+   "meaning": "not well known, or not clear",
+   "syn": [
+    "unknown",
+    "unclear",
+    "vague"
+   ],
+   "ant": [
+    "famous",
+    "clear"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "opaque",
+   "pos": "adjective",
+   "meaning": "not letting light through; hard to understand",
+   "syn": [
+    "cloudy",
+    "unclear",
+    "obscure"
+   ],
+   "ant": [
+    "transparent",
+    "clear"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "persistent",
+   "pos": "adjective",
+   "meaning": "continuing firmly in spite of difficulty",
+   "syn": [
+    "persevering",
+    "tenacious",
+    "determined"
+   ],
+   "ant": [
+    "irresolute",
+    "occasional"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "prolong",
+   "pos": "verb",
+   "meaning": "to make something last longer",
+   "syn": [
+    "extend",
+    "protract",
+    "lengthen"
+   ],
+   "ant": [
+    "shorten",
+    "curtail"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "raucous",
+   "pos": "adjective",
+   "meaning": "loud and harsh-sounding",
+   "syn": [
+    "noisy",
+    "rowdy",
+    "strident"
+   ],
+   "ant": [
+    "quiet",
+    "soft"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "remarkable",
+   "pos": "adjective",
+   "meaning": "unusual and worth noticing",
+   "syn": [
+    "notable",
+    "striking",
+    "extraordinary"
+   ],
+   "ant": [
+    "ordinary",
+    "unremarkable"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "tenacity",
+   "pos": "noun",
+   "meaning": "firm determination not to give up",
+   "syn": [
+    "persistence",
+    "perseverance",
+    "resolve"
+   ],
+   "ant": [
+    "irresolution",
+    "weakness"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "vibrant",
+   "pos": "adjective",
+   "meaning": "full of energy and life",
+   "syn": [
+    "lively",
+    "dynamic",
+    "vivid"
+   ],
+   "ant": [
+    "dull",
+    "lifeless"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "burgeon",
+   "pos": "verb",
+   "meaning": "to grow or increase quickly",
+   "syn": [
+    "flourish",
+    "boom",
+    "mushroom"
+   ],
+   "ant": [
+    "decline",
+    "shrink"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "abandon",
+   "pos": "verb",
+   "meaning": "to leave or give up completely",
+   "syn": [
+    "desert",
+    "forsake",
+    "relinquish"
+   ],
+   "ant": [
+    "keep",
+    "retain"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "adverse",
+   "pos": "adjective",
+   "meaning": "harmful or unfavourable",
+   "syn": [
+    "unfavourable",
+    "harmful",
+    "detrimental"
+   ],
+   "ant": [
+    "favourable",
+    "beneficial"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "augment",
+   "pos": "verb",
+   "meaning": "to make larger by adding",
+   "syn": [
+    "increase",
+    "enlarge",
+    "supplement"
+   ],
+   "ant": [
+    "decrease",
+    "reduce"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "besiege",
+   "pos": "verb",
+   "meaning": "to surround a place to capture it; to overwhelm",
+   "syn": [
+    "surround",
+    "beleaguer",
+    "blockade"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "concomitant",
+   "pos": "adjective",
+   "meaning": "happening together with something else",
+   "syn": [
+    "accompanying",
+    "attendant",
+    "associated"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "debunk",
+   "pos": "verb",
+   "meaning": "to expose as false",
+   "syn": [
+    "refute",
+    "discredit",
+    "disprove"
+   ],
+   "ant": [
+    "confirm",
+    "support"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "defy",
+   "pos": "verb",
+   "meaning": "to openly resist or refuse to obey",
+   "syn": [
+    "resist",
+    "disobey",
+    "flout"
+   ],
+   "ant": [
+    "obey",
+    "comply"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "divulge",
+   "pos": "verb",
+   "meaning": "to reveal a secret",
+   "syn": [
+    "disclose",
+    "reveal",
+    "expose"
+   ],
+   "ant": [
+    "conceal",
+    "hide"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "enhance",
+   "pos": "verb",
+   "meaning": "to improve the quality of",
+   "syn": [
+    "improve",
+    "boost",
+    "augment"
+   ],
+   "ant": [
+    "diminish",
+    "impair"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "expedite",
+   "pos": "verb",
+   "meaning": "to make something happen faster",
+   "syn": [
+    "hasten",
+    "speed up",
+    "accelerate"
+   ],
+   "ant": [
+    "delay",
+    "hinder"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "exploit",
+   "pos": "verb",
+   "meaning": "to use unfairly for one's own gain; to make use of",
+   "syn": [
+    "abuse",
+    "misuse",
+    "utilise"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "favourable",
+   "pos": "adjective",
+   "meaning": "good or helpful; showing approval",
+   "syn": [
+    "advantageous",
+    "positive",
+    "helpful"
+   ],
+   "ant": [
+    "unfavourable",
+    "adverse"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "fierce",
+   "pos": "adjective",
+   "meaning": "violent or very intense",
+   "syn": [
+    "ferocious",
+    "savage",
+    "intense"
+   ],
+   "ant": [
+    "gentle",
+    "mild"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "foster",
+   "pos": "verb",
+   "meaning": "to encourage the growth of",
+   "syn": [
+    "promote",
+    "nurture",
+    "cultivate"
+   ],
+   "ant": [
+    "suppress",
+    "hinder"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "hamper",
+   "pos": "verb",
+   "meaning": "to hinder progress",
+   "syn": [
+    "hinder",
+    "obstruct",
+    "impede"
+   ],
+   "ant": [
+    "help",
+    "facilitate"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "herald",
+   "pos": "verb",
+   "meaning": "to be a sign that something is coming",
+   "syn": [
+    "announce",
+    "signal",
+    "foreshadow"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "intangible",
+   "pos": "adjective",
+   "meaning": "unable to be touched or clearly defined",
+   "syn": [
+    "impalpable",
+    "abstract",
+    "elusive"
+   ],
+   "ant": [
+    "tangible",
+    "concrete"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "lag",
+   "pos": "verb",
+   "meaning": "to fall behind",
+   "syn": [
+    "trail",
+    "straggle",
+    "dawdle"
+   ],
+   "ant": [
+    "lead"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "menace",
+   "pos": "noun",
+   "meaning": "a threat or danger",
+   "syn": [
+    "threat",
+    "danger",
+    "peril"
+   ],
+   "ant": [
+    "safety"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "mull",
+   "pos": "verb",
+   "meaning": "to think about carefully",
+   "syn": [
+    "ponder",
+    "consider",
+    "contemplate"
+   ],
+   "ant": [
+    "ignore"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "nascent",
+   "pos": "adjective",
+   "meaning": "just beginning to develop",
+   "syn": [
+    "emerging",
+    "budding",
+    "embryonic"
+   ],
+   "ant": [
+    "mature",
+    "developed"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "noxious",
+   "pos": "adjective",
+   "meaning": "harmful or poisonous",
+   "syn": [
+    "toxic",
+    "poisonous",
+    "harmful"
+   ],
+   "ant": [
+    "harmless",
+    "innocuous"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "plague",
+   "pos": "verb",
+   "meaning": "to cause continual trouble",
+   "syn": [
+    "afflict",
+    "torment",
+    "beset"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "provoke",
+   "pos": "verb",
+   "meaning": "to cause anger or a reaction",
+   "syn": [
+    "incite",
+    "anger",
+    "trigger"
+   ],
+   "ant": [
+    "pacify",
+    "soothe"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "scarcity",
+   "pos": "noun",
+   "meaning": "a shortage",
+   "syn": [
+    "shortage",
+    "lack",
+    "dearth"
+   ],
+   "ant": [
+    "abundance",
+    "plenty"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "streamline",
+   "pos": "verb",
+   "meaning": "to make simpler and more efficient",
+   "syn": [
+    "simplify",
+    "rationalise",
+    "modernise"
+   ],
+   "ant": [
+    "complicate"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "surge",
+   "pos": "noun",
+   "meaning": "a sudden powerful rise",
+   "syn": [
+    "upsurge",
+    "rush",
+    "spurt"
+   ],
+   "ant": [
+    "decline",
+    "drop"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "surmise",
+   "pos": "verb",
+   "meaning": "to guess from limited evidence",
+   "syn": [
+    "suppose",
+    "infer",
+    "conjecture"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "tackle",
+   "pos": "verb",
+   "meaning": "to deal with a problem",
+   "syn": [
+    "address",
+    "handle",
+    "confront"
+   ],
+   "ant": [
+    "avoid",
+    "ignore"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "traverse",
+   "pos": "verb",
+   "meaning": "to travel across",
+   "syn": [
+    "cross",
+    "pass over",
+    "journey across"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "vehement",
+   "pos": "adjective",
+   "meaning": "showing strong feeling",
+   "syn": [
+    "forceful",
+    "passionate",
+    "fervent"
+   ],
+   "ant": [
+    "mild",
+    "apathetic"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "waive",
+   "pos": "verb",
+   "meaning": "to give up a right or not insist on a rule",
+   "syn": [
+    "forgo",
+    "relinquish",
+    "set aside"
+   ],
+   "ant": [
+    "enforce",
+    "claim"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "daunting",
+   "pos": "adjective",
+   "meaning": "seeming difficult and making you less confident",
+   "syn": [
+    "intimidating",
+    "formidable",
+    "discouraging"
+   ],
+   "ant": [
+    "encouraging",
+    "easy"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "upsurge",
+   "pos": "noun",
+   "meaning": "a sudden increase",
+   "syn": [
+    "surge",
+    "rise",
+    "upswing"
+   ],
+   "ant": [
+    "decline",
+    "slump"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "exonerate",
+   "pos": "verb",
+   "meaning": "to declare someone free from blame",
+   "syn": [
+    "absolve",
+    "acquit",
+    "clear"
+   ],
+   "ant": [
+    "convict",
+    "blame"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "coincide",
+   "pos": "verb",
+   "meaning": "to happen at the same time; to agree",
+   "syn": [
+    "concur",
+    "correspond",
+    "synchronise"
+   ],
+   "ant": [
+    "differ",
+    "diverge"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "unbridled",
+   "pos": "adjective",
+   "meaning": "not controlled or restrained",
+   "syn": [
+    "unrestrained",
+    "unchecked",
+    "uncontrolled"
+   ],
+   "ant": [
+    "restrained",
+    "controlled"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "parlance",
+   "pos": "noun",
+   "meaning": "a particular way of speaking or set of words",
+   "syn": [
+    "jargon",
+    "idiom",
+    "terminology"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "contradictory",
+   "pos": "adjective",
+   "meaning": "opposing or inconsistent with each other",
+   "syn": [
+    "conflicting",
+    "inconsistent",
+    "opposing"
+   ],
+   "ant": [
+    "consistent",
+    "compatible"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "intrigue",
+   "pos": "verb",
+   "meaning": "to arouse curiosity",
+   "syn": [
+    "fascinate",
+    "interest",
+    "captivate"
+   ],
+   "ant": [
+    "bore"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "deviate",
+   "pos": "verb",
+   "meaning": "to move away from a usual course",
+   "syn": [
+    "diverge",
+    "digress",
+    "stray"
+   ],
+   "ant": [
+    "conform",
+    "adhere"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "lethargic",
+   "pos": "adjective",
+   "meaning": "lacking energy",
+   "syn": [
+    "sluggish",
+    "listless",
+    "torpid"
+   ],
+   "ant": [
+    "energetic",
+    "lively"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "engulf",
+   "pos": "verb",
+   "meaning": "to surround and cover completely",
+   "syn": [
+    "swamp",
+    "overwhelm",
+    "envelop"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "cognizance",
+   "pos": "noun",
+   "meaning": "knowledge or awareness of something",
+   "syn": [
+    "awareness",
+    "notice",
+    "knowledge"
+   ],
+   "ant": [
+    "ignorance",
+    "unawareness"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "convene",
+   "pos": "verb",
+   "meaning": "to call or come together for a meeting",
+   "syn": [
+    "assemble",
+    "summon",
+    "gather"
+   ],
+   "ant": [
+    "disperse",
+    "adjourn"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "escalate",
+   "pos": "verb",
+   "meaning": "to increase rapidly in size or seriousness",
+   "syn": [
+    "intensify",
+    "mount",
+    "soar"
+   ],
+   "ant": [
+    "decrease",
+    "de-escalate"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "delinquent",
+   "pos": "adjective",
+   "meaning": "failing in duty; tending to commit minor crimes",
+   "syn": [
+    "negligent",
+    "errant",
+    "remiss"
+   ],
+   "ant": [
+    "dutiful",
+    "law-abiding"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "restrain",
+   "pos": "verb",
+   "meaning": "to stop someone from doing something; to control",
+   "syn": [
+    "curb",
+    "check",
+    "hold"
+   ],
+   "ant": [
+    "release",
+    "free"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "demolish",
+   "pos": "verb",
+   "meaning": "to pull down or destroy",
+   "syn": [
+    "raze",
+    "destroy",
+    "flatten"
+   ],
+   "ant": [
+    "build",
+    "construct"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "discourage",
+   "pos": "verb",
+   "meaning": "to make less confident or keen",
+   "syn": [
+    "dishearten",
+    "deter",
+    "dissuade"
+   ],
+   "ant": [
+    "encourage",
+    "inspire"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "emanate",
+   "pos": "verb",
+   "meaning": "to come out from a source",
+   "syn": [
+    "issue",
+    "emerge",
+    "flow"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "lopsided",
+   "pos": "adjective",
+   "meaning": "uneven; with one side bigger",
+   "syn": [
+    "uneven",
+    "unbalanced",
+    "skewed"
+   ],
+   "ant": [
+    "balanced",
+    "even"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "inadvertent",
+   "pos": "adjective",
+   "meaning": "not done on purpose",
+   "syn": [
+    "accidental",
+    "unintentional",
+    "unwitting"
+   ],
+   "ant": [
+    "deliberate",
+    "intentional"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "assert",
+   "pos": "verb",
+   "meaning": "to state firmly",
+   "syn": [
+    "declare",
+    "affirm",
+    "maintain"
+   ],
+   "ant": [
+    "deny",
+    "retract"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "envision",
+   "pos": "verb",
+   "meaning": "to imagine as a future possibility",
+   "syn": [
+    "envisage",
+    "foresee",
+    "picture"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "resilient",
+   "pos": "adjective",
+   "meaning": "able to recover quickly from difficulty",
+   "syn": [
+    "tough",
+    "hardy",
+    "buoyant"
+   ],
+   "ant": [
+    "fragile",
+    "vulnerable"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "galvanise",
+   "pos": "verb",
+   "meaning": "to shock or excite someone into action",
+   "syn": [
+    "stimulate",
+    "rouse",
+    "spur"
+   ],
+   "ant": [
+    "discourage",
+    "dampen"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "poignant",
+   "pos": "adjective",
+   "meaning": "causing a sharp feeling of sadness",
+   "syn": [
+    "moving",
+    "touching",
+    "affecting"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "mar",
+   "pos": "verb",
+   "meaning": "to spoil the quality or look of something",
+   "syn": [
+    "spoil",
+    "blemish",
+    "impair"
+   ],
+   "ant": [
+    "enhance",
+    "improve"
+   ],
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "aberrant",
+   "pos": "adjective",
+   "meaning": "departing from what is normal",
+   "syn": [
+    "abnormal",
+    "deviant",
+    "atypical"
+   ],
+   "ant": [
+    "normal",
+    "typical"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "abet",
+   "pos": "verb",
+   "meaning": "to help or encourage someone to do wrong",
+   "syn": [
+    "assist",
+    "incite",
+    "support"
+   ],
+   "ant": [
+    "hinder",
+    "oppose"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "abridge",
+   "pos": "verb",
+   "meaning": "to shorten a text without losing its sense",
+   "syn": [
+    "shorten",
+    "condense",
+    "abbreviate"
+   ],
+   "ant": [
+    "expand",
+    "lengthen"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "abscond",
+   "pos": "verb",
+   "meaning": "to leave secretly to avoid arrest or duty",
+   "syn": [
+    "flee",
+    "escape",
+    "bolt"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "accentuate",
+   "pos": "verb",
+   "meaning": "to make more noticeable",
+   "syn": [
+    "emphasise",
+    "highlight",
+    "stress"
+   ],
+   "ant": [
+    "minimise",
+    "understate"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "acclaim",
+   "pos": "noun",
+   "meaning": "enthusiastic public praise",
+   "syn": [
+    "praise",
+    "applause",
+    "tribute"
+   ],
+   "ant": [
+    "criticism",
+    "condemnation"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "adequate",
+   "pos": "adjective",
+   "meaning": "enough or good enough",
+   "syn": [
+    "sufficient",
+    "satisfactory",
+    "ample"
+   ],
+   "ant": [
+    "inadequate",
+    "insufficient"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "advent",
+   "pos": "noun",
+   "meaning": "the arrival of something important",
+   "syn": [
+    "arrival",
+    "coming",
+    "emergence"
+   ],
+   "ant": [
+    "departure",
+    "end"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "affluent",
+   "pos": "adjective",
+   "meaning": "having plenty of money",
+   "syn": [
+    "wealthy",
+    "rich",
+    "prosperous"
+   ],
+   "ant": [
+    "poor",
+    "impoverished"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "allusion",
+   "pos": "noun",
+   "meaning": "an indirect reference",
+   "syn": [
+    "reference",
+    "hint",
+    "mention"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "aloof",
+   "pos": "adjective",
+   "meaning": "cool and distant; not friendly",
+   "syn": [
+    "distant",
+    "detached",
+    "reserved"
+   ],
+   "ant": [
+    "friendly",
+    "sociable"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "altruistic",
+   "pos": "adjective",
+   "meaning": "caring unselfishly for others",
+   "syn": [
+    "selfless",
+    "unselfish",
+    "philanthropic"
+   ],
+   "ant": [
+    "selfish",
+    "egoistic"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "amicable",
+   "pos": "adjective",
+   "meaning": "friendly and without quarrel",
+   "syn": [
+    "friendly",
+    "cordial",
+    "harmonious"
+   ],
+   "ant": [
+    "hostile",
+    "unfriendly"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "anaemic",
+   "pos": "adjective",
+   "meaning": "weak and lacking energy or force",
+   "syn": [
+    "weak",
+    "feeble",
+    "lacklustre"
+   ],
+   "ant": [
+    "robust",
+    "vigorous"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "anecdote",
+   "pos": "noun",
+   "meaning": "a short personal story",
+   "syn": [
+    "story",
+    "tale",
+    "account"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "appalling",
+   "pos": "adjective",
+   "meaning": "shockingly bad",
+   "syn": [
+    "dreadful",
+    "atrocious",
+    "abysmal"
+   ],
+   "ant": [
+    "admirable",
+    "excellent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "applaud",
+   "pos": "verb",
+   "meaning": "to clap; to praise publicly",
+   "syn": [
+    "praise",
+    "commend",
+    "cheer"
+   ],
+   "ant": [
+    "criticise",
+    "condemn"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "ascertain",
+   "pos": "verb",
+   "meaning": "to find out for certain",
+   "syn": [
+    "determine",
+    "establish",
+    "discover"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "assuage",
+   "pos": "verb",
+   "meaning": "to make an unpleasant feeling less intense",
+   "syn": [
+    "ease",
+    "soothe",
+    "relieve"
+   ],
+   "ant": [
+    "aggravate",
+    "intensify"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "attainable",
+   "pos": "adjective",
+   "meaning": "possible to achieve",
+   "syn": [
+    "achievable",
+    "reachable",
+    "realistic"
+   ],
+   "ant": [
+    "unattainable",
+    "impossible"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "avid",
+   "pos": "adjective",
+   "meaning": "very keen and enthusiastic",
+   "syn": [
+    "eager",
+    "keen",
+    "ardent"
+   ],
+   "ant": [
+    "apathetic",
+    "indifferent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "benevolent",
+   "pos": "adjective",
+   "meaning": "kind and wishing good for others",
+   "syn": [
+    "kind",
+    "generous",
+    "charitable"
+   ],
+   "ant": [
+    "malevolent",
+    "cruel"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "bewildered",
+   "pos": "adjective",
+   "meaning": "very confused",
+   "syn": [
+    "puzzled",
+    "perplexed",
+    "baffled"
+   ],
+   "ant": [
+    "clear-headed",
+    "enlightened"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "blandishment",
+   "pos": "noun",
+   "meaning": "flattery used to persuade",
+   "syn": [
+    "flattery",
+    "cajolery",
+    "coaxing"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "bonhomie",
+   "pos": "noun",
+   "meaning": "cheerful friendliness",
+   "syn": [
+    "geniality",
+    "friendliness",
+    "warmth"
+   ],
+   "ant": [
+    "hostility",
+    "unfriendliness"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "brace",
+   "pos": "verb",
+   "meaning": "to prepare for something difficult; to support",
+   "syn": [
+    "prepare",
+    "steady",
+    "reinforce"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "bravado",
+   "pos": "noun",
+   "meaning": "a show of boldness meant to impress",
+   "syn": [
+    "swagger",
+    "bluster",
+    "boldness"
+   ],
+   "ant": [
+    "modesty",
+    "timidity"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "brazen",
+   "pos": "adjective",
+   "meaning": "bold and without shame",
+   "syn": [
+    "shameless",
+    "bold",
+    "impudent"
+   ],
+   "ant": [
+    "modest",
+    "shy"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "brutal",
+   "pos": "adjective",
+   "meaning": "savagely cruel",
+   "syn": [
+    "cruel",
+    "savage",
+    "vicious"
+   ],
+   "ant": [
+    "gentle",
+    "humane"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "burnish",
+   "pos": "verb",
+   "meaning": "to polish; to improve a reputation",
+   "syn": [
+    "polish",
+    "shine",
+    "enhance"
+   ],
+   "ant": [
+    "tarnish",
+    "dull"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "bypass",
+   "pos": "verb",
+   "meaning": "to go round or avoid",
+   "syn": [
+    "avoid",
+    "circumvent",
+    "sidestep"
+   ],
+   "ant": [
+    "confront"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "capacious",
+   "pos": "adjective",
+   "meaning": "having a lot of space inside",
+   "syn": [
+    "roomy",
+    "spacious",
+    "ample"
+   ],
+   "ant": [
+    "cramped",
+    "narrow"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "capitulate",
+   "pos": "verb",
+   "meaning": "to give in or surrender",
+   "syn": [
+    "surrender",
+    "yield",
+    "submit"
+   ],
+   "ant": [
+    "resist",
+    "defy"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "catalyst",
+   "pos": "noun",
+   "meaning": "something that causes change to happen",
+   "syn": [
+    "trigger",
+    "stimulus",
+    "spur"
+   ],
+   "ant": [
+    "obstacle",
+    "deterrent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "caveat",
+   "pos": "noun",
+   "meaning": "a warning or condition",
+   "syn": [
+    "warning",
+    "proviso",
+    "caution"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "chasm",
+   "pos": "noun",
+   "meaning": "a deep crack; a great difference",
+   "syn": [
+    "gulf",
+    "abyss",
+    "rift"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "clandestine",
+   "pos": "adjective",
+   "meaning": "done secretly",
+   "syn": [
+    "secret",
+    "covert",
+    "furtive"
+   ],
+   "ant": [
+    "open",
+    "overt"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "cohesion",
+   "pos": "noun",
+   "meaning": "the state of sticking or working together",
+   "syn": [
+    "unity",
+    "solidarity",
+    "togetherness"
+   ],
+   "ant": [
+    "division",
+    "disunity"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "collusion",
+   "pos": "noun",
+   "meaning": "secret cooperation to cheat or deceive",
+   "syn": [
+    "conspiracy",
+    "connivance",
+    "complicity"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "compassion",
+   "pos": "noun",
+   "meaning": "sympathy for others' suffering",
+   "syn": [
+    "sympathy",
+    "empathy",
+    "kindness"
+   ],
+   "ant": [
+    "cruelty",
+    "indifference"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "compel",
+   "pos": "verb",
+   "meaning": "to force someone to do something",
+   "syn": [
+    "force",
+    "oblige",
+    "coerce"
+   ],
+   "ant": [
+    "exempt",
+    "excuse"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "conclusive",
+   "pos": "adjective",
+   "meaning": "ending all doubt",
+   "syn": [
+    "decisive",
+    "definitive",
+    "convincing"
+   ],
+   "ant": [
+    "inconclusive",
+    "doubtful"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "condemn",
+   "pos": "verb",
+   "meaning": "to express strong disapproval",
+   "syn": [
+    "denounce",
+    "censure",
+    "criticise"
+   ],
+   "ant": [
+    "praise",
+    "commend"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "conducive",
+   "pos": "adjective",
+   "meaning": "helping something to happen",
+   "syn": [
+    "favourable",
+    "helpful",
+    "beneficial"
+   ],
+   "ant": [
+    "unfavourable",
+    "detrimental"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "confer",
+   "pos": "verb",
+   "meaning": "to give a title or right; to discuss",
+   "syn": [
+    "grant",
+    "bestow",
+    "consult"
+   ],
+   "ant": [
+    "withhold"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "confidant",
+   "pos": "noun",
+   "meaning": "a person you trust with secrets",
+   "syn": [
+    "intimate",
+    "friend",
+    "companion"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "confront",
+   "pos": "verb",
+   "meaning": "to face a problem or person directly",
+   "syn": [
+    "face",
+    "tackle",
+    "challenge"
+   ],
+   "ant": [
+    "avoid",
+    "evade"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "congested",
+   "pos": "adjective",
+   "meaning": "blocked or overcrowded",
+   "syn": [
+    "crowded",
+    "jammed",
+    "clogged"
+   ],
+   "ant": [
+    "clear",
+    "empty"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "conscientious",
+   "pos": "adjective",
+   "meaning": "careful to do one's work well",
+   "syn": [
+    "diligent",
+    "dutiful",
+    "meticulous"
+   ],
+   "ant": [
+    "careless",
+    "negligent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "consternation",
+   "pos": "noun",
+   "meaning": "anxiety or alarm caused by something unexpected",
+   "syn": [
+    "dismay",
+    "alarm",
+    "anxiety"
+   ],
+   "ant": [
+    "calm",
+    "composure"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "conviction",
+   "pos": "noun",
+   "meaning": "a firm belief; a guilty verdict",
+   "syn": [
+    "belief",
+    "certainty",
+    "confidence"
+   ],
+   "ant": [
+    "doubt",
+    "acquittal"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "corollary",
+   "pos": "noun",
+   "meaning": "a natural result of something",
+   "syn": [
+    "consequence",
+    "result",
+    "upshot"
+   ],
+   "ant": [
+    "cause"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "covert",
+   "pos": "adjective",
+   "meaning": "hidden; not openly shown",
+   "syn": [
+    "secret",
+    "clandestine",
+    "hidden"
+   ],
+   "ant": [
+    "overt",
+    "open"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "credible",
+   "pos": "adjective",
+   "meaning": "able to be believed",
+   "syn": [
+    "believable",
+    "plausible",
+    "convincing"
+   ],
+   "ant": [
+    "incredible",
+    "implausible"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "crucial",
+   "pos": "adjective",
+   "meaning": "extremely important",
+   "syn": [
+    "vital",
+    "critical",
+    "essential"
+   ],
+   "ant": [
+    "trivial",
+    "unimportant"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "cynic",
+   "pos": "noun",
+   "meaning": "a person who distrusts others' motives",
+   "syn": [
+    "sceptic",
+    "doubter",
+    "pessimist"
+   ],
+   "ant": [
+    "optimist",
+    "idealist"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "dapper",
+   "pos": "adjective",
+   "meaning": "neat and smartly dressed",
+   "syn": [
+    "smart",
+    "spruce",
+    "elegant"
+   ],
+   "ant": [
+    "scruffy",
+    "unkempt"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "debilitate",
+   "pos": "verb",
+   "meaning": "to make very weak",
+   "syn": [
+    "weaken",
+    "enfeeble",
+    "sap"
+   ],
+   "ant": [
+    "strengthen",
+    "invigorate"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "decipher",
+   "pos": "verb",
+   "meaning": "to work out the meaning of",
+   "syn": [
+    "decode",
+    "interpret",
+    "unravel"
+   ],
+   "ant": [
+    "encode"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "decisive",
+   "pos": "adjective",
+   "meaning": "settling an issue; able to decide quickly",
+   "syn": [
+    "conclusive",
+    "resolute",
+    "firm"
+   ],
+   "ant": [
+    "indecisive",
+    "hesitant"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "deficiency",
+   "pos": "noun",
+   "meaning": "a lack or shortage",
+   "syn": [
+    "shortage",
+    "lack",
+    "inadequacy"
+   ],
+   "ant": [
+    "abundance",
+    "sufficiency"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "demented",
+   "pos": "adjective",
+   "meaning": "behaving irrationally; mad",
+   "syn": [
+    "deranged",
+    "insane",
+    "crazed"
+   ],
+   "ant": [
+    "sane",
+    "rational"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "denounce",
+   "pos": "verb",
+   "meaning": "to criticise publicly",
+   "syn": [
+    "condemn",
+    "censure",
+    "decry"
+   ],
+   "ant": [
+    "praise",
+    "commend"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "deride",
+   "pos": "verb",
+   "meaning": "to mock with contempt",
+   "syn": [
+    "ridicule",
+    "mock",
+    "scorn"
+   ],
+   "ant": [
+    "praise",
+    "respect"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "deter",
+   "pos": "verb",
+   "meaning": "to discourage from acting",
+   "syn": [
+    "discourage",
+    "dissuade",
+    "prevent"
+   ],
+   "ant": [
+    "encourage",
+    "persuade"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "detrimental",
+   "pos": "adjective",
+   "meaning": "causing harm",
+   "syn": [
+    "harmful",
+    "damaging",
+    "injurious"
+   ],
+   "ant": [
+    "beneficial",
+    "helpful"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "diminish",
+   "pos": "verb",
+   "meaning": "to make or become less",
+   "syn": [
+    "reduce",
+    "lessen",
+    "decrease"
+   ],
+   "ant": [
+    "increase",
+    "enlarge"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "diminution",
+   "pos": "noun",
+   "meaning": "a reduction",
+   "syn": [
+    "decrease",
+    "reduction",
+    "decline"
+   ],
+   "ant": [
+    "increase",
+    "growth"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "disavow",
+   "pos": "verb",
+   "meaning": "to deny any link with or responsibility for",
+   "syn": [
+    "deny",
+    "disown",
+    "repudiate"
+   ],
+   "ant": [
+    "acknowledge",
+    "admit"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "discernible",
+   "pos": "adjective",
+   "meaning": "able to be noticed",
+   "syn": [
+    "perceptible",
+    "noticeable",
+    "visible"
+   ],
+   "ant": [
+    "imperceptible",
+    "invisible"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "disgraceful",
+   "pos": "adjective",
+   "meaning": "shockingly unacceptable",
+   "syn": [
+    "shameful",
+    "scandalous",
+    "outrageous"
+   ],
+   "ant": [
+    "honourable",
+    "admirable"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "disparate",
+   "pos": "adjective",
+   "meaning": "clearly different in kind",
+   "syn": [
+    "different",
+    "dissimilar",
+    "diverse"
+   ],
+   "ant": [
+    "similar",
+    "alike"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "dispatch",
+   "pos": "verb",
+   "meaning": "to send off quickly",
+   "syn": [
+    "send",
+    "transmit",
+    "forward"
+   ],
+   "ant": [
+    "receive"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "dissent",
+   "pos": "noun",
+   "meaning": "disagreement with an official view",
+   "syn": [
+    "disagreement",
+    "objection",
+    "opposition"
+   ],
+   "ant": [
+    "agreement",
+    "consent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "distort",
+   "pos": "verb",
+   "meaning": "to twist out of shape or truth",
+   "syn": [
+    "twist",
+    "misrepresent",
+    "warp"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "dither",
+   "pos": "verb",
+   "meaning": "to be unable to decide",
+   "syn": [
+    "hesitate",
+    "waver",
+    "vacillate"
+   ],
+   "ant": [
+    "decide"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "docility",
+   "pos": "noun",
+   "meaning": "readiness to be controlled; meekness",
+   "syn": [
+    "meekness",
+    "obedience",
+    "submissiveness"
+   ],
+   "ant": [
+    "defiance",
+    "rebelliousness"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "doctrine",
+   "pos": "noun",
+   "meaning": "a set of beliefs taught by a group",
+   "syn": [
+    "creed",
+    "dogma",
+    "principle"
+   ],
+   "ant": [
+    "scepticism"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "downfall",
+   "pos": "noun",
+   "meaning": "a loss of power or success",
+   "syn": [
+    "collapse",
+    "ruin",
+    "fall"
+   ],
+   "ant": [
+    "rise",
+    "success"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "drudgery",
+   "pos": "noun",
+   "meaning": "hard, boring work",
+   "syn": [
+    "toil",
+    "labour",
+    "grind"
+   ],
+   "ant": [
+    "pleasure",
+    "leisure"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "efficacious",
+   "pos": "adjective",
+   "meaning": "producing the intended result",
+   "syn": [
+    "effective",
+    "potent",
+    "successful"
+   ],
+   "ant": [
+    "ineffective",
+    "useless"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "eloquent",
+   "pos": "adjective",
+   "meaning": "fluent and persuasive in speech",
+   "syn": [
+    "articulate",
+    "expressive",
+    "fluent"
+   ],
+   "ant": [
+    "inarticulate"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "emancipation",
+   "pos": "noun",
+   "meaning": "freedom from control or slavery",
+   "syn": [
+    "liberation",
+    "freedom",
+    "release"
+   ],
+   "ant": [
+    "enslavement",
+    "subjugation"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "embellishment",
+   "pos": "noun",
+   "meaning": "a decorative detail",
+   "syn": [
+    "decoration",
+    "adornment",
+    "ornament"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "eminent",
+   "pos": "adjective",
+   "meaning": "famous and respected",
+   "syn": [
+    "distinguished",
+    "renowned",
+    "prominent"
+   ],
+   "ant": [
+    "unknown",
+    "obscure"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "emulate",
+   "pos": "verb",
+   "meaning": "to try to equal by imitating",
+   "syn": [
+    "imitate",
+    "copy",
+    "follow"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "endure",
+   "pos": "verb",
+   "meaning": "to suffer patiently; to last",
+   "syn": [
+    "bear",
+    "tolerate",
+    "last"
+   ],
+   "ant": [
+    "perish",
+    "succumb"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "exhort",
+   "pos": "verb",
+   "meaning": "to urge strongly",
+   "syn": [
+    "urge",
+    "encourage",
+    "press"
+   ],
+   "ant": [
+    "discourage"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "expatriate",
+   "pos": "noun",
+   "meaning": "a person living outside their own country",
+   "syn": [
+    "emigrant",
+    "exile",
+    "migrant"
+   ],
+   "ant": [
+    "native"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "explicit",
+   "pos": "adjective",
+   "meaning": "stated clearly and fully",
+   "syn": [
+    "clear",
+    "precise",
+    "express"
+   ],
+   "ant": [
+    "implicit",
+    "vague"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "exquisite",
+   "pos": "adjective",
+   "meaning": "extremely beautiful and delicate",
+   "syn": [
+    "beautiful",
+    "delicate",
+    "fine"
+   ],
+   "ant": [
+    "crude",
+    "ugly"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "exult",
+   "pos": "verb",
+   "meaning": "to show great joy",
+   "syn": [
+    "rejoice",
+    "celebrate",
+    "delight"
+   ],
+   "ant": [
+    "lament",
+    "mourn"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "fallacious",
+   "pos": "adjective",
+   "meaning": "based on a false idea",
+   "syn": [
+    "false",
+    "erroneous",
+    "misleading"
+   ],
+   "ant": [
+    "true",
+    "valid"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "feasible",
+   "pos": "adjective",
+   "meaning": "possible to do",
+   "syn": [
+    "practicable",
+    "viable",
+    "achievable"
+   ],
+   "ant": [
+    "impractical",
+    "impossible"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "feeble",
+   "pos": "adjective",
+   "meaning": "weak; lacking strength",
+   "syn": [
+    "weak",
+    "frail",
+    "faint"
+   ],
+   "ant": [
+    "strong",
+    "robust"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "felicity",
+   "pos": "noun",
+   "meaning": "great happiness; a fitting choice of words",
+   "syn": [
+    "bliss",
+    "joy",
+    "aptness"
+   ],
+   "ant": [
+    "misery",
+    "sorrow"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "ferocity",
+   "pos": "noun",
+   "meaning": "savage violence",
+   "syn": [
+    "fierceness",
+    "savagery",
+    "brutality"
+   ],
+   "ant": [
+    "gentleness",
+    "mildness"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "flattery",
+   "pos": "noun",
+   "meaning": "excessive or insincere praise",
+   "syn": [
+    "adulation",
+    "blandishment",
+    "cajolery"
+   ],
+   "ant": [
+    "criticism",
+    "insult"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "forfeit",
+   "pos": "verb",
+   "meaning": "to lose something as a penalty",
+   "syn": [
+    "lose",
+    "surrender",
+    "relinquish"
+   ],
+   "ant": [
+    "gain",
+    "retain"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "formulaic",
+   "pos": "adjective",
+   "meaning": "following a fixed pattern; unoriginal",
+   "syn": [
+    "predictable",
+    "stereotyped",
+    "hackneyed"
+   ],
+   "ant": [
+    "original",
+    "innovative"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "fragile",
+   "pos": "adjective",
+   "meaning": "easily broken or damaged",
+   "syn": [
+    "delicate",
+    "brittle",
+    "frail"
+   ],
+   "ant": [
+    "sturdy",
+    "robust"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "frail",
+   "pos": "adjective",
+   "meaning": "weak and delicate",
+   "syn": [
+    "feeble",
+    "infirm",
+    "fragile"
+   ],
+   "ant": [
+    "strong",
+    "sturdy"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "fraudulent",
+   "pos": "adjective",
+   "meaning": "obtained by deception",
+   "syn": [
+    "dishonest",
+    "deceitful",
+    "fake"
+   ],
+   "ant": [
+    "honest",
+    "legitimate"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "frivolous",
+   "pos": "adjective",
+   "meaning": "not serious; silly",
+   "syn": [
+    "trivial",
+    "flippant",
+    "silly"
+   ],
+   "ant": [
+    "serious",
+    "earnest"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "fugitive",
+   "pos": "noun",
+   "meaning": "a person who has escaped",
+   "syn": [
+    "runaway",
+    "escapee",
+    "deserter"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "garrulous",
+   "pos": "adjective",
+   "meaning": "talking too much about trivial things",
+   "syn": [
+    "talkative",
+    "loquacious",
+    "chatty"
+   ],
+   "ant": [
+    "taciturn",
+    "reticent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "germane",
+   "pos": "adjective",
+   "meaning": "relevant to the subject",
+   "syn": [
+    "relevant",
+    "pertinent",
+    "apposite"
+   ],
+   "ant": [
+    "irrelevant",
+    "unrelated"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "haphazard",
+   "pos": "adjective",
+   "meaning": "lacking order or plan",
+   "syn": [
+    "random",
+    "disorganised",
+    "chaotic"
+   ],
+   "ant": [
+    "orderly",
+    "systematic"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "heedless",
+   "pos": "adjective",
+   "meaning": "showing no care or attention",
+   "syn": [
+    "careless",
+    "reckless",
+    "unmindful"
+   ],
+   "ant": [
+    "careful",
+    "mindful"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "hindrance",
+   "pos": "noun",
+   "meaning": "something that gets in the way",
+   "syn": [
+    "obstacle",
+    "impediment",
+    "barrier"
+   ],
+   "ant": [
+    "help",
+    "aid"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "hobble",
+   "pos": "verb",
+   "meaning": "to walk with difficulty; to hamper",
+   "syn": [
+    "limp",
+    "hamper",
+    "restrict"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "hurdle",
+   "pos": "noun",
+   "meaning": "an obstacle or difficulty",
+   "syn": [
+    "obstacle",
+    "barrier",
+    "impediment"
+   ],
+   "ant": [
+    "advantage"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "illusion",
+   "pos": "noun",
+   "meaning": "a false idea or appearance",
+   "syn": [
+    "delusion",
+    "fantasy",
+    "mirage"
+   ],
+   "ant": [
+    "reality"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "immaculate",
+   "pos": "adjective",
+   "meaning": "perfectly clean or flawless",
+   "syn": [
+    "spotless",
+    "pristine",
+    "flawless"
+   ],
+   "ant": [
+    "dirty",
+    "grubby"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "impalpable",
+   "pos": "adjective",
+   "meaning": "unable to be felt or easily understood",
+   "syn": [
+    "intangible",
+    "imperceptible",
+    "elusive"
+   ],
+   "ant": [
+    "palpable",
+    "tangible"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "impart",
+   "pos": "verb",
+   "meaning": "to pass on information or a quality",
+   "syn": [
+    "convey",
+    "communicate",
+    "transmit"
+   ],
+   "ant": [
+    "withhold"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "impede",
+   "pos": "verb",
+   "meaning": "to slow down or block",
+   "syn": [
+    "hinder",
+    "obstruct",
+    "hamper"
+   ],
+   "ant": [
+    "facilitate",
+    "assist"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "impediment",
+   "pos": "noun",
+   "meaning": "an obstruction",
+   "syn": [
+    "obstacle",
+    "hindrance",
+    "barrier"
+   ],
+   "ant": [
+    "aid",
+    "help"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "impertinent",
+   "pos": "adjective",
+   "meaning": "rude and disrespectful",
+   "syn": [
+    "insolent",
+    "impudent",
+    "cheeky"
+   ],
+   "ant": [
+    "polite",
+    "respectful"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "inadequate",
+   "pos": "adjective",
+   "meaning": "not enough or not good enough",
+   "syn": [
+    "insufficient",
+    "deficient",
+    "meagre"
+   ],
+   "ant": [
+    "adequate",
+    "sufficient"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "incivility",
+   "pos": "noun",
+   "meaning": "rude behaviour",
+   "syn": [
+    "rudeness",
+    "discourtesy",
+    "impoliteness"
+   ],
+   "ant": [
+    "civility",
+    "courtesy"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "inclusive",
+   "pos": "adjective",
+   "meaning": "including everyone or everything",
+   "syn": [
+    "comprehensive",
+    "all-embracing",
+    "broad"
+   ],
+   "ant": [
+    "exclusive",
+    "restrictive"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "incur",
+   "pos": "verb",
+   "meaning": "to bring something unpleasant on oneself",
+   "syn": [
+    "suffer",
+    "sustain",
+    "attract"
+   ],
+   "ant": [
+    "avoid"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "indecisive",
+   "pos": "adjective",
+   "meaning": "unable to make decisions",
+   "syn": [
+    "hesitant",
+    "irresolute",
+    "wavering"
+   ],
+   "ant": [
+    "decisive",
+    "resolute"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "indolent",
+   "pos": "adjective",
+   "meaning": "lazy",
+   "syn": [
+    "lazy",
+    "idle",
+    "slothful"
+   ],
+   "ant": [
+    "industrious",
+    "diligent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "inevitable",
+   "pos": "adjective",
+   "meaning": "certain to happen",
+   "syn": [
+    "unavoidable",
+    "inescapable",
+    "certain"
+   ],
+   "ant": [
+    "avoidable",
+    "uncertain"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "infancy",
+   "pos": "noun",
+   "meaning": "early childhood; an early stage of development",
+   "syn": [
+    "babyhood",
+    "beginning",
+    "dawn"
+   ],
+   "ant": [
+    "maturity",
+    "adulthood"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "infirm",
+   "pos": "adjective",
+   "meaning": "weak, especially through age or illness",
+   "syn": [
+    "frail",
+    "feeble",
+    "weak"
+   ],
+   "ant": [
+    "healthy",
+    "robust"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "innovative",
+   "pos": "adjective",
+   "meaning": "introducing new ideas",
+   "syn": [
+    "original",
+    "inventive",
+    "pioneering"
+   ],
+   "ant": [
+    "conventional",
+    "traditional"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "inquisitive",
+   "pos": "adjective",
+   "meaning": "eager to know; curious",
+   "syn": [
+    "curious",
+    "inquiring",
+    "prying"
+   ],
+   "ant": [
+    "incurious",
+    "indifferent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "insatiable",
+   "pos": "adjective",
+   "meaning": "impossible to satisfy",
+   "syn": [
+    "unquenchable",
+    "voracious",
+    "greedy"
+   ],
+   "ant": [
+    "satisfied",
+    "content"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "instinctive",
+   "pos": "adjective",
+   "meaning": "done without thinking",
+   "syn": [
+    "intuitive",
+    "natural",
+    "automatic"
+   ],
+   "ant": [
+    "deliberate",
+    "learned"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "insubstantial",
+   "pos": "adjective",
+   "meaning": "lacking strength or solidity",
+   "syn": [
+    "flimsy",
+    "slight",
+    "weak"
+   ],
+   "ant": [
+    "substantial",
+    "solid"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "insufficient",
+   "pos": "adjective",
+   "meaning": "not enough",
+   "syn": [
+    "inadequate",
+    "deficient",
+    "scant"
+   ],
+   "ant": [
+    "sufficient",
+    "ample"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "insularity",
+   "pos": "noun",
+   "meaning": "narrow-mindedness; lack of interest in others",
+   "syn": [
+    "parochialism",
+    "narrow-mindedness",
+    "isolation"
+   ],
+   "ant": [
+    "open-mindedness"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "insurgency",
+   "pos": "noun",
+   "meaning": "an armed uprising against authority",
+   "syn": [
+    "rebellion",
+    "revolt",
+    "uprising"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "intuitive",
+   "pos": "adjective",
+   "meaning": "based on feeling rather than reasoning",
+   "syn": [
+    "instinctive",
+    "innate",
+    "spontaneous"
+   ],
+   "ant": [],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "irrelevant",
+   "pos": "adjective",
+   "meaning": "not connected to the matter",
+   "syn": [
+    "unrelated",
+    "immaterial",
+    "extraneous"
+   ],
+   "ant": [
+    "relevant",
+    "pertinent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "jettison",
+   "pos": "verb",
+   "meaning": "to throw away or abandon",
+   "syn": [
+    "discard",
+    "dump",
+    "scrap"
+   ],
+   "ant": [
+    "retain",
+    "keep"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "laborious",
+   "pos": "adjective",
+   "meaning": "needing a lot of time and effort",
+   "syn": [
+    "arduous",
+    "strenuous",
+    "toilsome"
+   ],
+   "ant": [
+    "easy",
+    "effortless"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "lament",
+   "pos": "verb",
+   "meaning": "to express grief or regret",
+   "syn": [
+    "mourn",
+    "grieve",
+    "bewail"
+   ],
+   "ant": [
+    "rejoice",
+    "celebrate"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "lax",
+   "pos": "adjective",
+   "meaning": "not strict enough",
+   "syn": [
+    "slack",
+    "careless",
+    "lenient"
+   ],
+   "ant": [
+    "strict",
+    "rigorous"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "legible",
+   "pos": "adjective",
+   "meaning": "clear enough to read",
+   "syn": [
+    "readable",
+    "clear",
+    "decipherable"
+   ],
+   "ant": [
+    "illegible"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "legitimate",
+   "pos": "adjective",
+   "meaning": "allowed by law; reasonable",
+   "syn": [
+    "lawful",
+    "legal",
+    "valid"
+   ],
+   "ant": [
+    "illegal",
+    "fraudulent"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "liberate",
+   "pos": "verb",
+   "meaning": "to set free",
+   "syn": [
+    "free",
+    "release",
+    "emancipate"
+   ],
+   "ant": [
+    "imprison",
+    "enslave"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "lively",
+   "pos": "adjective",
+   "meaning": "full of energy",
+   "syn": [
+    "energetic",
+    "animated",
+    "vivacious"
+   ],
+   "ant": [
+    "lifeless",
+    "dull"
+   ],
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "magnate",
+   "pos": "noun",
+   "meaning": "a wealthy and powerful businessperson",
+   "syn": [
+    "tycoon",
+    "mogul",
+    "baron"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "magnificent",
+   "pos": "adjective",
+   "meaning": "very impressive and beautiful",
+   "syn": [
+    "splendid",
+    "grand",
+    "superb"
+   ],
+   "ant": [
+    "modest",
+    "ordinary"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "malice",
+   "pos": "noun",
+   "meaning": "the wish to harm others",
+   "syn": [
+    "spite",
+    "ill will",
+    "malevolence"
+   ],
+   "ant": [
+    "goodwill",
+    "kindness"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "mendacious",
+   "pos": "adjective",
+   "meaning": "not telling the truth",
+   "syn": [
+    "lying",
+    "untruthful",
+    "deceitful"
+   ],
+   "ant": [
+    "truthful",
+    "honest"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "meticulous",
+   "pos": "adjective",
+   "meaning": "showing great attention to detail",
+   "syn": [
+    "careful",
+    "painstaking",
+    "scrupulous"
+   ],
+   "ant": [
+    "careless",
+    "sloppy"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "mirage",
+   "pos": "noun",
+   "meaning": "an optical illusion; a hope that cannot come true",
+   "syn": [
+    "illusion",
+    "delusion",
+    "fantasy"
+   ],
+   "ant": [
+    "reality"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "mire",
+   "pos": "noun",
+   "meaning": "deep mud; a difficult situation",
+   "syn": [
+    "swamp",
+    "bog",
+    "quagmire"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "morale",
+   "pos": "noun",
+   "meaning": "the confidence and spirit of a group",
+   "syn": [
+    "spirit",
+    "confidence",
+    "motivation"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "naive",
+   "pos": "adjective",
+   "meaning": "lacking experience; too trusting",
+   "syn": [
+    "innocent",
+    "gullible",
+    "credulous"
+   ],
+   "ant": [
+    "worldly",
+    "shrewd"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "neglect",
+   "pos": "verb",
+   "meaning": "to fail to care for",
+   "syn": [
+    "ignore",
+    "disregard",
+    "overlook"
+   ],
+   "ant": [
+    "attend",
+    "cherish"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "notable",
+   "pos": "adjective",
+   "meaning": "worth noticing; important",
+   "syn": [
+    "remarkable",
+    "noteworthy",
+    "significant"
+   ],
+   "ant": [
+    "insignificant",
+    "ordinary"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "nullify",
+   "pos": "verb",
+   "meaning": "to cancel or make useless",
+   "syn": [
+    "cancel",
+    "invalidate",
+    "annul"
+   ],
+   "ant": [
+    "validate",
+    "confirm"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "obliterate",
+   "pos": "verb",
+   "meaning": "to destroy completely",
+   "syn": [
+    "annihilate",
+    "destroy",
+    "erase"
+   ],
+   "ant": [
+    "preserve",
+    "create"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "obstacle",
+   "pos": "noun",
+   "meaning": "something that blocks progress",
+   "syn": [
+    "barrier",
+    "hurdle",
+    "hindrance"
+   ],
+   "ant": [
+    "advantage",
+    "aid"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "obstinate",
+   "pos": "adjective",
+   "meaning": "refusing to change one's mind",
+   "syn": [
+    "stubborn",
+    "headstrong",
+    "obdurate"
+   ],
+   "ant": [
+    "flexible",
+    "compliant"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "onus",
+   "pos": "noun",
+   "meaning": "a duty or responsibility",
+   "syn": [
+    "burden",
+    "responsibility",
+    "obligation"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "oppressive",
+   "pos": "adjective",
+   "meaning": "harsh and unjust; heavy and uncomfortable",
+   "syn": [
+    "tyrannical",
+    "harsh",
+    "stifling"
+   ],
+   "ant": [
+    "lenient",
+    "liberal"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "ostensible",
+   "pos": "adjective",
+   "meaning": "stated or appearing true but not necessarily so",
+   "syn": [
+    "apparent",
+    "professed",
+    "supposed"
+   ],
+   "ant": [
+    "real",
+    "genuine"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "oversight",
+   "pos": "noun",
+   "meaning": "a mistake made by not noticing; supervision",
+   "syn": [
+    "lapse",
+    "omission",
+    "supervision"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "paradigm",
+   "pos": "noun",
+   "meaning": "a model or typical example",
+   "syn": [
+    "model",
+    "pattern",
+    "framework"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "perturbed",
+   "pos": "adjective",
+   "meaning": "anxious or unsettled",
+   "syn": [
+    "worried",
+    "troubled",
+    "disturbed"
+   ],
+   "ant": [
+    "calm",
+    "composed"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "pessimist",
+   "pos": "noun",
+   "meaning": "a person who expects the worst",
+   "syn": [
+    "cynic",
+    "doom-monger",
+    "defeatist"
+   ],
+   "ant": [
+    "optimist"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "pliable",
+   "pos": "adjective",
+   "meaning": "easily bent; easily influenced",
+   "syn": [
+    "flexible",
+    "supple",
+    "compliant"
+   ],
+   "ant": [
+    "rigid",
+    "stubborn"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "posterity",
+   "pos": "noun",
+   "meaning": "all future generations",
+   "syn": [
+    "descendants",
+    "future generations",
+    "successors"
+   ],
+   "ant": [
+    "ancestors"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "precarious",
+   "pos": "adjective",
+   "meaning": "not secure; likely to fall",
+   "syn": [
+    "unstable",
+    "insecure",
+    "risky"
+   ],
+   "ant": [
+    "secure",
+    "stable"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "prestigious",
+   "pos": "adjective",
+   "meaning": "having high status and respect",
+   "syn": [
+    "esteemed",
+    "distinguished",
+    "eminent"
+   ],
+   "ant": [
+    "obscure",
+    "lowly"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "prevail",
+   "pos": "verb",
+   "meaning": "to prove stronger; to be widespread",
+   "syn": [
+    "win",
+    "triumph",
+    "predominate"
+   ],
+   "ant": [
+    "lose",
+    "fail"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "pristine",
+   "pos": "adjective",
+   "meaning": "in its original, perfect condition",
+   "syn": [
+    "immaculate",
+    "spotless",
+    "unspoilt"
+   ],
+   "ant": [
+    "dirty",
+    "spoilt"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "profound",
+   "pos": "adjective",
+   "meaning": "very great or deep in meaning",
+   "syn": [
+    "deep",
+    "intense",
+    "insightful"
+   ],
+   "ant": [
+    "shallow",
+    "superficial"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "prohibitive",
+   "pos": "adjective",
+   "meaning": "so high that it prevents buying or doing",
+   "syn": [
+    "exorbitant",
+    "excessive",
+    "restrictive"
+   ],
+   "ant": [
+    "affordable",
+    "reasonable"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "proliferation",
+   "pos": "noun",
+   "meaning": "a rapid increase in number",
+   "syn": [
+    "spread",
+    "expansion",
+    "multiplication"
+   ],
+   "ant": [
+    "decline",
+    "decrease"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "prolix",
+   "pos": "adjective",
+   "meaning": "too long and wordy",
+   "syn": [
+    "verbose",
+    "wordy",
+    "long-winded"
+   ],
+   "ant": [
+    "concise",
+    "succinct"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "propitiate",
+   "pos": "verb",
+   "meaning": "to win the favour of by pleasing",
+   "syn": [
+    "appease",
+    "placate",
+    "pacify"
+   ],
+   "ant": [
+    "provoke",
+    "anger"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "prosaic",
+   "pos": "adjective",
+   "meaning": "ordinary and dull",
+   "syn": [
+    "dull",
+    "mundane",
+    "unimaginative"
+   ],
+   "ant": [
+    "imaginative",
+    "exciting"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "prosperous",
+   "pos": "adjective",
+   "meaning": "successful and wealthy",
+   "syn": [
+    "affluent",
+    "thriving",
+    "flourishing"
+   ],
+   "ant": [
+    "poor",
+    "struggling"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "provocation",
+   "pos": "noun",
+   "meaning": "an action that causes anger",
+   "syn": [
+    "incitement",
+    "goading",
+    "affront"
+   ],
+   "ant": [
+    "appeasement"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "prudent",
+   "pos": "adjective",
+   "meaning": "acting with care for the future",
+   "syn": [
+    "wise",
+    "sensible",
+    "cautious"
+   ],
+   "ant": [
+    "reckless",
+    "imprudent"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "purview",
+   "pos": "noun",
+   "meaning": "the range of authority or concern",
+   "syn": [
+    "scope",
+    "remit",
+    "jurisdiction"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "pusillanimous",
+   "pos": "adjective",
+   "meaning": "lacking courage",
+   "syn": [
+    "cowardly",
+    "timid",
+    "faint-hearted"
+   ],
+   "ant": [
+    "brave",
+    "courageous"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "quaint",
+   "pos": "adjective",
+   "meaning": "attractively old-fashioned",
+   "syn": [
+    "charming",
+    "picturesque",
+    "old-world"
+   ],
+   "ant": [
+    "modern"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "rancour",
+   "pos": "noun",
+   "meaning": "bitter, long-lasting resentment",
+   "syn": [
+    "bitterness",
+    "animosity",
+    "resentment"
+   ],
+   "ant": [
+    "goodwill",
+    "friendliness"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "ravage",
+   "pos": "verb",
+   "meaning": "to cause severe damage to",
+   "syn": [
+    "devastate",
+    "ruin",
+    "destroy"
+   ],
+   "ant": [
+    "restore",
+    "rebuild"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "rebellion",
+   "pos": "noun",
+   "meaning": "armed or open resistance to authority",
+   "syn": [
+    "revolt",
+    "insurgency",
+    "uprising"
+   ],
+   "ant": [
+    "obedience",
+    "submission"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "recede",
+   "pos": "verb",
+   "meaning": "to move back or become less",
+   "syn": [
+    "retreat",
+    "ebb",
+    "diminish"
+   ],
+   "ant": [
+    "advance",
+    "increase"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "recuperate",
+   "pos": "verb",
+   "meaning": "to recover health or strength",
+   "syn": [
+    "recover",
+    "convalesce",
+    "heal"
+   ],
+   "ant": [
+    "deteriorate",
+    "weaken"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "rejoice",
+   "pos": "verb",
+   "meaning": "to feel or show great joy",
+   "syn": [
+    "celebrate",
+    "exult",
+    "delight"
+   ],
+   "ant": [
+    "lament",
+    "mourn"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "reluctant",
+   "pos": "adjective",
+   "meaning": "unwilling and hesitant",
+   "syn": [
+    "unwilling",
+    "hesitant",
+    "averse"
+   ],
+   "ant": [
+    "eager",
+    "willing"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "remedy",
+   "pos": "noun",
+   "meaning": "a cure or solution",
+   "syn": [
+    "cure",
+    "solution",
+    "antidote"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "reminiscent",
+   "pos": "adjective",
+   "meaning": "tending to remind one of something",
+   "syn": [
+    "evocative",
+    "suggestive",
+    "redolent"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "resentment",
+   "pos": "noun",
+   "meaning": "bitterness at unfair treatment",
+   "syn": [
+    "bitterness",
+    "indignation",
+    "rancour"
+   ],
+   "ant": [
+    "contentment",
+    "goodwill"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "resonant",
+   "pos": "adjective",
+   "meaning": "deep and echoing; evoking feelings",
+   "syn": [
+    "resounding",
+    "sonorous",
+    "evocative"
+   ],
+   "ant": [
+    "faint"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "resounding",
+   "pos": "adjective",
+   "meaning": "loud and echoing; very clear",
+   "syn": [
+    "emphatic",
+    "decisive",
+    "thunderous"
+   ],
+   "ant": [
+    "faint",
+    "narrow"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "restriction",
+   "pos": "noun",
+   "meaning": "a rule or condition that limits",
+   "syn": [
+    "limitation",
+    "constraint",
+    "curb"
+   ],
+   "ant": [
+    "freedom",
+    "liberty"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "reverent",
+   "pos": "adjective",
+   "meaning": "showing deep respect",
+   "syn": [
+    "respectful",
+    "devout",
+    "humble"
+   ],
+   "ant": [
+    "irreverent",
+    "disrespectful"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "revulsion",
+   "pos": "noun",
+   "meaning": "a feeling of strong disgust",
+   "syn": [
+    "disgust",
+    "repugnance",
+    "abhorrence"
+   ],
+   "ant": [
+    "delight",
+    "attraction"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "riposte",
+   "pos": "noun",
+   "meaning": "a quick clever reply",
+   "syn": [
+    "retort",
+    "rejoinder",
+    "comeback"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "robust",
+   "pos": "adjective",
+   "meaning": "strong and healthy",
+   "syn": [
+    "sturdy",
+    "vigorous",
+    "strong"
+   ],
+   "ant": [
+    "weak",
+    "fragile"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "salvage",
+   "pos": "verb",
+   "meaning": "to rescue from loss or damage",
+   "syn": [
+    "rescue",
+    "save",
+    "recover"
+   ],
+   "ant": [
+    "abandon",
+    "lose"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sanction",
+   "pos": "noun",
+   "meaning": "official permission (as a plural, 'sanctions' are penalties)",
+   "syn": [
+    "approval",
+    "authorisation",
+    "consent"
+   ],
+   "ant": [
+    "prohibition",
+    "ban"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sceptical",
+   "pos": "adjective",
+   "meaning": "doubting that something is true",
+   "syn": [
+    "doubtful",
+    "dubious",
+    "incredulous"
+   ],
+   "ant": [
+    "credulous",
+    "trusting"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "secretive",
+   "pos": "adjective",
+   "meaning": "inclined to hide information",
+   "syn": [
+    "reticent",
+    "furtive",
+    "guarded"
+   ],
+   "ant": [
+    "open",
+    "communicative"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sensible",
+   "pos": "adjective",
+   "meaning": "showing good judgement",
+   "syn": [
+    "wise",
+    "prudent",
+    "reasonable"
+   ],
+   "ant": [
+    "foolish",
+    "silly"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sentinel",
+   "pos": "noun",
+   "meaning": "a soldier or guard on watch",
+   "syn": [
+    "guard",
+    "sentry",
+    "lookout"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "shallow",
+   "pos": "adjective",
+   "meaning": "not deep; lacking serious thought",
+   "syn": [
+    "superficial",
+    "trivial",
+    "slight"
+   ],
+   "ant": [
+    "deep",
+    "profound"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "shortcoming",
+   "pos": "noun",
+   "meaning": "a fault or weakness",
+   "syn": [
+    "defect",
+    "flaw",
+    "failing"
+   ],
+   "ant": [
+    "strength",
+    "merit"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "simmer",
+   "pos": "verb",
+   "meaning": "to cook gently; to be in a state of suppressed anger",
+   "syn": [
+    "seethe",
+    "stew",
+    "smoulder"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sordid",
+   "pos": "adjective",
+   "meaning": "dishonest and immoral; dirty",
+   "syn": [
+    "sleazy",
+    "squalid",
+    "seedy"
+   ],
+   "ant": [
+    "honourable",
+    "clean"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sorrow",
+   "pos": "noun",
+   "meaning": "deep sadness",
+   "syn": [
+    "grief",
+    "sadness",
+    "anguish"
+   ],
+   "ant": [
+    "joy",
+    "happiness"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "specious",
+   "pos": "adjective",
+   "meaning": "seeming true but actually false",
+   "syn": [
+    "misleading",
+    "spurious",
+    "fallacious"
+   ],
+   "ant": [
+    "valid",
+    "genuine"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "splurge",
+   "pos": "verb",
+   "meaning": "to spend money freely",
+   "syn": [
+    "squander",
+    "indulge",
+    "lavish"
+   ],
+   "ant": [
+    "save",
+    "economise"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "spree",
+   "pos": "noun",
+   "meaning": "a short period of excessive activity",
+   "syn": [
+    "binge",
+    "fling",
+    "bout"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "spur",
+   "pos": "verb",
+   "meaning": "to encourage or urge on",
+   "syn": [
+    "prompt",
+    "stimulate",
+    "motivate"
+   ],
+   "ant": [
+    "discourage",
+    "deter"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sputter",
+   "pos": "verb",
+   "meaning": "to work unevenly; to struggle",
+   "syn": [
+    "falter",
+    "stutter",
+    "splutter"
+   ],
+   "ant": [
+    "thrive",
+    "boom"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "stale",
+   "pos": "adjective",
+   "meaning": "no longer fresh",
+   "syn": [
+    "old",
+    "musty",
+    "hackneyed"
+   ],
+   "ant": [
+    "fresh",
+    "new"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "steady",
+   "pos": "adjective",
+   "meaning": "firm and not changing",
+   "syn": [
+    "stable",
+    "constant",
+    "consistent"
+   ],
+   "ant": [
+    "unsteady",
+    "erratic"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "strenuous",
+   "pos": "adjective",
+   "meaning": "needing great effort",
+   "syn": [
+    "arduous",
+    "demanding",
+    "taxing"
+   ],
+   "ant": [
+    "easy",
+    "effortless"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "stricture",
+   "pos": "noun",
+   "meaning": "a severe criticism; a restriction",
+   "syn": [
+    "criticism",
+    "censure",
+    "restriction"
+   ],
+   "ant": [
+    "praise"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "strident",
+   "pos": "adjective",
+   "meaning": "loud and harsh; forceful",
+   "syn": [
+    "harsh",
+    "shrill",
+    "vociferous"
+   ],
+   "ant": [
+    "soft",
+    "gentle"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "substantiate",
+   "pos": "verb",
+   "meaning": "to provide evidence for",
+   "syn": [
+    "prove",
+    "confirm",
+    "verify"
+   ],
+   "ant": [
+    "disprove",
+    "refute"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "subsume",
+   "pos": "verb",
+   "meaning": "to include within something larger",
+   "syn": [
+    "include",
+    "absorb",
+    "incorporate"
+   ],
+   "ant": [
+    "exclude"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sunder",
+   "pos": "verb",
+   "meaning": "to split apart",
+   "syn": [
+    "sever",
+    "split",
+    "divide"
+   ],
+   "ant": [
+    "unite",
+    "join"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "surreptitious",
+   "pos": "adjective",
+   "meaning": "done secretly",
+   "syn": [
+    "stealthy",
+    "furtive",
+    "clandestine"
+   ],
+   "ant": [
+    "open",
+    "overt"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "susceptible",
+   "pos": "adjective",
+   "meaning": "easily influenced or harmed",
+   "syn": [
+    "vulnerable",
+    "prone",
+    "liable"
+   ],
+   "ant": [
+    "resistant",
+    "immune"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sustain",
+   "pos": "verb",
+   "meaning": "to keep going; to suffer an injury",
+   "syn": [
+    "maintain",
+    "support",
+    "suffer"
+   ],
+   "ant": [
+    "abandon",
+    "discontinue"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "swagger",
+   "pos": "verb",
+   "meaning": "to walk or behave arrogantly",
+   "syn": [
+    "strut",
+    "boast",
+    "show off"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "synergy",
+   "pos": "noun",
+   "meaning": "combined effect greater than separate parts",
+   "syn": [
+    "cooperation",
+    "collaboration",
+    "teamwork"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "taciturn",
+   "pos": "adjective",
+   "meaning": "saying very little",
+   "syn": [
+    "reticent",
+    "reserved",
+    "uncommunicative"
+   ],
+   "ant": [
+    "talkative",
+    "garrulous"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "tangle",
+   "pos": "noun",
+   "meaning": "a twisted mass; a confused state",
+   "syn": [
+    "knot",
+    "muddle",
+    "jumble"
+   ],
+   "ant": [
+    "order"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "tawdry",
+   "pos": "adjective",
+   "meaning": "cheap and showy",
+   "syn": [
+    "gaudy",
+    "cheap",
+    "tasteless"
+   ],
+   "ant": [
+    "tasteful",
+    "elegant"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "threaten",
+   "pos": "verb",
+   "meaning": "to state an intention to harm; to put at risk",
+   "syn": [
+    "menace",
+    "endanger",
+    "jeopardise"
+   ],
+   "ant": [
+    "protect",
+    "safeguard"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "torpid",
+   "pos": "adjective",
+   "meaning": "inactive and slow",
+   "syn": [
+    "lethargic",
+    "sluggish",
+    "inert"
+   ],
+   "ant": [
+    "active",
+    "energetic"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "tortuous",
+   "pos": "adjective",
+   "meaning": "full of twists; very complicated",
+   "syn": [
+    "winding",
+    "twisting",
+    "convoluted"
+   ],
+   "ant": [
+    "straight",
+    "direct"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "tragic",
+   "pos": "adjective",
+   "meaning": "causing great sadness",
+   "syn": [
+    "disastrous",
+    "calamitous",
+    "heartbreaking"
+   ],
+   "ant": [
+    "comic",
+    "fortunate"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "transparent",
+   "pos": "adjective",
+   "meaning": "see-through; open and honest",
+   "syn": [
+    "clear",
+    "see-through",
+    "candid"
+   ],
+   "ant": [
+    "opaque",
+    "secretive"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "trigger",
+   "pos": "verb",
+   "meaning": "to cause something to start",
+   "syn": [
+    "cause",
+    "spark",
+    "provoke"
+   ],
+   "ant": [
+    "prevent",
+    "stop"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "triumphant",
+   "pos": "adjective",
+   "meaning": "having won; joyful after success",
+   "syn": [
+    "victorious",
+    "jubilant",
+    "exultant"
+   ],
+   "ant": [
+    "defeated",
+    "dejected"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "trivial",
+   "pos": "adjective",
+   "meaning": "of little importance",
+   "syn": [
+    "minor",
+    "petty",
+    "insignificant"
+   ],
+   "ant": [
+    "important",
+    "significant"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "truculent",
+   "pos": "adjective",
+   "meaning": "eager to argue or fight",
+   "syn": [
+    "aggressive",
+    "belligerent",
+    "combative"
+   ],
+   "ant": [
+    "friendly",
+    "peaceable"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "turmoil",
+   "pos": "noun",
+   "meaning": "a state of great confusion",
+   "syn": [
+    "chaos",
+    "upheaval",
+    "disorder"
+   ],
+   "ant": [
+    "calm",
+    "peace"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "tweak",
+   "pos": "verb",
+   "meaning": "to make a small adjustment",
+   "syn": [
+    "adjust",
+    "fine-tune",
+    "modify"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "unkempt",
+   "pos": "adjective",
+   "meaning": "untidy in appearance",
+   "syn": [
+    "untidy",
+    "dishevelled",
+    "scruffy"
+   ],
+   "ant": [
+    "neat",
+    "tidy"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "unprecedented",
+   "pos": "adjective",
+   "meaning": "never done or known before",
+   "syn": [
+    "unparalleled",
+    "unheard-of",
+    "novel"
+   ],
+   "ant": [
+    "common",
+    "usual"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "vague",
+   "pos": "adjective",
+   "meaning": "not clear or definite",
+   "syn": [
+    "unclear",
+    "hazy",
+    "imprecise"
+   ],
+   "ant": [
+    "clear",
+    "precise"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "vicious",
+   "pos": "adjective",
+   "meaning": "deliberately cruel or violent",
+   "syn": [
+    "cruel",
+    "brutal",
+    "savage"
+   ],
+   "ant": [
+    "kind",
+    "gentle"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "vitality",
+   "pos": "noun",
+   "meaning": "energy and liveliness",
+   "syn": [
+    "vigour",
+    "energy",
+    "liveliness"
+   ],
+   "ant": [
+    "lethargy",
+    "weakness"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "volatile",
+   "pos": "adjective",
+   "meaning": "likely to change suddenly",
+   "syn": [
+    "unstable",
+    "unpredictable",
+    "erratic"
+   ],
+   "ant": [
+    "stable",
+    "steady"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "voluntary",
+   "pos": "adjective",
+   "meaning": "done by choice",
+   "syn": [
+    "optional",
+    "willing",
+    "unpaid"
+   ],
+   "ant": [
+    "compulsory",
+    "mandatory"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "vulnerable",
+   "pos": "adjective",
+   "meaning": "open to harm or attack",
+   "syn": [
+    "exposed",
+    "defenceless",
+    "susceptible"
+   ],
+   "ant": [
+    "invulnerable",
+    "secure"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "wail",
+   "pos": "verb",
+   "meaning": "to cry out in pain or grief",
+   "syn": [
+    "howl",
+    "moan",
+    "lament"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "welter",
+   "pos": "noun",
+   "meaning": "a large confused mass",
+   "syn": [
+    "jumble",
+    "mass",
+    "muddle"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "wholehearted",
+   "pos": "adjective",
+   "meaning": "completely sincere and committed",
+   "syn": [
+    "sincere",
+    "committed",
+    "unreserved"
+   ],
+   "ant": [
+    "half-hearted"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "workable",
+   "pos": "adjective",
+   "meaning": "able to be used successfully",
+   "syn": [
+    "feasible",
+    "viable",
+    "practical"
+   ],
+   "ant": [
+    "unworkable"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "yield",
+   "pos": "verb",
+   "meaning": "to produce; to give way",
+   "syn": [
+    "produce",
+    "surrender",
+    "submit"
+   ],
+   "ant": [
+    "resist",
+    "withstand"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "adorn",
+   "pos": "verb",
+   "meaning": "to decorate",
+   "syn": [
+    "decorate",
+    "embellish",
+    "beautify"
+   ],
+   "ant": [
+    "disfigure",
+    "spoil"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "semblance",
+   "pos": "noun",
+   "meaning": "an outward appearance of something",
+   "syn": [
+    "appearance",
+    "show",
+    "facade"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "garner",
+   "pos": "verb",
+   "meaning": "to gather or collect",
+   "syn": [
+    "gather",
+    "collect",
+    "accumulate"
+   ],
+   "ant": [
+    "scatter",
+    "squander"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "revitalise",
+   "pos": "verb",
+   "meaning": "to give new life to",
+   "syn": [
+    "rejuvenate",
+    "revive",
+    "renew"
+   ],
+   "ant": [
+    "weaken"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "disperse",
+   "pos": "verb",
+   "meaning": "to scatter in different directions",
+   "syn": [
+    "scatter",
+    "dispel",
+    "spread"
+   ],
+   "ant": [
+    "gather",
+    "assemble"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "dislodge",
+   "pos": "verb",
+   "meaning": "to remove from a fixed position",
+   "syn": [
+    "remove",
+    "displace",
+    "oust"
+   ],
+   "ant": [
+    "fix",
+    "secure"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "apprehension",
+   "pos": "noun",
+   "meaning": "worry about the future; arrest",
+   "syn": [
+    "anxiety",
+    "unease",
+    "dread"
+   ],
+   "ant": [
+    "calm",
+    "confidence"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "setback",
+   "pos": "noun",
+   "meaning": "a problem that slows progress",
+   "syn": [
+    "reverse",
+    "hitch",
+    "blow"
+   ],
+   "ant": [
+    "advance",
+    "breakthrough"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "anguish",
+   "pos": "noun",
+   "meaning": "severe pain or distress",
+   "syn": [
+    "agony",
+    "torment",
+    "distress"
+   ],
+   "ant": [
+    "happiness",
+    "relief"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "accrue",
+   "pos": "verb",
+   "meaning": "to build up over time",
+   "syn": [
+    "accumulate",
+    "collect",
+    "grow"
+   ],
+   "ant": [
+    "dwindle"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "exasperation",
+   "pos": "noun",
+   "meaning": "intense annoyance",
+   "syn": [
+    "irritation",
+    "frustration",
+    "annoyance"
+   ],
+   "ant": [
+    "calm",
+    "satisfaction"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "exemplify",
+   "pos": "verb",
+   "meaning": "to be a typical example of",
+   "syn": [
+    "illustrate",
+    "typify",
+    "embody"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "pivotal",
+   "pos": "adjective",
+   "meaning": "of central importance",
+   "syn": [
+    "crucial",
+    "central",
+    "key"
+   ],
+   "ant": [
+    "minor",
+    "peripheral"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "quell",
+   "pos": "verb",
+   "meaning": "to put an end to; to calm",
+   "syn": [
+    "suppress",
+    "crush",
+    "subdue"
+   ],
+   "ant": [
+    "incite",
+    "provoke"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "refrain",
+   "pos": "verb",
+   "meaning": "to stop oneself doing something",
+   "syn": [
+    "abstain",
+    "desist",
+    "forbear"
+   ],
+   "ant": [
+    "indulge"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "decrepitude",
+   "pos": "noun",
+   "meaning": "weakness from age or neglect",
+   "syn": [
+    "dilapidation",
+    "decay",
+    "frailty"
+   ],
+   "ant": [
+    "vigour",
+    "soundness"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "incumbent",
+   "pos": "adjective",
+   "meaning": "necessary as a duty; holding office",
+   "syn": [
+    "obligatory",
+    "binding",
+    "current"
+   ],
+   "ant": [
+    "optional"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "oblivious",
+   "pos": "adjective",
+   "meaning": "not aware",
+   "syn": [
+    "unaware",
+    "unconscious",
+    "heedless"
+   ],
+   "ant": [
+    "aware",
+    "conscious"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "unrivalled",
+   "pos": "adjective",
+   "meaning": "better than all others",
+   "syn": [
+    "unequalled",
+    "unmatched",
+    "peerless"
+   ],
+   "ant": [
+    "inferior"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "palpable",
+   "pos": "adjective",
+   "meaning": "so intense it can almost be touched",
+   "syn": [
+    "tangible",
+    "perceptible",
+    "obvious"
+   ],
+   "ant": [
+    "impalpable",
+    "imperceptible"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "furtive",
+   "pos": "adjective",
+   "meaning": "secretive, as if guilty",
+   "syn": [
+    "stealthy",
+    "surreptitious",
+    "sly"
+   ],
+   "ant": [
+    "open",
+    "overt"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "rouse",
+   "pos": "verb",
+   "meaning": "to wake up; to stir to action",
+   "syn": [
+    "awaken",
+    "stir",
+    "provoke"
+   ],
+   "ant": [
+    "calm",
+    "lull"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "allege",
+   "pos": "verb",
+   "meaning": "to claim without proof",
+   "syn": [
+    "claim",
+    "assert",
+    "contend"
+   ],
+   "ant": [
+    "deny"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "fraught",
+   "pos": "adjective",
+   "meaning": "full of something unpleasant; anxious",
+   "syn": [
+    "filled",
+    "laden",
+    "tense"
+   ],
+   "ant": [
+    "calm",
+    "relaxed"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "rebuke",
+   "pos": "verb",
+   "meaning": "to criticise sharply",
+   "syn": [
+    "reprimand",
+    "scold",
+    "admonish"
+   ],
+   "ant": [
+    "praise",
+    "commend"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "dazzle",
+   "pos": "verb",
+   "meaning": "to amaze with brightness or skill",
+   "syn": [
+    "amaze",
+    "impress",
+    "overwhelm"
+   ],
+   "ant": [
+    "bore"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "bristle",
+   "pos": "verb",
+   "meaning": "to react angrily",
+   "syn": [
+    "bridle",
+    "seethe",
+    "flare up"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "loiter",
+   "pos": "verb",
+   "meaning": "to stand around without purpose",
+   "syn": [
+    "linger",
+    "dawdle",
+    "hang about"
+   ],
+   "ant": [
+    "hurry"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "strewn",
+   "pos": "adjective",
+   "meaning": "scattered untidily",
+   "syn": [
+    "scattered",
+    "littered",
+    "spread"
+   ],
+   "ant": [
+    "gathered"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "abstinence",
+   "pos": "noun",
+   "meaning": "choosing not to indulge",
+   "syn": [
+    "self-denial",
+    "temperance",
+    "restraint"
+   ],
+   "ant": [
+    "indulgence",
+    "excess"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "enact",
+   "pos": "verb",
+   "meaning": "to make into law; to act out",
+   "syn": [
+    "pass",
+    "legislate",
+    "perform"
+   ],
+   "ant": [
+    "repeal",
+    "revoke"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "allot",
+   "pos": "verb",
+   "meaning": "to give out a share",
+   "syn": [
+    "allocate",
+    "assign",
+    "distribute"
+   ],
+   "ant": [
+    "withhold"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "complacency",
+   "pos": "noun",
+   "meaning": "smug satisfaction that ignores danger",
+   "syn": [
+    "smugness",
+    "self-satisfaction",
+    "indifference"
+   ],
+   "ant": [
+    "vigilance",
+    "concern"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "forefront",
+   "pos": "noun",
+   "meaning": "the leading position",
+   "syn": [
+    "vanguard",
+    "front",
+    "lead"
+   ],
+   "ant": [
+    "rear"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "banish",
+   "pos": "verb",
+   "meaning": "to send away; to get rid of",
+   "syn": [
+    "exile",
+    "expel",
+    "dismiss"
+   ],
+   "ant": [
+    "welcome",
+    "admit"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "refurbish",
+   "pos": "verb",
+   "meaning": "to renovate and redecorate",
+   "syn": [
+    "renovate",
+    "restore",
+    "revamp"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "fabricate",
+   "pos": "verb",
+   "meaning": "to make up something false; to manufacture",
+   "syn": [
+    "invent",
+    "concoct",
+    "construct"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "turncoat",
+   "pos": "noun",
+   "meaning": "a person who deserts their side",
+   "syn": [
+    "traitor",
+    "defector",
+    "renegade"
+   ],
+   "ant": [
+    "loyalist"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "dampen",
+   "pos": "verb",
+   "meaning": "to make less strong or lively; to make slightly wet",
+   "syn": [
+    "deaden",
+    "dull",
+    "moisten"
+   ],
+   "ant": [
+    "stimulate",
+    "dry"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "rejuvenate",
+   "pos": "verb",
+   "meaning": "to make young or fresh again",
+   "syn": [
+    "revitalise",
+    "refresh",
+    "renew"
+   ],
+   "ant": [
+    "age",
+    "weaken"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "portray",
+   "pos": "verb",
+   "meaning": "to depict or describe",
+   "syn": [
+    "depict",
+    "represent",
+    "describe"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "abrogate",
+   "pos": "verb",
+   "meaning": "to cancel a law or agreement officially",
+   "syn": [
+    "repeal",
+    "revoke",
+    "annul"
+   ],
+   "ant": [
+    "enact",
+    "ratify"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "bifurcate",
+   "pos": "verb",
+   "meaning": "to divide into two branches",
+   "syn": [
+    "fork",
+    "split",
+    "divide"
+   ],
+   "ant": [
+    "merge",
+    "converge"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "throng",
+   "pos": "noun",
+   "meaning": "a large crowd",
+   "syn": [
+    "crowd",
+    "horde",
+    "multitude"
+   ],
+   "ant": [
+    "handful"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "subsidise",
+   "pos": "verb",
+   "meaning": "to support with money",
+   "syn": [
+    "fund",
+    "finance",
+    "sponsor"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "miscreant",
+   "pos": "noun",
+   "meaning": "a person who behaves badly or unlawfully",
+   "syn": [
+    "wrongdoer",
+    "offender",
+    "villain"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "abduct",
+   "pos": "verb",
+   "meaning": "to take someone away illegally",
+   "syn": [
+    "kidnap",
+    "seize",
+    "snatch"
+   ],
+   "ant": [
+    "release"
+   ],
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "ameliorate",
+   "pos": "verb",
+   "meaning": "to make something bad better",
+   "syn": [
+    "improve",
+    "better",
+    "enhance"
+   ],
+   "ant": [
+    "worsen",
+    "aggravate"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "apathy",
+   "pos": "noun",
+   "meaning": "lack of interest or concern",
+   "syn": [
+    "indifference",
+    "unconcern",
+    "lethargy"
+   ],
+   "ant": [
+    "enthusiasm",
+    "interest"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "arduous",
+   "pos": "adjective",
+   "meaning": "involving great effort",
+   "syn": [
+    "strenuous",
+    "laborious",
+    "gruelling"
+   ],
+   "ant": [
+    "easy",
+    "effortless"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "astute",
+   "pos": "adjective",
+   "meaning": "clever at judging situations",
+   "syn": [
+    "shrewd",
+    "perceptive",
+    "sharp"
+   ],
+   "ant": [
+    "foolish",
+    "naive"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "austere",
+   "pos": "adjective",
+   "meaning": "severely simple; strict",
+   "syn": [
+    "plain",
+    "stern",
+    "spartan"
+   ],
+   "ant": [
+    "lavish",
+    "ornate"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "belligerent",
+   "pos": "adjective",
+   "meaning": "hostile and aggressive",
+   "syn": [
+    "aggressive",
+    "hostile",
+    "combative"
+   ],
+   "ant": [
+    "peaceable",
+    "friendly"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "benign",
+   "pos": "adjective",
+   "meaning": "gentle and kind; not harmful",
+   "syn": [
+    "kind",
+    "gentle",
+    "harmless"
+   ],
+   "ant": [
+    "malignant",
+    "harmful"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "cajole",
+   "pos": "verb",
+   "meaning": "to persuade by flattery",
+   "syn": [
+    "coax",
+    "wheedle",
+    "sweet-talk"
+   ],
+   "ant": [
+    "force",
+    "coerce"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "callous",
+   "pos": "adjective",
+   "meaning": "cruelly uncaring",
+   "syn": [
+    "heartless",
+    "insensitive",
+    "unfeeling"
+   ],
+   "ant": [
+    "caring",
+    "compassionate"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "candid",
+   "pos": "adjective",
+   "meaning": "honest and direct",
+   "syn": [
+    "frank",
+    "open",
+    "forthright"
+   ],
+   "ant": [
+    "guarded",
+    "evasive"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "capricious",
+   "pos": "adjective",
+   "meaning": "changing mood or behaviour suddenly",
+   "syn": [
+    "fickle",
+    "erratic",
+    "whimsical"
+   ],
+   "ant": [
+    "steady",
+    "consistent"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "censure",
+   "pos": "verb",
+   "meaning": "to criticise formally",
+   "syn": [
+    "condemn",
+    "reprimand",
+    "rebuke"
+   ],
+   "ant": [
+    "praise",
+    "commend"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "coerce",
+   "pos": "verb",
+   "meaning": "to force by threats",
+   "syn": [
+    "force",
+    "compel",
+    "pressure"
+   ],
+   "ant": [
+    "persuade",
+    "coax"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "cogent",
+   "pos": "adjective",
+   "meaning": "clear and convincing",
+   "syn": [
+    "convincing",
+    "compelling",
+    "persuasive"
+   ],
+   "ant": [
+    "weak",
+    "unconvincing"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "condone",
+   "pos": "verb",
+   "meaning": "to accept or forgive wrongdoing",
+   "syn": [
+    "overlook",
+    "excuse",
+    "tolerate"
+   ],
+   "ant": [
+    "condemn",
+    "denounce"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "copious",
+   "pos": "adjective",
+   "meaning": "plentiful",
+   "syn": [
+    "abundant",
+    "ample",
+    "profuse"
+   ],
+   "ant": [
+    "scant",
+    "meagre"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "culpable",
+   "pos": "adjective",
+   "meaning": "deserving blame",
+   "syn": [
+    "guilty",
+    "blameworthy",
+    "responsible"
+   ],
+   "ant": [
+    "innocent",
+    "blameless"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "dearth",
+   "pos": "noun",
+   "meaning": "a lack or shortage",
+   "syn": [
+    "scarcity",
+    "shortage",
+    "paucity"
+   ],
+   "ant": [
+    "abundance",
+    "plenty"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "deference",
+   "pos": "noun",
+   "meaning": "polite respect",
+   "syn": [
+    "respect",
+    "regard",
+    "submission"
+   ],
+   "ant": [
+    "disrespect",
+    "defiance"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "despondent",
+   "pos": "adjective",
+   "meaning": "without hope",
+   "syn": [
+    "dejected",
+    "downcast",
+    "disheartened"
+   ],
+   "ant": [
+    "hopeful",
+    "cheerful"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "diffident",
+   "pos": "adjective",
+   "meaning": "shy and lacking confidence",
+   "syn": [
+    "shy",
+    "timid",
+    "unassertive"
+   ],
+   "ant": [
+    "confident",
+    "bold"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "discreet",
+   "pos": "adjective",
+   "meaning": "careful not to attract attention or reveal secrets",
+   "syn": [
+    "tactful",
+    "prudent",
+    "cautious"
+   ],
+   "ant": [
+    "indiscreet",
+    "tactless"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "eclectic",
+   "pos": "adjective",
+   "meaning": "drawing from many sources",
+   "syn": [
+    "diverse",
+    "varied",
+    "wide-ranging"
+   ],
+   "ant": [
+    "narrow",
+    "uniform"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "elusive",
+   "pos": "adjective",
+   "meaning": "hard to find, catch or remember",
+   "syn": [
+    "slippery",
+    "evasive",
+    "fleeting"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "enigma",
+   "pos": "noun",
+   "meaning": "a mysterious person or thing",
+   "syn": [
+    "mystery",
+    "puzzle",
+    "riddle"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "ephemeral",
+   "pos": "adjective",
+   "meaning": "lasting a very short time",
+   "syn": [
+    "fleeting",
+    "transient",
+    "short-lived"
+   ],
+   "ant": [
+    "lasting",
+    "permanent"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "erratic",
+   "pos": "adjective",
+   "meaning": "not even or regular",
+   "syn": [
+    "unpredictable",
+    "irregular",
+    "inconsistent"
+   ],
+   "ant": [
+    "consistent",
+    "steady"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "exorbitant",
+   "pos": "adjective",
+   "meaning": "far too high in price",
+   "syn": [
+    "excessive",
+    "extortionate",
+    "inflated"
+   ],
+   "ant": [
+    "reasonable",
+    "moderate"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "extravagant",
+   "pos": "adjective",
+   "meaning": "spending too much; excessive",
+   "syn": [
+    "lavish",
+    "wasteful",
+    "profligate"
+   ],
+   "ant": [
+    "thrifty",
+    "frugal"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "fervent",
+   "pos": "adjective",
+   "meaning": "having strong feeling",
+   "syn": [
+    "passionate",
+    "ardent",
+    "zealous"
+   ],
+   "ant": [
+    "apathetic",
+    "indifferent"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "fortitude",
+   "pos": "noun",
+   "meaning": "courage in pain or difficulty",
+   "syn": [
+    "courage",
+    "resilience",
+    "endurance"
+   ],
+   "ant": [
+    "cowardice",
+    "weakness"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "frugal",
+   "pos": "adjective",
+   "meaning": "careful with money",
+   "syn": [
+    "thrifty",
+    "economical",
+    "sparing"
+   ],
+   "ant": [
+    "extravagant",
+    "wasteful"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "gregarious",
+   "pos": "adjective",
+   "meaning": "fond of company",
+   "syn": [
+    "sociable",
+    "outgoing",
+    "convivial"
+   ],
+   "ant": [
+    "unsociable",
+    "reserved"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "haughty",
+   "pos": "adjective",
+   "meaning": "arrogantly proud",
+   "syn": [
+    "arrogant",
+    "proud",
+    "conceited"
+   ],
+   "ant": [
+    "humble",
+    "modest"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "impetuous",
+   "pos": "adjective",
+   "meaning": "acting quickly without thought",
+   "syn": [
+    "rash",
+    "impulsive",
+    "hasty"
+   ],
+   "ant": [
+    "cautious",
+    "careful"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "incessant",
+   "pos": "adjective",
+   "meaning": "never stopping",
+   "syn": [
+    "constant",
+    "ceaseless",
+    "unending"
+   ],
+   "ant": [
+    "intermittent",
+    "occasional"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "indigent",
+   "pos": "adjective",
+   "meaning": "very poor",
+   "syn": [
+    "poor",
+    "needy",
+    "destitute"
+   ],
+   "ant": [
+    "wealthy",
+    "affluent"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "inept",
+   "pos": "adjective",
+   "meaning": "lacking skill",
+   "syn": [
+    "incompetent",
+    "clumsy",
+    "unskilful"
+   ],
+   "ant": [
+    "competent",
+    "skilful"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "intrepid",
+   "pos": "adjective",
+   "meaning": "fearless",
+   "syn": [
+    "fearless",
+    "brave",
+    "bold"
+   ],
+   "ant": [
+    "timid",
+    "cowardly"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "judicious",
+   "pos": "adjective",
+   "meaning": "showing good judgement",
+   "syn": [
+    "wise",
+    "prudent",
+    "sensible"
+   ],
+   "ant": [
+    "foolish",
+    "rash"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "laconic",
+   "pos": "adjective",
+   "meaning": "using very few words",
+   "syn": [
+    "terse",
+    "concise",
+    "brief"
+   ],
+   "ant": [
+    "verbose",
+    "wordy"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "lucid",
+   "pos": "adjective",
+   "meaning": "clear and easy to understand",
+   "syn": [
+    "clear",
+    "intelligible",
+    "coherent"
+   ],
+   "ant": [
+    "confused",
+    "obscure"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "magnanimous",
+   "pos": "adjective",
+   "meaning": "generous and forgiving",
+   "syn": [
+    "generous",
+    "charitable",
+    "big-hearted"
+   ],
+   "ant": [
+    "petty",
+    "mean"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "meagre",
+   "pos": "adjective",
+   "meaning": "small in amount or quality",
+   "syn": [
+    "scant",
+    "paltry",
+    "sparse"
+   ],
+   "ant": [
+    "ample",
+    "abundant"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "nefarious",
+   "pos": "adjective",
+   "meaning": "wicked or criminal",
+   "syn": [
+    "wicked",
+    "villainous",
+    "evil"
+   ],
+   "ant": [
+    "virtuous",
+    "good"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "nonchalant",
+   "pos": "adjective",
+   "meaning": "calm and casual",
+   "syn": [
+    "casual",
+    "relaxed",
+    "unconcerned"
+   ],
+   "ant": [
+    "anxious",
+    "concerned"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "obsequious",
+   "pos": "adjective",
+   "meaning": "too eager to please",
+   "syn": [
+    "servile",
+    "fawning",
+    "sycophantic"
+   ],
+   "ant": [
+    "assertive",
+    "domineering"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "ostentatious",
+   "pos": "adjective",
+   "meaning": "showy, meant to impress",
+   "syn": [
+    "showy",
+    "flashy",
+    "pretentious"
+   ],
+   "ant": [
+    "modest",
+    "understated"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "parsimonious",
+   "pos": "adjective",
+   "meaning": "extremely unwilling to spend",
+   "syn": [
+    "stingy",
+    "miserly",
+    "tight-fisted"
+   ],
+   "ant": [
+    "generous",
+    "lavish"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "paucity",
+   "pos": "noun",
+   "meaning": "a very small amount",
+   "syn": [
+    "scarcity",
+    "dearth",
+    "shortage"
+   ],
+   "ant": [
+    "abundance",
+    "plenty"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "placid",
+   "pos": "adjective",
+   "meaning": "calm and not easily upset",
+   "syn": [
+    "calm",
+    "serene",
+    "tranquil"
+   ],
+   "ant": [
+    "excitable",
+    "agitated"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "plausible",
+   "pos": "adjective",
+   "meaning": "seeming reasonable",
+   "syn": [
+    "credible",
+    "believable",
+    "likely"
+   ],
+   "ant": [
+    "implausible",
+    "unlikely"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "predicament",
+   "pos": "noun",
+   "meaning": "a difficult situation",
+   "syn": [
+    "plight",
+    "dilemma",
+    "quandary"
+   ],
+   "ant": [],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "prodigal",
+   "pos": "adjective",
+   "meaning": "wastefully extravagant",
+   "syn": [
+    "wasteful",
+    "extravagant",
+    "spendthrift"
+   ],
+   "ant": [
+    "thrifty",
+    "frugal"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "proficient",
+   "pos": "adjective",
+   "meaning": "skilled",
+   "syn": [
+    "skilled",
+    "competent",
+    "adept"
+   ],
+   "ant": [
+    "incompetent",
+    "inept"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "prolific",
+   "pos": "adjective",
+   "meaning": "producing much",
+   "syn": [
+    "productive",
+    "fruitful",
+    "fertile"
+   ],
+   "ant": [
+    "unproductive",
+    "barren"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "propensity",
+   "pos": "noun",
+   "meaning": "a natural tendency",
+   "syn": [
+    "tendency",
+    "inclination",
+    "proclivity"
+   ],
+   "ant": [
+    "aversion"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "rampant",
+   "pos": "adjective",
+   "meaning": "spreading out of control",
+   "syn": [
+    "unchecked",
+    "widespread",
+    "rife"
+   ],
+   "ant": [
+    "controlled",
+    "restrained"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "recalcitrant",
+   "pos": "adjective",
+   "meaning": "stubbornly uncooperative",
+   "syn": [
+    "defiant",
+    "obstinate",
+    "unruly"
+   ],
+   "ant": [
+    "compliant",
+    "obedient"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "reticent",
+   "pos": "adjective",
+   "meaning": "not revealing one's thoughts readily",
+   "syn": [
+    "reserved",
+    "taciturn",
+    "uncommunicative"
+   ],
+   "ant": [
+    "communicative",
+    "forthcoming"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "sagacious",
+   "pos": "adjective",
+   "meaning": "wise and shrewd",
+   "syn": [
+    "wise",
+    "shrewd",
+    "astute"
+   ],
+   "ant": [
+    "foolish",
+    "unwise"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "scrupulous",
+   "pos": "adjective",
+   "meaning": "very careful and honest",
+   "syn": [
+    "meticulous",
+    "conscientious",
+    "principled"
+   ],
+   "ant": [
+    "careless",
+    "unscrupulous"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "solace",
+   "pos": "noun",
+   "meaning": "comfort in sadness",
+   "syn": [
+    "comfort",
+    "consolation",
+    "relief"
+   ],
+   "ant": [
+    "distress",
+    "affliction"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "spurious",
+   "pos": "adjective",
+   "meaning": "false; not genuine",
+   "syn": [
+    "false",
+    "fake",
+    "bogus"
+   ],
+   "ant": [
+    "genuine",
+    "authentic"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "stringent",
+   "pos": "adjective",
+   "meaning": "strict and precise",
+   "syn": [
+    "strict",
+    "rigorous",
+    "tight"
+   ],
+   "ant": [
+    "lax",
+    "lenient"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "superfluous",
+   "pos": "adjective",
+   "meaning": "more than is needed",
+   "syn": [
+    "unnecessary",
+    "excess",
+    "redundant"
+   ],
+   "ant": [
+    "necessary",
+    "essential"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "tacit",
+   "pos": "adjective",
+   "meaning": "understood without being said",
+   "syn": [
+    "implicit",
+    "unspoken",
+    "implied"
+   ],
+   "ant": [
+    "explicit",
+    "stated"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "tedious",
+   "pos": "adjective",
+   "meaning": "long and boring",
+   "syn": [
+    "boring",
+    "monotonous",
+    "dreary"
+   ],
+   "ant": [
+    "interesting",
+    "exciting"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "timid",
+   "pos": "adjective",
+   "meaning": "lacking courage",
+   "syn": [
+    "shy",
+    "fearful",
+    "timorous"
+   ],
+   "ant": [
+    "bold",
+    "brave"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "tranquil",
+   "pos": "adjective",
+   "meaning": "calm and peaceful",
+   "syn": [
+    "calm",
+    "peaceful",
+    "serene"
+   ],
+   "ant": [
+    "turbulent",
+    "agitated"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "ubiquitous",
+   "pos": "adjective",
+   "meaning": "found everywhere",
+   "syn": [
+    "omnipresent",
+    "pervasive",
+    "universal"
+   ],
+   "ant": [
+    "rare",
+    "scarce"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "vindicate",
+   "pos": "verb",
+   "meaning": "to clear of blame; to prove right",
+   "syn": [
+    "exonerate",
+    "justify",
+    "absolve"
+   ],
+   "ant": [
+    "incriminate",
+    "convict"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "vindictive",
+   "pos": "adjective",
+   "meaning": "wanting revenge",
+   "syn": [
+    "vengeful",
+    "spiteful",
+    "malicious"
+   ],
+   "ant": [
+    "forgiving",
+    "merciful"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "verbose",
+   "pos": "adjective",
+   "meaning": "using too many words",
+   "syn": [
+    "wordy",
+    "prolix",
+    "long-winded"
+   ],
+   "ant": [
+    "concise",
+    "succinct"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "wary",
+   "pos": "adjective",
+   "meaning": "cautious about danger",
+   "syn": [
+    "cautious",
+    "watchful",
+    "guarded"
+   ],
+   "ant": [
+    "careless",
+    "unwary"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "zealous",
+   "pos": "adjective",
+   "meaning": "full of enthusiasm for a cause",
+   "syn": [
+    "fervent",
+    "ardent",
+    "passionate"
+   ],
+   "ant": [
+    "apathetic",
+    "indifferent"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "zenith",
+   "pos": "noun",
+   "meaning": "the highest point",
+   "syn": [
+    "peak",
+    "summit",
+    "pinnacle"
+   ],
+   "ant": [
+    "nadir",
+    "bottom"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "impeccable",
+   "pos": "adjective",
+   "meaning": "without fault",
+   "syn": [
+    "flawless",
+    "faultless",
+    "perfect"
+   ],
+   "ant": [
+    "flawed",
+    "imperfect"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "imminent",
+   "pos": "adjective",
+   "meaning": "about to happen",
+   "syn": [
+    "impending",
+    "forthcoming",
+    "near"
+   ],
+   "ant": [
+    "distant",
+    "remote"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "inherent",
+   "pos": "adjective",
+   "meaning": "existing as a basic part",
+   "syn": [
+    "intrinsic",
+    "innate",
+    "built-in"
+   ],
+   "ant": [
+    "extrinsic",
+    "acquired"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "obsolete",
+   "pos": "adjective",
+   "meaning": "no longer used",
+   "syn": [
+    "outdated",
+    "outmoded",
+    "defunct"
+   ],
+   "ant": [
+    "current",
+    "modern"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "rigorous",
+   "pos": "adjective",
+   "meaning": "extremely thorough and strict",
+   "syn": [
+    "thorough",
+    "meticulous",
+    "strict"
+   ],
+   "ant": [
+    "lax",
+    "careless"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "adamant",
+   "pos": "adjective",
+   "meaning": "refusing to change one's mind",
+   "syn": [
+    "unyielding",
+    "firm",
+    "resolute"
+   ],
+   "ant": [
+    "flexible",
+    "yielding"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "affable",
+   "pos": "adjective",
+   "meaning": "friendly and easy to talk to",
+   "syn": [
+    "friendly",
+    "genial",
+    "amiable"
+   ],
+   "ant": [
+    "unfriendly",
+    "surly"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "alacrity",
+   "pos": "noun",
+   "meaning": "eager readiness",
+   "syn": [
+    "eagerness",
+    "willingness",
+    "promptness"
+   ],
+   "ant": [
+    "reluctance",
+    "hesitation"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "brusque",
+   "pos": "adjective",
+   "meaning": "abrupt and rude in manner",
+   "syn": [
+    "curt",
+    "abrupt",
+    "blunt"
+   ],
+   "ant": [
+    "courteous",
+    "polite"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "conspicuous",
+   "pos": "adjective",
+   "meaning": "easy to notice",
+   "syn": [
+    "noticeable",
+    "obvious",
+    "prominent"
+   ],
+   "ant": [
+    "inconspicuous",
+    "hidden"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "dexterous",
+   "pos": "adjective",
+   "meaning": "skilful with the hands or mind",
+   "syn": [
+    "deft",
+    "nimble",
+    "adroit"
+   ],
+   "ant": [
+    "clumsy",
+    "awkward"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "dormant",
+   "pos": "adjective",
+   "meaning": "temporarily inactive",
+   "syn": [
+    "inactive",
+    "latent",
+    "sleeping"
+   ],
+   "ant": [
+    "active",
+    "awake"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "gullible",
+   "pos": "adjective",
+   "meaning": "easily tricked",
+   "syn": [
+    "credulous",
+    "naive",
+    "trusting"
+   ],
+   "ant": [
+    "sceptical",
+    "suspicious"
+   ],
+   "core": false,
+   "count": 0,
+   "src": "web"
+  }
+ ],
+ "oneword": [
+  {
+   "w": "misogynist",
+   "meaning": "a person who hates women",
+   "core": true,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "misanthrope",
+   "meaning": "a person who hates or distrusts people in general",
+   "core": true,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "philanthropist",
+   "meaning": "a person who gives generously to help others",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "altruist",
+   "meaning": "a person who puts others' welfare first",
+   "core": true,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "egoist",
+   "meaning": "a person who thinks mainly of himself or herself",
+   "core": true,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "optimist",
+   "meaning": "a person who expects good outcomes",
+   "core": true,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "pessimist",
+   "meaning": "a person who expects bad outcomes",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "sceptic",
+   "meaning": "a person who tends to doubt what is claimed",
+   "core": true,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "atheist",
+   "meaning": "a person who does not believe in God",
+   "core": true,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "agnostic",
+   "meaning": "a person who thinks God's existence cannot be known",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "fanatic",
+   "meaning": "a person with extreme, unreasoning enthusiasm for a cause",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "hypocrite",
+   "meaning": "a person who pretends to have virtues they lack",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "novice",
+   "meaning": "a person new to an activity",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "veteran",
+   "meaning": "a person with long experience in a field",
+   "core": true,
+   "count": 5,
+   "src": "bank"
+  },
+  {
+   "w": "amateur",
+   "meaning": "a person who does something for pleasure, not pay",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "connoisseur",
+   "meaning": "an expert judge of art, food or taste",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "polyglot",
+   "meaning": "a person who speaks many languages",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "bilingual",
+   "meaning": "able to speak two languages",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "introvert",
+   "meaning": "a quiet person focused on inner thoughts",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "extrovert",
+   "meaning": "an outgoing, sociable person",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "narcissist",
+   "meaning": "a person with excessive love of himself or herself",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "glutton",
+   "meaning": "a person who eats too much",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "teetotaller",
+   "meaning": "a person who never drinks alcohol",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "vegetarian",
+   "meaning": "a person who does not eat meat",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "vegan",
+   "meaning": "a person who eats no animal products at all",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "omnivore",
+   "meaning": "an animal that eats both plants and meat",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "carnivore",
+   "meaning": "an animal that eats meat",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "herbivore",
+   "meaning": "an animal that eats plants",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "insolvent",
+   "meaning": "unable to pay one's debts",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "bankrupt",
+   "meaning": "legally declared unable to pay debts",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "plagiarism",
+   "meaning": "copying someone else's work and passing it off as one's own",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "autobiography",
+   "meaning": "the story of a person's life written by that person",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "biography",
+   "meaning": "the story of a person's life written by someone else",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "anonymous",
+   "meaning": "of unknown or unnamed authorship",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "posthumous",
+   "meaning": "happening or published after a person's death",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "epitaph",
+   "meaning": "words written on a tomb",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "obituary",
+   "meaning": "a published notice of a person's death with a short life account",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "anthology",
+   "meaning": "a collection of poems or stories by different writers",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "manuscript",
+   "meaning": "a handwritten or unpublished text",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "illegible",
+   "meaning": "impossible to read",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "inaudible",
+   "meaning": "impossible to hear",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "invisible",
+   "meaning": "impossible to see",
+   "core": true,
+   "count": 7,
+   "src": "bank"
+  },
+  {
+   "w": "infallible",
+   "meaning": "incapable of making mistakes",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "invincible",
+   "meaning": "impossible to defeat",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "inevitable",
+   "meaning": "impossible to avoid",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "incorrigible",
+   "meaning": "impossible to reform or correct",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "indelible",
+   "meaning": "impossible to remove or erase",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "impregnable",
+   "meaning": "impossible to capture or break into",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "inexplicable",
+   "meaning": "impossible to explain",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "irreparable",
+   "meaning": "impossible to repair",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "irrevocable",
+   "meaning": "impossible to change or reverse",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "incurable",
+   "meaning": "impossible to cure",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "insatiable",
+   "meaning": "impossible to satisfy",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "indefatigable",
+   "meaning": "never getting tired",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "inimitable",
+   "meaning": "impossible to imitate",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "eligible",
+   "meaning": "fit or qualified to be chosen",
+   "core": true,
+   "count": 4,
+   "src": "bank"
+  },
+  {
+   "w": "contemporary",
+   "meaning": "living or happening at the same time",
+   "core": true,
+   "count": 5,
+   "src": "bank"
+  },
+  {
+   "w": "unanimous",
+   "meaning": "agreed by everyone",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "omnipotent",
+   "meaning": "having unlimited power",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "omniscient",
+   "meaning": "knowing everything",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "omnipresent",
+   "meaning": "present everywhere at once",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "ambidextrous",
+   "meaning": "able to use both hands equally well",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "amphibian",
+   "meaning": "an animal that lives both on land and in water",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "nocturnal",
+   "meaning": "active at night",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "panacea",
+   "meaning": "a cure for all problems or illnesses",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "epidemic",
+   "meaning": "a disease spreading widely in one area at one time",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "pandemic",
+   "meaning": "a disease spreading across many countries",
+   "core": true,
+   "count": 119,
+   "src": "bank"
+  },
+  {
+   "w": "endemic",
+   "meaning": "regularly found in a particular place",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "quarantine",
+   "meaning": "isolation to stop the spread of disease",
+   "core": true,
+   "count": 8,
+   "src": "bank"
+  },
+  {
+   "w": "euthanasia",
+   "meaning": "painless killing to end incurable suffering",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "suicide",
+   "meaning": "the act of killing oneself",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "homicide",
+   "meaning": "the killing of one person by another",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "genocide",
+   "meaning": "the deliberate killing of a whole people or group",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "patricide",
+   "meaning": "the killing of one's father",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "matricide",
+   "meaning": "the killing of one's mother",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "fratricide",
+   "meaning": "the killing of one's brother",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "infanticide",
+   "meaning": "the killing of an infant",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "regicide",
+   "meaning": "the killing of a king",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "pesticide",
+   "meaning": "a substance for killing pests",
+   "core": true,
+   "count": 7,
+   "src": "bank"
+  },
+  {
+   "w": "autocracy",
+   "meaning": "government by one person with total power",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "democracy",
+   "meaning": "government by the people through elected representatives",
+   "core": true,
+   "count": 13,
+   "src": "bank"
+  },
+  {
+   "w": "bureaucracy",
+   "meaning": "government by unelected officials and rigid procedure",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "theocracy",
+   "meaning": "government by religious leaders",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "monarchy",
+   "meaning": "rule by a king or queen",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "oligarchy",
+   "meaning": "rule by a small group",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "anarchy",
+   "meaning": "absence of government and order",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "plutocracy",
+   "meaning": "rule by the wealthy",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "aristocracy",
+   "meaning": "rule by a privileged noble class",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "dictatorship",
+   "meaning": "rule by one person with absolute, often harsh, power",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "mercenary",
+   "meaning": "a soldier hired by a foreign army; someone motivated only by money",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "emigrant",
+   "meaning": "a person who leaves their country to live in another",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "immigrant",
+   "meaning": "a person who comes to live in a new country",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "refugee",
+   "meaning": "a person who flees their country to escape danger",
+   "core": true,
+   "count": 5,
+   "src": "bank"
+  },
+  {
+   "w": "alien",
+   "meaning": "a foreigner who is not a citizen",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "fugitive",
+   "meaning": "a person who has escaped and is in hiding",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "truant",
+   "meaning": "a pupil who stays away from school without permission",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "volunteer",
+   "meaning": "a person who offers to work without being forced or paid",
+   "core": true,
+   "count": 12,
+   "src": "bank"
+  },
+  {
+   "w": "pedestrian",
+   "meaning": "a person travelling on foot",
+   "core": true,
+   "count": 8,
+   "src": "bank"
+  },
+  {
+   "w": "spendthrift",
+   "meaning": "a person who spends money wastefully",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "miser",
+   "meaning": "a person who hoards money and spends little",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "hedonist",
+   "meaning": "a person who lives mainly for pleasure",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "cynic",
+   "meaning": "a person who believes people act only out of self-interest",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "cosmopolitan",
+   "meaning": "at home in many countries; free from local prejudice",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "patriot",
+   "meaning": "a person who loves and defends their country",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "traitor",
+   "meaning": "a person who betrays their country or friends",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "renegade",
+   "meaning": "a person who deserts a cause or party",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "egalitarian",
+   "meaning": "believing all people deserve equal rights",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "feminist",
+   "meaning": "a supporter of equal rights for women",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "pacifist",
+   "meaning": "a person opposed to all war and violence",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "recluse",
+   "meaning": "a person who lives alone and avoids others",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "stoic",
+   "meaning": "a person who endures hardship without complaint",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "w": "loquacious",
+   "meaning": "tending to talk a great deal",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "taciturn",
+   "meaning": "reserved and saying little",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "gullible",
+   "meaning": "easily deceived",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "philately",
+   "meaning": "the collecting of postage stamps",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "numismatics",
+   "meaning": "the study or collecting of coins and currency",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "archaeology",
+   "meaning": "the study of the past through dug-up remains",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "w": "pedagogy",
+   "meaning": "the method and practice of teaching",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "w": "orphan",
+   "meaning": "a child whose parents are dead",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  },
+  {
+   "w": "widow",
+   "meaning": "a woman whose husband has died",
+   "core": true,
+   "count": 3,
+   "src": "bank"
+  }
+ ],
+ "spelling": [
+  {
+   "right": "maintenance",
+   "wrong": [
+    "maintanence",
+    "maintainance"
+   ],
+   "tip": "maintain drops the i: main-te-nance",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "right": "proceeding",
+   "wrong": [
+    "procceding",
+    "proceding"
+   ],
+   "tip": "proceed keeps ee, one c",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "right": "environmental",
+   "wrong": [
+    "enviranmental",
+    "enviromental"
+   ],
+   "tip": "environ-ment: keep the n before m",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "right": "loyalty",
+   "wrong": [
+    "loyality",
+    "loyaltie"
+   ],
+   "tip": "loyal + ty, no extra i",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "right": "pastoral",
+   "wrong": [
+    "pestoral",
+    "pastorol"
+   ],
+   "tip": "starts with past-, ends -oral",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "right": "aspersion",
+   "wrong": [
+    "aspertion",
+    "asperssion"
+   ],
+   "tip": "-sion, not -tion",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "right": "solidarity",
+   "wrong": [
+    "soliderity",
+    "solidarety"
+   ],
+   "tip": "solid + arity",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "spectator",
+   "wrong": [
+    "spectater",
+    "spectatar"
+   ],
+   "tip": "ends -tor",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "betray",
+   "wrong": [
+    "betrey",
+    "bitray"
+   ],
+   "tip": "-tray, like a tray",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "adjournment",
+   "wrong": [
+    "adjourment",
+    "ajournment"
+   ],
+   "tip": "adjourn keeps its n before -ment",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "quintessential",
+   "wrong": [
+    "quitessential",
+    "quintesential"
+   ],
+   "tip": "quint- + essential (double s)",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "subsidiary",
+   "wrong": [
+    "subsidairy",
+    "subsidary"
+   ],
+   "tip": "subsidi + ary",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "excess",
+   "wrong": [
+    "exccess",
+    "exess"
+   ],
+   "tip": "ex + cess: one c, double s at the end",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "hierarchy",
+   "wrong": [
+    "hierarechy",
+    "heirarchy"
+   ],
+   "tip": "hier- (i before e), -archy",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "witness",
+   "wrong": [
+    "wittness",
+    "witnes"
+   ],
+   "tip": "one t, double s",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "briefing",
+   "wrong": [
+    "breifing",
+    "brifing"
+   ],
+   "tip": "i before e: brief",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "constitution",
+   "wrong": [
+    "constitiution",
+    "constitusion"
+   ],
+   "tip": "con-sti-tu-tion",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "discourse",
+   "wrong": [
+    "discurse",
+    "discource"
+   ],
+   "tip": "dis + course",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "straddle",
+   "wrong": [
+    "stradle",
+    "straddel"
+   ],
+   "tip": "double d",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "rapturous",
+   "wrong": [
+    "rupturous",
+    "rapturus"
+   ],
+   "tip": "from rapture, not rupture",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "dispassionate",
+   "wrong": [
+    "disspassionate",
+    "dispasionate"
+   ],
+   "tip": "dis + passionate: one s after di, double s later",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "sophistication",
+   "wrong": [
+    "sophestication",
+    "sofistication"
+   ],
+   "tip": "sophist-, with i",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "manifold",
+   "wrong": [
+    "maniffold",
+    "manifould"
+   ],
+   "tip": "mani + fold, one f",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "succumb",
+   "wrong": [
+    "sucumb",
+    "succomb"
+   ],
+   "tip": "double c, silent b",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "manoeuvre",
+   "wrong": [
+    "manoevure",
+    "manouver"
+   ],
+   "tip": "British -oeuvre",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "corridor",
+   "wrong": [
+    "coridor",
+    "corridoor"
+   ],
+   "tip": "double r, single d, ends -or",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "cognizance",
+   "wrong": [
+    "cognisanse",
+    "cognizanse"
+   ],
+   "tip": "ends -ance",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "barbaric",
+   "wrong": [
+    "barbarric",
+    "barbaryc"
+   ],
+   "tip": "one r after the second a",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "powerlessness",
+   "wrong": [
+    "powerlesness",
+    "powerlessnes"
+   ],
+   "tip": "power + less + ness: two double s",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "vituperative",
+   "wrong": [
+    "vituparative",
+    "vitupirative"
+   ],
+   "tip": "vitu-per-ative",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "squalor",
+   "wrong": [
+    "squalour",
+    "squallor"
+   ],
+   "tip": "ends -or even in British English",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "untapped",
+   "wrong": [
+    "untaped",
+    "untappd"
+   ],
+   "tip": "tap doubles its p: tapped",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "opportunity",
+   "wrong": [
+    "oppurtunity",
+    "oportunity"
+   ],
+   "tip": "op-por-tu-nity, double p",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "leverage",
+   "wrong": [
+    "levarage",
+    "leaverage"
+   ],
+   "tip": "lever + age",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "entrepreneur",
+   "wrong": [
+    "entreprenuer",
+    "enterpreneur"
+   ],
+   "tip": "ends -eur",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "scepticism",
+   "wrong": [
+    "scepticicm",
+    "sceptisism"
+   ],
+   "tip": "British sc-, ends -ism",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "perpetrate",
+   "wrong": [
+    "perpetrat",
+    "perpertrate"
+   ],
+   "tip": "per-pe-trate (do not confuse with perpetuate)",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "recrimination",
+   "wrong": [
+    "recremination",
+    "recrimmination"
+   ],
+   "tip": "re + crimination",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "bonus",
+   "wrong": [
+    "bonuss",
+    "bonous"
+   ],
+   "tip": "plural is bonuses, one s before -es",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "disruption",
+   "wrong": [
+    "disrruption",
+    "disrupsion"
+   ],
+   "tip": "one r",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "modernisation",
+   "wrong": [
+    "mordernisation",
+    "modernisasion"
+   ],
+   "tip": "modern + isation",
+   "core": true,
+   "count": 2,
+   "src": "bank"
+  },
+  {
+   "right": "tertiary",
+   "wrong": [
+    "teritiary",
+    "tertary"
+   ],
+   "tip": "ter-tiary",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "feasibility",
+   "wrong": [
+    "feasibillity",
+    "feasability"
+   ],
+   "tip": "feasible + ity: -ibility with one l",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "irregularity",
+   "wrong": [
+    "iregularity",
+    "irregulerity"
+   ],
+   "tip": "ir + regular: double r",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "bureaucrat",
+   "wrong": [
+    "bureaucraet",
+    "beaurocrat"
+   ],
+   "tip": "bureau + crat",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "deliberate",
+   "wrong": [
+    "delliberate",
+    "deliberete"
+   ],
+   "tip": "one l",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "especially",
+   "wrong": [
+    "espesially",
+    "especialy"
+   ],
+   "tip": "e-special-ly: c, then double l",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "poised",
+   "wrong": [
+    "poissed",
+    "poized"
+   ],
+   "tip": "one s",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "curiosity",
+   "wrong": [
+    "curiocity",
+    "curiousity"
+   ],
+   "tip": "curious drops its u: curiosity",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "deceit",
+   "wrong": [
+    "deciet",
+    "deseit"
+   ],
+   "tip": "e before i after c",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "tremendous",
+   "wrong": [
+    "tremendus",
+    "tremendeous"
+   ],
+   "tip": "ends -dous",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "mitigate",
+   "wrong": [
+    "mitigete",
+    "mittigate"
+   ],
+   "tip": "mi-ti-gate: single t each time",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "crucial",
+   "wrong": [
+    "cruciel",
+    "crusial"
+   ],
+   "tip": "ends -cial",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "strengthen",
+   "wrong": [
+    "strenthen",
+    "strengthon"
+   ],
+   "tip": "keep the g: strength + en",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "pantomime",
+   "wrong": [
+    "pantommime",
+    "pantomine"
+   ],
+   "tip": "panto + mime",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "sacrilege",
+   "wrong": [
+    "sacrillege",
+    "sacrilige"
+   ],
+   "tip": "sac-ri-lege (not like religion)",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "completion",
+   "wrong": [
+    "complletion",
+    "completeion"
+   ],
+   "tip": "one l",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "reprimand",
+   "wrong": [
+    "reprimend",
+    "repremand"
+   ],
+   "tip": "ends -mand",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "affordable",
+   "wrong": [
+    "affordeble",
+    "affordible"
+   ],
+   "tip": "afford + able",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "interference",
+   "wrong": [
+    "interferance",
+    "interfearence"
+   ],
+   "tip": "ends -ence",
+   "core": true,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "suspicious",
+   "wrong": [
+    "suspisious",
+    "suspicous"
+   ],
+   "tip": "-cious",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "lieutenant",
+   "wrong": [
+    "lieftenant",
+    "leutenant"
+   ],
+   "tip": "lieu + tenant",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "perseverance",
+   "wrong": [
+    "persevarance",
+    "perseverence"
+   ],
+   "tip": "per-se-ver-ance, ends -ance",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "convertible",
+   "wrong": [
+    "convertable",
+    "convertibel"
+   ],
+   "tip": "ends -ible",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "thoroughly",
+   "wrong": [
+    "thoroghly",
+    "thurroughly"
+   ],
+   "tip": "thorough keeps -ough",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "consideration",
+   "wrong": [
+    "considaration",
+    "consideretion"
+   ],
+   "tip": "consider + ation",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "conference",
+   "wrong": [
+    "conferance",
+    "confrence"
+   ],
+   "tip": "confer + ence",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "inefficiency",
+   "wrong": [
+    "inefficency",
+    "ineficiency"
+   ],
+   "tip": "in + efficiency: -ciency",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "sustainability",
+   "wrong": [
+    "sustainibility",
+    "sustainabilty"
+   ],
+   "tip": "sustain + ability",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "disparity",
+   "wrong": [
+    "disparaty",
+    "disparety"
+   ],
+   "tip": "dispar + ity",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "readiness",
+   "wrong": [
+    "readyness",
+    "readines"
+   ],
+   "tip": "y changes to i before -ness",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "authoritarian",
+   "wrong": [
+    "authoritarrian",
+    "authoritarain"
+   ],
+   "tip": "one r in -arian",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "vacuum",
+   "wrong": [
+    "vacum",
+    "vaccum"
+   ],
+   "tip": "one c, double u",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "haphazard",
+   "wrong": [
+    "haphazourd",
+    "hapazard"
+   ],
+   "tip": "hap + hazard",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "extremist",
+   "wrong": [
+    "extremmist",
+    "extreamist"
+   ],
+   "tip": "extreme drops e: extremist",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "denounce",
+   "wrong": [
+    "dennounce",
+    "denounse"
+   ],
+   "tip": "one n, ends -nounce",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "ambivalent",
+   "wrong": [
+    "ambivallent",
+    "ambivelent"
+   ],
+   "tip": "ambi + valent, one l",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "commendable",
+   "wrong": [
+    "comendable",
+    "commendible"
+   ],
+   "tip": "double m, ends -able",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "levied",
+   "wrong": [
+    "leveid",
+    "levyed"
+   ],
+   "tip": "y becomes ie: levied",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "cholesterol",
+   "wrong": [
+    "cholestierol",
+    "cholestrol"
+   ],
+   "tip": "chole-ster-ol",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "explosion",
+   "wrong": [
+    "exploison",
+    "explossion"
+   ],
+   "tip": "explode becomes explosion",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "prevailing",
+   "wrong": [
+    "prevaling",
+    "prevayling"
+   ],
+   "tip": "prevail + ing",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "renowned",
+   "wrong": [
+    "renouned",
+    "reknowned"
+   ],
+   "tip": "re + nown, no k",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "offered",
+   "wrong": [
+    "offerred",
+    "offerd"
+   ],
+   "tip": "stress on of-: do not double the r",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "picturesque",
+   "wrong": [
+    "picturesk",
+    "picturesqe"
+   ],
+   "tip": "ends -esque",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "leisurely",
+   "wrong": [
+    "lesurely",
+    "liesurely"
+   ],
+   "tip": "lei- like leisure",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "infection",
+   "wrong": [
+    "infaction",
+    "infecshun"
+   ],
+   "tip": "in + fection",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "supple",
+   "wrong": [
+    "suple",
+    "suppel"
+   ],
+   "tip": "double p",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "receive",
+   "wrong": [
+    "recieve",
+    "receeve"
+   ],
+   "tip": "e before i after c",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "conscious",
+   "wrong": [
+    "concious",
+    "consicous"
+   ],
+   "tip": "-scious, keep the sc",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "restaurant",
+   "wrong": [
+    "restaurent",
+    "resturant"
+   ],
+   "tip": "res-tau-rant",
+   "core": false,
+   "count": 1,
+   "src": "bank"
+  },
+  {
+   "right": "minuscule",
+   "wrong": [
+    "minscule",
+    "minuscle"
+   ],
+   "tip": "from minus: min-u-scule",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "accommodate",
+   "wrong": [
+    "accomodate",
+    "acommodate"
+   ],
+   "tip": "two c's and two m's",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "necessary",
+   "wrong": [
+    "neccessary",
+    "necesary"
+   ],
+   "tip": "one c, two s's",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "occasion",
+   "wrong": [
+    "occassion",
+    "ocasion"
+   ],
+   "tip": "two c's, one s",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "occurrence",
+   "wrong": [
+    "occurence",
+    "occurrance"
+   ],
+   "tip": "double c, double r, ends -ence",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "embarrass",
+   "wrong": [
+    "embarass",
+    "embarras"
+   ],
+   "tip": "double r and double s",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "separate",
+   "wrong": [
+    "seperate",
+    "separete"
+   ],
+   "tip": "there is a rat in sep-a-rate",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "definitely",
+   "wrong": [
+    "definately",
+    "definitly"
+   ],
+   "tip": "from finite: defin-ite-ly",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "believe",
+   "wrong": [
+    "beleive",
+    "belive"
+   ],
+   "tip": "i before e",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "achieve",
+   "wrong": [
+    "acheive",
+    "achive"
+   ],
+   "tip": "i before e",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "conscience",
+   "wrong": [
+    "concience",
+    "consciense"
+   ],
+   "tip": "con + science",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "government",
+   "wrong": [
+    "goverment",
+    "govermant"
+   ],
+   "tip": "govern + ment",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "privilege",
+   "wrong": [
+    "privelege",
+    "priviledge"
+   ],
+   "tip": "pri-vi-lege, no d",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "committee",
+   "wrong": [
+    "commitee",
+    "comittee"
+   ],
+   "tip": "double m, double t, double e",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "millennium",
+   "wrong": [
+    "millenium",
+    "milennium"
+   ],
+   "tip": "double l and double n",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "guarantee",
+   "wrong": [
+    "garantee",
+    "guarentee"
+   ],
+   "tip": "guar- then -antee",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "grammar",
+   "wrong": [
+    "grammer",
+    "gramar"
+   ],
+   "tip": "ends -ar",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "calendar",
+   "wrong": [
+    "calandar",
+    "calendor"
+   ],
+   "tip": "ends -ar (a calender is a different word, a pressing machine)",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "cemetery",
+   "wrong": [
+    "cemetary",
+    "cemetry"
+   ],
+   "tip": "all e's: cem-e-ter-y",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "colleague",
+   "wrong": [
+    "collegue",
+    "colleage"
+   ],
+   "tip": "ends -league",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "harass",
+   "wrong": [
+    "harrass",
+    "haras"
+   ],
+   "tip": "one r, double s",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "independent",
+   "wrong": [
+    "independant",
+    "indipendent"
+   ],
+   "tip": "ends -ent",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "liaison",
+   "wrong": [
+    "liason",
+    "liasion"
+   ],
+   "tip": "i on both sides of the a: li-ai-son",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "library",
+   "wrong": [
+    "libary",
+    "liberary"
+   ],
+   "tip": "keep both r's",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "miniature",
+   "wrong": [
+    "miniture",
+    "minature"
+   ],
+   "tip": "mini-a-ture",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "misspell",
+   "wrong": [
+    "mispell",
+    "misspel"
+   ],
+   "tip": "mis + spell",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "rhythm",
+   "wrong": [
+    "rythm",
+    "rhythem"
+   ],
+   "tip": "rh at the start, thm at the end",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "truly",
+   "wrong": [
+    "truely",
+    "truley"
+   ],
+   "tip": "true drops its e",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  },
+  {
+   "right": "until",
+   "wrong": [
+    "untill",
+    "untile"
+   ],
+   "tip": "one l",
+   "core": false,
+   "count": 0,
+   "src": "web"
+  }
+ ],
+ "confusables": [
+  {
+   "words": [
+    "affect",
+    "effect"
+   ],
+   "diff": "affect is usually the verb (to influence); effect is usually the noun (a result)",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "personal",
+    "personnel"
+   ],
+   "diff": "personal means private or individual; personnel means staff",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "farther",
+    "further"
+   ],
+   "diff": "farther is used for physical distance; further also means additional",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "beside",
+    "besides"
+   ],
+   "diff": "beside means next to; besides means in addition to",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "quiet",
+    "quite"
+   ],
+   "diff": "quiet means silent; quite means fairly or completely",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "raise",
+    "rise"
+   ],
+   "diff": "raise needs an object (raise prices); rise does not (prices rise)",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "respectful",
+    "respective"
+   ],
+   "diff": "respectful means showing respect; respective means belonging to each",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "their",
+    "there",
+    "they're"
+   ],
+   "diff": "their shows possession; there means in that place; they're is they are",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "formally",
+    "formerly"
+   ],
+   "diff": "formally means in a formal way; formerly means previously",
+   "core": true,
+   "src": "bank"
+  },
+  {
+   "words": [
+    "principal",
+    "principle"
+   ],
+   "diff": "principal means main or a head of school; principle is a rule or belief",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "complement",
+    "compliment"
+   ],
+   "diff": "complement completes or suits something; compliment is praise",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "stationary",
+    "stationery"
+   ],
+   "diff": "stationary means not moving; stationery is paper and pens",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "accept",
+    "except"
+   ],
+   "diff": "accept means to receive or agree; except means apart from",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "advice",
+    "advise"
+   ],
+   "diff": "advice is the noun; advise is the verb",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "practice",
+    "practise"
+   ],
+   "diff": "in British English practice is the noun and practise the verb",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "licence",
+    "license"
+   ],
+   "diff": "in British English licence is the noun and license the verb",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "loose",
+    "lose"
+   ],
+   "diff": "loose means not tight; lose means to fail to keep",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "lie",
+    "lay"
+   ],
+   "diff": "lie (lay, lain) means to rest; lay (laid) means to put something down",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "eminent",
+    "imminent"
+   ],
+   "diff": "eminent means famous; imminent means about to happen",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "elicit",
+    "illicit"
+   ],
+   "diff": "elicit means to draw out; illicit means illegal",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "emigrate",
+    "immigrate"
+   ],
+   "diff": "emigrate is to leave a country; immigrate is to come into one",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "ensure",
+    "insure",
+    "assure"
+   ],
+   "diff": "ensure means make certain; insure means cover with insurance; assure means tell someone confidently",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "council",
+    "counsel"
+   ],
+   "diff": "a council is an elected body; counsel is advice or a lawyer",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "canvas",
+    "canvass"
+   ],
+   "diff": "canvas is cloth; canvass means to seek votes or opinions",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "discreet",
+    "discrete"
+   ],
+   "diff": "discreet means tactful; discrete means separate",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "precede",
+    "proceed"
+   ],
+   "diff": "precede means come before; proceed means go on",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "prescribe",
+    "proscribe"
+   ],
+   "diff": "prescribe means to recommend or order; proscribe means to forbid",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "continual",
+    "continuous"
+   ],
+   "diff": "continual means repeated with breaks; continuous means without a break",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "economic",
+    "economical"
+   ],
+   "diff": "economic relates to the economy; economical means not wasteful",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "historic",
+    "historical"
+   ],
+   "diff": "historic means important in history; historical means concerning the past",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "uninterested",
+    "disinterested"
+   ],
+   "diff": "uninterested means not interested; disinterested means impartial",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "credible",
+    "credulous"
+   ],
+   "diff": "credible means believable; credulous means too ready to believe",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "ingenious",
+    "ingenuous"
+   ],
+   "diff": "ingenious means clever; ingenuous means innocent and trusting",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "illusion",
+    "allusion"
+   ],
+   "diff": "an illusion is a false impression; an allusion is an indirect reference",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "moral",
+    "morale"
+   ],
+   "diff": "moral relates to right and wrong; morale is a group's confidence",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "cite",
+    "site",
+    "sight"
+   ],
+   "diff": "cite means to quote; a site is a place; sight is the ability to see",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "compose",
+    "comprise"
+   ],
+   "diff": "parts compose a whole; a whole comprises its parts",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "fewer",
+    "less"
+   ],
+   "diff": "fewer is for things you can count; less is for amounts you cannot",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "childish",
+    "childlike"
+   ],
+   "diff": "childish is a criticism (immature); childlike suggests innocence",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "eligible",
+    "illegible"
+   ],
+   "diff": "eligible means qualified; illegible means impossible to read",
+   "core": true,
+   "src": "web"
+  },
+  {
+   "words": [
+    "alternate",
+    "alternative"
+   ],
+   "diff": "alternate means every other; an alternative is another option",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "adverse",
+    "averse"
+   ],
+   "diff": "adverse means harmful; averse means unwilling or opposed",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "amiable",
+    "amicable"
+   ],
+   "diff": "amiable describes a friendly person; amicable describes a friendly agreement",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "deprecate",
+    "depreciate"
+   ],
+   "diff": "deprecate means to disapprove of; depreciate means to lose value",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "flout",
+    "flaunt"
+   ],
+   "diff": "flout means to break a rule openly; flaunt means to show off",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "born",
+    "borne"
+   ],
+   "diff": "born relates to birth; borne means carried or endured",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "breath",
+    "breathe"
+   ],
+   "diff": "breath is the noun; breathe is the verb",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "desert",
+    "dessert"
+   ],
+   "diff": "a desert is dry land, or to desert is to abandon; dessert is the sweet course",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "dependant",
+    "dependent"
+   ],
+   "diff": "in British English dependant is a noun (a person); dependent is the adjective",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "emanate",
+    "eminent"
+   ],
+   "diff": "emanate means to come out of; eminent means distinguished",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "expand",
+    "expend"
+   ],
+   "diff": "expand means to grow bigger; expend means to spend or use up",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "gamble",
+    "gambol"
+   ],
+   "diff": "gamble means to bet; gambol means to skip about playfully",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "hoard",
+    "horde"
+   ],
+   "diff": "a hoard is a stored stock; a horde is a large crowd",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "imply",
+    "infer"
+   ],
+   "diff": "the speaker implies; the listener infers",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "judicial",
+    "judicious"
+   ],
+   "diff": "judicial relates to courts; judicious means wise",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "luxuriant",
+    "luxurious"
+   ],
+   "diff": "luxuriant means growing thickly; luxurious means expensive and comfortable",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "official",
+    "officious"
+   ],
+   "diff": "official means authorised; officious means bossy and interfering",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "persecute",
+    "prosecute"
+   ],
+   "diff": "persecute means to treat cruelly; prosecute means to take legal action against",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "sensual",
+    "sensuous"
+   ],
+   "diff": "sensual relates to physical pleasure; sensuous appeals to the senses, often in art",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "stimulant",
+    "stimulus"
+   ],
+   "diff": "a stimulant is a drug that increases activity; a stimulus is anything that causes a reaction",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "urban",
+    "urbane"
+   ],
+   "diff": "urban relates to cities; urbane means polished and courteous",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "veracity",
+    "voracity"
+   ],
+   "diff": "veracity means truthfulness; voracity means greed for food",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "waive",
+    "wave"
+   ],
+   "diff": "waive means to give up a right; wave means to move the hand",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "weather",
+    "whether"
+   ],
+   "diff": "weather is the state of the sky; whether introduces alternatives",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "its",
+    "it's"
+   ],
+   "diff": "its is possessive; it's means it is or it has",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "whose",
+    "who's"
+   ],
+   "diff": "whose shows possession; who's means who is or who has",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "than",
+    "then"
+   ],
+   "diff": "than compares; then refers to time or sequence",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "altar",
+    "alter"
+   ],
+   "diff": "an altar is a holy table; alter means to change",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "capital",
+    "capitol"
+   ],
+   "diff": "capital is a chief city or money; a capitol is a US legislative building",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "coarse",
+    "course"
+   ],
+   "diff": "coarse means rough; a course is a route or a series of lessons",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "dual",
+    "duel"
+   ],
+   "diff": "dual means double; a duel is a fight between two",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "envelop",
+    "envelope"
+   ],
+   "diff": "envelop (verb) means to wrap; an envelope (noun) holds a letter",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "human",
+    "humane"
+   ],
+   "diff": "human relates to people; humane means kind and merciful",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "industrial",
+    "industrious"
+   ],
+   "diff": "industrial relates to industry; industrious means hard-working",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "lightening",
+    "lightning"
+   ],
+   "diff": "lightening means making lighter; lightning is the flash in a storm",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "naval",
+    "navel"
+   ],
+   "diff": "naval relates to a navy; the navel is the belly button",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "peace",
+    "piece"
+   ],
+   "diff": "peace is calm or no war; a piece is a part",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "vain",
+    "vein",
+    "vane"
+   ],
+   "diff": "vain means proud or useless; a vein carries blood; a vane shows wind direction",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "wander",
+    "wonder"
+   ],
+   "diff": "wander means to roam; wonder means to be curious or amazed",
+   "core": false,
+   "src": "web"
+  },
+  {
+   "words": [
+    "access",
+    "excess"
+   ],
+   "diff": "access is a way in; excess is too much",
+   "core": false,
+   "src": "web"
+  }
+ ]
+}

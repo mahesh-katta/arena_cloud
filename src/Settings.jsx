@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useProgress, resetAll, resetTopic, getTheme, setTheme, lessonsOf, doneCount } from "./store.js";
+import { useProgress, resetAll, clearKnown, resetTopic, getTheme, setTheme, lessonsOf, doneCount } from "./store.js";
 import { useCourse } from "./Course.jsx";
 
 export function Settings({ book }) {
@@ -12,6 +12,7 @@ export function Settings({ book }) {
   const nLessons = Object.keys(p.lessons).length;
   const run = () => {
     if (confirm === "all") { resetAll(); setDone("All progress was reset."); }
+    else if (confirm === "english") { clearKnown(); setDone("English marks were cleared."); }
     else { resetTopic(confirm); setDone(book.byId[confirm].title + " was reset."); }
     setConfirm(null);
   };
@@ -42,6 +43,10 @@ export function Settings({ book }) {
           </label>
           <button className="btn ghost" disabled={!topic} onClick={() => setConfirm(topic)}>Reset topic</button>
         </div>
+        <div className="toolbar">
+          <span className="muted small grow">English "known" marks: {Object.keys(p.known || {}).length}</span>
+          <button className="btn ghost" disabled={!Object.keys(p.known || {}).length} onClick={() => setConfirm("english")}>Clear English marks</button>
+        </div>
         <div className="danger">
           <div>
             <b>Reset all progress</b>
@@ -51,8 +56,8 @@ export function Settings({ book }) {
         </div>
         {confirm && (
           <div className="confirm" role="alertdialog" aria-label="Confirm reset">
-            <b>{confirm === "all" ? "Reset all progress?" : "Reset " + book.byId[confirm].title + "?"}</b>
-            <span className="muted small">{confirm === "all" ? "Everything goes back to zero." : "Its lessons are marked not done and its mistakes are cleared. Answers stay in your history."}</span>
+            <b>{confirm === "all" ? "Reset all progress?" : confirm === "english" ? "Clear every English mark?" : "Reset " + book.byId[confirm].title + "?"}</b>
+            <span className="muted small">{confirm === "all" ? "Everything goes back to zero." : confirm === "english" ? "Every rule and word goes back to not known." : "Its lessons are marked not done and its mistakes are cleared. Answers stay in your history."}</span>
             <div className="actions">
               <button className="btn danger-btn" onClick={run}>Yes, reset</button>
               <button className="btn ghost" onClick={() => setConfirm(null)}>Cancel</button>

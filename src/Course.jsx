@@ -30,12 +30,15 @@ export function Ring({ value, size = 44 }) {
   );
 }
 
+export const PART_NAME = { quant: "Quant", reasoning: "Reasoning", english: "English" };
+const topicHref = (t) => (t.mod.english ? "#/english/" : "#/topic/") + t.id;
+
 export function PartSwitch({ part, onChange }) {
   return (
     <div className="seg" role="tablist">
-      {["quant", "reasoning"].map((x) => (
+      {["quant", "reasoning", "english"].map((x) => (
         <button key={x} role="tab" aria-selected={part === x} className={part === x ? "on" : ""} onClick={() => onChange(x)}>
-          {x === "quant" ? "Quant" : "Reasoning"}
+          {x === "quant" ? "Quant" : x === "reasoning" ? "Reasoning" : "English"}
         </button>
       ))}
     </div>
@@ -67,18 +70,25 @@ function OrderSelect({ how, setHow }) {
 export function TopicRail({ book, current }) {
   const p = useProgress();
   const ctl = useCourseControls();
-  const part = book.byId[current]?.part === "reasoning" ? "reasoning" : book.byId[current]?.part === "quant" ? "quant" : ctl.part;
+  const part = ["quant", "reasoning", "english"].includes(book.byId[current]?.part) ? book.byId[current].part : ctl.part;
   const list = ordered(useCourse(book).filter((t) => t.mod.part === part), ctl.how);
   return (
     <aside className="col rail-topics glass">
       <div className="col-head">
-        <div className="eyebrow">{part === "quant" ? "Quant" : "Reasoning"} topics</div>
+        <div className="eyebrow">{PART_NAME[part]} topics</div>
       </div>
       <div className="col-scroll">
         {list.map((t) => {
           const n = lessonsOf(t.mod).length, d = doneCount(p, t.mod);
+          if (t.mod.english) return (
+            <a key={t.id} href={topicHref(t)} className={"trow-mini" + (t.id === current ? " on" : "")}>
+              <Badge id={t.id} title={t.mod.title} rank={t.rank} size={30} />
+              <span className="grow">{t.mod.title}</span>
+              <span className="muted small">List</span>
+            </a>
+          );
           return (
-            <a key={t.id} href={"#/topic/" + t.id} className={"trow-mini" + (t.id === current ? " on" : "")}>
+            <a key={t.id} href={topicHref(t)} className={"trow-mini" + (t.id === current ? " on" : "")}>
               <Badge id={t.id} title={t.mod.title} rank={t.rank} size={30} />
               <span className="grow">{t.mod.title}</span>
               <span className="muted small">{n ? (d === n ? "Done" : d + "/" + n) : "Notes"}</span>
@@ -87,6 +97,21 @@ export function TopicRail({ book, current }) {
         })}
       </div>
     </aside>
+  );
+}
+
+const EN_NOTE = { grammar: "Rules with wrong and right examples", vocabulary: "Words, one-word substitutes, spelling traps, confusables" };
+
+export function EnglishCard({ t, list }) {
+  return (
+    <a className={(list ? "lrow-topic" : "tcard") + " glass lift"} href={topicHref(t)}>
+      {list ? <Badge id={t.id} title={t.mod.title} rank={t.rank} size={42} /> : <div className="tcard-top"><Badge id={t.id} title={t.mod.title} rank={t.rank} /></div>}
+      <span className={list ? "grow" : ""}>
+        <div className="tname">{t.mod.title}</div>
+        <div className="muted small">{EN_NOTE[t.id]}</div>
+      </span>
+      <div className={list ? "" : "tcard-foot"}><span className={"tag " + ASK[t.ask].c}>{ASK[t.ask].t}</span>{!list && <span className="small strong">Open</span>}</div>
+    </a>
   );
 }
 
@@ -193,8 +218,8 @@ export function CourseHome({ book }) {
         </a>
       )}
       {view === "grid"
-        ? <div className="grid">{list.map((t) => <TopicCard key={t.id} t={t} p={p} book={book} />)}</div>
-        : <div className="tlist">{list.map((t) => <TopicRow key={t.id} t={t} p={p} book={book} />)}</div>}
+        ? <div className="grid">{list.map((t) => t.mod.english ? <EnglishCard key={t.id} t={t} /> : <TopicCard key={t.id} t={t} p={p} book={book} />)}</div>
+        : <div className="tlist">{list.map((t) => t.mod.english ? <EnglishCard key={t.id} t={t} list /> : <TopicRow key={t.id} t={t} p={p} book={book} />)}</div>}
     </div>
   );
 }
