@@ -388,3 +388,6 @@ img.inl { vertical-align: middle; max-width: 100%; background: #fff; border-radi
 .flash .front { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
 .back-side { border-top: 1px dashed var(--line2); padding-top: 12px; display: flex; flex-direction: column; gap: 6px; }
 .cols > * { min-width: 0; }
+.fold.more { margin: 6px 0 0; }
+.fold.more table { font-size: 13.5px; }
+.minisearch { width: 100%; max-width: 320px; min-height: 38px; margin: 6px 0; border: 1px solid var(--line2); border-radius: 10px; background: var(--glass-strong); padding: 0 10px; font: inherit; font-size: 14px; color: var(--ink); }

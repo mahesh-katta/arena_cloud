@@ -30,6 +30,11 @@ def grammar():
         L += ["**%d. %s**%s  " % (r["n"], r["title"], tag), r["rule"] + "  ", "✗ " + r["wrong"] + "  ", "✓ " + r["right"] + ("  " if r["tip"] else "")]
         if r["tip"]: L.append("Tip: " + r["tip"])
         L.append("")
+        if r.get("more"):
+            m = r["more"]
+            L += ["**Full list: %s (%d)**" % (m["title"], len(m["rows"])), ""]
+            if m.get("note"): L += [m["note"], ""]
+            L += table([m["cols"]] + m["rows"]) + [""]
     return "\n".join(L) + "\n"
 
 def vocabulary():
