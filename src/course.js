@@ -33,7 +33,6 @@ const ROWS = [
   ["probability", 2, 3, "permutations-combinations"],
   ["linear-arrangement", 0, 1],
   ["parallel-rows-seating", 0, 2, "linear-arrangement"],
-  ["circular-and-square-seating", 0, 2, "linear-arrangement"],
   ["circular-seating", 0, 2, "linear-arrangement"],
   ["square-seating", 1, 2, "circular-seating"],
   ["triangular-arrangement", 2, 3, "circular-seating"],
