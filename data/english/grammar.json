@@ -1,0 +1,2669 @@
+{
+ "title": "Grammar",
+ "intro": [
+  "These are 120 grammar rules for the English section of IBPS Clerk and PO prelims, written in plain words with one wrong and one corrected sentence each. They follow the usual order of the popular '120 rules' lists for bank exams: nouns and pronouns first, then agreement, articles, adjectives and adverbs, verbs (tenses, modals, infinitives, conditionals, voice, narration), linking words, prepositions, and finally tags, inversion, parallelism and redundancy.",
+  "How it was built: each rule was matched by script against the grammar-type questions in two question banks (error spotting, sentence improvement, single and double fillers) and against the English sections of cached memory-based papers. Guidely questions have solutions that usually name the error, so they were matched by keyword patterns on the solution text plus an analysis of 'X should be replaced by Y' word pairs. Sreedhar questions have no solutions, so only the marked wrong part was checked against surface patterns (for example 'discussed about', 'one of my friend', 'more better'); most of them could not be classified this way. Paper solutions were split into per-question chunks; papers without solutions were checked with the same surface patterns.",
+  "'bank' is the number of bank questions matched to the rule and 'papers' the number of paper questions. One question can match more than one rule (for example a two-error question, or a solution that explains two points). Broad rules such as 'fixed prepositions', 'keep the tense consistent' and 'singular subject, singular verb' collect every question whose solution names that kind of error, so they score high partly because they are broad.",
+  "Core list: 38 rules are marked core. 33 of them were chosen by count (bank + papers of 4 or more). The other 5 have a zero count but appear in nearly every standard bank-exam rule list and are classic error-spotting traps, so they were added as core by judgement ('src': 'web'). In all, 36 rules have no match in the banks or papers and are marked 'src': 'web'; a zero count means the scripts did not find it, not that it is never asked.",
+  "How to use it: learn the core rules first, in the order given. For each rule, read the wrong sentence and try to correct it before you look at the right one. Then practise with the example questions listed under the rule. In the counts, the most-matched rules are fixed prepositions, tense consistency, subject-verb agreement, verb forms (V3, -ing, to + verb) and word class (adjective or adverb), so revise those most often."
+ ],
+ "measured": [
+  [
+   "What was measured",
+   "Count"
+  ],
+  [
+   "Guidely grammar-type questions scanned (error spotting, sentence improvement, single and double fillers)",
+   "801"
+  ],
+  [
+   "Guidely questions matched to at least one rule",
+   "301"
+  ],
+  [
+   "- error spotting matched / total",
+   "152 / 270"
+  ],
+  [
+   "- sentence improvement matched / total",
+   "108 / 211"
+  ],
+  [
+   "- single fillers matched / total (most are vocabulary, not grammar)",
+   "28 / 204"
+  ],
+  [
+   "- double fillers matched / total (most are vocabulary, not grammar)",
+   "13 / 116"
+  ],
+  [
+   "Sreedhar grammar-type questions scanned (no solutions)",
+   "635"
+  ],
+  [
+   "Sreedhar questions matched by surface patterns",
+   "18"
+  ],
+  [
+   "Cached memory-based paper files scanned (several have no English section or no English solutions)",
+   "35"
+  ],
+  [
+   "Papers with at least one matched grammar question",
+   "18"
+  ],
+  [
+   "Paper questions matched to at least one rule",
+   "80"
+  ],
+  [
+   "Rules with at least one match ('src': 'bank')",
+   "84"
+  ],
+  [
+   "Rules with no match, kept from standard lists ('src': 'web')",
+   "36"
+  ],
+  [
+   "Core rules (by count / added by judgement)",
+   "38 (33 / 5)"
+  ],
+  [
+   "Manual check: Guidely matches sampled / main rule right / partly right / wrong",
+   "30 / 21 / 2 / 7 (patterns then tightened)"
+  ],
+  [
+   "Manual check: Sreedhar pattern matches reviewed / false matches removed",
+   "23 / 5"
+  ]
+ ],
+ "categories": [
+  {
+   "id": "noun",
+   "name": "Nouns"
+  },
+  {
+   "id": "pron",
+   "name": "Pronouns"
+  },
+  {
+   "id": "sva",
+   "name": "Subject-verb agreement"
+  },
+  {
+   "id": "art",
+   "name": "Articles"
+  },
+  {
+   "id": "adj",
+   "name": "Adjectives and comparison"
+  },
+  {
+   "id": "adv",
+   "name": "Adverbs"
+  },
+  {
+   "id": "tense",
+   "name": "Tenses and verb forms"
+  },
+  {
+   "id": "modal",
+   "name": "Modals"
+  },
+  {
+   "id": "nonfin",
+   "name": "Infinitive, gerund and participle"
+  },
+  {
+   "id": "cond",
+   "name": "Conditionals and wishes"
+  },
+  {
+   "id": "voice",
+   "name": "Active and passive voice"
+  },
+  {
+   "id": "speech",
+   "name": "Direct and indirect speech"
+  },
+  {
+   "id": "conj",
+   "name": "Conjunctions and connectors"
+  },
+  {
+   "id": "prep",
+   "name": "Prepositions"
+  },
+  {
+   "id": "qtag",
+   "name": "Question tags"
+  },
+  {
+   "id": "inv",
+   "name": "Inversion and word order"
+  },
+  {
+   "id": "par",
+   "name": "Parallelism"
+  },
+  {
+   "id": "red",
+   "name": "Redundancy and confused words"
+  }
+ ],
+ "rules": [
+  {
+   "n": 1,
+   "id": "noun-1",
+   "cat": "noun",
+   "title": "Uncountable nouns have no plural",
+   "rule": "Nouns such as advice, information, furniture, luggage, equipment, machinery, scenery and evidence are uncountable. They take no -s, no 'a/an', and a singular verb.",
+   "wrong": "He gave me many useful advices.",
+   "right": "He gave me a lot of useful advice.",
+   "tip": "Count them with a unit: a piece of advice, an item of luggage.",
+   "core": true,
+   "bank": 8,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#1"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#17"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-2-Prelims-1#25"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 2,
+   "id": "noun-2",
+   "cat": "noun",
+   "title": "Plural-looking nouns that are singular",
+   "rule": "News, mathematics, physics, economics (the subject), politics (as a subject) and measles look plural but take a singular verb.",
+   "wrong": "The news are not good today.",
+   "right": "The news is not good today.",
+   "tip": "Ask: is it one subject or one piece of news? Then it is singular.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-7-Prelims-1#20"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 3,
+   "id": "noun-3",
+   "cat": "noun",
+   "title": "Nouns that are always plural",
+   "rule": "Scissors, trousers, spectacles, goods, thanks, premises, surroundings, outskirts and belongings are always plural and take a plural verb.",
+   "wrong": "The scissors is on the table.",
+   "right": "The scissors are on the table.",
+   "tip": "For one item say 'a pair of scissors' - then the verb follows 'pair' (singular).",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#4"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 4,
+   "id": "noun-4",
+   "cat": "noun",
+   "title": "People, police, cattle take a plural verb",
+   "rule": "People, police, cattle, poultry, clergy and gentry are plural in meaning though they have no -s. They take a plural verb.",
+   "wrong": "The police has arrested the thief.",
+   "right": "The police have arrested the thief.",
+   "tip": "Never write 'peoples' to mean persons; 'peoples' means nations or races.",
+   "core": false,
+   "bank": 2,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-5-prelims-1#1"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-5-Prelims-1#21"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 5,
+   "id": "noun-5",
+   "cat": "noun",
+   "title": "Number + noun as an adjective stays singular",
+   "rule": "When a number and a noun together describe another noun, the noun stays singular and is usually hyphenated.",
+   "wrong": "She joined a three-years course.",
+   "right": "She joined a three-year course.",
+   "tip": "a ten-rupee note, a five-star hotel, a two-day visit.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-6-Prelims-1#24"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 6,
+   "id": "noun-6",
+   "cat": "noun",
+   "title": "Hundred, thousand, dozen after a number",
+   "rule": "After a definite number, hundred, thousand, million, dozen and score take no -s. Use the -s form only with 'of' for a vague large number.",
+   "wrong": "She earned three thousands rupees last month.",
+   "right": "She earned three thousand rupees last month.",
+   "tip": "'thousands of people' is correct: there is no exact number before it.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-78-78398-error-spotting-detection#5"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 7,
+   "id": "noun-7",
+   "cat": "noun",
+   "title": "'One of' takes a plural noun",
+   "rule": "After 'one of the', 'each of the', 'either of the' and 'neither of the', the noun must be plural.",
+   "wrong": "He is one of the best player in the team.",
+   "right": "He is one of the best players in the team.",
+   "tip": "The noun is plural, but the verb after 'one of ...' is singular (see sva-10).",
+   "core": false,
+   "bank": 3,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-5-Prelims-1#16"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-6-Prelims-1#22"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 8,
+   "id": "noun-8",
+   "cat": "noun",
+   "title": "Plural determiners need plural nouns",
+   "rule": "After many, several, few, both, these, those, various, a number of and any number above one, a countable noun must be plural.",
+   "wrong": "Several new branch have opened in the city.",
+   "right": "Several new branches have opened in the city.",
+   "tip": "Also check the reverse: 'every', 'each' and 'a/an' take a singular noun.",
+   "core": true,
+   "bank": 16,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-2-prelims-1#4"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#10"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-2-Prelims-1#2"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 9,
+   "id": "pron-1",
+   "cat": "pron",
+   "title": "Pronoun agrees with its noun",
+   "rule": "A pronoun must match the noun it stands for in number and gender: plural noun, plural pronoun.",
+   "wrong": "The players were praised for his performance.",
+   "right": "The players were praised for their performance.",
+   "tip": "Find the noun the pronoun refers to before you check the pronoun.",
+   "core": true,
+   "bank": 11,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#8"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-2-Prelims-1#9"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-3-Prelims-1#19"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 10,
+   "id": "pron-2",
+   "cat": "pron",
+   "title": "Object form after a preposition",
+   "rule": "After a preposition (between, for, with, to, except) use the object form: me, him, her, us, them.",
+   "wrong": "This matter is between you and I.",
+   "right": "This matter is between you and me.",
+   "tip": "Drop the other person and test it: 'for I' sounds wrong, so 'for you and I' is wrong too.",
+   "core": false,
+   "bank": 1,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#6"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 11,
+   "id": "pron-3",
+   "cat": "pron",
+   "title": "Case after 'than' and 'as'",
+   "rule": "In formal English, the pronoun after 'than' or 'as' takes the form it would have if the clause were completed.",
+   "wrong": "She is taller than me.",
+   "right": "She is taller than I (am).",
+   "tip": "Everyday speech often says 'than me'; exam keys follow the formal rule. Complete the clause: 'than I am'.",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 12,
+   "id": "pron-4",
+   "cat": "pron",
+   "title": "Order of pronouns: 2-3-1",
+   "rule": "When pronouns of different persons come together, use the order second, third, first (you, he and I) in polite statements.",
+   "wrong": "I, you and he will go to the fair.",
+   "right": "You, he and I will go to the fair.",
+   "tip": "When admitting a fault, put yourself first: I, you and he are to blame.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-55-78375-error-spotting-detection#1"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 13,
+   "id": "pron-5",
+   "cat": "pron",
+   "title": "Verbs that need a reflexive pronoun",
+   "rule": "Avail, absent, pride, acquit and enjoy (meaning 'have a good time') need a reflexive pronoun: avail oneself of, absent oneself from, pride oneself on.",
+   "wrong": "He availed of the bank's loan offer.",
+   "right": "He availed himself of the bank's loan offer.",
+   "tip": "Passive is also fine: The offer was availed of.",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#17"
+    },
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-43-78363-error-spotting-detection#2"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 14,
+   "id": "pron-6",
+   "cat": "pron",
+   "title": "Reflexive pronoun is not a subject",
+   "rule": "Myself, himself, yourself and so on reflect back to a subject; they cannot be the subject themselves.",
+   "wrong": "Ravi and myself will attend the meeting.",
+   "right": "Ravi and I will attend the meeting.",
+   "tip": "Reflexives need a matching subject in the same clause: I hurt myself.",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-1-Prelims-1#19"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-7-prelims-1#6"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 15,
+   "id": "pron-7",
+   "cat": "pron",
+   "title": "Who for subject, whom for object",
+   "rule": "Use 'who' when the pronoun does the action and 'whom' when it receives the action or follows a preposition.",
+   "wrong": "Whom do you think is the best candidate?",
+   "right": "Who do you think is the best candidate?",
+   "tip": "Answer the question with he/him: 'he is the best', so 'who'.",
+   "core": false,
+   "bank": 1,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#20"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 16,
+   "id": "pron-8",
+   "cat": "pron",
+   "title": "Who for people, which for things",
+   "rule": "Use 'who' for people and 'which' for things and animals; 'whose' can be used for both.",
+   "wrong": "The doctor which treated me was very kind.",
+   "right": "The doctor who treated me was very kind.",
+   "tip": "'That' can replace either in a defining clause.",
+   "core": true,
+   "bank": 11,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-4-prelims-1#11"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#8"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-2-Prelims-1#24"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 17,
+   "id": "pron-9",
+   "cat": "pron",
+   "title": "'That' after superlatives and 'all'",
+   "rule": "After a superlative, and after all, only, none, nothing and the same, use 'that' as the relative pronoun.",
+   "wrong": "This is the best film which I have ever seen.",
+   "right": "This is the best film that I have ever seen.",
+   "tip": "Superlative or 'only' before the noun - reach for 'that'.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#11"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 18,
+   "id": "pron-10",
+   "cat": "pron",
+   "title": "One ... one's",
+   "rule": "When 'one' is the subject, the pronoun that follows is 'one's' or 'oneself', not 'his' or 'her'.",
+   "wrong": "One should keep his promises.",
+   "right": "One should keep one's promises.",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-2-Prelims-1#3"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 19,
+   "id": "pron-11",
+   "cat": "pron",
+   "title": "Its versus it's",
+   "rule": "'Its' is the possessive (belonging to it); 'it's' means 'it is' or 'it has'. 'Whose' and 'who's' work the same way.",
+   "wrong": "The company raised it's prices again.",
+   "right": "The company raised its prices again.",
+   "tip": "If 'it is' fits, write it's; otherwise its.",
+   "core": true,
+   "bank": 10,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#12"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#19"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#8"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 20,
+   "id": "sva-1",
+   "cat": "sva",
+   "title": "Singular subject, singular verb",
+   "rule": "A singular subject takes a singular verb (with -s in the present) and a plural subject takes a plural verb.",
+   "wrong": "She work in a bank.",
+   "right": "She works in a bank.",
+   "tip": "The -s goes on the noun for plural, but on the verb for singular.",
+   "core": true,
+   "bank": 36,
+   "papers": 8,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#10"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#11"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#13"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 21,
+   "id": "sva-2",
+   "cat": "sva",
+   "title": "Verb agrees with the head noun, not the 'of' noun",
+   "rule": "In 'X of Y', the verb agrees with X, the main noun, not with Y in the 'of' phrase.",
+   "wrong": "The price of vegetables have risen sharply.",
+   "right": "The price of vegetables has risen sharply.",
+   "tip": "Cover the 'of ...' phrase with your thumb and read again.",
+   "core": false,
+   "bank": 0,
+   "papers": 2,
+   "examples": [],
+   "src": "bank"
+  },
+  {
+   "n": 22,
+   "id": "sva-3",
+   "cat": "sva",
+   "title": "Each, every, either, neither take singular",
+   "rule": "Each, every, either, neither, everyone, everybody, anyone, someone, no one and nobody take a singular verb.",
+   "wrong": "Each of the students have a laptop.",
+   "right": "Each of the students has a laptop.",
+   "tip": "'Every' with two nouns joined by 'and' is still singular: Every man and woman has a vote.",
+   "core": true,
+   "bank": 4,
+   "papers": 10,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-5-prelims-1#1"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#11"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#12"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 23,
+   "id": "sva-4",
+   "cat": "sva",
+   "title": "Two subjects joined by 'and'",
+   "rule": "Two subjects joined by 'and' make a plural subject and take a plural verb.",
+   "wrong": "Ram and his sister is coming to the party.",
+   "right": "Ram and his sister are coming to the party.",
+   "tip": "See sva-5 for the exception.",
+   "core": false,
+   "bank": 1,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#15"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 24,
+   "id": "sva-5",
+   "cat": "sva",
+   "title": "One idea joined by 'and' is singular",
+   "rule": "If two nouns joined by 'and' name one person or one idea (often with a single article), the verb is singular.",
+   "wrong": "Bread and butter are my usual breakfast.",
+   "right": "Bread and butter is my usual breakfast.",
+   "tip": "'The secretary and treasurer is' = one person; 'The secretary and the treasurer are' = two people.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#17"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 25,
+   "id": "sva-6",
+   "cat": "sva",
+   "title": "'As well as', 'along with' follow the first subject",
+   "rule": "With 'as well as', 'along with', 'together with', 'with', 'besides', 'in addition to' and 'accompanied by', the verb agrees with the first subject.",
+   "wrong": "The teacher, along with her students, are going on a trip.",
+   "right": "The teacher, along with her students, is going on a trip.",
+   "tip": "The phrase in commas is extra information; ignore it for the verb.",
+   "core": false,
+   "bank": 1,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-3-prelims-1#5"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 26,
+   "id": "sva-7",
+   "cat": "sva",
+   "title": "Either-or, neither-nor: nearer subject",
+   "rule": "With either...or, neither...nor, not only...but also, or and nor, the verb agrees with the subject nearer to it.",
+   "wrong": "Neither the manager nor his assistants was present.",
+   "right": "Neither the manager nor his assistants were present.",
+   "tip": "Put the plural subject second; the plural verb then sounds natural.",
+   "core": false,
+   "bank": 1,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-4-Prelims-1#18"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 27,
+   "id": "sva-8",
+   "cat": "sva",
+   "title": "A number of / the number of",
+   "rule": "'A number of' means many and takes a plural noun and verb; 'the number of' means the count and takes a singular verb.",
+   "wrong": "The number of road accidents are rising.",
+   "right": "The number of road accidents is rising.",
+   "tip": "Same pattern: 'a variety of' (plural) / 'the variety of' (singular).",
+   "core": true,
+   "bank": 4,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-4-prelims-1#2"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#7"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-5-Prelims-1#15"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 28,
+   "id": "sva-9",
+   "cat": "sva",
+   "title": "'Many a' takes singular",
+   "rule": "'Many a' is followed by a singular noun and a singular verb.",
+   "wrong": "Many a student have failed this paper.",
+   "right": "Many a student has failed this paper.",
+   "tip": "Compare: 'Many students have failed.'",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-55-78375-error-spotting-detection#4"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 29,
+   "id": "sva-10",
+   "cat": "sva",
+   "title": "'One of' takes a singular verb",
+   "rule": "In 'one of the + plural noun', the subject is 'one', so the verb is singular.",
+   "wrong": "One of my friends live in Pune.",
+   "right": "One of my friends lives in Pune.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 2,
+   "examples": [],
+   "src": "bank"
+  },
+  {
+   "n": 30,
+   "id": "sva-11",
+   "cat": "sva",
+   "title": "Verb after 'who/which/that' matches the noun before it",
+   "rule": "In a relative clause, the verb agrees with the noun the relative pronoun refers to: 'one of those people who never give up'.",
+   "wrong": "He is one of those people who never gives up.",
+   "right": "He is one of those people who never give up.",
+   "tip": "But 'the only one of them who' takes a singular verb.",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#10"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#25"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 31,
+   "id": "sva-12",
+   "cat": "sva",
+   "title": "Amounts as one unit are singular",
+   "rule": "A sum of money, a distance, a period of time or a weight thought of as one whole takes a singular verb.",
+   "wrong": "Ten kilometres are a long distance to walk.",
+   "right": "Ten kilometres is a long distance to walk.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 32,
+   "id": "sva-13",
+   "cat": "sva",
+   "title": "'There is / there are'",
+   "rule": "After 'there', the verb agrees with the real subject that comes after it.",
+   "wrong": "There is many reasons for the delay.",
+   "right": "There are many reasons for the delay.",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#15"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 33,
+   "id": "sva-14",
+   "cat": "sva",
+   "title": "Collective nouns as one unit",
+   "rule": "A collective noun (committee, jury, team, government, family) acting as one unit takes a singular verb and 'its'.",
+   "wrong": "The committee have submitted its report.",
+   "right": "The committee has submitted its report.",
+   "tip": "If members act separately ('the jury were divided in their opinions'), plural is used. Keep verb and pronoun consistent.",
+   "core": true,
+   "bank": 3,
+   "papers": 3,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-4-Prelims-1#22"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-7-Prelims-1#11"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-3-Prelims-1#19"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 34,
+   "id": "art-1",
+   "cat": "art",
+   "title": "A or an: go by the sound",
+   "rule": "Use 'an' before a vowel sound and 'a' before a consonant sound, whatever the spelling.",
+   "wrong": "He waited for a hour at the station.",
+   "right": "He waited for an hour at the station.",
+   "tip": "an hour, an honest man, an MBA; a university, a European, a one-way street.",
+   "core": true,
+   "bank": 9,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-3-prelims-1#18"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#16"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#2"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 35,
+   "id": "art-2",
+   "cat": "art",
+   "title": "'The' for something specific or unique",
+   "rule": "Use 'the' before a noun already known to the reader, a noun made specific by a phrase, and things that are unique (the sun, the earth, the sky).",
+   "wrong": "Sun rises in the east.",
+   "right": "The sun rises in the east.",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-4-Prelims-1#27"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 36,
+   "id": "art-3",
+   "cat": "art",
+   "title": "'The' with rivers, seas, ranges, holy books",
+   "rule": "Use 'the' before names of rivers, seas, oceans, mountain ranges, groups of islands, deserts, holy books and most newspapers.",
+   "wrong": "Ganga is a holy river.",
+   "right": "The Ganga is a holy river.",
+   "tip": "No 'the' before a single mountain (Mount Everest) or a single lake (Lake Dal).",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-4-Prelims-1#12"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-7-Prelims-1#20"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 37,
+   "id": "art-4",
+   "cat": "art",
+   "title": "No article with languages, games, meals, subjects",
+   "rule": "Do not use an article before names of languages, games, meals, school subjects and general abstract or material nouns.",
+   "wrong": "He plays the cricket every evening.",
+   "right": "He plays cricket every evening.",
+   "tip": "Musical instruments do take 'the': She plays the violin.",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-3-Prelims-1#23"
+    },
+    {
+     "bank": "guidely",
+     "key": "single-fillers-set-4-prelims-1#24"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 38,
+   "id": "art-5",
+   "cat": "art",
+   "title": "'The' with superlatives and ordinals",
+   "rule": "Use 'the' before a superlative adjective and before ordinal numbers (the first, the last, the best).",
+   "wrong": "She is best student in the class.",
+   "right": "She is the best student in the class.",
+   "tip": "",
+   "core": false,
+   "bank": 3,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-5-Prelims-1#16"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-5-Prelims-1#16"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 39,
+   "id": "art-6",
+   "cat": "art",
+   "title": "'The' + adjective means a whole class",
+   "rule": "'The' + adjective (the rich, the poor, the old) means a whole group of people and takes a plural verb.",
+   "wrong": "The poor needs our help.",
+   "right": "The poor need our help.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 40,
+   "id": "art-7",
+   "cat": "art",
+   "title": "A singular countable noun needs an article",
+   "rule": "A singular countable noun cannot stand alone; it needs a, an, the or another determiner.",
+   "wrong": "She is engineer at a power plant.",
+   "right": "She is an engineer at a power plant.",
+   "tip": "",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-2-Prelims-1#25"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-7-prelims-1#7"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 41,
+   "id": "art-8",
+   "cat": "art",
+   "title": "No article before a proper name",
+   "rule": "Do not put an article before a person's name, a country without a plural or 'Republic/Kingdom', or a city.",
+   "wrong": "The Mumbai is a busy city.",
+   "right": "Mumbai is a busy city.",
+   "tip": "But: the USA, the UK, the Netherlands.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-3-Prelims-1#11"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 42,
+   "id": "adj-1",
+   "cat": "adj",
+   "title": "Comparative for two, superlative for more",
+   "rule": "Use the comparative when comparing two and the superlative when comparing three or more.",
+   "wrong": "She is the taller of the three sisters.",
+   "right": "She is the tallest of the three sisters.",
+   "tip": "'the taller of the two' is correct.",
+   "core": true,
+   "bank": 7,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-5-Prelims-1#16"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-8-Prelims-1#6"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 43,
+   "id": "adj-2",
+   "cat": "adj",
+   "title": "No double comparatives",
+   "rule": "Do not use 'more' or 'most' with an -er or -est form.",
+   "wrong": "This plan is more better than the old one.",
+   "right": "This plan is better than the old one.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 44,
+   "id": "adj-3",
+   "cat": "adj",
+   "title": "Senior to, superior to (not 'than')",
+   "rule": "Senior, junior, superior, inferior, prior, anterior, posterior and prefer take 'to', not 'than'.",
+   "wrong": "He is senior than me in the office.",
+   "right": "He is senior to me in the office.",
+   "tip": "Also: prefer tea to coffee (not 'than coffee').",
+   "core": true,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 45,
+   "id": "adj-4",
+   "cat": "adj",
+   "title": "Absolute adjectives have no degrees",
+   "rule": "Words such as unique, perfect, complete, ideal, excellent, universal and entire cannot be made 'more' or 'most'.",
+   "wrong": "This is the most unique design in the show.",
+   "right": "This is a unique design in the show.",
+   "tip": "Write 'nearly perfect', not 'more perfect'.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-55-78375-error-spotting-detection#5"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 46,
+   "id": "adj-5",
+   "cat": "adj",
+   "title": "Compare like with like",
+   "rule": "The two things compared must be of the same kind; use 'that of' or 'those of' to avoid comparing a thing with a place or person.",
+   "wrong": "The climate of Delhi is hotter than Shimla.",
+   "right": "The climate of Delhi is hotter than that of Shimla.",
+   "tip": "Plural: 'The roads of Delhi are wider than those of Patna.'",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 47,
+   "id": "adj-6",
+   "cat": "adj",
+   "title": "'Any other' when comparing within a group",
+   "rule": "When comparing one member with others of its own group, use 'any other' or 'all other', so it is not compared with itself.",
+   "wrong": "He is taller than any boy in his class.",
+   "right": "He is taller than any other boy in his class.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 1,
+   "examples": [],
+   "src": "bank"
+  },
+  {
+   "n": 48,
+   "id": "adj-7",
+   "cat": "adj",
+   "title": "Fewer/less, many/much",
+   "rule": "Use fewer and many with countable nouns; use less and much with uncountable nouns.",
+   "wrong": "There were less people at the meeting than expected.",
+   "right": "There were fewer people at the meeting than expected.",
+   "tip": "fewer chairs, less furniture; many coins, much money.",
+   "core": true,
+   "bank": 4,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#19"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#6"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-3-Prelims-1#10"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 49,
+   "id": "adj-8",
+   "cat": "adj",
+   "title": "Few / a few / the few",
+   "rule": "'A few' and 'a little' mean some (positive); 'few' and 'little' mean hardly any (negative); 'the few' means the small number that exist.",
+   "wrong": "A few people came, so the hall looked empty.",
+   "right": "Few people came, so the hall looked empty.",
+   "tip": "'little' and 'a little' are for uncountable nouns.",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 50,
+   "id": "adj-9",
+   "cat": "adj",
+   "title": "Adjective after linking verbs",
+   "rule": "After linking verbs (be, look, seem, feel, taste, smell, sound, appear, become, remain) use an adjective, not an adverb.",
+   "wrong": "The food tastes deliciously.",
+   "right": "The food tastes delicious.",
+   "tip": "Linking verbs describe the subject, not the action.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-6-Prelims-1#26"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 51,
+   "id": "adj-10",
+   "cat": "adj",
+   "title": "Use the right word class (adjective vs noun/verb)",
+   "rule": "A noun is described by an adjective; do not put a noun or verb form where an adjective is needed, or the reverse.",
+   "wrong": "It was a success event for the company.",
+   "right": "It was a successful event for the company.",
+   "tip": "Check the job of the word: describing a noun = adjective.",
+   "core": true,
+   "bank": 22,
+   "papers": 6,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-5-prelims-1#15"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#18"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 52,
+   "id": "adv-1",
+   "cat": "adv",
+   "title": "Adverb modifies a verb",
+   "rule": "To describe how an action is done (a verb), or to modify an adjective or another adverb, use an adverb, not an adjective.",
+   "wrong": "She sings sweet at every function.",
+   "right": "She sings sweetly at every function.",
+   "tip": "Ask 'how?' about the verb - the answer is usually an -ly word.",
+   "core": true,
+   "bank": 24,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-4-prelims-1#16"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#18"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#14"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 53,
+   "id": "adv-2",
+   "cat": "adv",
+   "title": "Very with positive, much with comparative",
+   "rule": "Use 'very' with positive adjectives and present participles; use 'much' or 'far' with comparatives and with most past participles.",
+   "wrong": "She is very taller than her brother.",
+   "right": "She is much taller than her brother.",
+   "tip": "very interesting, much interested, much better.",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 54,
+   "id": "adv-3",
+   "cat": "adv",
+   "title": "No double negatives",
+   "rule": "Hardly, scarcely, barely, seldom, never and nothing are already negative; do not add 'not' or another negative.",
+   "wrong": "I can't hardly hear you.",
+   "right": "I can hardly hear you.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 55,
+   "id": "adv-4",
+   "cat": "adv",
+   "title": "'Enough' goes after the adjective",
+   "rule": "'Enough' comes after an adjective or adverb (tall enough) but before a noun (enough money).",
+   "wrong": "He is enough tall to reach the top shelf.",
+   "right": "He is tall enough to reach the top shelf.",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-5-Prelims-1#17"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 56,
+   "id": "tense-1",
+   "cat": "tense",
+   "title": "Simple present for habits and facts",
+   "rule": "Use the simple present for habits, routines and general truths.",
+   "wrong": "Water is boiling at 100 degrees Celsius.",
+   "right": "Water boils at 100 degrees Celsius.",
+   "tip": "",
+   "core": true,
+   "bank": 9,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-2-Prelims-1#19"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-3-Prelims-1#30"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-1-Prelims-1#12"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 57,
+   "id": "tense-2",
+   "cat": "tense",
+   "title": "Stative verbs are not used in -ing form",
+   "rule": "Verbs of knowing, feeling, owning and seeming (know, believe, understand, love, own, belong, contain, seem) are not normally used in continuous tenses.",
+   "wrong": "I am knowing the answer to this question.",
+   "right": "I know the answer to this question.",
+   "tip": "'I am having lunch' is fine: here 'have' means 'eat', an action.",
+   "core": false,
+   "bank": 0,
+   "papers": 1,
+   "examples": [],
+   "src": "bank"
+  },
+  {
+   "n": 58,
+   "id": "tense-3",
+   "cat": "tense",
+   "title": "Present perfect not with a past time",
+   "rule": "Do not use the present perfect (has/have + V3) with a finished past time such as yesterday, ago, last year or in 2015; use the simple past.",
+   "wrong": "I have met him yesterday.",
+   "right": "I met him yesterday.",
+   "tip": "'ago' always goes with the simple past.",
+   "core": true,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 59,
+   "id": "tense-4",
+   "cat": "tense",
+   "title": "Since (point) and for (period)",
+   "rule": "With perfect tenses, use 'since' for a point in time (since 2019, since Monday) and 'for' for a length of time (for five years).",
+   "wrong": "She has been living here since five years.",
+   "right": "She has been living here for five years.",
+   "tip": "",
+   "core": false,
+   "bank": 2,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#17"
+    },
+    {
+     "bank": "guidely",
+     "key": "single-fillers-set-1-prelims-1#4"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 60,
+   "id": "tense-5",
+   "cat": "tense",
+   "title": "Perfect continuous for action still going on",
+   "rule": "For an action that began in the past and is still continuing, use the present perfect continuous (has/have been + -ing), not the present continuous.",
+   "wrong": "He is working here since 2015.",
+   "right": "He has been working here since 2015.",
+   "tip": "",
+   "core": true,
+   "bank": 2,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-1-Prelims-1#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-8-Prelims-1#12"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 61,
+   "id": "tense-6",
+   "cat": "tense",
+   "title": "Past perfect for the earlier past action",
+   "rule": "When two past actions are told together, put the one that happened first in the past perfect (had + V3).",
+   "wrong": "When I reached the station, the train already left.",
+   "right": "When I reached the station, the train had already left.",
+   "tip": "",
+   "core": true,
+   "bank": 3,
+   "papers": 4,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-1-Prelims-1#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-1-Prelims-1#28"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#25"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 62,
+   "id": "tense-7",
+   "cat": "tense",
+   "title": "Keep the tense sequence consistent",
+   "rule": "A past tense in the main clause is normally followed by a past form in the dependent clause (so that ... might, could, would).",
+   "wrong": "He worked hard so that he may pass.",
+   "right": "He worked hard so that he might pass.",
+   "tip": "A universal truth stays in the present (see speech-2).",
+   "core": true,
+   "bank": 46,
+   "papers": 10,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-6-prelims-1#17"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#1"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#9"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 63,
+   "id": "tense-8",
+   "cat": "tense",
+   "title": "No 'will' after when, if, until, as soon as",
+   "rule": "In clauses of time and condition (when, before, after, until, as soon as, if, unless), use the present tense for a future meaning, not 'will'.",
+   "wrong": "I will call you when I will reach home.",
+   "right": "I will call you when I reach home.",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-13-78333-sentence-improvement#2"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 64,
+   "id": "tense-9",
+   "cat": "tense",
+   "title": "Base verb after do, does, did",
+   "rule": "After do, does or did (in questions, negatives and emphasis), use the base form of the verb.",
+   "wrong": "Did he went to school today?",
+   "right": "Did he go to school today?",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-8-78328-sentence-improvement#3"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 65,
+   "id": "tense-10",
+   "cat": "tense",
+   "title": "Has/have/had + past participle",
+   "rule": "Perfect tenses use has, have or had with the past participle (V3), not the simple past (V2) or base form.",
+   "wrong": "He has wrote three letters today.",
+   "right": "He has written three letters today.",
+   "tip": "Learn the irregular V3s: begun, written, gone, taken, risen, seen, done.",
+   "core": true,
+   "bank": 29,
+   "papers": 5,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-2-prelims-1#5"
+    },
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-5-prelims-1#4"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#9"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 66,
+   "id": "tense-11",
+   "cat": "tense",
+   "title": "'It is time' + past tense",
+   "rule": "'It is time', 'it is high time' and 'it is about time' are followed by the simple past (or 'for + noun + to-infinitive').",
+   "wrong": "It is high time we leave for the airport.",
+   "right": "It is high time we left for the airport.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 67,
+   "id": "tense-12",
+   "cat": "tense",
+   "title": "Lie/lay, rise/raise, sit/set",
+   "rule": "Lie, rise and sit take no object; lay, raise and set need an object. Learn their forms: lie-lay-lain, lay-laid-laid.",
+   "wrong": "She laid on the bed all afternoon.",
+   "right": "She lay on the bed all afternoon.",
+   "tip": "Prices rise; the government raises prices.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-2-Prelims-1#1"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 68,
+   "id": "modal-1",
+   "cat": "modal",
+   "title": "Base verb after a modal",
+   "rule": "After can, could, may, might, shall, should, will, would and must, use the base form of the verb, with no 'to' and no -s.",
+   "wrong": "She can sings very well.",
+   "right": "She can sing very well.",
+   "tip": "",
+   "core": true,
+   "bank": 13,
+   "papers": 4,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#17"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#2"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#11"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 69,
+   "id": "modal-2",
+   "cat": "modal",
+   "title": "Modal + have + V3 for the past",
+   "rule": "To talk about the past with a modal, use modal + have + past participle (should have gone, must have left), never 'has'.",
+   "wrong": "He must has left the office early.",
+   "right": "He must have left the office early.",
+   "tip": "should have = it was right but not done; must have = a sure guess about the past.",
+   "core": false,
+   "bank": 0,
+   "papers": 2,
+   "examples": [],
+   "src": "bank"
+  },
+  {
+   "n": 70,
+   "id": "modal-3",
+   "cat": "modal",
+   "title": "'Used to' and 'be used to'",
+   "rule": "'Used to' + base verb is a past habit; 'be/get used to' + -ing means being accustomed to something.",
+   "wrong": "I am used to wake up early.",
+   "right": "I am used to waking up early.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 71,
+   "id": "modal-4",
+   "cat": "modal",
+   "title": "'Had better' and 'would rather' + base verb",
+   "rule": "'Had better', 'would rather' and 'would sooner' are followed by the base verb without 'to'.",
+   "wrong": "You had better to leave now.",
+   "right": "You had better leave now.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 72,
+   "id": "modal-5",
+   "cat": "modal",
+   "title": "Choose the modal that fits the meaning",
+   "rule": "Each modal has its own meaning: must (necessity), may/might (possibility), should (advice), can (ability), would (past habit or polite request).",
+   "wrong": "You may wear a helmet; it is the law.",
+   "right": "You must wear a helmet; it is the law.",
+   "tip": "Read the context for a law, a guess, advice or ability.",
+   "core": false,
+   "bank": 3,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-7-Prelims-1#12"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#22"
+    },
+    {
+     "bank": "guidely",
+     "key": "single-fillers-set-7-prelims-1#13"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 73,
+   "id": "nonfin-1",
+   "cat": "nonfin",
+   "title": "Verbs followed by -ing",
+   "rule": "Avoid, enjoy, mind, finish, suggest, consider, admit, deny, risk, postpone, practise and keep are followed by a gerund (-ing).",
+   "wrong": "He avoided to meet me after the quarrel.",
+   "right": "He avoided meeting me after the quarrel.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 74,
+   "id": "nonfin-2",
+   "cat": "nonfin",
+   "title": "Verbs followed by 'to' + verb",
+   "rule": "Want, decide, hope, agree, refuse, promise, plan, afford, manage, fail and expect are followed by a to-infinitive.",
+   "wrong": "She decided going home early.",
+   "right": "She decided to go home early.",
+   "tip": "",
+   "core": true,
+   "bank": 13,
+   "papers": 4,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#10"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#2"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#11"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 75,
+   "id": "nonfin-3",
+   "cat": "nonfin",
+   "title": "'To' as a preposition takes -ing",
+   "rule": "In look forward to, object to, be committed to, be used to, with a view to, be averse to and confess to, 'to' is a preposition, so the verb after it takes -ing.",
+   "wrong": "I look forward to meet you next week.",
+   "right": "I look forward to meeting you next week.",
+   "tip": "Test: can a noun follow? 'I look forward to the holiday' - yes, so use -ing.",
+   "core": false,
+   "bank": 1,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-5-Prelims-1#10"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 76,
+   "id": "nonfin-4",
+   "cat": "nonfin",
+   "title": "Bare infinitive after make, let, see",
+   "rule": "After make, let, have (causative), see, hear, watch and bid in the active voice, use the base verb without 'to'.",
+   "wrong": "She made him to apologise in public.",
+   "right": "She made him apologise in public.",
+   "tip": "In the passive, 'to' returns: He was made to apologise.",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 77,
+   "id": "nonfin-5",
+   "cat": "nonfin",
+   "title": "-ing after a preposition",
+   "rule": "A verb that comes straight after a preposition (of, in, at, for, about, without, before, after, by) takes the -ing form.",
+   "wrong": "He is fond of play cricket.",
+   "right": "He is fond of playing cricket.",
+   "tip": "",
+   "core": true,
+   "bank": 17,
+   "papers": 8,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-4-prelims-1#12"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#15"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#18"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 78,
+   "id": "nonfin-6",
+   "cat": "nonfin",
+   "title": "Avoid dangling participles",
+   "rule": "An opening -ing or -ed phrase must describe the subject of the main clause that follows it.",
+   "wrong": "Walking in the park, a snake bit him.",
+   "right": "While he was walking in the park, a snake bit him.",
+   "tip": "Ask: who was walking? The subject after the comma must be that person.",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 79,
+   "id": "nonfin-7",
+   "cat": "nonfin",
+   "title": "-ing or -ed adjective",
+   "rule": "An -ing adjective describes what causes a feeling (boring, exciting); an -ed adjective describes the person who has the feeling (bored, excited).",
+   "wrong": "The students were exciting about the trip.",
+   "right": "The students were excited about the trip.",
+   "tip": "",
+   "core": true,
+   "bank": 3,
+   "papers": 7,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#2"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#26"
+    },
+    {
+     "bank": "guidely",
+     "key": "single-fillers-set-1-prelims-1#4"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 80,
+   "id": "cond-1",
+   "cat": "cond",
+   "title": "Second conditional: if + past, would",
+   "rule": "For an imaginary present or future, use 'if' + simple past in one clause and 'would' + base verb in the other.",
+   "wrong": "If I had more money, I will buy a car.",
+   "right": "If I had more money, I would buy a car.",
+   "tip": "First conditional (real): If it rains, we will stay in.",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#9"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-3-Prelims-1#19"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 81,
+   "id": "cond-2",
+   "cat": "cond",
+   "title": "Third conditional: if + had + V3",
+   "rule": "For an imaginary past, use 'if' + past perfect, and 'would have' + V3 in the main clause. Never put 'would have' in the if-clause.",
+   "wrong": "If you would have told me, I would have helped you.",
+   "right": "If you had told me, I would have helped you.",
+   "tip": "Inverted form: Had you told me, I would have helped you.",
+   "core": true,
+   "bank": 2,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-17-78337-sentence-improvement#1"
+    },
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-30-78350-error-spotting-detection#5"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 82,
+   "id": "cond-3",
+   "cat": "cond",
+   "title": "'Were' in unreal situations",
+   "rule": "In unreal or imaginary situations after if, as if, as though and wish, formal English uses 'were' for all subjects.",
+   "wrong": "He talks as if he was the owner of the company.",
+   "right": "He talks as if he were the owner of the company.",
+   "tip": "Everyday speech often uses 'was'; exam keys expect 'were'. Model: If I were you, I would wait.",
+   "core": false,
+   "bank": 1,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-8-Prelims-1#11"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 83,
+   "id": "cond-4",
+   "cat": "cond",
+   "title": "'Unless' never takes 'not'",
+   "rule": "'Unless' already means 'if not', so it must not be followed by 'not' in the same clause.",
+   "wrong": "Unless you do not work hard, you will fail.",
+   "right": "Unless you work hard, you will fail.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 84,
+   "id": "cond-5",
+   "cat": "cond",
+   "title": "Wish about the past + had + V3",
+   "rule": "To regret something in the past, use 'wish' + past perfect; to wish for a different present, use 'wish' + simple past.",
+   "wrong": "I wish I studied harder for last year's exam.",
+   "right": "I wish I had studied harder for last year's exam.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 85,
+   "id": "voice-1",
+   "cat": "voice",
+   "title": "Passive = be + past participle",
+   "rule": "The passive is formed with the correct tense of 'be' + past participle (is made, was built, is being built, has been done).",
+   "wrong": "The new bridge is being build by the state.",
+   "right": "The new bridge is being built by the state.",
+   "tip": "",
+   "core": true,
+   "bank": 5,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#22"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#12"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-5-Prelims-1#22"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 86,
+   "id": "voice-2",
+   "cat": "voice",
+   "title": "Intransitive verbs have no passive",
+   "rule": "Happen, occur, arise, die, seem, appear, belong, consist, exist and emerge take no object, so they cannot be made passive.",
+   "wrong": "The accident was happened late at night.",
+   "right": "The accident happened late at night.",
+   "tip": "",
+   "core": true,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 87,
+   "id": "voice-3",
+   "cat": "voice",
+   "title": "Modal passive: modal + be + V3",
+   "rule": "With a modal, the passive is modal + be + past participle (must be followed, can be done, should have been told).",
+   "wrong": "The safety rules must be follow by all workers.",
+   "right": "The safety rules must be followed by all workers.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 88,
+   "id": "speech-1",
+   "cat": "speech",
+   "title": "Backshift after a past reporting verb",
+   "rule": "When the reporting verb is in the past (said, told, asked), the tense in reported speech usually moves one step back: will to would, is to was, has to had.",
+   "wrong": "He said that he will help me with the project.",
+   "right": "He said that he would help me with the project.",
+   "tip": "No backshift if the reporting verb is present: He says that he will help.",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-2-Prelims-1#6"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 89,
+   "id": "speech-2",
+   "cat": "speech",
+   "title": "Universal truths stay in the present",
+   "rule": "A universal truth, scientific fact or habitual fact stays in the present tense even after a past reporting verb.",
+   "wrong": "The teacher said that the earth went round the sun.",
+   "right": "The teacher said that the earth goes round the sun.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 90,
+   "id": "speech-3",
+   "cat": "speech",
+   "title": "Reported questions use statement order",
+   "rule": "In a reported or embedded question, the subject comes before the verb and there is no question mark.",
+   "wrong": "She asked me where was I going.",
+   "right": "She asked me where I was going.",
+   "tip": "Same for embedded questions: Can you tell me where the bank is?",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 91,
+   "id": "speech-4",
+   "cat": "speech",
+   "title": "Reported commands use (not) to + verb",
+   "rule": "Reported orders, requests and advice use told/asked/advised + object + to + verb; for a negative, use 'not to'.",
+   "wrong": "He told me that don't go there alone.",
+   "right": "He told me not to go there alone.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 92,
+   "id": "speech-5",
+   "cat": "speech",
+   "title": "Say versus tell",
+   "rule": "'Tell' needs a person as object (tell me, told him); 'say' does not take a personal object directly (say to me, said that).",
+   "wrong": "He said me that he was busy.",
+   "right": "He told me that he was busy.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 93,
+   "id": "conj-1",
+   "cat": "conj",
+   "title": "Correlative pairs stay together",
+   "rule": "Fixed pairs must be used whole: either...or, neither...nor, both...and, not only...but also, whether...or, though...yet.",
+   "wrong": "Neither Ram or Shyam came to the meeting.",
+   "right": "Neither Ram nor Shyam came to the meeting.",
+   "tip": "",
+   "core": true,
+   "bank": 2,
+   "papers": 3,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-7-Prelims-1#1"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-8-Prelims-1#5"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 94,
+   "id": "conj-2",
+   "cat": "conj",
+   "title": "'Both ... and', not 'both ... as well as'",
+   "rule": "'Both' pairs with 'and'; do not use 'as well as', 'along with' or 'also' with 'both'.",
+   "wrong": "Both Ravi as well as Amit passed the exam.",
+   "right": "Both Ravi and Amit passed the exam.",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-74-78394-error-spotting-detection#1"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 95,
+   "id": "conj-3",
+   "cat": "conj",
+   "title": "No sooner...than, hardly...when",
+   "rule": "'No sooner' is followed by 'than'; 'hardly', 'scarcely' and 'barely' are followed by 'when' or 'before'.",
+   "wrong": "No sooner had he arrived when it began to rain.",
+   "right": "No sooner had he arrived than it began to rain.",
+   "tip": "Both need inversion: No sooner had he..., Hardly had she...",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#15"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 96,
+   "id": "conj-4",
+   "cat": "conj",
+   "title": "'Lest' takes 'should', never 'not'",
+   "rule": "'Lest' means 'for fear that'. It is followed by 'should' + base verb (or just the base verb) and never by 'not'.",
+   "wrong": "Walk carefully lest you should not fall.",
+   "right": "Walk carefully lest you should fall.",
+   "tip": "",
+   "core": true,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 97,
+   "id": "conj-5",
+   "cat": "conj",
+   "title": "'Although' does not pair with 'but'",
+   "rule": "Although, though and even though are not followed by 'but' in the next clause; 'yet' or a comma alone is used.",
+   "wrong": "Although he is rich, but he is unhappy.",
+   "right": "Although he is rich, he is unhappy.",
+   "tip": "Similarly, 'because' is not followed by 'so' or 'therefore'.",
+   "core": false,
+   "bank": 2,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-7-Prelims-1#1"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-2-Prelims-1#23"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 98,
+   "id": "conj-6",
+   "cat": "conj",
+   "title": "'The reason is that', not 'because'",
+   "rule": "After 'the reason is/was', use 'that'; 'the reason ... is because' repeats the idea.",
+   "wrong": "The reason he failed is because he was ill.",
+   "right": "The reason he failed is that he was ill.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 99,
+   "id": "conj-7",
+   "cat": "conj",
+   "title": "Too...to and so...that",
+   "rule": "Use 'too + adjective + to-infinitive' or 'so + adjective + that + clause'; do not mix them ('so ... to').",
+   "wrong": "He is so weak to walk.",
+   "right": "He is too weak to walk.",
+   "tip": "so...that clause: He is so weak that he cannot walk.",
+   "core": false,
+   "bank": 0,
+   "papers": 1,
+   "examples": [],
+   "src": "bank"
+  },
+  {
+   "n": 100,
+   "id": "conj-8",
+   "cat": "conj",
+   "title": "As...as for equality",
+   "rule": "Use 'as + adjective + as' for equal comparison and 'not so/as ... as' in the negative; do not use 'like' or 'than' in the second slot.",
+   "wrong": "She is as clever like her sister.",
+   "right": "She is as clever as her sister.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 101,
+   "id": "conj-9",
+   "cat": "conj",
+   "title": "Choose the linker that fits the logic",
+   "rule": "Use a connector whose meaning fits the link between the ideas: contrast (but, although, however), reason (because, since), result (so, therefore), addition (and, moreover), condition (if, unless).",
+   "wrong": "He was ill, so he came to the office.",
+   "right": "He was ill, but he came to the office.",
+   "tip": "Read both clauses first and name the relation before choosing.",
+   "core": true,
+   "bank": 6,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-4-Prelims-1#16"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-6-Prelims-1#11"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#8"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 102,
+   "id": "prep-1",
+   "cat": "prep",
+   "title": "Fixed prepositions after verbs and adjectives",
+   "rule": "Many verbs and adjectives take a fixed preposition: comply with, abide by, consist of, depend on, insist on, refrain from, rely on, aware of, capable of, accused of, prone to.",
+   "wrong": "All staff must comply to the new rules.",
+   "right": "All staff must comply with the new rules.",
+   "tip": "Learn them in pairs, as one unit.",
+   "core": true,
+   "bank": 51,
+   "papers": 11,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#16"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#2"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#20"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 103,
+   "id": "prep-2",
+   "cat": "prep",
+   "title": "Verbs that take no preposition",
+   "rule": "Discuss, enter, reach, attack, resemble, request, order, marry, approach, emphasise, investigate, lack and comprise take a direct object with no preposition.",
+   "wrong": "We discussed about the plan for two hours.",
+   "right": "We discussed the plan for two hours.",
+   "tip": "But the nouns do take one: a discussion about, an emphasis on, a request for.",
+   "core": false,
+   "bank": 2,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-3-Prelims-1#14"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-5-Prelims-1#22"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 104,
+   "id": "prep-3",
+   "cat": "prep",
+   "title": "At, on, in for time",
+   "rule": "Use 'at' for clock times and exact moments, 'on' for days and dates, and 'in' for months, years, seasons and parts of the day.",
+   "wrong": "The meeting is in Monday morning.",
+   "right": "The meeting is on Monday morning.",
+   "tip": "at night, at noon; on 5 May; in 2024, in the evening.",
+   "core": false,
+   "bank": 3,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#17"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-error-free-sentence-set-1-prelims#19"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#9"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 105,
+   "id": "prep-4",
+   "cat": "prep",
+   "title": "In/into, on/onto, to/at for movement",
+   "rule": "Use 'into' and 'onto' for movement from outside to inside or on top; use 'in' and 'on' for position.",
+   "wrong": "She walked in the room and sat down.",
+   "right": "She walked into the room and sat down.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 106,
+   "id": "prep-5",
+   "cat": "prep",
+   "title": "Between (two), among (more)",
+   "rule": "Use 'between' for two people or things and 'among' for more than two; 'between' is followed by 'and', not 'to' or 'or'.",
+   "wrong": "Divide the sweets between the five children.",
+   "right": "Divide the sweets among the five children.",
+   "tip": "between 5 and 6 pm, not 'between 5 to 6 pm'.",
+   "core": true,
+   "bank": 3,
+   "papers": 4,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "double-fillers-set-4-prelims-1#17"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#4"
+    },
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-5-Prelims-1#23"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 107,
+   "id": "prep-6",
+   "cat": "prep",
+   "title": "Beside or besides",
+   "rule": "'Beside' means next to; 'besides' means in addition to.",
+   "wrong": "Beside English, he speaks French and German.",
+   "right": "Besides English, he speaks French and German.",
+   "tip": "",
+   "core": false,
+   "bank": 1,
+   "papers": 0,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "sentence-improvement-set-4-Prelims-1#13"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 108,
+   "id": "prep-7",
+   "cat": "prep",
+   "title": "Fixed prepositions after nouns",
+   "rule": "Many nouns take a fixed preposition: demand for, access to, respect for, interest in, key to, solution to, cure for, increase in, ban on, impact on.",
+   "wrong": "There is a huge demand of skilled workers.",
+   "right": "There is a huge demand for skilled workers.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 109,
+   "id": "prep-8",
+   "cat": "prep",
+   "title": "Prepositions in fixed phrases",
+   "rule": "Many set phrases have a fixed preposition that cannot be swapped: in charge of, on behalf of, in spite of, on account of, in accordance with, at the cost of, in favour of.",
+   "wrong": "He spoke in behalf of the whole team.",
+   "right": "He spoke on behalf of the whole team.",
+   "tip": "'Despite' takes no 'of'; 'in spite' always takes 'of'.",
+   "core": true,
+   "bank": 3,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#14"
+    },
+    {
+     "bank": "guidely",
+     "key": "single-fillers-set-8-prelims-1#5"
+    },
+    {
+     "bank": "sreedhar",
+     "key": "ibps-csa-xvi-prelims-2026-model-test-4-78324-error-spotting-detection#1"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 110,
+   "id": "qtag-1",
+   "cat": "qtag",
+   "title": "Positive statement, negative tag",
+   "rule": "A positive statement takes a negative tag and a negative statement a positive tag, using the same auxiliary and a pronoun subject.",
+   "wrong": "She is a doctor, isn't it?",
+   "right": "She is a doctor, isn't she?",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 1,
+   "examples": [],
+   "src": "bank"
+  },
+  {
+   "n": 111,
+   "id": "qtag-2",
+   "cat": "qtag",
+   "title": "Negative words take a positive tag",
+   "rule": "Hardly, scarcely, seldom, never, few, little, nobody and nothing make a statement negative, so the tag is positive.",
+   "wrong": "He hardly works, doesn't he?",
+   "right": "He hardly works, does he?",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 112,
+   "id": "qtag-3",
+   "cat": "qtag",
+   "title": "Special tags: let's, I am, imperatives",
+   "rule": "Use 'shall we?' after 'Let's', 'aren't I?' after 'I am', and 'will you?' or 'won't you?' after a command or request.",
+   "wrong": "Let's go for a walk, will we?",
+   "right": "Let's go for a walk, shall we?",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 113,
+   "id": "inv-1",
+   "cat": "inv",
+   "title": "Negative adverb first: invert",
+   "rule": "When a sentence starts with never, seldom, rarely, little, not only, at no time, under no circumstances, nowhere or hardly, put the auxiliary before the subject.",
+   "wrong": "Never I have seen such a beautiful sunset.",
+   "right": "Never have I seen such a beautiful sunset.",
+   "tip": "Like a question order, but it is a statement.",
+   "core": true,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 114,
+   "id": "inv-2",
+   "cat": "inv",
+   "title": "'Only then', 'only when' at the start: invert",
+   "rule": "A sentence that begins with 'only' + a time word or phrase (only then, only after, only when, only by) inverts the main clause.",
+   "wrong": "Only then he realised his mistake.",
+   "right": "Only then did he realise his mistake.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 115,
+   "id": "inv-3",
+   "cat": "inv",
+   "title": "Question word order",
+   "rule": "In a direct question, put the auxiliary before the subject: Why are you late?",
+   "wrong": "Why you are late again?",
+   "right": "Why are you late again?",
+   "tip": "Reported questions do the opposite (see speech-3).",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 116,
+   "id": "par-1",
+   "cat": "par",
+   "title": "Items in a list share one form",
+   "rule": "Words or phrases joined by and, or, but or in a list must have the same grammatical form.",
+   "wrong": "She likes reading, writing and to swim.",
+   "right": "She likes reading, writing and swimming.",
+   "tip": "Line up the items and check each starts the same way.",
+   "core": true,
+   "bank": 9,
+   "papers": 2,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#1"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#18"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-5-Prelims-1#30"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 117,
+   "id": "par-2",
+   "cat": "par",
+   "title": "Correlatives join matching parts",
+   "rule": "With not only...but also, either...or and both...and, the word after each part must be the same kind of word.",
+   "wrong": "He not only plays cricket but also football.",
+   "right": "He plays not only cricket but also football.",
+   "tip": "Place 'not only' just before the first of the two matching items.",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 118,
+   "id": "par-3",
+   "cat": "par",
+   "title": "Each auxiliary needs its own verb form",
+   "rule": "If two auxiliaries share one main verb, the verb must fit both; otherwise write each verb in full.",
+   "wrong": "He has never and will never cheat anyone.",
+   "right": "He has never cheated and will never cheat anyone.",
+   "tip": "",
+   "core": false,
+   "bank": 0,
+   "papers": 0,
+   "examples": [],
+   "src": "web"
+  },
+  {
+   "n": 119,
+   "id": "red-1",
+   "cat": "red",
+   "title": "Cut superfluous words",
+   "rule": "Do not repeat a meaning the word already carries: return back, repeat again, revert back, cousin brother, each and every, free gift, final outcome.",
+   "wrong": "Please return back the book by Friday.",
+   "right": "Please return the book by Friday.",
+   "tip": "If you can delete a word and the meaning stays the same, delete it.",
+   "core": true,
+   "bank": 9,
+   "papers": 1,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-detection-correct-or-incorrect-set-1-prelims#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#15"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-detection-without-slash-set-1-prelims#3"
+    }
+   ],
+   "src": "bank"
+  },
+  {
+   "n": 120,
+   "id": "red-2",
+   "cat": "red",
+   "title": "Commonly confused words",
+   "rule": "Pairs such as affect/effect, principal/principle, lose/loose, compliment/complement, stationary/stationery and advice/advise sound alike but differ in meaning or part of speech.",
+   "wrong": "The new rule will effect every employee.",
+   "right": "The new rule will affect every employee.",
+   "tip": "affect = verb (to influence); effect = usually a noun (a result).",
+   "core": true,
+   "bank": 5,
+   "papers": 3,
+   "examples": [
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#13"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#14"
+    },
+    {
+     "bank": "guidely",
+     "key": "error-spotting-set-1-Prelims-1#19"
+    }
+   ],
+   "src": "bank"
+  }
+ ]
+}
