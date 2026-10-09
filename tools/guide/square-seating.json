@@ -1,0 +1,1243 @@
+{
+ "module": "square-seating",
+ "intro": [
+  "Eight people around a square table, four at the corners and four in the middle of the sides, often with corners and middles facing opposite ways. These lessons are built from the square puzzles the papers actually set, in the same way as the parallel-rows and box topics. Round tables are a separate topic (Circular Seating).",
+  "**What I studied first.** Ten real square puzzles from memory-based papers: five IBPS Clerk Prelims (2019, 2022, 2023, 4 Oct 2025 Shift 3 and 5 Oct 2025 Shift 1) and five sister papers (SBI Clerk 22 Feb 2025 and 21 Sep 2025, IBPS RRB Clerk 6 Dec 2025 Shift 1 and 13 Dec 2025 Shifts 1 and 2). Then 60 bank puzzles: all 21 Sreedhar square and rectangle sets, 31 Guidely square puzzles (every one in the 8 square sets but a misfiled month puzzle) and a sample of 8 Guidely rectangle puzzles. Each was written out as exact conditions and solved by script.",
+  "| What was measured | Real papers (10 puzzles) | Bank (60 puzzles) |",
+  "| Size | 8 persons, 4 corners + 4 middles, in all 10 | square with corners and middles 41; two a side 6; 12 seats 1; rectangles 12 |",
+  "| Corners in, middles out | 6 (plus 2 IBPS Clerk 2024 shift analyses) | 15 |",
+  "| Corners out, middles in | 3 | 7 |",
+  "| All facing outside | 1 (IBPS Clerk 2023) | 6 |",
+  "| All facing the centre | 0 | 22, plus 6 that did not say |",
+  "| A clue about seat type (corner, middle, faces in or out) | 9 of 10 | not counted |",
+  "| Opposite or \"faces\" clues | 2 of 10 | 26 of the 51 checked |",
+  "| Second fact per person, vacant seat | none | 8 and 7 |",
+  "| One arrangement, keys agree with the script | 8 of 10 | 51 of 60 |",
+  "| Drawings left by the best opening clue | 2 in 7 of 9; 1 in 2 | 1 or 2 in 36 of 40 |",
+  "| Most open drawings, printed order | 8 at worst | above 10 in 6 of 17 Sreedhar sets |",
+  "**What this means.** The paper form is narrow: eight persons, corners and middles, and in 9 of 10 a facing rule tied to the seat type. The marks are lost on left and right, not on logic. So the first four lessons fix the drawing and the facing table, and teach the two-drawing habit; the later ones cover what the bank adds (opposite clues, other sizes, rectangles, a second fact).",
+  "A note on honesty: memory-based papers are reconstructions. Two of the ten paper puzzles are not used for checking: the IBPS Clerk 5 Oct 2025 paper gives one arrangement but I had no answer key for it, and the SBI Clerk 21 Sep 2025 puzzle gives two arrangements as remembered. The 2024 shift analyses (pw.live) name the form but give no clues. Only 8 of 32 Guidely rectangle puzzles were checked."
+ ],
+ "needs": [],
+ "after": [
+  "That is the square table as the papers set it, plus the bank's variations. The **Quick revision** tab has the archetype table, drills and cheat sheet for this topic.",
+  "The order of work for every set: number the seats with corners odd, write the facing table, use a seat-type clue first, draw two cases when a seat type is unknown, follow the names, and keep \"as many as\" and \"not neighbour\" clues for last.",
+  "Not covered in lessons, as insurance: a vacant seat (the bank has 7 such puzzles; a vacant seat counts for steps but not for \"persons between\"), and puzzles where each person's facing must be worked out."
+ ],
+ "lessons": [
+  {
+   "id": "draw",
+   "code": "T1",
+   "title": "Number the seats, everyone facing the centre",
+   "plain": "New: the square table is a ring of eight seats where corners and middles take turns, and the seat number tells you the seat type.",
+   "needs": [],
+   "teach": [
+    "A square-table puzzle seats eight people: four at the corners and four in the middle of the sides. Going round the table, corner and middle seats take turns. So it is a circle of eight with one extra fact about every seat.",
+    "**Draw it the same way every time.** A square, a dot at each corner and at the middle of each side. Number the seats **1 to 8 clockwise**, starting at the top-left corner. Then **odd seats are corners and even seats are middles**. The number tells you the seat type without looking.",
+    "**Facing the centre.** When a person faces the centre, their **left is clockwise** (a higher seat number) and their **right is anticlockwise** (a lower number). Write it on the page before the first clue.",
+    "| The clue says | Seats apart |",
+    "| immediate left / right | 1 |",
+    "| second to the left / right | 2 |",
+    "| third to the left / right; only two persons between | 3 |",
+    "| fourth to the left or right; three persons between; sits opposite | 4 |",
+    "**Two free facts from the square.**",
+    "- A move of 2 or 4 seats keeps the seat type; a move of 1 or 3 changes it. So two people with one or three persons between them are both corners or both middles.",
+    "- Opposite is always 4 seats away: 1-5, 2-6, 3-7, 4-8. A corner faces a corner and a middle faces a middle.",
+    "**Where to start.** Nobody's seat is fixed outright. A clue such as \"O does not sit at a corner\" lets you put O in any middle seat, say 6, because the table looks the same turned round. Then follow the names.",
+    "Honesty about the papers: none of the 10 real square puzzles I found had everyone facing the centre. This lesson is the base drawing; the papers add a facing rule on top, which the next lessons teach."
+   ],
+   "example": {
+    "q": "Original puzzle (written for this module and checked by script). P, Q, R, S, T, U, V and W sit around a square table, four at the corners and four in the middle of the sides, all facing the centre. R sits in the middle of a side. S sits opposite R. T sits to the immediate left of R. P sits second to the left of T. Two persons sit between P and Q. U is not an immediate neighbour of P. U sits second to the right of W.",
+    "steps": [
+     "Seats 1 to 8 clockwise, odd seats are corners. All face in: left = clockwise.",
+     "R is in a middle seat: put R at 6. S is opposite: 2.",
+     "T is immediately left of R: one seat clockwise, 7. P is second left of T: two seats clockwise, 9, which is seat 1.",
+     "Two persons between P and Q: Q is three seats from 1, at 4 or 6. 6 is R, so Q at 4.",
+     "Free seats 3, 5 and 8. U is second right of W, so U is two seats anticlockwise of W: W 5 gives U 3; W 3 would put U on 1; W 8 would put U on 6. So W 5, U 3, and U (3) is not next to P (1). V takes 8."
+    ],
+    "answer": "Clockwise from seat 1: P (corner), S, U (corner), Q, W (corner), R, T (corner), V."
+   },
+   "check": {
+    "q": "Eight persons sit around a square table facing the centre. Seats are numbered 1 to 8 clockwise. K sits in seat 3. Which seat is second to the left of K?",
+    "options": {
+     "a": "1",
+     "b": "5",
+     "c": "7",
+     "d": "4"
+    },
+    "answer": "B",
+    "why": "Facing the centre, left is clockwise: 3 + 2 = seat 5. Seat 1 is the tempting answer, but that is second to the right."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#5"
+    ],
+    "tags": [
+     "Set A (all face the centre): full build. step from the named person, by that person's facing",
+     "Set A (all face the centre): alphabetical re-seating: compare seat by seat",
+     "Set A (all face the centre): position of X from Y: use Y's facing",
+     "Set A (all face the centre): statements: test each one on the drawing",
+     "Set A (all face the centre): odd one out: usually corner against middle, or facing in against out",
+     "Set B (all face the centre): full build. opposite: straight across, then step",
+     "Set B (all face the centre): count between: whose left, and which way round",
+     "Set B (all face the centre): position of X from Y: use Y's facing",
+     "Set B (all face the centre): position of X from Y: use Y's facing",
+     "Set B (all face the centre): odd one out: usually corner against middle, or facing in against out",
+     "Set C (all face the centre): full build. step from the named person, by that person's facing",
+     "Set C (all face the centre): step from the named person, by that person's facing",
+     "Set C (all face the centre): position of X from Y: use Y's facing",
+     "Set C (all face the centre): count between: whose left, and which way round",
+     "Set C (all face the centre): odd one out: usually corner against middle, or facing in against out"
+    ]
+   }
+  },
+  {
+   "id": "mixed",
+   "code": "T2",
+   "title": "Corners face in, middles face out",
+   "plain": "New: the facing rule depends on the seat, so left and right flip between corners and middles.",
+   "needs": [],
+   "teach": [
+    "This is the form the papers set most. Of the 10 real square puzzles I solved, **6 had corners facing the centre and middles facing outside**, and two 2024 IBPS Clerk shift analyses (24 August Shift 4, 25 August Shift 2) name the same form.",
+    "**Facing outside flips left and right.** A person with their back to the centre has **left = anticlockwise** and **right = clockwise**.",
+    "| Seat | Faces | Left is | Right is |",
+    "| Corner (odd seat) | the centre | clockwise (+) | anticlockwise (-) |",
+    "| Middle (even seat) | outside | anticlockwise (-) | clockwise (+) |",
+    "Write the two rows of this table at the side of your drawing before you read a clue. Then, for every clue, ask one question: **whose left is it?** It is always the left of the person after \"of\": in \"W sits second to the left of P\" it is P's left, so P's seat type decides the direction.",
+    "If everyone faces outside (one 2023 IBPS Clerk puzzle did), use the middle-seat row for everybody.",
+    "The facing words also hide seat clues. \"B does not face the centre\" means B is in a middle seat here; \"D faces inside\" means D is at a corner."
+   ],
+   "example": {
+    "q": "IBPS RRB Clerk Prelims, 6 Dec 2025, Shift 1 (memory-based). Eight persons A to H sit around a square table; the persons at the corners face the centre and those in the middle of the sides face outside. C sits second to the right of H. Three persons sit between A and C. D sits immediate right of A but does not sit at a corner. F is not A's immediate neighbour. G sits second to the left of D. Two persons sit between G and B.",
+    "steps": [
+     "Corners (odd seats) face in: left clockwise. Middles (even seats) face out: left anticlockwise.",
+     "D is not at a corner, so D is in a middle seat. D is immediately right of A, so A is D's neighbour, a corner. A faces in, its right is anticlockwise: put A at 1 and D at 8.",
+     "C is opposite A (three persons between): 5.",
+     "C is second right of H. If H is a corner, its right is anticlockwise and H = 7. If H is a middle, its right is clockwise and H = 3, but 3 is a corner. So H 7.",
+     "G is second left of D. D faces out, its left is anticlockwise: G at 6.",
+     "Two persons between G and B: B at 3 (9 would be 1, A's seat).",
+     "F is not next to A (not 2 or 8): F at 4, E at 2."
+    ],
+    "answer": "Clockwise from seat 1: A (corner), E, B (corner), F, C (corner), G, H (corner), D."
+   },
+   "check": {
+    "q": "Corners face the centre and middles face outside. M sits in seat 4, a middle seat (seats 1 to 8 clockwise). Which seat is to the immediate left of M?",
+    "options": {
+     "a": "3",
+     "b": "5",
+     "c": "2",
+     "d": "6"
+    },
+    "answer": "A",
+    "why": "M faces outside, so M's left is anticlockwise: seat 3. Seat 5 is what you get if you use the centre-facing rule for everybody."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#5"
+    ],
+    "tags": [
+     "Set A (corners in, middles out): full build. step from the named person, by that person's facing",
+     "Set A (corners in, middles out): count between: whose left, and which way round",
+     "Set A (corners in, middles out): odd one out: usually corner against middle, or facing in against out",
+     "Set A (corners in, middles out): count between: whose left, and which way round",
+     "Set A (corners in, middles out): step from the named person, by that person's facing",
+     "Set B (corners in, middles out): full build. count between: whose left, and which way round",
+     "Set B (corners in, middles out): position of X from Y: use Y's facing",
+     "Set B (corners in, middles out): statements: test each one on the drawing",
+     "Set B (corners in, middles out): step from the named person, by that person's facing",
+     "Set B (corners in, middles out): odd one out: usually corner against middle, or facing in against out"
+    ]
+   }
+  },
+  {
+   "id": "seat-type",
+   "code": "T3",
+   "title": "Seat type unknown: two drawings",
+   "plain": "New: when you do not yet know whether a person is at a corner, a left-or-right clue gives two drawings, one for each seat type.",
+   "needs": [],
+   "teach": [
+    "In the last lesson the clue always told you the seat type first. Often it does not. \"E sits second to the right of B\": if B is a corner, E is two seats anticlockwise; if B is in a middle seat, E is two seats clockwise. **Write both.**",
+    "This is less work than it sounds, for two reasons:",
+    "- A move of 2 keeps the seat type, a move of 1 or 3 changes it. So each drawing also tells you E's seat type, and the next clue about E often kills one drawing.",
+    "- A clue that would put a corner person into a middle seat, or someone on a taken seat, ends a drawing at once.",
+    "**What the papers show.** In 7 of the 9 real square puzzles that solved to one arrangement, the best opening clue leaves exactly **2** drawings, and in the other 2 it leaves one. Nine of the 10 real puzzles contain a clue about seat type (\"sits at a corner\", \"middle of a side\", \"faces inside\"). Use that clue first when there is one; otherwise open with the widest step and draw two cases.",
+    "Keep the two drawings side by side and take the next clue that names someone already placed."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2022 (memory-based, Adda247). Eight persons A to H sit around a square table; those at the corners face the centre and those in the middle of the sides face outside. E sits second to the right of B. Two persons sit between B and H. F sits to the immediate right of H. The number of persons between H and D is the same as between D and G. D sits at a corner. A sits adjacent to D.",
+    "steps": [
+     "Corners (odd) face in: right anticlockwise. Middles (even) face out: right clockwise.",
+     "D is at a corner: put D at 3. D is midway between H and G. A is next to D (2 or 4), so H and G are not at 2 and 4: they are two seats from D (1 and 5) or three seats from D (8 and 6).",
+     "F is immediately right of H, and E is second right of B with B three seats from H. Each depends on a seat type, so try the four placings of H.",
+     "H 1 (corner, right anticlockwise): F 8, G 5. B is three seats from H: 4 or 6. B 4 (middle, right clockwise) gives E 6. B 6 gives E 8, F's seat. So B 4, E 6, A 2, C 7.",
+     "H 5: F 4, G 1. B at 2 gives E 4 (F); B at 8 gives E 2, and then A has no seat next to D. Out.",
+     "H 8 (middle, right clockwise): F 1, G 6. B must be 5 (3 is D), and E, two seats anticlockwise of B, lands on 3. Out.",
+     "H 6: F 7, G 8. B must be 1, and E lands on 7, F's seat. Out."
+    ],
+    "answer": "Clockwise from seat 1: H (corner), A, D (corner), B, G (corner), E, C (corner), F."
+   },
+   "check": {
+    "q": "Corners face the centre, middles face outside. \"P sits second to the right of Q.\" Q is at a corner. Where is P?",
+    "options": {
+     "a": "Two seats anticlockwise of Q, at a corner",
+     "b": "Two seats clockwise of Q, at a corner",
+     "c": "Two seats anticlockwise of Q, in a middle seat",
+     "d": "Two seats clockwise of Q, in a middle seat"
+    },
+    "answer": "A",
+    "why": "Q faces the centre, so Q's right is anticlockwise, and a move of two keeps the seat type: P is also at a corner. Option D is the answer for a Q in a middle seat, and B mixes the two rules."
+   },
+   "shortcut": {
+    "title": "Odd and even moves",
+    "text": [
+     "Before drawing, check what a clue says about seat types. **Second** or **fourth**, or **one** or **three persons between**: same seat type. **Immediate** or **third**, or **no one** or **two persons between**: opposite seat types.",
+     "So \"D sits at a corner\" and \"two persons sit between D and H\" put H in a middle seat before you draw anything."
+    ]
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#5"
+    ],
+    "tags": [
+     "Set A (corners in, middles out): full build. step from the named person, by that person's facing",
+     "Set A (corners in, middles out): count between: whose left, and which way round",
+     "Set A (corners in, middles out): position of X from Y: use Y's facing",
+     "Set A (corners in, middles out): odd one out: usually corner against middle, or facing in against out",
+     "Set A (corners in, middles out): pairs and neighbours",
+     "Set B (corners in, middles out): full build. step from the named person, by that person's facing",
+     "Set B (corners in, middles out): count between: whose left, and which way round",
+     "Set B (corners in, middles out): opposite: straight across, then step",
+     "Set B (corners in, middles out): statements: test each one on the drawing",
+     "Set B (corners in, middles out): odd one out: usually corner against middle, or facing in against out"
+    ]
+   }
+  },
+  {
+   "id": "reverse",
+   "code": "T4",
+   "title": "The reverse table: corners face out",
+   "plain": "New: the same method with the facing rule swapped, so corners count left anticlockwise and middles count left clockwise.",
+   "needs": [],
+   "teach": [
+    "The second form in the papers swaps the rule: **corners face outside, middles face the centre**. Of the 10 real puzzles, 3 were of this kind, including IBPS Clerk 2019 and IBPS Clerk 4 Oct 2025 Shift 3.",
+    "| Seat | Faces | Left is | Right is |",
+    "| Corner (odd seat) | outside | anticlockwise (-) | clockwise (+) |",
+    "| Middle (even seat) | the centre | clockwise (+) | anticlockwise (-) |",
+    "Nothing else changes. Read the first line of the puzzle slowly and write the correct table at the side **before** the first clue; a wrong table still gives a neat-looking arrangement, just the wrong one.",
+    "Here the hidden seat clues read the other way: \"N does not face the centre\" puts N at a corner; \"J faces the centre\" puts J in a middle seat."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims, 4 Oct 2025, Shift 3 (memory-based, Adda247). P, Q, R, S, T, U, V and W sit around a square table; those at the corners face outside and those in the middle of the sides face the centre. S sits third to the left of V. Two persons sit between S and Q. P sits to the immediate left of Q. R sits two places away from P and is not an immediate neighbour of V. T sits in the middle of a side. U is an immediate neighbour of neither T nor S.",
+    "steps": [
+     "Corners (odd) face out: left anticlockwise. Middles (even) face in: left clockwise.",
+     "S is third left of V, so S and V are of different seat types. Two drawings: V in a middle seat or at a corner.",
+     "V at 2 (middle, left clockwise): S at 5. Q is three seats from S: 8 (2 is V). Q faces in, its left is clockwise: P at 1. R is two seats from P (3 or 7) and not next to V: R 7.",
+     "T is in a middle seat (4 or 6). U is next to neither T nor S (5): of 3, 4 and 6, U can only take 3; then T is not 4 (next to U), so T 6 and W 4.",
+     "V at 1 (corner, left anticlockwise): S at 6. Q at 3; Q faces out, left anticlockwise: P 2. R is 4 (8 is next to V). T takes 8, and U has only 5 and 7, both next to S or T. Out."
+    ],
+    "answer": "Clockwise from seat 1: P (corner), V, U (corner), W, S (corner), T, R (corner), Q."
+   },
+   "check": {
+    "q": "Corners face outside, middles face the centre. X sits at a corner. Who sits to the immediate right of X?",
+    "options": {
+     "a": "The person one seat clockwise of X",
+     "b": "The person one seat anticlockwise of X",
+     "c": "The person opposite X",
+     "d": "The person two seats clockwise of X"
+    },
+    "answer": "A",
+    "why": "X faces outside, so X's right is clockwise. B is the centre-facing reading, the usual slip when the rule is swapped."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#5"
+    ],
+    "tags": [
+     "Set A (corners out, middles in): full build. step from the named person, by that person's facing",
+     "Set A (corners out, middles in): count between: whose left, and which way round",
+     "Set A (corners out, middles in): odd one out: usually corner against middle, or facing in against out",
+     "Set A (corners out, middles in): step from the named person, by that person's facing",
+     "Set A (corners out, middles in): statements: test each one on the drawing",
+     "Set B (corners out, middles in): full build. opposite: straight across, then step",
+     "Set B (corners out, middles in): count between: whose left, and which way round",
+     "Set B (corners out, middles in): odd one out: usually corner against middle, or facing in against out",
+     "Set B (corners out, middles in): position of X from Y: use Y's facing",
+     "Set B (corners out, middles in): step from the named person, by that person's facing"
+    ]
+   }
+  },
+  {
+   "id": "opposite",
+   "code": "T5",
+   "title": "Opposite and \"faces\" clues",
+   "plain": "New: two-hop clues such as \"Q faces the one who sits third to the left of W\": find the person, then go straight across.",
+   "needs": [],
+   "teach": [
+    "On a square table **\"X faces Y\"** and **\"X sits opposite Y\"** mean the same: four seats apart. A corner faces a corner, a middle faces a middle.",
+    "The bank likes the two-hop form: \"S faces the person who sits second to the right of R\". Do it in two moves, on paper:",
+    "- Find the seat that is second to the right of R, using **R's** facing.",
+    "- Go straight across: add 4. That is S.",
+    "Never add the steps together in your head; the first step depends on R's facing, the second does not.",
+    "**Papers against bank.** Only 2 of the 10 real puzzles used an opposite or faces clue (IBPS Clerk 2023 and SBI Clerk 21 Sep 2025), but about half of the bank sets do, and the questions in the papers ask \"who sits opposite\" often. So it is worth one lesson."
+   ],
+   "example": {
+    "q": "IBPS Clerk Prelims 2023 (memory-based, Guidely). Eight animal toys (Sheep, Lion, Fox, Owl, Deer, Mole, Tiger, Panda) are placed around a square table, four at the corners and four in the middle of the sides, all facing away from the centre. Fox is third to the left of Panda. Lion is immediately right of Fox. Two toys are between Lion and Deer. Deer is not adjacent to Panda. The toy opposite Deer is second to the left of Sheep. Neither Tiger nor Mole is at a corner. Mole is not opposite Lion.",
+    "steps": [
+     "All face outside: left = anticlockwise, right = clockwise.",
+     "Fox is three seats anticlockwise of Panda, and Lion is one seat clockwise of Fox. Two drawings: Fox 5, Lion 6, Panda 8; or Fox 4, Lion 5, Panda 7.",
+     "Fox 5: Deer is three seats from Lion (6): 1 or 3; 1 is next to Panda, so Deer 3. Opposite Deer is 7. That seat is second left of Sheep, two seats anticlockwise of Sheep: Sheep at 1.",
+     "Tiger and Mole take the free middle seats 2 and 4; Owl takes 7. Mole is not opposite Lion (6 faces 2): Mole 4, Tiger 2.",
+     "Fox 4: Deer at 2 (8 is next to Panda). Opposite Deer is 6, so Sheep 8. Seats 1, 3 and 6 are left, and only 6 is a middle seat for Tiger and Mole. Out."
+    ],
+    "answer": "Clockwise from seat 1: Sheep (corner), Tiger, Deer (corner), Mole, Fox (corner), Lion, Owl (corner), Panda."
+   },
+   "check": {
+    "q": "Eight persons sit around a square table, seats 1 to 8 clockwise, all facing the centre. A sits at seat 2. B faces the person who sits second to the left of A. Where is B?",
+    "options": {
+     "a": "8",
+     "b": "4",
+     "c": "6",
+     "d": "2"
+    },
+    "answer": "A",
+    "why": "Second left of A is two seats clockwise: seat 4. B is straight across from that seat: 4 + 4 = 8. Seat 4 is the tempting answer, but that is the person B faces, not B."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "square-based-arrangement-single-variable-set-4-prelims-1#6",
+     "square-based-arrangement-single-variable-set-4-prelims-1#7",
+     "square-based-arrangement-single-variable-set-4-prelims-1#8",
+     "square-based-arrangement-single-variable-set-4-prelims-1#9",
+     "square-based-arrangement-single-variable-set-4-prelims-1#10",
+     "square-based-arrangement-single-variable-set-5-prelims-1#6",
+     "square-based-arrangement-single-variable-set-5-prelims-1#7",
+     "square-based-arrangement-single-variable-set-5-prelims-1#8",
+     "square-based-arrangement-single-variable-set-5-prelims-1#9",
+     "square-based-arrangement-single-variable-set-5-prelims-1#10",
+     "square-based-arrangement-single-variable-set-3-prelims-1#6",
+     "square-based-arrangement-single-variable-set-3-prelims-1#7",
+     "square-based-arrangement-single-variable-set-3-prelims-1#8",
+     "square-based-arrangement-single-variable-set-3-prelims-1#9",
+     "square-based-arrangement-single-variable-set-3-prelims-1#10"
+    ],
+    "tags": [
+     "Set A (corners in, middles out): full build. opposite: straight across, then step",
+     "Set A (corners in, middles out): opposite: straight across, then step",
+     "Set A (corners in, middles out): statements: test each one on the drawing",
+     "Set A (corners in, middles out): odd one out: usually corner against middle, or facing in against out",
+     "Set A (corners in, middles out): statements: test each one on the drawing",
+     "Set B (corners in, middles out): full build. step from the named person, by that person's facing",
+     "Set B (corners in, middles out): odd one out: usually corner against middle, or facing in against out",
+     "Set B (corners in, middles out): opposite: straight across, then step",
+     "Set B (corners in, middles out): step from the named person, by that person's facing",
+     "Set B (corners in, middles out): statements: test each one on the drawing",
+     "Set C (corners out, middles in): full build. step from the named person, by that person's facing",
+     "Set C (corners out, middles in): count between: whose left, and which way round",
+     "Set C (corners out, middles in): opposite: straight across, then step",
+     "Set C (corners out, middles in): position of X from Y: use Y's facing",
+     "Set C (corners out, middles in): odd one out: usually corner against middle, or facing in against out"
+    ]
+   }
+  },
+  {
+   "id": "order",
+   "code": "T6",
+   "title": "Follow the names; loose clues last",
+   "plain": "New: the order you take the clues in. Clues that give no seat (\"as many persons between\", \"not neighbours\") wait until the end.",
+   "needs": [],
+   "teach": [
+    "Some clues place nobody: \"as many persons sit between H and F as between A and C\", \"A is not an immediate neighbour of C or B\", \"E sits third to the left of one of the immediate neighbours of B\". Taken in printed order they open many drawings at once.",
+    "**What the measuring showed.** I replayed every bank set clue by clue and counted the open drawings. In printed order 6 of the 17 Sreedhar sets went above 10 open drawings at some point (two went to 216 and 2,584). Taking the clues by the chain of names, those same sets peaked at 2 to 11. The real paper puzzles are gentler: printed order never went above 8.",
+    "**The routine.**",
+    "- Start with a seat-type clue or the widest step.",
+    "- Next, always a clue that **names someone already placed**.",
+    "- Keep negative clues (\"not a neighbour\", \"not at a corner\") and count-matching clues (\"as many as\") for the last two or three people. By then they settle the seats in one look.",
+    "- With three free seats left, simply test them: it is quicker than reasoning in general."
+   ],
+   "example": {
+    "q": "IBPS RRB Clerk Prelims, 13 Dec 2025, Shift 2 (memory-based, Adda247). Eight persons A to H sit around a square table; those at the corners face the centre and those in the middle of the sides face outside. Two persons sit between H and D. D faces inside. B sits third to the right of D. G sits three places away from B. A sits immediate right of G. As many persons sit between G and D, counted from the right of G, as between E and C, counted from the right of C.",
+    "steps": [
+     "Corners (odd) face in: right anticlockwise. Middles (even) face out: right clockwise.",
+     "D faces inside, so D is at a corner: put D at 1. B is third right of D: three seats anticlockwise, 6.",
+     "H is three seats from D: 4 or 6; 6 is B, so H 4.",
+     "G is three seats from B: 3 (9 would be 1, D). G is a corner, its right is anticlockwise: A at 2.",
+     "Now the loose clue. From G's right (anticlockwise from 3): A, then D. One person between. So one person between E and C, counted from C's right.",
+     "Free seats 5, 7 and 8. C 5 (right anticlockwise): one person (4) then 3, which is G. C 7: one person (6) then 5: E 5. C 8 (right clockwise): 1, then 2, which is A. So C 7, E 5, F 8."
+    ],
+    "answer": "Clockwise from seat 1: D (corner), A, G (corner), H, E (corner), B, C (corner), F."
+   },
+   "check": {
+    "q": "A square-table puzzle gives these four clues. Which one should you leave until last?",
+    "options": {
+     "a": "D sits third to the right of B",
+     "b": "D sits at one of the corners",
+     "c": "As many persons sit between G and D as between E and C",
+     "d": "A sits to the immediate left of D"
+    },
+    "answer": "C",
+    "why": "It names four people and places none of them until three are already seated. B is the tempting one to postpone because it looks small, but a seat-type clue is one of the best openers."
+   },
+   "practice": {
+    "bank": "sreedhar",
+    "keys": [
+     "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#5",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#1",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#2",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#3",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#4",
+     "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#5"
+    ],
+    "tags": [
+     "Set A (corners out, middles in): full build. step from the named person, by that person's facing",
+     "Set A (corners out, middles in): count between: whose left, and which way round",
+     "Set A (corners out, middles in): odd one out: usually corner against middle, or facing in against out",
+     "Set A (corners out, middles in): position of X from Y: use Y's facing",
+     "Set A (corners out, middles in): statements: test each one on the drawing",
+     "Set B (corners out, middles in): full build. opposite: straight across, then step",
+     "Set B (corners out, middles in): step from the named person, by that person's facing",
+     "Set B (corners out, middles in): position of X from Y: use Y's facing",
+     "Set B (corners out, middles in): step from the named person, by that person's facing",
+     "Set B (corners out, middles in): odd one out: usually corner against middle, or facing in against out"
+    ]
+   }
+  },
+  {
+   "id": "sizes",
+   "code": "T7",
+   "title": "Two a side, and twelve at the table",
+   "plain": "New: other seat counts. With two persons on each side there are no corner seats; with twelve there are corners plus two on each side.",
+   "needs": [],
+   "teach": [
+    "Insurance: none of the real papers I found used these, but the bank has 7 such puzzles among the 60 checked (6 two a side, 1 with twelve seats).",
+    "**Two persons on each side, no corners.** Seats 1 to 8 clockwise, sides 1-2, 3-4, 5-6, 7-8. Now **opposite is straight across**, not 4 seats: 1-6, 2-5, 3-8, 4-7. \"Both sit on different sides\" with \"immediate left\" means the two sit either side of a corner: one at the end of a side, the other at the start of the next.",
+    "**Twelve seats: a corner and two side seats on each side.** Number 1 to 12 clockwise from a corner: corners are 1, 4, 7, 10. Corner opposite corner is 6 seats (1-7, 4-10). A side seat faces the side seat straight across: 2-9, 3-8, 5-12, 6-11.",
+    "| Table | Seats | Opposite of seat 2 |",
+    "| 4 corners + 4 middles | 8 | 6 |",
+    "| two a side, no corners | 8 | 5 |",
+    "| 4 corners + two a side | 12 | 9 |",
+    "Left and right work exactly as before: face the centre, left is clockwise. When corners and side seats face different ways, the side seats follow the middle-seat rule."
+   ],
+   "example": {
+    "q": "Original puzzle (written for this module and checked by script). Twelve persons A to L sit around a square table, one at each corner and two in the middle of each side, all facing the centre. A and B sit at corners opposite each other. C sits third to the left of A. D sits at a corner. E sits to the immediate left of A. F sits opposite E. G sits to the immediate right of B. H sits second to the right of A. I is an immediate neighbour of both H and A. K sits to the immediate right of F. L is not an immediate neighbour of E.",
+    "steps": [
+     "Seats 1 to 12 clockwise; corners 1, 4, 7, 10. All face in: left = clockwise.",
+     "A at 1, B opposite at 7. C third left of A: 4. D is at the last corner, 10.",
+     "E immediately left of A: 2. F is straight across from E: 9. K is immediately right of F (anticlockwise): 8.",
+     "G immediately right of B: 6. H second right of A (anticlockwise): 11. I is next to both H and A: 12.",
+     "J and L take 3 and 5. L is not next to E (2): L 5, J 3."
+    ],
+    "answer": "Clockwise from seat 1: A (corner), E, J, C (corner), L, G, B (corner), K, F, D (corner), H, I."
+   },
+   "check": {
+    "q": "Twelve persons sit around a square table: one at each corner and two on each side. Seats 1 to 12 clockwise, corners at 1, 4, 7 and 10. Who sits opposite the person in seat 2?",
+    "options": {
+     "a": "Seat 8",
+     "b": "Seat 9",
+     "c": "Seat 7",
+     "d": "Seat 6"
+    },
+    "answer": "B",
+    "why": "Side 2-3 faces side 8-9 the other way round, so 2 faces 9 and 3 faces 8. Seat 8 is the trap: adding 6 works for corners (1 and 7) but not for side seats."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "square-based-arrangement-single-variable-set-1-prelims-1#6",
+     "square-based-arrangement-single-variable-set-1-prelims-1#7",
+     "square-based-arrangement-single-variable-set-1-prelims-1#8",
+     "square-based-arrangement-single-variable-set-1-prelims-1#9",
+     "square-based-arrangement-single-variable-set-1-prelims-1#10",
+     "square-based-arrangement-single-variable-set-3-prelims-1#1",
+     "square-based-arrangement-single-variable-set-3-prelims-1#2",
+     "square-based-arrangement-single-variable-set-3-prelims-1#3",
+     "square-based-arrangement-single-variable-set-3-prelims-1#4",
+     "square-based-arrangement-single-variable-set-3-prelims-1#5",
+     "square-based-arrangement-single-variable-set-6-prelims-1#1",
+     "square-based-arrangement-single-variable-set-6-prelims-1#2",
+     "square-based-arrangement-single-variable-set-6-prelims-1#3",
+     "square-based-arrangement-single-variable-set-6-prelims-1#4",
+     "square-based-arrangement-single-variable-set-6-prelims-1#5"
+    ],
+    "tags": [
+     "Set A (two a side): full build. opposite: straight across, then step",
+     "Set A (two a side): step from the named person, by that person's facing",
+     "Set A (two a side): pairs and neighbours",
+     "Set A (two a side): alphabetical re-seating: compare seat by seat",
+     "Set A (two a side): position of X from Y: use Y's facing",
+     "Set B (two a side): full build. step from the named person, by that person's facing",
+     "Set B (two a side): count between: whose left, and which way round",
+     "Set B (two a side): step from the named person, by that person's facing",
+     "Set B (two a side): step from the named person, by that person's facing",
+     "Set B (two a side): position of X from Y: use Y's facing",
+     "Set C (twelve seats): full build. pairs and neighbours",
+     "Set C (twelve seats): odd one out: usually corner against middle, or facing in against out",
+     "Set C (twelve seats): step from the named person, by that person's facing",
+     "Set C (twelve seats): count between: whose left, and which way round",
+     "Set C (twelve seats): alphabetical re-seating: compare seat by seat"
+    ]
+   }
+  },
+  {
+   "id": "rectangle",
+   "code": "T8",
+   "title": "Rectangular tables",
+   "plain": "New: long and short sides with different numbers of seats, so opposite has to be read off the drawing.",
+   "needs": [],
+   "teach": [
+    "Insurance: rectangles did not appear in any of the real papers I found. The bank has 12 rectangle sets (8 from Guidely, 4 from Sreedhar), and I checked 12 rectangle puzzles by script.",
+    "**Three shapes cover the bank.**",
+    "| Shape | Seats | Numbering | Opposite |",
+    "| 4 corners + 4 middles | 8 | as the square | 4 apart, as the square |",
+    "| 3 on each long side, 1 on each short side | 8 | 1-3 long, 4 short, 5-7 long, 8 short | 1-7, 2-6, 3-5, 4-8 |",
+    "| 2 on each long side, 1 on each short side | 6 | 1-2 long, 3 short, 4-5 long, 6 short | 1-5, 2-4, 3-6 |",
+    "Left and right do not change: everyone still goes round the table, and facing the centre means left is clockwise.",
+    "The new part is **opposite**: when the sides are unequal it is not a fixed number of seats. Read it off the drawing. A seat at the start of one long side faces the seat at the end of the other long side.",
+    "A rectangle looks the same turned half round, not a quarter. So a clue \"H sits on a short side\" fixes H completely: put H at 4."
+   ],
+   "example": {
+    "q": "Original puzzle (written for this module and checked by script). Eight persons A to H sit around a rectangular table, three on each longer side and one on each shorter side, all facing the centre. H sits on one of the shorter sides. D sits to the immediate right of H. A sits opposite D. G sits to the immediate left of A. F sits opposite G. E sits on one of the shorter sides. C sits second to the left of A.",
+    "steps": [
+     "Seats 1-3 on one long side, 4 short, 5-7 on the other long side, 8 short. Opposite: 1-7, 2-6, 3-5, 4-8. All face in: left = clockwise.",
+     "H on a short side: put H at 4. D immediately right of H (anticlockwise): 3.",
+     "A is opposite D: 5. G immediately left of A (clockwise): 6. F opposite G: 2.",
+     "E takes the other short side, 8. C second left of A: 7. B takes 1."
+    ],
+    "answer": "Clockwise from seat 1: B, F, D (long side), H (short), A, G, C (long side), E (short)."
+   },
+   "check": {
+    "q": "A rectangular table has three seats on each long side and one on each short side: seats 1 to 3 on a long side, 4 on a short side, 5 to 7 on the other long side, 8 on the other short side. Which seat is opposite seat 1?",
+    "options": {
+     "a": "5",
+     "b": "7",
+     "c": "6",
+     "d": "4"
+    },
+    "answer": "B",
+    "why": "Seat 1 is at the start of its long side; straight across is the end of the other long side, seat 7. Seat 5 is the trap: adding 4, as on a square, does not work when the sides are unequal."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#1",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#2",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#3",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#4",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#5",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#6",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#7",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#8",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#9",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#10",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#11",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#12",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#13",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#14",
+     "rectangular-based-arrangement-single-variable-set-1-prelims-1#15"
+    ],
+    "tags": [
+     "Set A (4 corners + 4 middles): full build. step from the named person, by that person's facing",
+     "Set A (4 corners + 4 middles): statements: test each one on the drawing",
+     "Set A (4 corners + 4 middles): count between: whose left, and which way round",
+     "Set A (4 corners + 4 middles): position of X from Y: use Y's facing",
+     "Set A (4 corners + 4 middles): alphabetical re-seating: compare seat by seat",
+     "Set B (3 long + 1 short): full build. step from the named person, by that person's facing",
+     "Set B (3 long + 1 short): step from the named person, by that person's facing",
+     "Set B (3 long + 1 short): step from the named person, by that person's facing",
+     "Set B (3 long + 1 short): position of X from Y: use Y's facing",
+     "Set B (3 long + 1 short): opposite: straight across, then step",
+     "Set C (6 persons, facing out): full build. step from the named person, by that person's facing",
+     "Set C (6 persons, facing out): odd one out: usually corner against middle, or facing in against out",
+     "Set C (6 persons, facing out): step from the named person, by that person's facing",
+     "Set C (6 persons, facing out): count between: whose left, and which way round",
+     "Set C (6 persons, facing out): statements: test each one on the drawing"
+    ]
+   }
+  },
+  {
+   "id": "second-fact",
+   "code": "T9",
+   "title": "A second fact for each person",
+   "plain": "New: each person also likes a fruit or owns a brand, and some clues name the fact instead of the person.",
+   "needs": [],
+   "teach": [
+    "Insurance: none of the real papers I found had a second fact (one 2023 puzzle used animal toys, but that is only a change of names). The bank has 8 such puzzles among the 60 checked.",
+    "**Make a second row under the drawing.** Write the fact under each seat as you learn it. Keep the facts you cannot place yet in a short list beside the table: \"Pink = W\", \"Grey = immediate left of U\".",
+    "**Order of work.** Seat the people first, using every clue that names two people. Then place the facts. A clue such as \"The one who likes Pink faces outside\" still gives a seat type, so use it early as a seat clue.",
+    "A clue that links a fact to a person (\"W likes Pink\") turns every later Pink clue into a W clue. Swap the words in your head and carry on.",
+    "Questions often name a fact: \"Who sits third to the right of the one who likes Banana?\" Find the Banana seat first, then step from that person, by that person's facing."
+   ],
+   "example": {
+    "q": "Original puzzle (written for this module and checked by script). R, S, T, U, V, W, X and Y sit around a square table; those at the corners face the centre and those in the middle of the sides face outside. Each likes a different colour: Red, Blue, Green, Pink, White, Black, Grey, Brown. The one who likes Pink faces outside. S sits immediate right of the one who likes Pink. W likes Pink. X sits opposite T. T sits second to the right of S. The one who likes Grey sits immediate left of U. R likes Red and sits second to the left of X. V sits immediate right of T. Y sits opposite V. The one who likes Black sits opposite V. T likes Green. The one who likes Blue sits immediate left of R. S does not like Brown.",
+    "steps": [
+     "Corners (odd) face in: left clockwise. Middles (even) face out: left anticlockwise.",
+     "Pink faces outside and W likes Pink: W in a middle seat, at 4. S is immediately right of W (W faces out, right clockwise): S 5.",
+     "T is second right of S (S is a corner, right anticlockwise): T 3. X is opposite T: 7. R is second left of X (clockwise): 1.",
+     "V is immediately right of T (anticlockwise): 2. Y is opposite V: 6. U takes 8.",
+     "Colours: Grey is immediately left of U (U faces out, left anticlockwise): X. Black is opposite V: Y. T Green, R Red, W Pink. Blue is immediately left of R (clockwise): V. S is not Brown: S White, U Brown."
+    ],
+    "answer": "Clockwise from seat 1: R (Red), V (Blue), T (Green), W (Pink), S (White), Y (Black), X (Grey), U (Brown); odd seats are corners."
+   },
+   "check": {
+    "q": "Corners face the centre. R sits at corner seat 1 (seats 1 to 8 clockwise). The one who likes Blue sits to the immediate left of R. Which seat is Blue?",
+    "options": {
+     "a": "2",
+     "b": "8",
+     "c": "3",
+     "d": "7"
+    },
+    "answer": "A",
+    "why": "R faces the centre, so R's left is clockwise: seat 2. Seat 8 is R's right."
+   },
+   "practice": {
+    "bank": "guidely",
+    "keys": [
+     "square-based-arrangement-two-variable-set-1-prelims-1#1",
+     "square-based-arrangement-two-variable-set-1-prelims-1#2",
+     "square-based-arrangement-two-variable-set-1-prelims-1#3",
+     "square-based-arrangement-two-variable-set-1-prelims-1#4",
+     "square-based-arrangement-two-variable-set-1-prelims-1#5",
+     "square-based-arrangement-two-variable-set-1-prelims-1#11",
+     "square-based-arrangement-two-variable-set-1-prelims-1#12",
+     "square-based-arrangement-two-variable-set-1-prelims-1#13",
+     "square-based-arrangement-two-variable-set-1-prelims-1#14",
+     "square-based-arrangement-two-variable-set-1-prelims-1#15"
+    ],
+    "tags": [
+     "Set A (fans and brands): full build. step from the named person, by that person's facing",
+     "Set A (fans and brands): statements: test each one on the drawing",
+     "Set A (fans and brands): position of X from Y: use Y's facing",
+     "Set A (fans and brands): odd one out: usually corner against middle, or facing in against out",
+     "Set A (fans and brands): count between: whose left, and which way round",
+     "Set B (persons and fruits): full build. statements: test each one on the drawing",
+     "Set B (persons and fruits): odd one out: usually corner against middle, or facing in against out",
+     "Set B (persons and fruits): step from the named person, by that person's facing",
+     "Set B (persons and fruits): position of X from Y: use Y's facing",
+     "Set B (persons and fruits): step from the named person, by that person's facing"
+    ]
+   }
+  }
+ ],
+ "work": {
+  "sreedhar": {
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#1": [
+    "All face the centre: left = clockwise, right = anticlockwise. Seats 1 to 8 clockwise, odd seats are corners.",
+    "O is in a middle seat: put O at 6. Two persons between O and S: S is three seats away, at 1 or 3.",
+    "N is immediately right of S (one seat anticlockwise). One person between N and T. T is fourth to the right of Q, so Q sits opposite T.",
+    "S at 3: N 2, T at 4 or 8. T 4 puts Q at 8; T 8 puts Q at 4. S at 1: N 8, T 2 (6 is O), Q 6, which is O's seat. Out.",
+    "R is second right of M (two seats anticlockwise), and neither sits next to Q. With T 4 and Q 8, the free seats 1, 5, 7 give R 5, M 7, but M is next to Q. Out. With T 8 and Q 4: M 1, R 7 works; P takes 5.",
+    "The table, clockwise from seat 1: M (corner), N, S (corner), Q, P (corner), O, R (corner), T.",
+    "S is at seat 3. Second to the left is two seats clockwise, seat 5: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#2": [
+    "The table, clockwise from seat 1: M (corner), N, S (corner), Q, P (corner), O, R (corner), T.",
+    "Alphabetical clockwise from M would be M N O P Q R S T. Actual: M N S Q P O R T. N and T keep their seats: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#3": [
+    "The table, clockwise from seat 1: M (corner), N, S (corner), Q, P (corner), O, R (corner), T.",
+    "R is at 7 and Q at 4. From Q, three seats clockwise (Q's left) is 7: Third to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#4": [
+    "The table, clockwise from seat 1: M (corner), N, S (corner), Q, P (corner), O, R (corner), T.",
+    "S is at a corner; two persons (R, T) sit between O and M on O's left; P is immediately right of O; R and T are neighbours: All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-27-78347-square-arrangement#5": [
+    "The table, clockwise from seat 1: M (corner), N, S (corner), Q, P (corner), O, R (corner), T.",
+    "N, T, Q and O sit in middle seats; R is the only one at a corner: R."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#1": [
+    "All face the centre: left = clockwise. Seats 1 to 8 clockwise, odd seats are corners.",
+    "B sits in a middle seat: put B at 8. Two persons between B and H: H at 3 or 5 (corners).",
+    "G is immediately left of C: G is one seat clockwise of C. H is a neighbour of C.",
+    "H at 3: C at 2 or 4. C 2 needs G at 3 (H). C 4 gives G 5. Two persons between G and A puts A at 2 or 8; 8 is B, and A at 2 sits next to H. Out.",
+    "H at 5: C at 4 or 6. C 4 needs G at 5 (H). So C 6, G 7. A is three seats from G: 2 or 4; A must not sit next to H, so A 2.",
+    "E is second left of D: two seats clockwise. Free seats 1, 3, 4: D 1, E 3, and F takes 4.",
+    "The table, clockwise from seat 1: D (corner), A, E (corner), F, H (corner), C, G (corner), B.",
+    "Opposite C (seat 6) is seat 2: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#2": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), F, H (corner), C, G (corner), B.",
+    "E is at 3. Its left runs clockwise: F, H, C, G, then B. Four persons between: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#3": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), F, H (corner), C, G (corner), B.",
+    "H is at 5, G at 7. H is two seats anticlockwise of G (second to the right), which is also six seats clockwise: Sixth to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#4": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), F, H (corner), C, G (corner), B.",
+    "A (2) is one seat clockwise of D (1): Immediate left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-9-78329-square-arrangement#5": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), F, H (corner), C, G (corner), B.",
+    "D, H, G and E sit at corners; B is in a middle seat: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#1": [
+    "All face the centre: left = clockwise. Seats 1 to 8 clockwise, odd seats are corners.",
+    "L is in a middle seat: put L at 6. W is second left of L: seat 8. X is third right of W: three seats anticlockwise, seat 5.",
+    "Two persons between Z and L: Z at 1 or 3.",
+    "G is second right of K (two seats anticlockwise); K is not next to W (so not 7 or 1). Y sits next to G but not next to W.",
+    "Z at 1: free 2, 3, 4, 7. K can be 2, 3 or 4 (not 7, next to W). K 2 puts G on 8 (W); K 3 puts G on 1 (Z); K 4 gives G 2. Y sits next to G: 3 (1 is Z), and 3 is not next to W. H takes 7.",
+    "Z at 3: K 4 gives G 2, and then Y's only free seat next to G is 1, which is next to W (8). K 2 puts G on 8. Out.",
+    "The table, clockwise from seat 1: Z (corner), G, Y (corner), K, X (corner), L, H (corner), W.",
+    "X is at 5. Second to the left is seat 7: H."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#2": [
+    "The table, clockwise from seat 1: Z (corner), G, Y (corner), K, X (corner), L, H (corner), W.",
+    "K is at 4. Third to the right is three seats anticlockwise, seat 1: Z."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#3": [
+    "The table, clockwise from seat 1: Z (corner), G, Y (corner), K, X (corner), L, H (corner), W.",
+    "G (2) is two seats clockwise of W (8), that is on W's left: Second to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#4": [
+    "The table, clockwise from seat 1: Z (corner), G, Y (corner), K, X (corner), L, H (corner), W.",
+    "L is at 6. Its right runs anticlockwise: X (5), K (4), then Y (3). Two persons between: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-5-78325-square-arrangement#5": [
+    "The table, clockwise from seat 1: Z (corner), G, Y (corner), K, X (corner), L, H (corner), W.",
+    "Z–H, K–G, G–W and X–Y: the second is two seats anticlockwise of the first (second to the right). L–W is two seats clockwise: L – W."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#1": [
+    "Corners face the centre (left = clockwise); middles face outside (left = anticlockwise). Seats 1 to 8 clockwise, odd seats are corners.",
+    "P is in a middle seat, facing out: put P at 8. W is second left of P: two seats anticlockwise, seat 6.",
+    "Three persons between W and Q: Q sits opposite W, at 2 (a middle seat, facing out).",
+    "U is immediately right of Q. Q faces out, so its right is clockwise: U at 3. T sits opposite U: 7.",
+    "V is third left of S. Free seats 1, 4, 5. If S is at 1 (corner, left clockwise), V is at 4. If S is at 4 (middle, left anticlockwise), V is at 1. If S is at 5, V would be at 8 (P).",
+    "R is immediately right of V. V at 4 faces out: R at 5. V at 1 faces in: R at 8, taken. So S 1, V 4, R 5.",
+    "The table, clockwise from seat 1: S (corner), Q, U (corner), V, R (corner), W, T (corner), P.",
+    "S is a corner facing in, so its right is anticlockwise: three seats from 1 is seat 6: W."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#2": [
+    "The table, clockwise from seat 1: S (corner), Q, U (corner), V, R (corner), W, T (corner), P.",
+    "Clockwise from W (6): T, P, S, Q, then U. Four persons between: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#3": [
+    "The table, clockwise from seat 1: S (corner), Q, U (corner), V, R (corner), W, T (corner), P.",
+    "T, U, S and R sit at corners; P is in a middle seat: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#4": [
+    "The table, clockwise from seat 1: S (corner), Q, U (corner), V, R (corner), W, T (corner), P.",
+    "Q (2) faces out, so its right is clockwise: U (3), then V (4). One person between: One."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-71-78391-square-arrangement#5": [
+    "The table, clockwise from seat 1: S (corner), Q, U (corner), V, R (corner), W, T (corner), P.",
+    "T (7) faces in, so its left is clockwise: seat 8: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#1": [
+    "Corners face the centre (left = clockwise, right = anticlockwise); middles face out (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "A is in a middle seat: put A at 8. A faces out, so its right is clockwise: B, third to the right, is at 3 (a corner).",
+    "E is next to B: 2 or 4. One person between C and E. D is second right of C.",
+    "E 2: C at 4 (8 is A). C faces out, right is clockwise: D at 6. E 4: C at 2 gives D 4 (E); C at 6 gives D 8 (A). So E 2, C 4, D 6.",
+    "Three persons between G and F: they sit opposite each other. The only free opposite pair is 1 and 5. F is not next to A (seats 1 and 7): F 5, G 1, H 7.",
+    "The table, clockwise from seat 1: G (corner), E, B (corner), C, F (corner), D, H (corner), A.",
+    "H is a corner facing in, so its left is clockwise: A, G, E, B, then C. Four persons between: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#2": [
+    "The table, clockwise from seat 1: G (corner), E, B (corner), C, F (corner), D, H (corner), A.",
+    "F (5) faces in, so its right is anticlockwise: three seats is seat 2, E: Third to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#3": [
+    "The table, clockwise from seat 1: G (corner), E, B (corner), C, F (corner), D, H (corner), A.",
+    "E sits at seat 2, a middle seat: E doesn’t sit at the corner of the table."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#4": [
+    "The table, clockwise from seat 1: G (corner), E, B (corner), C, F (corner), D, H (corner), A.",
+    "H (7) faces in: right is anticlockwise, three seats to seat 4: C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-4-78324-square-arrangement#5": [
+    "The table, clockwise from seat 1: G (corner), E, B (corner), C, F (corner), D, H (corner), A.",
+    "C–D and E–D are both middle seats; H–B and F–B are both corners. G (corner) and C (middle) are mixed: G, C."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#1": [
+    "Corners face in (left = clockwise); middles face out (left = anticlockwise). Seats 1 to 8 clockwise, odd seats are corners.",
+    "B does not face the centre: B is in a middle seat. Put B at 6. F is next to B: F at 5 or 7 (corners). Two drawings.",
+    "F is second left of H, and H is not next to B. Write it from H: if H is a corner (facing in) F is two seats clockwise of H; if H is in a middle seat (facing out) F is two seats anticlockwise of H.",
+    "F at 7: H a corner gives H 5, next to B. H in a middle seat would need H at 1, which is a corner. Out. F at 5: H a corner gives H 3, not next to B. (H at 7 would be a corner and next to B.) So F 5, H 3.",
+    "B and H have two persons between them, so A is also three seats from B: 1 (3 is H). D is second right of A: A faces in, right is anticlockwise: D at 7.",
+    "One person between G and B: G at 4 or 8. C is not next to D (not 8). G and C are the same distance from E: G 8, E 2, C 4 fits (two seats each). The other ways do not.",
+    "The table, clockwise from seat 1: A (corner), E, H (corner), C, F (corner), B, D (corner), G.",
+    "G (8) faces out, so its right is clockwise: seat 1: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#2": [
+    "The table, clockwise from seat 1: A (corner), E, H (corner), C, F (corner), B, D (corner), G.",
+    "F (5) faces in, so its right is anticlockwise: C, H, E, then A. Three persons between: Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#3": [
+    "The table, clockwise from seat 1: A (corner), E, H (corner), C, F (corner), B, D (corner), G.",
+    "Immediately right of B (6, facing out) is D at 7. D faces in, so its right is anticlockwise: three seats to 4, C: Third to the right."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#4": [
+    "The table, clockwise from seat 1: A (corner), E, H (corner), C, F (corner), B, D (corner), G.",
+    "C, B, G and E sit in middle seats; A sits at a corner: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-70-78390-square-arrangement#5": [
+    "The table, clockwise from seat 1: A (corner), E, H (corner), C, F (corner), B, D (corner), G.",
+    "E (2) and A (1) are the only listed pair sitting next to each other: EA."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#1": [
+    "Corners face in (left = clockwise, right = anticlockwise); middles face out (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "F is at a corner and E faces the other way, so E is in a middle seat. Put E at 8. Two persons between D and E: D at 3 or 5 (corners).",
+    "D is immediately right of A. They are neighbours, so A is in a middle seat facing out, and its right is clockwise: A sits one seat anticlockwise of D. D 3 gives A 2; D 5 gives A 4.",
+    "F is a corner not next to E (not 7 or 1). D 3: F at 5. D 5: F at 3.",
+    "Three persons between G and C: they sit opposite. D 3, A 2, F 5 leaves 1, 4, 6, 7, and no two of these are opposite. Out.",
+    "D 5, A 4, F 3 leaves 1, 2, 6, 7: the opposite pair is 2 and 6. B is immediately right of G. G at 2 (facing out, right clockwise) needs B at 3, which is F. So G 6, B 7, C 2, H 1. Neither G (6) nor B (7) sits opposite D (5): the clue holds.",
+    "The table, clockwise from seat 1: H (corner), C, F (corner), A, D (corner), G, B (corner), E.",
+    "A is at 4; its neighbours are F (3) and D (5): D, F."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#2": [
+    "The table, clockwise from seat 1: H (corner), C, F (corner), A, D (corner), G, B (corner), E.",
+    "A (4) faces out, so its left is anticlockwise: F (3), C (2), then H (1). Two persons between: Two."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#3": [
+    "The table, clockwise from seat 1: H (corner), C, F (corner), A, D (corner), G, B (corner), E.",
+    "H is at 1. Opposite is seat 5: D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#4": [
+    "The table, clockwise from seat 1: H (corner), C, F (corner), A, D (corner), G, B (corner), E.",
+    "G (6) sits next to D (5): G is an immediate neighbour of D."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-15-78335-square-arrangement#5": [
+    "The table, clockwise from seat 1: H (corner), C, F (corner), A, D (corner), G, B (corner), E.",
+    "H–F, G–E, B–D and C–E are two seats apart; F (3) and G (6) are three apart: F-G."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#1": [
+    "Corners face out (left = anticlockwise, right = clockwise); middles face the centre (left = clockwise, right = anticlockwise). Seats 1 to 8 clockwise, odd seats are corners.",
+    "N does not face the centre: N is at a corner. Put N at 3. Q is second right of N (clockwise): Q at 5.",
+    "P is second right of L, and M is third right of L. Two drawings: L at a corner or L in a middle seat.",
+    "L at a corner (right clockwise): L 1 puts P on 3 (N). L 7 puts P at 1 and M at 2; then O, one person away from P, needs 3 or 7, both taken. Out.",
+    "L in a middle seat (right anticlockwise): L 2 gives P 8, M 7. L 4 gives P 2, M 1. L 6 and L 8 put M on N or Q. Out.",
+    "L 2, P 8, M 7: O at 6. K and J take 1 and 4. J is third right of K: K 4 (facing in, right anticlockwise) puts J at 1. K 1 would sit next to P. So K 4, J 1.",
+    "L 4, P 2, M 1: O at 8. K and J take 6 and 7: K 6 puts J on 3 (N); K 7 puts J on 2 (P). Out.",
+    "The table, clockwise from seat 1: J (corner), L, N (corner), K, Q (corner), O, M (corner), P.",
+    "P (8) faces the centre, so its right is anticlockwise: three seats to 5: Q."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#2": [
+    "The table, clockwise from seat 1: J (corner), L, N (corner), K, Q (corner), O, M (corner), P.",
+    "N is at 3 and M at 7: they sit opposite, with three on each side: Three."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#3": [
+    "The table, clockwise from seat 1: J (corner), L, N (corner), K, Q (corner), O, M (corner), P.",
+    "P, K, L and O sit in middle seats; J is at a corner: J."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#4": [
+    "The table, clockwise from seat 1: J (corner), L, N (corner), K, Q (corner), O, M (corner), P.",
+    "J (1) faces out, so its right is clockwise: three seats to 4: K."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-6-78326-square-arrangement#5": [
+    "The table, clockwise from seat 1: J (corner), L, N (corner), K, Q (corner), O, M (corner), P.",
+    "P faces the centre; K (4) faces in, its left is clockwise, so O (6) is second left; L's neighbours are J and N; Q (5) faces out, right clockwise, M (7) is second right. All four are true: All the given statements are true."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#1": [
+    "Corners face out (left = anticlockwise, right = clockwise); middles face the centre (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "P is in a middle seat: put P at 6. P is immediately right of S. They are neighbours, so S is a corner facing out, and its right is clockwise: S at 5.",
+    "Two persons between P and M: M at 1 or 3 (corners). One person between M and T: T is two seats from M, also a corner, and T is not next to P (not 5 or 7).",
+    "M 3: T at 1 (5 is S). R is fourth right of T: opposite, at 5 = S. Out. M 1: T at 3 (7 is next to P). R opposite T: 7.",
+    "M is immediately left of Q, so Q is M's neighbour, in a middle seat, facing in. Q's left is clockwise, so M is one seat clockwise of Q: Q at 8. N is not next to M: N at 4, O at 2.",
+    "The table, clockwise from seat 1: M (corner), O, T (corner), N, S (corner), P, R (corner), Q.",
+    "O is at 2. Opposite is 6: P."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#2": [
+    "The table, clockwise from seat 1: M (corner), O, T (corner), N, S (corner), P, R (corner), Q.",
+    "N (4) faces the centre, so its left is clockwise: S, P, R, Q, then M. Four persons between: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#3": [
+    "The table, clockwise from seat 1: M (corner), O, T (corner), N, S (corner), P, R (corner), Q.",
+    "T, R, S and M sit at corners; O is in a middle seat: O."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#4": [
+    "The table, clockwise from seat 1: M (corner), O, T (corner), N, S (corner), P, R (corner), Q.",
+    "Immediately right of P (6, facing in) is S at 5. S faces out: Q (8) is three seats clockwise (third to the right) and five seats anticlockwise (fifth to the left): Both 1 and 4."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-64-78384-square-arrangement#5": [
+    "The table, clockwise from seat 1: M (corner), O, T (corner), N, S (corner), P, R (corner), Q.",
+    "T is at 3; its neighbours are O (2) and N (4): N, O."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#1": [
+    "Corners face out (left = anticlockwise, right = clockwise); middles face in (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "B is at a corner: put B at 1. One person between B and E: E at 3 or 7, also corners, facing out. H is immediately left of E, so one seat anticlockwise: E 3 gives H 2; E 7 gives H 6.",
+    "F is third left of G, and F is not next to B (not 2 or 8). If G is a corner (left anticlockwise), F = G - 3; if G is in a middle seat (left clockwise), F = G + 3.",
+    "E 3, H 2: the pairs that fit are (G 4, F 7) and (G 7, F 4). E 7, H 6: the pairs are (G 2, F 5) and (G 8, F 3). Four small drawings; the loose clue now decides.",
+    "The loose clue: as many persons between H and F (from F's right) as between A and C (from C's left). C is not next to B, and D is in a middle seat.",
+    "E 3, H 2, G 4, F 7: from F's right (clockwise) two persons come before H. C at 5 (left anticlockwise) or 6 (left clockwise) cannot have A two persons away on a free seat. Out. G 7, F 4: one person. C 5 would need A at 3, E's seat; C 6 puts A at 8, but then D must take 5, a corner. Out.",
+    "E 7, H 6, G 2, F 5: F's right is clockwise and H is the very next seat, so nobody is between; A would have to sit right beside C on C's left, and both seats it would need are taken. Out.",
+    "E 7, H 6, G 8, F 3: two persons (seats 4 and 5) before H. C at 5, a corner, counts left anticlockwise: seats 4 and 3, so A at 2. D takes 4, a middle seat. Everything holds.",
+    "The table, clockwise from seat 1: B (corner), A, F (corner), D, C (corner), H, E (corner), G.",
+    "G (8) faces in, so its left is clockwise: two seats to 2: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#2": [
+    "The table, clockwise from seat 1: B (corner), A, F (corner), D, C (corner), H, E (corner), G.",
+    "D (4) faces in, so its right is anticlockwise: F, A, B, G, then E. Four persons between: Four."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#3": [
+    "The table, clockwise from seat 1: B (corner), A, F (corner), D, C (corner), H, E (corner), G.",
+    "D, G, H and A sit in middle seats; E is at a corner: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#4": [
+    "The table, clockwise from seat 1: B (corner), A, F (corner), D, C (corner), H, E (corner), G.",
+    "F (3) faces out, its left is anticlockwise: B (1) is two seats that way: Second to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-21-78341-square-arrangement#5": [
+    "The table, clockwise from seat 1: B (corner), A, F (corner), D, C (corner), H, E (corner), G.",
+    "I: third left of F is 8, G, not H. II: D (4) and G (8) are opposite: true. III: A (2) faces in, its right is anticlockwise: seat 1, B: true. Both II and III."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#1": [
+    "Corners face out (left = anticlockwise, right = clockwise); middles face in (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "F is not at a corner: put F at 2 (facing in). G is third right of F: three seats anticlockwise, 7. H is second left of G (corner, left anticlockwise): 5.",
+    "B is third right of C. Free seats 1, 3, 4, 6, 8. C at 1 (corner) gives B 4; C at 3 gives B 6; C 4 (middle) gives B 1; C 6 gives B 3; C 8 gives B 5 (H). Four pairs stay open.",
+    "Do not try the long clues in printed order. Take each pair and read E from B's neighbours, then D from E.",
+    "C 3, B 6. B's neighbours are H (5) and G (7). Third left of H (facing out, left anticlockwise) is 2, F's seat; third left of G is 4: E at 4. Second right of E (facing in, right anticlockwise) is 2, F; second right of F is 8: D at 8. A at 1 is next to neither C nor B.",
+    "C 1, B 4: E has to be 8, and then D lands on 1, C's seat. C 4, B 1: E has to be 3, and then D lands on 7, G's seat. C 6, B 3: E would land on H's or G's seat. All out.",
+    "The table, clockwise from seat 1: A (corner), F, C (corner), E, H (corner), B, G (corner), D.",
+    "H is at 5. Opposite is 1: A."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#2": [
+    "The table, clockwise from seat 1: A (corner), F, C (corner), E, H (corner), B, G (corner), D.",
+    "Third right of A (1, facing out, right clockwise) is 4, E. E faces in, its left is clockwise: second left is 6: B."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#3": [
+    "The table, clockwise from seat 1: A (corner), F, C (corner), E, H (corner), B, G (corner), D.",
+    "B (6) faces in, its left is clockwise: D (8) is two seats that way: Second to the left."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#4": [
+    "The table, clockwise from seat 1: A (corner), F, C (corner), E, H (corner), B, G (corner), D.",
+    "G (7) faces out, its left is anticlockwise: three seats to 4: E."
+   ],
+   "ibps-csa-xvi-prelims-2026-model-test-10-78330-square-arrangement#5": [
+    "The table, clockwise from seat 1: A (corner), F, C (corner), E, H (corner), B, G (corner), D.",
+    "E, F, D and B sit in middle seats; A is at a corner: A."
+   ]
+  },
+  "guidely": {
+   "square-based-arrangement-single-variable-set-4-prelims-1#6": [
+    "Corners face in (left = clockwise, right = anticlockwise); middles face out (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "R does not face outward, so R is at a corner: put R at 1. Second right of R is seat 7; S faces that seat, so S is opposite it, at 3.",
+    "T is second right of W; Q faces the one third left of W. Try each seat for W. W at 6 (middle, facing out): T at 8, third left of W is 3 (S), so Q faces 3 and sits at 7.",
+    "V is second left of U, and P is third left of the one opposite U. Free seats 2, 4, 5. U at 4 (middle, facing out) puts V at 2. Opposite U is 8 (T, facing out): third left of T is 5. P at 5 works.",
+    "The other seats for W fail: W at 2, 4 or 8 sends Q or T onto a taken seat, and W at 5 or 7 leaves P with no seat.",
+    "The table, clockwise from seat 1: R (corner), V, S (corner), U, P (corner), W, Q (corner), T.",
+    "Facing R (1) is P (5). P faces in, so its right is anticlockwise: three seats to 2: V."
+   ],
+   "square-based-arrangement-single-variable-set-4-prelims-1#7": [
+    "The table, clockwise from seat 1: R (corner), V, S (corner), U, P (corner), W, Q (corner), T.",
+    "Opposite V (2) is W (6), facing out: its left is anticlockwise, two seats to 4, U. W's right is clockwise: six seats from 6 is 4 too: Person who sits sixth to the right of W."
+   ],
+   "square-based-arrangement-single-variable-set-4-prelims-1#8": [
+    "The table, clockwise from seat 1: R (corner), V, S (corner), U, P (corner), W, Q (corner), T.",
+    "I: S (3) and Q (7) are opposite, three on each side, true. II: S faces in, its left is clockwise, third left is 6 (W), not T. III: facing S is Q; Q's right is anticlockwise, second right is 5, P, true: Both I and III."
+   ],
+   "square-based-arrangement-single-variable-set-4-prelims-1#9": [
+    "The table, clockwise from seat 1: R (corner), V, S (corner), U, P (corner), W, Q (corner), T.",
+    "Second right of T (8, facing out) is 2, V; fourth left of W (6, facing out) is 2, V; U is 4; opposite U is 8, T. V, U, V and T are in middle seats; P is at a corner: P."
+   ],
+   "square-based-arrangement-single-variable-set-4-prelims-1#10": [
+    "The table, clockwise from seat 1: R (corner), V, S (corner), U, P (corner), W, Q (corner), T.",
+    "I: Q (7) is three seats from both V (2) and U (4). II: R (1) is not midway between W (6) and S (3). III: P (5) is three seats from T (8) and from V (2): Only I and III."
+   ],
+   "square-based-arrangement-single-variable-set-5-prelims-1#6": [
+    "Corners face in (left = clockwise, right = anticlockwise); middles face out (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "C faces outside: a middle seat. Put C at 4. G is immediately left of C; C's left is anticlockwise: G at 3. D is third right of C (clockwise): D at 7.",
+    "Two persons between H and G: H at 6 or 8. One person between C and B: B at 2 or 6.",
+    "E sits opposite the one immediately left of B. B faces out, so its left is anticlockwise: B 2 points at seat 1, so E at 5; B 6 points at seat 5, so E at 1.",
+    "F is as far from D (7) as from G (3): F at 1 or 5.",
+    "B 2, E 5: F must take 1. H and A take 6 and 8, and both of those seats are next to D. A must not sit next to D. Out.",
+    "B 6, E 1: F 5, H 8 (6 is B), A 2. A is next to neither D (7) nor B (6). Everything holds.",
+    "The table, clockwise from seat 1: E (corner), A, G (corner), C, F (corner), B, D (corner), H.",
+    "H (8) faces out, so its right is clockwise: three seats to 3: G. The one immediately right of A (2, facing out) is also seat 3: The one who sits immediate right of A."
+   ],
+   "square-based-arrangement-single-variable-set-5-prelims-1#7": [
+    "The table, clockwise from seat 1: E (corner), A, G (corner), C, F (corner), B, D (corner), H.",
+    "In C–G, F–B, D–A and H–F one person faces in and one faces out. A and B both face out: AB."
+   ],
+   "square-based-arrangement-single-variable-set-5-prelims-1#8": [
+    "The table, clockwise from seat 1: E (corner), A, G (corner), C, F (corner), B, D (corner), H.",
+    "Opposite E (1) is F (5). Immediately right of C (4, facing out) is seat 5: The one who sits immediate right of C."
+   ],
+   "square-based-arrangement-single-variable-set-5-prelims-1#9": [
+    "The table, clockwise from seat 1: E (corner), A, G (corner), C, F (corner), B, D (corner), H.",
+    "H (8) faces out; its left runs anticlockwise: D (7), B (6), F (5), then C. The middle one is B. Immediately left of F (5, facing in) is seat 6: The one who sits immediate left of F."
+   ],
+   "square-based-arrangement-single-variable-set-5-prelims-1#10": [
+    "The table, clockwise from seat 1: E (corner), A, G (corner), C, F (corner), B, D (corner), H.",
+    "I: A (2) sits next to G (3), true. II: G faces in, its left is clockwise: C, F, then B, two persons, true. III: opposite G is D, not F: Only I and II."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#6": [
+    "Corners face out (left = anticlockwise, right = clockwise); middles face in (the reverse). Seats 1 to 8 clockwise, odd seats are corners.",
+    "B does not face inside: B is at a corner. Only A sits between G and E, so G, A, E is a block with A in the middle. D is third right of A. Two drawings: A at a corner or in a middle seat.",
+    "A in a middle seat: G and E are its neighbours, so both are corners, and D, three seats from A, is a corner too. With B that fills all four corners, so C is in a middle seat. Second left of a middle seat is another middle seat, but E is at a corner. Out.",
+    "A at a corner: put A at 1, facing out, right clockwise: D at 4. G and E take 2 and 8. E is second left of C; E is in a middle seat, so C is too, facing in, left clockwise: C = E - 2. E 8 gives C 6; E 2 would need C at 8, which is G's seat. So E 8, G 2, C 6.",
+    "Corners 3, 5, 7 are left for B, F, H. H is not next to D (4): H 7. Opposite H is 3, which must not be F: F 5, B 3.",
+    "The table, clockwise from seat 1: A (corner), G, B (corner), D, F (corner), C, H (corner), E.",
+    "B (3) faces out, its left is anticlockwise: three seats to 8, E. Opposite D (4) is also 8: The one who sits opposite to D."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#7": [
+    "The table, clockwise from seat 1: A (corner), G, B (corner), D, F (corner), C, H (corner), E.",
+    "G (2) faces in, its left is clockwise: B, D, F, C, then H. Four persons between: Four."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#8": [
+    "The table, clockwise from seat 1: A (corner), G, B (corner), D, F (corner), C, H (corner), E.",
+    "Third left of D (4, facing in) is 7, H. Opposite H is 3, B. Immediately left of G (2, facing in) is 3: The one who sits immediate left of G."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#9": [
+    "The table, clockwise from seat 1: A (corner), G, B (corner), D, F (corner), C, H (corner), E.",
+    "After the swap G sits at 5, a corner facing out, so its right is clockwise. C at 6 is one seat clockwise: Immediate right."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#10": [
+    "The table, clockwise from seat 1: A (corner), G, B (corner), D, F (corner), C, H (corner), E.",
+    "Opposite H is B, third left of C is A, immediately left of D is F, second right of F is H: all corners. Second right of G (2, facing in) is 8, E, a middle seat: The one who sits 2nd to the right of G."
+   ],
+   "square-based-arrangement-single-variable-set-1-prelims-1#6": [
+    "Two persons on each side, no corner seats. Seats 1 to 8 clockwise; the sides are 1-2, 3-4, 5-6, 7-8. All face the centre: left = clockwise. Straight across: 1-6, 2-5, 3-8, 4-7.",
+    "E is immediately left of G but on another side, so they sit either side of a corner: G at the end of one side, E at the start of the next. Put G at 6 and E at 7.",
+    "Two persons between G and D: D at 3 or 1. B is third left of F (B = F + 3); B is next to neither E nor D. A has as many persons between it and D as D has with B. C is not next to D.",
+    "D 1: B = F + 3 allows (F 2, B 5) or (F 8, B 3). B 5 is four seats from D, and A would need to be four seats from D too: seat 5 again. B 3 is two seats from D, and the seats two from D are 3 (B) and 7 (E). Out.",
+    "D 3: the only pair that fits is F 2, B 5 (F 1 puts B at 4, next to D; F 5 puts B at 8, next to E; F 4 and F 8 put B on E's or D's seat). One person between D and B, so A at 1. C is not next to D: C 8, H 4.",
+    "The table, clockwise from seat 1: A, F, D, H, B, G, E, C (sides A-F, D-H, B-G, E-C).",
+    "Straight across from F (2) is 5: B. H is at 4 and faces in, so H's immediate left is seat 5, B: The one who sits to the immediate left of H."
+   ],
+   "square-based-arrangement-single-variable-set-1-prelims-1#7": [
+    "The table, clockwise from seat 1: A, F, D, H, B, G, E, C (sides A-F, D-H, B-G, E-C).",
+    "E (7) faces the centre, its right is anticlockwise: G (6), B (5), then H. Between them: B and G: Only I and II."
+   ],
+   "square-based-arrangement-single-variable-set-1-prelims-1#8": [
+    "The table, clockwise from seat 1: A, F, D, H, B, G, E, C (sides A-F, D-H, B-G, E-C).",
+    "G (6) and B (5) sit side by side: GB."
+   ],
+   "square-based-arrangement-single-variable-set-1-prelims-1#9": [
+    "The table, clockwise from seat 1: A, F, D, H, B, G, E, C (sides A-F, D-H, B-G, E-C).",
+    "Alphabetical from A clockwise would be A, B, C, D, E, F, G, H in seats 1 to 8. The real table is A, F, D, H, B, G, E, C: apart from A, nobody is in that seat: None."
+   ],
+   "square-based-arrangement-single-variable-set-1-prelims-1#10": [
+    "The table, clockwise from seat 1: A, F, D, H, B, G, E, C (sides A-F, D-H, B-G, E-C).",
+    "E (7) is two seats anticlockwise of A (1). A faces in, so anticlockwise is A's right: Second to the right."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#1": [
+    "Two persons on each side, no corner seats. Seats 1 to 8 clockwise; sides 1-2, 3-4, 5-6, 7-8. All face the centre: left = clockwise.",
+    "M is next to G but on another side: they sit either side of a corner. Two drawings: G at 2 with M at 3, or G at 3 with M at 2.",
+    "H is third right of G (three seats anticlockwise). One person between H and I; I is not next to G. J is third left of I (three seats clockwise).",
+    "G 3, M 2: H at 8, I at 6 (2 is M), J at 1. K is second right of N and third left of L. Free 4, 5, 7: K 5 with N 7 and L 2 (M). K 4: N 6 (I). K 7: N 1 (J). Out.",
+    "G 2, M 3: H at 7, I at 5 (1 is next to G), J at 8. Free 1, 4, 6: K 4, N 6, L 1.",
+    "The table, clockwise from seat 1: L, G, M, K, I, N, H, J.",
+    "H is at 7. Immediately right is 6: N."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#2": [
+    "The table, clockwise from seat 1: L, G, M, K, I, N, H, J.",
+    "G (2) faces in, its left is clockwise: M (3), then K. One person between: One."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#3": [
+    "The table, clockwise from seat 1: L, G, M, K, I, N, H, J.",
+    "J (8) is one seat anticlockwise of L (1): J is immediately right of L. K (4) is immediately right of I (5). The one whose immediate right is M (3) sits at 4: K."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#4": [
+    "The table, clockwise from seat 1: L, G, M, K, I, N, H, J.",
+    "G is at 2; third left is three seats clockwise, 5: I."
+   ],
+   "square-based-arrangement-single-variable-set-3-prelims-1#5": [
+    "The table, clockwise from seat 1: L, G, M, K, I, N, H, J.",
+    "K (4) is two seats anticlockwise of N (6): Second to the right."
+   ],
+   "square-based-arrangement-single-variable-set-6-prelims-1#1": [
+    "Twelve seats: a corner, two side seats, a corner, and so on. Seats 1 to 12 clockwise; corners 1, 4, 7, 10. Corners face in (left clockwise); side seats face out (left anticlockwise). Opposite: corners 1-7, 4-10; side seats straight across (2-9, 3-8, 5-12, 6-11).",
+    "O and V are corners with two persons between: neighbouring corners. Put O at 1 and V at 10 (the other way round, V at 4, fails below).",
+    "One person between V and X, and X is not next to O: X at 8. Q is immediately left of X (X faces out, left anticlockwise): Q 7. T is third left of X: 5.",
+    "Opposite O is 7, Q, facing in; W is immediately right of Q (anticlockwise): W 6. R is at a corner: 4.",
+    "S sits opposite U and not next to O: the only free straight-across pair is 2 and 9, so S 9, U 2.",
+    "Y is third right of P (side seat, right clockwise); P not next to V, Y not next to O. Free 3, 11, 12: P 12, Y 3, Z 11.",
+    "With V at 4 instead, X goes to 6 and the seat W needs (immediately right of the person opposite O) is X's seat. Out.",
+    "The table, clockwise from seat 1: O (corner), U, Y, R (corner), T, W, Q (corner), X, S, V (corner), Z, P.",
+    "Y is at 3; its neighbours are U (2) and R (4): UR."
+   ],
+   "square-based-arrangement-single-variable-set-6-prelims-1#2": [
+    "The table, clockwise from seat 1: O (corner), U, Y, R (corner), T, W, Q (corner), X, S, V (corner), Z, P.",
+    "P, X, T and Y sit in side seats; Q is at a corner: Q."
+   ],
+   "square-based-arrangement-single-variable-set-6-prelims-1#3": [
+    "The table, clockwise from seat 1: O (corner), U, Y, R (corner), T, W, Q (corner), X, S, V (corner), Z, P.",
+    "U (2, facing out) has R two seats clockwise: R is second right of U. T is second right of Q (Q faces in, right anticlockwise). Z (11) is second right of O (1). The one immediately right of P (12, facing out) is O: Both A & C."
+   ],
+   "square-based-arrangement-single-variable-set-6-prelims-1#4": [
+    "The table, clockwise from seat 1: O (corner), U, Y, R (corner), T, W, Q (corner), X, S, V (corner), Z, P.",
+    "Q (7) faces in, its right is anticlockwise: W, T, R, Y, U, O, then P. Six persons between: Six."
+   ],
+   "square-based-arrangement-single-variable-set-6-prelims-1#5": [
+    "The table, clockwise from seat 1: O (corner), U, Y, R (corner), T, W, Q (corner), X, S, V (corner), Z, P.",
+    "Anticlockwise from O the alphabet would run P, Q, R ... Seats 12, 9 and 3 already hold P, S and Y: Three."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#1": [
+    "Four corners and four middles: the same drawing as a square; long and short sides only change the names. All face the centre: left = clockwise. Seats 1 to 8 clockwise, odd seats are corners.",
+    "A is in a middle seat: put A at 2. One person between A and C: C at 4 or 8. B is third left of C (three seats clockwise): C 4 gives B 7; C 8 gives B 3.",
+    "D is second right of E (D = E - 2) and not next to B or C. G is third right of F (G = F - 3). H is not next to D or E.",
+    "C 8, B 3: D must avoid 2, 4 (next to B) and 7, 1 (next to C), so D 5 or 6. D 6 needs E at 8, C's seat; so D 5, E 7. F and G from 1, 4, 6: (F 1, G 6) or (F 4, G 1). H gets the last seat, 4 or 6, and both are next to D or E. Out.",
+    "C 4, B 7: D must avoid 6, 8, 3 and 5, so D 1 and E 3. G = F - 3 from 5, 6, 8: F 8, G 5. H takes 6, next to neither D nor E.",
+    "The table, clockwise from seat 1: D (corner), A, E (corner), C, G (corner), H, B (corner), F.",
+    "H is at 6; third right is 3: E. Immediately left of A (2) is seat 3: The one who sits to the immediate left of A."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#2": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), C, G (corner), H, B (corner), F.",
+    "Immediately left of F (8) is D at 1, a corner; B (7) is at a corner; H (6) is not: Only (I) and (II)."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#3": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), C, G (corner), H, B (corner), F.",
+    "G (5) faces in, its right is anticlockwise: C, E, then A. Two persons between: Two."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#4": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), C, G (corner), H, B (corner), F.",
+    "B (7) is two seats anticlockwise of D (1): Second to the right."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#5": [
+    "The table, clockwise from seat 1: D (corner), A, E (corner), C, G (corner), H, B (corner), F.",
+    "Alphabetical clockwise from A: B 3, C 4, D 5 ... Only C (4) is where that order puts it: One."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#6": [
+    "Three seats on each long side, one on each short side, no corners. Seats 1 to 8 clockwise: 1-3 long, 4 short, 5-7 long, 8 short. Straight across: 1-7, 2-6, 3-5, 4-8. All face the centre: left = clockwise.",
+    "N is immediately left of P, on another side, so one of them is on a short side. The table looks the same turned half round, so two drawings: P 3 with N 4, or P 4 with N 5.",
+    "L is opposite N. Two persons between L and R. Q is second left of R (Q = R + 2). As many persons between R and Q as between Q and S (one). O is second left of M (O = M + 2).",
+    "N 4: L 8, R at 5 (3 is P), Q 7, S 1. O and M are left with 2 and 6, which are not two seats apart. Out.",
+    "N 5: L 3, R at 6 or 8. R 8 puts Q at 2, and S, one person from Q, would need 4 (P) or 8 (R). So R 6, Q 8, S 2. O = M + 2 from 1 and 7: M 7, O 1.",
+    "The table, clockwise from seat 1: O, S, L (long side), P (short), N, R, M (long side), Q (short).",
+    "R (6) faces in, its left is clockwise: M (7), then Q. The one in the middle is M: M."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#7": [
+    "The table, clockwise from seat 1: O, S, L (long side), P (short), N, R, M (long side), Q (short).",
+    "S is at 2; third left is 5: N."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#8": [
+    "The table, clockwise from seat 1: O, S, L (long side), P (short), N, R, M (long side), Q (short).",
+    "The short-side seats hold P (4) and Q (8). Second right of R (6) is 4, P: The one who sits second to the right of R."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#9": [
+    "The table, clockwise from seat 1: O, S, L (long side), P (short), N, R, M (long side), Q (short).",
+    "M (7) is one seat anticlockwise of Q (8): Immediate right."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#10": [
+    "The table, clockwise from seat 1: O, S, L (long side), P (short), N, R, M (long side), Q (short).",
+    "S is at 2; straight across is 6: R."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#11": [
+    "Six seats: two on each long side, one on each short side. Seats 1 to 6 clockwise: 1-2 long, 3 short, 4-5 long, 6 short. Straight across: 1-5, 2-4, 3-6. All face away from the centre: left = anticlockwise, right = clockwise.",
+    "Z is opposite U, and Y is second right of Z (two seats clockwise). The table looks the same turned half round, so try Z at 4, at 5 and on a short side (3).",
+    "Z at 4: U 2, Y 6. From U's left (anticlockwise) to Y: seat 1 only, one person. So between Z and X, from Z's left, there are two: seats 3 and 2, X at 1. W is second left of V (two seats anticlockwise): from 3 and 5, V 5, W 3. W is not next to X.",
+    "Z at 5: U 1, and Y two seats clockwise would be 1, U's seat. Out. Z at 3: U 6, Y 5; nobody between U and Y, so one person between Z and X: X at 1. V and W take 2 and 4 with W at 2, next to X. Out.",
+    "The table, clockwise from seat 1: X, U (long side), W (short), Z, V (long side), Y (short).",
+    "Z is at 4; its right is clockwise: V at 5. Immediately left of Y (6) is 5: The one who stands to the immediate left of Y."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#12": [
+    "The table, clockwise from seat 1: X, U (long side), W (short), Z, V (long side), Y (short).",
+    "X, U, V and Z stand on long sides; Y is on a short side: Y."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#13": [
+    "The table, clockwise from seat 1: X, U (long side), W (short), Z, V (long side), Y (short).",
+    "X is opposite V and Y is opposite W. Z is opposite: U."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#14": [
+    "The table, clockwise from seat 1: X, U (long side), W (short), Z, V (long side), Y (short).",
+    "W (3) faces out, its right is clockwise: Z (4), then V. One person between: One."
+   ],
+   "rectangular-based-arrangement-single-variable-set-1-prelims-1#15": [
+    "The table, clockwise from seat 1: X, U (long side), W (short), Z, V (long side), Y (short).",
+    "I: X (1) and U (2) are neighbours, true. II: X and W have one person between, not two. III: second right of Y (6) is 2, U, true: Only I and III."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#1": [
+    "Corners face in (left = clockwise, right = anticlockwise); middles face out (the reverse). Seats 1 to 8 clockwise, odd seats are corners. Place the fans first, brands after.",
+    "Three fans between H and D: they are opposite. D is not in a middle seat, so D and H are corners. Put D at 5 and H at 1.",
+    "E is immediately right of H; H faces in, right anticlockwise: E at 8 (Voltas). D is Havells. C is second left of D (clockwise): C at 7. Crompton is second right of D (anticlockwise): seat 3.",
+    "Bajaj is three places from D (5): seat 2 or 8; 8 is Voltas, so Bajaj at 2, and G sits opposite it, at 6.",
+    "Kenstar is not D or H, and seats 2, 3 and 8 already have brands, so Kenstar is at 4, 6 or 7. B is third right of Kenstar: from 4 (facing out, right clockwise) that is 7, C; from 6 it is 1, H; from 7 (facing in, right anticlockwise) it is 4. So C is Kenstar and B sits at 4.",
+    "A and F take 2 and 3. F faces the fan immediately right of Orient. F at 2 faces 6 (G); the only fan with G on its immediate right is C, which is Kenstar. Out. So F at 3, facing C (7); the fan with C on its immediate right is G (6, facing out, right clockwise): G is Orient. A at 2.",
+    "Usha and Cello are left for H and B. Cello is not next to A (2), and H (1) is: H Usha, B Cello.",
+    "The table, clockwise from seat 1: H (corner, Usha), A (Bajaj), F (corner, Crompton), B (Cello), D (corner, Havells), G (Orient), C (corner, Kenstar), E (Voltas).",
+    "A (2) faces out, so its left is anticlockwise: 1, then 8: E."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#2": [
+    "The table, clockwise from seat 1: H (corner, Usha), A (Bajaj), F (corner, Crompton), B (Cello), D (corner, Havells), G (Orient), C (corner, Kenstar), E (Voltas).",
+    "G (6) faces out, its left is anticlockwise: D (5), then Cello (B, 4). The fan between is D. I: opposite H is D, yes. II: immediately right of C is G, no. III: second right of H is C, no: Only (I)."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#3": [
+    "The table, clockwise from seat 1: H (corner, Usha), A (Bajaj), F (corner, Crompton), B (Cello), D (corner, Havells), G (Orient), C (corner, Kenstar), E (Voltas).",
+    "Orient is G (6), facing out, so its left is anticlockwise: 5, then 4, B: Second to the left."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#4": [
+    "The table, clockwise from seat 1: H (corner, Usha), A (Bajaj), F (corner, Crompton), B (Cello), D (corner, Havells), G (Orient), C (corner, Kenstar), E (Voltas).",
+    "Cello, Voltas, Bajaj and Orient are in middle seats; Usha (H) is at a corner: The Usha fan."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#5": [
+    "The table, clockwise from seat 1: H (corner, Usha), A (Bajaj), F (corner, Crompton), B (Cello), D (corner, Havells), G (Orient), C (corner, Kenstar), E (Voltas).",
+    "D (5) faces in, its left is clockwise: G, C, E, H, then Bajaj (A, 2). Four fans between: More than three."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#11": [
+    "All face the centre: left = clockwise. Seats 1 to 8 clockwise, odd seats are corners. Names first, fruits after.",
+    "L is in a middle seat: put L at 6. One person between H and L: H at 4 or 8. Banana is third right of L: seat 3.",
+    "K is second right of the Watermelon person; neither sits next to H or L. J (Kiwi) is second right of F; neither sits next to K. I is not next to H or J. Consecutive letters never sit together.",
+    "H 4: K and Watermelon must avoid 3, 5, 7. K = Watermelon - 2 gives K 8, Watermelon 2. J and F (J = F - 2) avoid 7 and 1: J 3, F 5. But seat 3 is Banana and J likes Kiwi. Out.",
+    "H 8: K and Watermelon avoid 7, 1, 5: K 2, Watermelon 4. J, F avoid 1 and 3: J 5, F 7. I avoids 7, 1, 4, 6: I 3. E and G take 1 and 4; G at 1 would sit next to H, so G 4 (Watermelon), E 1.",
+    "Fruits: Apple is second left of Mango (Apple = Mango + 2). Apple can only be E with Mango F. K and H avoid Apple; L and H avoid Pineapple; Papaya is not next to J or L: K Pineapple, H Papaya, L Grapes.",
+    "The table, clockwise from seat 1: E (corner, Apple), K (Pineapple), I (corner, Banana), G (Watermelon), J (corner, Kiwi), L (Grapes), F (corner, Mango), H (Papaya).",
+    "a: third right of Mango (F, 7) is 4, G, true. b: Apple (E, 1) is immediately left of Papaya (H, 8), true. c: second right of Watermelon is 2, K, not E: Both a and b."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#12": [
+    "The table, clockwise from seat 1: E (corner, Apple), K (Pineapple), I (corner, Banana), G (Watermelon), J (corner, Kiwi), L (Grapes), F (corner, Mango), H (Papaya).",
+    "For L - Kiwi, G - Banana, K - Apple and J - Watermelon, the fruit's owner sits one seat anticlockwise of the person named (J 5, I 3, E 1, G 4). Grapes is L (6), two seats from H (8): H - Grapes."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#13": [
+    "The table, clockwise from seat 1: E (corner, Apple), K (Pineapple), I (corner, Banana), G (Watermelon), J (corner, Kiwi), L (Grapes), F (corner, Mango), H (Papaya).",
+    "Banana is I at 3; third right is 8, H, who likes Papaya: The one who likes Papaya."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#14": [
+    "The table, clockwise from seat 1: E (corner, Apple), K (Pineapple), I (corner, Banana), G (Watermelon), J (corner, Kiwi), L (Grapes), F (corner, Mango), H (Papaya).",
+    "Pineapple is K at 2. J (5) is three seats clockwise of K: Third to the left."
+   ],
+   "square-based-arrangement-two-variable-set-1-prelims-1#15": [
+    "The table, clockwise from seat 1: E (corner, Apple), K (Pineapple), I (corner, Banana), G (Watermelon), J (corner, Kiwi), L (Grapes), F (corner, Mango), H (Papaya).",
+    "Apple is E at 1. Papaya is H at 8, and H's immediate left is seat 1: The one who sits to the immediate left of the person who likes Papaya."
+   ]
+  }
+ }
+}
