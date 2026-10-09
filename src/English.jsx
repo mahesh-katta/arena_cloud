@@ -113,7 +113,7 @@ export function Grammar() {
               <span className="rnum">{r.n}</span>
               <div className="grow">
                 <div className="rtitle">{r.title}</div>
-                <div className="muted small">{catName[r.cat]}{r.bank + r.papers ? " · decided " + (r.bank + r.papers) + " bank and paper questions" : ""}</div>
+                <div className="muted small">{catName[r.cat]}{r.bank + r.papers ? " · matched about " + (r.bank + r.papers) + " bank and paper questions" : ""}</div>
               </div>
               {r.core && <span className="tag sug">Most asked</span>}
               {r.src === "web" && <span className="tag ask2" title="From standard bank-exam rule lists; not found in our question banks">Standard list</span>}

@@ -5,7 +5,8 @@
   "How it was built: each rule was matched by script against the grammar-type questions in two question banks (error spotting, sentence improvement, single and double fillers) and against the English sections of cached memory-based papers. Guidely questions have solutions that usually name the error, so they were matched by keyword patterns on the solution text plus an analysis of 'X should be replaced by Y' word pairs. Sreedhar questions have no solutions, so only the marked wrong part was checked against surface patterns (for example 'discussed about', 'one of my friend', 'more better'); most of them could not be classified this way. Paper solutions were split into per-question chunks; papers without solutions were checked with the same surface patterns.",
   "'bank' is the number of bank questions matched to the rule and 'papers' the number of paper questions. One question can match more than one rule (for example a two-error question, or a solution that explains two points). Broad rules such as 'fixed prepositions', 'keep the tense consistent' and 'singular subject, singular verb' collect every question whose solution names that kind of error, so they score high partly because they are broad.",
   "Core list: 38 rules are marked core. 33 of them were chosen by count (bank + papers of 4 or more). The other 5 have a zero count but appear in nearly every standard bank-exam rule list and are classic error-spotting traps, so they were added as core by judgement ('src': 'web'). In all, 36 rules have no match in the banks or papers and are marked 'src': 'web'; a zero count means the scripts did not find it, not that it is never asked.",
-  "How to use it: learn the core rules first, in the order given. For each rule, read the wrong sentence and try to correct it before you look at the right one. Then practise with the example questions listed under the rule. In the counts, the most-matched rules are fixed prepositions, tense consistency, subject-verb agreement, verb forms (V3, -ing, to + verb) and word class (adjective or adverb), so revise those most often."
+  "How to use it: learn the core rules first, in the order given. For each rule, read the wrong sentence and try to correct it before you look at the right one. Then practise with the example questions listed under the rule. In the counts, the most-matched rules are fixed prepositions, tense consistency, subject-verb agreement, verb forms (V3, -ing, to + verb) and word class (adjective or adverb), so revise those most often.",
+  "How far to trust the counts: the rules and examples were read one by one and are standard exam grammar. The counts are automatic matches, and a hand check of 25 random matches found about half naming the right rule, a few partly right, and the rest wrong. So trust the top of the short list (fixed prepositions, tense consistency, subject-verb agreement, articles, verb forms), and treat the exact order lower down as rough."
  ],
  "measured": [
   [
@@ -292,7 +293,7 @@
    "rule": "After 'one of the', 'each of the', 'either of the' and 'neither of the', the noun must be plural.",
    "wrong": "He is one of the best player in the team.",
    "right": "He is one of the best players in the team.",
-   "tip": "The noun is plural, but the verb after 'one of ...' is singular (see sva-10).",
+   "tip": "The noun is plural, but the verb after 'one of ...' is singular (see rule 29).",
    "core": false,
    "bank": 3,
    "papers": 0,
@@ -666,7 +667,7 @@
    "rule": "Two subjects joined by 'and' make a plural subject and take a plural verb.",
    "wrong": "Ram and his sister is coming to the party.",
    "right": "Ram and his sister are coming to the party.",
-   "tip": "See sva-5 for the exception.",
+   "tip": "See rule 24 for the exception.",
    "core": false,
    "bank": 1,
    "papers": 1,
@@ -1490,7 +1491,7 @@
    "rule": "A past tense in the main clause is normally followed by a past form in the dependent clause (so that ... might, could, would).",
    "wrong": "He worked hard so that he may pass.",
    "right": "He worked hard so that he might pass.",
-   "tip": "A universal truth stays in the present (see speech-2).",
+   "tip": "A universal truth stays in the present (see rule 89).",
    "core": true,
    "bank": 46,
    "papers": 10,
@@ -2544,7 +2545,7 @@
    "rule": "In a direct question, put the auxiliary before the subject: Why are you late?",
    "wrong": "Why you are late again?",
    "right": "Why are you late again?",
-   "tip": "Reported questions do the opposite (see speech-3).",
+   "tip": "Reported questions do the opposite (see rule 90).",
    "core": false,
    "bank": 0,
    "papers": 0,

@@ -10,6 +10,8 @@ Core list: 38 rules are marked core. 33 of them were chosen by count (bank + pap
 
 How to use it: learn the core rules first, in the order given. For each rule, read the wrong sentence and try to correct it before you look at the right one. Then practise with the example questions listed under the rule. In the counts, the most-matched rules are fixed prepositions, tense consistency, subject-verb agreement, verb forms (V3, -ing, to + verb) and word class (adjective or adverb), so revise those most often.
 
+How far to trust the counts: the rules and examples were read one by one and are standard exam grammar. The counts are automatic matches, and a hand check of 25 random matches found about half naming the right rule, a few partly right, and the rest wrong. So trust the top of the short list (fixed prepositions, tense consistency, subject-verb agreement, articles, verb forms), and treat the exact order lower down as rough.
+
 | What was measured | Count |
 |---|---|
 | Guidely grammar-type questions scanned (error spotting, sentence improvement, single and double fillers) | 801 |
@@ -114,7 +116,7 @@ Tip: 'thousands of people' is correct: there is no exact number before it.
 After 'one of the', 'each of the', 'either of the' and 'neither of the', the noun must be plural.  
 ✗ He is one of the best player in the team.  
 ✓ He is one of the best players in the team.  
-Tip: The noun is plural, but the verb after 'one of ...' is singular (see sva-10).
+Tip: The noun is plural, but the verb after 'one of ...' is singular (see rule 29).
 
 **8. Plural determiners need plural nouns** ★  
 After many, several, few, both, these, those, various, a number of and any number above one, a countable noun must be plural.  
@@ -215,7 +217,7 @@ Tip: 'Every' with two nouns joined by 'and' is still singular: Every man and wom
 Two subjects joined by 'and' make a plural subject and take a plural verb.  
 ✗ Ram and his sister is coming to the party.  
 ✓ Ram and his sister are coming to the party.  
-Tip: See sva-5 for the exception.
+Tip: See rule 24 for the exception.
 
 **24. One idea joined by 'and' is singular**  
 If two nouns joined by 'and' name one person or one idea (often with a single article), the verb is singular.  
@@ -446,7 +448,7 @@ When two past actions are told together, put the one that happened first in the 
 A past tense in the main clause is normally followed by a past form in the dependent clause (so that ... might, could, would).  
 ✗ He worked hard so that he may pass.  
 ✓ He worked hard so that he might pass.  
-Tip: A universal truth stays in the present (see speech-2).
+Tip: A universal truth stays in the present (see rule 89).
 
 **63. No 'will' after when, if, until, as soon as**  
 In clauses of time and condition (when, before, after, until, as soon as, if, unless), use the present tense for a future meaning, not 'will'.  
@@ -761,7 +763,7 @@ A sentence that begins with 'only' + a time word or phrase (only then, only afte
 In a direct question, put the auxiliary before the subject: Why are you late?  
 ✗ Why you are late again?  
 ✓ Why are you late again?  
-Tip: Reported questions do the opposite (see speech-3).
+Tip: Reported questions do the opposite (see rule 90).
 
 
 ### Parallelism
