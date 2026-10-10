@@ -76,8 +76,7 @@ function App() {
     </div>
   );
   else if (view === "lesson") body = (
-    <div className={"cols" + (a === "basics" ? " two" : " three")}>
-      {a !== "basics" && <TopicRail book={book} current={a} />}
+    <div className="cols two lessoncols">
       <aside className="col rail-lessons glass">
         <div className="col-head"><a className="eyebrow" href={"#/topic/" + a}>{book.byId[a]?.title}</a></div>
         <div className="col-scroll"><LessonList book={book} topic={a} current={b} compact /></div>
