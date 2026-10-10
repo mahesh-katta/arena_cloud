@@ -122,13 +122,14 @@ export function TopicCard({ t, p, book }) {
     <a className="tcard glass lift" href={"#/topic/" + t.id}>
       <div className="tcard-top">
         <Badge id={t.id} title={t.mod.title} rank={t.rank} />
-        {n > 0 && <div className="ringwrap"><Ring value={n ? d / n : 0} /><span>{Math.round((100 * d) / (n || 1))}%</span></div>}
+        {n > 0 && d > 0 && <div className="ringwrap"><Ring value={d / n} /><span>{Math.round((100 * d) / n)}%</span></div>}
+        {n > 0 && !d && <span className="lcount">{n}<small>lessons</small></span>}
       </div>
       <div className="tname">{t.mod.title}</div>
-      <div className="muted small">{n ? n + " lessons" : "Revision notes"} · {LEVEL[t.level]}{parent ? " · after " + parent : ""}</div>
+      <div className="muted small">{LEVEL[t.level]}{parent ? " · after " + parent : ""}{!n ? " · revision notes" : ""}</div>
       <div className="tcard-foot">
         <span className={"tag " + ASK[t.ask].c}>{ASK[t.ask].t}</span>
-        <span className="small strong">{n ? (d === n ? "Completed" : d ? d + " of " + n + " done" : "Start") : "Open"}</span>
+        <span className={"go" + (d === n && n ? " done" : "")}>{n ? (d === n ? "Completed ✓" : d ? d + " / " + n + " →" : "Start →") : "Open →"}</span>
       </div>
     </a>
   );

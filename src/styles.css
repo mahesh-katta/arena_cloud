@@ -401,3 +401,84 @@ img.inl { vertical-align: middle; max-width: 100%; background: #fff; border-radi
 .ellipsis { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .podbar select { width: auto; min-height: 40px; }
 .speaking { outline: 3px solid var(--brand2); outline-offset: 2px; }
+
+/* ================= UI polish pass ================= */
+/* Lesson: lessons list | lesson, the lesson gets the room */
+@media (min-width: 1100px) {
+  .cols.lessoncols { grid-template-columns: 290px minmax(0, 1fr); }
+  .cols.lessoncols .rail-lessons { display: flex; }
+}
+.lesson { margin: 0 auto; }
+.lesson .blocks p, .lesson .lead { max-width: 70ch; }
+
+/* Gentle entrance for every page */
+main > * { animation: rise 0.28s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* Topic cards: count before starting, an arrow chip to go */
+.lcount { display: flex; flex-direction: column; align-items: center; line-height: 1; font-weight: 800; font-size: 18px; color: var(--accent); }
+.lcount small { font-size: 10px; font-weight: 700; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.06em; }
+.go { font-size: 13px; font-weight: 800; color: var(--accent); background: var(--accent-soft); padding: 5px 11px; border-radius: 999px; transition: background 0.15s, color 0.15s; }
+.go.done { color: var(--ok-ink); background: var(--ok-soft); }
+.tcard:hover .go:not(.done) { background: var(--grad); color: #fff; }
+.tcard { min-height: 168px; }
+.tcard .tname { margin-top: 2px; }
+
+/* Lists of rules or words: count on the left, Listen on the right */
+.listrow { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin: 6px 0 4px; }
+.listrow .btn { min-height: 40px; padding: 0 16px; }
+
+/* Toolbars: tidy wrapping */
+.toolbar { gap: 10px 12px; }
+.toolbar .search { flex: 1 1 220px; }
+
+/* Selected states read clearly in dark mode too */
+.rail-lessons .lrow.on .ltitle, .trow-mini.on span { color: var(--ink); }
+
+/* Safe area for phones with a home bar */
+@supports (padding: max(0px)) {
+  @media (max-width: 899.98px) {
+    .nav { bottom: max(10px, env(safe-area-inset-bottom)); }
+    main { padding-bottom: calc(104px + env(safe-area-inset-bottom)); }
+  }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 640px) {
+  h1 { font-size: 26px; }
+  .hero { padding: 18px; gap: 14px; }
+  .hero-text p.muted { display: none; }
+  .hero .btn { width: 100%; justify-content: center; text-align: center; }
+  .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .stat { padding: 8px 6px; align-items: center; text-align: center; border-radius: 12px; }
+  .stat b { font-size: 18px; }
+  .stat small { font-size: 11px; }
+  .stat span { font-size: 10.5px; line-height: 1.25; }
+  .toolbar .sel { flex: 1 1 100%; max-width: none; }
+  .toolbar .seg { flex: 1 1 auto; }
+  .toolbar .seg button { flex: 1; padding: 0 10px; }
+  .toolbar.filters { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .toolbar.filters .sel { flex: none; }
+  .toolbar.filters select { font-size: 13px; padding: 0 8px; }
+  .runhead { padding: 10px 14px; }
+  .runhead h2 { font-size: 19px; }
+  .qcard { padding: 14px; gap: 10px; }
+  .opt { min-height: 48px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tcard { min-height: 0; padding: 12px; }
+  .tcard .badge { width: 38px !important; height: 38px !important; }
+  .tcard .tname { font-size: 15px; }
+  .tcard .muted.small { font-size: 12px; }
+  .tcard-foot { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .srcgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .srccard { min-height: 0; padding: 14px; }
+  .srcname { font-size: 15px; }
+  .en .rules { grid-template-columns: 1fr; }
+}
+.en .toolbar .sel { max-width: 280px; }
+@media (max-width: 640px) {
+  .toolbar .seg { flex: 1 1 100%; }
+  .toolbar .seg.icons { flex: none; }
+  .toolbar .sel { flex: 1 1 0; min-width: 0; }
+  .en .toolbar .sel { max-width: none; flex: 1 1 100%; }
+}

@@ -184,8 +184,10 @@ export function Grammar() {
         </label>
         <Search value={q} onChange={setQ} placeholder="a word, e.g. each" />
       </div>
-      <div className="muted small">{rules.length} rules shown{mode !== "all" ? ", most asked first" : ", in study order"}</div>
-      <Podcast items={rules} textOf={sayRule} idOf={(r) => r.id} label={(r) => r.n + ". " + r.title} />
+      <div className="listrow">
+        <span className="muted small">{rules.length} rules shown{mode !== "all" ? ", most asked first" : ", in study order"}</span>
+        <Podcast items={rules} textOf={sayRule} idOf={(r) => r.id} label={(r) => r.n + ". " + r.title} />
+      </div>
       <div className="rules">
         {rules.map((r) => (
           <article key={r.id} id={"en-" + r.id} className="rule glass">
@@ -337,8 +339,10 @@ export function Vocabulary() {
             <label className="check"><input type="checkbox" checked={hideKnown} onChange={(e) => setHideKnown(e.target.checked)} /> Hide known</label>
             {tab !== "confusables" && items.length > 0 && <button className="btn primary" onClick={() => setFlash(true)}>Test me ({items.length})</button>}
           </div>
-          <div className="muted small">{items.length} shown</div>
+          <div className="listrow">
+          <span className="muted small">{items.length} shown</span>
           <Podcast items={items} textOf={SAY[tab]} idOf={(x) => keyOf(tab, x).replace(/[^a-z0-9]+/gi, "-")} label={(x) => x.w || x.right || x.words.join(" / ")} />
+          </div>
           <div className="wgrid">{items.map((x) => <Card key={keyOf(tab, x)} tab={tab} x={x} />)}</div>
         </>
       )}

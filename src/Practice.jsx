@@ -128,7 +128,7 @@ export function PracticeRun({ book, src, topic, query }) {
         </div>
         <a className="btn ghost hide-sm" href={"#/topic/" + topic}>Lessons</a>
       </header>
-      <div className="toolbar">
+      <div className="toolbar filters">
         <label className="sel">
           <span>Source</span>
           <select value={src} onChange={(e) => go("#/practice/" + e.target.value + "/" + topic)}>
