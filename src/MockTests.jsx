@@ -1,3 +1,5 @@
+import Stage from "./Stage.jsx";
+import Remarks from "./Remarks.jsx";
 import { useState } from "react";
 import { mockIndex, useData, useProgress } from "./store.js";
 import { fits, profileLabel } from "./exams.js";
@@ -106,6 +108,9 @@ function PreviousYears({ groups, title, right, empty }) {
   const sumR = attempted.reduce((s, x) => s + (p.mocks[x.id].right || 0), 0), sumW = attempted.reduce((s, x) => s + (p.mocks[x.id].wrong || 0), 0);
   const accuracy = sumR + sumW ? Math.round((100 * sumR) / (sumR + sumW)) : null;
   const bestP = attempted.length ? Math.round(Math.max(...attempted.map(pct))) : null;
+  const rmExams = attempted.slice().sort((x, y) => (p.mocks[y.id].at || 0) - (p.mocks[x.id].at || 0)).map((x) => { const r = p.mocks[x.id], att = (r.right || 0) + (r.wrong || 0); return { key: x.id, title: (x.date ? dayLabel(x.date) + " " + x.date.slice(0, 4) : "Paper") + (x.slot ? " · Slot " + x.slot : ""), score: round(r.score) + "/" + r.max, att, acc: att ? Math.round((100 * (r.right || 0)) / att) : null }; });
+  const bestPaper = attempted.length ? p.mocks[attempted.slice().sort((x, y) => pct(y) - pct(x))[0].id] : null;
+  const avgAttP = attempted.length ? Math.round(attempted.reduce((s, x) => s + (p.mocks[x.id].right || 0) + (p.mocks[x.id].wrong || 0), 0) / attempted.length) : null;
   const stage = (list[0] && list[0].stage) || (g.tests[0] && g.tests[0].stage) || "";
   const reset = () => { if (chosen) { try { localStorage.removeItem("ap-run-" + chosen.id); } catch {} } setSure(false); redraw((n) => n + 1); };
 
@@ -113,12 +118,15 @@ function PreviousYears({ groups, title, right, empty }) {
 
   return (
     <div className="page boosterpg">
-      <div className="bstage py">
+      <Stage className="bstage py"
+        top={
         <div className="bp-top">
           <div><h1>{title}</h1><p>Previous years · {papers.length} papers{years.length ? " · " + years[0] + (years.length > 1 ? "–" + years[years.length - 1] : "") : ""}</p></div>
           {right}
         </div>
-
+        }
+        cards={[
+          { id: "cal", label: "Calendar", node: (
         <section className="bcal pycal" aria-label="Previous years calendar">
           <header aria-live="polite">
             {groups.length > 1 && (
@@ -133,19 +141,23 @@ function PreviousYears({ groups, title, right, empty }) {
               : <><h2>{dayLabel(key)} {key.slice(0, 4)}</h2><p>{list.length} {list.length === 1 ? "paper" : "papers"}{list.some((x) => x.slot) ? " · " + list.map((x) => "Slot " + x.slot).join(", ") : ""}</p></>}
           </header>
           {years.length > 0 && (
+            <div className="pyrw">
+            <button type="button" className="pyr-arr" aria-label="Earlier year" disabled={years.indexOf(year) <= 0} onClick={() => { setYr(years[years.indexOf(year) - 1]); setHov(null); }}>‹</button>
             <div className="pyr" role="tablist" aria-label="Year">
               {years.map((y) => { const n = dated.filter((x) => x.year === y).length; return (
                 <button key={y} type="button" role="tab" aria-selected={y === year} className={y === year ? "on" : ""} onClick={() => { setYr(y); setHov(null); }}><b>{y}</b><small>{n} {n === 1 ? "paper" : "papers"}</small></button>
               ); })}
             </div>
+            <button type="button" className="pyr-arr" aria-label="Later year" disabled={years.indexOf(year) >= years.length - 1} onClick={() => { setYr(years[years.indexOf(year) + 1]); setHov(null); }}>›</button>
+            </div>
           )}
           <div className="pyd" onMouseLeave={() => setHov(null)}>
             {year && datesOf(year).map((date) => (
-              <div key={date} className={"pyd-card" + (key === date ? " cur" : "")} onMouseEnter={() => setHov(date)} onClick={() => { setSel(date); setSure(false); }}>
+              <div key={date} className={"pyd-card" + (sel === date ? " cur" : "")} onMouseEnter={() => setHov(date)} onClick={() => { setSel(date); setSure(false); }}>
                 <span className="pyd-day"><b>{dayLabel(date)}</b><em>{dayName(date)}</em></span>
                 <span className="pyd-slots">
                   {byDate.get(date).map((x) => (
-                    <button key={x.id} type="button" className={"pyl-slot st-" + stateOf([x]) + (key === date && chosen && chosen.id === x.id ? " on" : "")}
+                    <button key={x.id} type="button" className={"pyl-slot st-" + stateOf([x]) + (sel === date && chosen && chosen.id === x.id ? " on" : "")}
                       aria-label={dayLabel(date) + " " + year + (x.slot ? ", slot " + x.slot : "") + (done(x) ? ", completed" : live(x) ? ", in progress" : "")}
                       title={(x.slot ? "Slot " + x.slot : "Paper") + (done(x) ? " · done" : live(x) ? " · in progress" : "")}
                       onFocus={() => setHov(date)} onBlur={() => setHov(null)}
@@ -161,7 +173,7 @@ function PreviousYears({ groups, title, right, empty }) {
               <h4>Undated</h4>
               <div className="py-chips">
                 {undated.map((x) => (
-                  <button key={x.id} type="button" className={"py-chip st-" + stateOf([x]) + (key === "undated" && chosen && chosen.id === x.id ? " on" : "")}
+                  <button key={x.id} type="button" className={"py-chip st-" + stateOf([x]) + (sel === "undated" && chosen && chosen.id === x.id ? " on" : "")}
                     onClick={() => { setSel("undated"); setPickId({ ...pickId, undated: x.id }); setHov(null); setSure(false); }}>
                     {[x.stage, x.held, x.slot && "Slot " + x.slot].filter(Boolean).join(" · ") || x.name}
                   </button>
@@ -171,7 +183,8 @@ function PreviousYears({ groups, title, right, empty }) {
           )}
           <div className="pyl-key" aria-hidden="true"><span><i className="k-ok" />done</span><span><i className="k-live" />in progress</span><span><i className="k-slot" />not started</span></div>
         </section>
-
+          ) },
+          { id: "tkt", label: "Ticket", node: (
         <aside className="bp-left" aria-label="Sessions">
           {chosen ? (
             <div className={"tk" + (pinned ? "" : " peek")}>
@@ -207,22 +220,10 @@ function PreviousYears({ groups, title, right, empty }) {
               </div>
             </div>
           ) : <div className="tk"><p className="bres-empty" style={{ padding: 18 }}>No papers yet.</p></div>}
-          <div className="bres">
-            <div className="bres-head"><h3>Overall</h3></div>
-            <div className="bres-body">
-              <div className="bres-hero">
-                <Gauge pct={accuracy} />
-                <div className="bh-txt"><b>{attempted.length}/{papers.length}</b><span>papers done</span><small>accuracy across them</small></div>
-              </div>
-              <div className="bres-tiles">
-                <div className="bt-tile"><b>{avg === null ? "–" : avg + "%"}</b><span>average score</span></div>
-                <div className="bt-tile"><b>{bestP === null ? "–" : bestP + "%"}</b><span>best score</span></div>
-                <div className="bt-tile"><b>{(sumR + sumW).toLocaleString()}</b><span>attempted</span></div>
-              </div>
-            </div>
-          </div>
         </aside>
-
+          ) },
+          { id: "rmk", label: "Remarks", node: <Remarks best={bestPaper ? round(bestPaper.score) + "/" + bestPaper.max : null} avgAtt={avgAttP} avgAcc={accuracy} exams={rmExams} noun="papers" /> },
+          { id: "rec", label: "Recent", node: (
         <aside className="bp-recent" aria-label="Recent papers">
           <header><h2>Recent</h2></header>
           {recent.length ? (
@@ -235,6 +236,10 @@ function PreviousYears({ groups, title, right, empty }) {
                       <span className="brh-top"><small>{g.name.replace(/^pyq[- ]/i, "")}</small><em>{r ? "Completed" : "In progress"}</em></span>
                       <span className="brh-day"><small>{x.slot ? "Slot " + x.slot : "Paper"}</small><b>{x.date ? dayLabel(x.date) : "Undated"}</b><i>{r ? round(r.score) + "/" + r.max : "answering"}</i></span>
                     </button>
+                    <div className="brw-hov">
+                      {isLive && <a className="brw-b primary" href={"#/mock/" + g.id + "/" + x.id}>Resume</a>}
+                      <button type="button" className="brw-b" onClick={() => selectPaper(x)}>Open</button>
+                    </div>
                     {open && (
                       <div className="brx">
                         <div className="brx-row">
@@ -252,7 +257,8 @@ function PreviousYears({ groups, title, right, empty }) {
             </div>
           ) : <p>Papers you start show up here.</p>}
         </aside>
-      </div>
+          ) },
+        ]} />
     </div>
   );
 }

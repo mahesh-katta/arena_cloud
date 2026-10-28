@@ -1,3 +1,5 @@
+import Stage from "./Stage.jsx";
+import Remarks from "./Remarks.jsx";
 import { useEffect, useRef, useState } from "react";
 import { mockIndex, useData, useProgress } from "./store.js";
 import { boosterFor, profileLabel } from "./exams.js";
@@ -81,10 +83,10 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
     const el = areaRef.current;
     if (!el) return;
     const calc = () => {
-      const cell = (document.querySelector(".side .navitem") || {}).offsetWidth || 44, gap = 6, cs = getComputedStyle(el);
+      const cell = (document.querySelector(".side .navitem") || {}).offsetWidth || 44, gap = 10, cs = getComputedStyle(el);
       const w = el.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
-      const h = el.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) - cell;
-      const cols = Math.max(1, Math.floor((w + gap) / (cell + gap))), rows = Math.max(1, Math.floor((h + gap) / (cell + gap)));
+      const h = el.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) - 8;
+      const cols = 6, rows = 5;   /* a fixed 6 x 5 sheet: 30 days a slide, same layout even when fewer are left */
       setGeo((o) => (o.cols === cols && o.cell === cell && o.cap === cols * rows ? o : { cols, cell, cap: cols * rows }));
     };
     calc();
@@ -152,6 +154,8 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
     const att = r.right + r.wrong;
     return { title: "Day " + ts[0].day + " · " + ts.map((t) => short(t.section)).join(" + "), score: round(r.score), max: r.max, acc: att ? Math.round((100 * r.right) / att) : null, att, secs: r.secs, bySec, ts };
   })();
+  const rmExams = [...runs].sort((x, y) => (y[1].at || 0) - (x[1].at || 0)).map(([k, r]) => { const ts = k.split("+").map((id) => testById.get(id)), att = r.right + r.wrong; return { key: k, title: "Day " + ts[0].day + " · " + ts.map((t) => short(t.section)).join(" + "), score: round(r.score) + "/" + r.max, att, acc: att ? Math.round((100 * r.right) / att) : null }; });
+  const bestRun = runs.length ? [...runs].sort((x, y) => (y[1].max ? y[1].score / y[1].max : 0) - (x[1].max ? x[1].score / x[1].max : 0))[0][1] : null;
   const mins = (s) => (s === null || s === undefined ? "–" : Math.round(s / 60) + " min");
   const choose = (d) => { setSel(d.day); setPg(null); };
   /* reset = forget the half-finished run saved for that day (finished results are never touched) */
@@ -179,7 +183,8 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
   if (!g) return <div className="page boosterpg">{empty}</div>;
   return (
     <div className="page boosterpg">
-      <div className={"bstage" + (kind ? " mk" : "")}>
+      <Stage className={"bstage" + (kind ? " mk" : "")}
+        top={
         <div className="bp-top">
           <div><h1>{title}</h1><p>{kind ? kind + " · " : ""}{days.length} days · {Math.max(...days.map((d) => d.ts.length))} timed tests a day</p></div>
           {right || (
@@ -188,9 +193,12 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
             </div>
           )}
         </div>
-
+        }
+        cards={[
+          { id: "cal", label: "Calendar", node: (
         <section className="bcal" aria-label={"Booster days " + days[a]?.day + " to " + days[z - 1]?.day}>
           <header aria-live="polite">
+            <div className="bc-hl">
             {mine.length > 1 && (
               <label className="bc-series"><span className="sr-only">Series</span>
                 <select value={g.id} onChange={(e) => { setGi(mine.findIndex((c) => c.id === e.target.value)); setSel(null); setPg(null); setHov(null); }}>
@@ -201,28 +209,29 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
             {hov
               ? <><h2>Day {hov.day}</h2><p>{hov.ts.map((t) => short(t.section)).join(" · ")} · {hov.ts.reduce((x, t) => x + (t.time || 0), 0)} min{info(hov).state === "done" ? " · Done" : info(hov).n ? " · " + info(hov).n + " of " + hov.ts.length + " taken" : ""}</p></>
               : <><h2>Choose a day</h2><p>Days {days[a]?.day} – {days[z - 1]?.day} of {days.length}</p></>}
+            </div>
+            <div className={"bc-arrows" + (pages.length > 1 ? "" : " off")} aria-hidden={pages.length > 1 ? undefined : "true"}>
+              <button type="button" aria-label={"Previous days (" + (cur > 0 ? days[pages[cur - 1][0]].day + "–" + days[pages[cur - 1][1] - 1].day : "") + ")"} disabled={cur === 0} onClick={() => go(cur - 1)}>‹</button>
+              <button type="button" aria-label={"Next days (" + (cur < pages.length - 1 ? days[pages[cur + 1][0]].day + "–" + days[pages[cur + 1][1] - 1].day : "") + ")"} disabled={cur >= pages.length - 1} onClick={() => go(cur + 1)}>›</button>
+            </div>
           </header>
           <div className="bc-area" ref={areaRef}>
           <div className="bc-grid" key={cur} style={{ "--cols": geo.cols, "--cell": geo.cell + "px" }} onMouseLeave={() => setHov(null)}>
             {days.slice(a, z).map((d) => {
               const { n, state } = info(d);
               return (
-                <button key={d.day} type="button" aria-pressed={base.day === d.day} aria-label={"Day " + d.day + (state === "done" ? ", completed" : state === "part" || isLive(d) ? ", in progress" : ", " + n + " of " + d.ts.length + " sections taken")}
+                <button key={d.day} type="button" aria-pressed={sel === d.day} aria-label={"Day " + d.day + (state === "done" ? ", completed" : state === "part" || isLive(d) ? ", in progress" : ", " + n + " of " + d.ts.length + " sections taken")}
                   className={"bc-day st-" + state + (isLive(d) ? " live" : "") + (hov && hov.day === d.day ? " act" : "") + (fits(d, flt) ? "" : " dim")}
                   onMouseEnter={() => setHov(d)} onFocus={() => setHov(d)} onBlur={() => setHov(null)} onKeyDown={keyNav} onClick={() => choose(d)}>{state === "done" ? <span className="dn-ok" aria-hidden="true">✓</span> : state === "part" || isLive(d) ? <span className="dn-live" aria-hidden="true">⏳</span> : d.day}</button>
               );
             })}
+            {Array.from({ length: Math.max(0, geo.cap - (z - a)) }, (_, i) => <span key={"f" + i} className="bc-frozen" aria-hidden="true" />)}
           </div>
           </div>
-          {(
-            <div className={"bc-arrows" + (pages.length > 1 ? "" : " off")} aria-hidden={pages.length > 1 ? undefined : "true"}>
-              <button type="button" aria-label={"Previous days (" + (cur > 0 ? days[pages[cur - 1][0]].day + "–" + days[pages[cur - 1][1] - 1].day : "") + ")"} disabled={cur === 0} onClick={() => go(cur - 1)}>‹</button>
-              <button type="button" aria-label={"Next days (" + (cur < pages.length - 1 ? days[pages[cur + 1][0]].day + "–" + days[pages[cur + 1][1] - 1].day : "") + ")"} disabled={cur >= pages.length - 1} onClick={() => go(cur + 1)}>›</button>
-            </div>
-          )}
           <div className="pyl-key bc-key" aria-hidden="true"><span><i className="k-ok">✓</i>done</span><span><i className="k-hg">⏳</i>in progress</span><span><i className="k-day">7</i>not started</span></div>
         </section>
-
+          ) },
+          { id: "tkt", label: "Ticket", node: (
         <aside className="bp-left" aria-label={"Day " + tk.day + " ticket"}>
           {(() => {
             const { state } = info(tk), liveRun = liveOf(tk)[0], live = !!liveRun;
@@ -266,46 +275,27 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
               </div>
             );
           })()}
-          <div className="bres" onMouseEnter={() => setHold(true)} onMouseLeave={() => setHold(false)} onFocus={() => setHold(true)} onBlur={() => setHold(false)}>
-            <div className="bres-head">
-              <h3>{["Overall", "Averages", "Last exam"][slide]}</h3>
-              <span className="bres-dots" role="tablist" aria-label="Results view">{["Overall", "Averages", "Last exam"].map((t, k) => <button key={t} type="button" role="tab" aria-selected={slide === k} aria-label={t} className={slide === k ? "on" : ""} onClick={() => setSlide(k)} />)}</span>
-            </div>
-            <div className="bres-body" key={slide} aria-live="off">
-              {slide === 2 && !last ? <p className="bres-empty">Finish an exam and its numbers show up here.</p> : (<>
-                <div className="bres-hero">
-                  <Gauge pct={slide === 0 ? accOf(tot) : slide === 1 ? avgAcc : last.acc} />
-                  <div className="bh-txt">
-                    {slide === 0 && <><b>{tot.att.toLocaleString()}</b><span>questions attempted</span><small>accuracy across all {scopeWord}</small></>}
-                    {slide === 1 && <><b>{runs.length}</b><span>exams finished</span><small>average accuracy across them</small></>}
-                    {slide === 2 && <><b>{last.title}</b><span>score {last.score}/{last.max}</span><small>{mins(last.secs)} · {last.att} attempted</small></>}
-                  </div>
-                </div>
-                <div className="bres-tiles">
-                  {slide === 1 ? (<>
-                    <div className="bt-tile"><b>{bestAcc === null ? "–" : bestAcc + "%"}</b><span>best accuracy</span></div>
-                    <div className="bt-tile"><b>{avgAtt === null ? "–" : avgAtt}</b><span>attempted per exam</span></div>
-                    <div className="bt-tile"><b>{tot.att.toLocaleString()}</b><span>total attempted</span></div>
-                  </>) : (slide === 0 ? SECS.map((_, k) => k).filter((k) => k < 3 || present.includes(k)) : present).map((k) => { const [nm, cl] = SECS[k], r = slide === 0 ? res[k] : last.bySec[k], ghost = slide === 0 && !present.includes(k); return (slide === 0 || r.att > 0) && (
-                    <div key={nm} className={"bt-tile " + cl + (ghost ? " frozen" : "")}><i /><b>{ghost || accOf(r) === null ? "–" : accOf(r) + "%"}</b><span>{nm}</span><small>{ghost ? "not in this series" : r.att.toLocaleString() + " attempted"}</small></div>
-                  ); })}
-                </div>
-              </>)}
-            </div>
-          </div>
         </aside>
+          ) },
+          { id: "rmk", label: "Remarks", node: <Remarks best={bestRun ? round(bestRun.score) + "/" + bestRun.max : null} avgAtt={avgAtt} avgAcc={avgAcc} exams={rmExams} noun={kind ? "exams" : "boosters"} /> },
+          { id: "rec", label: "Recent", node: (
         <aside className="bp-recent" aria-label="Recent days">
           <header><h2>Recent</h2></header>
           {recentDays.length ? (
             <div className="brl">
               {recentDays.map((d) => {
                 const { n, state } = info(d), live = liveOf(d)[0], open = openRec === d.day;
+                const hIds = idsOf(d), hPicked = d.ts.filter((t) => hIds.includes(t.id)), hGo = hPicked.length ? "#/mock/" + g.id + "/" + hPicked.map((t) => t.id).join("+") : null;
                 return (
                   <div key={d.day} className={"brw" + (open ? " open" : "")}>
                     <button type="button" className={"brh st-" + state} aria-expanded={open} onClick={() => { setOpenRec(open ? null : d.day); setSure(null); setSecOpen(null); }}>
                       <span className="brh-top"><small>{g.name.replace(/ (Course )?2026$/, "")}</small><em>{state === "done" ? "Completed" : state === "part" || live ? "In progress" : "Not started"}</em></span>
                       <span className="brh-day"><small>Day</small><b>{d.day}</b><i>{n === 0 && live ? live.left + " answered" : n + " of " + d.ts.length + " taken"}</i></span>
                     </button>
+                    <div className="brw-hov">
+                      {live && <a className="brw-b primary" href={"#/mock/" + g.id + "/" + live.key}>Resume</a>}
+                      {hGo && <a className="brw-b" href={hGo}>{live ? "Restart" : "Start"}</a>}
+                    </div>
                     {open && (() => {
                       const ids = idsOf(d), picked = d.ts.filter((t) => ids.includes(t.id)), go = picked.length ? "#/mock/" + g.id + "/" + picked.map((t) => t.id).join("+") : null;
                       const flip = (id) => setTicks({ ...ticks, [d.day]: d.ts.filter((t) => (t.id === id ? !ids.includes(id) : ids.includes(t.id))).map((t) => t.id) });
@@ -340,7 +330,8 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
             </div>
           ) : <p>Exams you start show up here.</p>}
         </aside>
-      </div>
+          ) },
+        ]} />
     </div>
   );
 }

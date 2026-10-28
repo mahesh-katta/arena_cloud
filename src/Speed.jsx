@@ -68,14 +68,12 @@ export function SpeedHome() {
   const stateFor = (t, mode) => stateOf(p, t, mode, !!(spos[t.id] && lvlIn(mode).includes(spos[t.id].lvl)));
   const count = (f) => Object.keys(MODES).reduce((a, mode) => a + ix.topics.filter((t) => modeSets(t, mode) > 0 && passes(f, stateFor(t, mode))).length, 0);
   return (
-    <div className="page pract speedx">
-      <div className="head">
-        <div className="htxt"><h1>Speed Drills</h1><div className="sub">Beginner first, then Perfection</div></div>
-        <div className="hrecent">
-          <div className="filterbar hsearch">
-            <input className="search wide" aria-label="Search chapters" placeholder="Search chapters or concepts" value={q} onChange={(e) => setQ(e.target.value)} />
-            <ViewToggle view={view} setView={setView} />
-          </div>
+    <div className="page pract speedx cfit">
+      <div className="chead2">
+        <h1>Speed Drills</h1>
+        <div className="filterbar hsearch">
+          <input className="search csearch" aria-label="Search chapters" placeholder="Search chapters or concepts" value={q} onChange={(e) => setQ(e.target.value)} />
+          <ViewToggle view={view} setView={setView} />
         </div>
       </div>
       <section className="shelf pwrap">
@@ -97,7 +95,7 @@ export function SpeedHome() {
         const shown = topics.filter(match).filter((t) => passes(flt, stateFor(t, mode))).sort(sortBy || (() => 0));
         const done = topics.flatMap((t) => modeDone(p, t, mode)).length;
             return (
-              <div className="pane" key={mode}>
+              <div className={"pane " + (mode === "repeat" ? "sp-b" : "c-di")} key={mode}>
                 <div className="panehead">
                   <div className="ph-l"><h2>{M.title}</h2><span className="muted small">{mode === "repeat" ? done + "/" + topics.length + " chapters started" : done + "/" + modeTotal(ix, mode).toLocaleString() + " sets · " + shown.length + " chapters"}</span></div>
                   <Dropdown hover label="Sort" prefix="Sort" value={sort[mode]} onChange={(v) => setSort({ ...sort, [mode]: v })} opts={SORTS} />
@@ -113,7 +111,7 @@ export function SpeedHome() {
                       const dotTip = st.key === "new" ? "Not started" : (st.acc === null ? "In progress" : Math.round(100 * st.acc) + "% accuracy" + (st.key === "prog" ? " · in progress" : ""));
                       const href = mode === "repeat" ? "#/speed/" + t.id + "/run?sub=" + encodeURIComponent(ALL_SUB) + "&lvl=pattern&set=all" : "#/speed/" + t.id + "?mode=" + mode;
                       return (
-                        <a key={t.id} className="card tcard" href={href}>
+                        <a key={t.id} className={"card tcard " + (mode === "repeat" ? "sp-b" : "c-di")} href={href}>
                           <div className="top">
                             <span className="tile" title={dotTip}>{glyph(t.topic)}</span>
                             <div className="grow"><div className="name">{t.topic}</div><div className="sub">{mode === "repeat" ? (t.plain ? "" : repeatVariants(t) + " variants · ") + qs.toLocaleString() + " questions" : qs.toLocaleString() + " questions · " + n + " " + unit(mode, n)}</div></div>

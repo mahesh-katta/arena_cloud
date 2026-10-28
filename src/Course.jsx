@@ -64,11 +64,12 @@ const SUB_LINE = {
 };
 const CARD_INFO = { reasoning: "Concept by concept", quant: "Recipe by recipe", cracker: "One topic a day", di: "Charts and tables", english: "Grammar and reading" };
 const ico = (d) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{d}</svg>;
-const CARD_ICON = {
+export const CARD_ICON = {
   reasoning: ico(<><rect x="3.5" y="3.5" width="7" height="7" rx="1.6" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.6" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.6" /><circle cx="17" cy="17" r="3.5" /></>),
   quant: ico(<><path d="M5 8h6M8 5v6M13 8h6M5 17h6M13 14l6 6M19 14l-6 6" /></>),
   cracker: ico(<path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z" />),
   di: ico(<><path d="M4 20V10M10 20V4M16 20v-7M21 20H3" /></>),
+  all: ico(<><rect x="3.5" y="3.5" width="7" height="7" rx="1.6" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.6" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.6" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.6" /></>),
   english: ico(<><path d="M4 20 10 4l6 16M6.4 14h7.2M18 8v8M21 12h-6" /></>),
 };
 const href2 = (subj, t) => (t.practice ? "#/practice/" + t.id : href(subj, t.id));
