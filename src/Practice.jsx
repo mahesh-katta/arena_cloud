@@ -5,6 +5,7 @@ import { resetAll, bankIndex, bankTopic, speedTopic, glatData, mockTest, useData
 import { RANK } from "./priority.js";
 import { Toggle, Tabs, Checks, Facet, FacetBox, Switch, Dropdown, GroupMenu, Chip, Solve, short, useView, ViewToggle, secClass, initials, Ring, Meter, pct, Loading, Failed } from "./ui.jsx";
 import { glyph } from "./TopicIcon.jsx";
+import { CARD_ICON } from "./Course.jsx";
 
 /* answers grouped by the topic file they came from */
 function useTopicStats() {
@@ -91,17 +92,25 @@ export function PracticeHome() {
   const advOpen = advPick === "1" || (advPick === "" && (!!ql || (p.profile && p.profile.stage === "Mains")));
 
   return (
-    <div className="page pract">
-      <div className="head">
-        <div><h1>Topic Practice</h1><div className="sub">Pick a topic and work through its questions</div></div>
+    <div className="page pract cfit">
+      <div className="chead2">
+        <h1>Topic Practice</h1>
+        <input className="search csearch" type="search" aria-label="Search topics" placeholder="Search topics or subtopics" value={q} onChange={(e) => setQ(e.target.value)} />
+      </div>
+      <div className="ccards pcards" role="tablist" aria-label="Sections">
+        {[["all", "All topics", "all", all.length, all.reduce((a, t) => a + t.n, 0)], ...ix.sections.map((x) => [x.name, x.name.replace("Quantitative Aptitude", "Quant").replace("Reasoning Ability", "Reasoning"), /quant/i.test(x.name) ? "quant" : "reasoning", x.topics.length, x.topics.reduce((a, t) => a + t.n, 0)]), ["english", "English", "english", 0, 0]].map(([val, name, cls, nt, nq]) => (
+          <button key={val} type="button" role="tab" aria-selected={sec === val} disabled={val === "english"}
+            className={"ccard c-" + (cls === "all" ? "pall" : cls) + (sec === val ? " on" : "") + (val === "english" ? " soon" : "")} onClick={() => setSec(val)}>
+            <span className="cbot"><b>{name}</b><em>{val === "english" ? "Coming soon" : nq.toLocaleString() + " questions"}</em></span>
+            <span className="ctop"><span className="cico">{CARD_ICON[cls]}</span><span className="cpill">{val === "english" ? "Soon" : nt + " topics"}</span></span>
+          </button>
+        ))}
       </div>
 
       <section className="shelf pwrap">
         <div className="pfix">
         <div className="filterbar">
-          <Dropdown label="Section" value={sec} onChange={setSec} opts={[["all", "All sections", all.reduce((a, t) => a + t.n, 0)], ...ix.sections.map((x) => [x.name, x.name, x.topics.reduce((a, t) => a + t.n, 0)]), ["english", "English Language (coming soon)", null, true]]} />
           {srcOpts.length > 1 && <Dropdown label="Source" multi value={show.src} onChange={(v) => setShow({ ...show, src: v })} opts={srcOpts} />}
-          <input className="search wide" aria-label="Search topics" placeholder="Search topics or subtopics" value={q} onChange={(e) => setQ(e.target.value)} />
           <GroupMenu label="Sort" hint={"Sort: " + (SORTS.find(([k]) => k === sort) || SORTS[0])[4]} active={!!show.di || !!show.prog} summary={(SORTS.find(([k]) => k === sort) || SORTS[0])[1] + (show.di || show.prog ? " +" + ((show.di ? 1 : 0) + (show.prog ? 1 : 0)) : "")} groups={[
             { title: "Sort by", value: sort, onChange: setSort, opts: SORTS },
             { title: "Type", value: show.di, onChange: (v) => setShow({ ...show, di: v }), opts: [["", "All questions"], ["only", "DI / puzzle sets", diCount, diCount === 0], ["single", "Single questions", singleCount, singleCount === 0]] },
@@ -172,7 +181,7 @@ function TopicCard({ t, sec, st, pos, rank, mode = "", srcs = [] }) {
   const pre = t.stages?.Prelims || 0, mains = t.stages?.Mains || 0;
   const done = st?.done || 0, ok = st?.ok || 0;
   return (
-    <a className={"card tcard " + secClass(sec)} href={"#/practice/" + t.id}>
+    <a className={"card tcard " + secClass(sec) + " c-" + (/quant/i.test(sec) ? "quant" : "reasoning")} href={"#/practice/" + t.id}>
       <div className="top">
         <span className="tile">{glyph(t.topic)}</span>
         <div className="grow">

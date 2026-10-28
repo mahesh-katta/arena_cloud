@@ -4086,19 +4086,19 @@ html body .brh, html body .brh.st-done, html body .brh.sel, html body .brh:hover
 
 /* Course home (modern): 10% title + search, 25% gradient section cards, 60% topics, 5% air */
 .course.cfit { --g1: #2563EB; --g2: #06B6D4; display: flex; flex-direction: column; box-sizing: border-box; height: calc(100vh - 16px); padding-bottom: 5vh !important; }
-.course.cfit .chead2 { flex: 0 0 10%; min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.course.cfit .chead2 h1 { margin: 0; font: 800 clamp(26px, 3.2vw, 36px)/1 var(--disp, var(--body)); letter-spacing: -0.035em; }
-.course.cfit .chead2 .csearch { width: min(400px, 50%); height: 44px; border-radius: 999px; background-color: var(--card); border: 1px solid var(--line); box-shadow: 0 1px 2px rgba(15,23,42,.04); }
-.course.cfit .chead2 .csearch:focus-within, .course.cfit .chead2 .csearch:focus { border-color: var(--brand); box-shadow: 0 0 0 4px var(--brand-soft); }
+.cfit .chead2 { flex: 0 0 10%; min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.cfit .chead2 h1 { margin: 0; font: 800 clamp(26px, 3.2vw, 36px)/1 var(--disp, var(--body)); letter-spacing: -0.035em; }
+.cfit .chead2 .csearch { width: min(400px, 50%); height: 44px; border-radius: 999px; background-color: var(--card); border: 1px solid var(--line); box-shadow: 0 1px 2px rgba(15,23,42,.04); }
+.cfit .chead2 .csearch:focus-within, .cfit .chead2 .csearch:focus { border-color: var(--brand); box-shadow: 0 0 0 4px var(--brand-soft); }
 .c-reasoning { --g1: #2563EB; --g2: #06B6D4; } .c-quant { --g1: #059669; --g2: #14B8A6; } .c-cracker { --g1: #F97316; --g2: #E11D48; }
 .c-di { --g1: #7C3AED; --g2: #4F46E5; } .c-english { --g1: #64748B; --g2: #94A3B8; } .c-all { --g1: #334155; --g2: #64748B; }
-.course.cfit .ccards { flex: 0 0 25%; min-height: 150px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; padding: 6px 2px 18px; }
-.course.cfit .ccard { position: relative; display: flex; flex-direction: column; justify-content: space-between; text-align: left; padding: 16px; border: 0; border-radius: 22px; color: #fff; cursor: pointer; overflow: hidden; font-family: var(--body);
+.cfit .ccards { flex: 0 0 25%; min-height: 150px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; padding: 6px 2px 18px; }
+.cfit .ccard { position: relative; display: flex; flex-direction: column; justify-content: space-between; text-align: left; padding: 16px; border: 0; border-radius: 22px; color: #fff; cursor: pointer; overflow: hidden; font-family: var(--body);
   background: linear-gradient(145deg, var(--g1), var(--g2)); box-shadow: 0 10px 24px -14px var(--g1); opacity: .88; transform: scale(.97); transition: transform .25s cubic-bezier(.2,.8,.2,1), opacity .2s, box-shadow .25s; }
-.course.cfit .ccard::before { display: none; }
-.course.cfit .ccard:hover { opacity: .95; transform: translateY(-3px) scale(1); }
-.course.cfit .ccard.on { opacity: 1; transform: translateY(-4px) scale(1); box-shadow: 0 22px 36px -16px var(--g1), 0 0 0 3px var(--card), 0 0 0 5px var(--g1); }
-.course.cfit .ccard.on::after { content: ""; position: absolute; left: 50%; bottom: -7px; width: 14px; height: 14px; background: var(--card); transform: translateX(-50%) rotate(45deg); }
+.cfit .ccard::before { display: none; }
+.cfit .ccard:hover { opacity: .95; transform: translateY(-3px) scale(1); }
+.cfit .ccard.on { opacity: 1; transform: translateY(-4px) scale(1); box-shadow: 0 22px 36px -16px var(--g1), 0 0 0 3px var(--card), 0 0 0 5px var(--g1); }
+.cfit .ccard.on::after { content: ""; position: absolute; left: 50%; bottom: -7px; width: 14px; height: 14px; background: var(--card); transform: translateX(-50%) rotate(45deg); }
 .ccard .orb { position: absolute; border-radius: 50%; background: rgba(255,255,255,.16); pointer-events: none; }
 .ccard .o1 { width: 130px; height: 130px; right: -38px; top: -42px; } .ccard .o2 { width: 80px; height: 80px; right: 28px; bottom: -44px; background: rgba(255,255,255,.1); }
 .ccard .ctop { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
@@ -4108,7 +4108,7 @@ html body .brh, html body .brh.st-done, html body .brh.sel, html body .brh:hover
 .ccard .cbot { position: relative; display: flex; flex-direction: column; gap: 3px; }
 .ccard .cbot b { font: 800 clamp(15px, 1.5vw, 19px)/1.15 var(--disp, var(--body)); letter-spacing: -0.02em; }
 .ccard .cbot em { font: normal 500 12px/1.3 var(--body); opacity: .85; }
-.course.cfit .ccard.soon { background: linear-gradient(145deg, #94A3B8, #CBD5E1); box-shadow: none; opacity: .6; }
+.cfit .ccard.soon { background: linear-gradient(145deg, #94A3B8, #CBD5E1); box-shadow: none; opacity: .6; }
 .course.cfit .cpanel { flex: 1 1 0; min-height: 0; overflow-y: auto; padding: 14px 6px 12px 2px; }
 .phead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin: 0 0 16px; }
 .phead h2 { margin: 0; font: 800 22px var(--disp, var(--body)); letter-spacing: -0.025em; }
@@ -4135,9 +4135,9 @@ html body .course .cgrid .tcard .sub { margin-top: 3px; font: 400 12px/1.35 var(
 .cresume button:hover { background: var(--bg2); color: var(--ink); }
 @media (max-width: 900px) {
   .course.cfit { height: auto; padding-bottom: 100px !important; }
-  .course.cfit .chead2 { flex-wrap: wrap; padding-bottom: 8px; } .course.cfit .chead2 .csearch { width: 100%; }
-  .course.cfit .ccards { display: flex; overflow-x: auto; scroll-snap-type: x proximity; }
-  .course.cfit .ccard { flex: 0 0 180px; min-height: 140px; scroll-snap-align: start; }
+  .cfit .chead2 { flex-wrap: wrap; padding-bottom: 8px; } .cfit .chead2 .csearch { width: 100%; }
+  .cfit .ccards { display: flex; overflow-x: auto; scroll-snap-type: x proximity; }
+  .cfit .ccard { flex: 0 0 180px; min-height: 140px; scroll-snap-align: start; }
   .course.cfit .cpanel { overflow: visible; }
 }
 html body .course .cgrid .tcard::after { display: none; }
@@ -4146,37 +4146,37 @@ html body .course .cgrid .tcard .tile svg, html body .course .cgrid .tcard .tile
 
 /* Course cards, compact pass */
 .c-english { --g1: #DB2777; --g2: #F472B6; }
-.course.cfit .ccards { flex: 0 0 auto; min-height: 0; gap: 12px; padding: 4px 2px 14px; }
-.course.cfit .ccard { height: clamp(104px, 15vh, 128px); padding: 12px 14px; border-radius: 18px; }
-.course.cfit .ccard.on { transform: translateY(-2px); }
-.course.cfit .ccard.on::after { bottom: -6px; width: 12px; height: 12px; }
+.cfit .ccards { flex: 0 0 auto; min-height: 0; gap: 12px; padding: 4px 2px 14px; }
+.cfit .ccard { height: clamp(104px, 15vh, 128px); padding: 12px 14px; border-radius: 18px; }
+.cfit .ccard.on { transform: translateY(-2px); }
+.cfit .ccard.on::after { bottom: -6px; width: 12px; height: 12px; }
 .ccard .cico { width: 32px; height: 32px; border-radius: 10px; } .ccard .cico svg { width: 18px; height: 18px; }
 .ccard .cpill { padding: 3px 9px; font-size: 11px; }
 .ccard .o1 { width: 96px; height: 96px; right: -30px; top: -34px; } .ccard .o2 { width: 60px; height: 60px; right: 22px; bottom: -34px; }
 .ccard .cbot { gap: 1px; }
 .ccard .cbot b { font-size: clamp(13.5px, 1.2vw, 16px); line-height: 1.15; }
 .ccard .cbot em { font-size: 11px; line-height: 1.25; }
-.course.cfit .ccard.soon { background: linear-gradient(145deg, var(--g1), var(--g2)); opacity: .88; }
-.course.cfit .ccard.soon .cpill { background: rgba(255,255,255,.9); color: var(--g1); font-weight: 700; }
-@media (max-width: 900px) { .course.cfit .ccard { flex: 0 0 160px; height: 112px; min-height: 0; } }
+.cfit .ccard.soon { background: linear-gradient(145deg, var(--g1), var(--g2)); opacity: .88; }
+.cfit .ccard.soon .cpill { background: rgba(255,255,255,.9); color: var(--g1); font-weight: 700; }
+@media (max-width: 900px) { .cfit .ccard { flex: 0 0 160px; height: 112px; min-height: 0; } }
 
 /* Course cards: icon and heading sit in the vertical middle, count pill tucked in the corner */
-.course.cfit .ccard { flex-direction: row; align-items: center; justify-content: flex-start; gap: 12px; padding: 12px 14px; }
-.course.cfit .ccard .ctop { display: contents; }
-.course.cfit .ccard .cico { position: relative; flex: none; width: 40px; height: 40px; border-radius: 12px; }
-.course.cfit .ccard .cico svg { width: 22px; height: 22px; }
-.course.cfit .ccard .cpill { position: absolute; top: 9px; right: 10px; padding: 2px 8px; font-size: 10.5px; }
-.course.cfit .ccard .cbot { flex: 1; min-width: 0; margin-top: 8px; justify-content: center; }
-.course.cfit .ccard .cbot b { font-size: clamp(13px, 1.15vw, 15.5px); }
-@media (max-width: 1100px) { .course.cfit .ccard .cico { display: none; } }
+.cfit .ccard { flex-direction: row; align-items: center; justify-content: flex-start; gap: 12px; padding: 12px 14px; }
+.cfit .ccard .ctop { display: contents; }
+.cfit .ccard .cico { position: relative; flex: none; width: 40px; height: 40px; border-radius: 12px; }
+.cfit .ccard .cico svg { width: 22px; height: 22px; }
+.cfit .ccard .cpill { position: absolute; top: 9px; right: 10px; padding: 2px 8px; font-size: 10.5px; }
+.cfit .ccard .cbot { flex: 1; min-width: 0; margin-top: 8px; justify-content: center; }
+.cfit .ccard .cbot b { font-size: clamp(13px, 1.15vw, 15.5px); }
+@media (max-width: 1100px) { .cfit .ccard .cico { display: none; } }
 
 /* Course cards: heading first, caption under it, icon beside the count along the bottom */
-.course.cfit .ccard { flex-direction: column; align-items: stretch; justify-content: space-between; gap: 6px; padding: 12px 14px; }
-.course.cfit .ccard .cbot { flex: none; margin: 0; }
-.course.cfit .ccard .ctop { display: flex; align-items: center; justify-content: flex-start; gap: 8px; }
-.course.cfit .ccard .cico { display: grid !important; width: 28px; height: 28px; border-radius: 9px; }
-.course.cfit .ccard .cico svg { width: 16px; height: 16px; }
-.course.cfit .ccard .cpill { position: static; padding: 3px 9px; font-size: 11px; }
+.cfit .ccard { flex-direction: column; align-items: stretch; justify-content: space-between; gap: 6px; padding: 12px 14px; }
+.cfit .ccard .cbot { flex: none; margin: 0; }
+.cfit .ccard .ctop { display: flex; align-items: center; justify-content: flex-start; gap: 8px; }
+.cfit .ccard .cico { display: grid !important; width: 28px; height: 28px; border-radius: 9px; }
+.cfit .ccard .cico svg { width: 16px; height: 16px; }
+.cfit .ccard .cpill { position: static; padding: 3px 9px; font-size: 11px; }
 
 /* Topic cards: no filled tile, the icon itself carries the section colour */
 html body .course .cgrid .tcard .tile { background: none !important; box-shadow: none !important; color: var(--g1) !important; width: 40px; height: 40px; }
@@ -4184,24 +4184,24 @@ html body .course .cgrid .tcard .tile svg { width: 30px; height: 30px; }
 html body .course .cgrid .tcard .tile svg, html body .course .cgrid .tcard .tile svg * { color: var(--g1) !important; stroke: var(--g1); }
 
 /* Course cards: roomier heading, pointer drawn outside the card in the section colour */
-.course.cfit .ccards { gap: 14px; padding: 4px 2px 22px; }
-.course.cfit .ccard { overflow: visible; height: clamp(118px, 17vh, 142px); padding: 14px 16px; gap: 8px; }
+.cfit .ccards { gap: 14px; padding: 4px 2px 22px; }
+.cfit .ccard { overflow: visible; height: clamp(118px, 17vh, 142px); padding: 14px 16px; gap: 8px; }
 .ccard .cclip { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none; }
-.course.cfit .ccard .cbot { gap: 3px; }
-.course.cfit .ccard .cbot b { font: 800 clamp(15px, 1.35vw, 18px)/1.15 var(--disp, var(--body)); letter-spacing: -0.02em; }
-.course.cfit .ccard .cbot em { font: 500 12px/1.3 var(--body); opacity: .9; }
-.course.cfit .ccard .cico { width: 30px; height: 30px; } .course.cfit .ccard .cico svg { width: 18px; height: 18px; }
-.course.cfit .ccard .cpill { font-size: 11.5px; padding: 3px 10px; }
-.course.cfit .ccard.on::after { content: ""; position: absolute; left: 50%; bottom: -17px; width: 22px; height: 11px; margin-left: -11px; border-radius: 0; background: color-mix(in srgb, var(--g1), var(--g2)); clip-path: polygon(0 0, 100% 0, 50% 100%); transform: none; }
+.cfit .ccard .cbot { gap: 3px; }
+.cfit .ccard .cbot b { font: 800 clamp(15px, 1.35vw, 18px)/1.15 var(--disp, var(--body)); letter-spacing: -0.02em; }
+.cfit .ccard .cbot em { font: 500 12px/1.3 var(--body); opacity: .9; }
+.cfit .ccard .cico { width: 30px; height: 30px; } .cfit .ccard .cico svg { width: 18px; height: 18px; }
+.cfit .ccard .cpill { font-size: 11.5px; padding: 3px 10px; }
+.cfit .ccard.on::after { content: ""; position: absolute; left: 50%; bottom: -17px; width: 22px; height: 11px; margin-left: -11px; border-radius: 0; background: color-mix(in srgb, var(--g1), var(--g2)); clip-path: polygon(0 0, 100% 0, 50% 100%); transform: none; }
 
 /* pointer: a plain coloured chevron below the selected card, pointing up at it */
-.course.cfit .ccard.on::after { content: ""; position: absolute; left: 50%; bottom: -19px; width: 11px; height: 11px; margin-left: -6px; background: none; clip-path: none; border: solid var(--g1); border-width: 3px 0 0 3px; border-radius: 2px; transform: rotate(45deg); }
-.course.cfit .ccard.on::after { bottom: -27px; width: 9px; height: 9px; margin-left: -5px; border-width: 1.5px 0 0 1.5px; border-radius: 1px; }
-.course.cfit .ccards { padding-bottom: 34px; }
-.course.cfit .ccard.on::after { bottom: -34px; }
+.cfit .ccard.on::after { content: ""; position: absolute; left: 50%; bottom: -19px; width: 11px; height: 11px; margin-left: -6px; background: none; clip-path: none; border: solid var(--g1); border-width: 3px 0 0 3px; border-radius: 2px; transform: rotate(45deg); }
+.cfit .ccard.on::after { bottom: -27px; width: 9px; height: 9px; margin-left: -5px; border-width: 1.5px 0 0 1.5px; border-radius: 1px; }
+.cfit .ccards { padding-bottom: 34px; }
+.cfit .ccard.on::after { bottom: -34px; }
 
 /* selected card: thin ring; the panel heading stays put and only the list scrolls */
-.course.cfit .ccard.on { box-shadow: 0 16px 28px -16px var(--g1), 0 0 0 2px var(--card), 0 0 0 3px var(--g1); }
+.cfit .ccard.on { box-shadow: 0 16px 28px -16px var(--g1), 0 0 0 2px var(--card), 0 0 0 3px var(--g1); }
 .course.cfit .cpanel { display: flex; flex-direction: column; overflow: hidden; padding: 10px 0 0; }
 .course.cfit .phead { flex: none; }
 .course.cfit .cbody { flex: 1 1 0; min-height: 0; overflow-y: auto; padding: 2px 6px 12px 2px; }
@@ -4226,3 +4226,297 @@ html body .course .cgrid .tcard .tile svg, html body .course .cgrid .tcard .tile
 .rpop p { margin: 8px; } .rpop .linkbtn { margin: 4px 10px 6px; }
 html body .course .cgrid .tcard.recent { background: color-mix(in srgb, var(--g1) 9%, var(--card)); border-color: color-mix(in srgb, var(--g1) 55%, var(--line)); box-shadow: inset 3px 0 0 var(--g1); }
 .rtag { flex: none; padding: 2px 8px; border-radius: 999px; background: color-mix(in srgb, var(--g1) 16%, transparent); color: var(--g1); font: 700 10.5px var(--body); letter-spacing: .03em; text-transform: uppercase; }
+
+/* Topic Practice and Speed Drills: same minimal-but-rich head as Course */
+.c-pall { --g1: #4F46E5; --g2: #8B5CF6; }
+.pract.cfit .chead2 { flex: none; padding: 4px 0 6px; }
+.pract.cfit .chead2 .filterbar { flex: 0 1 auto; display: flex; align-items: center; gap: 10px; margin: 0; }
+.pract.cfit .chead2 .csearch, .pract.cfit .chead2 .search.csearch { height: 44px; border-radius: 999px; }
+.pract.cfit .pcards { grid-template-columns: repeat(4, minmax(0, 1fr)); padding-bottom: 30px; }
+.pract.cfit .pcards .ccard { height: clamp(96px, 14vh, 118px); }
+.pract.cfit .pcards .ccard:disabled { cursor: default; }
+.pract.cfit .pcards .ccard.soon { opacity: .88; transform: scale(.97); }
+.pract.cfit .pcards .ccard.on::after { bottom: -26px; }
+.pract.cfit .ccard .cbot { order: 0; } .pract.cfit .ccard .ctop { order: 1; }
+/* topic cards: the icon carries the section colour, buttons use the gradient */
+html body .pract:not(.speedx) .pscroll .tcard .tile, html body .pract:not(.speedx) .precent .tile, html body .speedx .pscroll .tcard .tile { background: none; box-shadow: none; color: var(--g1, var(--ink)); }
+html body .pract .pscroll .tcard .tile svg, html body .pract .pscroll .tcard .tile svg * { color: var(--g1, var(--ink)) !important; stroke: var(--g1, var(--ink)); }
+html body .pract .pscroll .tcard .go, html body .pract:not(.speedx) .precent .btn.primary { background: transparent !important; border: 1px solid var(--line) !important; color: var(--ink) !important; }
+html body .pract .pscroll .tcard:hover { border-color: color-mix(in srgb, var(--g1, var(--ink)) 40%, transparent); }
+.speedx .panehead h2::before { content: ""; display: inline-block; width: 6px; height: 1em; margin-right: 10px; vertical-align: -2px; border-radius: 3px; background: linear-gradient(180deg, var(--g1), var(--g2)); }
+.speedx .pane.sp-b .panehead, .speedx .pane.c-di .panehead { border-bottom: 2px solid color-mix(in srgb, var(--g1) 35%, var(--line)); margin-bottom: 14px; }
+.speedx .lvchip.on { background: var(--ink); color: var(--card); }
+@media (max-width: 900px) { .pract.cfit .pcards { display: flex; overflow-x: auto; } .pract.cfit .pcards .ccard { flex: 0 0 160px; } .pract.cfit .chead2 { flex-wrap: wrap; } .pract.cfit .chead2 .filterbar { width: 100%; } }
+.speedx.cfit .chead2 .csearch { width: min(340px, 40vw); flex: none; }
+html body .pract .pscroll :is(.grid, .list) .tcard .go { background: transparent !important; border: 1px solid var(--line) !important; color: var(--ink) !important; transition: background .15s, color .15s, border-color .15s; }
+html body .pract .pscroll :is(.grid, .list) .tcard:hover .go, html body .pract:not(.speedx) .precent .btn.primary:hover { background: linear-gradient(145deg, var(--g1, var(--brand)), var(--g2, var(--brand2))) !important; border-color: transparent !important; color: #fff !important; }
+
+/* Speed Drills: Beginner in yellow; Start / Practice stay plain until the card is hovered */
+.sp-b { --g1: #EAB308; --g2: #F59E0B; }
+html body .speedx .pscroll :is(.grid, .list) .tcard .go { background: transparent !important; border: 1px solid var(--line) !important; color: var(--ink) !important; transition: background .15s, color .15s, border-color .15s; }
+html body .speedx .pscroll :is(.grid, .list) .tcard:hover .go { background: linear-gradient(145deg, var(--g1), var(--g2)) !important; border-color: transparent !important; color: #fff !important; }
+html body .speedx .pscroll :is(.grid, .list) .tcard.sp-b:hover .go { color: #1F2937 !important; }
+
+/* Calendar card only: light head with a gradient strip like the Course cards, round status chips with room between them */
+html body .bcal { position: relative; background: var(--card); }
+html body .bcal::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 5px; z-index: 3; background: linear-gradient(90deg, #2563EB, #06B6D4); }
+html body .bcal header { background: var(--card); border-bottom: 1px solid var(--line); padding-top: 8px; }
+html body .bcal header h2 { color: var(--ink); }
+html body .bcal header p { color: var(--muted); }
+html body .bcal .bc-grid { gap: 14px; padding: 22px 24px; }
+html body .bcal .bc-day { border-radius: 50%; width: 46px; height: 46px; max-width: 46px; max-height: 46px; aspect-ratio: 1; border: 1.5px solid var(--line); background: var(--card); font-weight: 600; }
+html body .bcal .bc-day:hover { border-color: var(--brand); background: var(--brand-soft); }
+html body .bcal .bc-day.st-done { background: var(--ok-soft); border-color: transparent; color: var(--ok); }
+html body .bcal .bc-day.st-part { background: var(--warn-soft); border-color: var(--warn); }
+html body .bcal .bc-day.next { background: linear-gradient(145deg, #2563EB, #06B6D4); border-color: transparent; color: #fff; box-shadow: 0 8px 16px -8px #2563EB; }
+html body .bcal .bc-day.sel { box-shadow: 0 0 0 2px var(--card), 0 0 0 3.5px var(--ink); }
+
+/* Calendar heading as a full-colour card, like the Course page cards */
+html body .bcal::before { display: none; }
+html body .bcal header { margin: 12px 12px 0; height: auto; min-height: 0; padding: 16px 18px; border: 0; border-radius: 18px; background: linear-gradient(145deg, #2563EB, #06B6D4); box-shadow: 0 14px 24px -16px #2563EB; position: relative; overflow: hidden; }
+html body .bcal header h2 { color: #fff; font: 800 clamp(18px, 2.6vh, 22px)/1.15 var(--disp); letter-spacing: -0.02em; }
+html body .bcal header p { display: inline-block; margin: 8px 0 0; padding: 3px 11px; border-radius: 999px; background: rgba(255,255,255,.22); color: #fff; font: 600 11.5px var(--body); }
+html body .bcal header::after { content: ""; position: absolute; right: -30px; top: -40px; width: 110px; height: 110px; border-radius: 50%; background: rgba(255,255,255,.14); pointer-events: none; }
+html body .bcal header p { align-self: flex-start; width: auto; }
+
+/* Calendar: plain heading again; the day tiles are the Course-card style */
+html body .bcal header { margin: 0; padding: 14px 20px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: var(--card); box-shadow: none; overflow: visible; }
+html body .bcal header::after { display: none; }
+html body .bcal header h2 { color: var(--ink); font: 800 clamp(18px, 2.6vh, 22px)/1.15 var(--disp); }
+html body .bcal header p { display: block; margin: 4px 0 0; padding: 0; border-radius: 0; background: none; color: var(--muted); font: 400 13px var(--body); }
+html body .bcal .bc-grid { gap: 12px; }
+html body .bcal .bc-day { width: 48px; height: 48px; max-width: 48px; max-height: 48px; aspect-ratio: auto; border: 0; border-radius: 15px; background: color-mix(in srgb, #2563EB 9%, var(--card)); color: #1D4ED8; font: 700 15px var(--disp); box-shadow: none; transition: transform .15s, box-shadow .15s; }
+html body .bcal .bc-day:hover { background: color-mix(in srgb, #2563EB 16%, var(--card)); transform: translateY(-2px); box-shadow: 0 10px 16px -10px #2563EB; }
+html body .bcal .bc-day.st-done { background: linear-gradient(145deg, #059669, #14B8A6); color: #fff; box-shadow: 0 10px 16px -10px #059669; }
+html body .bcal .bc-day.st-part { background: linear-gradient(145deg, #F59E0B, #F97316); color: #fff; border: 0; box-shadow: 0 10px 16px -10px #F59E0B; }
+html body .bcal .bc-day.next { background: linear-gradient(145deg, #2563EB, #06B6D4); color: #fff; box-shadow: 0 10px 16px -8px #2563EB; }
+html body .bcal .bc-day.sel { box-shadow: 0 0 0 2px var(--card), 0 0 0 3.5px var(--ink); }
+html body .bcal .bc-day .dn-ok, html body .bcal .bc-day .dn-live { color: #fff; }
+
+/* Calendar background: a tinted, glossy card instead of plain white */
+html body .bcal { background: radial-gradient(120% 70% at 15% 0%, color-mix(in srgb, #fff 55%, transparent) 0%, transparent 60%), linear-gradient(160deg, color-mix(in srgb, #2563EB 14%, var(--card)) 0%, color-mix(in srgb, #8B5CF6 10%, var(--card)) 55%, color-mix(in srgb, #06B6D4 12%, var(--card)) 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.7), inset 0 0 0 1px color-mix(in srgb, #2563EB 18%, var(--line)), 0 22px 36px -26px #2563EB; }
+html body .bcal header { background: transparent; border-bottom: 1px solid color-mix(in srgb, #2563EB 16%, var(--line)); }
+html body .bcal .bc-area, html body .bcal .bc-grid { background: transparent; }
+html body .bcal .bc-day { background: color-mix(in srgb, #fff 62%, transparent); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 6px 12px -8px color-mix(in srgb, #2563EB 40%, transparent); backdrop-filter: blur(6px); }
+html body .bcal .bc-day:hover { background: color-mix(in srgb, #fff 82%, transparent); }
+html body .bcal .bc-day.st-done { box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 10px 16px -10px #059669; }
+html body .bcal .bc-day.st-part { box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 10px 16px -10px #F59E0B; }
+html body .bcal .bc-day.next { box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 10px 16px -8px #2563EB; }
+html body .bcal footer, html body .bcal .bc-key { background: color-mix(in srgb, #fff 45%, transparent); border-top: 1px solid color-mix(in srgb, #2563EB 14%, var(--line)); }
+
+/* Calendar, final: a clear blue card with plain white numbers, like the reference but in our palette */
+html body .bcal { background: radial-gradient(110% 60% at 12% 0%, rgba(255,255,255,.18), transparent 60%), linear-gradient(160deg, #2F63E6 0%, #3B5BD6 55%, #4F4FD8 100%); box-shadow: 0 22px 36px -24px #2563EB, inset 0 1px 0 rgba(255,255,255,.25); }
+html body .bcal header { background: transparent; border-bottom: 0; padding: 18px 24px 4px; }
+html body .bcal header h2 { color: #fff; }
+html body .bcal header p { color: rgba(255,255,255,.78); }
+html body .bcal .bc-grid { gap: 8px 10px; padding: 14px 22px; }
+html body .bcal .bc-day { width: 46px; height: 46px; max-width: 46px; max-height: 46px; border: 0; border-radius: 50%; background: transparent; color: #fff; font: 500 clamp(14px, 2vh, 17px) var(--body); box-shadow: none; backdrop-filter: none; transform: none; }
+html body .bcal .bc-day:hover { background: rgba(255,255,255,.16); transform: none; box-shadow: none; }
+html body .bcal .bc-day.sel::before { content: ""; position: absolute; left: 50%; bottom: 7px; width: 18px; height: 2px; margin-left: -9px; border-radius: 2px; background: #fff; }
+html body .bcal .bc-day.sel { box-shadow: none; }
+html body .bcal .bc-day.st-done { background: rgba(255,255,255,.2); color: #fff; box-shadow: none; }
+html body .bcal .bc-day.st-part { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px #FBBF24; }
+html body .bcal .bc-day.next { background: transparent; color: #fff; font-weight: 700; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.75); }
+html body .bcal .bc-day.st-part::after, html body .bcal .bc-day.live::after { background: #FBBF24; }
+html body .bcal .bc-day .dn-ok, html body .bcal .bc-day .dn-live { color: #fff; }
+html body .bcal .bc-arrows button { background: rgba(255,255,255,.16); color: #fff; border: 0; }
+html body .bcal .bc-arrows button:disabled { opacity: .35; }
+html body .bcal footer, html body .bcal .bc-key { background: rgba(0,0,0,.14); border-top: 0; color: rgba(255,255,255,.85); }
+html body .bcal .bc-key span, html body .bcal .bc-key * { color: rgba(255,255,255,.85); }
+
+/* Calendar spacing: the numbers spread to fill the card instead of leaving a gap above the arrows */
+html body .bcal .bc-area { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+html body .bcal .bc-grid { flex: 1; min-height: 0; grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: 46px; align-content: space-evenly; justify-items: center; gap: 0 4px; padding: 6px 18px; }
+html body .bcal .bc-arrows { margin: 0 0 12px; }
+html body .bcal .bc-area .bc-grid { width: 100%; align-self: stretch; flex: 1 1 auto; height: auto; grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr)) !important; grid-auto-rows: 48px; align-content: space-evenly; padding: 8px 14px !important; margin: 0; }
+html body .bcal .bc-area .bc-grid { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; grid-template-rows: repeat(6, minmax(0, 1fr)) !important; grid-auto-rows: auto; align-content: stretch; align-items: center; padding: 8px 12px !important; }
+html body .bcal .bc-day { width: 42px; height: 42px; max-width: 42px; max-height: 42px; }
+html body .bcal .bc-day:not(.next):not(.st-done):not(.st-part) { background: transparent; box-shadow: none; }
+
+/* Booster / Mocks layout: calendar (30 a slide) with Recent scrolling sideways under it, the ticket on the right */
+html body .bcal .bc-area .bc-grid { grid-template-rows: repeat(5, minmax(0, 1fr)) !important; }
+html body .bcal .bc-frozen { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.22); justify-self: center; align-self: center; }
+@media (min-width: 1000px) {
+  html body .page.boosterpg { height: auto !important; min-height: calc(100vh - 44px); padding: 24px 32px 40px !important; }
+  html body .bstage, html body .bstage.py, html body .bstage.py.mk { height: auto; display: grid; gap: 16px; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); grid-template-rows: auto auto auto; grid-template-areas: "top top" "cal tkt" "rec tkt"; }
+  html body .bstage > .bp-top { grid-area: top !important; margin: 0; }
+  html body .bstage > .bcal { grid-area: cal !important; margin: 0; height: 430px; min-height: 0; }
+  html body .bstage > .bp-left { grid-area: tkt !important; margin: 0; padding: 0; background: transparent; display: flex; align-items: stretch; justify-content: stretch; height: auto; }
+  html body .bstage .bp-left .tk { width: 100%; max-width: none; height: auto; flex: 1; }
+  html body .bstage > .bp-recent { grid-area: rec !important; margin: 0; height: auto; max-height: none; align-self: start; display: block; padding: 0 0 14px; border-radius: 18px; overflow: hidden; }
+  html body .bstage .bp-recent header { height: 52px; }
+  html body .bstage .bp-recent .brl { display: flex; flex-direction: row; align-items: flex-start; gap: 12px; padding: 14px 16px 2px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x proximity; }
+  html body .bstage .bp-recent .brw { flex: 0 0 210px; scroll-snap-align: start; }
+  html body .bstage .bp-recent .brw.open { flex-basis: 300px; }
+  html body .bstage .bp-recent > p { margin: 16px 20px 6px; }
+}
+
+/* calendar arrows beside the title; Remarks card; year arrows on Previous years */
+html body .bcal header { display: flex !important; flex-direction: row !important; align-items: center; justify-content: space-between; gap: 12px; }
+html body .bcal header .bc-hl { min-width: 0; display: flex; flex-direction: column; }
+html body .bcal header .bc-arrows { display: flex; flex: none; gap: 8px; margin: 0 !important; padding: 0; position: static; }
+html body .bcal header .bc-arrows.off { visibility: hidden; }
+html body .bcal header .bc-arrows button { width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(255,255,255,.18); color: #fff; font-size: 18px; cursor: pointer; }
+html body .bcal header .bc-arrows button:hover:not(:disabled) { background: rgba(255,255,255,.3); }
+html body .bcal header .bc-arrows button:disabled { opacity: .35; cursor: default; }
+.pyrw { display: flex; align-items: center; gap: 8px; padding: 0 10px; }
+.pyrw .pyr { flex: 1; min-width: 0; }
+.pyr-arr { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); font-size: 18px; cursor: pointer; }
+.pyr-arr:hover:not(:disabled) { border-color: var(--brand); color: var(--brand); }
+.pyr-arr:disabled { opacity: .35; cursor: default; }
+.bp-remarks { display: flex; flex-direction: column; min-height: 0; border-radius: 18px; overflow: hidden; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); }
+.bp-remarks header { flex: none; padding: 14px 18px; background: linear-gradient(105deg, #2563EB, #4F46E5); }
+.bp-remarks header h2 { margin: 0; color: #fff; font: 800 18px/1.15 var(--disp); letter-spacing: -0.02em; }
+.rm-tiles { flex: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 12px 14px 4px; }
+.rm-tile { display: flex; flex-direction: column; gap: 2px; padding: 9px 10px; border-radius: 12px; background: var(--bg2); }
+.rm-tile b { font: 800 clamp(15px, 1.6vw, 19px)/1.1 var(--disp); letter-spacing: -0.02em; color: var(--ink); }
+.rm-tile span { font: 500 11px var(--body); color: var(--muted); }
+.rm-list { flex: 1; min-height: 0; overflow-y: auto; padding: 8px 14px 14px; }
+.rm-list h3 { margin: 6px 0 8px; font: 700 11px var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.rm-empty { margin: 4px 0 0; font: 400 12.5px var(--body); color: var(--muted); }
+.rm-row { padding: 9px 2px; border-top: 1px solid var(--line); }
+.rm-row:first-of-type { border-top: 0; }
+.rm-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.rm-top b { font: 700 13px var(--body); color: var(--ink); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rm-top em { font: 800 14px var(--disp); font-style: normal; color: var(--brand); white-space: nowrap; }
+.rm-sub { display: flex; gap: 14px; margin-top: 2px; font: 400 12px var(--body); color: var(--muted); }
+@media (min-width: 1000px) { html body .fl-card > .bp-remarks { width: 100%; height: 100%; } }
+
+/* Fixed arrangement for Mocks, Booster and Previous years (same on every screen) */
+html body .bstage.stage { display: block !important; height: auto !important; }
+.stg { display: grid; gap: 16px; margin-top: 16px; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: clamp(500px, 64vh, 620px) auto; grid-template-areas: "cal tkt rmk" "rec rec rec"; }
+.stg-cal { grid-area: cal; } .stg-tkt { grid-area: tkt; } .stg-rmk { grid-area: rmk; } .stg-rec { grid-area: rec; }
+.stg-card { min-width: 0; min-height: 0; display: flex; }
+.stg-card > * { flex: 1; min-width: 0; min-height: 0; }
+html body .stg-card > .bcal, html body .stg-card > .bp-left, html body .stg-card > .bp-recent, html body .stg-card > .bp-remarks { position: relative; width: 100% !important; height: 100% !important; max-height: none !important; min-height: 0 !important; margin: 0 !important; grid-area: auto !important; align-self: stretch !important; }
+html body .stg-card > .bp-left { display: flex; padding: 0; background: transparent; }
+html body .stg-card > .bp-left .tk { width: 100%; max-width: none; height: 100%; overflow-y: auto; }
+html body .stg-rec { align-self: start; }
+html body .stg-card > .bp-recent { height: auto !important; display: block !important; padding: 0 0 14px !important; }
+@media (max-width: 1279px) { .stg { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); grid-template-rows: clamp(500px, 64vh, 620px) 320px auto; grid-template-areas: "cal tkt" "rmk rmk" "rec rec"; } }
+@media (max-width: 899px) { .stg { display: flex; flex-direction: column; } .stg-card { height: auto; } html body .stg-card > .bcal, html body .stg-card > .bp-left, html body .stg-card > .bp-remarks { height: auto !important; min-height: 380px !important; } .rm-list { max-height: 320px; } }
+
+/* Recent and Remarks: a plain title row instead of a big blue banner */
+html body .bstage .bp-recent header, html body .bstage .bp-remarks header { height: auto !important; padding: 14px 18px 10px !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--line) !important; box-shadow: none; }
+html body .bstage .bp-recent header h2, html body .bstage .bp-remarks header h2 { color: var(--ink) !important; font: 800 16px/1.2 var(--disp) !important; letter-spacing: -0.01em; }
+html body .bstage .bp-recent .brl { display: flex; flex-direction: row; align-items: flex-start; gap: 12px; padding: 14px 16px 2px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x proximity; }
+html body .bstage .bp-recent .brw { flex: 0 0 220px; scroll-snap-align: start; }
+html body .bstage .bp-recent .brw.open { flex-basis: 300px; }
+html body .bstage .bp-recent > p { margin: 14px 18px 4px; }
+html body .bstage .bp-recent, html body .bstage .bp-remarks { border-radius: 18px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line) !important; overflow: hidden; }
+.bp-remarks { height: 100%; }
+
+/* one screen: the top cards take what is left, Recent gets a bigger row so the whole page fits without scrolling */
+@media (min-width: 1280px) and (min-height: 700px) {
+  html body .page.boosterpg { padding-bottom: 16px !important; }
+  html body .bstage.stage .stg { height: calc(100vh - 240px); min-height: 540px; grid-template-rows: minmax(0, 1fr) clamp(170px, 27vh, 270px); }
+  html body .stg-rec { align-self: stretch; }
+  html body .stg-card > .bp-recent { height: 100% !important; display: flex !important; flex-direction: column; }
+  html body .stg-card > .bp-recent .brl { flex: 1; min-height: 0; align-items: stretch; padding: 14px 18px; gap: 14px; }
+  html body .bstage .bp-recent .brw { flex: 0 0 260px; display: flex; flex-direction: column; }
+  html body .bstage .bp-recent .brw.open { flex-basis: 320px; }
+  html body .bstage .bp-recent .brh { flex: 1; }
+  html body .stg-card > .bp-recent > p { margin: 16px 20px; }
+}
+@media (max-width: 1279px) { .stg { grid-template-rows: clamp(460px, 60vh, 600px) 300px minmax(190px, auto); } html body .stg-card > .bp-recent { min-height: 190px; } html body .bstage .bp-recent .brw { flex-basis: 250px; } }
+
+/* the filled day is the one you picked; the next-up day only gets a ring */
+html body .bcal .bc-day[aria-pressed="true"] { background: #fff !important; color: #2F4FD6 !important; font-weight: 700; box-shadow: 0 8px 16px -8px rgba(0,0,0,.35) !important; }
+html body .bcal .bc-day[aria-pressed="true"]::before { display: none; }
+html body .bcal .bc-day[aria-pressed="true"] .dn-ok, html body .bcal .bc-day[aria-pressed="true"] .dn-live { color: #2F4FD6; }
+
+/* Previous years calendar: tidy, same blue card, glass rows, filled selection */
+html body .bcal.pycal header { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px 6px; }
+html body .bcal.pycal .pyrw { padding: 8px 20px 4px; gap: 10px; }
+html body .bcal.pycal .pyr { margin: 0; padding: 4px; gap: 4px; border-radius: 999px; background: rgba(255,255,255,.14); }
+html body .bcal.pycal .pyr button { padding: 7px 4px 6px; border-radius: 999px; color: rgba(255,255,255,.85); }
+html body .bcal.pycal .pyr button small { color: rgba(255,255,255,.65); }
+html body .bcal.pycal .pyr button:hover { color: #fff; }
+html body .bcal.pycal .pyr button.on { background: #fff; color: #2F4FD6; box-shadow: 0 6px 14px -8px rgba(0,0,0,.4); }
+html body .bcal.pycal .pyr button.on small { color: #5470d8; }
+html body .bcal.pycal .pyr-arr { background: rgba(255,255,255,.18); border: 0; color: #fff; }
+html body .bcal.pycal .pyr-arr:hover:not(:disabled) { background: rgba(255,255,255,.3); color: #fff; }
+html body .bcal.pycal .pyd { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); align-content: start; gap: 12px; padding: 14px 20px 16px; overflow-y: auto; }
+html body .bcal.pycal .pyd-card { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 16px; border-radius: 16px; background: rgba(255,255,255,.14); box-shadow: none; color: #fff; transition: background .15s, transform .15s; }
+html body .bcal.pycal .pyd-card:hover { background: rgba(255,255,255,.22); transform: translateY(-1px); box-shadow: none; }
+html body .bcal.pycal .pyd-card.cur { background: #fff; color: #2F4FD6; box-shadow: 0 10px 20px -12px rgba(0,0,0,.45); }
+html body .bcal.pycal .pyd-day b { color: inherit; font-size: 16px; }
+html body .bcal.pycal .pyd-day em { color: inherit; opacity: .75; }
+html body .bcal.pycal .pyd-slots { gap: 6px; }
+html body .bcal.pycal .pyd-slots .pyl-slot { width: 32px; height: 32px; font-size: 13px; background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.7); }
+html body .bcal.pycal .pyd-card.cur .pyl-slot { color: #2F4FD6; box-shadow: inset 0 0 0 1.5px #5470d8; }
+html body .bcal.pycal .pyl-slot.st-done { background: #10B981 !important; color: #fff !important; box-shadow: none !important; }
+html body .bcal.pycal .pyl-slot.st-part { box-shadow: inset 0 0 0 1.5px #FBBF24 !important; color: #FBBF24 !important; }
+html body .bcal.pycal .pyl-slot.on { background: #2F4FD6 !important; color: #fff !important; box-shadow: none !important; }
+html body .bcal.pycal .pyd-card:not(.cur) .pyl-slot.on { background: #fff !important; color: #2F4FD6 !important; }
+html body .bcal.pycal .pyl-key { background: rgba(0,0,0,.14); }
+html body .bcal .pyl-key, html body .bcal .pyl-key span { color: rgba(255,255,255,.88); background: rgba(0,0,0,.14); }
+
+/* Recent without a box: its cards line up with the calendar's left edge, no glow or fog under or over it */
+html body .bcal { box-shadow: none !important; }
+html body .stg-card > .bp-left .tk, html body .stg-card > .bp-remarks { box-shadow: none !important; }
+html body .bstage .bp-recent { background: none !important; box-shadow: none !important; border-radius: 0 !important; overflow: visible !important; padding: 0 !important; }
+html body .bstage .bp-recent header { padding: 2px 0 12px !important; border: 0 !important; }
+html body .bstage .bp-recent .brl { padding: 0 0 6px !important; -webkit-mask-image: none !important; mask-image: none !important; overflow-x: auto; }
+html body .bstage .bp-recent::before, html body .bstage .bp-recent::after, html body .bstage .bp-recent .brl::before, html body .bstage .bp-recent .brl::after { display: none !important; }
+html body .bstage .bp-recent > p { margin: 0 !important; }
+html body .bstage .bp-recent .brl { align-items: flex-start !important; }
+html body .bstage .bp-recent .brw { display: block; flex: 0 0 250px; }
+html body .bstage .bp-recent .brw.open { flex-basis: 320px; }
+html body .bstage .bp-recent .brh { flex: none; width: 100%; min-height: 108px; }
+
+/* breathing room: title to cards, and cards to Recent */
+.stg { margin-top: 28px; row-gap: 32px; }
+/* Recent cards reveal their buttons on hover or keyboard focus */
+html body .bstage .bp-recent .brw { position: relative; }
+.brw-hov { position: absolute; right: 10px; bottom: 10px; display: flex; gap: 6px; opacity: 0; transform: translateY(4px); pointer-events: none; transition: opacity .15s, transform .15s; z-index: 2; }
+.brw:hover .brw-hov, .brw:focus-within .brw-hov { opacity: 1; transform: none; pointer-events: auto; }
+.brw.open .brw-hov { display: none; }
+.brw-b { height: 28px; padding: 0 12px; display: inline-flex; align-items: center; border: 0; border-radius: 999px; background: rgba(255,255,255,.92); color: #2F4FD6; font: 700 12px var(--body); text-decoration: none; cursor: pointer; box-shadow: 0 6px 12px -6px rgba(0,0,0,.4); }
+.brw-b.primary { background: #fff; color: #1D4ED8; }
+.brw-b:hover { background: #fff; filter: brightness(.97); transform: translateY(-1px); }
+
+/* the calendar row takes the height back (the empty space that sat under Recent); Recent is only as tall as its cards */
+@media (min-width: 1280px) {
+  html body .bstage.stage .stg { height: auto; min-height: 0; grid-template-rows: clamp(560px, 68vh, 740px) auto; }
+  html body .stg-rec { align-self: start; }
+  html body .stg-card > .bp-recent { height: auto !important; display: block !important; }
+  html body .stg-card > .bp-recent .brl { flex: none; }
+}
+@media (min-width: 1280px) { html body .bstage.stage .stg { grid-template-rows: clamp(520px, calc(100vh - 372px), 780px) auto; } }
+
+/* balanced heights: the calendar row is capped, Recent keeps its full height, and the page scrolls instead of squeezing either */
+html body .page.boosterpg { height: auto !important; min-height: calc(100vh - 44px); overflow: visible !important; padding-bottom: 32px !important; }
+@media (min-width: 1280px) { html body .bstage.stage .stg { grid-template-rows: clamp(480px, calc(100vh - 430px), 580px) auto; } }
+html body .stg-rec, html body .stg-card > .bp-recent { min-height: 170px; }
+html body .stg-card > .bp-recent { overflow: visible !important; }
+
+/* ticket: the Start row sits at the bottom, level with the last row of calendar numbers */
+html body .stg-card > .bp-left .tk { display: flex; flex-direction: column; }
+html body .stg-card > .bp-left .tk .tkr-list { flex: none; }
+html body .stg-card > .bp-left .tk .tkr-foot { margin-top: auto; padding-bottom: var(--tk-pad, 54px); }
+/* Recent: roomy card, the two buttons only appear (side by side, equal width) when you hover */
+html body .bstage .bp-recent .brh { min-height: 128px !important; padding-bottom: 50px; }
+.brw-hov { left: 10px !important; right: 10px !important; bottom: 10px !important; display: grid !important; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 8px !important; }
+.brw-b { justify-content: center; height: 32px; width: 100%; font-size: 12.5px; }
+html body .stg-card > .bp-left .tk { --tk-pad: 63px; }
+
+/* the ticket sets the row height; the calendar (and Remarks) are fitted to it, not the other way round */
+html body .bstage.stage .stg { grid-template-rows: auto auto !important; }
+@media (max-width: 1279px) { html body .bstage.stage .stg { grid-template-rows: auto 300px auto !important; } }
+html body .stg-card > .bp-left .tk { height: auto; --tk-pad: 18px; }
+html body .stg-card > .bp-left .tk .tkr-foot { margin-top: 0; padding-bottom: 18px; }
+html body .stg-card > .bp-left .tk .tkr-list { flex: none; }
+.stg-rmk { position: relative; }
+html body .stg-rmk > .bp-remarks { position: absolute !important; inset: 0; height: auto !important; }
+html body .stg-cal > .bcal { min-height: 0 !important; }
+@media (max-width: 899px) { .stg-rmk { position: static; } html body .stg-rmk > .bp-remarks { position: relative !important; } }
+html body .stg-card > .bp-left .tk .tkr-foot { padding-bottom: 55px; }
+html body .stg-card > .bp-left .tk .tkr-foot { padding-bottom: 59px; }
+
+/* Recent buttons sit under the card, outlined until hovered */
+html body .bstage .bp-recent .brh { min-height: 108px !important; padding-bottom: 0 !important; }
+.brw-hov { position: static !important; left: auto !important; right: auto !important; bottom: auto !important; margin-top: 8px; min-height: 34px; transform: none; display: grid !important; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 8px !important; opacity: 0; pointer-events: none; transition: opacity .15s; }
+.brw:hover .brw-hov, .brw:focus-within .brw-hov { opacity: 1; pointer-events: auto; transform: none; }
+.brw-b, .brw-b.primary { height: 34px; border: 1.5px solid var(--ink2) !important; background: transparent !important; color: var(--ink) !important; box-shadow: none !important; font: 700 12.5px var(--body); filter: none !important; transform: none !important; transition: background .15s, color .15s, border-color .15s; }
+.brw-b:hover, .brw-b.primary:hover { border-color: transparent !important; background: linear-gradient(145deg, #2563EB, #4F46E5) !important; color: #fff !important; }
