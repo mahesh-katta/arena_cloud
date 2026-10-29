@@ -67,6 +67,13 @@ for f, d in data.items():
             q['set_name'], q['set_code'] = pick['name'], pick['code']
             q['set_q_no'] = int(pick['sno']) if str(pick['sno']).isdigit() else None
             stat['tagged'] += 1
+            sn = pick['name']
+            if re.search(r'\b(prelim|prelims|beginner|beginners)\b', sn, re.I):
+                q['exam_stage'] = 'Prelims'
+                q['difficulty'] = None
+            elif re.search(r'\bmains\b', sn, re.I):
+                q['exam_stage'] = 'Mains'
+                q['difficulty'] = 'high'
         else: stat['untagged'] += 1
     json.dump(d, open(f, 'w'), ensure_ascii=False, separators=(',', ':'))
 print(dict(stat))
