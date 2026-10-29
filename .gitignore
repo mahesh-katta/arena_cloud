@@ -1,6 +1,8 @@
 node_modules/
 dist/
 data/
+build_tools/
+build_scripts/
 .claude/
 .DS_Store
 arena_dashboard_progress.json

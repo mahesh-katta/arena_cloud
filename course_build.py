@@ -16,7 +16,7 @@ import collections, glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, 'data')
 OUT = os.path.join(DATA, 'course')
-QMAPS = sys.argv[1] if len(sys.argv) > 1 else '/Users/maheshreddykatta/projects/arena/arena_station/question_map/pure_data/course'
+QMAPS = sys.argv[1] if len(sys.argv) > 1 else os.path.join(DATA, 'quant_maps')
 
 REASONING = [  # (topic file in data/bank, shown name)
     ('month-with-date-based-puzzle', 'Month with Date-Based Puzzle'), ('box-based-puzzle', 'Box-Based Puzzle'),
