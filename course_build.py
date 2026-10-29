@@ -80,7 +80,12 @@ def concept(s):
 reasoning = []
 for slug, name in REASONING:
     qs = json.load(open(f'{DATA}/bank/reasoning--{slug}.json'))['questions']
-    qs = [q for q in qs if 'mains' not in (q.get('set_name') or '').lower() and q.get('exam_stage') != 'Mains' and q.get('common_data_id')]
+    def is_prelims(q):
+        sname = (q.get('set_name') or '').lower()
+        if 'prelim' in sname or 'beginner' in sname: return True
+        if 'mains' in sname or q.get('exam_stage') == 'Mains': return False
+        return True
+    qs = [q for q in qs if is_prelims(q) and q.get('common_data_id')]
     puzzles = collections.OrderedDict()
     for q in qs: puzzles.setdefault(q['common_data_id'], []).append(q)
     units = collections.OrderedDict()
