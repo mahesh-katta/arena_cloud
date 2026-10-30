@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
 import { courseIndex, courseTopic, courseQs, bankIndex, useData, useProgress } from "./store.js";
-import { Solve, initials, Meter, Loading, Failed } from "./ui.jsx";
+import { BackBtn, Solve, initials, Meter, Loading, Failed } from "./ui.jsx";
 import { glyph } from "./TopicIcon.jsx";
 
 /* Course: Reasoning or Quant → topic → units → lessons. Reasoning units are concepts and a lesson is one puzzle;
@@ -10,12 +10,32 @@ const SUBJ = { reasoning: "s-r", quant: "s-q" };
 const href = (...a) => "#/course/" + a.map(encodeURIComponent).join("/");
 
 /* Reasoning lessons are all titled "Puzzle n"; name them from their source set instead, e.g. "Beginner · Set 2 · Puzzle 1" */
+/* "New" and 2026 sets are the ones to learn first; the rest are Beginner or Prelims (there are no Mains sets here) */
+const levelOf = (test) => (!test ? "Practice" : /\bnew\s*$|2026/i.test(test) ? "Must Learn" : /begin/i.test(test) ? "Beginner" : "Prelims");
 function setLabel(test) {
   if (!test) return null;
-  const lv = /beginner/i.test(test) ? "Beginner" : /mains/i.test(test) ? "Mains" : /prelim/i.test(test) ? "Prelims" : "Practice";
-  const yr = (test.match(/\b(20\d\d)\b/) || [])[1];
   const set = (test.match(/set\s*[-–]?\s*(\d+)/i) || [])[1];
-  return lv + (yr ? " " + yr : "") + (set ? " · Set " + set : "");
+  return levelOf(test) + (set ? " · Set " + set : "");
+}
+const LEVELS = ["Beginner", "Prelims", "Must Learn", "Practice"];
+/* a unit's lessons grouped by exam level, each group keeping the unit's own lesson numbers; Quant recipes stay one group */
+function groupLessons(lessons, byLevel) {
+  if (!byLevel) return [{ lv: "", items: lessons.map((l, li) => ({ l, li })) }];
+  const g = {};
+  lessons.forEach((l, li) => { const lv = levelOf(l.test); (g[lv] = g[lv] || []).push({ l, li }); });
+  return LEVELS.filter((lv) => g[lv]).map((lv) => ({ lv, items: g[lv] }));
+}
+/* one row per source set ("2026 · Set 1"), its puzzles as small numbered chips */
+function setRows(g, names) {
+  const rows = [];
+  for (const { l, li } of g.items) {
+    const m = names[li].match(/^(.*?)\s*·?\s*Puzzle (\d+)$/);
+    const key = (m ? m[1].replace(new RegExp("^" + g.lv + "\\s*·?\\s*"), "") : names[li]) || g.lv;
+    let r = rows.find((x) => x.key === key);
+    if (!r) rows.push((r = { key, items: [] }));
+    r.items.push({ l, li, k: m ? m[2] : li + 1 });
+  }
+  return rows;
 }
 function lessonNames(lessons) {
   const seen = {}, total = {};
@@ -26,6 +46,26 @@ function lessonNames(lessons) {
     seen[k] = (seen[k] || 0) + 1;
     return k + (total[k] > 1 ? " · Puzzle " + seen[k] : "");
   });
+}
+
+/* Quant recipe titles read "Given pattern -> Find X": show what you will find as the title and the setup as a line under it */
+function recipe(title) {
+  const i = title.indexOf("->");
+  if (i < 0) return { main: title, sub: "" };
+  const find = title.slice(i + 2).trim(), given = title.slice(0, i).replace(/^Template:\s*/i, "").trim();
+  return { main: find.charAt(0).toUpperCase() + find.slice(1), sub: given };
+}
+
+/* the setup of a recipe as short chips: split at commas outside brackets, at most four */
+function givens(sub) {
+  if (!sub) return [];
+  const out = []; let depth = 0, cur = "";
+  for (const ch of sub) {
+    if (ch === "(") depth++; if (ch === ")") depth = Math.max(0, depth - 1);
+    if (ch === "," && !depth) { out.push(cur.trim()); cur = ""; } else cur += ch;
+  }
+  if (cur.trim()) out.push(cur.trim());
+  return out.map((x) => x.replace(/^(with|and)\s+/i, "")).filter(Boolean);
 }
 
 /* the last few lessons opened, newest first, for "Continue where you left off" */
@@ -107,13 +147,15 @@ export function CourseHome() {
     e.preventDefault(); choose(subjects[j].id);
     e.currentTarget.parentNode.children[j]?.focus();
   };
-  const topicCard = (x, t) => (
+  /* long Reasoning titles lose their repeated tail ("Seating Arrangement", "-Based Puzzle") and keep it as a small kind tag */
+  const shortName = (t) => { const m = t.name.match(/^(.*?)(?:[\s-]+Based)?\s+(Seating Arrangement|Puzzle)$/i); return m && !t.practice ? { main: m[1].trim(), kind: /seating/i.test(m[2]) ? "Seating" : "Puzzle" } : { main: t.name, kind: "" }; };
+  const topicCard = (x, t, sn = shortName(t)) => (
     <a key={x.id + t.id} className={"card tcard c-" + x.id + (isRecent.has(x.id + ":" + t.id) ? " recent" : "")} href={href2(x.id, t)}
       onClick={() => { if (t.practice) saveRecent({ subject: x.id, tid: t.id, lid: t.id, practice: true, topic: t.name, unit: "Practice set", name: t.name }); }}>
       <div className="top">
         <span className="tile">{glyph(t.name)}</span>
-        <div className="grow"><div className="name">{t.name}</div>
-          <div className="sub">{t.practice ? (t.questions ? t.questions.toLocaleString() + " questions" : "Practice set") : t.units + (t.units === 1 ? " unit" : " units") + " · " + t.lessons + " lessons · " + t.questions.toLocaleString() + " questions"}</div></div>
+        <div className="grow"><div className="name" title={t.name}>{sn.main}</div>
+          <div className="sub">{t.practice ? (t.questions ? t.questions.toLocaleString() + " questions" : "Practice set") : t.units + (t.units === 1 ? " unit" : " units") + " · " + t.questions.toLocaleString() + " Qs"}</div></div>
       </div>
       {isRecent.has(x.id + ":" + t.id) && <span className="rtag">Recent</span>}
       <span className="tgo" aria-hidden="true">→</span>
@@ -121,11 +163,11 @@ export function CourseHome() {
   );
   return (
     <div className="page course cfit">
-      <div className="chead2">
-        <h1>Course</h1>
+      <div className="bp-top chead3">
+        <div><h1>Modules</h1></div>
         <input className="search csearch" type="search" aria-label="Search all topics" placeholder="Search all topics" value={q} onChange={(e) => setQ(e.target.value)} />
       </div>
-      <div className="ccards" role="tablist" aria-label="Course sections">
+      <div className="ccards" role="tablist" aria-label="Module sections">
         {subjects.map((x, n) => (
           <button key={x.id} id={"ctab-" + x.id} type="button" role="tab" aria-selected={!ql && x.id === s.id} aria-controls="cpanel" tabIndex={x.id === s.id ? 0 : -1}
             className={"ccard c-" + x.id + (!ql && x.id === s.id ? " on" : "") + (x.soon ? " soon" : "")} onClick={() => { setQ(""); choose(x.id); }} onKeyDown={tabKey}>
@@ -171,48 +213,269 @@ export function CourseHome() {
   );
 }
 
+const pct = (a, b) => (b ? Math.round((100 * a) / b) : 0);
+const lstate = (q) => (q.n > 0 && q.done === q.n ? "done" : q.done ? "prog" : "new");
+const PILL = { done: "Completed", prog: "In progress", new: "Not started" };
+const GO = { done: "Review", prog: "Continue", new: "Start" };
+const STATUS = [["all", "All status"], ["new", "Not started"], ["prog", "In progress"], ["done", "Completed"]];
+
+function Ring({ value, color }) {
+  const r = 30, c = 2 * Math.PI * r;
+  return (
+    <svg className="ring" viewBox="0 0 76 76" role="img" aria-label={value + "% complete"}>
+      <circle cx="38" cy="38" r={r} fill="none" stroke="var(--line)" strokeWidth="6.5" />
+      <circle cx="38" cy="38" r={r} fill="none" stroke={color || "var(--subj-main, var(--brand))"} strokeWidth="6.5" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - value / 100)} transform="rotate(-90 38 38)" />
+      <text x="38" y="44" textAnchor="middle" fontSize="16" fontWeight="800" fill="var(--ink)">{value}%</text>
+    </svg>
+  );
+}
+
 export function CourseTopic({ subject, tid }) {
   const p = useProgress();
   const [d, err] = useData(() => courseTopic(subject, tid), [subject, tid]);
+  const [sel, setSel] = useState(null);
+  const [lvPick, setLvPick] = useState("");
+  const [q, setQ] = useState("");
+  const [st, setSt] = useState("all");
   if (err) return <Failed what="this topic" err={err} />;
   if (!d) return <Loading />;
-  const all = d.units.flatMap((u) => u.lessons.flatMap((l) => l.ids));
+  const byLevel = subject === "reasoning";
+  const idsOf = (lessons) => lessons.flatMap((l) => l.ids);
+  const all = d.units.flatMap((u) => idsOf(u.lessons));
   const tot = stat(p.answers, all);
-  /* the first lesson not finished yet, so the page can say where to carry on */
+  const nLessons = d.units.reduce((a, u) => a + u.lessons.length, 0);
+  /* the first lesson not finished yet, in course order (unit, then level, then set) */
   const resume = (() => {
-    for (const u of d.units) { const names = lessonNames(u.lessons); for (let i = 0; i < u.lessons.length; i++) { const l = u.lessons[i]; if (stat(p.answers, l.ids).done < l.ids.length) return { l, name: names[i] }; } }
+    for (const un of d.units) { const nm = lessonNames(un.lessons); for (const gp of groupLessons(un.lessons, byLevel)) for (const { l, li } of gp.items) if (stat(p.answers, l.ids).done < l.ids.length) return { l, name: nm[li], unit: un.name, lv: gp.lv }; }
     return null;
   })();
+  const nextId = resume ? resume.l.id : null;
+  const firstOpen = (() => { const i = d.units.findIndex((x) => { const s = stat(p.answers, idsOf(x.lessons)); return s.done < s.n; }); return i < 0 ? 0 : i; })();
+  const ui = sel == null || !d.units[sel] ? firstOpen : sel;
+  const u = d.units[ui];
+  const names = lessonNames(u.lessons);
+  const groups = groupLessons(u.lessons, byLevel);
+  const lv = groups.some((x) => x.lv === lvPick) ? lvPick : (groups.find((x) => x.items.some((i) => i.l.id === nextId)) || groups[0]).lv;
+  const us = stat(p.answers, idsOf(u.lessons));
+  const subName = subject === "quant" ? "Quant" : "Reasoning";
+  const pick = (n) => { setSel(n); setLvPick(""); setQ(""); setSt("all"); };
+  /* filters: text in the title, status of the lesson */
+  const ql = q.trim().toLowerCase();
+  const keep = ({ l, li }) => (!ql || (names[li] + " " + (l.test || "") + " " + l.title).toLowerCase().includes(ql)) && (st === "all" || lstate(stat(p.answers, l.ids)) === st);
+  const g = { lv, items: groups.find((x) => x.lv === lv).items.filter(keep) };
+  const after = d.units[ui + 1] ? { label: d.units[ui + 1].name, sub: "Next unit", go: () => pick(ui + 1) } : null;
+  const afterCard = after ? (
+    <button type="button" className="aftercard" onClick={after.go}>
+      <span>
+        <small>{after.sub}</small>
+        <b>{after.label}</b>
+      </span>
+      <i className="arrow" aria-hidden="true">→</i>
+    </button>
+  ) : (
+    <a className="aftercard end" href="#/course">
+      <span>
+        <small>Last unit of {d.name}</small>
+        <b>Back to all topics</b>
+      </span>
+      <i className="arrow" aria-hidden="true">→</i>
+    </a>
+  );
+  const state = (s) => (!s.done ? "not started" : s.done < s.n ? s.done + " of " + s.n + " done" : s.ok + " of " + s.n + " right");
+  const lvKey = (e) => {
+    const i = groups.findIndex((x) => x.lv === lv), n = groups.length;
+    const j = e.key === "ArrowRight" ? (i + 1) % n : e.key === "ArrowLeft" ? (i - 1 + n) % n : -1;
+    if (j < 0) return;
+    e.preventDefault(); setLvPick(groups[j].lv); e.currentTarget.parentNode.children[j]?.focus();
+  };
+  const heroSub = resume ? (byLevel ? resume.name.replace(/^(Must Learn|Beginner|Prelims|Practice)\s*/, "").replace(/^[\s·]+/, "") : recipe(resume.name).main) + " · " + resume.l.ids.length + " questions" : "";
+  const sets = setRows(g, names);
   return (
-    <div className={"page course " + SUBJ[subject]}>
-      <div className="crumbs"><a href="#/course">Course</a><span>/</span><a href="#/course">{subject === "quant" ? "Arithmetic" : "Seating & Puzzles"}</a><span>/</span><b>{d.name}</b></div>
-      <div className="head">
-        <div><h1>{d.name}</h1><div className="sub">{d.units.length} units · {d.units.reduce((a, u) => a + u.lessons.length, 0)} lessons · {all.length.toLocaleString()} questions</div></div>
-        <div className="cprog"><Meter ok={tot.ok} bad={tot.done - tot.ok} total={tot.n} /><span className="stat-mini">{tot.done}/{tot.n} done</span>
-          {resume && <a className="btn primary" href={href(subject, tid, resume.l.id)} title={resume.name}>{tot.done ? "Continue" : "Start"}: {resume.name}</a>}</div>
+    <div className={"page course tpage " + SUBJ[subject] + " c-" + subject}>
+      <div className="bp-top chead3 thead2">
+        <div className="tt">
+          <div className="crumbs">
+            <BackBtn />
+            <a href="#/course">Modules</a>
+            <span className="sep">/</span>
+            <a href="#/course" onClick={() => { try { localStorage.setItem("arena-course-subj", subject); } catch {} }}>{subName}</a>
+          </div>
+          <h1>{d.name}</h1>
+        </div>
+        <div className="tprog">
+          <div className="tpl"><b>{tot.done.toLocaleString()} of {tot.n.toLocaleString()} questions</b><small>{d.units.length} {d.units.length === 1 ? "unit" : "units"} · {nLessons} lessons{tot.done ? " · " + pct(tot.ok, tot.done) + "% accuracy" : ""}</small></div>
+          <div className="pbar"><i style={{ width: pct(tot.done, tot.n) + "%" }} /></div>
+          <b className="num">{pct(tot.done, tot.n)}%</b>
+        </div>
       </div>
-      <div className="cunits">
-        {d.units.map((u, ui) => {
-          const us = stat(p.answers, u.lessons.flatMap((l) => l.ids));
-          const names = lessonNames(u.lessons);
-          return (
-            <section key={u.name + ui} className="card concept cunit">
-              <div className="chead"><span className="unum">{ui + 1}</span><h3 className="grow">{u.name}</h3><span className="stat-mini">{us.done}/{us.n}</span></div>
-              <div className="lessons">
-                {u.lessons.map((l, li) => {
-                  const s = stat(p.answers, l.ids);
-                  return (
-                    <a key={l.id} className={"lrow" + tone(s)} href={href(subject, tid, l.id)} aria-label={names[li] + ", " + (s.done ? s.ok + " of " + s.n + " right" : l.ids.length + " questions, not started")}>
-                      <span className="lno">{li + 1}</span>
-                      <span className="ltxt"><b>{names[li]}</b>{l.test && names[li] === l.title && <small>{l.test}</small>}</span>
-                      <span className="lmeta">{s.done ? s.ok + "/" + s.n + " right" : l.ids.length + " questions"}</span>
-                    </a>
-                  );
-                })}
+      <div className="tlay">
+        <nav className="uside" aria-label={d.name + " units"}>
+          <div className="uhead-bar">
+            <span>Units</span>
+            <span className="uhead-count">{d.units.length}</span>
+          </div>
+          <div className="ulist">
+            {d.units.map((x, n) => {
+              const s = stat(p.answers, idsOf(x.lessons));
+              const isFull = s.n > 0 && s.done === s.n;
+              return (
+                <button key={x.name + n} type="button" className={"uitem" + (n === ui ? " on" : "") + (isFull ? " full" : "")} aria-current={n === ui ? "true" : undefined} onClick={() => pick(n)}>
+                  <span className="unum">{isFull ? "✓" : n + 1}</span>
+                  <span className="ctxt">
+                    <b>{x.name}</b>
+                    <span className="urow"><small>{s.done}/{s.n} questions</small><small className="num">{pct(s.done, s.n)}%</small></span>
+                    <i className="ubar"><i style={{ width: pct(s.done, s.n) + "%" }} /></i>
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </nav>
+        <div className="rcol">
+          {resume && (
+            <div className="ustart">
+              <span className="uring" role="img" aria-label={pct(tot.done, tot.n) + "% complete"} style={{ "--p": pct(tot.done, tot.n) }}>
+                <b>{pct(tot.done, tot.n)}<small>%</small></b>
+              </span>
+              <div className="ubody">
+                <b>{resume.unit}</b>
+                <small>
+                  {resume.lv && <span className="uchip">{resume.lv}</span>}
+                  <span>{heroSub}</span>
+                  <span className="udot" aria-hidden="true" />
+                  <span>{tot.done.toLocaleString()}/{tot.n.toLocaleString()} done</span>
+                </small>
               </div>
-            </section>
-          );
-        })}
+              <a href={href(subject, tid, resume.l.id)}>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z" /></svg>
+                {tot.done ? "Resume" : "Start"}
+              </a>
+            </div>
+          )}
+          <section className="upane" aria-labelledby="upane-h">
+            <div className="uhead">
+              <span className="unum big">{ui + 1}</span>
+              <div className="grow">
+                <h2 id="upane-h">{u.name}</h2>
+                <small className="muted">{us.n.toLocaleString()} questions{byLevel && groups.length > 1 ? " across " + groups.length + " levels" : " in " + u.lessons.length + (u.lessons.length === 1 ? " lesson" : " lessons")}</small>
+              </div>
+              <div className="uprog">
+                <small>{us.done}/{us.n} questions</small>
+                <span className="pbar"><i style={{ width: pct(us.done, us.n) + "%" }} /></span>
+                <small className="num">{pct(us.done, us.n)}%</small>
+              </div>
+            </div>
+            <div className="toolrow">
+              {groups.length > 1 ? (
+                <div className="ltabs" role="tablist" aria-label="Exam level">
+                  {groups.map((x) => (
+                    <button key={x.lv} type="button" role="tab" aria-selected={x.lv === lv} tabIndex={x.lv === lv ? 0 : -1} className={"ltab" + (x.lv === lv ? " on" : "")} onClick={() => setLvPick(x.lv)} onKeyDown={lvKey}>
+                      {x.lv} <small>({x.items.length})</small>
+                    </button>
+                  ))}
+                </div>
+              ) : <span className="grow" />}
+              <div className="ttools">
+                <label className="tsearch">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg>
+                  <input type="search" aria-label="Search lessons" placeholder={subject === "reasoning" ? "Search puzzles…" : "Search recipes…"} value={q} onChange={(e) => setQ(e.target.value)} />
+                </label>
+                <select className="tsel" aria-label="Filter by status" value={st} onChange={(e) => setSt(e.target.value)}>
+                  {STATUS.map(([k, n]) => <option key={k} value={k}>{n}</option>)}
+                </select>
+              </div>
+            </div>
+            <div className="uscroll">
+              {!g.items.length && <div className="empty">Nothing matches. <button type="button" className="linkbtn" onClick={() => { setQ(""); setSt("all"); }}>Clear filters</button></div>}
+              {subject === "reasoning" ? (
+                <div className="sets">
+                  {sets.map((r) => {
+                    const s = stat(p.answers, r.items.flatMap((i) => i.l.ids));
+                    const ss = lstate(s);
+                    return (
+                      <section key={r.key} className={"setbox s-" + ss + (r.items.some((i) => i.l.id === nextId) ? " cur" : "")} aria-label={r.key}>
+                        <div className="sethead">
+                          <span className="sq" aria-hidden="true" />
+                          <b>{r.key}</b>
+                          <small>{r.items.length} {r.items.length === 1 ? "puzzle" : "puzzles"} · {s.n} questions</small>
+                          <span className="setp">
+                            <small>{s.done}/{s.n} questions</small>
+                            <span className="pbar"><i style={{ width: pct(s.done, s.n) + "%" }} /></span>
+                            <small className="num">{pct(s.done, s.n)}%</small>
+                          </span>
+                        </div>
+                        <div className="pzgrid">
+                          {r.items.map(({ l, li, k }) => {
+                            const qq = stat(p.answers, l.ids), ls = lstate(qq);
+                            return (
+                              <a key={l.id} className={"pz s-" + ls + (l.id === nextId ? " cur" : "")} href={href(subject, tid, l.id)} aria-label={names[li] + ", " + l.ids.length + " questions, " + state(qq)}>
+                                <span className="pzn">{k}</span>
+                                <span className="pzb">
+                                  <span className="pzt">
+                                    <b>Puzzle {k}</b>
+                                    <em className={"pill s-" + ls}>{PILL[ls]}</em>
+                                  </span>
+                                  <small>{l.ids.length} questions</small>
+                                  {ls === "prog" && (
+                                    <span className="pzp">
+                                      <span className="pbar"><i style={{ width: pct(qq.done, qq.n) + "%" }} /></span>
+                                      <small>{qq.done}/{qq.n} completed</small>
+                                    </span>
+                                  )}
+                                  {ls === "done" && <small className="pzok">{qq.ok}/{qq.n} right</small>}
+                                </span>
+                                <span className={"pzgo" + (ls === "prog" || l.id === nextId ? " pri" : "")}>
+                                  {ls === "new" ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true"><path d="M8 5.5v13l10-6.5z" /></svg> : null}
+                                  {GO[ls]}
+                                  {ls === "new" ? "" : " →"}
+                                </span>
+                              </a>
+                            );
+                          })}
+                        </div>
+                      </section>
+                    );
+                  })}
+                </div>
+              ) : (
+                <ol className="rgrid path2">
+                  {g.items.map(({ l, li }) => {
+                    const qq = stat(p.answers, l.ids); const r = recipe(names[li]); const ls = lstate(qq);
+                    return (
+                      <li key={l.id}>
+                        <a className={"rcard" + tone(qq) + (l.id === nextId ? " nxt" : "")} href={href(subject, tid, l.id)} aria-label={r.main + (r.sub ? ". " + r.sub : "") + ". " + l.ids.length + " questions, " + state(qq)}>
+                          <span className="rtop">
+                            <span className="lno">{li + 1}</span>
+                            <em className={"pill s-" + ls}>{PILL[ls]}</em>
+                          </span>
+                          <span className="rfind">
+                            <small>Find</small>
+                            <b>{r.main.replace(/^Find\s+/i, "").replace(/^./, (c) => c.toUpperCase())}</b>
+                          </span>
+                          {r.sub && (
+                            <span className="rgiven">
+                              <small>Given</small>
+                              <span className="gch">
+                                {givens(r.sub).slice(0, 3).map((x, n) => <i key={n}>{x}</i>)}
+                                {givens(r.sub).length > 3 && <i className="more">+{givens(r.sub).length - 3}</i>}
+                              </span>
+                            </span>
+                          )}
+                          <span className="rfoot">
+                            <span className="rbar"><i style={{ width: pct(qq.done, qq.n) + "%" }} /></span>
+                            <small className="rqn">{qq.done ? qq.done + "/" + qq.n : l.ids.length + " Qs"}</small>
+                            <em>{GO[ls]} →</em>
+                          </span>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ol>
+              )}
+              {afterCard}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
@@ -221,7 +484,7 @@ export function CourseTopic({ subject, tid }) {
 export function CourseLesson({ subject, tid, lid }) {
   const p = useProgress();
   const [d, err] = useData(() => courseTopic(subject, tid), [subject, tid]);
-  const lessons = useMemo(() => (d ? d.units.flatMap((u, ui) => { const names = lessonNames(u.lessons); return u.lessons.map((l, li) => ({ ...l, unit: u.name, ui, name: names[li] })); }) : []), [d]);
+  const lessons = useMemo(() => (d ? d.units.flatMap((u, ui) => { const names = lessonNames(u.lessons); return groupLessons(u.lessons, subject === "reasoning").flatMap((gp) => gp.items.map(({ l, li }) => ({ ...l, unit: u.name, ui, name: names[li] }))); }) : []), [d]);
   const at = lessons.findIndex((l) => l.id === lid);
   const lesson = lessons[at];
   useEffect(() => { if (d && lesson) saveRecent({ subject, tid, lid, topic: d.name, unit: lesson.unit, name: lesson.name }); }, [d, lid]);
@@ -236,15 +499,29 @@ export function CourseLesson({ subject, tid, lid }) {
   const next = lessons[at + 1];
   const s = stat(p.answers, lesson.ids);
   const back = href(subject, tid);
+  const prev = lessons[at - 1];
+  const unitLessons = lessons.filter((l) => l.ui === lesson.ui);
+  const unitPos = unitLessons.findIndex((l) => l.id === lid);
+  const rec = subject === "quant" ? recipe(lesson.name) : { main: lesson.name, sub: "" };
   return (
     <Solve cls={"s-q " + SUBJ[subject]} open={tools} setOpen={setTools}
-      crumbs={<><a href="#/course">Course</a><span>/</span><a href={back}>{d.name}</a><span>/</span><b>{lesson.unit}</b></>}
+      crumbs={<><a href="#/course">Modules</a><span>/</span><a href={back}>{d.name}</a><span>/</span><span>{lesson.unit}</span><span>/</span><b>Lesson {unitPos + 1} of {unitLessons.length}</b></>}
       rail={<div className="card">
-        <div className="railhead"><span className="tile">{glyph(d.name)}</span><div><h3>{lesson.name}</h3><div className="muted small">{lesson.unit}</div></div></div>
+        <div className="railhead"><span className="tile">{glyph(d.name)}</span><div><h3>{rec.main}</h3><div className="muted small">{lesson.unit}</div></div></div>
+        {rec.sub && <p className="muted small rsub">{rec.sub}</p>}
         <div className="kv"><div><b>{s.ok}<small className="muted">/{s.done}</small></b><span>Right so far</span></div><div><b>{lesson.ids.length}</b><span>Questions</span></div></div>
-        <div className="lessons" style={{ marginTop: 10 }}>
-          {lessons.filter((l) => l.ui === lesson.ui).map((l, n) => <a key={l.id} className={"lrow sm" + (l.id === lid ? " now" : "") + tone(stat(p.answers, l.ids))} href={href(subject, tid, l.id)}><span className="lno">{n + 1}</span><span className="ltxt"><b>{l.name}</b></span></a>)}
+        <div className="rnav">
+          {prev ? <a className="btn sm" href={href(subject, tid, prev.id)}>← Previous lesson</a> : <span />}
+          {next && <a className="btn sm" href={href(subject, tid, next.id)}>Next lesson →</a>}
         </div>
+        {d.units.map((u, ui) => (
+          <details key={ui} className="runit" open={ui === lesson.ui}>
+            <summary>{ui + 1}. {u.name}</summary>
+            <ol className="lessons">
+              {lessons.filter((l) => l.ui === ui).map((l, n) => <li key={l.id}><a className={"lrow sm" + (l.id === lid ? " now" : "") + tone(stat(p.answers, l.ids))} aria-current={l.id === lid ? "page" : undefined} href={href(subject, tid, l.id)}><span className="lno">{n + 1}</span><span className="ltxt"><b>{subject === "quant" ? recipe(l.name).main : l.name}</b></span></a></li>)}
+            </ol>
+          </details>
+        ))}
       </div>}>
       {end ? (
         <div className="card done">
@@ -257,9 +534,15 @@ export function CourseLesson({ subject, tid, lid }) {
           </div>
         </div>
       ) : !qs.length ? <div className="empty">This lesson has no questions.</div> : (
+        <>
+        <div className="lhead"><h1>{rec.main}</h1>{rec.sub && <p className="muted small">{rec.sub}</p>}</div>
+        <nav className="qdots" aria-label="Questions in this lesson" ref={(el) => { el?.querySelector(".cur")?.scrollIntoView({ block: "nearest", inline: "center" }); }}>
+          {qs.map((q, n) => { const a = p.answers[lesson.ids[n]]; return <button key={n} type="button" className={"qd" + (n === i ? " cur" : "") + (a ? (a.ok ? " ok" : " bad") : "")} aria-current={n === i ? "step" : undefined} aria-label={"Question " + (n + 1) + (a ? (a.ok ? ", right" : ", wrong") : ", not answered")} onClick={() => setI(n)}>{n + 1}</button>; })}
+        </nav>
         <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={[[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
           onPrev={i > 0 ? () => setI(i - 1) : null}
           onNext={() => (i + 1 >= qs.length ? setEnd(true) : setI(i + 1))} nextLabel={i + 1 >= qs.length ? "Finish lesson" : "Next question"} />
+        </>
       )}
     </Solve>
   );

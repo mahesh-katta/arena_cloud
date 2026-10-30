@@ -57,6 +57,7 @@ export function Home() {
   const p = useProgress();
   const week = useWeek();
   const [lay, setLay] = useView("ap-home-lay", "list");
+  const [tileStyle, setTileStyle] = useView("ap-tiles-variant", "v1");
   const [bx, berr] = useData(bankIndex, []);
   const [sx, serr] = useData(speedIndex, []);
   const [mx, merr] = useData(mockIndex, []);
@@ -90,7 +91,7 @@ export function Home() {
       title: t.topic,
       sub: (ps && ps.i > 0 ? "Question " + Math.min(ps.i + 1, ps.n || t.n) + " of " + (ps.n || t.n) + " · " : "") + short(t.sec),
       pct: t.n ? (100 * d) / t.n : 0,
-      m1: [d + "/" + t.n.toLocaleString(), "done"], m2: [d ? pct(st.ok, d) + "%" : "–", "accuracy"],
+      m1: [d + "/" + t.n.toLocaleString(), "done"], m2: [(d ? pct(st.ok, d) : 0) + "%", "accuracy"],
       href: "#/practice/" + t.id, cta: d || (ps && ps.i) ? "Continue" : "Start",
     };
   };
@@ -108,7 +109,7 @@ export function Home() {
       title: t.topic,
       sub: prog ? prog.sub + " · " + (LEVELS[prog.lvl] || prog.lvl) + " · " + (prog.set === "all" ? "All questions" : "Set " + prog.set) + " · Question " + (prog.i + 1) + " of " + prog.n : rec ? rec.sub + " · " + (LEVELS[rec.lvl] || rec.lvl) + " · " + (rec.n === "all" ? "All questions" : "Set " + rec.n) + " · " + rec.r.right + "/" + rec.r.total : Object.keys(t.subtopics).length + (Object.keys(t.subtopics).length === 1 ? " concept · " : " concepts · ") + t.n.toLocaleString() + " questions",
       pct: rec ? (100 * rec.r.right) / (rec.r.total || 1) : 0,
-      m1: [mineS.length + "/" + sets, "sets"], m2: [tot ? pct(right, tot) + "%" : "–", "accuracy"],
+      m1: [mineS.length + "/" + sets, "sets"], m2: [(tot ? pct(right, tot) : 0) + "%", "accuracy"],
       href: prog ? "#/speed/" + t.id + "/run?sub=" + encodeURIComponent(prog.sub) + "&lvl=" + prog.lvl + "&set=" + prog.set : "#/speed/" + t.id, cta: prog || rec ? "Continue" : "Start",
     };
   };
@@ -227,14 +228,20 @@ export function Home() {
         </div>
 
         <div className="dash-side">
-          <div className="tiles">
+          <div className={"tiles " + tileStyle}>
           <div className="bigstats">
             <StreakTile streak={streak} today={today} />
             <ExamTile days={examDays} name={examName} date={p.profile && p.profile.examDate} />
           </div>
           <div className="bigstats">
-            <div className="card bigstat" title={"of " + totalQ.toLocaleString() + " questions"}><b className={"bn" + (doneQ.toLocaleString().length > 3 ? " long" : "")}>{doneQ.toLocaleString()}</b><span>questions done</span></div>
-            <div className="card bigstat" data-band={!doneQ ? "none" : pct(okQ, doneQ) >= 80 ? "good" : pct(okQ, doneQ) >= 50 ? "mid" : "low"} title="Green from 80%, amber from 50%, red below"><b className="bn">{doneQ ? pct(okQ, doneQ) + "%" : "–"}</b><span>accuracy</span></div>
+            <div className="card bigstat" title={"of " + totalQ.toLocaleString() + " questions"}>
+              <b className={"bn" + (doneQ.toLocaleString().length > 3 ? " long" : "")}>{doneQ.toLocaleString()}</b><span>questions done</span>
+              <Meter v={totalQ ? (100 * doneQ) / totalQ : 0} note={"of " + totalQ.toLocaleString()} />
+            </div>
+            <div className="card bigstat" data-band={!doneQ ? "none" : pct(okQ, doneQ) >= 80 ? "good" : pct(okQ, doneQ) >= 50 ? "mid" : "low"} title="Green from 80%, amber from 50%, red below">
+              <b className="bn">{(doneQ ? pct(okQ, doneQ) : 0) + "%"}</b><span>accuracy</span>
+              <Meter v={doneQ ? pct(okQ, doneQ) : 0} note={!doneQ ? "answer to start" : pct(okQ, doneQ) >= 80 ? "great work" : pct(okQ, doneQ) >= 50 ? "aim for 80%" : "revise mistakes"} />
+            </div>
           </div>
           </div>
           <WeekChart week={week} />
@@ -258,6 +265,18 @@ function Modal({ label, onClose, children }) {
   );
 }
 
+/* thin progress bar with a short note under a home tile; `segs` draws it as that many blocks instead */
+function Meter({ v, note, segs, on }) {
+  return (
+    <span className="tmeter" aria-hidden="true">
+      {segs
+        ? <i className="tsegs">{Array.from({ length: segs }, (_, k) => <u key={k} className={k < on ? "on" : ""} />)}</i>
+        : <i className="tbar"><u style={{ width: Math.min(100, Math.max(0, v)) + "%" }} /></i>}
+      <small>{note}</small>
+    </span>
+  );
+}
+
 /* streak: days in a row on which all four goals were met */
 function StreakTile({ streak, today }) {
   const [open, setOpen] = useState(false);
@@ -266,6 +285,7 @@ function StreakTile({ streak, today }) {
     <>
       <button type="button" className="card bigstat tilebtn" onClick={() => setOpen(true)} aria-haspopup="dialog" title={"Today: " + met + " of 4 goals done"}>
         <b className="bn">{streak}</b><span>day streak</span>
+        <Meter v={(100 * met) / 4} note={met + "/4 goals today"} segs={4} on={met} />
       </button>
       {open && (
         <Modal label="Daily streak goals" onClose={() => setOpen(false)}>
@@ -304,6 +324,7 @@ function ExamTile({ days, name, date }) {
     <>
       <button type="button" className="card bigstat tilebtn" onClick={() => { setV(date || ""); setOpen(true); }} aria-haspopup="dialog" title={name}>
         <b className="bn">{big}</b><span>{small}</span>
+        <Meter v={days > 0 ? Math.max(4, 100 - (100 * days) / 180) : 0} note={date ? new Date(date + "T00:00").toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }) : "tap to set date"} />
       </button>
       {open && (
         <Modal label="Exam date" onClose={() => setOpen(false)}>

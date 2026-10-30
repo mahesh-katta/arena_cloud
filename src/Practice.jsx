@@ -93,9 +93,25 @@ export function PracticeHome() {
 
   return (
     <div className="page pract cfit">
-      <div className="chead2">
+      <div className="bp-top chead3">
         <h1>Topic Practice</h1>
-        <input className="search csearch" type="search" aria-label="Search topics" placeholder="Search topics or subtopics" value={q} onChange={(e) => setQ(e.target.value)} />
+        <div className="hright">
+            <div className="filterbar">
+              {srcOpts.length > 1 && <Dropdown label="Source" multi value={show.src} onChange={(v) => setShow({ ...show, src: v })} opts={srcOpts} />}
+              <GroupMenu label="Sort" hint={"Sort: " + (SORTS.find(([k]) => k === sort) || SORTS[0])[4]} active={!!show.di || !!show.prog} summary={(SORTS.find(([k]) => k === sort) || SORTS[0])[1] + (show.di || show.prog ? " +" + ((show.di ? 1 : 0) + (show.prog ? 1 : 0)) : "")} groups={[
+                { title: "Sort by", value: sort, onChange: setSort, opts: SORTS },
+                { title: "Type", value: show.di, onChange: (v) => setShow({ ...show, di: v }), opts: [["", "All questions"], ["only", "DI / puzzle sets", diCount, diCount === 0], ["single", "Single questions", singleCount, singleCount === 0]] },
+                { title: "Status", value: show.prog, onChange: (v) => setShow({ ...show, prog: v }), opts: [["", "All"], ["todo", "Not attempted"], ["done", "Attempted"]] },
+              ]} />
+              <ViewToggle view={view} setView={setView} />
+            </div>
+          <input className="search csearch" type="search" aria-label="Search topics" placeholder="Search topics or subtopics" value={q} onChange={(e) => setQ(e.target.value)} />
+          <div className="hact">
+            {(nShow > 0 || q) && <button type="button" className="btn ghost sm" onClick={clearAll}>Clear filters</button>}
+            {sure ? <span className="tgroup"><span className="muted small">Erase all progress and history?</span><button type="button" className="btn danger sm" onClick={() => { resetAll(); setTimeout(() => location.reload(), 900); }}>Yes, reset</button><button type="button" className="btn ghost sm" onClick={() => setSure(false)}>Cancel</button></span>
+              : <button type="button" className="btn ghost sm" onClick={() => setSure(true)}>Reset all</button>}
+          </div>
+        </div>
       </div>
       <div className="ccards pcards" role="tablist" aria-label="Sections">
         {[["all", "All topics", "all", all.length, all.reduce((a, t) => a + t.n, 0)], ...ix.sections.map((x) => [x.name, x.name.replace("Quantitative Aptitude", "Quant").replace("Reasoning Ability", "Reasoning"), /quant/i.test(x.name) ? "quant" : "reasoning", x.topics.length, x.topics.reduce((a, t) => a + t.n, 0)]), ["english", "English", "english", 0, 0]].map(([val, name, cls, nt, nq]) => (
@@ -108,30 +124,15 @@ export function PracticeHome() {
       </div>
 
       <section className="shelf pwrap">
-        <div className="pfix">
-        <div className="filterbar">
-          {srcOpts.length > 1 && <Dropdown label="Source" multi value={show.src} onChange={(v) => setShow({ ...show, src: v })} opts={srcOpts} />}
-          <GroupMenu label="Sort" hint={"Sort: " + (SORTS.find(([k]) => k === sort) || SORTS[0])[4]} active={!!show.di || !!show.prog} summary={(SORTS.find(([k]) => k === sort) || SORTS[0])[1] + (show.di || show.prog ? " +" + ((show.di ? 1 : 0) + (show.prog ? 1 : 0)) : "")} groups={[
-            { title: "Sort by", value: sort, onChange: setSort, opts: SORTS },
-            { title: "Type", value: show.di, onChange: (v) => setShow({ ...show, di: v }), opts: [["", "All questions"], ["only", "DI / puzzle sets", diCount, diCount === 0], ["single", "Single questions", singleCount, singleCount === 0]] },
-            { title: "Status", value: show.prog, onChange: (v) => setShow({ ...show, prog: v }), opts: [["", "All"], ["todo", "Not attempted"], ["done", "Attempted"]] },
-          ]} />
-          <ViewToggle view={view} setView={setView} />
-        </div>
-        <div className="listtop"><span className="muted small resultcount" aria-live="polite">{topics.length} of {s.topics.length} · {pct(right, answers.length)}% accuracy overall</span><span className="grow" />
-          {(nShow > 0 || q) && <button type="button" className="btn ghost sm" onClick={clearAll}>Clear filters</button>}
-          {sure ? <span className="tgroup"><span className="muted small">Erase all progress and history?</span><button type="button" className="btn danger sm" onClick={() => { resetAll(); setTimeout(() => location.reload(), 900); }}>Yes, reset</button><button type="button" className="btn ghost sm" onClick={() => setSure(false)}>Cancel</button></span>
-            : <button type="button" className="btn ghost sm" onClick={() => setSure(true)}>Reset all</button>}
-        </div>
+        <div className="pfix prow">
+          <div className="plhead">
+            <h2 className="plh">{sec === "all" ? "All topics" : ((s.name || "").replace("Quantitative Aptitude", "Quant").replace("Reasoning Ability", "Reasoning"))}</h2>
+          <div className="listtop"><span className="muted small resultcount" aria-live="polite">{topics.length} of {s.topics.length} · {pct(right, answers.length)}% accuracy overall</span><span className="grow" />
+          </div>
+          </div>
         </div>
         <div className="pgsplit">
         <div className="pscroll">
-        {weak.length > 0 && (
-          <section className="shelf">
-            <h2>Weak areas <span className="muted small">below 60% accuracy</span></h2>
-            <div className="grid">{weak.map((t) => <TopicCard key={t.id} t={t} sec={t.sec} st={stats[t.id]} pos={pos[t.id]} />)}</div>
-          </section>
-        )}
         <div className={view === "grid" ? "grid" : "list"}>
           {core.map((t) => <TopicCard key={t.id} t={t} sec={t.sec} st={stats[t.id]} pos={pos[t.id]} rank={sort === "pri" ? RANK[t.id] : 0} mode={show.di} srcs={show.src} />)}
           {!topics.length && <div className="empty">No topic matches these choices. <button className="linkbtn" onClick={clearAll}>Show all topics</button></div>}
@@ -152,7 +153,8 @@ export function PracticeHome() {
           </div>
         )}
         </div>
-      <aside className="precent" aria-label="Recently opened">
+      <div className="pside">
+        <aside className="precent" aria-label="Recently opened">
         <h2>Recently opened</h2>
         {recentTopics.length === 0 && <p className="muted small">Topics you open will show up here.</p>}
         {recentTopics.map((t) => (
@@ -162,7 +164,20 @@ export function PracticeHome() {
             <a className="btn primary sm" href={"#/practice/" + t.id}>Start</a>
           </div>
         ))}
-      </aside>
+        </aside>
+        {weak.length > 0 && (
+          <aside className="precent pweak" aria-label="Weak areas">
+            <h2>Weak areas <span className="muted small">below 60% accuracy</span></h2>
+            {weak.map((t) => (
+              <div className="rrow" key={t.id}>
+                <span className="tile">{glyph(t.topic)}</span>
+                <span className="rname">{t.topic}<small className="muted wacc">{pct(stats[t.id].ok, stats[t.id].done)}% · {stats[t.id].done} done</small></span>
+                <a className="btn primary sm" href={"#/practice/" + t.id}>Practice</a>
+              </div>
+            ))}
+          </aside>
+        )}
+      </div>
         </div>
       </section>
     </div>

@@ -17,7 +17,7 @@ export function Settings() {
   const name = nm ?? (p.user ? p.user.name : "");
   return (
     <div className="page narrow">
-      <div className="head"><div><h1>Settings</h1></div></div>
+      <div className="bp-top chead3"><div><h1>Settings</h1></div></div>
       <div className="card pad section">
         <h3>Profile</h3>
         <form className="namerow" onSubmit={(e) => { e.preventDefault(); if (name.trim()) { setName(name); setNm(null); setDone("Name saved."); } }}>

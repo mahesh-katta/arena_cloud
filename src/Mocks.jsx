@@ -3,7 +3,7 @@ import { SplitQ, Options, Solution, fmt, useKeys } from "./Question.jsx";
 import { mockIndex, mockTest, useData, useProgress, saveMock, update } from "./store.js";
 import { fits, profileLabel } from "./exams.js";
 import { useScope } from "./Profile.jsx";
-import { Facet, Checks, Switch, Dropdown, Chip, secClass, short, initials, Meter, pct, Loading, Failed, useView, ViewToggle } from "./ui.jsx";
+import { BackBtn, Facet, Checks, Switch, Dropdown, Chip, secClass, short, initials, Meter, pct, Loading, Failed, useView, ViewToggle } from "./ui.jsx";
 
 const KINDS = [["pyq", "Previous years"], ["sectional", "Sectional Tests"], ["booster", "Score Boosters"]];
 const NOTES = {
@@ -63,7 +63,7 @@ export function MockGroup({ gid, embedded }) {
   const done = g.tests.filter((t) => p.mocks[t.id]).length;
   return (
     <div className={embedded ? "" : "page"}>
-      {!embedded && <div className="crumbs">{col.kind === "booster" ? <a href="#/booster">Booster</a> : <><a href="#/mocks">Mock Tests</a><span>/</span>{kindName}</>}<span>/</span><b>{g.name}</b></div>}
+      {!embedded && <div className="crumbs"><BackBtn />{col.kind === "booster" ? <a href="#/booster">Booster</a> : <><a href="#/mocks">Mock Tests</a><span>/</span>{kindName}</>}<span>/</span><b>{g.name}</b></div>}
       {!embedded && <div className="head">
         <div><h1>{g.name}</h1><div className="sub">{g.tests.length} {pyq ? "memory-based papers" : "tests"} · {done} taken</div></div>
       </div>}
@@ -243,7 +243,7 @@ export function MockTest({ gid, mid }) {
   if (mode === "result") return <Result T={T} t={t} r={result || last} gid={gid} onReview={() => setMode("review")} onRetake={() => { setResult(null); fresh(); }} />;
   return (
     <div className="page">
-      <div className="crumbs"><a href={t.kind === "booster" ? "#/booster" : "#/mocks"}>{t.kind === "booster" ? "Booster" : "Mock Tests"}</a><span>/</span><a href={t.kind === "booster" ? "#/booster" : "#/mocks/" + gid}>{t.groupName}</a><span>/</span><b>Instructions</b></div>
+      <div className="crumbs"><BackBtn /><a href={t.kind === "booster" ? "#/booster" : "#/mocks"}>{t.kind === "booster" ? "Booster" : "Mock Tests"}</a><span>/</span><a href={t.kind === "booster" ? "#/booster" : "#/mocks/" + gid}>{t.groupName}</a><span>/</span><b>Instructions</b></div>
       <Hero T={T} t={t}>
         <div className="actions">
           {saved ? <><button className="btn primary" onClick={() => setMode("run")}>Resume test · {Object.keys(saved.answers || {}).length} answered</button><button className="btn" onClick={fresh}>Start over</button></>
@@ -387,7 +387,7 @@ function Result({ T, t, r, gid, onReview, onRetake }) {
   const cut = T.m.cutoff;
   return (
     <div className="page">
-      <div className="crumbs"><a href={t.kind === "booster" ? "#/booster" : "#/mocks"}>{t.kind === "booster" ? "Booster" : "Mock Tests"}</a><span>/</span><a href={t.kind === "booster" ? "#/booster" : "#/mocks/" + gid}>{t.groupName}</a><span>/</span><b>Scorecard</b></div>
+      <div className="crumbs"><BackBtn /><a href={t.kind === "booster" ? "#/booster" : "#/mocks"}>{t.kind === "booster" ? "Booster" : "Mock Tests"}</a><span>/</span><a href={t.kind === "booster" ? "#/booster" : "#/mocks/" + gid}>{t.groupName}</a><span>/</span><b>Scorecard</b></div>
       <Hero T={T} t={t}>
         <div className="actions">
           {then && <a className="btn primary" href={"#/mock/" + gid + "/" + then.to} onClick={() => { try { sessionStorage.removeItem("ap-then"); } catch {} }}>Next: {then.label} test →</a>}

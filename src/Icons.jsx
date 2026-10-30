@@ -77,9 +77,8 @@ const HomeIcon = ({ solid }) => (
 
 const CourseIcon = ({ solid }) => (
   <svg {...P} strokeWidth={solid ? 2 : 1.8}>
-    <path d="M5 5.2A1.7 1.7 0 0 1 6.7 3.5H19v14H6.7A1.7 1.7 0 0 0 5 19.2z" fill={solid ? "currentColor" : "none"} fillOpacity={solid ? ".4" : undefined} />
-    <path d="M5 19.2a1.7 1.7 0 0 0 1.7 1.7H19v-3.4" />
-    <path d="M9 8h6M9 11.5h4" />
+    <path d="M12 6.8C10.4 5.5 8.2 4.8 5.6 4.8a1.1 1.1 0 0 0-1.1 1.1v10.9a1.1 1.1 0 0 0 1.1 1.1c2.6 0 4.8.7 6.4 2z" fill={solid ? "currentColor" : "none"} fillOpacity={solid ? ".4" : undefined} />
+    <path d="M12 6.8c1.6-1.3 3.8-2 6.4-2a1.1 1.1 0 0 1 1.1 1.1v10.9a1.1 1.1 0 0 1-1.1 1.1c-2.6 0-4.8.7-6.4 2z" fill={solid ? "currentColor" : "none"} fillOpacity={solid ? ".4" : undefined} />
   </svg>
 );
 
