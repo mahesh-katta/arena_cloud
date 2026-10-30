@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
 import { speedIndex, speedTopic, useData, useProgress, usePersisted, saveSpeed, readSpos, writeSpos, clearSpos, LEVELS } from "./store.js";
-import { Dropdown, Solve, useView, ViewToggle, initials, Meter, Ring, pct, Loading, Failed } from "./ui.jsx";
+import { BackBtn, Dropdown, Solve, useView, ViewToggle, initials, Meter, Ring, pct, Loading, Failed } from "./ui.jsx";
 import { glyph } from "./TopicIcon.jsx";
 
 const ALL_SUB = "All concepts";
@@ -55,7 +55,7 @@ const passes = (f, st) => f === "all" || (f === "weak" ? st.acc !== null && st.a
 export function SpeedHome() {
   const p = useProgress();
   const [ix, err] = useData(speedIndex, []);
-  const [view, setView] = useView("ap-view-speed");
+  const [view, setView] = useView("ap-view-speed", "list");
   const [q, setQ] = useState("");
   const [flt, setFlt] = useState("all");
   const [sort, setSort] = usePersisted("ap-speed-sort", { repeat: "default", variant: "default" });
@@ -69,7 +69,7 @@ export function SpeedHome() {
   const count = (f) => Object.keys(MODES).reduce((a, mode) => a + ix.topics.filter((t) => modeSets(t, mode) > 0 && passes(f, stateFor(t, mode))).length, 0);
   return (
     <div className="page pract speedx cfit">
-      <div className="chead2">
+      <div className="bp-top chead3">
         <h1>Speed Drills</h1>
         <div className="filterbar hsearch">
           <input className="search csearch" aria-label="Search chapters" placeholder="Search chapters or concepts" value={q} onChange={(e) => setQ(e.target.value)} />
@@ -96,8 +96,15 @@ export function SpeedHome() {
         const done = topics.flatMap((t) => modeDone(p, t, mode)).length;
             return (
               <div className={"pane " + (mode === "repeat" ? "sp-b" : "c-di")} key={mode}>
-                <div className="panehead">
-                  <div className="ph-l"><h2>{M.title}</h2><span className="muted small">{mode === "repeat" ? done + "/" + topics.length + " chapters started" : done + "/" + modeTotal(ix, mode).toLocaleString() + " sets · " + shown.length + " chapters"}</span></div>
+                <div className="panehead ph2">
+                  <span className="pico" aria-hidden="true">{mode === "repeat"
+                    ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.8C10.4 5.5 8.2 4.8 5.6 4.8a1.1 1.1 0 0 0-1.1 1.1v10.9a1.1 1.1 0 0 0 1.1 1.1c2.6 0 4.8.7 6.4 2zM12 6.8c1.6-1.3 3.8-2 6.4-2a1.1 1.1 0 0 1 1.1 1.1v10.9a1.1 1.1 0 0 1-1.1 1.1c-2.6 0-4.8.7-6.4 2z" /></svg>
+                    : <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z" /></svg>}</span>
+                  <div className="ph-l">
+                    <h2>{M.name}</h2>
+                    <span className="pdesc">{mode === "repeat" ? "Recurring book questions" : "Fresh sets, Easy to Moderate"}</span>
+                    <span className="pmeta"><small>{mode === "repeat" ? done + "/" + topics.length + " chapters started" : done + "/" + modeTotal(ix, mode).toLocaleString() + " sets · " + shown.length + " chapters"}</small></span>
+                  </div>
                   <Dropdown hover label="Sort" prefix="Sort" value={sort[mode]} onChange={(v) => setSort({ ...sort, [mode]: v })} opts={SORTS} />
                 </div>
                 <div className="pscroll">
@@ -147,7 +154,7 @@ export function SpeedTopic({ tid, query }) {
   const subs = Object.entries(t.subtopics).filter(([, lv]) => levels.some((l) => lv[l]));
   return (
     <div className="page s-q speedx">
-      <div className="crumbs"><a href="#/speed">Speed Drills</a><span>/</span><b>{MODES[mode].title}</b><span>/</span><b>{t.topic}</b></div>
+      <div className="crumbs"><BackBtn /><a href="#/speed">Speed Drills</a><span>/</span><b>{MODES[mode].title}</b><span>/</span><b>{t.topic}</b></div>
       <div className="head">
         <div><h1>{t.topic}</h1><div className="sub">{subs.length} {subs.length === 1 ? "concept" : "concepts"}. {mode === "repeat" ? "Each concept runs all of its book questions in one go." : "Each set has 10 questions."} Colour shows your last score.</div></div>
         <div className="legendrow"><span className="setbtn good">80%+</span><span className="setbtn mid">50–79%</span><span className="setbtn low">below 50%</span></div>

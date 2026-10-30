@@ -26,7 +26,7 @@ function arrowKeys(items, value, onChange) {
 }
 
 export function useView(key = "ap-view", dflt = "grid") {
-  const [v, set] = useState(() => { try { return localStorage.getItem(key) || dflt; } catch { return "grid"; } });
+  const [v, set] = useState(() => { try { return localStorage.getItem(key) || dflt; } catch { return dflt; } });
   const setV = (x) => { set(x); try { localStorage.setItem(key, x); } catch {} };
   return [v, setV];
 }
@@ -194,6 +194,15 @@ export const Failed = ({ what, err }) => <div className="page"><div className="e
 
 /* Solve pages: question on the left, tools rail on the right.
    On narrow screens the rail becomes a bottom sheet opened by the Tools button. */
+/* "Back" at the start of a page's path: goes to the nearest parent link in that path, else one step back in history */
+export function BackBtn() {
+  const go = (e) => {
+    const links = e.currentTarget.closest(".crumbs").querySelectorAll("a[href]");
+    const to = links[links.length - 1];
+    if (to) location.hash = to.getAttribute("href"); else history.back();
+  };
+  return <button type="button" className="backbtn" onClick={go} aria-label="Go back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>Back</button>;
+}
 export function Solve({ cls = "", crumbs, rail, children, open, setOpen }) {
   const side = useRef(null), btn = useRef(null);
   const sheet = () => matchMedia("(max-width: 1200px)").matches;
@@ -216,7 +225,7 @@ export function Solve({ cls = "", crumbs, rail, children, open, setOpen }) {
   }, [open]);
   return (
     <div className={"solve " + cls + (open ? " tools-open" : "")}>
-      <div className="crumbs"><span className="grow crumbline">{crumbs}</span>
+      <div className="crumbs"><BackBtn /><span className="grow crumbline">{crumbs}</span>
         <button type="button" ref={btn} className="btn sm toolsbtn" aria-haspopup="dialog" aria-expanded={!!open} aria-controls="tools" onClick={() => setOpen(!open)}>Tools</button>
       </div>
       <div className="main">{children}</div>

@@ -33,7 +33,7 @@ function useRoute() {
 /* Home, four places to work, one for settings. Mistakes are reached from the Practice home. */
 const TABS = [
   ["home", "Home", "#/home", "Home"],
-  ["course", "Course", "#/course", "Course"],
+  ["course", "Modules", "#/course", "Modules"],
   ["practice", "Topic Practice", "#/practice", "Practice"],
   ["speed", "Speed Drills", "#/speed", "Speed"],
   ["mocks", "Mock Tests", "#/mocks", "Mocks"],
