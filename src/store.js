@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { examById, profileId } from "./exams.js";
 
 const OWN = ["mocks", "glat"];
-const EMPTY = () => ({ version: 3, user: null, profiles: {}, answers: {}, review: [], speed: {}, legacyMocks: {} });
+const EMPTY = () => ({ version: 3, user: null, profiles: {}, answers: {}, review: [], speed: {}, notes: {}, legacyMocks: {} });
 let progress = EMPTY();
 let ready = false;
 const subs = new Set();
@@ -111,6 +111,10 @@ export function recordAnswer(q, ok, secs, ref) {
     if (!ok) p.review.unshift({ id: q.id, topic: q.topic || q.section, at: Date.now(), ...ref });
   });
 }
+/* Notes: key is a question id, or "set:<hash>" for a whole passage; each note is { id, type, text, at, qid? } */
+export const NOTE_TYPES = [["note", "Note"], ["shortcut", "Shortcut"], ["trap", "Trap"], ["dont", "Don't"], ["recollect", "Recollect"]];
+export const addNote = (key, n) => update((p) => { p.notes = p.notes || {}; (p.notes[key] = p.notes[key] || []).push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 5), at: Date.now(), ...n }); });
+export const delNote = (key, id) => update((p) => { const l = ((p.notes || {})[key] || []).filter((x) => x.id !== id); if (l.length) p.notes[key] = l; else if (p.notes) delete p.notes[key]; });
 export const dropReview = (id) => update((p) => { p.review = p.review.filter((r) => r.id !== id); });
 export const saveSpeed = (key, right, total, secs) =>
   update((p) => { p.speed[key] = { right, total, t: Math.round(secs), at: Date.now() }; });

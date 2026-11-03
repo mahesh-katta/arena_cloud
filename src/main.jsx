@@ -7,6 +7,7 @@ import { MockGroup, MockTest } from "./Mocks.jsx";
 import { MocksHome } from "./MockTests.jsx";
 import { BoosterHome } from "./Booster.jsx";
 import { Settings } from "./Settings.jsx";
+import { Calc } from "./Calc.jsx";
 import { CourseHome, CourseTopic, CourseLesson } from "./Course.jsx";
 import { Setup } from "./Profile.jsx";
 import { loadProgress, useProgress, useReady, hasProfile, applyTheme, switchProfile } from "./store.js";
@@ -38,6 +39,7 @@ const TABS = [
   ["speed", "Speed Drills", "#/speed", "Speed"],
   ["mocks", "Mock Tests", "#/mocks", "Mocks"],
   ["booster", "Booster", "#/booster", "Booster"],
+  ["calc", "Quick Maths", "#/calc", "Maths"],
   ["settings", "Settings", "#/settings", "Settings"],
 ];
 
@@ -122,6 +124,7 @@ function App() {
   else if (view === "course" && a && b && c) body = <CourseLesson key={raw} subject={a} tid={b} lid={c} />;
   else if (view === "course" && a && b) body = <CourseTopic key={raw} subject={a} tid={b} />;
   else if (view === "course") body = <CourseHome />;
+  else if (view === "calc") body = <Calc />;
   else if (view === "settings") body = <Settings />;
   else if (view === "practice") body = <PracticeHome />;
   else body = <Home />;
