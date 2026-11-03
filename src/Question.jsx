@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { recordAnswer } from "./store.js";
+import { recordAnswer, addNote, delNote, useProgress, NOTE_TYPES } from "./store.js";
 import { secClass } from "./ui.jsx";
 import { Maths } from "./mathfmt.jsx";
 
@@ -89,7 +89,7 @@ export function Solution({ q }) {
   );
 }
 
-export function Timer({ running, onTick, countdown, resetKey }) {
+export function Timer({ running, onTick, countdown, resetKey, cls = "" }) {
   const [s, setS] = useState(0);
   useEffect(() => setS(0), [resetKey]);
   useEffect(() => {
@@ -99,7 +99,7 @@ export function Timer({ running, onTick, countdown, resetKey }) {
   }, [running, resetKey]);
   useEffect(() => { onTick && onTick(s); }, [s]);
   const v = countdown != null ? Math.max(0, countdown - s) : s;
-  return <span className={"timer" + (countdown != null && v < 60 ? " low" : "")}>{fmt(v)}</span>;
+  return <span className={"timer" + (countdown != null && v < 60 ? " low" : "") + (cls ? " " + cls : "")}>{fmt(v)}</span>;
 }
 
 /* The shared passage or chart for a set, the direction line, and the question. */
@@ -172,29 +172,113 @@ export function useKeys(map, deps) {
   }, deps);
 }
 
+/* How long a question has been open decides the colour of the timer and of the line running round the card.
+   Single question: green to 25 s, yellow to 45 s, red after. A question that comes with a passage or set:
+   green to 3 min, yellow to 4 min, red after 4 min while the first question of the set is still unanswered;
+   once it is answered the clock is the whole set's combined time, and red starts at 5 min. */
+const setClock = {};
+const setKey = (q) => (hasSet(q) ? (q.common_data || "").slice(0, 120) + "|" + (q.common_data_image_paths || []).join(",") : "");
+const LIMITS = { single: [25, 45, 65], set: [180, 240, 300] };
+export function phaseOf(secs, isSet, firstDone) {
+  const [g, y, r] = isSet ? [180, firstDone ? 300 : 240, firstDone ? 360 : 300] : LIMITS.single;
+  if (secs < g) return { ph: 0, frac: secs / g };
+  if (secs < y) return { ph: 1, frac: (secs - g) / (y - g) };
+  return { ph: 2, frac: Math.min(1, (secs - y) / Math.max(1, r - y)) };
+}
+const PH = ["g", "y", "r"];
+
+/* The line that runs round the card: the lap in the current colour on top of the finished laps of the colours before it. */
+function Trace({ ph, frac }) {
+  const dash = (f) => ({ strokeDasharray: f * 100 + " 100" });
+  return (
+    <svg className={"qtrace p" + PH[ph]} aria-hidden="true">
+      {ph > 0 && <rect className={"base " + PH[ph - 1]} pathLength="100" style={dash(1)} />}
+      <rect className={"lap " + PH[ph]} pathLength="100" style={dash(frac)} />
+    </svg>
+  );
+}
+
 /* One question card: right or wrong after a pick, the solution on demand,
    and Previous / View solution / Skip-Next inside the card. */
+
+/* Notes on a question: type (note, shortcut, trap, don't, recollect) + text. On a passage question a note can belong to the whole passage or to this question only. */
+const hashOf = (t) => { let h = 5381; for (let i = 0; i < t.length; i++) h = ((h << 5) + h + t.charCodeAt(i)) | 0; return (h >>> 0).toString(36); };
+const TNAME = Object.fromEntries(NOTE_TYPES);
+function NotePad({ q, sk, label, onClose }) {
+  const p = useProgress();
+  const setK = sk ? "set:" + hashOf(sk) : "";
+  const [type, setType] = useState("note");
+  const [scope, setScope] = useState(sk ? "set" : "q");
+  const [text, setText] = useState("");
+  useEffect(() => { setText(""); setScope(sk ? "set" : "q"); }, [q.id]);
+  const mine = (p.notes || {})[q.id] || [], shared = setK ? (p.notes || {})[setK] || [] : [];
+  const save = () => { const t = text.trim(); if (!t) return; if (scope === "set") addNote(setK, { type, text: t, qid: q.id }); else addNote(q.id, { type, text: t }); setText(""); };
+  const row = (k, n, tag) => (
+    <li key={n.id} className={"nrow n-" + n.type}>
+      <span className="ntype">{TNAME[n.type]}</span>{tag && <span className="ntag">{tag}</span>}
+      <span className="ntext">{n.text}</span>
+      <button type="button" className="ndel" aria-label="Delete note" onClick={() => delNote(k, n.id)}>×</button>
+    </li>
+  );
+  return (
+    <div className="notepad" role="group" aria-label="Notes">
+      <div className="nhead"><b>Add a note</b>
+        {sk && (
+          <label className="nscope">Applies to
+            <select value={scope} onChange={(e) => setScope(e.target.value)}>
+              <option value="set">Whole passage</option>
+              <option value="q">This question{label ? " · " + label : ""}</option>
+            </select>
+          </label>
+        )}
+        <button type="button" className="btn ghost sm" onClick={onClose}>Close</button>
+      </div>
+      <div className="ntypes" role="radiogroup" aria-label="Kind of note">
+        {NOTE_TYPES.map(([k, n]) => <button key={k} type="button" role="radio" aria-checked={type === k} className={"ntbtn n-" + k + (type === k ? " on" : "")} onClick={() => setType(k)}>{n}</button>)}
+      </div>
+      <textarea rows={3} value={text} placeholder={type === "shortcut" ? "The quicker way…" : type === "trap" ? "Where people slip…" : type === "dont" ? "What not to do…" : type === "recollect" ? "What to remember…" : "Your note…"} onChange={(e) => setText(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); save(); } }} />
+      <div className="nfoot"><span className="muted small">{mine.length + shared.length ? mine.length + shared.length + " saved here" : "Saved on this device"}</span><span className="grow" /><button type="button" className="btn primary sm" disabled={!text.trim()} onClick={save}>Save note</button></div>
+      {mine.length + shared.length > 0 && <ul className="nlist">{shared.map((n) => row(setK, n, "Passage"))}{mine.map((n) => row(q.id, n, sk ? "This question" : ""))}</ul>}
+    </div>
+  );
+}
 export default function Solver({ q, head, chips = [], refInfo, onNext, onPrev, onResult, nextLabel = "Next question" }) {
   const [picked, setPicked] = useState(null);
   const [sol, setSol] = useState(false);
   const secs = useRef(0);
-  useEffect(() => { setPicked(null); setSol(false); secs.current = 0; }, [q.id]);
+  const [tags, setTags] = useState(false);
+  const [notes, setNotes] = useState(false);
+  const prog = useProgress();
+  const [now, setNow] = useState(0);
+  const sk = setKey(q);
+  const base = useRef(0);
+  const first = useRef(false);
+  useEffect(() => { setPicked(null); setSol(false); secs.current = 0; setNow(0); base.current = sk ? (setClock[sk]?.t || 0) : 0; first.current = !!(sk && setClock[sk]?.done); }, [q.id]);
+  const tick = (s) => { secs.current = s; setNow(s); if (sk) setClock[sk] = { ...(setClock[sk] || {}), t: base.current + s }; };
   const pick = (k) => {
     if (picked || !q.options.some((o) => o.label === k)) return;
     setPicked(k);
+    if (sk) setClock[sk] = { ...(setClock[sk] || {}), done: true };
     const ok = k === q.correct_option;
     recordAnswer(q, ok, secs.current, refInfo);
     onResult && onResult(ok, secs.current);
   };
-  useKeys({ pick, Enter: onNext, ArrowRight: onNext, ArrowLeft: onPrev, s: onNext, v: () => setSol((x) => !x) }, [q.id, picked, onNext, onPrev]);
+  useKeys({ pick, Enter: onNext, ArrowRight: onNext, ArrowLeft: onPrev, s: onNext, v: () => setSol((x) => !x), n: () => setNotes((x) => !x) }, [q.id, picked, onNext, onPrev]);
+  const total = sk ? base.current + now : now;
+  const { ph, frac } = phaseOf(total, !!sk, first.current);
+  const shown = chips.filter(Boolean);
+  const nCount = ((prog.notes || {})[q.id] || []).length + (sk ? ((prog.notes || {})["set:" + hashOf(sk)] || []).length : 0);
   return (
-    <div className={"card qcard " + secClass(q.section)}>
+    <div className={"card qcard " + secClass(q.section) + " ph" + PH[ph]}>
+      <Trace ph={ph} frac={frac} />
       <div className="qhead">
         {head && <span className="qno">{head}</span>}
-        {chips.filter(Boolean).map((c) => { const [t, k] = Array.isArray(c) ? c : [c, ""]; return <span key={t} className={"chip " + k}>{t}</span>; })}
+        {shown.length > 0 && <button type="button" className={"qinfo" + (tags ? " on" : "")} aria-pressed={tags} aria-label="Show question details" title="Question details" onClick={() => setTags(!tags)}>i</button>}
         <span className="grow" />
-        <Timer running={!picked} resetKey={q.id} onTick={(s) => (secs.current = s)} />
+        <Timer running={!picked} resetKey={q.id} onTick={tick} cls={"t-" + PH[ph]} />
       </div>
+      {tags && shown.length > 0 && <div className="qtags">{shown.map((c) => { const [t, k] = Array.isArray(c) ? c : [c, ""]; return <span key={t} className={"chip " + k}>{t}</span>; })}</div>}
       <Stem q={q} />
       <Options q={q} picked={picked} onPick={pick} />
       {picked && (
@@ -204,9 +288,11 @@ export default function Solver({ q, head, chips = [], refInfo, onNext, onPrev, o
         </div>
       )}
       {sol && <Solution q={q} />}
+      {notes && <NotePad q={q} sk={sk} label={head ? head.replace(/\s*\/.*$/, "") : ""} onClose={() => setNotes(false)} />}
       <div className="qactions">
         <button className="btn ghost" disabled={!onPrev} onClick={onPrev}>Previous</button>
         <button className={"btn" + (sol ? " on" : "")} onClick={() => setSol((x) => !x)}>{sol ? "Hide solution" : "View solution"} <kbd>V</kbd></button>
+        <button className={"btn" + (notes ? " on" : "")} aria-expanded={notes} onClick={() => setNotes((x) => !x)}>Note{nCount ? <span className="ncount">{nCount}</span> : null} <kbd>N</kbd></button>
         <span className="grow" />
         <span className="kbdhelp"><kbd>A–E</kbd> answer <kbd>S</kbd> skip</span>
         <button className={"btn" + (picked ? " primary" : "")} onClick={onNext}>{picked ? nextLabel : "Skip & next"} <kbd>↵</kbd></button>

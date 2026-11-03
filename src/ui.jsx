@@ -195,15 +195,20 @@ export const Failed = ({ what, err }) => <div className="page"><div className="e
 /* Solve pages: question on the left, tools rail on the right.
    On narrow screens the rail becomes a bottom sheet opened by the Tools button. */
 /* "Back" at the start of a page's path: goes to the nearest parent link in that path, else one step back in history */
+/* the page we came from inside the app: if it is a different section (Modules → Score Cracker practice), Back returns there */
+let hereHash = location.hash, fromHash = "";
+addEventListener("hashchange", () => { fromHash = hereHash; hereHash = location.hash; });
+const section = (h) => (h.replace(/^#\/?/, "").split("/")[0] || "home");
 export function BackBtn() {
   const go = (e) => {
+    if (fromHash && section(fromHash) !== section(hereHash)) return history.back();
     const links = e.currentTarget.closest(".crumbs").querySelectorAll("a[href]");
     const to = links[links.length - 1];
     if (to) location.hash = to.getAttribute("href"); else history.back();
   };
   return <button type="button" className="backbtn" onClick={go} aria-label="Go back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>Back</button>;
 }
-export function Solve({ cls = "", crumbs, rail, children, open, setOpen }) {
+export function Solve({ cls = "", crumbs, head, rail, children, open, setOpen }) {
   const side = useRef(null), btn = useRef(null);
   const sheet = () => matchMedia("(max-width: 1200px)").matches;
   useEffect(() => {
@@ -228,6 +233,7 @@ export function Solve({ cls = "", crumbs, rail, children, open, setOpen }) {
       <div className="crumbs"><BackBtn /><span className="grow crumbline">{crumbs}</span>
         <button type="button" ref={btn} className="btn sm toolsbtn" aria-haspopup="dialog" aria-expanded={!!open} aria-controls="tools" onClick={() => setOpen(!open)}>Tools</button>
       </div>
+      {head && <div className="solvehead">{head}</div>}
       <div className="main">{children}</div>
       {open && <div className="scrim" onClick={() => setOpen(false)} />}
       <aside className="rail" id="tools" aria-label="Practice tools" ref={side} tabIndex={-1} {...(open ? { role: "dialog", "aria-modal": true } : {})}>

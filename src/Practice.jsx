@@ -286,6 +286,7 @@ export function PracticeRun({ topic, query }) {
   const set = (k) => (v) => { setF((x) => ({ ...x, [k]: v })); setI(0); };
   const pickSet = (id) => { setF((x) => ({ ...x, set: id })); setI(0); setTools(false); };
   const [rtab, setRtab] = useState("filters");
+  const [fopen, setFopen] = useState(false);
   const [note, setNote] = useState("");
   const carried = useRef(!saved && !query.get("sub") && (f.stage.length > 0 || f.src.length > 0 || f.di));
 
@@ -337,12 +338,12 @@ export function PracticeRun({ topic, query }) {
       </div>
       <div className="railtabs" role="tablist" aria-label="Tools sections">
         {[["filters", "Filters"], sets.length > 0 && ["sets", "Sets"], list.length > 0 && ["qs", "Questions"]].filter(Boolean).map(([k, t]) => (
-          <button key={k} type="button" role="tab" aria-selected={rtab === k} className={rtab === k ? "on" : ""} onClick={() => setRtab(k)}>{t}</button>
+          <button key={k} type="button" role="tab" aria-selected={rtab === k} className={rtab === k ? "on" : ""} onClick={() => { setRtab(k); if (k === "filters") setFopen(true); }}>{t}</button>
         ))}
       </div>
       <div className={"card rtab" + (rtab === "filters" ? " on" : "")}>
-        <div className="railhead"><h3 className="grow">Filter questions</h3>{active > 0 && <button className="btn ghost sm" onClick={() => { setF(EMPTY); setI(0); }}>Clear {active}</button>}</div>
-        <div className="filters">
+        <div className="railhead"><button type="button" className="fold" aria-expanded={fopen} onClick={() => setFopen(!fopen)}><h3 className="grow">Filter questions</h3><span className="muted small">{active > 0 ? active + " on" : "All"}</span><i aria-hidden="true" /></button>{active > 0 && <button className="btn ghost sm" onClick={() => { setF(EMPTY); setI(0); }}>Clear {active}</button>}</div>
+        <div className="filters" hidden={!fopen}>
           <FacetBox label="Source" value={f.src} onChange={set("src")} opts={opts("src", srcName)} />
           <FacetBox label="Subtopic" value={f.sub} onChange={set("sub")} opts={opts("sub")} />
           {counts.all.di > 0 && <Dropdown label="Type" value={f.di} onChange={set("di")} opts={[["", "All questions"], ["only", "DI / puzzle sets", counts.di], ["single", "Single questions", counts.single]]} />}

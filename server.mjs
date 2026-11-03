@@ -58,7 +58,16 @@ function group(id) {
 let idmap = null;
 const filesById = new Map();
 const KIND = { b: "bank", s: "speed", m: "mocks" };
+const lessonMemo = new Map();
 function courseQuestions(ids) {
+  const mk = ids.join(",");
+  if (lessonMemo.has(mk)) return lessonMemo.get(mk);
+  const out = courseQuestionsRaw(ids);
+  lessonMemo.set(mk, out);
+  while (lessonMemo.size > 60) lessonMemo.delete(lessonMemo.keys().next().value);
+  return out;
+}
+function courseQuestionsRaw(ids) {
   idmap ||= JSON.parse(readFileSync(path.join(DATA, "course", "idmap.json"), "utf8"));
   const out = [];
   for (const id of ids) {

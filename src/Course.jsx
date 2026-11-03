@@ -489,6 +489,8 @@ export function CourseLesson({ subject, tid, lid }) {
   const lesson = lessons[at];
   useEffect(() => { if (d && lesson) saveRecent({ subject, tid, lid, topic: d.name, unit: lesson.unit, name: lesson.name }); }, [d, lid]);
   const [qs, qerr] = useData(() => (lesson ? courseQs(lesson.ids) : Promise.resolve([])), [lid, !!lesson]);
+  /* warm the neighbouring lessons so the next click is instant */
+  useEffect(() => { if (qs && lesson) for (const n of [lessons[at + 1], lessons[at - 1]]) if (n) courseQs(n.ids).catch(() => {}); }, [qs, lid]);
   const [i, setI] = useState(0);
   const [tools, setTools] = useState(false);
   const [end, setEnd] = useState(false);
@@ -505,6 +507,7 @@ export function CourseLesson({ subject, tid, lid }) {
   const rec = subject === "quant" ? recipe(lesson.name) : { main: lesson.name, sub: "" };
   return (
     <Solve cls={"s-q " + SUBJ[subject]} open={tools} setOpen={setTools}
+      head={!end && qs.length ? <div className="lhead"><h1>{rec.main}</h1>{rec.sub && <p className="muted small">{rec.sub}</p>}</div> : null}
       crumbs={<><a href="#/course">Modules</a><span>/</span><a href={back}>{d.name}</a><span>/</span><span>{lesson.unit}</span><span>/</span><b>Lesson {unitPos + 1} of {unitLessons.length}</b></>}
       rail={<div className="card">
         <div className="railhead"><span className="tile">{glyph(d.name)}</span><div><h3>{rec.main}</h3><div className="muted small">{lesson.unit}</div></div></div>
@@ -514,14 +517,31 @@ export function CourseLesson({ subject, tid, lid }) {
           {prev ? <a className="btn sm" href={href(subject, tid, prev.id)}>← Previous lesson</a> : <span />}
           {next && <a className="btn sm" href={href(subject, tid, next.id)}>Next lesson →</a>}
         </div>
-        {d.units.map((u, ui) => (
-          <details key={ui} className="runit" open={ui === lesson.ui}>
-            <summary>{ui + 1}. {u.name}</summary>
-            <ol className="lessons">
-              {lessons.filter((l) => l.ui === ui).map((l, n) => <li key={l.id}><a className={"lrow sm" + (l.id === lid ? " now" : "") + tone(stat(p.answers, l.ids))} aria-current={l.id === lid ? "page" : undefined} href={href(subject, tid, l.id)}><span className="lno">{n + 1}</span><span className="ltxt"><b>{subject === "quant" ? recipe(l.name).main : l.name}</b></span></a></li>)}
-            </ol>
-          </details>
-        ))}
+        {d.units.map((u, ui) => {
+          const us = stat(p.answers, u.lessons.flatMap((l) => l.ids));
+          const unames = lessonNames(u.lessons);
+          return (
+            <details key={ui} className="runit" open={ui === lesson.ui}>
+              <summary><span className="rutitle">{ui + 1}. {u.name}</span><small className="muted">{us.done}/{us.n}</small></summary>
+              {groupLessons(u.lessons, subject === "reasoning").map((gp) => {
+                const here = gp.items.some(({ l }) => l.id === lid);
+                const rows = gp.lv ? setRows(gp, unames) : [{ key: "", items: gp.items.map((x) => ({ ...x, k: x.li + 1 })) }];
+                const body = rows.map((r) => (
+                  <div className={"rrow2" + (r.key ? "" : " nolab")} key={r.key}>
+                    {r.key && <span className="rlab">{r.key}</span>}
+                    <span className="rchips">{r.items.map(({ l, li, k }) => { const nm = subject === "quant" ? recipe(unames[li]).main : unames[li]; return <a key={l.id} className={"rchip" + (l.id === lid ? " now" : "") + tone(stat(p.answers, l.ids))} aria-current={l.id === lid ? "page" : undefined} aria-label={nm} title={nm} href={href(subject, tid, l.id)} onPointerEnter={() => courseQs(l.ids).catch(() => {})} onFocus={() => courseQs(l.ids).catch(() => {})}>{k}</a>; })}</span>
+                  </div>
+                ));
+                return gp.lv ? (
+                  <details key={gp.lv} className="rgroup" open={here}>
+                    <summary>{gp.lv}<small className="muted">{gp.items.length}</small></summary>
+                    {body}
+                  </details>
+                ) : <div className="rgroup flat" key="all">{body}</div>;
+              })}
+            </details>
+          );
+        })}
       </div>}>
       {end ? (
         <div className="card done">
@@ -535,10 +555,6 @@ export function CourseLesson({ subject, tid, lid }) {
         </div>
       ) : !qs.length ? <div className="empty">This lesson has no questions.</div> : (
         <>
-        <div className="lhead"><h1>{rec.main}</h1>{rec.sub && <p className="muted small">{rec.sub}</p>}</div>
-        <nav className="qdots" aria-label="Questions in this lesson" ref={(el) => { el?.querySelector(".cur")?.scrollIntoView({ block: "nearest", inline: "center" }); }}>
-          {qs.map((q, n) => { const a = p.answers[lesson.ids[n]]; return <button key={n} type="button" className={"qd" + (n === i ? " cur" : "") + (a ? (a.ok ? " ok" : " bad") : "")} aria-current={n === i ? "step" : undefined} aria-label={"Question " + (n + 1) + (a ? (a.ok ? ", right" : ", wrong") : ", not answered")} onClick={() => setI(n)}>{n + 1}</button>; })}
-        </nav>
         <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={[[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
           onPrev={i > 0 ? () => setI(i - 1) : null}
           onNext={() => (i + 1 >= qs.length ? setEnd(true) : setI(i + 1))} nextLabel={i + 1 >= qs.length ? "Finish lesson" : "Next question"} />

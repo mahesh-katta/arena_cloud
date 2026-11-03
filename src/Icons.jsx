@@ -89,6 +89,7 @@ export const ICONS = {
   mocks: <MockIcon />,
   booster: <BoosterIcon />,
   settings: <svg {...P}><path d="M10.05 4.97 L10.45 2.73 L13.55 2.73 L13.95 4.97 L15.59 5.65 L17.46 4.35 L19.65 6.54 L18.35 8.41 L19.03 10.05 L21.27 10.45 L21.27 13.55 L19.03 13.95 L18.35 15.59 L19.65 17.46 L17.46 19.65 L15.59 18.35 L13.95 19.03 L13.55 21.27 L10.45 21.27 L10.05 19.03 L8.41 18.35 L6.54 19.65 L4.35 17.46 L5.65 15.59 L4.97 13.95 L2.73 13.55 L2.73 10.45 L4.97 10.05 L5.65 8.41 L4.35 6.54 L6.54 4.35 L8.41 5.65Z" /><circle cx="12" cy="12" r="3" /></svg>,
+  calc: <svg {...P}><rect width="16" height="20" x="4" y="2" rx="2" /><path d="M8 6h8M16 14v4M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01" /></svg>,
   course: <CourseIcon />,
   mistakes: <svg {...P}><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" /><path d="M12 8v4l3 2" /></svg>,
   back: <svg {...P}><path d="M15 18l-6-6 6-6" /></svg>,

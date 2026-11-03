@@ -251,13 +251,13 @@ export function MockTest({ gid, mid }) {
           {last && <button className="btn ghost" onClick={() => setMode("result")}>Last attempt: {round(last.score)} / {last.max}</button>}
         </div>
       </Hero>
-      <h2 className="sechead">Exam pattern</h2>
-      <Pattern T={T} />
       <div className="card pad notes">
         <h3>Before you start</h3>
         <div className="noterow"><span><kbd>A–E</kbd> select an option</span><span><kbd>↵</kbd> save & next</span><span><kbd>M</kbd> mark for review & next</span><span><kbd>C</kbd> clear response</span><span><kbd>←</kbd> previous question</span></div>
         <p className="muted small">Your answers are saved as you go — you can close the tab and resume. Wrong answers go to Revise mistakes after you submit.</p>
       </div>
+      <h2 className="sechead">Exam pattern</h2>
+      <Pattern T={T} />
     </div>
   );
 }
