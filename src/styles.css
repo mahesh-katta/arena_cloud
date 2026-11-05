@@ -6724,27 +6724,11 @@ html body .solve .nrow .ndel { flex: none; border: 0; background: transparent; c
 .calcpage .cq-tabs button { height: 36px; padding: 0 16px; border: 0; border-radius: 10px; background: transparent; color: var(--ink2); font: 600 13.5px var(--body); cursor: pointer; }
 .calcpage .cq-tabs button.on { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
 .calcpage .cq-body { display: grid; gap: 16px; }
-.calcpage .cq-cards { display: grid; grid-template-columns: minmax(240px, 320px) 1fr; gap: 16px; align-items: start; }
 .calcpage .cq-card { border: 1px solid var(--line); border-radius: 18px; background: var(--card); padding: 16px 18px; }
 .calcpage .cq-card h3 { margin: 0 0 12px; font: 650 15px var(--body); }
 .calcpage .cq-pick { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .calcpage .cq-pick button { min-width: 38px; height: 34px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink2); font: 650 13px var(--mono, var(--body)); cursor: pointer; }
 .calcpage .cq-pick button.on { background: var(--brand); border-color: var(--brand); color: var(--on-brand, #fff); }
-.calcpage .cq-rows { list-style: none; margin: 0; padding: 0; display: grid; }
-.calcpage .cq-rows li { display: flex; justify-content: space-between; padding: 7px 4px; border-bottom: 1px dashed var(--line); font: 500 15px var(--mono, var(--body)); }
-.calcpage .cq-rows li:last-child { border: 0; }
-.calcpage .cq-rows b { font-weight: 700; }
-.calcpage .cq-all { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; }
-.calcpage .cq-mini { display: flex; gap: 10px; padding: 8px 10px; border-radius: 12px; border: 1px solid var(--line); cursor: pointer; font: 400 12px/1.5 var(--mono, var(--body)); color: var(--ink2); }
-.calcpage .cq-mini b { flex: none; width: 26px; color: var(--brand); font-size: 14px; }
-.calcpage .cq-mini.on { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 7%, var(--card)); }
-.calcpage .cq-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 8px; }
-.calcpage .cq-grid.f { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); }
-.calcpage .cq-cell { display: grid; gap: 2px; padding: 8px 10px; border-radius: 12px; border: 1px solid var(--line); text-align: center; }
-.calcpage .cq-cell small { color: var(--muted); font: 600 12px var(--mono, var(--body)); }
-.calcpage .cq-cell b { font: 700 16px var(--mono, var(--body)); }
-.calcpage .cq-cell i { font: normal 400 11.5px var(--mono, var(--body)); color: var(--muted); }
-.calcpage .cq-cell.dim { opacity: .45; }
 .calcpage .ntypes { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
 .calcpage .ntbtn { --nc: var(--brand); height: 30px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink2); font: 550 12.5px var(--body); cursor: pointer; }
 .calcpage .ntbtn.n-shortcut { --nc: #16A34A; } .calcpage .ntbtn.n-trap { --nc: #EF4444; } .calcpage .ntbtn.n-dont { --nc: #F59E0B; } .calcpage .ntbtn.n-recollect { --nc: #7C3AED; } .calcpage .ntbtn.n-note { --nc: #2563EB; }
@@ -6758,4 +6742,89 @@ html body .solve .nrow .ndel { flex: none; border: 0; background: transparent; c
 .calcpage .nrow .ntag { flex: none; color: var(--muted); font-size: 11.5px; padding-top: 2px; }
 .calcpage .nrow .ntext { flex: 1; white-space: pre-wrap; overflow-wrap: anywhere; }
 .calcpage .nrow .ndel { flex: none; border: 0; background: transparent; color: var(--muted); font-size: 18px; cursor: pointer; }
-@media (max-width: 860px) { .calcpage .cq-cards { grid-template-columns: 1fr; } .calcpage .cq-all { grid-template-columns: 1fr; } }
+
+/* Quick Maths: drill + learn. Each set carries its own --g1/--g2, the same way Course topics do. */
+.calcpage { --g1: #2563EB; --g2: #06B6D4; }
+.calcpage .cq-pick button.wide { padding: 0 14px; }
+.calcpage .cq-pick button.on { background: linear-gradient(145deg, var(--g1), var(--g2)); border-color: transparent; color: #fff; box-shadow: 0 8px 14px -8px var(--g1); }
+.calcpage .cq-tabs button.on { color: var(--g1); }
+.calcpage .dr { max-width: 900px; margin: 14px auto 0; }
+.calcpage .dr-tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; padding: 6px 4px 10px; }
+.calcpage .dr-tile { display: grid; align-content: space-between; gap: 18px; min-height: 124px; padding: 16px 16px 14px; border: 0; border-radius: 20px; text-align: left; color: #fff; cursor: pointer;
+  background: linear-gradient(145deg, var(--g1), var(--g2)); box-shadow: 0 10px 22px -14px var(--g1); opacity: .86; transform: scale(.97); transition: transform .25s cubic-bezier(.2,.8,.2,1), opacity .2s, box-shadow .25s; }
+.calcpage .dr-tile b { font: 700 clamp(24px, 3vw, 32px)/1 var(--mono); letter-spacing: -.04em; }
+.calcpage .dr-tile span { font: 650 13.5px var(--body); opacity: .92; }
+.calcpage .dr-tile:hover { opacity: 1; }
+.calcpage .dr-tile.on { opacity: 1; transform: translateY(-4px) scale(1); box-shadow: 0 22px 34px -16px var(--g1), 0 0 0 3px var(--card), 0 0 0 5px var(--g1); }
+.calcpage .dr-panel { margin-top: 18px; padding: 22px 26px 20px; border: 1px solid var(--line); border-radius: 22px; background: color-mix(in srgb, var(--g1) 5%, var(--card)); }
+.calcpage .dr-lab { margin: 0 0 12px; font: 700 11.5px var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--g1); }
+.calcpage .dr-go { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 20px; }
+.calcpage .dr-start, .calcpage .dr .btn.primary { background: linear-gradient(145deg, var(--g1), var(--g2)) !important; box-shadow: 0 12px 20px -10px var(--g1) !important; color: #fff !important; border-color: transparent !important; }
+.calcpage .dr-start { height: 50px; padding: 0 30px; font-size: 15px; border-radius: 14px; }
+.calcpage .dr-best { color: var(--muted); font: 500 13.5px var(--body); } .calcpage .dr-best b { font: 700 14px var(--mono); color: var(--ink); }
+.calcpage .dr-help { margin: 16px 0 0; color: var(--muted); font: 450 13px/1.5 var(--body); }
+.calcpage .dr-bar { height: 8px; border-radius: 9px; background: color-mix(in srgb, var(--g1) 14%, transparent); overflow: hidden; }
+.calcpage .dr-bar i { display: block; height: 100%; border-radius: 9px; background: linear-gradient(90deg, var(--g1), var(--g2)); transition: width .25s; }
+.calcpage .dr-meta { display: flex; align-items: center; gap: 16px; margin: 14px 2px 0; font: 600 13px var(--mono); color: var(--muted); }
+.calcpage .dr-pill { padding: 4px 12px; border-radius: 99px; background: color-mix(in srgb, var(--g1) 13%, transparent); color: var(--g1); font: 700 12px var(--body); }
+.calcpage .dr-streak { color: #16A34A; }
+.calcpage .dr-card { position: relative; margin-top: 14px; padding: clamp(36px, 9vh, 78px) 24px clamp(30px, 7vh, 58px); border: 1.5px solid color-mix(in srgb, var(--g1) 24%, var(--line)); border-radius: 28px; text-align: center;
+  background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--g1) 11%, var(--card)), var(--card) 70%); box-shadow: 0 24px 40px -30px var(--g1); transition: border-color .15s, background .15s; }
+.calcpage .dr-card.right { border-color: #16A34A; background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, #16A34A 16%, var(--card)), var(--card) 75%); }
+.calcpage .dr-card.wrong { border-color: #EF4444; background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, #EF4444 14%, var(--card)), var(--card) 75%); }
+.calcpage .dr-q { font: 700 clamp(60px, 12vw, 116px)/1 var(--mono); letter-spacing: -.045em; color: var(--ink); }
+.calcpage .dr-ans { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 30px; }
+.calcpage .dr-eq { font: 500 34px var(--mono); color: var(--g1); opacity: .7; }
+.calcpage .dr-ans input { width: min(250px, 56%); height: 70px; box-sizing: border-box; padding: 0; text-align: center; border: 0; border-bottom: 4px solid color-mix(in srgb, var(--g1) 30%, var(--line2)); border-radius: 0; background: transparent; color: var(--ink); font: 700 40px var(--mono); outline: none; }
+.calcpage .dr-ans input::placeholder { color: var(--faint); }
+.calcpage .dr-ans input:focus { border-color: var(--g1); }
+.calcpage .dr-fb { min-height: 26px; margin-top: 18px; font: 650 16px var(--body); }
+.calcpage .dr-fb .ok { color: #16A34A; } .calcpage .dr-fb .no { color: #DC2626; } .calcpage .dr-fb b { font-family: var(--mono); }
+.calcpage .dr-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px; }
+.calcpage .dr-actions .btn { height: 46px; padding: 0 24px; border-radius: 13px; }
+.calcpage .dr-sum { text-align: center; padding-top: 16px; }
+.calcpage .dr-score { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+.calcpage .dr-score b { font: 700 clamp(84px, 15vw, 128px)/1 var(--mono); letter-spacing: -.05em; background: linear-gradient(145deg, var(--g1), var(--g2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.calcpage .dr-score span { font: 500 28px var(--mono); color: var(--muted); }
+.calcpage .dr-line { margin: 8px 0 0; color: var(--ink2); font: 500 15px var(--mono); }
+.calcpage .dr-badge { display: inline-block; margin: 14px 0 0; padding: 5px 14px; border-radius: 99px; background: color-mix(in srgb, #16A34A 14%, transparent); color: #16A34A; font: 700 12.5px var(--body); }
+.calcpage .dr-list { margin-top: 26px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 20px; background: color-mix(in srgb, var(--g1) 4%, var(--card)); }
+.calcpage .dr-list h4 { margin: 0 0 12px; font: 700 11.5px var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--g1); }
+.calcpage .dr-list > div { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.calcpage .dr-chip { padding: 7px 13px; border-radius: 11px; border: 1px solid var(--line); background: var(--card); font: 500 14px var(--mono); }
+.calcpage .dr-chip.bad { border-color: color-mix(in srgb, #EF4444 45%, var(--line)); background: color-mix(in srgb, #EF4444 5%, var(--card)); }
+.calcpage .dr-chip i { font-style: normal; color: var(--muted); margin-left: 4px; }
+.calcpage .dr-sum .dr-actions { margin-top: 30px; }
+
+.calcpage .ln { max-width: 980px; margin: 4px auto 0; }
+.calcpage .ln-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.calcpage .ln-cover { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px; color: var(--ink2); font: 550 13px var(--body); cursor: pointer; }
+.calcpage .ln-card { margin-top: 8px; border: 1px solid var(--line); border-radius: 24px; background: var(--card); overflow: hidden; box-shadow: 0 24px 40px -32px var(--g1); }
+.calcpage .ln-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 20px 28px; color: #fff; background: linear-gradient(145deg, var(--g1), var(--g2)); }
+.calcpage .ln-head h3 { margin: 0; font: 700 24px var(--body); letter-spacing: -.01em; }
+.calcpage .ln-head span { font: 600 13px var(--body); opacity: .88; }
+.calcpage .ln-rows { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 56px; padding: 10px 32px 6px; }
+.calcpage .ln-row { display: flex; justify-content: space-between; align-items: baseline; width: 100%; box-sizing: border-box; padding: 12px 2px; margin: 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--ink2); font: 500 21px var(--mono); text-align: left; }
+.calcpage .ln-row b { color: var(--g1); font-weight: 700; }
+.calcpage .ln-row.hid b, .calcpage .ln-cell.hid b { color: var(--faint); }
+.calcpage button.ln-row, .calcpage button.ln-cell { cursor: pointer; }
+.calcpage .ln-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 22px 26px 8px; }
+.calcpage .ln-grid.f { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.calcpage .ln-cell { display: grid; gap: 4px; justify-items: center; padding: 20px 8px; border: 1px solid color-mix(in srgb, var(--g1) 18%, var(--line)); border-radius: 18px; background: color-mix(in srgb, var(--g1) 6%, var(--card)); color: var(--ink); font-family: inherit; }
+.calcpage .ln-cell small { font: 600 14px var(--mono); color: var(--muted); }
+.calcpage .ln-cell b { font: 700 28px/1.1 var(--mono); letter-spacing: -.02em; color: var(--g1); }
+.calcpage .ln-cell i { font: normal 500 12px var(--mono); color: var(--faint); }
+.calcpage .ln-cell.dim { opacity: .4; }
+.calcpage .ln-tip { margin: 0; padding: 16px 28px 20px; color: var(--muted); font: 450 13.5px/1.5 var(--body); }
+@media (max-width: 720px) {
+  .calcpage .dr-tiles { grid-template-columns: repeat(2, 1fr); }
+  .calcpage .dr-panel { padding: 18px 16px; }
+  .calcpage .ln-rows { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; padding: 8px 18px; }
+  .calcpage .ln-grid { grid-template-columns: repeat(2, 1fr); padding: 16px 14px 6px; }
+  .calcpage .ln-head, .calcpage .ln-tip { padding-left: 18px; padding-right: 18px; }
+}
+@keyframes dr-shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-11px); } 40% { transform: translateX(10px); } 60% { transform: translateX(-7px); } 80% { transform: translateX(4px); } }
+.calcpage .dr-ans.shake { animation: dr-shake .36s; }
+.calcpage .dr-ans.shake input { border-color: #EF4444; color: #DC2626; }
+.calcpage .dr-card.bad { border-color: #EF4444; }
+@media (prefers-reduced-motion: reduce) { .calcpage .dr-ans.shake { animation: none; } }
