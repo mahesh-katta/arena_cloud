@@ -14,14 +14,12 @@ const rank = (t) => { const s = t.section || ""; return /reason/i.test(s) ? 0 : 
 const daysOf = (g) => Object.entries(g.tests.reduce((m, t) => ((m[t.day || 0] ||= []).push(t), m), {}))
   .sort((a, b) => a[0] - b[0]).map(([day, ts]) => ({ day: +day, ts: [...ts].sort((a, b) => rank(a) - rank(b)) }));
 const FILTERS = [["all", "All"], ["done", "Completed"], ["prog", "In progress"], ["new", "Not started"]];
-/* How many days a page shows is set by what fits (cap) but then tidied: fewest pages, shared out evenly, and each page rounded up to whole rows,
-   so 100 days on a 7-wide calendar read 35 + 35 + 30, not 42 + 42 + 16. */
-const pagesOf = (n, cap, cols) => {
-  if (n <= cap) return [[0, n]];
-  const count = Math.ceil(n / cap);
-  const per = Math.min(cap, Math.ceil(Math.ceil(n / count) / cols) * cols);
+/* A sheet holds `cap` days, and each page is filled before the next one starts:
+   spreading them evenly instead left half-empty sheets with days waiting on the
+   next page. Only the last page is short. */
+const pagesOf = (n, cap) => {
   const out = [];
-  for (let i = 0; i < n; i += per) out.push([i, Math.min(n, i + per)]);
+  for (let i = 0; i < Math.max(n, 1); i += cap) out.push([i, Math.min(n, i + cap)]);
   return out;
 };
 
@@ -56,7 +54,7 @@ export function BoosterHome() {
 /* The day planner: a calendar-style card of a course's days (50 to a page) and, beside it, the ticket for a day, the results and
    the recent days. Hover a day to preview its ticket, click it to pin it, then tick the sections to take and start.
    mine = the series (groups from index.json) to show; right = extra header content in place of the filter chips. */
-export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empty, together }) {
+export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empty, together, unitWord = "Day", ghosts = true }) {
   const p = useProgress();
   const [gi, setGi] = useState(0);
   const [pg, setPg] = useState(null);
@@ -117,7 +115,7 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
   const days = g ? daysOf(g) : [];
   const info = (d) => { const n = d.ts.filter((t) => covered.has(t.id)).length; return { n, state: n === 0 ? "new" : n === d.ts.length ? "done" : "part" }; };
   const next = days.find((d) => info(d).state !== "done");
-  const pages = pagesOf(days.length, geo.cap, geo.cols);
+  const pages = pagesOf(days.length, geo.cap);
   const base = days.find((d) => d.day === sel) || next || days[0];
   const cur = Math.min(pg === null ? Math.max(0, pages.findIndex(([x, y]) => base && days.indexOf(base) >= x && days.indexOf(base) < y)) : pg, Math.max(0, pages.length - 1));
   const [a, z] = pages[cur] || [0, 0];
@@ -152,9 +150,9 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
     const bySec = SECS.map(() => ({ att: 0, ok: 0 }));
     for (const qid of Object.keys(r.answers || {})) { const t = testById.get(qid.slice(0, qid.lastIndexOf("-"))); if (!t) continue; const s = bySec[rank(t)], a = p.answers[qid]; s.att++; if (a && a.ok) s.ok++; }
     const att = r.right + r.wrong;
-    return { title: "Day " + ts[0].day + " · " + ts.map((t) => short(t.section)).join(" + "), score: round(r.score), max: r.max, acc: att ? Math.round((100 * r.right) / att) : null, att, secs: r.secs, bySec, ts };
+    return { title: unitWord + " " + ts[0].day + " · " + ts.map((t) => short(t.section)).join(" + "), score: round(r.score), max: r.max, acc: att ? Math.round((100 * r.right) / att) : null, att, secs: r.secs, bySec, ts };
   })();
-  const rmExams = [...runs].sort((x, y) => (y[1].at || 0) - (x[1].at || 0)).map(([k, r]) => { const ts = k.split("+").map((id) => testById.get(id)), att = r.right + r.wrong; return { key: k, title: "Day " + ts[0].day + " · " + ts.map((t) => short(t.section)).join(" + "), score: round(r.score) + "/" + r.max, att, acc: att ? Math.round((100 * r.right) / att) : null }; });
+  const rmExams = [...runs].sort((x, y) => (y[1].at || 0) - (x[1].at || 0)).map(([k, r]) => { const ts = k.split("+").map((id) => testById.get(id)), att = r.right + r.wrong; return { key: k, title: unitWord + " " + ts[0].day + " · " + ts.map((t) => short(t.section)).join(" + "), score: round(r.score) + "/" + r.max, att, acc: att ? Math.round((100 * r.right) / att) : null }; });
   const bestRun = runs.length ? [...runs].sort((x, y) => (y[1].max ? y[1].score / y[1].max : 0) - (x[1].max ? x[1].score / x[1].max : 0))[0][1] : null;
   const mins = (s) => (s === null || s === undefined ? "–" : Math.round(s / 60) + " min");
   const choose = (d) => { setSel(d.day); setPg(null); };
@@ -168,7 +166,11 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
   const chosen = tk ? tk.ts.filter((t) => on.has(t.id)) : [];
   /* a day with fewer than the usual three sections (Reasoning, Quant, English) keeps the same ticket: the missing ones are shown frozen */
   const GHOST = ["Reasoning Ability", "Quantitative Aptitude", "English Language"];
-  const rows = tk ? [...tk.ts, ...[0, 1, 2].filter((k) => tk.ts.length < 3 && !tk.ts.some((t) => rank(t) === k)).map((k) => ({ ghost: true, k }))].sort((x, y) => (x.ghost ? x.k : rank(x)) - (y.ghost ? y.k : rank(y))) : [];
+  const onePaper = tk && !ghosts && tk.ts.length === 1 && (tk.ts[0].parts || []).length > 1;
+  const rows = !tk ? []
+    : onePaper
+      ? [tk.ts[0], ...tk.ts[0].parts.map(([name, n, time], k) => ({ part: true, k, name, n, time }))]
+      : [...tk.ts, ...[0, 1, 2].filter((k) => ghosts && tk.ts.length < 3 && !tk.ts.some((t) => rank(t) === k)).map((k) => ({ ghost: true, k }))].sort((x, y) => (x.ghost ? x.k : rank(x)) - (y.ghost ? y.k : rank(y)));
   const sum = (k) => (k === "time" && together ? together(chosen.length, chosen.reduce((x, t) => x + (t.time || 0), 0)) : chosen.reduce((x, t) => x + (t[k] || 0), 0));
   const toggle = (id) => setTicks({ ...ticks, [tk.day]: tk.ts.filter((t) => (t.id === id ? !on.has(id) : on.has(t.id))).map((t) => t.id) });
   const allOn = tk && chosen.length === tk.ts.length;
@@ -207,12 +209,12 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
               </label>
             )}
             {hov
-              ? <><h2>Day {hov.day}</h2><p>{hov.ts.map((t) => short(t.section)).join(" · ")} · {hov.ts.reduce((x, t) => x + (t.time || 0), 0)} min{info(hov).state === "done" ? " · Done" : info(hov).n ? " · " + info(hov).n + " of " + hov.ts.length + " taken" : ""}</p></>
-              : <><h2>Choose a day</h2><p>Days {days[a]?.day} – {days[z - 1]?.day} of {days.length}</p></>}
+              ? <><h2>{unitWord} {hov.day}</h2><p>{hov.ts.map((t) => short(t.section)).join(" · ")} · {hov.ts.reduce((x, t) => x + (t.time || 0), 0)} min{info(hov).state === "done" ? " · Done" : info(hov).n ? " · " + info(hov).n + " of " + hov.ts.length + " taken" : ""}</p></>
+              : <><h2>Choose a {unitWord.toLowerCase()}</h2><p>{unitWord}s {days[a]?.day} – {days[z - 1]?.day} of {days.length}</p></>}
             </div>
             <div className={"bc-arrows" + (pages.length > 1 ? "" : " off")} aria-hidden={pages.length > 1 ? undefined : "true"}>
-              <button type="button" aria-label={"Previous days (" + (cur > 0 ? days[pages[cur - 1][0]].day + "–" + days[pages[cur - 1][1] - 1].day : "") + ")"} disabled={cur === 0} onClick={() => go(cur - 1)}>‹</button>
-              <button type="button" aria-label={"Next days (" + (cur < pages.length - 1 ? days[pages[cur + 1][0]].day + "–" + days[pages[cur + 1][1] - 1].day : "") + ")"} disabled={cur >= pages.length - 1} onClick={() => go(cur + 1)}>›</button>
+              <button type="button" aria-label={"Previous " + unitWord.toLowerCase() + "s (" + (cur > 0 ? days[pages[cur - 1][0]].day + "–" + days[pages[cur - 1][1] - 1].day : "") + ")"} disabled={cur === 0} onClick={() => go(cur - 1)}>‹</button>
+              <button type="button" aria-label={"Next " + unitWord.toLowerCase() + "s (" + (cur < pages.length - 1 ? days[pages[cur + 1][0]].day + "–" + days[pages[cur + 1][1] - 1].day : "") + ")"} disabled={cur >= pages.length - 1} onClick={() => go(cur + 1)}>›</button>
             </div>
           </header>
           <div className="bc-area" ref={areaRef}>
@@ -220,7 +222,7 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
             {days.slice(a, z).map((d) => {
               const { n, state } = info(d);
               return (
-                <button key={d.day} type="button" aria-pressed={sel === d.day} aria-label={"Day " + d.day + (state === "done" ? ", completed" : state === "part" || isLive(d) ? ", in progress" : ", " + n + " of " + d.ts.length + " sections taken")}
+                <button key={d.day} type="button" aria-pressed={sel === d.day} aria-label={unitWord + " " + d.day + (state === "done" ? ", completed" : state === "part" || isLive(d) ? ", in progress" : ", " + n + " of " + d.ts.length + " taken")}
                   className={"bc-day st-" + state + (isLive(d) ? " live" : "") + (hov && hov.day === d.day ? " act" : "") + (fits(d, flt) ? "" : " dim")}
                   onMouseEnter={() => setHov(d)} onFocus={() => setHov(d)} onBlur={() => setHov(null)} onKeyDown={keyNav} onClick={() => choose(d)}>{state === "done" ? <span className="dn-ok" aria-hidden="true">✓</span> : state === "part" || isLive(d) ? <span className="dn-live" aria-hidden="true">⏳</span> : d.day}</button>
               );
@@ -232,18 +234,24 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
         </section>
           ) },
           { id: "tkt", label: "Ticket", node: (
-        <aside className="bp-left" aria-label={"Day " + tk.day + " ticket"}>
+        <aside className="bp-left" aria-label={unitWord + " " + tk.day + " ticket"}>
           {(() => {
             const { state } = info(tk), liveRun = liveOf(tk)[0], live = !!liveRun;
             return (
               <div className={"tk" + (pinned ? "" : " peek")}>
                 <div className="tk-stub">
                   <div className="tk-meta"><small>{g.name.replace(/ (Course )?2026$/, "")}</small><span className="tk-tag">{state === "done" ? "Completed" : state === "part" || live ? "In progress" : next === tk ? "Next up" : "Not started"}</span></div>
-                  <div className="tk-dayrow"><small>Day</small><b>{tk.day}</b></div>
+                  <div className="tk-dayrow"><small>{unitWord}</small><b>{tk.day}</b></div>
                 </div>
                 <div className="tk-perf" aria-hidden="true" />
                 <div className="tkr-list" role="group" aria-label="Sections to take">
                   {rows.map((t) => {
+                    if (t.part) return (
+                      <div key={"p" + t.k} className={"tkr sub " + secClass(t.name)}>
+                        <span className="tkr-box" aria-hidden="true" />
+                        <span className="tkr-txt"><b>{t.name}</b><small>{t.n} questions · {t.time} min</small></span>
+                      </div>
+                    );
                     if (t.ghost) return (
                       <div key={"g" + t.k} className={"tkr frozen " + SECS[t.k][1]} aria-disabled="true">
                         <span className="tkr-box" aria-hidden="true" />
@@ -264,12 +272,12 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
                 <div className="tk-perf plain" aria-hidden="true" />
                 <div className="tkr-foot">
                   <div className="tkr-sum">
-                    <span>{chosen.length}/{tk.ts.length} sections · {sum("n")} q · {sum("time")} min</span>
+                    <span>{tk.ts.length > 1 ? chosen.length + "/" + tk.ts.length + " sections · " : ""}{sum("n")} q · {sum("time")} min</span>
                     <button type="button" className="linkbtn" disabled={!pinned} onClick={() => setTicks({ ...ticks, [tk.day]: allOn ? [] : tk.ts.map((t) => t.id) })}>{allOn ? "Clear" : "All"}</button>
                   </div>
                   <div className="tkr-act">
                     {live && pinned && <a className="btn sm" href={"#/mock/" + g.id + "/" + liveRun.key} title={"Resume " + liveRun.ts.map((t) => short(t.section)).join(" + ")}>Resume</a>}
-                    <a className={"btn primary" + (href ? "" : " off")} href={href || undefined} aria-disabled={!href}>{!pinned ? "Click the day" : chosen.length > 1 ? "Start " + chosen.length + " sections" : chosen.length ? "Start " + short(chosen[0].section) : "Pick a section"}</a>
+                    <a className={"btn primary" + (href ? "" : " off")} href={href || undefined} aria-disabled={!href}>{!pinned ? "Click the " + unitWord.toLowerCase() : chosen.length > 1 ? "Start " + chosen.length + " sections" : chosen.length ? (tk.ts.length > 1 ? "Start " + short(chosen[0].section) : "Start the " + unitWord.toLowerCase()) : "Pick a section"}</a>
                   </div>
                 </div>
               </div>
@@ -290,7 +298,7 @@ export function DayPlanner({ mine, title, kind, scopeWord = "exams", right, empt
                   <div key={d.day} className={"brw" + (open ? " open" : "")}>
                     <button type="button" className={"brh st-" + state} aria-expanded={open} onClick={() => { setOpenRec(open ? null : d.day); setSure(null); setSecOpen(null); }}>
                       <span className="brh-top"><small>{g.name.replace(/ (Course )?2026$/, "")}</small><em>{state === "done" ? "Completed" : state === "part" || live ? "In progress" : "Not started"}</em></span>
-                      <span className="brh-day"><small>Day</small><b>{d.day}</b><i>{n === 0 && live ? live.left + " answered" : n + " of " + d.ts.length + " taken"}</i></span>
+                      <span className="brh-day"><small>{unitWord}</small><b>{d.day}</b><i>{n === 0 && live ? live.left + " answered" : n + " of " + d.ts.length + " taken"}</i></span>
                     </button>
                     <div className="brw-hov">
                       {live && <a className="brw-b primary" href={"#/mock/" + g.id + "/" + live.key}>Resume</a>}

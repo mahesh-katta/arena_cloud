@@ -79,6 +79,10 @@ export function Solution({ q }) {
   return (
     <div className="solution">
       <div className="lbl">Solution · answer {q.correct_option}</div>
+      {/* a one-line rule reads best inline; working that runs over several lines (the quadratic split) keeps its lines */}
+      {q.rule && (/\n/.test(q.rule)
+        ? <div className="muted small pre" style={{ margin: "2px 0 8px" }}><b>{q.pattern}</b>{"\n" + q.rule}</div>
+        : <div className="muted small" style={{ margin: "2px 0 8px" }}><b>Pattern:</b> {q.pattern} · <b>Rule:</b> {q.rule}</div>)}
       {!q.explanation && !imgs.length ? <div className="muted">No written solution is stored for this question.</div> : (
         <>
           <Text text={q.explanation} images={imgs} />
@@ -149,7 +153,10 @@ export function Options({ q, picked, onPick, reveal = true }) {
         return (
           <button key={o.label} className={c} disabled={reveal && !!picked} onClick={(e) => { e.currentTarget.blur(); onPick(o.label); }}>
             <span className="key">{o.label}</span>
-            <span className="pre"><Maths text={o.text} /></span>
+            {/* some papers print the choices as little pictures (fractions, surds) */}
+            {/\[Image \d+\]/.test(o.text || "")
+              ? <Text text={o.text} images={(q.option_image_paths || []).length ? q.option_image_paths : q.question_image_paths} className="optimg" />
+              : <span className="pre"><Maths text={o.text} /></span>}
           </button>
         );
       })}

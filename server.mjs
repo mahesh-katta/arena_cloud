@@ -9,6 +9,7 @@
  *     /                               the app (dist/)
  *     /data/bank|speed|mocks/*.json   the split data files (read-only)
  *     /data/images/...                question and chart images
+ *     /data/notes/...                 shorthand notes for the Modules topics (data/notes/index.json lists them)
  *     GET  /api/test?group=G&id=M     one mock test with only its questions
  *     GET  /api/course/q?ids=a,b,c    those questions (from bank / speed / mocks), in that order, each with a `ref`
  *     GET  /api/boot                  an id that changes each time the server starts
@@ -28,7 +29,7 @@ const PROGRESS = path.join(path.dirname(APP), "arena_dashboard_progress.json");
 /* changes on every start, so the app can tell a refresh (same id) from a restart (new id) */
 const BOOT = Date.now().toString(36);
 const PORT = +process.argv[2] || +process.env.PORT || 8000;
-const SERVED = ["bank", "speed", "mocks", "booster", "images", "course"].map((d) => path.join(DATA, d) + path.sep);
+const SERVED = ["bank", "speed", "mocks", "booster", "images", "course", "notes"].map((d) => path.join(DATA, d) + path.sep);
 
 const TYPES = {
   ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",

@@ -9,6 +9,7 @@ import { BoosterHome } from "./Booster.jsx";
 import { Settings } from "./Settings.jsx";
 import { Calc } from "./Calc.jsx";
 import { CourseHome, CourseTopic, CourseLesson } from "./Course.jsx";
+import { CrackerNotes } from "./Shorthand.jsx";
 import { Setup } from "./Profile.jsx";
 import { loadProgress, useProgress, useReady, hasProfile, applyTheme, switchProfile } from "./store.js";
 import { examById, profileLabel } from "./exams.js";import { initials } from "./ui.jsx";
@@ -121,6 +122,7 @@ function App() {
   else if (view === "mocks") body = <MocksHome />;
   else if (view === "mock" && a && b) body = <MockTest key={b} gid={a} mid={b} />;
   else if (view === "booster") body = <BoosterHome />;
+  else if (view === "course" && a === "cracker" && b) body = <CrackerNotes key={raw} tid={b} />;
   else if (view === "course" && a && b && c) body = <CourseLesson key={raw} subject={a} tid={b} lid={c} />;
   else if (view === "course" && a && b) body = <CourseTopic key={raw} subject={a} tid={b} />;
   else if (view === "course") body = <CourseHome />;

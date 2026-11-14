@@ -179,6 +179,8 @@ export function applyTheme() {
 export const LEVELS = { easy: "Easy", easy_to_moderate: "Easy–Moderate", moderate: "Moderate", pattern: "Pattern" };
 export const SOURCES = {
   arena_basics: "Arena · Beginner", arena_medium: "Arena · Medium", arena_glat: "Arena · GLAT",
+  arena_pyq_memory_based: "Previous year papers", arena_sectional_mocks: "Arena · Sectional mocks", arena_booster_mocks: "Arena · Booster mocks",
+  arena_full_mocks: "Arena · Full mocks",
   "Arena CCE Arithmetic Ability - I": "Arena CCE book",
 };
 export const srcName = (s) => SOURCES[s] || s;
@@ -204,6 +206,18 @@ export function clearSpos(tid) { try { const m = readSpos(); delete m[tid]; loca
 export const courseIndex = () => getJSON("/data/course/index.json");
 export const courseTopic = (subject, id) => getJSON("/data/course/" + subject + "/" + id + ".json");
 export const courseQs = (ids) => getJSON("/api/course/q?ids=" + ids.join(","));
+
+/* Shorthand notes (data/notes): index.json lists the topics that have a notes file, so a topic without notes is never fetched.
+   Resolves to the topic's notes with its subject's common rules as .common, or null when there are none (or no notes folder). */
+export const notesIndex = () => getJSON("/data/notes/index.json").catch(() => null);
+export async function topicNotes(subject, id) {
+  const ix = await notesIndex();
+  const s = ix && ix.subjects.find((x) => x.id === subject);
+  const t = s && s.topics.find((x) => x.id === id);
+  if (!t) return null;
+  const [notes, common] = await Promise.all([getJSON("/data/notes/" + t.file), s.common ? getJSON("/data/notes/" + s.common).catch(() => null) : null]);
+  return { ...notes, common };
+}
 
 
 /* A setting that survives refreshes and other tabs/windows but resets when the app (server) restarts:

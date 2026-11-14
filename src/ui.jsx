@@ -65,6 +65,8 @@ export function Toggle({ value, onChange, items, optional, label }) {
 export function Dropdown({ label, value, onChange, opts, multi, prefix, hover }) {
   const [open, setOpen] = useState(false);
   const box = useRef(null);
+  /* a menu opened by a click scrolls into view when the panel it sits in is too short to show all of it */
+  useEffect(() => { if (open && !hover) box.current?.querySelector(".ddmenu")?.scrollIntoView({ block: "nearest" }); }, [open]);
   useEffect(() => {
     if (!open) return;
     const away = (e) => { if (box.current && !box.current.contains(e.target)) setOpen(false); };

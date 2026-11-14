@@ -19,21 +19,67 @@ export const levelName = (k) => (k === "" ? "No level (book)" : k);
 
 /* di: "" = all questions · "only" = DI / puzzle-set questions · "single" = questions that stand alone (true = "only", from older saved filters) */
 export const diMode = (f) => (f.di === true ? "only" : f.di || "");
-export const EMPTY_F = { stage: [], src: [], sub: [], di: "" };
+export const EMPTY_F = { stage: [], src: [], sub: [], di: "", kind: [], shape: [], num: [] };
+/* optional extra filters: only topics whose questions carry these fields show them (Number Series: series_type = Missing / Wrong, pattern = the module inside a subtopic) */
+export const kindOf = (q) => q.series_type || "";
+export const patOf = (q) => q.pattern || "";
+
+/* A pattern name like "Add multiples of 12 (12, 24, 36 …)" is ONE shape ("Add multiples of a fixed number")
+ * with a NUMBER (12) turned up or down. Those two were sitting in the same list, which is why Adding had 79
+ * entries where most of them were the same idea. Here the name is split back into the shape and the number,
+ * so the Pattern filter lists shapes and a second filter picks the number.
+ * A pattern with no number of its own keeps its full name as the shape and has no number. */
+const EXAMPLE = /\s*\([^()]*…[^()]*\)\s*$/;           // a trailing "(12, 24, 36 …)" is an illustration, not the number
+const N = "(-?\\d+(?:[.,]\\d+)?)";
+const SHAPES = [
+  [`^(Add|Subtract) multiples of ${N}$`, (m) => [`${m[1]} multiples of a fixed number`, m[2]]],
+  [`^(Add|Subtract) numbers rising by ${N}$`, (m) => [`${m[1]} a chain rising by a fixed step`, m[2]]],
+  [`^(Add|Subtract) numbers falling by ${N}$`, (m) => [`${m[1]} a chain falling by a fixed step`, m[2]]],
+  [`^(Add|Subtract) ${N} each time$`, (m) => [`${m[1]} the same number each time`, m[2]]],
+  [`^(Add|Subtract) \\(n² ([+−]) ${N}\\)$`, (m) => [`${m[1]} (n² ± a fixed number)`, m[2] + m[3]]],
+  [`^(Add|Subtract) \\(n³ ([+−]) ${N}\\)$`, (m) => [`${m[1]} (n³ ± a fixed number)`, m[2] + m[3]]],
+  [`^(Add|Subtract) two numbers alternately \\(${N} and ${N}\\)$`, (m) => [`${m[1]} two numbers alternately`, `${m[2]} and ${m[3]}`]],
+  [`^Multiply by ${N}$`, (m) => ["Multiply by a fixed number", m[1]]],
+  [`^Divide by ${N}$`, (m) => ["Divide by a fixed number", m[1]]],
+  [`^Multiply by ${N} and (add|subtract) ${N}$`, (m) => ["Multiply by a fixed number, then add or subtract a fixed number", `×${m[1]} ${m[2] === "add" ? "+" : "−"}${m[3]}`]],
+  [`^(Multiply|Divide) by numbers rising by ${N}$`, (m) => [`${m[1]} by a chain rising by a fixed step`, m[2]]],
+  [`^(Multiply|Divide) by numbers falling by ${N}$`, (m) => [`${m[1]} by a chain falling by a fixed step`, m[2]]],
+].map(([re, f]) => [new RegExp(re), f]);
+
+const split = new Map();                               // pattern name -> [shape, number]; only ~240 names exist
+function partsOf(p) {
+  let v = split.get(p);
+  if (v) return v;
+  const bare = p.replace(EXAMPLE, "");
+  v = [p, ""];
+  for (const [re, f] of SHAPES) { const m = bare.match(re); if (m) { v = f(m); break; } }
+  split.set(p, v);
+  return v;
+}
+export const shapeOf = (q) => (q.pattern ? partsOf(q.pattern)[0] : "");
+export const numOf = (q) => (q.pattern ? partsOf(q.pattern)[1] : "");
+/* the shapes that actually have a number to pick, among the questions passing the other filters */
+export function numbersFor(qs, f) {
+  const out = {};
+  for (const q of qs) { if (!q.pattern || !pass(q, f, "num")) continue; const n = numOf(q); if (n) out[n] = (out[n] || 0) + 1; }
+  return out;
+}
 
 const diOk = (q, f) => { const m = diMode(f); return !m || (m === "only" ? !!q.common_data_id : !q.common_data_id); };
 const has = (arr, v) => !arr || !arr.length || arr.includes(v);
 /* does question q pass filters f, ignoring the dimension `skip`? */
 export function pass(q, f, skip) {
   return (skip === "stage" || has(f.stage, lvOf(q))) && (skip === "src" || has(f.src, q.source))
-    && (skip === "sub" || has(f.sub, subOf(q))) && (skip === "di" || diOk(q, f));
+    && (skip === "sub" || has(f.sub, subOf(q))) && (skip === "di" || diOk(q, f))
+    && (skip === "kind" || has(f.kind, kindOf(q))) && (skip === "shape" || has(f.shape, shapeOf(q)))
+    && (skip === "num" || has(f.num, numOf(q)));
 }
 /* counts of every value of one dimension, among questions passing the other filters */
 export function countBy(qs, f, dim) {
   const out = {};
   for (const q of qs) {
     if (!pass(q, f, dim)) continue;
-    const k = dim === "stage" ? lvOf(q) : dim === "src" ? q.source : subOf(q);
+    const k = dim === "stage" ? lvOf(q) : dim === "src" ? q.source : dim === "kind" ? kindOf(q) : dim === "shape" ? shapeOf(q) : dim === "num" ? numOf(q) : subOf(q);
     out[k] = (out[k] || 0) + 1;
   }
   return out;

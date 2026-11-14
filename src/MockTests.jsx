@@ -6,6 +6,7 @@ import { fits, profileLabel } from "./exams.js";
 import { Loading, Failed } from "./ui.jsx";
 import { useScope } from "./Profile.jsx";
 import { DayPlanner, Gauge } from "./Booster.jsx";
+import { MockGroup } from "./Mocks.jsx";
 
 const round = (x) => Math.round(x * 100) / 100;
 const MON = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
@@ -40,11 +41,14 @@ export function MocksHome() {
     .map((g) => ({ ...g, tests: all ? g.tests : g.tests.filter((t) => fits(p.profile, t)) })).filter((g) => g.tests.length);
   const mockDays = new Set((groupsOf("sectional")[0] || { tests: [] }).tests.map((t) => t.day)).size;
   const papersN = (groupsOf("pyq")[0] || { tests: [] }).tests.length;
+  const fullGroups = groupsOf("full");
+  const fullN = (fullGroups[0] || { tests: [] }).tests.length;
   const label = all ? "All exams" : profileLabel(p.profile) || "Mock tests";
   const tabs = (
     <div className="mtabs">
       <div className="bfl" role="tablist" aria-label="Mock tests">
         <button type="button" role="tab" aria-selected={tab === "mocks"} className={tab === "mocks" ? "on" : ""} onClick={() => pick("mocks")}>Mocks<em>{mockDays}</em></button>
+        {!!fullN && <button type="button" role="tab" aria-selected={tab === "full"} className={tab === "full" ? "on" : ""} onClick={() => pick("full")}>Full Mocks<em>{fullN}</em></button>}
         <button type="button" role="tab" aria-selected={tab === "years"} className={tab === "years" ? "on" : ""} onClick={() => pick("years")}>Previous years<em>{papersN}</em></button>
       </div>
       <button type="button" className="linkbtn" onClick={() => setAll(!all)}>{all ? "Back to " + profileLabel(p.profile) : "Browse all exams"}</button>
@@ -54,6 +58,13 @@ export function MocksHome() {
     <div className="card pad empty">There are no {what} for {all ? "any exam" : profileLabel(p.profile)} yet.
       {!all && <div className="actions" style={{ justifyContent: "center", marginTop: 14 }}><button className="btn primary" onClick={() => setAll(true)}>Browse all exams</button></div>}
     </div>
+  );
+  /* Full-length papers: the same planner as the mock series, numbered by test
+     rather than by day, and with no ghost rows - a full paper is one sitting. */
+  if (tab === "full") return (
+    <DayPlanner key="full" mine={fullGroups} title={label} kind="Full mocks" scopeWord="full papers"
+      unitWord="Test" ghosts={false} right={tabs}
+      empty={<div className="bstage"><div className="bp-top"><div><h1>{label}</h1></div>{tabs}</div>{empty("full mocks")}</div>} />
   );
   return tab === "mocks"
     ? <DayPlanner key="mocks" mine={groupsOf("sectional")} title={label} kind="Mock tests" scopeWord="mock exams" right={tabs} together={(n, sum) => (n === 2 ? 45 : sum)} empty={<div className="bstage"><div className="bp-top"><div><h1>{label}</h1></div>{tabs}</div>{empty("mock tests")}</div>} />

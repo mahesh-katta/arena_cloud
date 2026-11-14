@@ -5,11 +5,12 @@ import { fits, profileLabel } from "./exams.js";
 import { useScope } from "./Profile.jsx";
 import { BackBtn, Facet, Checks, Switch, Dropdown, Chip, secClass, short, initials, Meter, pct, Loading, Failed, useView, ViewToggle } from "./ui.jsx";
 
-const KINDS = [["pyq", "Previous years"], ["sectional", "Sectional Tests"], ["booster", "Score Boosters"]];
+const KINDS = [["pyq", "Previous years"], ["sectional", "Sectional Tests"], ["booster", "Score Boosters"], ["full", "Full Mocks"]];
 const NOTES = {
   pyq: "Full-length papers from earlier years of the IBPS, SBI, RRB and insurance exams, with the original pattern and cutoffs",
   sectional: "Day-wise sectional tests from the 2026 Prelims and Mains courses — one section at a time, timed",
   booster: "Prelims Score Booster and Mains Booster courses — short timed tests on the high-weightage topics",
+  full: "Full-length Prelims papers — all 80 questions in 45 minutes, both sections, sat end to end",
 };
 const round = (x) => Math.round(x * 100) / 100;
 const scoreChip = (r) => r && <span className={"chip " + (r.score / r.max >= 0.5 ? "ok" : "bad")}>Scored {round(r.score)}/{r.max}</span>;
@@ -52,6 +53,8 @@ export function MockGroup({ gid, embedded }) {
   if (!g || !g.tests.length) return <div className="page"><div className="empty">This test series is not available.</div></div>;
   const kindName = KINDS.find((k) => k[0] === col.kind)[1];
   const pyq = col.kind === "pyq";
+  /* a card per paper for the full-length ones too, not the day-wise grouping */
+  const perPaper = pyq || col.kind === "full";
   const facet = (t) => (pyq ? stageOf(t.stage) : t.section || "");
   const opts = {}; for (const t of g.tests) { const f = facet(t); if (f) opts[f] = (opts[f] || 0) + 1; }
   const yopts = {}; if (pyq) for (const t of g.tests) { const y = paper(t).year; if (y) yopts[y] = (yopts[y] || 0) + 1; }
@@ -76,15 +79,15 @@ export function MockGroup({ gid, embedded }) {
         {gActive > 0 && <button type="button" className="linkbtn" onClick={() => { setFlt([]); setYrs([]); setDys([]); setProg(""); setGq(""); }}>Clear</button>}
         <span className="grow" /><span className="muted small" aria-live="polite">{tests.length} of {g.tests.length} {pyq ? "papers" : "tests"}</span>
       </div>
-      {pyq ? (
+      {perPaper ? (
         <div className="grid wide">
           {tests.map((t) => {
             const x = paper(t), r = p.mocks[t.id];
             return (
               <a key={t.id} className={"card admit " + (stageOf(t.stage) === "Mains" ? "s-ga" : "s-b")} href={"#/mock/" + gid + "/" + t.id}>
-                <div className="stub"><small>{t.exam}</small><b>{x.year || "PYQ"}</b><small>{stageOf(t.stage) || "Paper"}</small></div>
+                <div className="stub"><small>{t.exam}</small><b>{pyq ? x.year || "PYQ" : (t.name.match(/(\d+)\s*$/) || [])[1] || "Test"}</b><small>{stageOf(t.stage) || "Paper"}</small></div>
                 <div className="body">
-                  <div className="name">{[stageOf(t.stage), x.when || x.extra, x.slot && "Slot " + x.slot].filter(Boolean).join(" · ") || t.name}</div>
+                  <div className="name">{pyq ? [stageOf(t.stage), x.when || x.extra, x.slot && "Slot " + x.slot].filter(Boolean).join(" · ") || t.name : t.name}</div>
                   <div className="facts">
                     <span className="chip">{t.n} questions</span>
                     {t.time ? <span className="chip">{t.time} min</span> : null}

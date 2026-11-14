@@ -1,8 +1,9 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
-import { courseIndex, courseTopic, courseQs, bankIndex, useData, useProgress } from "./store.js";
+import { courseIndex, courseTopic, courseQs, bankIndex, notesIndex, topicNotes, useData, useProgress } from "./store.js";
 import { BackBtn, Solve, initials, Meter, Loading, Failed } from "./ui.jsx";
 import { glyph } from "./TopicIcon.jsx";
+import { UnitShorthand } from "./Shorthand.jsx";
 
 /* Course: Reasoning or Quant → topic → units → lessons. Reasoning units are concepts and a lesson is one puzzle;
    Quant units are archetypes and a lesson is one recipe. No gates, no tests, no levels: every lesson is open. */
@@ -117,6 +118,7 @@ const href2 = (subj, t) => (t.practice ? "#/practice/" + t.id : href(subj, t.id)
 export function CourseHome() {
   const [ix, err] = useData(courseIndex, []);
   const [bank] = useData(bankIndex, []);
+  const [nix] = useData(notesIndex, []);
   const [pick, setPick] = useState(() => { try { return localStorage.getItem("arena-course-subj") || ""; } catch { return ""; } });
   const [q, setQ] = useState("");
   const [tick, setTick] = useState(0);
@@ -125,7 +127,9 @@ export function CourseHome() {
   if (!ix) return <Loading />;
   const counts = {};
   if (bank) for (const sec of bank.sections) for (const t of sec.topics) counts[t.id] = t.n;
-  const cracker = { id: "cracker", name: "Score Cracker", topics: CRACKER.map(([id, name]) => ({ id, name, practice: true, questions: counts[id] })) };
+  /* Score Cracker topics with shorthand notes get a Shorthand link on their card */
+  const noted = new Set(((nix && nix.subjects.find((x) => x.id === "cracker")) || { topics: [] }).topics.map((t) => t.id));
+  const cracker = { id: "cracker", name: "Score Cracker", topics: CRACKER.map(([id, name]) => ({ id, name, practice: true, questions: counts[id], notes: noted.has(id) })) };
   const subjects = [...ix.subjects, cracker, { id: "di", name: "Data Interpretation", topics: DI.map(([id, name]) => ({ id, name, practice: true, questions: counts[id] })) }, { id: "english", name: "English", soon: true, topics: [] }];
   const s = subjects.find((x) => x.id === pick) || subjects[0];
   const choose = (id) => { setPick(id); try { localStorage.setItem("arena-course-subj", id); } catch {} };
@@ -149,18 +153,33 @@ export function CourseHome() {
   };
   /* long Reasoning titles lose their repeated tail ("Seating Arrangement", "-Based Puzzle") and keep it as a small kind tag */
   const shortName = (t) => { const m = t.name.match(/^(.*?)(?:[\s-]+Based)?\s+(Seating Arrangement|Puzzle)$/i); return m && !t.practice ? { main: m[1].trim(), kind: /seating/i.test(m[2]) ? "Seating" : "Puzzle" } : { main: t.name, kind: "" }; };
-  const topicCard = (x, t, sn = shortName(t)) => (
-    <a key={x.id + t.id} className={"card tcard c-" + x.id + (isRecent.has(x.id + ":" + t.id) ? " recent" : "")} href={href2(x.id, t)}
-      onClick={() => { if (t.practice) saveRecent({ subject: x.id, tid: t.id, lid: t.id, practice: true, topic: t.name, unit: "Practice set", name: t.name }); }}>
-      <div className="top">
-        <span className="tile">{glyph(t.name)}</span>
-        <div className="grow"><div className="name" title={t.name}>{sn.main}</div>
-          <div className="sub">{t.practice ? (t.questions ? t.questions.toLocaleString() + " questions" : "Practice set") : t.units + (t.units === 1 ? " unit" : " units") + " · " + t.questions.toLocaleString() + " Qs"}</div></div>
+  const topicCard = (x, t, sn = shortName(t)) => {
+    const cls = "card tcard c-" + x.id + (isRecent.has(x.id + ":" + t.id) ? " recent" : "");
+    const open = () => { if (t.practice) saveRecent({ subject: x.id, tid: t.id, lid: t.id, practice: true, topic: t.name, unit: "Practice set", name: t.name }); };
+    const sub = t.practice ? (t.questions ? t.questions.toLocaleString() + " questions" : "Practice set") : t.units + (t.units === 1 ? " unit" : " units") + " · " + t.questions.toLocaleString() + " Qs";
+    const tail = <>{isRecent.has(x.id + ":" + t.id) && <span className="rtag">Recent</span>}<span className="tgo" aria-hidden="true">→</span></>;
+    /* a card with notes holds two links: its name (stretched over the whole card) opens the practice set,
+       the Shorthand pill beside the question count opens the shorthand page */
+    if (t.notes) return (
+      <div key={x.id + t.id} className={cls + " hasnote"}>
+        <div className="top">
+          <span className="tile">{glyph(t.name)}</span>
+          <div className="grow"><a className="name tmain" href={href2(x.id, t)} onClick={open} title={t.name}>{sn.main}</a>
+            <div className="sub">{sub}<a className="tnote" href={href(x.id, t.id)} title={"Shorthand notes for " + t.name}>Shorthand</a></div></div>
+        </div>
+        {tail}
       </div>
-      {isRecent.has(x.id + ":" + t.id) && <span className="rtag">Recent</span>}
-      <span className="tgo" aria-hidden="true">→</span>
-    </a>
-  );
+    );
+    return (
+      <a key={x.id + t.id} className={cls} href={href2(x.id, t)} onClick={open}>
+        <div className="top">
+          <span className="tile">{glyph(t.name)}</span>
+          <div className="grow"><div className="name" title={t.name}>{sn.main}</div><div className="sub">{sub}</div></div>
+        </div>
+        {tail}
+      </a>
+    );
+  };
   return (
     <div className="page course cfit">
       <div className="bp-top chead3">
@@ -237,6 +256,9 @@ export function CourseTopic({ subject, tid }) {
   const [lvPick, setLvPick] = useState("");
   const [q, setQ] = useState("");
   const [st, setSt] = useState("all");
+  /* the topic's shorthand notes, if it has any: they add a Shorthand tab beside the level tabs */
+  const [nt] = useData(() => topicNotes(subject, tid).catch(() => null), [subject, tid]);
+  const [short, setShort] = useState(false);
   if (err) return <Failed what="this topic" err={err} />;
   if (!d) return <Loading />;
   const byLevel = subject === "reasoning";
@@ -282,11 +304,16 @@ export function CourseTopic({ subject, tid }) {
     </a>
   );
   const state = (s) => (!s.done ? "not started" : s.done < s.n ? s.done + " of " + s.n + " done" : s.ok + " of " + s.n + " right");
+  /* the tabs: one per exam level (Quant: one "Recipes" tab), then Shorthand when the topic has notes */
+  const shOn = short && !!nt;
+  const tabs = [...groups.map((x) => ({ k: x.lv, label: x.lv || "Recipes", n: x.items.length })), ...(nt ? [{ k: "@short", label: "Shorthand" }] : [])];
+  const onTab = shOn ? "@short" : lv;
+  const setTab = (k) => { if (k === "@short") setShort(true); else { setShort(false); setLvPick(k); } };
   const lvKey = (e) => {
-    const i = groups.findIndex((x) => x.lv === lv), n = groups.length;
+    const i = tabs.findIndex((x) => x.k === onTab), n = tabs.length;
     const j = e.key === "ArrowRight" ? (i + 1) % n : e.key === "ArrowLeft" ? (i - 1 + n) % n : -1;
     if (j < 0) return;
-    e.preventDefault(); setLvPick(groups[j].lv); e.currentTarget.parentNode.children[j]?.focus();
+    e.preventDefault(); setTab(tabs[j].k); e.currentTarget.parentNode.children[j]?.focus();
   };
   const heroSub = resume ? (byLevel ? resume.name.replace(/^(Must Learn|Beginner|Prelims|Practice)\s*/, "").replace(/^[\s·]+/, "") : recipe(resume.name).main) + " · " + resume.l.ids.length + " questions" : "";
   const sets = setRows(g, names);
@@ -366,16 +393,17 @@ export function CourseTopic({ subject, tid }) {
               </div>
             </div>
             <div className="toolrow">
-              {groups.length > 1 ? (
-                <div className="ltabs" role="tablist" aria-label="Exam level">
-                  {groups.map((x) => (
-                    <button key={x.lv} type="button" role="tab" aria-selected={x.lv === lv} tabIndex={x.lv === lv ? 0 : -1} className={"ltab" + (x.lv === lv ? " on" : "")} onClick={() => setLvPick(x.lv)} onKeyDown={lvKey}>
-                      {x.lv} <small>({x.items.length})</small>
+              {tabs.length > 1 ? (
+                <div className="ltabs" role="tablist" aria-label={nt ? "Lessons or shorthand" : "Exam level"}>
+                  {tabs.map((x) => (
+                    <button key={x.k} type="button" role="tab" aria-selected={x.k === onTab} tabIndex={x.k === onTab ? 0 : -1} className={"ltab" + (x.k === onTab ? " on" : "") + (x.k === "@short" ? " sh" : "")} onClick={() => setTab(x.k)} onKeyDown={lvKey}>
+                      {x.k === "@short" && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z" /></svg>}
+                      {x.label}{x.n != null && <> <small>({x.n})</small></>}
                     </button>
                   ))}
                 </div>
               ) : <span className="grow" />}
-              <div className="ttools">
+              {!shOn && <div className="ttools">
                 <label className="tsearch">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg>
                   <input type="search" aria-label="Search lessons" placeholder={subject === "reasoning" ? "Search puzzles…" : "Search recipes…"} value={q} onChange={(e) => setQ(e.target.value)} />
@@ -383,9 +411,13 @@ export function CourseTopic({ subject, tid }) {
                 <select className="tsel" aria-label="Filter by status" value={st} onChange={(e) => setSt(e.target.value)}>
                   {STATUS.map(([k, n]) => <option key={k} value={k}>{n}</option>)}
                 </select>
-              </div>
+              </div>}
             </div>
-            <div className="uscroll">
+            <div className="uscroll" key={shOn ? "sh" + ui : "ls"}>
+              {shOn ? (
+                <UnitShorthand subject={subject} n={nt} unit={u.name}
+                  lessons={u.lessons.map((l, li) => { const r = recipe(names[li]); return { id: l.id, no: li + 1, title: r.main.replace(/^Find\s+/i, "").replace(/^./, (c) => c.toUpperCase()), sub: r.sub, href: href(subject, tid, l.id) }; })} />
+              ) : <>
               {!g.items.length && <div className="empty">Nothing matches. <button type="button" className="linkbtn" onClick={() => { setQ(""); setSt("all"); }}>Clear filters</button></div>}
               {subject === "reasoning" ? (
                 <div className="sets">
@@ -472,6 +504,7 @@ export function CourseTopic({ subject, tid }) {
                   })}
                 </ol>
               )}
+              </>}
               {afterCard}
             </div>
           </section>

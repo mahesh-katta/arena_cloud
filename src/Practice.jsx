@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
-import { EMPTY_F, pass, countBy, countDI, countSingle, lvOf, subOf, levelName, topicFits, indexCounts, indexCountDI, indexCountSingle } from "./facets.js";
+import { EMPTY_F, pass, countBy, countDI, countSingle, lvOf, subOf, levelName, shapeOf, numOf, topicFits, indexCounts, indexCountDI, indexCountSingle } from "./facets.js";
 import { resetAll, bankIndex, bankTopic, speedTopic, glatData, mockTest, useData, useProgress, srcName, shuffled, dropReview, readPos, writePos } from "./store.js";
 import { RANK } from "./priority.js";
 import { Toggle, Tabs, Checks, Facet, FacetBox, Switch, Dropdown, GroupMenu, Chip, Solve, short, useView, ViewToggle, secClass, initials, Ring, Meter, pct, Loading, Failed } from "./ui.jsx";
@@ -254,9 +254,9 @@ function useBookSets(d) {
   }, [d]);
 }
 
-const EMPTY = { sub: [], src: [], stage: [], prog: "", mix: false, set: "", di: "" };
+const EMPTY = { sub: [], src: [], stage: [], prog: "", mix: false, set: "", di: "", kind: [], shape: [], num: [] };
 /* saved filters from older versions used todo / di as on-off flags */
-const normF = (f = {}) => { const { todo, ...r } = f; return { ...r, stage: [], di: f.di === true ? "only" : f.di || "", prog: f.prog ?? (todo ? "todo" : "") }; };
+const normF = (f = {}) => { const { todo, pat, ...r } = f; return { ...r, stage: [], di: f.di === true ? "only" : f.di || "", prog: f.prog ?? (todo ? "todo" : "") }; };
 
 /* Level / source chosen on the topic list carry into a topic you open for the first time */
 function homeFilters() {
@@ -284,6 +284,27 @@ export function PracticeRun({ topic, query }) {
   const [tools, setTools] = useState(false);
   const sets = useBookSets(d);
   const set = (k) => (v) => { setF((x) => ({ ...x, [k]: v })); setI(0); };
+  /* which families each pattern shape belongs to, and which numbers each shape offers (see facets.js) */
+  const tree = useMemo(() => {
+    const fam = {}, num = {};
+    for (const q of d?.questions || []) {
+      if (!q.pattern) continue;
+      const s = shapeOf(q), n = numOf(q);
+      (fam[s] || (fam[s] = new Set())).add(subOf(q));
+      if (n) (num[s] || (num[s] = new Set())).add(n);
+    }
+    return { fam, num };
+  }, [d]);
+  /* changing the subtopic keeps only the chosen shapes that belong to it (the Pattern filter is per subtopic) */
+  const setSub = (v) => {
+    setF((x) => {
+      const shape = v.length ? (x.shape || []).filter((s) => (tree.fam[s] ? [...tree.fam[s]] : []).some((ff) => v.includes(ff))) : [];
+      return { ...x, sub: v, shape, num: shape.length ? (x.num || []).filter((n) => shape.some((s) => tree.num[s]?.has(n))) : [] };
+    });
+    setI(0);
+  };
+  /* changing the shape keeps only the chosen numbers that belong to it */
+  const setShape = (v) => { setF((x) => ({ ...x, shape: v, num: v.length ? (x.num || []).filter((n) => v.some((s) => tree.num[s]?.has(n))) : [] })); setI(0); };
   const pickSet = (id) => { setF((x) => ({ ...x, set: id })); setI(0); setTools(false); };
   const [rtab, setRtab] = useState("filters");
   const [fopen, setFopen] = useState(false);
@@ -294,9 +315,9 @@ export function PracticeRun({ topic, query }) {
   const counts = useMemo(() => {
     const qs = d?.questions || [];
     const inSet = qs.filter((q) => (!f.set || q.variant_id === f.set) && pass(q, f));
-    return { sub: countBy(qs, f, "sub"), src: countBy(qs, f, "src"), stage: countBy(qs, f, "stage"), di: countDI(qs, f), single: countSingle(qs, f),
+    return { sub: countBy(qs, f, "sub"), src: countBy(qs, f, "src"), stage: countBy(qs, f, "stage"), kind: countBy(qs, f, "kind"), shape: countBy(qs, f, "shape"), num: countBy(qs, f, "num"), di: countDI(qs, f), single: countSingle(qs, f),
       prog: { todo: inSet.filter((q) => !p.answers[q.id]).length, done: inSet.filter((q) => p.answers[q.id]).length },
-      all: { sub: countBy(qs, EMPTY_F, "sub"), src: countBy(qs, EMPTY_F, "src"), stage: countBy(qs, EMPTY_F, "stage"), di: countDI(qs, EMPTY_F) } };
+      all: { sub: countBy(qs, EMPTY_F, "sub"), src: countBy(qs, EMPTY_F, "src"), stage: countBy(qs, EMPTY_F, "stage"), kind: countBy(qs, EMPTY_F, "kind"), shape: countBy(qs, EMPTY_F, "shape"), num: countBy(qs, EMPTY_F, "num"), di: countDI(qs, EMPTY_F) } };
   }, [d, f, p.answers]);
   const list = useMemo(() => {
     if (!d) return [];
@@ -321,14 +342,26 @@ export function PracticeRun({ topic, query }) {
 
   if (err) return <Failed what="this topic" err={err} />;
   if (!d) return <Loading />;
-  const active = f.sub.length + f.src.length + f.stage.length + (f.prog ? 1 : 0) + (f.di ? 1 : 0) + (f.mix ? 1 : 0) + (f.set ? 1 : 0);
+  const active = f.sub.length + f.src.length + f.stage.length + f.kind.length + f.shape.length + f.num.length + (f.prog ? 1 : 0) + (f.di ? 1 : 0) + (f.mix ? 1 : 0) + (f.set ? 1 : 0);
   const at = Math.min(i, list.length);
   const q = list[at];
   const prev = q && p.answers[q.id];
   const cur = f.set && sets.find((x) => x.id === f.set);
   const nextSet = cur && sets[sets.indexOf(cur) + 1];
   /* every value that exists in the topic, with how many questions it would give now (0 = disabled) */
-  const opts = (dim, name = (k) => k) => Object.keys(counts.all[dim]).sort((x, y) => dim === "stage" ? LV_ORDER.indexOf(x) - LV_ORDER.indexOf(y) : (x === "General") - (y === "General") || x.localeCompare(y)).map((k) => [k, name(k), counts[dim][k] || 0]);
+  /* a topic file may list its subtopics in teaching order (subtopic_order); every other topic stays alphabetical */
+  /* the same for the optional Series type (series_type_order) and Pattern (pattern_order) filters */
+  const orderOf = (dim) => (dim === "sub" ? d.subtopic_order : dim === "kind" ? d.series_type_order : null);
+  /* pattern shapes go most-asked first with the "Other …" catch-all last; numbers go in numeric order */
+  const isOther = (k) => /^Other /.test(k);
+  const cmp = (dim) => (x, y) => {
+    if (dim === "stage") return LV_ORDER.indexOf(x) - LV_ORDER.indexOf(y);
+    if (dim === "shape") return isOther(x) - isOther(y) || (counts.all.shape[y] || 0) - (counts.all.shape[x] || 0) || x.localeCompare(y);
+    if (dim === "num") return (parseFloat(x) || 0) - (parseFloat(y) || 0) || x.localeCompare(y);
+    if (orderOf(dim)) return orderOf(dim).indexOf(x) - orderOf(dim).indexOf(y);
+    return (x === "General") - (y === "General") || x.localeCompare(y);
+  };
+  const opts = (dim, name = (k) => k) => Object.keys(counts.all[dim]).sort(cmp(dim)).map((k) => [k, name(k), counts[dim][k] || 0]);
   const crumbs = <><a href="#/practice">Topic-wise Practice</a><span>/</span>{d.section}<span>/</span><b>{d.topic}</b>{cur && <><span>/</span><b>Book set {cur.no}</b></>}</>;
   const rail = (
     <>
@@ -345,7 +378,14 @@ export function PracticeRun({ topic, query }) {
         <div className="railhead"><button type="button" className="fold" aria-expanded={fopen} onClick={() => setFopen(!fopen)}><h3 className="grow">Filter questions</h3><span className="muted small">{active > 0 ? active + " on" : "All"}</span><i aria-hidden="true" /></button>{active > 0 && <button className="btn ghost sm" onClick={() => { setF(EMPTY); setI(0); }}>Clear {active}</button>}</div>
         <div className="filters" hidden={!fopen}>
           <FacetBox label="Source" value={f.src} onChange={set("src")} opts={opts("src", srcName)} />
-          <FacetBox label="Subtopic" value={f.sub} onChange={set("sub")} opts={opts("sub")} />
+          <FacetBox label="Series type" value={f.kind} onChange={set("kind")} opts={opts("kind")} />
+          <FacetBox label="Subtopic" value={f.sub} onChange={setSub} opts={opts("sub")} />
+          {Object.keys(counts.all.shape).length > 1 && (f.sub.length
+            ? <FacetBox label="Pattern" value={f.shape} onChange={setShape} opts={opts("shape").filter((o) => o[0] && o[2] > 0)} />
+            : <div className="facet"><div className="flabel">Pattern</div><div className="muted small">Pick a subtopic to see its patterns</div></div>)}
+          {/* a shape such as "Add multiples of a fixed number" is the same rule with one number turned up or down: pick that number here */}
+          {f.shape.length > 0 && opts("num").filter((o) => o[0] && o[2] > 0).length > 1 && (
+            <FacetBox label="Number" value={f.num} onChange={set("num")} opts={opts("num").filter((o) => o[0] && o[2] > 0)} />)}
           {counts.all.di > 0 && <Dropdown label="Type" value={f.di} onChange={set("di")} opts={[["", "All questions"], ["only", "DI / puzzle sets", counts.di], ["single", "Single questions", counts.single]]} />}
           <Dropdown label="Progress" value={f.prog} onChange={set("prog")} opts={[["", "All"], ["todo", "Unattempted", counts.prog.todo], ["done", "Attempted", counts.prog.done]]} />
           <Switch checked={f.mix} onChange={set("mix")}>Shuffle order</Switch>
@@ -395,7 +435,7 @@ export function PracticeRun({ topic, query }) {
           </div>
         ) : (
           <Solver q={q} refInfo={{ kind: "bank", file: topic }} head={"Q " + (at + 1) + " / " + list.length} onResult={addSess}
-            chips={[q.subtopic && [q.subtopic, "ac"], q.variant_no && !cur && ["Book set " + q.variant_no, "ac"], q.exam_stage && q.exam_stage + " level", srcName(q.source), prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}
+            chips={[q.subtopic && [q.subtopic, "ac"], q.pattern && [q.pattern, "ac"], q.variant_no && !cur && ["Book set " + q.variant_no, "ac"], q.exam_stage && q.exam_stage + " level", srcName(q.source), prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}
             onPrev={at > 0 ? () => setI(at - 1) : null} onNext={() => setI(at + 1)} nextLabel={cur && at + 1 >= list.length ? "Finish set" : "Next question"} />
         )}
     </Solve>
