@@ -138,3 +138,16 @@ the classifier, and every question carries its source record.
 - Every question records how its topic was decided (`how`) and its score. Mixed questions also carry `also`, shown in the question details as "Also fits …".
 - **Backups:** `~/projects/arena/backups/2026-11-18-before-practice` (bank, course, progress) and
   `data/practice_build/before` (the bank as it was before the first write).
+
+## 10. The four built topics in Practice (19 Nov 2026)
+
+**Decision (user):** in Practice, Syllogism, Inequality, Quadratic Equations and Number Series are filled like every other topic. Their own builders matter only for Modules, which comes later.
+- **Classifier check first:** v11 gives the same topic to 99.3–100% of the questions their builders placed (`build_tools/practice/trials/own_topics_v11.py`).
+- **What `build.py` now does:** it adds classifier-placed mock questions to these topics too. 3,403 were added: Quadratic Equations 1,508 (including picture and fraction equations the engine can't solve), Syllogism 708, Inequality 652, Number Series 525.
+- **Kept out:** 69 questions whose answer key the topic's builder disputes (`data/*_build/held_back.json`). A wrong key would mislead, as with broken questions anywhere.
+- **Not disturbed:** none of the 14,398 questions the builders placed changed. The same holds for all 33,363 original questions (checked field by field after the write). Modules point at those ids, so they are untouched.
+- **New in the builder:**
+  - When the live classifier, scoring the whole set afresh, agrees with the set's topic at 0.95 or more, the set is settled.
+  - A sure Number Series, Quadratic or other format question is never moved by 60/40.
+  - A single question with no picture never goes to a chart topic.
+- **Practice now holds 96,134 questions.** 137 unsure questions wait, mostly new sets in these four topics.
