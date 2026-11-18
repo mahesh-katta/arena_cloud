@@ -117,3 +117,14 @@ The user reviewed 48 sets by hand: 27 kept, 14 changed, 7 unsure. Before these r
 - **D7 missing cells:** a Table Chart whose picture shows missing values (blank cells, "?", a dash, or algebra like x+y, 2a) is a Missing Table Chart. The picture is read offline with the Mac's own text reader (`build_tools/practice/missing_cells.py`), and blank cells are re-checked at twice the size. Bank: 45 of 48 missing tables found; of 76 Table Chart sets, 5 were flagged and 4 of those really were missing tables. It also corrects old bank labels.
 - **D4 for sets filed under arithmetic:** a Quant set of 3+ questions built on a data paragraph with no picture is a Caselet, and the arithmetic topic shows under "Also fits". Bank: all 122 such sets are Caselet, and no arithmetic topic holds one.
 - **G2 for single questions:** Quantity I / Quantity II wording is Quantity Comparison. 60/40 never moves such a question to the maths inside it; before this fix it had moved 41.
+
+## Audit of sure placements (19 Nov 2026)
+
+100 sets drawn at random from the 8,638 the classifier placed with a sure score (72 Reasoning, 28 Quant), each read in full by hand: **98 right, 2 wrong** (2%; with only 100 sets, the true rate could be anywhere from about 0.6% to 7%).
+- **Wrong 1:** birth years with "ages calculated with respect to 2022", filed as Age Based. P5 says Year with Age. The classifier learned the bank's mixed Year / Age labels, so **P5 now also runs on sure sets**: 204 questions moved, every one reading "ages calculated from the base year". P1–P4 stay off sure sets, because there the classifier beat the rules.
+- **Wrong 2:** persons joining on dates (18 December, 30 May), filed as Project Based. Fixed by hand: Month with Date.
+- The check showed gaps in the pair-rule wording, now fixed. These gaps had also caused some earlier wrong moves of old labels, which are now undone (65 old-bank questions).
+  - **P2:** dates written "13thor 24th" or "5 th" count as dates.
+  - **P5:** "age calculated from the base year 2021" and "calculate their ages based on the year 2022" count as Year with Age, but only when ages, not experience, are worked out.
+  - **P4:** the series is the first run in the passage, not answer options like "I). PAN II). DOT".
+- Bank checks after the fixes: P2 136 of 136, P4 83 of 83 (6 silent), P6 189 of 189 (14 silent). P5 differs on 34, all of them Option A cases, which the bank labelled the other way.
