@@ -128,3 +128,11 @@ The user reviewed 48 sets by hand: 27 kept, 14 changed, 7 unsure. Before these r
   - **P5:** "age calculated from the base year 2021" and "calculate their ages based on the year 2022" count as Year with Age, but only when ages, not experience, are worked out.
   - **P4:** the series is the first run in the passage, not answer options like "I). PAN II). DOT".
 - Bank checks after the fixes: P2 136 of 136, P4 83 of 83 (6 silent), P6 189 of 189 (14 silent). P5 differs on 34, all of them Option A cases, which the bank labelled the other way.
+
+## Section mix-ups and the last unsure sets (19 Nov 2026)
+
+- **The 137 unsure questions (42 sets)** were checked by hand and placed (`data/practice_build/review/hand/round2c_unsure_137.json`). The to-check list is now empty.
+- **65 units (205 questions) sat in a different section from the one their paper lists.** Each was decided on its content (`review/hand/round2d_section_mixups.json`): 37 moved to the paper's section and 28 stayed.
+  - The paper isn't always right. Whole sections of some papers are mislabelled: SEC-2098 and SEC-1531 list Quant questions as Reasoning, and PYQ-093 lists Reasoning puzzles as Quant.
+  - Hand checks may now set `section`, moving a set to the other section.
+- **P5:** years count only when an actual year (1985) appears. "Born in different years, of ages 21, 36…" is Age Based. Bank checks are unchanged.
