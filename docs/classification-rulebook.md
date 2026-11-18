@@ -1,0 +1,98 @@
+# Classification rulebook
+
+**Status: APPROVED 18 Nov 2026: every rule as written; P5 = Option A.** Applied by `build_tools/practice/build.py` (each question records the rule that placed it in `how`). The manual part (D6 and R1) is done by review agents working from `data/practice_build/review/BRIEF.md`.
+
+One rulebook for people and the machine alike: when a question could go to two topics, these rules decide. The
+classifier, the picture model, the builders and anyone reviewing by hand all follow the same page. When a rule
+changes, the old labels that break it are corrected and the classifier is retrained, so the labels it learns from
+agree with the rules it is judged by.
+
+Numbers are from the 12,065 questions now on the to-check list (`data/practice_build/round1_to_check.json`).
+Every rule was tested against the labelled bank before Round 1 (`data/practice_build/before`). Code:
+`build_tools/practice/pair_rules.py` (pair rules); `build_tools/practice/trials/` (DI picture model and the estimate).
+
+---
+
+## G. General rules
+
+| # | Rule | Approve? |
+|---|---|---|
+| G1 | A passage or puzzle set is one unit. It gets one topic, decided on the passage and all its questions read together. | ☑ |
+| G2 | A format wins over the maths inside it: DI (chart, table, caselet), Quantity Comparison and Data Sufficiency are the topic. The arithmetic inside is recorded as "also fits". | ☑ |
+| G3 | **A mixed question** (two topics both fit, e.g. Percentages and Ratio, Trains and Time & Distance): the main topic is what the final question asks for. The other topic is recorded as "also fits", so it can show up there too later. | ☑ |
+| G4 | The machine places a question on its own only when sure (score ≥ 0.95, or a rule below settles it). Everything else goes to review. | ☑ |
+| G5 | Every question records **how** its topic was decided (classifier version, whole-set score, picture, pair rule, layout rule, or a person) and how sure it was, so any decision can be redone later. | ☑ |
+
+G3 settles **1,934** unsure questions (Trending 1,484 · PYQ 258 · Booster 192).
+
+## P. Look-alike pairs
+
+Each rule reads the wording of the whole set. "Matches the labels" counts how many already-labelled sets in the bank
+agree with the rule; the conflicting ones are old labels to correct once you approve the rule.
+
+### P1. Linear vs Unknown Linear seating ☑
+- **Rule:** the passage says how many persons there are ("Eight persons sit in a row…") → **Linear**. The number is not given ("A certain number of persons are sitting in a row…") → **Unknown Linear**.
+- **Test:** matches 111 of 119 labelled sets; 2 conflict; 6 where the rule can't tell.
+- **Settles:** 266 unsure questions.
+
+### P2. Month vs Month-with-Date puzzle ☑
+- **Rule:** persons are placed on fixed dates as well as months ("on two different dates, either 6th or 13th, of four months…") → **Month with Date**. Months only → **Month Based**.
+- **Test:** matches 134 of 136; 2 conflict.
+- **Settles:** 103.
+
+### P3. Day vs Sequence puzzle ☑
+- **Rule:** days of the week are named (Monday … Sunday) → **Day Based**. Things happen "one after another" with no days or months → **Sequence Based**.
+- **Test:** matches 107 of 117; none conflict; 10 where the rule can't tell.
+- **Settles:** 125.
+
+### P4. Alphabet vs Alphanumeric series ☑
+- **Rule:** the given series mixes letters with numbers or symbols (e.g. `F % P H + Y 7 #`) → **Alphanumeric**. Letters or letter-groups only (e.g. `LVE PSM AET`, or questions on alphabet positions) → **Alphabet**.
+- **Test:** matches 82 of 89; 1 conflicts; 6 where the rule can't tell.
+- **Settles:** 148.
+
+### P5. Year vs Age vs Year-with-Age puzzle ☑ — Option A chosen
+The labelled bank is mixed here. Only 58 of 89 sets agree with any single reading: 14 sets labelled "Age Based" give
+birth years plus "ages calculated with respect to a year", and 7 labelled "Year with Age" have no ages at all
+(only marriage or joining years). So you pick the meaning:
+
+- **Option A (proposed): decide by what the persons are placed on.**
+  - Placed on **ages** ("seven persons of different ages 17, 23, 28…") → **Age Based**.
+  - Placed on **years** (born / joined / married in 1983, 1985…) → **Year Based**.
+  - Placed on years **and** told to work out ages from a reference year ("ages are calculated with respect to 2024") → **Year with Age**.
+
+  30 old labels would change (mostly "Age Based" → "Year with Age"). Settles **403** unsure questions.
+- **Option B: merge the three into one topic, "Year / Age Puzzle"**, with Year, Age and Year-with-Age kept as its
+  subtopics. No old labels need to be argued over; the subtopic follows Option A's wording.
+
+**Pair rules settle 1,045 unsure questions in all** (P1–P5 with Option A): 765 keep the classifier's best guess and 280 change it.
+
+## D. Data Interpretation
+
+| # | Rule | Settles | Approve? |
+|---|---|---|---|
+| D1 | The words, or the text inside the picture, say "cumulative" → **Cumulative DI**; say "missing values / some data are missing" → **Missing Table Chart**. A picture can't show these two (the picture model gets only 5 of 100 right). | 250 | ☑ |
+| D2 | The chart type comes from the **picture** when the picture model is sure (score ≥ 0.7): Bar, Line, Pie, Table, Radar. Tested on 766 known DI pictures: 97.4% right when sure. | 4,424 | ☑ |
+| D3 | No picture, and the numbers are laid out in rows and columns in the text → **Table Chart**. | 202 | ☑ |
+| D4 | No picture, and the data is a paragraph → **Caselet**. All 156 labelled DI sets without a picture are Caselets. | 1,340 | ☑ |
+| D5 | The words name a chart ("the given pie chart shows…") but there is no picture → the picture is missing, so the set is **left out** of Practice as broken. | 5 | ☑ |
+| D6 | The picture model is unsure → a person names the chart type by looking at it. Claude can do a first pass from sheets of small pictures; you confirm. | 884 left | ☑ |
+
+## Review and checking
+
+- **R1 Review queue** ☑. Whatever the rules above don't settle goes to a small review page in the app. It shows the question, the passage and the two best guesses; one click confirms. Order: **PYQ first**, then Trending (newest year, by exam), then Booster. Every answer is kept and added to the classifier's training examples.
+- **R2 Spot-check** ☑. After each round, 100 randomly picked auto-placed questions are checked by a person. A topic that comes out below 95% gets its rule tightened before the next round.
+- **R3 More pairs later** ☑. Smaller look-alike pairs seen in the queue (Linear vs Parallel, Circular vs Square, Order & Ranking vs Blood Relation, Table Based vs Sequence) get a rule here the same way once the queue shows they matter.
+
+## What the rulebook does to the to-check list (estimate)
+
+| | Questions |
+|---|---|
+| Unsure now | 12,065 |
+| Settled by D1–D4 (DI words, picture, layout) | 6,216 |
+| Settled by P1–P5 (pair rules, Option A) | 1,045 |
+| Settled by G3 (mixed: main topic + also fits) | 1,934 |
+| Left out as broken (D5) | 5 |
+| **Left: DI pictures checked by eye (D6)** | **884** |
+| **Left: review page (R1)** | **1,981** (PYQ 270 · Trending 1,395 · Booster 316) |
+
+Estimate made with `build_tools/practice/trials/rulebook_estimate.py`.

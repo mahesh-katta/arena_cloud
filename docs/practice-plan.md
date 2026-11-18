@@ -126,5 +126,15 @@ the classifier, and every question carries its source record.
   - `src/Practice.jsx` is the topic list and topic page.
   - `src/Mistakes.jsx` is now its own page.
   - `src/priority.js` is gone; the default order lives in `cards.json`.
+### Round 1b: rulebook and review (18 Nov 2026)
+- **Practice now holds 92,299 questions.**
+  - The rulebook (`docs/classification-rulebook.md`, approved, P5 = Option A) placed 8,780 of the 12,065 unsure questions.
+  - 8 review agents placed 2,800 more. They worked from `data/practice_build/review/BRIEF.md`, with a closed list of allowed topics per item.
+- **175 old bank questions moved** to the topic their pair rule gives. The 30 of them that Modules lessons use have their idmap entry updated; Modules still finds all its questions.
+- **472 questions stay on the to-check list:**
+  - 448 the reviewers weren't sure of
+  - 24 whose answer is one of the 4 topics with their own builder
+- **13 broken questions are left out** (`round1_broken.json`): a chart named but no picture, a picture from another set, a cut-off question, or a spliced passage.
+- Every question records how its topic was decided (`how`) and its score. Mixed questions also carry `also`, shown in the question details as "Also fits …".
 - **Backups:** `~/projects/arena/backups/2026-11-18-before-practice` (bank, course, progress) and
   `data/practice_build/before` (the bank as it was before the first write).

@@ -350,7 +350,7 @@ export function PracticeRun({ topic, query }) {
         </div>
       ) : (
         <Solver q={q} refInfo={{ kind: "bank", file: topic }} head={"Q " + (at + 1) + " / " + list.length} onResult={addSess}
-          chips={[q.subtopic && [q.subtopic, "ac"], q.pattern && [q.pattern, "ac"], q.exam_stage && q.exam_stage + " level",
+          chips={[q.subtopic && [q.subtopic, "ac"], q.pattern && [q.pattern, "ac"], q.also && "Also fits " + q.also, q.exam_stage && q.exam_stage + " level",
             where && where[0] && paperLabel(where[0]) + (where.length > 1 ? " · +" + (where.length - 1) + " more" : ""),
             prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}
           onPrev={at > 0 ? () => setI(at - 1) : null} onNext={() => setI(at + 1)} />
