@@ -45,9 +45,9 @@ Every question keeps a record of where it came from. Old data isn't reformatted;
 
 | Kind | What's in it | Sub-list |
 |---|---|---|
-| **PYQ** | Every previous-year paper. New ones join it. | exam → year *(to confirm)* |
+| **PYQ** | Every previous-year paper. New ones join it. | exam → year (confirmed 19 Nov) |
 | **Trending** | Sectional and full mocks for upcoming exams. It matters most and keeps growing, with hundreds of papers per exam. | exam → year → **Mocks-G** or **Mocks-S** |
-| **Booster** | The booster courses (Prelims Score Booster, Mains Booster) | *(to confirm)* |
+| **Booster** | The booster courses (Prelims Score Booster, Mains Booster) | course (confirmed 19 Nov) |
 | **General** | Practice sets, speed drills, the book, everything else | none |
 
 - **No provider name appears anywhere in the repo or the app.** The two mock providers show only as Mocks-G and Mocks-S.
@@ -89,7 +89,8 @@ Every rebuild writes the topic file in one shape, with the same check report.
 ## 7. Open, or waiting
 
 - **To settle once the classifier is actually run:** the cut-off for unsure tags and a "to check" list, and the topics the classifier doesn't cover yet.
-- **To confirm:** the PYQ and Booster sub-lists.
+- **Confirmed (19 Nov):** the PYQ list is exam → year; the Booster list is by course.
+- **The 33,363 original bank questions keep their own topic tags as they are** (user, 19 Nov). They are the labels the classifier was built from, so they are not re-audited.
 - **English** waits.
 - **Not a problem:** questions with no explanation or answer stay as they are, and topic size doesn't matter.
 - **Clean-ups to do during the build:** remove the dead book-sets tab, update the stale notes at the top of `src/facets.js`, move the Mistakes page out of `src/Practice.jsx`, and take "Reset all" off the Practice page.
