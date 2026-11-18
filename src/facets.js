@@ -19,9 +19,12 @@ export const levelName = (k) => (k === "" ? "No level (book)" : k);
 
 /* di: "" = all questions · "only" = DI / puzzle-set questions · "single" = questions that stand alone (true = "only", from older saved filters) */
 export const diMode = (f) => (f.di === true ? "only" : f.di || "");
-export const EMPTY_F = { stage: [], src: [], sub: [], di: "", kind: [], shape: [], num: [] };
+export const EMPTY_F = { stage: [], src: [], sub: [], di: "", kind: [], shape: [], num: [], nty: [], nfam: [] };
 /* optional extra filters: only topics whose questions carry these fields show them (Number Series: series_type = Missing / Wrong, pattern = the module inside a subtopic) */
 export const kindOf = (q) => q.series_type || "";
+/* Number Series plan fields (build_tools/numberseries/plan): ns_type = Add, Subtract, Multiply …; ns_family = the family inside it */
+export const ntyOf = (q) => q.ns_type || "";
+export const nfamOf = (q) => q.ns_family || "";
 export const patOf = (q) => q.pattern || "";
 
 /* A pattern name like "Add multiples of 12 (12, 24, 36 …)" is ONE shape ("Add multiples of a fixed number")
@@ -72,14 +75,16 @@ export function pass(q, f, skip) {
   return (skip === "stage" || has(f.stage, lvOf(q))) && (skip === "src" || has(f.src, q.source))
     && (skip === "sub" || has(f.sub, subOf(q))) && (skip === "di" || diOk(q, f))
     && (skip === "kind" || has(f.kind, kindOf(q))) && (skip === "shape" || has(f.shape, shapeOf(q)))
-    && (skip === "num" || has(f.num, numOf(q)));
+    && (skip === "num" || has(f.num, numOf(q)))
+    && (skip === "nty" || has(f.nty, ntyOf(q))) && (skip === "nfam" || has(f.nfam, nfamOf(q)));
 }
 /* counts of every value of one dimension, among questions passing the other filters */
 export function countBy(qs, f, dim) {
   const out = {};
   for (const q of qs) {
     if (!pass(q, f, dim)) continue;
-    const k = dim === "stage" ? lvOf(q) : dim === "src" ? q.source : dim === "kind" ? kindOf(q) : dim === "shape" ? shapeOf(q) : dim === "num" ? numOf(q) : subOf(q);
+    const k = dim === "stage" ? lvOf(q) : dim === "src" ? q.source : dim === "kind" ? kindOf(q) : dim === "shape" ? shapeOf(q) : dim === "num" ? numOf(q)
+      : dim === "nty" ? ntyOf(q) : dim === "nfam" ? nfamOf(q) : subOf(q);
     out[k] = (out[k] || 0) + 1;
   }
   return out;

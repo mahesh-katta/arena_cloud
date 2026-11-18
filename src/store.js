@@ -119,6 +119,8 @@ export const dropReview = (id) => update((p) => { p.review = p.review.filter((r)
 export const saveSpeed = (key, right, total, secs) =>
   update((p) => { p.speed[key] = { right, total, t: Math.round(secs), at: Date.now() }; });
 export const saveMock = (id, result) => update((p) => { p.mocks[id] = result; });
+/* forget some mock results by run id - a day's Reset in the planner, so it can be taken fresh */
+export const dropMocks = (ids) => update((p) => { for (const id of ids) delete p.mocks[id]; });
 export const saveGlat = (key, right, total, secs) =>
   update((p) => { p.glat[key] = { right, total, t: Math.round(secs), at: Date.now() }; });
 /* Remembered places: last topic position + filters, saved mock runs, list filters. Theme and layout are kept. */
@@ -180,7 +182,7 @@ export const LEVELS = { easy: "Easy", easy_to_moderate: "Easy–Moderate", moder
 export const SOURCES = {
   arena_basics: "Arena · Beginner", arena_medium: "Arena · Medium", arena_glat: "Arena · GLAT",
   arena_pyq_memory_based: "Previous year papers", arena_sectional_mocks: "Arena · Sectional mocks", arena_booster_mocks: "Arena · Booster mocks",
-  arena_full_mocks: "Arena · Full mocks",
+  arena_full_mocks: "2026 Practice",          /* only the full mocks' own number series sit in the bank (Practice, Modules 2026 Practice tab) */
   "Arena CCE Arithmetic Ability - I": "Arena CCE book",
 };
 export const srcName = (s) => SOURCES[s] || s;

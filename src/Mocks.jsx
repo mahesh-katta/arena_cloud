@@ -160,6 +160,18 @@ function mergeDay(ts) {
     questions: ts.flatMap((x) => x.questions) };
 }
 
+/* some sections of one full paper on their own: "<id>~1" is its second section, "<id>~0.1" the first two; the time is theirs added up */
+function someParts(t, sub) {
+  const src = t.mock.parts || t.mock.sections || [];
+  const keep = sub.split(".").map(Number).filter((i) => src[i]);
+  if (!keep.length) return t;
+  const parts = keep.map((i) => src[i]), ids = new Set(parts.flatMap((s) => s.question_ids));
+  const labs = parts.map((s) => s.name).join(" + "), time = parts.reduce((a, s) => a + (s.time_min || 0), 0);
+  return { ...t, id: (t.mock.mock_id || "") + "~" + keep.join("."), section: labs,
+    mock: { ...t.mock, parts, sections: undefined, total_time_min: time || t.mock.total_time_min, section: labs, name: t.mock.name + " · " + labs, cutoff: null },
+    questions: t.questions.filter((q) => ids.has(q.id)) };
+}
+
 function shape(t) {
   const m = t.mock;
   const byId = new Map(t.questions.map((q) => [q.id, q]));
@@ -168,7 +180,9 @@ function shape(t) {
     cutoff: s.cutoff ?? null, qs: s.question_ids.map((id) => byId.get(id)).filter(Boolean),
   }));
   const all = parts.flatMap((p, pi) => p.qs.map((q) => ({ q, pi })));
-  const sectional = m.sectional_timing === true || (t.kind !== "pyq" && parts.length > 1 && parts.every((p) => p.time));
+  /* only a previous-years paper that says so locks its sections in order; mocks, full mocks and boosters run on one clock,
+     so any section can be opened at any time (the per-section minutes are a guide, not a lock) */
+  const sectional = t.kind === "pyq" && m.sectional_timing === true;
   const total = (m.total_time_min || parts.reduce((s, p) => s + (p.time || 0), 0) || Math.ceil(all.length * 0.6)) * 60;
   return { m, parts, all, sectional, total };
 }
@@ -231,7 +245,8 @@ function Hero({ T, t, children }) {
 
 export function MockTest({ gid, mid }) {
   const p = useProgress();
-  const [t, err] = useData(() => (mid.includes("+") ? Promise.all(mid.split("+").map((i) => mockTest(gid, i))).then(mergeDay) : mockTest(gid, mid)), [gid, mid]);
+  const [t, err] = useData(() => (mid.includes("+") ? Promise.all(mid.split("+").map((i) => mockTest(gid, i))).then(mergeDay)
+    : mid.includes("~") ? mockTest(gid, mid.split("~")[0]).then((x) => someParts(x, mid.split("~")[1])) : mockTest(gid, mid)), [gid, mid]);
   const T = useMemo(() => (t ? shape(t) : null), [t]);
   const [mode, setMode] = useState("intro");
   const [result, setResult] = useState(null);

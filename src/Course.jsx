@@ -7,7 +7,11 @@ import { UnitShorthand } from "./Shorthand.jsx";
 
 /* Course: Reasoning or Quant → topic → units → lessons. Reasoning units are concepts and a lesson is one puzzle;
    Quant units are archetypes and a lesson is one recipe. No gates, no tests, no levels: every lesson is open. */
-const SUBJ = { reasoning: "s-r", quant: "s-q" };
+const SUBJ = { reasoning: "s-r", quant: "s-q", series: "s-q" };
+/* Score Cracker topics that have a practice plan in Modules (data/course/<subject>/<id>.json, built by build_tools/numberseries/plan) */
+const PLANS = { "quant--number-series": "series" };
+/* "More like this": the Practice page for this topic, with the lesson's question type, type and family already filtered */
+const moreHref = (tid, l) => "#/practice/" + tid + "?kind=" + encodeURIComponent(l.kind + " Number Series") + "&nty=" + encodeURIComponent(l.type) + "&nfam=" + encodeURIComponent(l.family);
 const href = (...a) => "#/course/" + a.map(encodeURIComponent).join("/");
 
 /* Reasoning lessons are all titled "Puzzle n"; name them from their source set instead, e.g. "Beginner · Set 2 · Puzzle 1" */
@@ -19,8 +23,15 @@ function setLabel(test) {
   return levelOf(test) + (set ? " · Set " + set : "");
 }
 const LEVELS = ["Beginner", "Prelims", "Must Learn", "Practice"];
+/* Number Series units: the plan's lessons, then the full mocks' own series in a "2026 Practice" tab (lessons carry set: "2026 Practice") */
+const SETS = ["Plan", "2026 Practice"];
 /* a unit's lessons grouped by exam level, each group keeping the unit's own lesson numbers; Quant recipes stay one group */
 function groupLessons(lessons, byLevel) {
+  if (!byLevel && lessons.some((l) => l.set)) {
+    const g = {};
+    lessons.forEach((l, li) => { const k = l.set || "Plan"; (g[k] = g[k] || []).push({ l, li }); });
+    return SETS.filter((k) => g[k]).map((lv) => ({ lv, items: g[lv] }));
+  }
   if (!byLevel) return [{ lv: "", items: lessons.map((l, li) => ({ l, li })) }];
   const g = {};
   lessons.forEach((l, li) => { const lv = levelOf(l.test); (g[lv] = g[lv] || []).push({ l, li }); });
@@ -113,7 +124,7 @@ export const CARD_ICON = {
   all: ico(<><rect x="3.5" y="3.5" width="7" height="7" rx="1.6" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.6" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.6" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.6" /></>),
   english: ico(<><path d="M4 20 10 4l6 16M6.4 14h7.2M18 8v8M21 12h-6" /></>),
 };
-const href2 = (subj, t) => (t.practice ? "#/practice/" + t.id : href(subj, t.id));
+const href2 = (subj, t) => (t.plan ? href(t.plan, t.id) : t.practice ? "#/practice/" + t.id : href(subj, t.id));
 
 export function CourseHome() {
   const [ix, err] = useData(courseIndex, []);
@@ -129,7 +140,7 @@ export function CourseHome() {
   if (bank) for (const sec of bank.sections) for (const t of sec.topics) counts[t.id] = t.n;
   /* Score Cracker topics with shorthand notes get a Shorthand link on their card */
   const noted = new Set(((nix && nix.subjects.find((x) => x.id === "cracker")) || { topics: [] }).topics.map((t) => t.id));
-  const cracker = { id: "cracker", name: "Score Cracker", topics: CRACKER.map(([id, name]) => ({ id, name, practice: true, questions: counts[id], notes: noted.has(id) })) };
+  const cracker = { id: "cracker", name: "Score Cracker", topics: CRACKER.map(([id, name]) => ({ id, name, practice: !PLANS[id], plan: PLANS[id], questions: counts[id], notes: noted.has(id) })) };
   const subjects = [...ix.subjects, cracker, { id: "di", name: "Data Interpretation", topics: DI.map(([id, name]) => ({ id, name, practice: true, questions: counts[id] })) }, { id: "english", name: "English", soon: true, topics: [] }];
   const s = subjects.find((x) => x.id === pick) || subjects[0];
   const choose = (id) => { setPick(id); try { localStorage.setItem("arena-course-subj", id); } catch {} };
@@ -156,7 +167,8 @@ export function CourseHome() {
   const topicCard = (x, t, sn = shortName(t)) => {
     const cls = "card tcard c-" + x.id + (isRecent.has(x.id + ":" + t.id) ? " recent" : "");
     const open = () => { if (t.practice) saveRecent({ subject: x.id, tid: t.id, lid: t.id, practice: true, topic: t.name, unit: "Practice set", name: t.name }); };
-    const sub = t.practice ? (t.questions ? t.questions.toLocaleString() + " questions" : "Practice set") : t.units + (t.units === 1 ? " unit" : " units") + " · " + t.questions.toLocaleString() + " Qs";
+    const sub = t.plan ? "Practice plan" + (t.questions ? " · " + t.questions.toLocaleString() + " in the bank" : "")
+      : t.practice ? (t.questions ? t.questions.toLocaleString() + " questions" : "Practice set") : t.units + (t.units === 1 ? " unit" : " units") + " · " + t.questions.toLocaleString() + " Qs";
     const tail = <>{isRecent.has(x.id + ":" + t.id) && <span className="rtag">Recent</span>}<span className="tgo" aria-hidden="true">→</span></>;
     /* a card with notes holds two links: its name (stretched over the whole card) opens the practice set,
        the Shorthand pill beside the question count opens the shorthand page */
@@ -279,7 +291,7 @@ export function CourseTopic({ subject, tid }) {
   const groups = groupLessons(u.lessons, byLevel);
   const lv = groups.some((x) => x.lv === lvPick) ? lvPick : (groups.find((x) => x.items.some((i) => i.l.id === nextId)) || groups[0]).lv;
   const us = stat(p.answers, idsOf(u.lessons));
-  const subName = subject === "quant" ? "Quant" : "Reasoning";
+  const subName = subject === "quant" ? "Quant" : subject === "series" ? "Score Cracker" : "Reasoning";
   const pick = (n) => { setSel(n); setLvPick(""); setQ(""); setSt("all"); };
   /* filters: text in the title, status of the lesson */
   const ql = q.trim().toLowerCase();
@@ -325,7 +337,7 @@ export function CourseTopic({ subject, tid }) {
             <BackBtn />
             <a href="#/course">Modules</a>
             <span className="sep">/</span>
-            <a href="#/course" onClick={() => { try { localStorage.setItem("arena-course-subj", subject); } catch {} }}>{subName}</a>
+            <a href="#/course" onClick={() => { try { localStorage.setItem("arena-course-subj", subject === "series" ? "cracker" : subject); } catch {} }}>{subName}</a>
           </div>
           <h1>{d.name}</h1>
         </div>
@@ -335,6 +347,7 @@ export function CourseTopic({ subject, tid }) {
           <b className="num">{pct(tot.done, tot.n)}%</b>
         </div>
       </div>
+      {subject === "series" && <p className="muted small seriesnote">{d.plan ? d.plan.toLocaleString() + " questions picked from " + (d.bank || 0).toLocaleString() + ". " : ""}{d.note} <a href={"#/practice/" + tid}>Practise all {d.bank ? d.bank.toLocaleString() + " " : ""}→</a></p>}
       <div className="tlay">
         <nav className="uside" aria-label={d.name + " units"}>
           <div className="uhead-bar">
@@ -406,7 +419,7 @@ export function CourseTopic({ subject, tid }) {
               {!shOn && <div className="ttools">
                 <label className="tsearch">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg>
-                  <input type="search" aria-label="Search lessons" placeholder={subject === "reasoning" ? "Search puzzles…" : "Search recipes…"} value={q} onChange={(e) => setQ(e.target.value)} />
+                  <input type="search" aria-label="Search lessons" placeholder={subject === "reasoning" ? "Search puzzles…" : subject === "series" ? "Search families…" : "Search recipes…"} value={q} onChange={(e) => setQ(e.target.value)} />
                 </label>
                 <select className="tsel" aria-label="Filter by status" value={st} onChange={(e) => setSt(e.target.value)}>
                   {STATUS.map(([k, n]) => <option key={k} value={k}>{n}</option>)}
@@ -481,7 +494,7 @@ export function CourseTopic({ subject, tid }) {
                             <em className={"pill s-" + ls}>{PILL[ls]}</em>
                           </span>
                           <span className="rfind">
-                            <small>Find</small>
+                            <small>{subject === "series" ? (l.tier ? l.tier + " family" : "Family") : "Find"}</small>
                             <b>{r.main.replace(/^Find\s+/i, "").replace(/^./, (c) => c.toUpperCase())}</b>
                           </span>
                           {r.sub && (
@@ -537,7 +550,9 @@ export function CourseLesson({ subject, tid, lid }) {
   const prev = lessons[at - 1];
   const unitLessons = lessons.filter((l) => l.ui === lesson.ui);
   const unitPos = unitLessons.findIndex((l) => l.id === lid);
-  const rec = subject === "quant" ? recipe(lesson.name) : { main: lesson.name, sub: "" };
+  const rec = subject === "quant" ? recipe(lesson.name) : subject === "series"
+    ? { main: lesson.name, sub: [lesson.set, lesson.tier && lesson.tier + " family · used " + (lesson.real || 0) + " times in past papers and full mocks"].filter(Boolean).join(" · ") } : { main: lesson.name, sub: "" };
+  const more = subject === "series" && lesson.family ? moreHref(tid, lesson) : null;
   return (
     <Solve cls={"s-q " + SUBJ[subject]} open={tools} setOpen={setTools}
       head={!end && qs.length ? <div className="lhead"><h1>{rec.main}</h1>{rec.sub && <p className="muted small">{rec.sub}</p>}</div> : null}
@@ -550,6 +565,7 @@ export function CourseLesson({ subject, tid, lid }) {
           {prev ? <a className="btn sm" href={href(subject, tid, prev.id)}>← Previous lesson</a> : <span />}
           {next && <a className="btn sm" href={href(subject, tid, next.id)}>Next lesson →</a>}
         </div>
+        {more && <a className="btn sm primary morebtn" href={more}>More like this · {lesson.more.toLocaleString()} in Practice</a>}
         {d.units.map((u, ui) => {
           const us = stat(p.answers, u.lessons.flatMap((l) => l.ids));
           const unames = lessonNames(u.lessons);
@@ -558,7 +574,7 @@ export function CourseLesson({ subject, tid, lid }) {
               <summary><span className="rutitle">{ui + 1}. {u.name}</span><small className="muted">{us.done}/{us.n}</small></summary>
               {groupLessons(u.lessons, subject === "reasoning").map((gp) => {
                 const here = gp.items.some(({ l }) => l.id === lid);
-                const rows = gp.lv ? setRows(gp, unames) : [{ key: "", items: gp.items.map((x) => ({ ...x, k: x.li + 1 })) }];
+                const rows = gp.lv && subject === "reasoning" ? setRows(gp, unames) : [{ key: "", items: gp.items.map((x) => ({ ...x, k: x.li + 1 })) }];
                 const body = rows.map((r) => (
                   <div className={"rrow2" + (r.key ? "" : " nolab")} key={r.key}>
                     {r.key && <span className="rlab">{r.key}</span>}
@@ -582,15 +598,17 @@ export function CourseLesson({ subject, tid, lid }) {
           <div className="muted">{s.done < lesson.ids.length ? lesson.ids.length - s.done + " skipped · " : ""}Lesson finished</div>
           <div className="actions">
             {next && <a className="btn primary" href={href(subject, tid, next.id)}>Next lesson{next.ui !== lesson.ui ? ": " + next.unit : ""}</a>}
+            {more && <a className="btn" href={more}>More like this ({lesson.more.toLocaleString()} in Practice)</a>}
             <button className="btn" onClick={() => { setI(0); setEnd(false); }}>Go through it again</button>
             <a className="btn ghost" href={back}>All of {d.name}</a>
           </div>
         </div>
       ) : !qs.length ? <div className="empty">This lesson has no questions.</div> : (
         <>
-        <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={[[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
+        <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={subject === "series" ? [[lesson.unit, "ac"], lesson.set, lesson.tier && lesson.tier + " family"] : [[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
           onPrev={i > 0 ? () => setI(i - 1) : null}
           onNext={() => (i + 1 >= qs.length ? setEnd(true) : setI(i + 1))} nextLabel={i + 1 >= qs.length ? "Finish lesson" : "Next question"} />
+        {more && <p className="muted small morelike">Want more of this family? <a href={more}>More like this: all {lesson.more.toLocaleString()} {lesson.kind.toLowerCase()}-number questions in Practice →</a></p>}
         </>
       )}
     </Solve>

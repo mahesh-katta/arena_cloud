@@ -254,7 +254,9 @@ function useBookSets(d) {
   }, [d]);
 }
 
-const EMPTY = { sub: [], src: [], stage: [], prog: "", mix: false, set: "", di: "", kind: [], shape: [], num: [] };
+const EMPTY = { sub: [], src: [], stage: [], prog: "", mix: false, set: "", di: "", kind: [], shape: [], num: [], nty: [], nfam: [] };
+/* filters a link may set: ?sub= (topic list), ?kind= &nty= &nfam= ("More like this" in Modules) */
+const LINK_KEYS = ["sub", "kind", "nty", "nfam"];
 /* saved filters from older versions used todo / di as on-off flags */
 const normF = (f = {}) => { const { todo, pat, ...r } = f; return { ...r, stage: [], di: f.di === true ? "only" : f.di || "", prog: f.prog ?? (todo ? "todo" : "") }; };
 
@@ -267,10 +269,11 @@ function homeFilters() {
 export function PracticeRun({ topic, query }) {
   const p = useProgress();
   const [d, err] = useData(() => bankTopic(topic), [topic]);
-  const [saved] = useState(() => (query.get("sub") ? null : readPos()[topic]));
+  const linked = LINK_KEYS.some((k) => query.get(k));
+  const [saved] = useState(() => (linked ? null : readPos()[topic]));
   /* filters: what this topic had last time, but a Type / Status picked on the topic list wins (so the list and the topic agree) */
   const [f, setF] = useState(() => {
-    if (query.get("sub")) return { ...EMPTY, sub: [query.get("sub")] };
+    if (linked) return { ...EMPTY, ...Object.fromEntries(LINK_KEYS.filter((k) => query.get(k)).map((k) => [k, [query.get(k)]])) };
     const home = homeFilters();
     const base = { ...EMPTY, ...home, ...(saved?.f ? normF(saved.f) : {}) };
     if (home.di) base.di = home.di;
@@ -286,15 +289,18 @@ export function PracticeRun({ topic, query }) {
   const set = (k) => (v) => { setF((x) => ({ ...x, [k]: v })); setI(0); };
   /* which families each pattern shape belongs to, and which numbers each shape offers (see facets.js) */
   const tree = useMemo(() => {
-    const fam = {}, num = {};
+    const fam = {}, num = {}, famT = {};
     for (const q of d?.questions || []) {
+      if (q.ns_family) (famT[q.ns_family] || (famT[q.ns_family] = new Set())).add(q.ns_type);
       if (!q.pattern) continue;
       const s = shapeOf(q), n = numOf(q);
       (fam[s] || (fam[s] = new Set())).add(subOf(q));
       if (n) (num[s] || (num[s] = new Set())).add(n);
     }
-    return { fam, num };
+    return { fam, num, famT };
   }, [d]);
+  /* changing the Type keeps only the chosen families that belong to it (the Family filter is per type) */
+  const setNty = (v) => { setF((x) => ({ ...x, nty: v, nfam: v.length ? (x.nfam || []).filter((m) => [...(tree.famT[m] || [])].some((t) => v.includes(t))) : [] })); setI(0); };
   /* changing the subtopic keeps only the chosen shapes that belong to it (the Pattern filter is per subtopic) */
   const setSub = (v) => {
     setF((x) => {
@@ -308,16 +314,16 @@ export function PracticeRun({ topic, query }) {
   const pickSet = (id) => { setF((x) => ({ ...x, set: id })); setI(0); setTools(false); };
   const [rtab, setRtab] = useState("filters");
   const [fopen, setFopen] = useState(false);
-  const [note, setNote] = useState("");
-  const carried = useRef(!saved && !query.get("sub") && (f.stage.length > 0 || f.src.length > 0 || f.di));
+  const [note, setNote] = useState(() => (query.get("nfam") ? "More like this: every " + (query.get("kind") ? query.get("kind").replace(/ Number Series$/, "").toLowerCase() + " number " : "") + "question in “" + query.get("nfam") + "”, including ones outside the Modules plan. Clear the filters to see the whole topic." : ""));
+  const carried = useRef(!saved && !linked && (f.stage.length > 0 || f.src.length > 0 || f.di));
 
   /* option counts with the other filters kept (see facets.js); totals = no filters */
   const counts = useMemo(() => {
     const qs = d?.questions || [];
     const inSet = qs.filter((q) => (!f.set || q.variant_id === f.set) && pass(q, f));
-    return { sub: countBy(qs, f, "sub"), src: countBy(qs, f, "src"), stage: countBy(qs, f, "stage"), kind: countBy(qs, f, "kind"), shape: countBy(qs, f, "shape"), num: countBy(qs, f, "num"), di: countDI(qs, f), single: countSingle(qs, f),
+    return { sub: countBy(qs, f, "sub"), src: countBy(qs, f, "src"), stage: countBy(qs, f, "stage"), kind: countBy(qs, f, "kind"), shape: countBy(qs, f, "shape"), num: countBy(qs, f, "num"), nty: countBy(qs, f, "nty"), nfam: countBy(qs, f, "nfam"), di: countDI(qs, f), single: countSingle(qs, f),
       prog: { todo: inSet.filter((q) => !p.answers[q.id]).length, done: inSet.filter((q) => p.answers[q.id]).length },
-      all: { sub: countBy(qs, EMPTY_F, "sub"), src: countBy(qs, EMPTY_F, "src"), stage: countBy(qs, EMPTY_F, "stage"), kind: countBy(qs, EMPTY_F, "kind"), shape: countBy(qs, EMPTY_F, "shape"), num: countBy(qs, EMPTY_F, "num"), di: countDI(qs, EMPTY_F) } };
+      all: { sub: countBy(qs, EMPTY_F, "sub"), src: countBy(qs, EMPTY_F, "src"), stage: countBy(qs, EMPTY_F, "stage"), kind: countBy(qs, EMPTY_F, "kind"), shape: countBy(qs, EMPTY_F, "shape"), num: countBy(qs, EMPTY_F, "num"), nty: countBy(qs, EMPTY_F, "nty"), nfam: countBy(qs, EMPTY_F, "nfam"), di: countDI(qs, EMPTY_F) } };
   }, [d, f, p.answers]);
   const list = useMemo(() => {
     if (!d) return [];
@@ -342,7 +348,7 @@ export function PracticeRun({ topic, query }) {
 
   if (err) return <Failed what="this topic" err={err} />;
   if (!d) return <Loading />;
-  const active = f.sub.length + f.src.length + f.stage.length + f.kind.length + f.shape.length + f.num.length + (f.prog ? 1 : 0) + (f.di ? 1 : 0) + (f.mix ? 1 : 0) + (f.set ? 1 : 0);
+  const active = f.sub.length + f.src.length + f.stage.length + f.kind.length + f.shape.length + f.num.length + (f.nty || []).length + (f.nfam || []).length + (f.prog ? 1 : 0) + (f.di ? 1 : 0) + (f.mix ? 1 : 0) + (f.set ? 1 : 0);
   const at = Math.min(i, list.length);
   const q = list[at];
   const prev = q && p.answers[q.id];
@@ -351,7 +357,7 @@ export function PracticeRun({ topic, query }) {
   /* every value that exists in the topic, with how many questions it would give now (0 = disabled) */
   /* a topic file may list its subtopics in teaching order (subtopic_order); every other topic stays alphabetical */
   /* the same for the optional Series type (series_type_order) and Pattern (pattern_order) filters */
-  const orderOf = (dim) => (dim === "sub" ? d.subtopic_order : dim === "kind" ? d.series_type_order : null);
+  const orderOf = (dim) => (dim === "sub" ? d.subtopic_order : dim === "kind" ? d.series_type_order : dim === "nty" ? d.ns_type_order : dim === "nfam" ? d.ns_family_order : null);
   /* pattern shapes go most-asked first with the "Other …" catch-all last; numbers go in numeric order */
   const isOther = (k) => /^Other /.test(k);
   const cmp = (dim) => (x, y) => {
@@ -386,6 +392,11 @@ export function PracticeRun({ topic, query }) {
           {/* a shape such as "Add multiples of a fixed number" is the same rule with one number turned up or down: pick that number here */}
           {f.shape.length > 0 && opts("num").filter((o) => o[0] && o[2] > 0).length > 1 && (
             <FacetBox label="Number" value={f.num} onChange={set("num")} opts={opts("num").filter((o) => o[0] && o[2] > 0)} />)}
+          {/* Number Series plan: Type (Add, Subtract, Multiply …), then the families inside the chosen type */}
+          {Object.keys(counts.all.nty).length > 1 && <FacetBox label="Type" value={f.nty} onChange={setNty} opts={opts("nty")} />}
+          {Object.keys(counts.all.nty).length > 1 && (f.nty.length
+            ? <FacetBox label="Family" value={f.nfam} onChange={set("nfam")} opts={opts("nfam").filter((o) => o[0] && o[2] > 0)} />
+            : <div className="facet"><div className="flabel">Family</div><div className="muted small">Pick a type to see its families</div></div>)}
           {counts.all.di > 0 && <Dropdown label="Type" value={f.di} onChange={set("di")} opts={[["", "All questions"], ["only", "DI / puzzle sets", counts.di], ["single", "Single questions", counts.single]]} />}
           <Dropdown label="Progress" value={f.prog} onChange={set("prog")} opts={[["", "All"], ["todo", "Unattempted", counts.prog.todo], ["done", "Attempted", counts.prog.done]]} />
           <Switch checked={f.mix} onChange={set("mix")}>Shuffle order</Switch>

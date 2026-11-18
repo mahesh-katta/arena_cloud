@@ -45,9 +45,10 @@ export function findResume(groups, p) {
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i);
       if (!k || !k.startsWith("ap-run-")) continue;
-      const id = k.slice(7), v = JSON.parse(localStorage.getItem(k) || "null");
+      /* the run id may be tests joined with "+" or one section of a paper ("<id>~1"); its first test names it, `key` reopens it */
+      const id = k.slice(7), base = id.split(/[+~]/)[0], v = JSON.parse(localStorage.getItem(k) || "null");
       if (!v || p.mocks[id] || (best && (v.at || 0) <= best.at)) continue;
-      for (const g of groups) { const t = g.tests.find((x) => x.id === id); if (t) best = { at: v.at || 0, g, t, left: Object.keys(v.answers || {}).length }; }
+      for (const g of groups) { const t = g.tests.find((x) => x.id === base); if (t) best = { at: v.at || 0, g, t, key: id, left: Object.keys(v.answers || {}).length }; }
     }
   } catch {}
   return best;
@@ -138,13 +139,15 @@ export function Home() {
   const cols = mx ? mx.collections.filter((c) => c.kind !== "booster").map((c) => ({ ...c, groups: c.groups.map((g) => ({ ...g, tests: g.tests.filter((t) => fits(p.profile, t)) })).filter((g) => g.tests.length) })) : [];
   const groups = cols.flatMap((c) => c.groups);
   let last = null;
-  for (const g of groups) for (const t of g.tests) { const r = p.mocks[t.id]; if (r && (!last || (r.at || 0) > last.at)) last = { at: r.at || 0, g, t, r }; }
+  /* the latest result of any run - one test, a day's sections together, or one section of a full paper */
+  const testIn = new Map(groups.flatMap((g) => g.tests.map((t) => [t.id, { g, t }])));
+  for (const [k, r] of Object.entries(p.mocks)) { const hit = testIn.get(k.split(/[+~]/)[0]); if (hit && r && (!last || (r.at || 0) > last.at)) last = { at: r.at || 0, ...hit, r }; }
   const resume = findResume(groups, p);
   const taken = (g) => g.tests.filter((t) => p.mocks[t.id]).length;
   let mockItem;
   if (resume && (!last || resume.at > last.at)) {
     const { g, t, left } = resume;
-    mockItem = { key: "m" + t.id, kind: "mocks", cls: "s-b", tag: "Mock Tests", label: "Unfinished mock test", title: g.name, sub: "In progress · " + left + " answered · your answers are saved", pct: 0, m1: [taken(g) + "/" + g.tests.length, "taken"], m2: ["–", "last score"], href: "#/mock/" + g.id + "/" + t.id, cta: "Resume" };
+    mockItem = { key: "m" + t.id, kind: "mocks", cls: "s-b", tag: "Mock Tests", label: "Unfinished mock test", title: g.name, sub: "In progress · " + left + " answered · your answers are saved", pct: 0, m1: [taken(g) + "/" + g.tests.length, "taken"], m2: ["–", "last score"], href: "#/mock/" + g.id + "/" + resume.key, cta: "Resume" };
   } else if (last) {
     const { g, t, r } = last, sc = r.max ? (100 * r.score) / r.max : 0;
     mockItem = { key: "m" + t.id, kind: "mocks", cls: "s-b", tag: "Mock Tests", label: "Last mock test", title: g.name, sub: t.name + " · Scored " + round(r.score) + "/" + r.max, pct: sc, m1: [taken(g) + "/" + g.tests.length, "taken"], m2: [Math.round(sc) + "%", "last score"], href: "#/mocks/" + g.id, cta: "Open" };
@@ -171,7 +174,7 @@ export function Home() {
   /* a booster test you started but did not finish: Resume it */
   const bRun = findResume(bGroups, p);
   if (bRun) {
-    Object.assign(boosterItem, { label: "Unfinished booster test", sub: "In progress · " + (bRun.t.day ? "Day " + bRun.t.day + " · " : "") + bRun.left + " answered · your answers are saved", href: "#/mock/" + bRun.g.id + "/" + bRun.t.id, cta: "Continue" });
+    Object.assign(boosterItem, { label: "Unfinished booster test", sub: "In progress · " + (bRun.t.day ? "Day " + bRun.t.day + " · " : "") + bRun.left + " answered · your answers are saved", href: "#/mock/" + bRun.g.id + "/" + bRun.key, cta: "Continue" });
   }
 
   const bIds = new Set(bGroups.flatMap((g) => g.tests.map((t) => t.id)));
