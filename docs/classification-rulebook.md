@@ -96,3 +96,12 @@ birth years plus "ages calculated with respect to a year", and 7 labelled "Year 
 | **Left: review page (R1)** | **1,981** (PYQ 270 · Trending 1,395 · Booster 316) |
 
 Estimate made with `build_tools/practice/trials/rulebook_estimate.py`.
+
+## Amendments (18 Nov 2026, evening), each tested before it went in
+
+- **G2 is now enforced on every arithmetic placement.** A passage that names a chart or table ("pie chart", "the table given below", "refer to the graph") goes through the DI rules, whatever arithmetic is inside. Only explicit chart or table words count; "study the following data" does not. On held-out questions it moved 11 misfiled DI sets, all correctly, with 0 wrong moves. In Practice it moved about 150 questions to DI.
+- **G3 applies only between two ordinary topics.** When one of the two is a format (DI, Quantity Comparison, Data Sufficiency), G2 decides; what G2 can't settle waits for review. This took about 600 risky "mixed" placements back to the to-check list.
+- **A DI set is decided on its passage alone** (the user's idea). On 904 held-out sets the passage alone got 80% of DI right, against 67% for passage + questions. When sure, it was right 95% of the time, against 72%. This applies only when the passage holds the data, not when it is just a "Study the following…" line. Other sets keep the question-by-question vote, lifted by the whole-set score only when the two agree.
+- **A reviewed answer beats a machine guess.** Agents' sure answers stand even where the classifier later became sure of something else.
+- **Tested and not adopted:** letting the picture model overrule the classifier's sure DI placements (on held-out questions it broke 10 and fixed 0). Apple's built-in image fingerprint for chart type: 97.1% right against 96.5% for the current shape model, a small gain, kept as a possible later step.
+- **Open, for the user to confirm:** mixed arithmetic counts the method 60% and what is asked 40%, so the method is the main topic (e.g. Compound Interest) and Percentages or Ratio is "also fits".
