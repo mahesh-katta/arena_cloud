@@ -97,6 +97,54 @@ export function Dropdown({ label, value, onChange, opts, multi, prefix, hover })
     </div>
   );
 }
+/* A dropdown holding a tree of choices (Practice's Source: kind → exam → year → provider).
+   tree: [{ path, depth, kids }] · value: chosen paths · toggle(value, path, tree) -> new value
+   count(path): questions under that node now; a node with none is left out unless it is chosen. */
+export function TreePicker({ label, value, onChange, tree, count, nameOf, toggle, summary }) {
+  const [open, setOpen] = useState(false);
+  const [exp, setExp] = useState(() => new Set());
+  const box = useRef(null);
+  useEffect(() => { if (open) box.current?.querySelector(".ddmenu")?.scrollIntoView({ block: "nearest" }); }, [open]);
+  useEffect(() => {
+    if (!open) return;
+    const away = (e) => { if (box.current && !box.current.contains(e.target)) setOpen(false); };
+    const esc = (e) => e.key === "Escape" && setOpen(false);
+    addEventListener("mousedown", away); addEventListener("keydown", esc);
+    return () => { removeEventListener("mousedown", away); removeEventListener("keydown", esc); };
+  }, [open]);
+  const on = (p) => value.some((s) => p === s || p.startsWith(s + "/"));
+  const flip = (p) => setExp((s) => { const n = new Set(s); n.has(p) ? n.delete(p) : n.add(p); return n; });
+  const row = (n) => {
+    const c = count(n.path);
+    if (!c && !on(n.path)) return null;
+    const kids = n.kids.filter((k) => count(k.path) || on(k.path)), isOpen = exp.has(n.path);
+    return (
+      <li key={n.path} role="treeitem" aria-level={n.depth + 1} aria-expanded={kids.length ? isOpen : undefined} aria-selected={on(n.path)}>
+        <div className={"trow" + (on(n.path) ? " on" : "")} style={{ paddingLeft: 4 + n.depth * 16 }}>
+          {kids.length ? <button type="button" className={"texp" + (isOpen ? " open" : "")} aria-label={(isOpen ? "Hide " : "Show ") + nameOf(n.path) + " list"} onClick={() => flip(n.path)}>
+            <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg></button>
+            : <span className="texp" aria-hidden="true" />}
+          <label className="tlab"><input type="checkbox" checked={on(n.path)} onChange={() => onChange(toggle(value, n.path, tree))} /><span className="grow">{nameOf(n.path)}</span><em>{c.toLocaleString()}</em></label>
+        </div>
+        {kids.length > 0 && isOpen && <ul role="group">{kids.map(row)}</ul>}
+      </li>
+    );
+  };
+  return (
+    <div className="dd ddtree" ref={box}>
+      <button type="button" className={"ddbtn" + (value.length ? " on" : "")} aria-haspopup="tree" aria-expanded={open} aria-label={label + ": " + (value.length ? summary : "All")} onClick={() => setOpen(!open)}>
+        <span className="ddt">{value.length ? <><span className="tl">{label}</span><b>{summary}</b></> : <span className="tl idle">{label}</span>}</span>
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+      </button>
+      {open && (
+        <div className="ddmenu tmenu">
+          <ul role="tree" aria-label={label} aria-multiselectable="true">{tree.map(row)}</ul>
+          {value.length > 0 && <button type="button" className="ddclear" onClick={() => onChange([])}>Show all</button>}
+        </div>
+      )}
+    </div>
+  );
+}
 /* One dropdown with several small single-choice groups (Sort, Type, Status). groups: [{ title, value, onChange, opts: [[key, text, count, disabled]] }] */
 export function GroupMenu({ label, groups, summary, active, hint }) {
   const [open, setOpen] = useState(false);

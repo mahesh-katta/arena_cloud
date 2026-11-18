@@ -1,6 +1,6 @@
 # Practice plan
 
-Agreed on 18 Nov 2026. **Nothing on this page is built yet.** Check every Practice change against it, and update this page when a decision changes.
+Agreed on 18 Nov 2026 and built the same day (round 1, section 9). Check every Practice change against this page, and update it when a decision changes.
 
 **What Practice is for:** it's the battleground. It holds every question from every source, past and future, each in its own topic, with filters to pick what you want. Practice never ranks or drops questions; that's the job of Modules, which is planned separately.
 
@@ -101,3 +101,30 @@ Every rebuild writes the topic file in one shape, with the same check report.
 3. **Old data isn't reformatted.** New information is added on top.
 4. **Practice never ranks or drops questions.**
 5. **Commit after each piece of work.** `data/` and `build_tools/` still need putting under version control.
+
+## 9. Round 1, as built (18 Nov 2026)
+
+**Practice now holds 80,719 questions** (was 33,363): 47,356 mock-paper questions were sorted into their topics by
+the classifier, and every question carries its source record.
+
+- **Data** (`build_tools/practice/`, not in git):
+  1. `label_one.sh` labels each mock file with the classifier.
+  2. `label_sets.py` scores each passage or puzzle set as a whole.
+  3. `build.py` builds the source record, merges repeats, adds the new questions and writes the filters, the index and `papers.json`.
+  - Run `build.py` with no flags for a report only; `--cutoff 0.95 --write` writes.
+  - It is safe to re-run, and it must be re-run after any topic builder rewrites its topic file.
+  - The report is `data/practice_build/report.md`, and questions below the cut-off are in `round1_to_check.json`.
+- **Cut-off 0.95:** 12,065 questions wait on the to-check list, 60% of them DI whose chart type is only in the image.
+  They are next round's job, with the DI clean-up.
+- **Repeats:** 7,948 mock questions were kept once, with every paper they appeared in (`pp`). Their own ids are kept in `same`, so an answer on either copy counts.
+- **Prelims/Mains:** 4,365 questions from single-stage courses took their stage from the raw per-question tag.
+- **Classifier (v10):** retrained with 49,517 confident mock labels; held-out topic accuracy went from 95.36% to 95.71%.
+  Unsure questions at 0.95 went from 17,025 to 12,065. See `build_tools/classifier/HANDOVER.md`.
+- **Card lists** live in `build_tools/practice/cards.json`. Edit that file, then re-run `build.py`.
+- **App:**
+  - `src/facets.js` holds all the filter logic, with no topic names in it.
+  - `src/Practice.jsx` is the topic list and topic page.
+  - `src/Mistakes.jsx` is now its own page.
+  - `src/priority.js` is gone; the default order lives in `cards.json`.
+- **Backups:** `~/projects/arena/backups/2026-11-18-before-practice` (bank, course, progress) and
+  `data/practice_build/before` (the bank as it was before the first write).

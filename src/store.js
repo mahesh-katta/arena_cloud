@@ -137,7 +137,13 @@ export function clearLocal(which = "all") {
     } catch {}
   }
 }
-/* "Reset everything" clears the progress but keeps the name and the profile list. */
+/* Practice topic order the user set by dragging: p.order[<profile id>][<card id>] = [topic ids]. One per profile.
+   Nothing resets it (Reset all keeps it); `list` null goes back to the default order. */
+export const setTopicOrder = (prof, card, list) => update((p) => {
+  p.order = { ...(p.order || {}) }; p.order[prof] = { ...(p.order[prof] || {}) };
+  if (list) p.order[prof][card] = list; else delete p.order[prof][card];
+});
+/* "Reset everything" clears the progress but keeps the name, the profile list and the topic order. */
 export const resetAll = () => { clearLocal("all"); return update((p) => {
   p.answers = {}; p.review = []; p.speed = {}; p.legacyMocks = {};
   for (const pr of Object.values(p.profiles)) { pr.mocks = {}; pr.glat = {}; }
@@ -157,6 +163,8 @@ export function getJSON(url) {
 }
 export const bankIndex = () => getJSON("/data/bank/index.json");
 export const bankTopic = (id) => getJSON("/data/bank/" + id + ".json");
+/* paper key -> { kind, prov, exam, stage, year, series, path }: where each Practice question appeared (build_tools/practice) */
+export const bankPapers = () => getJSON("/data/bank/papers.json").catch(() => ({}));
 export const speedIndex = () => getJSON("/data/speed/index.json");
 export const speedTopic = (id) => getJSON("/data/speed/" + id + ".json");
 export const mockIndex = () => getJSON("/data/mocks/index.json");
@@ -179,12 +187,19 @@ export function applyTheme() {
 }
 
 export const LEVELS = { easy: "Easy", easy_to_moderate: "Easy–Moderate", moderate: "Moderate", pattern: "Pattern" };
+/* `source` names, still used outside Practice (Modules lesson chips). Practice shows where a question is from by its papers. */
 export const SOURCES = {
   arena_basics: "Arena · Beginner", arena_medium: "Arena · Medium", arena_glat: "Arena · GLAT",
   arena_pyq_memory_based: "Previous year papers", arena_sectional_mocks: "Arena · Sectional mocks", arena_booster_mocks: "Arena · Booster mocks",
-  arena_full_mocks: "2026 Practice",          /* only the full mocks' own number series sit in the bank (Practice, Modules 2026 Practice tab) */
+  arena_full_mocks: "2026 Practice",          /* the full mocks' number series in Modules' 2026 Practice tab */
   "Arena CCE Arithmetic Ability - I": "Arena CCE book",
 };
+/* The Source chosen on the Practice topic list; it carries into the topic you open (this browser tab only). */
+export function useSource() {
+  const [v, set] = useState(() => { try { return JSON.parse(sessionStorage.getItem("ap-src2") || "[]"); } catch { return []; } });
+  const put = (x) => { set(x); try { sessionStorage.setItem("ap-src2", JSON.stringify(x)); } catch {} };
+  return [v, put];
+}
 export const srcName = (s) => SOURCES[s] || s;
 export const go = (h) => { location.hash = h; };
 export function shuffled(a, seed) {

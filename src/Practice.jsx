@@ -1,9 +1,12 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+/* Topic Practice (docs/practice-plan.md).
+ *   Topic list: five cards (from data/bank/index.json `cards`), search, the Source tree (PYQ / Trending / Booster /
+ *   General), the default order or the user's own order per profile. Prelims / Mains follow the open profile.
+ *   A topic: Status, Shuffle, Source, and the topic's own filters read from its data file. No topic names in here. */
+import { useEffect, useMemo, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
-import { EMPTY_F, pass, countBy, countDI, countSingle, lvOf, subOf, levelName, shapeOf, numOf, topicFits, indexCounts, indexCountDI, indexCountSingle } from "./facets.js";
-import { resetAll, bankIndex, bankTopic, speedTopic, glatData, mockTest, useData, useProgress, srcName, shuffled, dropReview, readPos, writePos } from "./store.js";
-import { RANK } from "./priority.js";
-import { Toggle, Tabs, Checks, Facet, FacetBox, Switch, Dropdown, GroupMenu, Chip, Solve, short, useView, ViewToggle, secClass, initials, Ring, Meter, pct, Loading, Failed } from "./ui.jsx";
+import { DEFAULT_FILTERS, pass, countBy, prune, sortVals, stageOk, srcOk, rowCount, sourceTree, toggleSource, sourceSummary, stepName, paperLabel, KINDS } from "./facets.js";
+import { bankIndex, bankTopic, bankPapers, useData, useProgress, shuffled, readPos, writePos, useSource, setTopicOrder } from "./store.js";
+import { FacetBox, Switch, Dropdown, TreePicker, Solve, useView, ViewToggle, secClass, Ring, Meter, pct, Loading, Failed } from "./ui.jsx";
 import { glyph } from "./TopicIcon.jsx";
 import { CARD_ICON } from "./Course.jsx";
 
@@ -20,202 +23,181 @@ function useTopicStats() {
     return m;
   }, [p.answers]);
 }
+/* a question answered under any of its ids (one copy is kept of a repeat; `same` lists the other ids) */
+export const answerOf = (p, q) => p.answers[q.id] || (q.same ? q.same.map((i) => p.answers[i]).find(Boolean) : undefined);
 
-const RARE_SHARE = 0.15;
-const SORTS = [
-  ["pri", "Default", null, false, "Default: topics in the best order for your exam, most-asked first"],
-  ["az", "A–Z", null, false, "Topic names in alphabetical order"],
-  ["most", "Most questions", null, false, "Topics with the most questions first"],
-  ["least", "Least practised", null, false, "Topics you have practised the least first"],
-];
-const LV_ORDER = ["Prelims", "Mains", ""];
-const NOSHOW = { stage: [], src: [], di: "", prog: "" };
-/* older saved filters used sets / todo as on-off flags */
-const normShow = (h = {}) => ({ stage: [], src: h.src || [], di: h.di ?? (h.sets ? "only" : ""), prog: h.prog ?? (h.todo ? "todo" : "") });
 const useSession2 = (key, init) => {
   const [v, set] = useState(() => { try { return JSON.parse(sessionStorage.getItem(key)) ?? init; } catch { return init; } });
   useEffect(() => { try { sessionStorage.setItem(key, JSON.stringify(v)); } catch {} }, [v]);
   return [v, set];
 };
+/* card id -> the look it borrows from Modules (colour + icon) */
+const CARD_CLS = { arithmetic: "quant", puzzles: "reasoning", cracker: "cracker", di: "di", english: "english" };
+const CARD_LINE = { arithmetic: "Word problems", puzzles: "Seating and puzzles", cracker: "Quick scoring types", di: "Charts and tables", english: "Grammar and reading" };
 
 export function PracticeHome() {
   const p = useProgress();
   const stats = useTopicStats();
   const [ix, err] = useData(bankIndex, []);
-  const [sec, setSec] = useSession2("ap-sec3", "all");   /* "all" or a section name */
-  const [sort, setSort] = useSession2("ap-sort2", "pri");
-  const [showRaw, setShow] = useSession2("ap-show2", NOSHOW);
-  const show = normShow(showRaw);
+  const [pick, setPick] = useSession2("ap-card", "");
+  const [src, setSrc] = useSource();
   const [q, setQ] = useState("");
-  const [advPick, setAdvPick] = useSession2("ap-adv", "");   /* "" = automatic, "1" open, "0" closed */
-  const [sure, setSure] = useState(false);
-  /* filters are dropdowns in one bar above the list */   /* always shown beside the list on wide screens; on narrow ones a Filters button shows / hides them */
+  const [edit, setEdit] = useState(false);
+  const [drag, setDrag] = useState(null);
   const [view, setView] = useView("ap-view-practice", "list");
   const pos = useMemo(readPos, []);
+  const stage = (p.profile && p.profile.stage) || "";
+  const paths = (ix && ix.paths) || [];
+  const rows = useMemo(() => (ix ? Object.fromEntries(ix.sections.flatMap((s) => s.topics.map((t) => [t.id, { ...t, sec: s.name }]))) : {}), [ix]);
+  const tree = useMemo(() => sourceTree(paths), [ix]);
+  const counts = useMemo(() => { const m = {}; for (const id in rows) m[id] = rowCount(rows[id], paths, stage, src); return m; }, [rows, stage, src]);
+  /* questions under one Source node, all topics together (cached per stage) */
+  const nodeCount = useMemo(() => { const c = new Map(); return (path) => { if (!c.has(path)) { let n = 0; for (const id in rows) n += rowCount(rows[id], paths, stage, [path]); c.set(path, n); } return c.get(path); }; }, [rows, stage]);
   if (err) return <Failed what="the question bank" err={err} />;
   if (!ix) return <Loading />;
-  const all = ix.sections.flatMap((x) => x.topics.map((t) => ({ ...t, sec: x.name })));
-  const one = ix.sections.find((x) => x.name === sec);                 // undefined = all sections
-  const s = { name: one ? one.name : "All sections", topics: one ? all.filter((t) => t.sec === one.name) : all };
-  const byId = Object.fromEntries(all.map((t) => [t.id, t]));
-  const weak = all.filter((t) => stats[t.id]?.done >= 5 && stats[t.id].ok / stats[t.id].done < 0.6)
-    .sort((a, b) => stats[a.id].ok / stats[a.id].done - stats[b.id].ok / stats[b.id].done).slice(0, 4);
-  const answers = Object.values(p.answers);
-  const right = answers.filter((a) => a.ok).length;
-  const secTotal = s.topics.reduce((a, t) => a + t.n, 0);
-  const secDone = s.topics.reduce((a, t) => a + (stats[t.id]?.done || 0), 0);
 
-  /* level and source must both hold for the SAME questions: use the cross-tab (xs) when the index has it */
-  const F = { stage: show.stage, src: show.src, di: show.di };
-  const fits = (t) => topicFits(t, F);
+  const cards = ix.cards || ix.sections.map((s) => ({ id: s.id, name: s.name, topics: s.topics.map((t) => t.id) }));
+  const cur = cards.find((c) => c.id === pick) || cards[0];
+  const prof = (p.user && p.user.active) || "_";
+  const custom = (c) => p.order && p.order[prof] && p.order[prof][c.id];
+  /* the user's order for this profile, with any topic it does not know yet added in the default order */
+  const orderOf = (c) => { const s = custom(c); if (!s) return c.topics; const have = new Set(c.topics), a = s.filter((id) => have.has(id)); return [...a, ...c.topics.filter((id) => !a.includes(id))]; };
+  const shown = (c) => orderOf(c).filter((id) => rows[id] && counts[id] > 0);
   const ql = q.trim().toLowerCase();
-  let topics = s.topics.filter((t) => (!ql || t.topic.toLowerCase().includes(ql) || Object.keys(t.subtopics || {}).some((x) => x && x.toLowerCase().includes(ql)))
-    && fits(t)
-    && (!show.prog || (show.prog === "todo" ? !stats[t.id] : !!stats[t.id])));
-  const nShow = show.stage.length + show.src.length + (show.di ? 1 : 0) + (show.prog ? 1 : 0);
-  /* option counts = questions you would get, with the other filters kept; 0 = disabled */
-  const lvCount = indexCounts(s.topics, F, "stage"), srCount = indexCounts(s.topics, F, "src");
-  const lvAll = indexCounts(s.topics, EMPTY_F, "stage"), srAll = indexCounts(s.topics, EMPTY_F, "src");
-  const levelOpts = Object.keys(lvAll).sort((a, b) => LV_ORDER.indexOf(a) - LV_ORDER.indexOf(b)).map((k) => [k, levelName(k), lvCount[k] || 0]);
-  const srcOpts = Object.keys(srAll).sort((a, b) => srAll[b] - srAll[a]).map((k) => [k, srcName(k), srCount[k] || 0]);
-  const diCount = indexCountDI(s.topics, F), singleCount = indexCountSingle(s.topics, F);
-  const clearAll = () => { setQ(""); setShow(NOSHOW); };
-  if (sort === "pri") topics = [...topics].sort((a, b) => (RANK[a.id] || 999) - (RANK[b.id] || 999) || a.topic.localeCompare(b.topic));
-  if (sort === "most") topics = [...topics].sort((a, b) => b.n - a.n);
-  if (sort === "least") topics = [...topics].sort((a, b) => (stats[a.id]?.done || 0) / a.n - (stats[b.id]?.done || 0) / b.n);
-  /* topics outside the priority list are "advanced types": collapsed under the list, opened by search or a Mains profile */
-  /* with a Type chosen, a topic where that type is under 15% of its questions (Simplification has 3 set questions of 794) is "rare" there and goes to the same collapsed section */
-  const rare = (t) => { if (!show.di) return false; const c = typeCounts(t, show.di, show.src); return c.all > 0 && (show.di === "only" ? c.di : c.single) / c.all < RARE_SHARE; };
-  const core = topics.filter((t) => RANK[t.id] && !rare(t)), adv = topics.filter((t) => !RANK[t.id] || rare(t));
+  const hit = (id) => { const t = rows[id]; return t.topic.toLowerCase().includes(ql) || Object.keys(t.subtopics || {}).some((x) => x && x.toLowerCase().includes(ql)); };
+  const found = ql ? cards.map((c) => ({ c, ids: shown(c).filter(hit) })).filter((g) => g.ids.length) : [];
+  const list = shown(cur), hidden = orderOf(cur).filter((id) => rows[id]).length - list.length;
+  const kindsOf = (t) => KINDS.map(([k, name]) => [name, rowCount(t, paths, stage, [k])]).filter(([, n]) => n > 0);
+  const answers = Object.values(p.answers), right = answers.filter((a) => a.ok).length;
+  const weak = Object.values(rows).filter((t) => stats[t.id]?.done >= 5 && stats[t.id].ok / stats[t.id].done < 0.6)
+    .sort((a, b) => stats[a.id].ok / stats[a.id].done - stats[b.id].ok / stats[b.id].done).slice(0, 4);
   const seenAt = (t) => Math.max(pos[t.id]?.at || 0, stats[t.id]?.last || 0);
-  const recentTopics = all.filter(seenAt).sort((a, b) => seenAt(b) - seenAt(a)).slice(0, 8);
-  const advOpen = advPick === "1" || (advPick === "" && (!!ql || (p.profile && p.profile.stage === "Mains")));
+  const recent = Object.values(rows).filter(seenAt).sort((a, b) => seenAt(b) - seenAt(a)).slice(0, 8);
+  const card = (t, rank) => <TopicCard key={t.id} t={t} n={counts[t.id]} st={stats[t.id]} pos={pos[t.id]} rank={rank} kinds={kindsOf(t)} />;
+
+  /* edit order: drag a row, or use its arrows; every move is saved for this profile */
+  const all = orderOf(cur).filter((id) => rows[id]);
+  const move = (from, to) => { if (to < 0 || to >= all.length || from === to) return; const a = [...all]; const [x] = a.splice(from, 1); a.splice(to, 0, x); setTopicOrder(prof, cur.id, a); };
 
   return (
     <div className="page pract cfit">
       <div className="bp-top chead3">
         <h1>Topic Practice</h1>
         <div className="hright">
-            <div className="filterbar">
-              {srcOpts.length > 1 && <Dropdown label="Source" multi value={show.src} onChange={(v) => setShow({ ...show, src: v })} opts={srcOpts} />}
-              <GroupMenu label="Sort" hint={"Sort: " + (SORTS.find(([k]) => k === sort) || SORTS[0])[4]} active={!!show.di || !!show.prog} summary={(SORTS.find(([k]) => k === sort) || SORTS[0])[1] + (show.di || show.prog ? " +" + ((show.di ? 1 : 0) + (show.prog ? 1 : 0)) : "")} groups={[
-                { title: "Sort by", value: sort, onChange: setSort, opts: SORTS },
-                { title: "Type", value: show.di, onChange: (v) => setShow({ ...show, di: v }), opts: [["", "All questions"], ["only", "DI / puzzle sets", diCount, diCount === 0], ["single", "Single questions", singleCount, singleCount === 0]] },
-                { title: "Status", value: show.prog, onChange: (v) => setShow({ ...show, prog: v }), opts: [["", "All"], ["todo", "Not attempted"], ["done", "Attempted"]] },
-              ]} />
-              <ViewToggle view={view} setView={setView} />
-            </div>
-          <input className="search csearch" type="search" aria-label="Search topics" placeholder="Search topics or subtopics" value={q} onChange={(e) => setQ(e.target.value)} />
-          <div className="hact">
-            {(nShow > 0 || q) && <button type="button" className="btn ghost sm" onClick={clearAll}>Clear filters</button>}
-            {sure ? <span className="tgroup"><span className="muted small">Erase all progress and history?</span><button type="button" className="btn danger sm" onClick={() => { resetAll(); setTimeout(() => location.reload(), 900); }}>Yes, reset</button><button type="button" className="btn ghost sm" onClick={() => setSure(false)}>Cancel</button></span>
-              : <button type="button" className="btn ghost sm" onClick={() => setSure(true)}>Reset all</button>}
+          <div className="filterbar">
+            <TreePicker label="Source" value={src} onChange={setSrc} tree={tree} count={nodeCount} nameOf={stepName} toggle={toggleSource} summary={sourceSummary(src)} />
+            <ViewToggle view={view} setView={setView} />
           </div>
+          <input className="search csearch" type="search" aria-label="Search topics" placeholder="Search topics or subtopics" value={q} onChange={(e) => setQ(e.target.value)} />
+          {(src.length > 0 || q) && <div className="hact"><button type="button" className="btn ghost sm" onClick={() => { setQ(""); setSrc([]); }}>Clear filters</button></div>}
         </div>
       </div>
-      <div className="ccards pcards" role="tablist" aria-label="Sections">
-        {[["all", "All topics", "all", all.length, all.reduce((a, t) => a + t.n, 0)], ...ix.sections.map((x) => [x.name, x.name.replace("Quantitative Aptitude", "Quant").replace("Reasoning Ability", "Reasoning"), /quant/i.test(x.name) ? "quant" : "reasoning", x.topics.length, x.topics.reduce((a, t) => a + t.n, 0)]), ["english", "English", "english", 0, 0]].map(([val, name, cls, nt, nq]) => (
-          <button key={val} type="button" role="tab" aria-selected={sec === val} disabled={val === "english"}
-            className={"ccard c-" + (cls === "all" ? "pall" : cls) + (sec === val ? " on" : "") + (val === "english" ? " soon" : "")} onClick={() => setSec(val)}>
-            <span className="cbot"><b>{name}</b><em>{val === "english" ? "Coming soon" : nq.toLocaleString() + " questions"}</em></span>
-            <span className="ctop"><span className="cico">{CARD_ICON[cls]}</span><span className="cpill">{val === "english" ? "Soon" : nt + " topics"}</span></span>
-          </button>
-        ))}
+      <div className="ccards pcards" role="tablist" aria-label="Practice sections">
+        {cards.map((c) => {
+          const ids = shown(c), soon = !c.topics.length, cls = CARD_CLS[c.id] || "all";
+          return (
+            <button key={c.id} type="button" role="tab" aria-selected={!ql && c.id === cur.id} disabled={soon} aria-label={c.name + (soon ? ", coming soon" : ", " + ids.length + " topics")}
+              className={"ccard c-" + cls + (!ql && c.id === cur.id ? " on" : "") + (soon ? " soon" : "")} onClick={() => { setQ(""); setEdit(false); setPick(c.id); }}>
+              <span className="cbot"><b>{c.name}</b><em>{soon ? "Coming soon" : ids.reduce((a, id) => a + counts[id], 0).toLocaleString() + " questions"}</em></span>
+              <span className="ctop"><span className="cico">{CARD_ICON[cls]}</span><span className="cpill">{soon ? "Soon" : ids.length + " topics"}</span></span>
+            </button>
+          );
+        })}
       </div>
 
       <section className="shelf pwrap">
         <div className="pfix prow">
           <div className="plhead">
-            <h2 className="plh">{sec === "all" ? "All topics" : ((s.name || "").replace("Quantitative Aptitude", "Quant").replace("Reasoning Ability", "Reasoning"))}</h2>
-          <div className="listtop"><span className="muted small resultcount" aria-live="polite">{topics.length} of {s.topics.length} · {pct(right, answers.length)}% accuracy overall</span><span className="grow" />
-          </div>
+            <h2 className="plh">{ql ? "Search results" : cur.name}</h2>
+            <div className="listtop">
+              <span className="muted small resultcount" aria-live="polite">
+                {ql ? found.reduce((a, g) => a + g.ids.length, 0) + " found" : list.length + " topics"}
+                {stage && " · " + stage + " questions, and ones with no stage"} · {pct(right, answers.length)}% accuracy overall
+              </span>
+              <span className="grow" />
+              {!ql && cur.topics.length > 0 && (edit
+                ? <button type="button" className="btn primary sm" onClick={() => setEdit(false)}>Done</button>
+                : <button type="button" className="btn ghost sm" onClick={() => setEdit(true)} title="Put the topics of this card in your own order">Edit order</button>)}
+            </div>
           </div>
         </div>
         <div className="pgsplit">
-        <div className="pscroll">
-        <div className={view === "grid" ? "grid" : "list"}>
-          {core.map((t) => <TopicCard key={t.id} t={t} sec={t.sec} st={stats[t.id]} pos={pos[t.id]} rank={sort === "pri" ? RANK[t.id] : 0} mode={show.di} srcs={show.src} />)}
-          {!topics.length && <div className="empty">No topic matches these choices. <button className="linkbtn" onClick={clearAll}>Show all topics</button></div>}
-        </div>
-        {adv.length > 0 && (
-          <div className="advbox">
-            <button type="button" className="btn ghost advbtn" aria-expanded={advOpen} onClick={() => setAdvPick(advOpen ? "0" : "1")}>
-              {advOpen ? "Hide" : "Show"} advanced types <span className="muted">({adv.length})</span>
-            </button>
-            {advOpen && (
+          <div className="pscroll">
+            {ql ? (
               <>
-                <p className="muted small">Rarer in Prelims, mostly for Mains, or topics with only a few questions of the chosen type. Nothing here is removed.</p>
-                <div className={view === "grid" ? "grid" : "list"}>
-                  {adv.map((t) => <TopicCard key={t.id} t={t} sec={t.sec} st={stats[t.id]} pos={pos[t.id]} rank={0} mode={show.di} srcs={show.src} />)}
+                {!found.length && <div className="empty">No topic matches “{q.trim()}”. <button type="button" className="linkbtn" onClick={() => setQ("")}>Clear search</button></div>}
+                {found.map(({ c, ids }) => (
+                  <div key={c.id} className="cgroup"><h2 className="cgh">{c.name}</h2><div className={view === "grid" ? "grid" : "list"}>{ids.map((id) => card(rows[id], 0))}</div></div>
+                ))}
+              </>
+            ) : edit ? (
+              <div className="ordbox">
+                <div className="ordhead">
+                  <div className="grow"><b>Your order for {cur.name}</b><p className="muted small">Drag a topic, or use its arrows. Saved for this profile; Reset all keeps it.</p></div>
+                  <button type="button" className="btn ghost sm" disabled={!custom(cur)} onClick={() => setTopicOrder(prof, cur.id, null)}>Back to default</button>
                 </div>
+                <ol className="ordlist">
+                  {all.map((id, i) => (
+                    <li key={id} draggable className={"ordrow" + (drag && drag.over === i ? " over" : "") + (drag && drag.from === i ? " lift" : "")}
+                      onDragStart={(e) => { e.dataTransfer.effectAllowed = "move"; setDrag({ from: i, over: i }); }}
+                      onDragOver={(e) => { e.preventDefault(); if (drag && drag.over !== i) setDrag({ ...drag, over: i }); }}
+                      onDrop={(e) => { e.preventDefault(); if (drag) move(drag.from, i); setDrag(null); }}
+                      onDragEnd={() => setDrag(null)}>
+                      <span className="grip" aria-hidden="true">⠿</span><span className="ono">{i + 1}</span>
+                      <span className="tile">{glyph(rows[id].topic)}</span><span className="grow oname">{rows[id].topic}</span>
+                      <small className="muted">{counts[id].toLocaleString()}</small>
+                      <button type="button" className="obtn" aria-label={"Move " + rows[id].topic + " up"} disabled={i === 0} onClick={() => move(i, i - 1)}>↑</button>
+                      <button type="button" className="obtn" aria-label={"Move " + rows[id].topic + " down"} disabled={i === all.length - 1} onClick={() => move(i, i + 1)}>↓</button>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ) : (
+              <>
+                <div className={view === "grid" ? "grid" : "list"}>{list.map((id, i) => card(rows[id], i + 1))}</div>
+                {!list.length && <div className="empty">No topic here has {stage ? stage + " " : ""}questions{src.length ? " for this Source" : ""}.{src.length > 0 && <> <button className="linkbtn" onClick={() => setSrc([])}>Show every source</button></>}</div>}
+                {hidden > 0 && list.length > 0 && <p className="muted small hiddennote">{hidden} more {hidden === 1 ? "topic has" : "topics have"} no {stage ? stage + " " : ""}questions{src.length ? " for this Source" : ""}{stage && !src.length ? " (change the stage by switching profile in Settings)" : ""}.{src.length > 0 && <> <button className="linkbtn" onClick={() => setSrc([])}>Show every source</button></>}</p>}
               </>
             )}
           </div>
-        )}
-        </div>
-      <div className="pside">
-        <aside className="precent" aria-label="Recently opened">
-        <h2>Recently opened</h2>
-        {recentTopics.length === 0 && <p className="muted small">Topics you open will show up here.</p>}
-        {recentTopics.map((t) => (
-          <div className="rrow" key={t.id}>
-            <span className="tile">{glyph(t.topic)}</span>
-            <span className="rname">{t.topic}</span>
-            <a className="btn primary sm" href={"#/practice/" + t.id}>Start</a>
+          <div className="pside">
+            <aside className="precent" aria-label="Recently opened">
+              <h2>Recently opened</h2>
+              {recent.length === 0 && <p className="muted small">Topics you open will show up here.</p>}
+              {recent.map((t) => (
+                <div className="rrow" key={t.id}><span className="tile">{glyph(t.topic)}</span><span className="rname">{t.topic}</span><a className="btn primary sm" href={"#/practice/" + t.id}>Start</a></div>
+              ))}
+            </aside>
+            {weak.length > 0 && (
+              <aside className="precent pweak" aria-label="Weak areas">
+                <h2>Weak areas <span className="muted small">below 60% accuracy</span></h2>
+                {weak.map((t) => (
+                  <div className="rrow" key={t.id}><span className="tile">{glyph(t.topic)}</span>
+                    <span className="rname">{t.topic}<small className="muted wacc">{pct(stats[t.id].ok, stats[t.id].done)}% · {stats[t.id].done} done</small></span>
+                    <a className="btn primary sm" href={"#/practice/" + t.id}>Practice</a></div>
+                ))}
+              </aside>
+            )}
           </div>
-        ))}
-        </aside>
-        {weak.length > 0 && (
-          <aside className="precent pweak" aria-label="Weak areas">
-            <h2>Weak areas <span className="muted small">below 60% accuracy</span></h2>
-            {weak.map((t) => (
-              <div className="rrow" key={t.id}>
-                <span className="tile">{glyph(t.topic)}</span>
-                <span className="rname">{t.topic}<small className="muted wacc">{pct(stats[t.id].ok, stats[t.id].done)}% · {stats[t.id].done} done</small></span>
-                <a className="btn primary sm" href={"#/practice/" + t.id}>Practice</a>
-              </div>
-            ))}
-          </aside>
-        )}
-      </div>
         </div>
       </section>
     </div>
   );
 }
 
-function typeCounts(t, mode, srcs) {
-  const ok = (k) => !srcs.length || srcs.includes(k.slice(k.indexOf("|") + 1));
-  const sum = (o) => Object.entries(o || {}).reduce((a, [k, n]) => a + (ok(k) ? n : 0), 0);
-  const all = sum(t.xs), di = sum(t.xd);
-  return { all, di, single: all - di };
-}
-
-function TopicCard({ t, sec, st, pos, rank, mode = "", srcs = [] }) {
-  const subs = Object.keys(t.subtopics).filter(Boolean);
-  const pre = t.stages?.Prelims || 0, mains = t.stages?.Mains || 0;
+function TopicCard({ t, n, st, pos, rank, kinds }) {
   const done = st?.done || 0, ok = st?.ok || 0;
   return (
-    <a className={"card tcard " + secClass(sec) + " c-" + (/quant/i.test(sec) ? "quant" : "reasoning")} href={"#/practice/" + t.id}>
+    <a className={"card tcard " + secClass(t.sec) + " c-" + (/quant/i.test(t.sec) ? "quant" : "reasoning")} href={"#/practice/" + t.id}>
       <div className="top">
         <span className="tile">{glyph(t.topic)}</span>
         <div className="grow">
           <div className="name">{rank > 0 && <span className="rank">{rank}</span>}{t.topic}</div>
-          <div className="sub">{(() => {
-            const c = typeCounts(t, mode, srcs);
-            const sets = t.sets ? " · " + t.sets + (t.sets === 1 ? " set" : " sets") : "";
-            if (mode === "only") return c.di.toLocaleString() + " questions" + sets;
-            if (mode === "single") return c.single.toLocaleString() + " questions";
-            return t.n.toLocaleString() + " questions" + sets;
-          })()}</div>
+          <div className="sub">{n.toLocaleString()} questions{n < t.n ? " of " + t.n.toLocaleString() : ""}</div>
         </div>
         {pos && pos.i > 0 && <span className="chip ac">Q {Math.min(pos.i + 1, pos.n || pos.i + 1)}</span>}
       </div>
-      <div className="chips">
-        {pre > 0 && <span className="chip ac">Prelims {pre}</span>}
-        {mains > 0 && <span className="chip ac">Mains {mains}</span>}
-        {Object.keys(t.sources || {}).map((k) => <span key={k} className="chip">{srcName(k)}</span>)}
-      </div>
+      <div className="chips">{kinds.map(([k, c]) => <span key={k} className="chip">{k} {c.toLocaleString()}</span>)}</div>
       <div className="foot">
         <Meter ok={ok} bad={done - ok} total={t.n} />
         <span className="stat-mini">{done}/{t.n}</span>
@@ -236,191 +218,114 @@ function Session({ s }) {
     </div>
   );
 }
+export { Session };
 export const useSession = () => {
   const [s, set] = useState({ n: 0, ok: 0, t: 0 });
   return [s, (ok, t) => set((x) => ({ n: x.n + 1, ok: x.ok + (ok ? 1 : 0), t: x.t + t }))];
 };
 
-/* Book problem sets: the Arena CCE chapters come in runs of 4 questions of one type. */
-function useBookSets(d) {
-  return useMemo(() => {
-    const m = new Map();
-    for (const q of d?.questions || []) {
-      if (!q.variant_id) continue;
-      if (!m.has(q.variant_id)) m.set(q.variant_id, { id: q.variant_id, no: q.variant_no, label: q.variant, qs: [] });
-      m.get(q.variant_id).qs.push(q);
-    }
-    return [...m.values()];
-  }, [d]);
-}
-
-const EMPTY = { sub: [], src: [], stage: [], prog: "", mix: false, set: "", di: "", kind: [], shape: [], num: [], nty: [], nfam: [] };
-/* filters a link may set: ?sub= (topic list), ?kind= &nty= &nfam= ("More like this" in Modules) */
-const LINK_KEYS = ["sub", "kind", "nty", "nfam"];
-/* saved filters from older versions used todo / di as on-off flags */
-const normF = (f = {}) => { const { todo, pat, ...r } = f; return { ...r, stage: [], di: f.di === true ? "only" : f.di || "", prog: f.prog ?? (todo ? "todo" : "") }; };
-
-/* Level / source chosen on the topic list carry into a topic you open for the first time */
-function homeFilters() {
-  try { const h = JSON.parse(sessionStorage.getItem("ap-show2") || "{}"); const n = normShow(h); return { stage: n.stage, src: n.src, prog: n.prog, di: n.di }; } catch { return {}; }
-}
-
-/* One topic. Filters, shuffle order and the current question are remembered per topic. */
+/* One topic. Its filters, shuffle order and the current question are remembered per topic.
+   A link may set filters by key (?sub=…, or Modules' "More like this": ?kind=…&nty=…&nfam=…). */
 export function PracticeRun({ topic, query }) {
   const p = useProgress();
   const [d, err] = useData(() => bankTopic(topic), [topic]);
-  const linked = LINK_KEYS.some((k) => query.get(k));
+  const [papers] = useData(bankPapers, []);
+  const [ix] = useData(bankIndex, []);
+  const [src, setSrc] = useSource();
+  const stage = (p.profile && p.profile.stage) || "";
+  const linked = [...query.keys()].length > 0;
   const [saved] = useState(() => (linked ? null : readPos()[topic]));
-  /* filters: what this topic had last time, but a Type / Status picked on the topic list wins (so the list and the topic agree) */
-  const [f, setF] = useState(() => {
-    if (linked) return { ...EMPTY, ...Object.fromEntries(LINK_KEYS.filter((k) => query.get(k)).map((k) => [k, [query.get(k)]])) };
-    const home = homeFilters();
-    const base = { ...EMPTY, ...home, ...(saved?.f ? normF(saved.f) : {}) };
-    if (home.di) base.di = home.di;
-    if (home.prog) base.prog = home.prog;
-    return base;
-  });
-  /* start from the top when the list's Type or Status changed the filter this topic was left with */
-  const [i, setI] = useState(() => { const h = homeFilters(); const sf = saved?.f ? normF(saved.f) : {}; return saved && !((h.di && h.di !== sf.di) || (h.prog && h.prog !== sf.prog)) ? saved.i || 0 : 0; });
+  const [f, setF] = useState(() => (linked
+    ? { ...Object.fromEntries([...query.entries()].map(([k, v]) => [k, [v]])), prog: "", mix: false }
+    : { ...(saved?.f || {}), prog: saved?.f?.prog || "", mix: !!saved?.f?.mix }));
+  const [i, setI] = useState(() => (saved ? saved.i || 0 : 0));
   const [seed] = useState(() => saved?.seed || Date.now() % 100000);
   const [sess, addSess] = useSession();
   const [tools, setTools] = useState(false);
-  const sets = useBookSets(d);
-  const set = (k) => (v) => { setF((x) => ({ ...x, [k]: v })); setI(0); };
-  /* which families each pattern shape belongs to, and which numbers each shape offers (see facets.js) */
-  const tree = useMemo(() => {
-    const fam = {}, num = {}, famT = {};
-    for (const q of d?.questions || []) {
-      if (q.ns_family) (famT[q.ns_family] || (famT[q.ns_family] = new Set())).add(q.ns_type);
-      if (!q.pattern) continue;
-      const s = shapeOf(q), n = numOf(q);
-      (fam[s] || (fam[s] = new Set())).add(subOf(q));
-      if (n) (num[s] || (num[s] = new Set())).add(n);
-    }
-    return { fam, num, famT };
-  }, [d]);
-  /* changing the Type keeps only the chosen families that belong to it (the Family filter is per type) */
-  const setNty = (v) => { setF((x) => ({ ...x, nty: v, nfam: v.length ? (x.nfam || []).filter((m) => [...(tree.famT[m] || [])].some((t) => v.includes(t))) : [] })); setI(0); };
-  /* changing the subtopic keeps only the chosen shapes that belong to it (the Pattern filter is per subtopic) */
-  const setSub = (v) => {
-    setF((x) => {
-      const shape = v.length ? (x.shape || []).filter((s) => (tree.fam[s] ? [...tree.fam[s]] : []).some((ff) => v.includes(ff))) : [];
-      return { ...x, sub: v, shape, num: shape.length ? (x.num || []).filter((n) => shape.some((s) => tree.num[s]?.has(n))) : [] };
-    });
-    setI(0);
-  };
-  /* changing the shape keeps only the chosen numbers that belong to it */
-  const setShape = (v) => { setF((x) => ({ ...x, shape: v, num: v.length ? (x.num || []).filter((n) => v.some((s) => tree.num[s]?.has(n))) : [] })); setI(0); };
-  const pickSet = (id) => { setF((x) => ({ ...x, set: id })); setI(0); setTools(false); };
   const [rtab, setRtab] = useState("filters");
   const [fopen, setFopen] = useState(false);
-  const [note, setNote] = useState(() => (query.get("nfam") ? "More like this: every " + (query.get("kind") ? query.get("kind").replace(/ Number Series$/, "").toLowerCase() + " number " : "") + "question in “" + query.get("nfam") + "”, including ones outside the Modules plan. Clear the filters to see the whole topic." : ""));
-  const carried = useRef(!saved && !linked && (f.stage.length > 0 || f.src.length > 0 || f.di));
-
-  /* option counts with the other filters kept (see facets.js); totals = no filters */
+  const [noteOff, setNoteOff] = useState(false);
+  const defs = d && d.filters && d.filters.length ? d.filters : DEFAULT_FILTERS;
+  /* the questions this topic offers now: the profile's stage and the chosen Source */
+  const base = useMemo(() => (d && papers ? d.questions.filter((q) => stageOk(q.exam_stage, stage) && srcOk(q, src, papers)) : []), [d, papers, stage, src]);
   const counts = useMemo(() => {
-    const qs = d?.questions || [];
-    const inSet = qs.filter((q) => (!f.set || q.variant_id === f.set) && pass(q, f));
-    return { sub: countBy(qs, f, "sub"), src: countBy(qs, f, "src"), stage: countBy(qs, f, "stage"), kind: countBy(qs, f, "kind"), shape: countBy(qs, f, "shape"), num: countBy(qs, f, "num"), nty: countBy(qs, f, "nty"), nfam: countBy(qs, f, "nfam"), di: countDI(qs, f), single: countSingle(qs, f),
-      prog: { todo: inSet.filter((q) => !p.answers[q.id]).length, done: inSet.filter((q) => p.answers[q.id]).length },
-      all: { sub: countBy(qs, EMPTY_F, "sub"), src: countBy(qs, EMPTY_F, "src"), stage: countBy(qs, EMPTY_F, "stage"), kind: countBy(qs, EMPTY_F, "kind"), shape: countBy(qs, EMPTY_F, "shape"), num: countBy(qs, EMPTY_F, "num"), nty: countBy(qs, EMPTY_F, "nty"), nfam: countBy(qs, EMPTY_F, "nfam"), di: countDI(qs, EMPTY_F) } };
-  }, [d, f, p.answers]);
+    const c = { all: {} };
+    for (const x of defs) { c[x.key] = countBy(base, f, defs, x.key); c.all[x.key] = countBy(base, {}, defs, x.key); }
+    const inF = base.filter((q) => pass(q, f, defs));
+    c.prog = { todo: inF.filter((q) => !answerOf(p, q)).length, done: inF.filter((q) => answerOf(p, q)).length };
+    return c;
+  }, [base, f, defs, p.answers]);
   const list = useMemo(() => {
-    if (!d) return [];
-    let a = d.questions.filter((q) => (!f.set || q.variant_id === f.set) && pass(q, f));
-    if (f.prog === "todo") a = a.filter((q) => !p.answers[q.id]);
-    else if (f.prog === "done") a = a.filter((q) => p.answers[q.id]);
+    let a = base.filter((q) => pass(q, f, defs));
+    if (f.prog === "todo") a = a.filter((q) => !answerOf(p, q));
+    else if (f.prog === "done") a = a.filter((q) => answerOf(p, q));
     return f.mix ? shuffled(a, seed) : a;
-  }, [d, f, seed]);
+  }, [base, f, seed]);
   useEffect(() => { if (d) writePos(topic, { f, i, seed, n: list.length, at: Date.now() }); }, [d, f, i, list.length]);
 
-  /* Level / source picked on the topic list may not overlap inside this topic (book questions have no level): relax them instead of showing an empty page */
-  useEffect(() => {
-    if (!d || !carried.current) return;
-    carried.current = false;
-    const n = (st, sr, di) => d.questions.filter((q) => pass(q, { stage: st, src: sr, sub: [], di })).length;
-    if (n(f.stage, f.src, f.di) > 0) return;
-    const pick = [[f.stage, f.src, ""], [f.stage, [], f.di], [[], f.src, f.di], [f.stage, [], ""], [[], f.src, ""], [[], [], f.di]].find(([a, b, c]) => n(a, b, c) > 0) || [[], [], ""];
-    const want = [f.stage.length && f.stage.map(levelName).join("/"), f.src.length && f.src.map(srcName).join("/"), f.di && (f.di === "single" ? "single questions" : "DI / puzzle set")].filter(Boolean).join(" + ");
-    setNote("This topic has no questions matching " + want + ", so " + (pick[0].length || pick[1].length || pick[2] ? "only part of your list filters is applied" : "all questions are shown") + ".");
-    setF((x) => ({ ...x, stage: pick[0], src: pick[1], di: pick[2] })); setI(0);
-  }, [d]);
-
   if (err) return <Failed what="this topic" err={err} />;
-  if (!d) return <Loading />;
-  const active = f.sub.length + f.src.length + f.stage.length + f.kind.length + f.shape.length + f.num.length + (f.nty || []).length + (f.nfam || []).length + (f.prog ? 1 : 0) + (f.di ? 1 : 0) + (f.mix ? 1 : 0) + (f.set ? 1 : 0);
+  if (!d || !papers) return <Loading />;
+  const setK = (k) => (v) => { setF((x) => prune(base, { ...x, [k]: v }, defs)); setI(0); };
+  const active = defs.reduce((a, x) => a + (f[x.key] || []).length, 0) + (f.prog ? 1 : 0) + (f.mix ? 1 : 0) + src.length;
+  const clear = () => { setF({ prog: "", mix: false }); setSrc([]); setI(0); };
   const at = Math.min(i, list.length);
   const q = list[at];
-  const prev = q && p.answers[q.id];
-  const cur = f.set && sets.find((x) => x.id === f.set);
-  const nextSet = cur && sets[sets.indexOf(cur) + 1];
-  /* every value that exists in the topic, with how many questions it would give now (0 = disabled) */
-  /* a topic file may list its subtopics in teaching order (subtopic_order); every other topic stays alphabetical */
-  /* the same for the optional Series type (series_type_order) and Pattern (pattern_order) filters */
-  const orderOf = (dim) => (dim === "sub" ? d.subtopic_order : dim === "kind" ? d.series_type_order : dim === "nty" ? d.ns_type_order : dim === "nfam" ? d.ns_family_order : null);
-  /* pattern shapes go most-asked first with the "Other …" catch-all last; numbers go in numeric order */
-  const isOther = (k) => /^Other /.test(k);
-  const cmp = (dim) => (x, y) => {
-    if (dim === "stage") return LV_ORDER.indexOf(x) - LV_ORDER.indexOf(y);
-    if (dim === "shape") return isOther(x) - isOther(y) || (counts.all.shape[y] || 0) - (counts.all.shape[x] || 0) || x.localeCompare(y);
-    if (dim === "num") return (parseFloat(x) || 0) - (parseFloat(y) || 0) || x.localeCompare(y);
-    if (orderOf(dim)) return orderOf(dim).indexOf(x) - orderOf(dim).indexOf(y);
-    return (x === "General") - (y === "General") || x.localeCompare(y);
-  };
-  const opts = (dim, name = (k) => k) => Object.keys(counts.all[dim]).sort(cmp(dim)).map((k) => [k, name(k), counts[dim][k] || 0]);
-  const crumbs = <><a href="#/practice">Topic-wise Practice</a><span>/</span>{d.section}<span>/</span><b>{d.topic}</b>{cur && <><span>/</span><b>Book set {cur.no}</b></>}</>;
+  const prev = q && answerOf(p, q);
+  const tree = sourceTree((ix && ix.paths) || []);
+  /* Source counts inside this topic: its questions under each node, with the stage and the topic's filters kept */
+  /* one pass: each question adds 1 to every step of every path it appeared under (once per question) */
+  const nodeMap = new Map();
+  for (const x of d.questions) {
+    if (!stageOk(x.exam_stage, stage) || !pass(x, f, defs)) continue;
+    const seen = new Set();
+    for (const m of x.pp || []) { const s = (papers[m] || {}).path; if (!s) continue; const parts = s.split("/"); for (let k = 1; k <= parts.length; k++) seen.add(parts.slice(0, k).join("/")); }
+    for (const k of seen) nodeMap.set(k, (nodeMap.get(k) || 0) + 1);
+  }
+  const nodeCount = (path) => nodeMap.get(path) || 0;
+  const label = (k) => (defs.find((x) => x.key === k) || {}).label || k;
+  const linkNote = linked && !noteOff ? "Opened with " + [...query.entries()].map(([k, v]) => label(k) + ": " + v).join(", ") + "." + (src.length ? " The Source you picked (" + sourceSummary(src) + ") also applies." : "") + " Clear the filters to see the whole topic." : "";
+  const where = q && (q.pp || []).map((m) => papers[m]).filter(Boolean);
+  const filterUI = defs.map((x) => {
+    const all = counts.all[x.key] || {}, keys = Object.keys(all), chosen = f[x.key] || [];
+    if (x.needs) {
+      const parent = defs.find((y) => y.key === x.needs);
+      if (!(f[x.needs] || []).length) {
+        const parentShown = parent && (!parent.needs || (f[parent.needs] || []).length);
+        return parentShown && keys.filter(Boolean).length > 1 ? <div className="facet" key={x.key}><div className="flabel">{x.label}</div><div className="muted small">Pick a {parent.label.toLowerCase()} to see these</div></div> : null;
+      }
+    }
+    if (keys.length < 2 && !chosen.length) return null;
+    let opts = sortVals(keys, x, all).map((k) => [k, k === "" ? x.empty || "Not set" : k, (counts[x.key] || {})[k] || 0]);
+    if (x.needs) opts = opts.filter((o) => o[0] && (o[2] > 0 || chosen.includes(o[0])));
+    return <FacetBox key={x.key} label={x.label} value={chosen} onChange={setK(x.key)} opts={opts} />;
+  });
+  const crumbs = <><a href="#/practice">Topic-wise Practice</a><span>/</span>{d.section}<span>/</span><b>{d.topic}</b></>;
   const rail = (
     <>
       <div className="card">
-        <div className="railhead"><span className="tile">{glyph(d.topic)}</span><div><h3>{d.topic}</h3><div className="muted small">{d.questions.length.toLocaleString()} questions · {d.section}</div></div></div>
+        <div className="railhead"><span className="tile">{glyph(d.topic)}</span><div><h3>{d.topic}</h3><div className="muted small">{base.length.toLocaleString()} questions{base.length < d.questions.length ? " of " + d.questions.length.toLocaleString() : ""} · {d.section}{stage ? " · " + stage : ""}</div></div></div>
         <Session s={sess} />
       </div>
       <div className="railtabs" role="tablist" aria-label="Tools sections">
-        {[["filters", "Filters"], sets.length > 0 && ["sets", "Sets"], list.length > 0 && ["qs", "Questions"]].filter(Boolean).map(([k, t]) => (
+        {[["filters", "Filters"], list.length > 0 && ["qs", "Questions"]].filter(Boolean).map(([k, t]) => (
           <button key={k} type="button" role="tab" aria-selected={rtab === k} className={rtab === k ? "on" : ""} onClick={() => { setRtab(k); if (k === "filters") setFopen(true); }}>{t}</button>
         ))}
       </div>
       <div className={"card rtab" + (rtab === "filters" ? " on" : "")}>
-        <div className="railhead"><button type="button" className="fold" aria-expanded={fopen} onClick={() => setFopen(!fopen)}><h3 className="grow">Filter questions</h3><span className="muted small">{active > 0 ? active + " on" : "All"}</span><i aria-hidden="true" /></button>{active > 0 && <button className="btn ghost sm" onClick={() => { setF(EMPTY); setI(0); }}>Clear {active}</button>}</div>
+        <div className="railhead"><button type="button" className="fold" aria-expanded={fopen} onClick={() => setFopen(!fopen)}><h3 className="grow">Filter questions</h3><span className="muted small">{active > 0 ? active + " on" : "All"}</span><i aria-hidden="true" /></button>{active > 0 && <button className="btn ghost sm" onClick={clear}>Clear {active}</button>}</div>
         <div className="filters" hidden={!fopen}>
-          <FacetBox label="Source" value={f.src} onChange={set("src")} opts={opts("src", srcName)} />
-          <FacetBox label="Series type" value={f.kind} onChange={set("kind")} opts={opts("kind")} />
-          <FacetBox label="Subtopic" value={f.sub} onChange={setSub} opts={opts("sub")} />
-          {Object.keys(counts.all.shape).length > 1 && (f.sub.length
-            ? <FacetBox label="Pattern" value={f.shape} onChange={setShape} opts={opts("shape").filter((o) => o[0] && o[2] > 0)} />
-            : <div className="facet"><div className="flabel">Pattern</div><div className="muted small">Pick a subtopic to see its patterns</div></div>)}
-          {/* a shape such as "Add multiples of a fixed number" is the same rule with one number turned up or down: pick that number here */}
-          {f.shape.length > 0 && opts("num").filter((o) => o[0] && o[2] > 0).length > 1 && (
-            <FacetBox label="Number" value={f.num} onChange={set("num")} opts={opts("num").filter((o) => o[0] && o[2] > 0)} />)}
-          {/* Number Series plan: Type (Add, Subtract, Multiply …), then the families inside the chosen type */}
-          {Object.keys(counts.all.nty).length > 1 && <FacetBox label="Type" value={f.nty} onChange={setNty} opts={opts("nty")} />}
-          {Object.keys(counts.all.nty).length > 1 && (f.nty.length
-            ? <FacetBox label="Family" value={f.nfam} onChange={set("nfam")} opts={opts("nfam").filter((o) => o[0] && o[2] > 0)} />
-            : <div className="facet"><div className="flabel">Family</div><div className="muted small">Pick a type to see its families</div></div>)}
-          {counts.all.di > 0 && <Dropdown label="Type" value={f.di} onChange={set("di")} opts={[["", "All questions"], ["only", "DI / puzzle sets", counts.di], ["single", "Single questions", counts.single]]} />}
-          <Dropdown label="Progress" value={f.prog} onChange={set("prog")} opts={[["", "All"], ["todo", "Unattempted", counts.prog.todo], ["done", "Attempted", counts.prog.done]]} />
-          <Switch checked={f.mix} onChange={set("mix")}>Shuffle order</Switch>
+          <div className="facet"><div className="flabel">Source</div><TreePicker label="Source" value={src} onChange={(v) => { setSrc(v); setI(0); }} tree={tree} count={nodeCount} nameOf={stepName} toggle={toggleSource} summary={sourceSummary(src)} /></div>
+          {filterUI}
+          <Dropdown label="Status" value={f.prog} onChange={(v) => { setF((x) => ({ ...x, prog: v })); setI(0); }} opts={[["", "All"], ["todo", "Not attempted", counts.prog.todo], ["done", "Attempted", counts.prog.done]]} />
+          <Switch checked={!!f.mix} onChange={(v) => { setF((x) => ({ ...x, mix: v })); setI(0); }}>Shuffle order</Switch>
         </div>
       </div>
-      {sets.length > 0 && (
-        <div className={"card rtab" + (rtab === "sets" ? " on" : "")}>
-          <div className="railhead"><h3 className="grow">Arena CCE book sets</h3><span className="muted small">{sets.length} sets of 4{active > (f.set ? 1 : 0) ? " · filters apply inside a set" : ""}</span></div>
-          <div className="booksets">
-            {sets.map((x) => (
-              <button key={x.id} className={"bookset" + (x.id === f.set ? " on" : "")} aria-pressed={x.id === f.set} onClick={() => pickSet(x.id === f.set ? "" : x.id)} title={x.label}>
-                <span className="no">{x.no}</span><span className="grow lbl">{x.label}</span>
-                <span className="dots" aria-hidden="true">{x.qs.map((y) => { const a = p.answers[y.id]; return <i key={y.id} className={a ? (a.ok ? "ok" : "bad") : ""} />; })}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
       {list.length > 0 && (
         <div className={"card rtab" + (rtab === "qs" ? " on" : "")}>
-          <div className="railhead"><h3 className="grow">Jump to question</h3><span className="muted small">{list.filter((x) => p.answers[x.id]).length} done</span></div>
+          <div className="railhead"><h3 className="grow">Jump to question</h3><span className="muted small">{list.filter((x) => answerOf(p, x)).length} done</span></div>
           <div className="navgrid">
             {list.map((x, j) => {
-              const a = p.answers[x.id];
+              const a = answerOf(p, x);
               return <button key={x.id} aria-label={"Question " + (j + 1) + (a ? (a.ok ? ", correct" : ", wrong") : "")} aria-current={j === at ? "true" : undefined}
                 className={"pnum" + (a ? (a.ok ? " okn" : " badn") : "") + (j === at ? " now" : "")} onClick={() => { setI(j); setTools(false); }}>{j + 1}</button>;
             })}
@@ -431,65 +336,25 @@ export function PracticeRun({ topic, query }) {
   );
   return (
     <Solve cls={secClass(d.section)} crumbs={crumbs} rail={rail} open={tools} setOpen={setTools}>
-      {note && <div className="card pad muted small" role="status" style={{ marginBottom: 10 }}>{note} <button type="button" className="linkbtn" onClick={() => setNote("")}>Dismiss</button></div>}
-      {cur && <div className="setbanner card"><span className="tile">{cur.no}</span><div className="grow"><b>Book set {cur.no} · {cur.qs.length} questions of one type</b><div className="muted small">{cur.label}</div></div><button className="btn ghost sm" onClick={() => pickSet("")}>All questions</button></div>}
-      {!list.length ? <div className="empty">No questions match these filters. <button className="linkbtn" onClick={() => { setF(EMPTY); setI(0); }}>Clear filters</button></div>
-        : at >= list.length ? (
-          <div className="card done">
-            <div className="big">{sess.ok} / {sess.n}</div>
-            <div className="muted">{cur ? "Book set " + cur.no + " done." : "You reached the end of these " + list.length + " questions in " + d.topic + "."}</div>
-            <div className="actions">
-              {nextSet && <button className="btn primary" onClick={() => pickSet(nextSet.id)}>Next: book set {nextSet.no}</button>}
-              <button className={"btn" + (nextSet ? "" : " primary")} onClick={() => setI(0)}>Start again</button>
-              <a className="btn ghost" href="#/practice">Choose another topic</a>
-            </div>
+      {linkNote && <div className="card pad muted small" role="status" style={{ marginBottom: 10 }}>{linkNote} <button type="button" className="linkbtn" onClick={() => setNoteOff(true)}>Dismiss</button></div>}
+      {!list.length ? (
+        <div className="empty">{base.length ? "No questions match these filters." : "This topic has no questions for the chosen Source" + (stage ? " at " + stage + " level" : "") + "."} <button className="linkbtn" onClick={clear}>Clear filters</button></div>
+      ) : at >= list.length ? (
+        <div className="card done">
+          <div className="big">{sess.ok} / {sess.n}</div>
+          <div className="muted">You reached the end of these {list.length} questions in {d.topic}.</div>
+          <div className="actions">
+            <button className="btn primary" onClick={() => setI(0)}>Start again</button>
+            <a className="btn ghost" href="#/practice">Choose another topic</a>
           </div>
-        ) : (
-          <Solver q={q} refInfo={{ kind: "bank", file: topic }} head={"Q " + (at + 1) + " / " + list.length} onResult={addSess}
-            chips={[q.subtopic && [q.subtopic, "ac"], q.pattern && [q.pattern, "ac"], q.variant_no && !cur && ["Book set " + q.variant_no, "ac"], q.exam_stage && q.exam_stage + " level", srcName(q.source), prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}
-            onPrev={at > 0 ? () => setI(at - 1) : null} onNext={() => setI(at + 1)} nextLabel={cur && at + 1 >= list.length ? "Finish set" : "Next question"} />
-        )}
-    </Solve>
-  );
-}
-
-/* Wrong answers from anywhere, until they are answered right. */
-async function loadRef(r) {
-  if (r.kind === "bank") return (await bankTopic(r.file)).questions.find((q) => q.id === r.id);
-  if (r.kind === "speed") return (await speedTopic(r.file)).questions.find((q) => q.id === r.id);
-  if (r.kind === "glat") return (await glatData()).questions.find((q) => q.id === r.id);
-  if (r.kind === "mock") return (await mockTest(r.group, r.mock)).questions.find((q) => q.id === r.id);
-  return null;
-}
-const FROM = { bank: "Topic practice", speed: "Speed drills", glat: "Booster · GLAT", mock: "Mock test" };
-export function Mistakes() {
-  const p = useProgress();
-  const [list] = useState(() => p.review.slice());
-  const [i, setI] = useState(0);
-  const [q, setQ] = useState(null);
-  const [sess, addSess] = useSession();
-  const [tools, setTools] = useState(false);
-  const r = list[i];
-  useEffect(() => { setQ(null); if (r) loadRef(r).then((x) => (x ? setQ(x) : (dropReview(r.id), setI((n) => n + 1)))); }, [i]);
-  const byTopic = useMemo(() => Object.entries(list.reduce((m, x) => ((m[x.topic] = (m[x.topic] || 0) + 1), m), {})).sort((a, b) => b[1] - a[1]), [list]);
-  const rail = (
-    <>
-      <div className="card"><div className="railhead"><h3 className="grow">This round</h3><span className="chip bad">{p.review.length} left</span></div><Session s={sess} /></div>
-      {byTopic.length > 0 && (
-        <div className="card">
-          <h3>Weak topics</h3>
-          <div className="bars">{byTopic.slice(0, 8).map(([t, n]) => <div key={t} className="barrow"><span className="grow">{t}</span><b className="mono">{n}</b></div>)}</div>
         </div>
+      ) : (
+        <Solver q={q} refInfo={{ kind: "bank", file: topic }} head={"Q " + (at + 1) + " / " + list.length} onResult={addSess}
+          chips={[q.subtopic && [q.subtopic, "ac"], q.pattern && [q.pattern, "ac"], q.exam_stage && q.exam_stage + " level",
+            where && where[0] && paperLabel(where[0]) + (where.length > 1 ? " · +" + (where.length - 1) + " more" : ""),
+            prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}
+          onPrev={at > 0 ? () => setI(at - 1) : null} onNext={() => setI(at + 1)} />
       )}
-    </>
-  );
-  return (
-    <Solve crumbs={<><a href="#/practice">Topic-wise Practice</a><span>/</span><b>Revise mistakes</b></>} rail={rail} open={tools} setOpen={setTools}>
-      {!list.length ? <div className="empty">No mistakes to revise. Questions you get wrong in practice, speed drills and mock tests collect here until you answer them right.</div>
-        : i >= list.length ? <div className="card done"><div className="big">{sess.ok} / {sess.n}</div><div className="muted">Round complete. Questions you got right again have left the list.</div></div>
-        : !q ? <div className="card qcard muted">Loading question…</div>
-        : <Solver q={q} refInfo={r} head={"Mistake " + (i + 1) + " / " + list.length} onResult={addSess}
-            chips={[[q.topic, "ac"], q.subtopic, FROM[r.kind]]} onPrev={i > 0 ? () => setI(i - 1) : null} onNext={() => setI(i + 1)} />}
     </Solve>
   );
 }

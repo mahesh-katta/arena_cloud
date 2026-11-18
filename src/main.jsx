@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { PracticeHome, PracticeRun, Mistakes } from "./Practice.jsx";
+import { PracticeHome, PracticeRun } from "./Practice.jsx";
+import { Mistakes } from "./Mistakes.jsx";
 import { Home } from "./Home.jsx";
 import { SpeedHome, SpeedTopic, SpeedRun } from "./Speed.jsx";
 import { MockGroup, MockTest } from "./Mocks.jsx";
@@ -113,7 +114,7 @@ function App() {
   if (!hasProfile(p)) return <Setup askName name={p.user ? p.user.name : ""} onDone={() => { location.hash = "#/home"; }} />;
   const tab = view === "mock" ? (a && a.startsWith("booster-") ? "booster" : "mocks") : TABS.some((t) => t[0] === view) ? view : !view ? "home" : "practice";
   let body;
-  if (view === "practice" && a) body = <PracticeRun key={a} topic={a} query={query} />;
+  if (view === "practice" && a) body = <PracticeRun key={a + "?" + query.toString()} topic={a} query={query} />;   /* a new link (e.g. "More like this") starts the topic afresh */
   else if (view === "mistakes") body = <Mistakes />;
   else if (view === "speed" && a && b === "run") body = <SpeedRun key={raw} tid={a} query={query} />;
   else if (view === "speed" && a) body = <SpeedTopic key={raw} tid={a} query={query} />;
