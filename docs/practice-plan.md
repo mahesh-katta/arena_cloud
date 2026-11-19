@@ -173,6 +173,13 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
 
 ### Pending 2: inside-topic filters (Round 2)
 
+**Arithmetic: done 19 Nov 2026.** Each of the 16 Arithmetic topics with Modules lessons has a **Method** filter: its Modules units, in Modules order, with "Not sorted" for the rest. 98% of their questions are sorted.
+- **Where a unit comes from:** the question's Modules lesson; else a hand check (`data/practice_build/audit/unit_handcheck_labels.json`, 1,202); else the unit model when sure, 94% right when sure on unseen papers.
+- **Built by** `build_tools/practice/arith_units.py`, which writes `data/practice_build/arith_units.json`. `build.py` puts it on the questions as `method` and declares the filter.
+- **After new papers:** run `build.py`, then `arith_units.py`, then `build.py` again.
+- **Not covered:** Permutations and Combinations and Application Sums have no Modules units, so no Method filter.
+- **Possible later:** a Modules "More like this" link can open Practice with `?meth=<unit>`.
+
 Each topic's own filters, built **one topic at a time with the user's feedback**. Filters are declared in the topic's data file; page code holds no topic names.
 - **Start with the four built topics** (Syllogism, Inequality, Quadratic Equations, Number Series). Their builders already sorted their questions into families. But the 3,403 questions added to them on 19 Nov carry no family tags yet, so those need sorting first.
 - **Then card by card,** in the 68-topic priority order: Arithmetic, Seating & Puzzles, Score Cracker, DI.
