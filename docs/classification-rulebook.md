@@ -140,9 +140,9 @@ The user reviewed 48 sets by hand: 27 kept, 14 changed, 7 unsure. Before these r
 ## Arithmetic units: hand check and wrong topics (19 Nov 2026)
 
 - **Every unsure Arithmetic question was given its Modules unit by hand:** 1,093 unsure questions plus a sample of 170 sure ones, 1,263 labels in all (`data/practice_build/audit/unit_handcheck_labels.json`). On the unsure ones the unit model was right 55% of the time.
-- **60 questions were filed under the wrong topic,** for example train and tank chart sets under Trains or Time and Work, and ratio or percentage problems under Profit and Loss. All 60 moved to their right topics, 68 questions with their set-mates:
+- **60 questions were filed under the wrong topic,** for example train and tank chart sets under Trains or Time and Work, and ratio or percentage problems under Profit and Loss. Only the round-1 ones moved:
   - 22 round-1 questions through `review/hand/round2f_wrong_topic.json`;
-  - 38 original bank questions through `review/hand/bank_moves.json`, a list of hand corrections the builder applies, and nothing else in the original bank is touched.
+  - 38 original bank questions were moved too, then **put back on the user's word: original bank labels stay exactly as the bank has them**, including chapter-theme placements (a boat ratio question practised in the Ratio chapter, a train chart set in Trains). Restored from the backup; the list is kept only for the record as `review/hand/bank_moves.rejected-by-user.json`, which the builder does not read.
 - **Unit model retrained with the hand labels:**
   - On held-out hand-labelled questions it is now right 69.3% of the time (59.0% before), and 86.9% in its top two. It is sure of 41% of them (14% before), and then right 89.7%.
   - On the mock-paper test it slightly improves: 85.2% right, 94.3% when sure.
