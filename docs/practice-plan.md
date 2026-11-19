@@ -88,7 +88,7 @@ Every rebuild writes the topic file in one shape, with the same check report.
 
 ## 7. Open, or waiting
 
-- **To settle once the classifier is actually run:** the cut-off for unsure tags and a "to check" list, and the topics the classifier doesn't cover yet.
+- **Settled (19 Nov):** cut-off 0.95, the rulebook, and every unsure question reviewed. The to-check list is empty. Two Practice tasks are parked: see **section 11**.
 - **Confirmed (19 Nov):** the PYQ list is exam → year; the Booster list is by course.
 - **The 33,363 original bank questions keep their own topic tags as they are** (user, 19 Nov). They are the labels the classifier was built from, so they are not re-audited.
 - **English** waits.
@@ -152,3 +152,29 @@ the classifier, and every question carries its source record.
   - A sure Number Series, Quadratic or other format question is never moved by 60/40.
   - A single question with no picture never goes to a chart topic.
 - **Practice now holds 96,134 questions.** 137 unsure questions wait, mostly new sets in these four topics.
+
+## 11. Pending: two Practice tasks, parked (19 Nov 2026; focus moves to Modules)
+
+**Where Practice stands:** 96,271 questions, every one placed, nothing waiting. v11 is the live classifier, and the rules are in `docs/classification-rulebook.md`. The five top cards use the Modules card row.
+
+### Pending 1: future data import, and its outside filter tag (Source)
+
+When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there should be **one ingest command** that does the following:
+1. Check every new question: question text or a picture, at least 2 options, an answer key, picture files present, no leftover web formatting, not Hindi-only, no repeated ids.
+   - Broken questions are held back, each with its reason.
+2. Strip provider names and web addresses (the no-provider rule). One stray web address was found and removed by hand on 19 Nov.
+3. Confirm the paper gets its **Source tag**: kind (PYQ / Trending / Booster / General) → exam → year → Mocks-G or Mocks-S. Warn when the exam name, year or section isn't recognised, so nothing lands under "Year not given" by mistake.
+4. Label only the new files (`build_tools/practice/label_one.sh`, `label_sets.py`).
+5. Do a dry run of `build_tools/practice/build.py`, with a short report: added per topic and per source, and how many are unsure.
+6. Make a review page holding only the new unsure questions (`make_review_page.py --left`).
+7. Write only after the user's OK.
+
+**Today:** these steps exist but are separate and run by hand, so a forgotten labelling step silently skips a file. The Full Mocks importer (`build_tools/mockimport/`) is set up for one exam. Answer keys are checked only for Full Mocks (against the booklet) and for the four built topics. A one-off scan on 19 Nov of all 116,593 mock questions found no real problems.
+
+### Pending 2: inside-topic filters (Round 2)
+
+Each topic's own filters, built **one topic at a time with the user's feedback**. Filters are declared in the topic's data file; page code holds no topic names.
+- **Start with the four built topics** (Syllogism, Inequality, Quadratic Equations, Number Series). Their builders already sorted their questions into families. But the 3,403 questions added to them on 19 Nov carry no family tags yet, so those need sorting first.
+- **Then card by card,** in the 68-topic priority order: Arithmetic, Seating & Puzzles, Score Cracker, DI.
+- Also waiting, as before: English, and putting `data/` and `build_tools/` under version control.
+
