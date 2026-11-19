@@ -92,7 +92,8 @@ export function PracticeHome() {
           {(src.length > 0 || q) && <div className="hact"><button type="button" className="btn ghost sm" onClick={() => { setQ(""); setSrc([]); }}>Clear filters</button></div>}
         </div>
       </div>
-      <div className="ccards pcards" role="tablist" aria-label="Practice sections">
+      {/* the five cards use the Modules card row as is (no Practice-only overrides) */}
+      <div className="ccards" role="tablist" aria-label="Practice sections">
         {cards.map((c) => {
           const ids = shown(c), soon = !c.topics.length, cls = CARD_CLS[c.id] || "all";
           return (
