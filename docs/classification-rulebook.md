@@ -136,3 +136,14 @@ The user reviewed 48 sets by hand: 27 kept, 14 changed, 7 unsure. Before these r
   - The paper isn't always right. Whole sections of some papers are mislabelled: SEC-2098 and SEC-1531 list Quant questions as Reasoning, and PYQ-093 lists Reasoning puzzles as Quant.
   - Hand checks may now set `section`, moving a set to the other section.
 - **P5:** years count only when an actual year (1985) appears. "Born in different years, of ages 21, 36…" is Age Based. Bank checks are unchanged.
+
+## Arithmetic units: hand check and wrong topics (19 Nov 2026)
+
+- **Every unsure Arithmetic question was given its Modules unit by hand:** 1,093 unsure questions plus a sample of 170 sure ones, 1,263 labels in all (`data/practice_build/audit/unit_handcheck_labels.json`). On the unsure ones the unit model was right 55% of the time.
+- **60 questions were filed under the wrong topic,** for example train and tank chart sets under Trains or Time and Work, and ratio or percentage problems under Profit and Loss. All 60 moved to their right topics, 68 questions with their set-mates:
+  - 22 round-1 questions through `review/hand/round2f_wrong_topic.json`;
+  - 38 original bank questions through `review/hand/bank_moves.json`, a list of hand corrections the builder applies, and nothing else in the original bank is touched.
+- **Unit model retrained with the hand labels:**
+  - On held-out hand-labelled questions it is now right 69.3% of the time (59.0% before), and 86.9% in its top two. It is sure of 41% of them (14% before), and then right 89.7%.
+  - On the mock-paper test it slightly improves: 85.2% right, 94.3% when sure.
+  - It changes only 19 of its 2,600 guesses on the questions nobody has checked.
