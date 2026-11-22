@@ -180,6 +180,31 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
 - **Not covered:** Permutations and Combinations and Application Sums have no Modules units, so no Method filter.
 - **Possible later:** a Modules "More like this" link can open Practice with `?meth=<unit>`.
 
+**Simplification: done 23 Nov 2026.** Simplification has a **Skill** filter, built from 8 skills the user agreed. Each sum goes under the hardest skill it needs, so a skill's questions use only that skill and the ones before it:
+- **The 8 skills, easiest to hardest:**
+
+  | Skill | Questions |
+  |---|---|
+  | Plain BODMAS | 975 |
+  | Percent | 1,149 |
+  | Fractions | 535 |
+  | Decimals | 251 |
+  | Squares | 638 |
+  | Square roots | 1,813 |
+  | Cubes and cube roots | 765 |
+  | Powers | 325 |
+- **Not sorted (432):**
+  - 410 sums exist only as a picture.
+  - 22 aren't sums: 8 number series, two word-problem caselets (salary and crops) and 3 letter-sign puzzles. 19 of the 22 were added by the classifier and may belong in other topics.
+- **What counts as a skill:**
+  - A decimal inside a percent (12.5%) counts as Percent.
+  - A fraction that divides out (1784/8) counts as plain division.
+  - An unknown that has to be undone counts by the step that undoes it: ?² is Square roots, √? is Squares, ?³ is Cubes, ? in a power is Powers.
+- **Checked:** 120 random questions (15 per skill), read one by one, were all on the right skill.
+- **Built by** `build_tools/practice/calc_skills.py`. It writes `data/practice_build/calc_skills.json`, and `build.py` puts the skill on each question as `skill` and declares the filter. A link can open one skill with `?skill=<name>`.
+- **After new papers:** run `build.py`, then `arith_units.py` and `calc_skills.py`, then `build.py` again.
+- **Known build quirk:** when two "Also fits" topics tie, `build.py` picks one at random, so each rebuild can flip a few of those hints (7 on 23 Nov; they were put back from the backup).
+
 Each topic's own filters, built **one topic at a time with the user's feedback**. Filters are declared in the topic's data file; page code holds no topic names.
 - **Start with the four built topics** (Syllogism, Inequality, Quadratic Equations, Number Series). Their builders already sorted their questions into families. But the 3,403 questions added to them on 19 Nov carry no family tags yet, so those need sorting first.
 - **Then card by card,** in the 68-topic priority order: Arithmetic, Seating & Puzzles, Score Cracker, DI.
