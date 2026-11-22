@@ -203,7 +203,42 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
 - **Checked:** 120 random questions (15 per skill), read one by one, were all on the right skill.
 - **Built by** `build_tools/practice/calc_skills.py`. It writes `data/practice_build/calc_skills.json`, and `build.py` puts the skill on each question as `skill` and declares the filter. A link can open one skill with `?skill=<name>`.
 - **After new papers:** run `build.py`, then `arith_units.py` and `calc_skills.py`, then `build.py` again.
-- **Known build quirk:** when two "Also fits" topics tie, `build.py` picks one at random, so each rebuild can flip a few of those hints (7 on 23 Nov; they were put back from the backup).
+- **Known build quirk:** when two topics tie, `build.py` picks one at random. So each rebuild can flip a few "Also fits" hints, and can even move a question to another topic. On 23 Nov two rebuilds flipped 12 hints and moved one question (FCL-0027-052, a word problem, between Percentages and Permutations and Combinations); all were put back from the backup.
+
+**Simplification Level: done 23 Nov 2026.** A second filter, **Level** (Light, Exam, Heavy), says how much work a sum is compared with the real IBPS RRB Clerk Prelims papers, the user's next exam.
+- **Work is counted in steps:**
+  - Every +, −, ×, ÷, "of", power and root is one step. A fraction (5/8, 2 1/3) is a number, not a step.
+  - One more step for each of these:
+    - a long multiply or divide (3 digits by 2 or more)
+    - adding two 4-digit numbers
+    - a power or root beyond the Quick Maths tables (squares and roots to 50, cubes to 20)
+    - an index rule (x⁴, x^(2/3))
+    - undoing the ? (?², √?, ?%, ÷ ?, ? in a power)
+    - a mixed number
+    - adding unlike fractions
+  - In an index sum (? in a power) the powers are only rewritten, so they cost nothing extra.
+- **Cut points, fixed so levels don't jump when papers are added:** Light is 3 steps or fewer, Heavy is 7 or more. That puts the 244 real RRB Clerk sums at 16% Light, 70% Exam and 14% Heavy. Each run of `calc_skills.py` prints this split, as a check.
+- **The pile:**
+
+  | Level | Questions |
+  |---|---|
+  | Light | 675 |
+  | Exam | 3,923 |
+  | Heavy | 1,853 |
+  | Not sorted | 432 |
+
+  Heavy by source: real PYQs 18%, Trending mocks 26%, Booster 37%, General sets 39%.
+- **Heavy by skill:** the hard end sits in Powers (226 of 325), Cubes (369 of 765) and Square roots (813 of 1,813). Percent (60 of 1,149) and Decimals (19 of 251) are rarely heavy.
+- **Checked:**
+  - No outside difficulty data exists (the raw mocks' attempt counters are all zero), so the measure was checked three ways:
+    - Against the solution lines the sources wrote: it goes up with them, though loosely (rank correlation 0.34).
+    - Against the 83 questions the bank marks "high": none is Light and 45 are Heavy. Their median is 7 steps against 5 for the pile.
+    - By hand, on blind pairs: 14 of 15 Light-vs-Exam pairs and 12 of 15 Exam-vs-Heavy pairs agreed.
+  - Finer weightings (half steps for adding) did no better on blind pairs where they disagreed (13 against 11 of 24) and tracked the solutions less well, so the plain count was kept.
+- **Known leanings:**
+  - Mixed-number sums lean a little heavy.
+  - The odd index sum hides a power you must recognise (7776 = 6⁵), which the count can't see.
+- **Built by** the same script. `build.py` puts the level on each question as `calc_level` and declares the filter. A link can open one level with `?lvl=Light`.
 
 Each topic's own filters, built **one topic at a time with the user's feedback**. Filters are declared in the topic's data file; page code holds no topic names.
 - **Start with the four built topics** (Syllogism, Inequality, Quadratic Equations, Number Series). Their builders already sorted their questions into families. But the 3,403 questions added to them on 19 Nov carry no family tags yet, so those need sorting first.
