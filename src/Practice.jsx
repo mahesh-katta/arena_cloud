@@ -29,6 +29,17 @@ const otherIds = (q) => [...(q.same || []), ...(q.twins || [])];
 export const answerOf = (p, q) => p.answers[q.id] || otherIds(q).map((i) => p.answers[i]).find(Boolean);
 /* a copy whose twin was already answered: Practice doesn't show it again */
 const twinDone = (p, q) => !p.answers[q.id] && (q.twins || []).some((i) => p.answers[i]);
+/* one copy of each twin group: the first one left in the list (an answered copy, since unanswered ones whose twin
+   is answered are taken out before this) */
+const once = (a) => {
+  const seen = new Set();
+  return a.filter((q) => {
+    if (!q.twins) return true;
+    const g = [q.id, ...q.twins].sort()[0];
+    if (seen.has(g)) return false;
+    seen.add(g); return true;
+  });
+};
 
 const useSession2 = (key, init) => {
   const [v, set] = useState(() => { try { return JSON.parse(sessionStorage.getItem(key)) ?? init; } catch { return init; } });
@@ -256,12 +267,12 @@ export function PracticeRun({ topic, query }) {
   const counts = useMemo(() => {
     const c = { all: {} };
     for (const x of defs) { c[x.key] = countBy(base, f, defs, x.key); c.all[x.key] = countBy(base, {}, defs, x.key); }
-    const inF = base.filter((q) => pass(q, f, defs));
+    const inF = once(base.filter((q) => pass(q, f, defs) && !twinDone(p, q)));
     c.prog = { todo: inF.filter((q) => !answerOf(p, q)).length, done: inF.filter((q) => answerOf(p, q)).length };
     return c;
   }, [base, f, defs, p.answers]);
   const list = useMemo(() => {
-    let a = base.filter((q) => pass(q, f, defs) && (f.prog === "done" || !twinDone(p, q)));
+    let a = once(base.filter((q) => pass(q, f, defs) && !twinDone(p, q)));
     if (f.prog === "todo") a = a.filter((q) => !answerOf(p, q));
     else if (f.prog === "done") a = a.filter((q) => answerOf(p, q));
     return f.mix ? shuffled(a, seed) : a;
