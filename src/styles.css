@@ -147,10 +147,24 @@ a.card:hover, button.card:hover { transform: translateY(-2px); box-shadow: var(-
 .passage summary::-webkit-details-marker { display: none; }
 .passage summary::after { content: "Hide"; font-weight: 500; color: var(--muted); }
 .passage:not([open]) summary::after { content: "Show"; }
-.passage > div, .passage > img { margin: 0 14px 14px; }
+.passage > div, .passage > .pic { margin: 0 14px 14px; }
+.passage > .pic { max-width: calc(100% - 28px); }   /* the 14 px side margins must fit inside the box, or the picture is cut */
 .passage .pre { font-size: 15px; line-height: 1.7; color: var(--ink2); max-height: 420px; overflow: auto; }
+.passage .pre.has-pics { max-height: none; }   /* a passage with pictures in its text is never boxed in, so they are never cut */
 .qtext { font-size: 17.5px; line-height: 1.65; margin-bottom: 20px; font-weight: 450; }
-img.chart { display: block; max-width: 100%; height: auto; margin: 6px 0 14px; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+/* question pictures (Pic in Question.jsx). Small ones (maths strips, symbols, picture options) are text: inline, smoothly
+   scaled, ink only (white melts into the card; in dark mode the ink turns light). Larger ones (charts, tables, diagrams)
+   sit on a white card with room around them, are never cut, and open full size on a click. */
+.pic { max-width: 100%; height: auto; }
+.pic-wait { display: inline-block; }
+.pic-sm { display: inline-block; vertical-align: middle; margin: 2px 3px; max-width: calc(100% - 6px); mix-blend-mode: multiply; }
+.pic-lg { display: block; margin: 8px 0 14px; padding: 8px; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-sizing: border-box; cursor: zoom-in; }
+.pic-miss { display: inline-block; font-size: 12px; color: var(--muted); border: 1px dashed var(--line); border-radius: 6px; padding: 1px 7px; margin: 0 2px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pic-sm { filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; } }
+:root[data-theme="dark"] .pic-sm { filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; }
+.picview { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; padding: 16px; background: rgba(8, 10, 18, .82); cursor: zoom-out; }
+.picview img { box-sizing: content-box; padding: 16px; background: #fff; border-radius: 12px; box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
+.picview-x { position: fixed; top: 14px; right: 18px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .16); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; }
 .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .opts.long { grid-template-columns: 1fr; }
 .opt { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 12px 14px; border: 1px solid var(--line); border-radius: 11px; background: var(--card); cursor: pointer; font-size: 15.5px; line-height: 1.45; box-shadow: 0 1px 0 var(--hi) inset; transition: border-color .1s, background .1s, transform .1s; }
@@ -158,7 +172,7 @@ img.chart { display: block; max-width: 100%; height: auto; margin: 6px 0 14px; b
 .opt:active:not(:disabled) { transform: scale(.995); }
 .opt:disabled { cursor: default; }
 .opt .optimg { margin: 0; }
-.opt .optimg img.chart { display: inline-block; margin: 0; height: 34px; width: auto; border: 0; border-radius: 4px; }
+.opt .optimg .pic-sm { margin: 0; }
 
 .opt .key { flex: none; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: var(--bg2); border: 1px solid var(--line2); font: 600 12.5px var(--mono); color: var(--ink2); }
 .opt.sel { border-color: var(--brand); background: var(--brand-soft); }
@@ -247,7 +261,8 @@ img.chart { display: block; max-width: 100%; height: auto; margin: 6px 0 14px; b
 .mockq { overflow: auto; padding: 20px 26px 28px; }
 .qsplit { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 22px; align-items: start; }
 .qsplit-l .passage { position: sticky; top: 0; margin-bottom: 0; }
-.qsplit-l .passage .pre { max-height: calc(100vh - 250px); }
+.qsplit-l .passage { max-height: calc(100vh - 230px); overflow: auto; }   /* the whole passage scrolls, pictures included */
+.qsplit-l .passage .pre { max-height: none; }
 .palette { border-left: 1px solid var(--line); background: var(--card2); overflow: auto; padding: 16px; }
 .palette .lbl { font-size: 12.5px; color: var(--ink2); font-weight: 600; margin: 0 0 10px; }
 .pgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; }
@@ -407,7 +422,7 @@ img.chart { display: block; max-width: 100%; height: auto; margin: 6px 0 14px; b
 .kindcard:focus-within { outline: 2px solid var(--brand); outline-offset: 2px; }
 
 @media (max-width: 1200px) {
-  .solve { grid-template-columns: 1fr; } .qsplit { grid-template-columns: 1fr; } .qsplit-l .passage { position: static; margin-bottom: 16px; }
+  .solve { grid-template-columns: 1fr; } .qsplit { grid-template-columns: 1fr; } .qsplit-l .passage { position: static; margin-bottom: 16px; max-height: none; overflow: visible; }
   .toolsbtn { display: inline-flex; }
   .solve .rail { display: none; }
   .solve.tools-open .rail { display: flex; position: fixed; left: 0; right: 0; bottom: 0; max-height: 82vh; overflow: auto; z-index: 60; background: var(--bg); padding: 0 14px 24px; border-radius: 18px 18px 0 0; box-shadow: 0 -12px 40px rgba(0,0,0,.3); gap: 12px; }
@@ -876,7 +891,7 @@ select { height: 40px; border-radius: 12px; background: var(--card); box-shadow:
 .opt.right .key, .opt.wrong .key { color: #fff; }
 .verdict { border-radius: 14px; }
 .qactions { border-top-color: var(--line2); }
-img.chart { border-radius: 14px; }
+.pic-lg { border-radius: 14px; }
 
 /* speed + mocks */
 .lv-easy i { background: #C9C9D1; } .lv-easy_to_moderate i { background: #8B8B96; } .lv-moderate i { background: var(--ink); }
@@ -994,7 +1009,7 @@ select { border-radius: var(--r-ctl); }
 .stats3 div, .kv div { border-radius: 10px; }
 .opt { border-radius: 12px; } .opt .key { border-radius: 8px; }
 .qcard .passage, .qcard .solution, .qcard .dirline, .rail .passage { border-radius: 12px; }
-.verdict, img.chart { border-radius: 10px; }
+.verdict, .pic-lg { border-radius: 10px; }
 .ddmenu { border-radius: 12px; } .ddopt { border-radius: 8px; }
 .setbtn, .pnum { border-radius: 9px; } .secbtn { border-radius: 10px; }
 .dialog .box { border-radius: 16px; }

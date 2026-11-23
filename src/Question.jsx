@@ -1,9 +1,64 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { recordAnswer, addNote, delNote, useProgress, NOTE_TYPES } from "./store.js";
 import { secClass } from "./ui.jsx";
 import { Maths } from "./mathfmt.jsx";
 
 export const imgSrc = (p) => (/^https?:/.test(p) ? p : "/data/" + p);
+
+/* One picture from a question, passage, option or solution, sized by its own pixel size once it has loaded.
+   Small ones (a maths strip, a symbol, a picture option: at most 60 px tall and 700 px wide) are text: drawn 1.5× and
+   smoothly scaled, inline with the words around them, so options keep the sizes the paper gave them. Larger ones (charts,
+   tables, diagrams) sit on a white card, are never cut, and open full size when clicked. */
+const SMALL_H = 60, SMALL_W = 700, SMALL_K = 1.5;
+export function Pic({ src, alt = "" }) {
+  const [box, setBox] = useState(null);
+  const [open, setOpen] = useState(false);
+  const small = box && box.h <= SMALL_H && box.w <= SMALL_W;
+  return (
+    <>
+      <img className={"pic " + (!box ? "pic-wait" : small ? "pic-sm" : "pic-lg")} src={imgSrc(src)} alt={alt} loading="lazy" decoding="async"
+        style={small ? { width: Math.round(box.w * SMALL_K) + "px" } : undefined}
+        onLoad={(e) => setBox({ w: e.currentTarget.naturalWidth, h: e.currentTarget.naturalHeight })}
+        onClick={box && !small ? () => setOpen(true) : undefined} title={box && !small ? "Click to see it full size" : undefined} />
+      {open && box && <PicView src={src} alt={alt} box={box} onClose={() => setOpen(false)} />}
+    </>
+  );
+}
+
+/* The full-size view: up to twice the picture's own size, never bigger than the screen. Esc or a click closes it, and
+   while it is open the question's keys (A–E, Enter…) are held back so nothing gets answered by accident. */
+function PicView({ src, alt, box, onClose }) {
+  useEffect(() => {
+    const k = (e) => { e.stopPropagation(); e.stopImmediatePropagation(); if (e.key === "Escape") onClose(); };
+    addEventListener("keydown", k, true);
+    return () => removeEventListener("keydown", k, true);
+  }, [onClose]);
+  const s = Math.min(2, (innerWidth * 0.94 - 32) / box.w, (innerHeight * 0.88 - 32) / box.h);
+  return createPortal(
+    <div className="picview" role="dialog" aria-label="Picture, full size" onClick={onClose}>
+      <img src={imgSrc(src)} alt={alt} style={{ width: Math.round(box.w * s) + "px", height: Math.round(box.h * s) + "px" }} />
+      <button type="button" className="picview-x" aria-label="Close" onClick={onClose}>×</button>
+    </div>,
+    document.body
+  );
+}
+
+/* which pictures a text places itself with "[Image n]" markers (0-based) */
+const placed = (text) => new Set([...String(text || "").matchAll(/\[Image (\d+)\]/g)].map((m) => +m[1] - 1));
+/* 38 older questions mark a picture option with a bare "[Image]" and keep its picture among the question's: those are the
+   question's last pictures, in option order. They belong to the options, not to the question. */
+const bareOptionPics = (q) => {
+  const qp = q.question_image_paths || [], n = q.options.filter((o) => /\[Image\]/i.test(o.text || "")).length;
+  return n && !(q.option_image_paths || []).length && qp.length >= n ? qp.slice(qp.length - n) : [];
+};
+/* 1,868 questions say "[See question image]" instead of "[Image 1]": the first picture goes where those words stand */
+const seeMark = (text) => {
+  const t = String(text || ""), SEE = /\[\s*see\s+(?:the\s+)?(?:question|common\s+data|passage)?\s*image\s*\]/gi;
+  if (/\[Image \d+\]/.test(t) || !SEE.test(t)) return t;
+  let k = 0;
+  return t.replace(SEE, () => (k++ ? "" : "[Image 1]"));
+};
 export const fmt = (s) => (s >= 3600 ? Math.floor(s / 3600) + ":" + String(Math.floor((s % 3600) / 60)).padStart(2, "0") : Math.floor(s / 60)) + ":" + String(s % 60).padStart(2, "0");
 
 /* Plain text with line breaks; "[Image n]" markers become the n-th image. */
@@ -42,7 +97,7 @@ export function Text({ text, images = [], className = "", join = false }) {
     <div className={"pre " + className}>
       {parts.map((s, i) => {
         const m = s.match(/^\[Image (\d+)\]$/);
-        if (m && images[+m[1] - 1]) return <img key={i} className="chart" src={imgSrc(images[+m[1] - 1])} alt={"Image " + m[1]} loading="lazy" />;
+        if (m) return images[+m[1] - 1] ? <Pic key={i} src={images[+m[1] - 1]} alt={"Picture " + m[1]} /> : <span key={i} className="pic-miss">picture not available</span>;
         return s ? <span key={i}><Maths text={s} /></span> : null;
       })}
     </div>
@@ -75,7 +130,7 @@ export function splitDirection(text) {
 
 export function Solution({ q }) {
   const imgs = q.explanation_image_paths || [];
-  const used = new Set([...(q.explanation || "").matchAll(/\[Image (\d+)\]/g)].map((m) => +m[1] - 1));
+  const used = placed(q.explanation);
   return (
     <div className="solution">
       <div className="lbl">Solution · answer {q.correct_option}</div>
@@ -86,7 +141,7 @@ export function Solution({ q }) {
       {!q.explanation && !imgs.length ? <div className="muted">No written solution is stored for this question.</div> : (
         <>
           <Text text={q.explanation} images={imgs} />
-          {imgs.map((p, i) => (used.has(i) ? null : <img key={i} className="chart" src={imgSrc(p)} alt="" loading="lazy" />))}
+          {imgs.map((p, i) => (used.has(i) ? null : <Pic key={i} src={p} alt="Solution picture" />))}
         </>
       )}
     </div>
@@ -108,23 +163,27 @@ export function Timer({ running, onTick, countdown, resetKey, cls = "" }) {
 
 /* The shared passage or chart for a set, the direction line, and the question. */
 export const hasSet = (q) => !!(q.common_data || (q.common_data_image_paths || []).length);
+/* A picture named by an "[Image n]" marker is drawn where the marker stands; any other picture follows the text. */
 export function SetInfo({ q }) {
   if (!hasSet(q)) return null;
+  const text = seeMark(q.common_data), imgs = q.common_data_image_paths || [], used = placed(text);
   return (
     <details className="passage" open>
       <summary>Information for this set</summary>
-      <Text text={q.common_data} join />
-      {(q.common_data_image_paths || []).map((p) => <img key={p} className="chart" src={imgSrc(p)} alt="Chart for this set" />)}
+      <Text text={text} images={imgs} className={used.size ? "has-pics" : ""} join />
+      {imgs.map((p, i) => (used.has(i) ? null : <Pic key={p} src={p} alt="Picture for this set" />))}
     </details>
   );
 }
 export function QBody({ q }) {
-  const [dir, body] = splitDirection(unwrap(q.question || ""));
+  const text = seeMark(q.question);
+  const [dir, body] = splitDirection(unwrap(text));
+  const all = q.question_image_paths || [], imgs = all.slice(0, all.length - bareOptionPics(q).length), used = placed(text);
   return (
     <>
       {dir && <div className="dirline pre">{dir}</div>}
-      {(q.question_image_paths || []).map((p) => <img key={p} className="chart" src={imgSrc(p)} alt="Question image" />)}
-      <Text className="qtext" text={body} join />
+      <Text className="qtext" text={body} images={imgs} join />
+      {imgs.map((p, i) => (used.has(i) ? null : <Pic key={p} src={p} alt="Question picture" />))}
     </>
   );
 }
@@ -144,18 +203,23 @@ export function SplitQ({ q, children }) {
 /* reveal: after answering, mark the key green and a wrong pick red. */
 export function Options({ q, picked, onPick, reveal = true }) {
   const long = q.options.some((o) => (o.text || "").length > 44 || /\n/.test(o.text || ""));
+  const bare = bareOptionPics(q);
+  let nb = 0;
   return (
     <div className={"opts" + (long ? " long" : "")}>
       {q.options.map((o) => {
+        let text = o.text || "", pics = q.option_image_paths || [];
+        if (bare.length && /\[Image\]/i.test(text)) { text = text.replace(/\[Image\]/i, "[Image " + ++nb + "]"); pics = bare; }
         let c = "opt";
         if (reveal && picked) c += o.label === q.correct_option ? " right" : o.label === picked ? " wrong" : " dim";
         else if (picked === o.label) c += " sel";
         return (
           <button key={o.label} className={c} disabled={reveal && !!picked} onClick={(e) => { e.currentTarget.blur(); onPick(o.label); }}>
             <span className="key">{o.label}</span>
-            {/* some papers print the choices as little pictures (fractions, surds) */}
-            {/\[Image \d+\]/.test(o.text || "")
-              ? <Text text={o.text} images={(q.option_image_paths || []).length ? q.option_image_paths : q.question_image_paths} className="optimg" />
+            {/* some papers print the choices as little pictures (fractions, surds); they are the option's own pictures,
+                never the question's */}
+            {/\[Image \d+\]/.test(text)
+              ? <Text text={text} images={pics} className="optimg" />
               : <span className="pre"><Maths text={o.text} /></span>}
           </button>
         );
