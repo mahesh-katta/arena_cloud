@@ -205,6 +205,7 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
 - **After new papers:** run `build.py`, then `arith_units.py` and `calc_skills.py`, then `build.py` again.
 - **Picture options (fixed 23 Nov):** Practice's copies of mock questions had dropped `option_image_paths`. So 322 questions whose options are pictures showed "[Image 1]" as text, or the question's picture as option A. The pictures were put back from the mock papers, and `build.py` now copies the field.
 - **Known build quirk:** when two topics tie, `build.py` picks one at random. So each rebuild can flip a few "Also fits" hints, and can even move a question to another topic. On 23 Nov two rebuilds flipped 12 hints and moved one question (FCL-0027-052, a word problem, between Percentages and Permutations and Combinations); all were put back from the backup.
+- **Repeats kept twice (23 Nov):** a set that only partly repeats another is kept whole, so 1,123 questions sat in Practice twice (1,218 extra copies, nearly all in DI and puzzle sets). Nothing is removed: `build_tools/practice/twins.py` gives each copy `twins` (its other ids), an answer on one copy counts for all, and Practice skips a copy whose twin is already answered. Run `twins.py --apply` after every `build.py`.
 
 **Simplification Level: done 23 Nov 2026.** A second filter, **Level** (Light, Exam, Heavy), says how much work a sum is compared with the real IBPS RRB Clerk Prelims papers, the user's next exam.
 - **Work is counted in steps:**

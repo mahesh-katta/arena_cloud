@@ -23,8 +23,12 @@ function useTopicStats() {
     return m;
   }, [p.answers]);
 }
-/* a question answered under any of its ids (one copy is kept of a repeat; `same` lists the other ids) */
-export const answerOf = (p, q) => p.answers[q.id] || (q.same ? q.same.map((i) => p.answers[i]).find(Boolean) : undefined);
+/* a question answered under any of its ids (one copy is kept of a repeat; `same` lists the other ids; `twins` are
+   copies kept twice inside sets that only partly repeat, see build_tools/practice/twins.py) */
+const otherIds = (q) => [...(q.same || []), ...(q.twins || [])];
+export const answerOf = (p, q) => p.answers[q.id] || otherIds(q).map((i) => p.answers[i]).find(Boolean);
+/* a copy whose twin was already answered: Practice doesn't show it again */
+const twinDone = (p, q) => !p.answers[q.id] && (q.twins || []).some((i) => p.answers[i]);
 
 const useSession2 = (key, init) => {
   const [v, set] = useState(() => { try { return JSON.parse(sessionStorage.getItem(key)) ?? init; } catch { return init; } });
@@ -257,7 +261,7 @@ export function PracticeRun({ topic, query }) {
     return c;
   }, [base, f, defs, p.answers]);
   const list = useMemo(() => {
-    let a = base.filter((q) => pass(q, f, defs));
+    let a = base.filter((q) => pass(q, f, defs) && (f.prog === "done" || !twinDone(p, q)));
     if (f.prog === "todo") a = a.filter((q) => !answerOf(p, q));
     else if (f.prog === "done") a = a.filter((q) => answerOf(p, q));
     return f.mix ? shuffled(a, seed) : a;
@@ -354,7 +358,8 @@ export function PracticeRun({ topic, query }) {
           chips={[q.subtopic && [q.subtopic, "ac"], q.pattern && [q.pattern, "ac"], q.also && "Also fits " + q.also, q.exam_stage && q.exam_stage + " level",
             where && where[0] && paperLabel(where[0]) + (where.length > 1 ? " · +" + (where.length - 1) + " more" : ""),
             prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}
-          onPrev={at > 0 ? () => setI(at - 1) : null} onNext={() => setI(at + 1)} />
+          onPrev={at > 0 ? () => setI(at - 1) : null}
+          onNext={() => { let k = at + 1; while (k < list.length && twinDone(p, list[k])) k++; setI(k); }} />
       )}
     </Solve>
   );
