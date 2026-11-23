@@ -3,7 +3,7 @@
    A notes file is plain keyed sections and each section's shape decides how it is drawn (a line, a list, named tricks,
    question tricks, a clue table, a worked puzzle, a worked question), so a section added to the data shows up by itself. */
 import { Fragment, useRef, useState } from "react";
-import { Maths } from "./mathfmt.jsx";
+import { Maths, MathsMode } from "./mathfmt.jsx";
 import { bankIndex, topicNotes, useData } from "./store.js";
 import { BackBtn, Loading, Failed } from "./ui.jsx";
 
@@ -191,7 +191,7 @@ function Sheet({ n, order, lead, commonSub }) {
     else window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: "smooth" });
   };
   return (
-    <div className="shand" ref={box}>
+    <MathsMode.Provider value={n.subject === "quant" || /^quant/.test(n.id || "") ? "quant" : ""}><div className="shand" ref={box}>
       {chips.length > 2 && <nav className="sh-jump" aria-label="Jump to a section">{chips.map(([id, t]) => <button key={id} type="button" onClick={() => jump(id)}>{t}</button>)}</nav>}
       {n.keyIdea && <div className="sh-key"><span className="sh-kick">Key idea</span><p><Tx s={n.keyIdea} /></p></div>}
       {lead}
@@ -204,7 +204,7 @@ function Sheet({ n, order, lead, commonSub }) {
         </details>
       )}
       {n.readFrom && <p className="sh-foot">Built from: {n.readFrom}</p>}
-    </div>
+    </div></MathsMode.Provider>
   );
 }
 

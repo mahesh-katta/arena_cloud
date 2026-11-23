@@ -2,9 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { recordAnswer, addNote, delNote, useProgress, NOTE_TYPES } from "./store.js";
 import { secClass } from "./ui.jsx";
-import { Maths } from "./mathfmt.jsx";
+import { Maths, MathsMode } from "./mathfmt.jsx";
 
 export const imgSrc = (p) => (/^https?:/.test(p) ? p : "/data/" + p);
+
+/* a quant question's text reads capital-letter powers too (N^(M)); everywhere else ^ may be a symbol (A^B), see mathfmt */
+const Mode = ({ q, children }) => <MathsMode.Provider value={/^quant/i.test(q.section || "") ? "quant" : ""}>{children}</MathsMode.Provider>;
 
 /* One picture from a question, passage, option or solution, sized by its own pixel size once it has loaded.
    Small ones (a maths strip, a symbol, a picture option: at most 60 px tall and 700 px wide) are text: drawn 1.5× and
@@ -132,7 +135,7 @@ export function Solution({ q }) {
   const imgs = q.explanation_image_paths || [];
   const used = placed(q.explanation);
   return (
-    <div className="solution">
+    <Mode q={q}><div className="solution">
       <div className="lbl">Solution · answer {q.correct_option}</div>
       {/* a one-line rule reads best inline; working that runs over several lines (the quadratic split) keeps its lines */}
       {q.rule && (/\n/.test(q.rule)
@@ -144,7 +147,7 @@ export function Solution({ q }) {
           {imgs.map((p, i) => (used.has(i) ? null : <Pic key={i} src={p} alt="Solution picture" />))}
         </>
       )}
-    </div>
+    </div></Mode>
   );
 }
 
@@ -168,11 +171,11 @@ export function SetInfo({ q }) {
   if (!hasSet(q)) return null;
   const text = seeMark(q.common_data), imgs = q.common_data_image_paths || [], used = placed(text);
   return (
-    <details className="passage" open>
+    <Mode q={q}><details className="passage" open>
       <summary>Information for this set</summary>
       <Text text={text} images={imgs} className={used.size ? "has-pics" : ""} join />
       {imgs.map((p, i) => (used.has(i) ? null : <Pic key={p} src={p} alt="Picture for this set" />))}
-    </details>
+    </details></Mode>
   );
 }
 export function QBody({ q }) {
@@ -180,11 +183,11 @@ export function QBody({ q }) {
   const [dir, body] = splitDirection(unwrap(text));
   const all = q.question_image_paths || [], imgs = all.slice(0, all.length - bareOptionPics(q).length), used = placed(text);
   return (
-    <>
+    <Mode q={q}>
       {dir && <div className="dirline pre">{dir}</div>}
       <Text className="qtext" text={body} images={imgs} join />
       {imgs.map((p, i) => (used.has(i) ? null : <Pic key={p} src={p} alt="Question picture" />))}
-    </>
+    </Mode>
   );
 }
 export function Stem({ q }) { return <><SetInfo q={q} /><QBody q={q} /></>; }
@@ -206,7 +209,7 @@ export function Options({ q, picked, onPick, reveal = true }) {
   const bare = bareOptionPics(q);
   let nb = 0;
   return (
-    <div className={"opts" + (long ? " long" : "")}>
+    <Mode q={q}><div className={"opts" + (long ? " long" : "")}>
       {q.options.map((o) => {
         let text = o.text || "", pics = q.option_image_paths || [];
         if (bare.length && /\[Image\]/i.test(text)) { text = text.replace(/\[Image\]/i, "[Image " + ++nb + "]"); pics = bare; }
@@ -224,7 +227,7 @@ export function Options({ q, picked, onPick, reveal = true }) {
           </button>
         );
       })}
-    </div>
+    </div></Mode>
   );
 }
 
