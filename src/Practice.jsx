@@ -5,7 +5,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
 import { DEFAULT_FILTERS, pass, countBy, prune, sortVals, stageOk, srcOk, rowCount, sourceTree, toggleSource, sourceSummary, stepName, paperLabel, KINDS } from "./facets.js";
-import { bankIndex, bankTopic, bankPapers, useData, useProgress, shuffled, readPos, writePos, useSource, setTopicOrder } from "./store.js";
+import { bankIndex, bankLite, fullNow, loadFull, bankPapers, useData, useProgress, shuffled, readPos, writePos, useSource, setTopicOrder } from "./store.js";
 import { FacetBox, Switch, Dropdown, TreePicker, Solve, useView, ViewToggle, secClass, Ring, Meter, pct, Loading, Failed } from "./ui.jsx";
 import { glyph } from "./TopicIcon.jsx";
 import { CARD_ICON } from "./Course.jsx";
@@ -244,9 +244,10 @@ export const useSession = () => {
    A link may set filters by key (?sub=…, or Modules' "More like this": ?kind=…&nty=…&nfam=…). */
 export function PracticeRun({ topic, query }) {
   const p = useProgress();
-  const [d, err] = useData(() => bankTopic(topic), [topic]);
+  const [d, err] = useData(() => bankLite(topic), [topic]);
   const [papers] = useData(bankPapers, []);
   const [ix] = useData(bankIndex, []);
+  const [, setLoaded] = useState(0);         /* bumps when a question's chunk arrives */
   const [src, setSrc] = useSource();
   const stage = (p.profile && p.profile.stage) || "";
   const linked = [...query.keys()].length > 0;
@@ -278,6 +279,12 @@ export function PracticeRun({ topic, query }) {
     return f.mix ? shuffled(a, seed) : a;
   }, [base, f, seed]);
   useEffect(() => { if (d) writePos(topic, { f, i, seed, n: list.length, at: Date.now() }); }, [d, f, i, list.length]);
+  /* the shown question's text, options and explanation come from its chunk; the next and previous ones are fetched ahead */
+  const at0 = Math.min(i, list.length);
+  useEffect(() => { if (!d) return; let live = true;
+    loadFull(topic, d, list[at0]).then(() => live && setLoaded((n) => n + 1), () => {});
+    for (const k of [at0 + 1, at0 - 1, at0 + 2]) if (list[k]) loadFull(topic, d, list[k]).catch(() => {});
+    return () => { live = false; }; }, [d, list, at0]);
 
   if (err) return <Failed what="this topic" err={err} />;
   if (!d || !papers) return <Loading />;
@@ -286,6 +293,7 @@ export function PracticeRun({ topic, query }) {
   const clear = () => { setF({ prog: "", mix: false }); setSrc([]); setI(0); };
   const at = Math.min(i, list.length);
   const q = list[at];
+  const full = fullNow(topic, d, q);
   const prev = q && answerOf(p, q);
   const tree = sourceTree((ix && ix.paths) || []);
   /* Source counts inside this topic: its questions under each node, with the stage and the topic's filters kept */
@@ -364,8 +372,10 @@ export function PracticeRun({ topic, query }) {
             <a className="btn ghost" href="#/practice">Choose another topic</a>
           </div>
         </div>
+      ) : !full ? (
+        <Loading />
       ) : (
-        <Solver q={q} refInfo={{ kind: "bank", file: topic }} head={"Q " + (at + 1) + " / " + list.length} onResult={addSess}
+        <Solver q={full} refInfo={{ kind: "bank", file: topic }} head={"Q " + (at + 1) + " / " + list.length} onResult={addSess}
           chips={[q.subtopic && [q.subtopic, "ac"], q.pattern && [q.pattern, "ac"], q.also && "Also fits " + q.also, q.exam_stage && q.exam_stage + " level",
             where && where[0] && paperLabel(where[0]) + (where.length > 1 ? " · +" + (where.length - 1) + " more" : ""),
             prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}

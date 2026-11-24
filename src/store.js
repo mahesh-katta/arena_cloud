@@ -163,6 +163,31 @@ export function getJSON(url) {
 }
 export const bankIndex = () => getJSON("/data/bank/index.json");
 export const bankTopic = (id) => getJSON("/data/bank/" + id + ".json");
+/* A Practice topic without the heavy fields (text, options, explanation, passage, pictures), from data/app/lite
+   (build_tools/layout). Every filter, chip and count works from it; a question's heavy fields come from its chunk.
+   Where there is no lite copy (the server reads the old folders) it is the full topic file. */
+export const bankLite = (id) => getJSON("/data/lite/bank/" + id + ".json").catch(() => bankTopic(id));
+const chunks = new Map();                         /* url -> the chunk once loaded, so a question already here shows at once */
+const chunkOf = (tid, d, q) => {
+  if (!d.chunk) return null;
+  d._pos ||= new Map(d.questions.map((x, n) => [x.id, n]));
+  const n = d._pos.get(q.id);
+  return n === undefined ? null : ["/data/lite/bank/" + tid + "/" + Math.floor(n / d.chunk) + ".json", n % d.chunk];
+};
+/* the whole question now if its chunk is loaded (or the file was full already), else null */
+export function fullNow(tid, d, q) {
+  if (!q) return null;
+  const c = chunkOf(tid, d, q);
+  if (!c) return q;
+  const a = chunks.get(c[0]);
+  return a ? { ...q, ...a[c[1]] } : null;
+}
+/* load the chunk that holds q (no-op when it is already here) */
+export function loadFull(tid, d, q) {
+  const c = q && chunkOf(tid, d, q);
+  if (!c || chunks.has(c[0])) return Promise.resolve();
+  return getJSON(c[0]).then((a) => { chunks.set(c[0], a); });
+}
 /* paper key -> { kind, prov, exam, stage, year, series, path }: where each Practice question appeared (build_tools/practice) */
 export const bankPapers = () => getJSON("/data/bank/papers.json").catch(() => ({}));
 export const speedIndex = () => getJSON("/data/speed/index.json");

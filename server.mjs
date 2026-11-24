@@ -25,11 +25,16 @@ import path from "node:path";
 const APP = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(APP, "dist");
 const DATA = path.join(APP, "data");
-const PROGRESS = path.join(path.dirname(APP), "arena_dashboard_progress.json");
+const PROGRESS = process.env.ARENA_PROGRESS ? path.resolve(process.env.ARENA_PROGRESS) : path.join(path.dirname(APP), "arena_dashboard_progress.json");
+/* where the app's question data lives: data/ (default) or the compiled data/app (ARENA_APP_DATA=data/app, docs/data-layout.md).
+   Pictures and notes always come from data/. */
+const APPDATA = process.env.ARENA_APP_DATA ? path.resolve(APP, process.env.ARENA_APP_DATA) : DATA;
+const APP_STORES = ["bank", "speed", "mocks", "booster", "course", "lite"];
+const dataPath = (rel) => { const seg = rel.split("/")[0]; return path.normalize(path.join(APP_STORES.includes(seg) ? APPDATA : DATA, rel)); };
 /* changes on every start, so the app can tell a refresh (same id) from a restart (new id) */
 const BOOT = Date.now().toString(36);
 const PORT = +process.argv[2] || +process.env.PORT || 8000;
-const SERVED = ["bank", "speed", "mocks", "booster", "images", "course", "notes"].map((d) => path.join(DATA, d) + path.sep);
+const SERVED = ["bank", "speed", "mocks", "booster", "images", "course", "notes", "lite"].map((d) => path.join(APP_STORES.includes(d) ? APPDATA : DATA, d) + path.sep);
 
 const TYPES = {
   ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",
@@ -42,7 +47,7 @@ const TYPES = {
 const groups = new Map();
 function group(id) {
   if (groups.has(id)) { const g = groups.get(id); groups.delete(id); groups.set(id, g); return g; }
-  const f = path.join(DATA, "mocks", path.basename(id) + ".json");
+  const f = path.join(APPDATA, "mocks", path.basename(id) + ".json");
   if (!existsSync(f)) return null;
   const g = JSON.parse(readFileSync(f, "utf8"));
   g.byMock = new Map();
@@ -55,7 +60,8 @@ function group(id) {
   return g;
 }
 
-/* Course lessons name question ids; data/course/idmap.json says which file holds each. Parsed files are kept (last 6). */
+/* Course lessons name question ids; lite/where.json (made by build_tools/layout from the files themselves) says which
+   file holds each, or data/course/idmap.json where there is no lite folder. Parsed files are kept (last 6). */
 let idmap = null;
 const filesById = new Map();
 const KIND = { b: "bank", s: "speed", m: "mocks" };
@@ -69,14 +75,15 @@ function courseQuestions(ids) {
   return out;
 }
 function courseQuestionsRaw(ids) {
-  idmap ||= JSON.parse(readFileSync(path.join(DATA, "course", "idmap.json"), "utf8"));
+  const wp = path.join(APPDATA, "lite", "where.json");
+  idmap ||= JSON.parse(readFileSync(existsSync(wp) ? wp : path.join(APPDATA, "course", "idmap.json"), "utf8"));
   const out = [];
   for (const id of ids) {
     const w = idmap[id];
     if (!w) continue;
     const key = w[0] + w[1];
     if (!filesById.has(key)) {
-      const f = path.join(DATA, KIND[w[0]], path.basename(w[1]) + ".json");
+      const f = path.join(APPDATA, KIND[w[0]], path.basename(w[1]) + ".json");
       filesById.set(key, new Map(JSON.parse(readFileSync(f, "utf8")).questions.map((q) => [q.id, q])));
       while (filesById.size > 6) filesById.delete(filesById.keys().next().value);
     } else { const m = filesById.get(key); filesById.delete(key); filesById.set(key, m); }
@@ -136,7 +143,7 @@ createServer(async (req, res) => {
       return send(res, 200, { ok: true });
     }
     if (p.startsWith("/data/")) {
-      const f = path.normalize(path.join(APP, p));
+      const f = dataPath(p.slice("/data/".length));
       if (!SERVED.some((d) => f.startsWith(d))) return send(res, 403, { error: "no" });
       return file(req, res, f, f.includes(path.sep + "images" + path.sep) ? "max-age=604800" : "no-cache");
     }
@@ -149,4 +156,5 @@ createServer(async (req, res) => {
 }).listen(PORT, () => {
   console.log("Arena Dashboard: http://localhost:" + PORT);
   console.log("Progress file: " + PROGRESS);
+  console.log("Question data: " + APPDATA);
 });
