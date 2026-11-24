@@ -5068,6 +5068,29 @@ html body .cunit .lessons { grid-template-columns: repeat(auto-fill, minmax(min(
   --subj-hover: color-mix(in srgb, #10B981 16%, var(--card));
 }
 
+:root[data-theme="dark"] .tpage.c-cracker {
+  --subj-main: #F97316;
+  --subj-accent: #FB7185;
+  --subj-grad: linear-gradient(135deg, #C2410C 0%, #EA580C 55%, #E11D48 100%);
+  --subj-light: rgba(234, 88, 12, 0.18);
+  --subj-border: rgba(249, 115, 22, 0.35);
+  --subj-glow: rgba(249, 115, 22, 0.3);
+  --subj-surface: color-mix(in srgb, #F97316 10%, var(--card));
+  --subj-hover: color-mix(in srgb, #F97316 16%, var(--card));
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tpage.c-cracker {
+    --subj-main: #F97316;
+    --subj-accent: #FB7185;
+    --subj-grad: linear-gradient(135deg, #C2410C 0%, #EA580C 55%, #E11D48 100%);
+    --subj-light: rgba(234, 88, 12, 0.18);
+    --subj-border: rgba(249, 115, 22, 0.35);
+    --subj-glow: rgba(249, 115, 22, 0.3);
+    --subj-surface: color-mix(in srgb, #F97316 10%, var(--card));
+    --subj-hover: color-mix(in srgb, #F97316 16%, var(--card));
+  }
+}
+
 /* Page Frame & Grid Layout */
 .course.tpage {
   height: calc(100vh - 16px);

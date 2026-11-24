@@ -7,7 +7,7 @@ import { UnitShorthand } from "./Shorthand.jsx";
 
 /* Course: Reasoning or Quant → topic → units → lessons. Reasoning units are concepts and a lesson is one puzzle;
    Quant units are archetypes and a lesson is one recipe. No gates, no tests, no levels: every lesson is open. */
-const SUBJ = { reasoning: "s-r", quant: "s-q", series: "s-q" };
+const SUBJ = { reasoning: "s-r", quant: "s-q", series: "c-cracker" };   /* series = Score Cracker lessons, in its orange */
 /* Score Cracker topics that have lessons in Modules (data/course/<subject>/<id>.json; Number Series: its cards, build_tools/numberseries/cards.py) */
 const PLANS = { "quant--number-series": "series" };
 /* "More like this": the topic's Practice page with the lesson's filters set (a lesson may carry `more_q`, e.g. "nty=Add&branch=Whole&tier=Gold") */
@@ -496,6 +496,7 @@ export function CourseTopic({ subject, tid }) {
                             <small>{l.kicker || "Find"}</small>
                             <b>{r.main.replace(/^Find\s+/i, "").replace(/^./, (c) => c.toUpperCase())}</b>
                           </span>
+                          {l.tags && <span className="rgiven"><span className="gch">{l.tags.map((x) => <i key={x}>{x}</i>)}</span></span>}
                           {r.sub && (
                             <span className="rgiven">
                               <small>Given</small>
@@ -603,7 +604,7 @@ export function CourseLesson({ subject, tid, lid }) {
         </div>
       ) : !qs.length ? <div className="empty">This lesson has no questions.</div> : (
         <>
-        <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={subject === "series" ? [[lesson.unit, "ac"], lesson.set] : [[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
+        <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={subject === "series" ? [[lesson.unit, "ac"], lesson.set, qs[i].series_type && [qs[i].series_type.replace(" Series", ""), /^Wrong/.test(qs[i].series_type) ? "warn" : "ac"]] : [[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
           onPrev={i > 0 ? () => setI(i - 1) : null}
           onNext={() => (i + 1 >= qs.length ? setEnd(true) : setI(i + 1))} nextLabel={i + 1 >= qs.length ? "Finish lesson" : "Next question"} />
         {more && <p className="muted small morelike">Want more like this? <a href={more}>{lesson.more.toLocaleString()} questions with the same group, branch and tier in Practice →</a></p>}
