@@ -200,8 +200,8 @@ export function Checks({ value, onChange, opts, inline, label, radio }) {
   );
 }
 /* A labelled group of checkboxes for the side panel (always checkboxes, so every option keeps its own count). */
-export function FacetBox({ label, value, onChange, opts, radio }) {
-  if (opts.length < 2) return null;
+export function FacetBox({ label, value, onChange, opts, radio, always }) {
+  if (opts.length < 2 && !always) return null;
   return <div className="facet"><div className="flabel">{label}{!radio && value.length > 0 && <button type="button" className="linkbtn" onClick={() => onChange([])}>All</button>}</div><Checks label={label} value={value} onChange={onChange} opts={opts} radio={radio} /></div>;
 }
 /* Picks the right control from the number of values. value is an array (empty = all). */

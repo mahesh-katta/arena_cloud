@@ -180,7 +180,7 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
 - **Not covered:** Permutations and Combinations and Application Sums have no Modules units, so no Method filter.
 - **Possible later:** a Modules "More like this" link can open Practice with `?meth=<unit>`.
 
-**Simplification: done 23 Nov 2026.** Simplification has a **Skill** filter, built from 8 skills the user agreed. Each sum goes under the hardest skill it needs, so a skill's questions use only that skill and the ones before it:
+**Simplification: done 23 Nov 2026.** Simplification has a **Method** filter (called Skill until 24 Nov), built from 8 skills the user agreed. Each sum goes under the hardest skill it needs, so a skill's questions use only that skill and the ones before it:
 - **The 8 skills, easiest to hardest:**
 
   | Skill | Questions |
@@ -201,11 +201,17 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
   - A fraction that divides out (1784/8) counts as plain division.
   - An unknown that has to be undone counts by the step that undoes it: ?² is Square roots, √? is Squares, ?³ is Cubes, ? in a power is Powers.
 - **Checked:** 120 random questions (15 per skill), read one by one, were all on the right skill.
-- **Built by** `build_tools/practice/calc_skills.py`. It writes `data/practice_build/calc_skills.json`, and `build.py` puts the skill on each question as `skill` and declares the filter. A link can open one skill with `?skill=<name>`.
+- **Built by** `build_tools/practice/calc_skills.py`. It writes `data/practice_build/calc_skills.json`, and `build.py` puts the skill on each question as `method` and declares the filter. A link can open one skill with `?meth=<name>`.
 - **After new papers:** run `build.py`, then `arith_units.py` and `calc_skills.py`, then `build.py` again.
 - **Picture options (fixed 23 Nov):** Practice's copies of mock questions had dropped `option_image_paths`. So 322 questions whose options are pictures showed "[Image 1]" as text, or the question's picture as option A. The pictures were put back from the mock papers, and `build.py` now copies the field.
 - **Known build quirk:** when two topics tie, `build.py` picks one at random. So each rebuild can flip a few "Also fits" hints, and can even move a question to another topic. On 23 Nov two rebuilds flipped 12 hints and moved one question (FCL-0027-052, a word problem, between Percentages and Permutations and Combinations); all were put back from the backup.
 - **Repeats kept twice (23 Nov):** a set that only partly repeats another is kept whole, so 2,706 questions sat in Practice twice (3,228 extra copies). Nothing is removed: `build_tools/practice/twins.py` gives each copy `twins` (its other ids; a match ignores case, spacing, stray full stops/commas and option order, or the same sum in other words: same numbers, signs, option numbers and keyed answer; never different pictures). The list shows one copy of each group, an answer on one copy counts for all. Run `twins.py --apply` after every `build.py`.
+
+**Method and Level everywhere in Arithmetic (24 Nov 2026, user):** one name for one idea.
+- Simplification's Skill filter is now **Method**: the field is `method` and the order list `method_order`, the same as the Arithmetic topics. The values didn't change.
+- All 18 Arithmetic topics now have a **Level** filter. Every question carries `calc_level`; it's empty until a topic's work is measured, and the filter shows that as **Unknown**. Only Simplification is measured so far. The filter carries `always: true`, so Practice shows it even while Unknown is its only option (other one-option filters stay hidden).
+- Filter order in every one of these topics: Method, Level, Subtopic. Permutations and Combinations and Application Sums still have no Method (no Modules units).
+- `build.py` writes both, so a rebuild keeps them. The first change was applied to the existing topic files without a rebuild (19 topics; every other field checked unchanged). Backup: `~/projects/arena/backups/2026-11-24-before-method-level/`.
 
 **Simplification Level: done 23 Nov 2026.** A second filter, **Level** (Light, Exam, Heavy), says how much work a sum is compared with the real IBPS RRB Clerk Prelims papers, the user's next exam.
 - **Work is counted in steps:**
@@ -227,7 +233,7 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
   | Light | 675 |
   | Exam | 3,923 |
   | Heavy | 1,853 |
-  | Not sorted | 432 |
+  | Unknown | 432 |
 
   Heavy by source: real PYQs 18%, Trending mocks 26%, Booster 37%, General sets 39%.
 - **Heavy by skill:** the hard end sits in Powers (226 of 325), Cubes (369 of 765) and Square roots (813 of 1,813). Percent (60 of 1,149) and Decimals (19 of 251) are rarely heavy.

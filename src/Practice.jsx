@@ -310,10 +310,10 @@ export function PracticeRun({ topic, query }) {
         return parentShown && keys.filter(Boolean).length > 1 ? <div className="facet" key={x.key}><div className="flabel">{x.label}</div><div className="muted small">Pick a {parent.label.toLowerCase()} to see these</div></div> : null;
       }
     }
-    if (keys.length < 2 && !chosen.length) return null;
+    if (keys.length < 2 && !chosen.length && !x.always) return null;   /* `always`: shown even with one option (Level while all Unknown) */
     let opts = sortVals(keys, x, all).map((k) => [k, k === "" ? x.empty || "Not set" : k, (counts[x.key] || {})[k] || 0]);
     if (x.needs) opts = opts.filter((o) => o[0] && (o[2] > 0 || chosen.includes(o[0])));
-    return <FacetBox key={x.key} label={x.label} value={chosen} onChange={setK(x.key)} opts={opts} />;
+    return <FacetBox key={x.key} label={x.label} value={chosen} onChange={setK(x.key)} opts={opts} always={x.always} />;
   });
   const crumbs = <><a href="#/practice">Topic-wise Practice</a><span>/</span>{d.section}<span>/</span><b>{d.topic}</b></>;
   const rail = (
