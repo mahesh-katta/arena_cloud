@@ -43,13 +43,18 @@ const TYPES = {
   ".svg": "image/svg+xml", ".ico": "image/x-icon", ".webp": "image/webp", ".woff2": "font/woff2",
 };
 
+/* a file's version (time + size): every cache below is checked against it, so a builder run is served without a restart */
+const stamp = (f) => { try { const s = statSync(f); return s.mtimeMs + ":" + s.size; } catch { return ""; } };
+
 /* Mock group files are 1-11 MB; keep the last few parsed in memory. */
 const groups = new Map();
 function group(id) {
-  if (groups.has(id)) { const g = groups.get(id); groups.delete(id); groups.set(id, g); return g; }
   const f = path.join(APPDATA, "mocks", path.basename(id) + ".json");
+  if (groups.has(id)) { const g = groups.get(id); groups.delete(id); if (g._st === stamp(f)) { groups.set(id, g); return g; } }
   if (!existsSync(f)) return null;
+  const st = stamp(f);
   const g = JSON.parse(readFileSync(f, "utf8"));
+  g._st = st;
   g.byMock = new Map();
   for (const q of g.questions) {
     if (!g.byMock.has(q.mock_id)) g.byMock.set(q.mock_id, []);
@@ -62,32 +67,39 @@ function group(id) {
 
 /* Course lessons name question ids; lite/where.json (made by build_tools/layout from the files themselves) says which
    file holds each, or data/course/idmap.json where there is no lite folder. Parsed files are kept (last 6). */
-let idmap = null;
+let idmap = null, idmapSt = "";
 const filesById = new Map();
 const KIND = { b: "bank", s: "speed", m: "mocks" };
 const lessonMemo = new Map();
+const mapFile = () => { const wp = path.join(APPDATA, "lite", "where.json"); return existsSync(wp) ? wp : path.join(APPDATA, "course", "idmap.json"); };
 function courseQuestions(ids) {
+  const mf = mapFile(), st = stamp(mf);
+  if (st !== idmapSt) { idmap = JSON.parse(readFileSync(mf, "utf8")); idmapSt = st; filesById.clear(); lessonMemo.clear(); }
   const mk = ids.join(",");
-  if (lessonMemo.has(mk)) return lessonMemo.get(mk);
-  const out = courseQuestionsRaw(ids);
-  lessonMemo.set(mk, out);
+  const m = lessonMemo.get(mk);
+  if (m && m.files.every(([f, s]) => stamp(f) === s)) return m.out;
+  const files = new Map();
+  const out = courseQuestionsRaw(ids, files);
+  lessonMemo.set(mk, { out, files: [...files] });
   while (lessonMemo.size > 60) lessonMemo.delete(lessonMemo.keys().next().value);
   return out;
 }
-function courseQuestionsRaw(ids) {
-  const wp = path.join(APPDATA, "lite", "where.json");
-  idmap ||= JSON.parse(readFileSync(existsSync(wp) ? wp : path.join(APPDATA, "course", "idmap.json"), "utf8"));
+function courseQuestionsRaw(ids, used) {
   const out = [];
   for (const id of ids) {
     const w = idmap[id];
     if (!w) continue;
     const key = w[0] + w[1];
-    if (!filesById.has(key)) {
-      const f = path.join(APPDATA, KIND[w[0]], path.basename(w[1]) + ".json");
-      filesById.set(key, new Map(JSON.parse(readFileSync(f, "utf8")).questions.map((q) => [q.id, q])));
-      while (filesById.size > 6) filesById.delete(filesById.keys().next().value);
-    } else { const m = filesById.get(key); filesById.delete(key); filesById.set(key, m); }
-    const q = filesById.get(key).get(id);
+    const f = path.join(APPDATA, KIND[w[0]], path.basename(w[1]) + ".json"), st = stamp(f);
+    let e = filesById.get(key);
+    if (e) filesById.delete(key);
+    if (!e || e.st !== st) {
+      e = { st, map: new Map(JSON.parse(readFileSync(f, "utf8")).questions.map((q) => [q.id, q])) };
+      while (filesById.size > 5) filesById.delete(filesById.keys().next().value);
+    }
+    filesById.set(key, e);
+    used.set(f, st);
+    const q = e.map.get(id);
     if (q) out.push({ ...q, _ref: w[0] === "m" ? { kind: "mock", group: w[1], mock: w[2] } : { kind: KIND[w[0]] === "bank" ? "bank" : "speed", file: w[1] } });
   }
   return out;

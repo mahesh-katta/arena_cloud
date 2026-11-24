@@ -118,10 +118,19 @@ The always-on app (PM2 `arena_station`, port 8001) runs with `ARENA_APP_DATA=dat
 ARENA_APP_DATA= pm2 restart arena_station --update-env && pm2 save
 ```
 
+## Number Series cards (25 Nov 2026)
+
+`build_tools/numberseries/cards.py` gives every Number Series question its Series type, Branch, card and Tier, and writes the Modules lessons: units are the Groups, one lesson per card (never split), in Gold / Complete / Perfection tabs. Practice filters: Series type · Group · Branch · Tier. The Practice build runs its tagging too; the lessons come from:
+
+```bash
+python3 -I build_tools/layout/layout.py run numberseries -- python3 -I build_tools/numberseries/cards.py --write
+```
+
+The server checks each cached file's time and size, so a chain run is served without a restart.
+
 ## Later steps (not built yet)
 
-1. Number Series card lessons in Modules (the Practice filters are built: `build_tools/numberseries/cards.py`).
-2. The solved rule: outside mocks, a question whose copy was answered shows green and "Next" skips it.
-3. Workbench folders move to `build/`.
+1. The solved rule: outside mocks, a question whose copy was answered shows green and "Next" skips it.
+2. Workbench folders move to `build/`.
 
 Dropped (24 Nov 2026): filter profiles; folding `data/quant_maps` into the chain (builder input only); retiring `course/idmap.json` (kept as the fallback when the server runs without `data/app`).

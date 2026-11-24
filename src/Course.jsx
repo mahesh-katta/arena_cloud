@@ -8,10 +8,10 @@ import { UnitShorthand } from "./Shorthand.jsx";
 /* Course: Reasoning or Quant → topic → units → lessons. Reasoning units are concepts and a lesson is one puzzle;
    Quant units are archetypes and a lesson is one recipe. No gates, no tests, no levels: every lesson is open. */
 const SUBJ = { reasoning: "s-r", quant: "s-q", series: "s-q" };
-/* Score Cracker topics that have a practice plan in Modules (data/course/<subject>/<id>.json, built by build_tools/numberseries/plan) */
+/* Score Cracker topics that have lessons in Modules (data/course/<subject>/<id>.json; Number Series: its cards, build_tools/numberseries/cards.py) */
 const PLANS = { "quant--number-series": "series" };
-/* "More like this": the Practice page for this topic, with the lesson's question type, type and family already filtered */
-const moreHref = (tid, l) => "#/practice/" + tid + "?kind=" + encodeURIComponent(l.kind + " Number Series") + "&nty=" + encodeURIComponent(l.type) + "&nfam=" + encodeURIComponent(l.family);
+/* "More like this": the topic's Practice page with the lesson's filters set (a lesson may carry `more_q`, e.g. "nty=Add&branch=Whole&tier=Gold") */
+const moreHref = (tid, l) => "#/practice/" + tid + "?" + l.more_q;
 const href = (...a) => "#/course/" + a.map(encodeURIComponent).join("/");
 
 /* Reasoning lessons are all titled "Puzzle n"; name them from their source set instead, e.g. "Beginner · Set 2 · Puzzle 1" */
@@ -23,14 +23,13 @@ function setLabel(test) {
   return levelOf(test) + (set ? " · Set " + set : "");
 }
 const LEVELS = ["Beginner", "Prelims", "Must Learn", "Practice"];
-/* Number Series units: the plan's lessons, then the full mocks' own series in a "2026 Practice" tab (lessons carry set: "2026 Practice") */
-const SETS = ["Plan", "2026 Practice"];
-/* a unit's lessons grouped by exam level, each group keeping the unit's own lesson numbers; Quant recipes stay one group */
+/* a unit's lessons grouped by exam level, each group keeping the unit's own lesson numbers; Quant recipes stay one group.
+   Lessons that carry a `set` (Number Series: Gold / Complete / Perfection) are grouped by it, in the order they come. */
 function groupLessons(lessons, byLevel) {
   if (!byLevel && lessons.some((l) => l.set)) {
-    const g = {};
-    lessons.forEach((l, li) => { const k = l.set || "Plan"; (g[k] = g[k] || []).push({ l, li }); });
-    return SETS.filter((k) => g[k]).map((lv) => ({ lv, items: g[lv] }));
+    const g = {}, order = [];
+    lessons.forEach((l, li) => { const k = l.set || ""; if (!g[k]) { g[k] = []; order.push(k); } g[k].push({ l, li }); });
+    return order.map((lv) => ({ lv, items: g[lv] }));
   }
   if (!byLevel) return [{ lv: "", items: lessons.map((l, li) => ({ l, li })) }];
   const g = {};
@@ -347,7 +346,7 @@ export function CourseTopic({ subject, tid }) {
           <b className="num">{pct(tot.done, tot.n)}%</b>
         </div>
       </div>
-      {subject === "series" && <p className="muted small seriesnote">{d.plan ? d.plan.toLocaleString() + " questions picked from " + (d.bank || 0).toLocaleString() + ". " : ""}{d.note} <a href={"#/practice/" + tid}>Practise all {d.bank ? d.bank.toLocaleString() + " " : ""}→</a></p>}
+      {subject === "series" && <p className="muted small seriesnote">{d.note} <a href={"#/practice/" + tid}>Practise all {d.bank ? d.bank.toLocaleString() + " " : ""}→</a></p>}
       <div className="tlay">
         <nav className="uside" aria-label={d.name + " units"}>
           <div className="uhead-bar">
@@ -419,7 +418,7 @@ export function CourseTopic({ subject, tid }) {
               {!shOn && <div className="ttools">
                 <label className="tsearch">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></svg>
-                  <input type="search" aria-label="Search lessons" placeholder={subject === "reasoning" ? "Search puzzles…" : subject === "series" ? "Search families…" : "Search recipes…"} value={q} onChange={(e) => setQ(e.target.value)} />
+                  <input type="search" aria-label="Search lessons" placeholder={subject === "reasoning" ? "Search puzzles…" : subject === "series" ? "Search cards…" : "Search recipes…"} value={q} onChange={(e) => setQ(e.target.value)} />
                 </label>
                 <select className="tsel" aria-label="Filter by status" value={st} onChange={(e) => setSt(e.target.value)}>
                   {STATUS.map(([k, n]) => <option key={k} value={k}>{n}</option>)}
@@ -494,7 +493,7 @@ export function CourseTopic({ subject, tid }) {
                             <em className={"pill s-" + ls}>{PILL[ls]}</em>
                           </span>
                           <span className="rfind">
-                            <small>{subject === "series" ? (l.tier ? l.tier + " family" : "Family") : "Find"}</small>
+                            <small>{l.kicker || "Find"}</small>
                             <b>{r.main.replace(/^Find\s+/i, "").replace(/^./, (c) => c.toUpperCase())}</b>
                           </span>
                           {r.sub && (
@@ -550,9 +549,8 @@ export function CourseLesson({ subject, tid, lid }) {
   const prev = lessons[at - 1];
   const unitLessons = lessons.filter((l) => l.ui === lesson.ui);
   const unitPos = unitLessons.findIndex((l) => l.id === lid);
-  const rec = subject === "quant" ? recipe(lesson.name) : subject === "series"
-    ? { main: lesson.name, sub: [lesson.set, lesson.tier && lesson.tier + " family · used " + (lesson.real || 0) + " times in past papers and full mocks"].filter(Boolean).join(" · ") } : { main: lesson.name, sub: "" };
-  const more = subject === "series" && lesson.family ? moreHref(tid, lesson) : null;
+  const rec = subject === "quant" ? recipe(lesson.name) : { main: lesson.name, sub: lesson.note || "" };
+  const more = lesson.more_q ? moreHref(tid, lesson) : null;
   return (
     <Solve cls={"s-q " + SUBJ[subject]} open={tools} setOpen={setTools}
       head={!end && qs.length ? <div className="lhead"><h1>{rec.main}</h1>{rec.sub && <p className="muted small">{rec.sub}</p>}</div> : null}
@@ -605,10 +603,10 @@ export function CourseLesson({ subject, tid, lid }) {
         </div>
       ) : !qs.length ? <div className="empty">This lesson has no questions.</div> : (
         <>
-        <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={subject === "series" ? [[lesson.unit, "ac"], lesson.set, lesson.tier && lesson.tier + " family"] : [[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
+        <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={subject === "series" ? [[lesson.unit, "ac"], lesson.set] : [[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
           onPrev={i > 0 ? () => setI(i - 1) : null}
           onNext={() => (i + 1 >= qs.length ? setEnd(true) : setI(i + 1))} nextLabel={i + 1 >= qs.length ? "Finish lesson" : "Next question"} />
-        {more && <p className="muted small morelike">Want more of this family? <a href={more}>More like this: all {lesson.more.toLocaleString()} {lesson.kind.toLowerCase()}-number questions in Practice →</a></p>}
+        {more && <p className="muted small morelike">Want more like this? <a href={more}>{lesson.more.toLocaleString()} questions with the same group, branch and tier in Practice →</a></p>}
         </>
       )}
     </Solve>
