@@ -112,6 +112,12 @@ Both are optional. When they're unset, the server behaves exactly as before.
 - `ARENA_APP_DATA=data/app` reads question data (`bank`, `mocks`, `speed`, `booster`, `course`, `lite`) from `data/app`.
 - `ARENA_PROGRESS=<file>` uses another progress file (for testing).
 
+The always-on app (PM2 `arena_station`, port 8001) runs with `ARENA_APP_DATA=data/app` since 24 Nov 2026. A builder's output reaches the app only through the chain (`run` or `absorb`). To go back to the old folders:
+
+```bash
+ARENA_APP_DATA= pm2 restart arena_station --update-env && pm2 save
+```
+
 ## Later steps (not built yet)
 
 1. Filter profiles: universal Source, Status and Stage; group profiles `arithmetic`, `puzzles`, `default`; per-topic profiles for Score Cracker.
