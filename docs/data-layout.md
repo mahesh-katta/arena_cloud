@@ -120,8 +120,8 @@ ARENA_APP_DATA= pm2 restart arena_station --update-env && pm2 save
 
 ## Later steps (not built yet)
 
-1. Filter profiles: universal Source, Status and Stage; group profiles `arithmetic`, `puzzles`, `default`; per-topic profiles for Score Cracker.
+1. Number Series card lessons in Modules (the Practice filters are built: `build_tools/numberseries/cards.py`).
 2. The solved rule: outside mocks, a question whose copy was answered shows green and "Next" skips it.
-3. Number Series cards (1,095 cards).
-4. `data/quant_maps` (builder-only maps for the Arithmetic lessons) folded into the chain. Once the app always uses `data/app`, retire `course/idmap.json`.
-5. Workbench folders move to `build/`.
+3. Workbench folders move to `build/`.
+
+Dropped (24 Nov 2026): filter profiles; folding `data/quant_maps` into the chain (builder input only); retiring `course/idmap.json` (kept as the fallback when the server runs without `data/app`).
