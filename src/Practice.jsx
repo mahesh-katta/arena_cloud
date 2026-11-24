@@ -1,7 +1,8 @@
 /* Topic Practice (docs/practice-plan.md).
  *   Topic list: five cards (from data/bank/index.json `cards`), search, the Source tree (PYQ / Trending / Booster /
  *   General), the default order or the user's own order per profile. Prelims / Mains follow the open profile.
- *   A topic: Status, Shuffle, Source, and the topic's own filters read from its data file. No topic names in here. */
+ *   A topic: Status, Shuffle and the topic's own filters read from its data file. The Source is picked on the topic list
+ *   and only shown here. No topic names in here. */
 import { useEffect, useMemo, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
 import { DEFAULT_FILTERS, pass, countBy, prune, sortVals, stageOk, srcOk, rowCount, sourceTree, toggleSource, sourceSummary, stepName, paperLabel, KINDS } from "./facets.js";
@@ -246,9 +247,8 @@ export function PracticeRun({ topic, query }) {
   const p = useProgress();
   const [d, err] = useData(() => bankLite(topic), [topic]);
   const [papers] = useData(bankPapers, []);
-  const [ix] = useData(bankIndex, []);
   const [, setLoaded] = useState(0);         /* bumps when a question's chunk arrives */
-  const [src, setSrc] = useSource();
+  const [src] = useSource();      /* picked on the topic list; only shown here */
   const stage = (p.profile && p.profile.stage) || "";
   const linked = [...query.keys()].length > 0;
   const [saved] = useState(() => (linked ? null : readPos()[topic]));
@@ -289,23 +289,12 @@ export function PracticeRun({ topic, query }) {
   if (err) return <Failed what="this topic" err={err} />;
   if (!d || !papers) return <Loading />;
   const setK = (k) => (v) => { setF((x) => prune(base, { ...x, [k]: v }, defs)); setI(0); };
-  const active = defs.reduce((a, x) => a + (f[x.key] || []).length, 0) + (f.prog ? 1 : 0) + (f.mix ? 1 : 0) + src.length;
-  const clear = () => { setF({ prog: "", mix: false }); setSrc([]); setI(0); };
+  const active = defs.reduce((a, x) => a + (f[x.key] || []).length, 0) + (f.prog ? 1 : 0) + (f.mix ? 1 : 0);
+  const clear = () => { setF({ prog: "", mix: false }); setI(0); };
   const at = Math.min(i, list.length);
   const q = list[at];
   const full = fullNow(topic, d, q);
   const prev = q && answerOf(p, q);
-  const tree = sourceTree((ix && ix.paths) || []);
-  /* Source counts inside this topic: its questions under each node, with the stage and the topic's filters kept */
-  /* one pass: each question adds 1 to every step of every path it appeared under (once per question) */
-  const nodeMap = new Map();
-  for (const x of d.questions) {
-    if (!stageOk(x.exam_stage, stage) || !pass(x, f, defs)) continue;
-    const seen = new Set();
-    for (const m of x.pp || []) { const s = (papers[m] || {}).path; if (!s) continue; const parts = s.split("/"); for (let k = 1; k <= parts.length; k++) seen.add(parts.slice(0, k).join("/")); }
-    for (const k of seen) nodeMap.set(k, (nodeMap.get(k) || 0) + 1);
-  }
-  const nodeCount = (path) => nodeMap.get(path) || 0;
   const label = (k) => (defs.find((x) => x.key === k) || {}).label || k;
   const linkNote = linked && !noteOff ? "Opened with " + [...query.entries()].map(([k, v]) => label(k) + ": " + v).join(", ") + "." + (src.length ? " The Source you picked (" + sourceSummary(src) + ") also applies." : "") + " Clear the filters to see the whole topic." : "";
   const where = q && (q.pp || []).map((m) => papers[m]).filter(Boolean);
@@ -327,7 +316,7 @@ export function PracticeRun({ topic, query }) {
   const rail = (
     <>
       <div className="card">
-        <div className="railhead"><span className="tile">{glyph(d.topic)}</span><div><h3>{d.topic}</h3><div className="muted small">{base.length.toLocaleString()} questions{base.length < d.questions.length ? " of " + d.questions.length.toLocaleString() : ""} · {d.section}{stage ? " · " + stage : ""}</div></div></div>
+        <div className="railhead"><span className="tile">{glyph(d.topic)}</span><div><h3>{d.topic}</h3><div className="muted small">{base.length.toLocaleString()} questions{base.length < d.questions.length ? " of " + d.questions.length.toLocaleString() : ""} · {d.section}{stage ? " · " + stage : ""}</div>{src.length > 0 && <div className="muted small">Source: {sourceSummary(src)} · <a href="#/practice">Change</a></div>}</div></div>
         <Session s={sess} />
       </div>
       <div className="railtabs" role="tablist" aria-label="Tools sections">
@@ -338,7 +327,6 @@ export function PracticeRun({ topic, query }) {
       <div className={"card rtab" + (rtab === "filters" ? " on" : "")}>
         <div className="railhead"><button type="button" className="fold" aria-expanded={fopen} onClick={() => setFopen(!fopen)}><h3 className="grow">Filter questions</h3><span className="muted small">{active > 0 ? active + " on" : "All"}</span><i aria-hidden="true" /></button>{active > 0 && <button className="btn ghost sm" onClick={clear}>Clear {active}</button>}</div>
         <div className="filters" hidden={!fopen}>
-          <div className="facet"><div className="flabel">Source</div><TreePicker label="Source" value={src} onChange={(v) => { setSrc(v); setI(0); }} tree={tree} count={nodeCount} nameOf={stepName} toggle={toggleSource} summary={sourceSummary(src)} /></div>
           {filterUI}
           <Dropdown label="Status" value={f.prog} onChange={(v) => { setF((x) => ({ ...x, prog: v })); setI(0); }} opts={[["", "All"], ["todo", "Not attempted", counts.prog.todo], ["done", "Attempted", counts.prog.done]]} />
           <Switch checked={!!f.mix} onChange={(v) => { setF((x) => ({ ...x, mix: v })); setI(0); }}>Shuffle order</Switch>
@@ -362,7 +350,7 @@ export function PracticeRun({ topic, query }) {
     <Solve cls={secClass(d.section)} crumbs={crumbs} rail={rail} open={tools} setOpen={setTools}>
       {linkNote && <div className="card pad muted small" role="status" style={{ marginBottom: 10 }}>{linkNote} <button type="button" className="linkbtn" onClick={() => setNoteOff(true)}>Dismiss</button></div>}
       {!list.length ? (
-        <div className="empty">{base.length ? "No questions match these filters." : "This topic has no questions for the chosen Source" + (stage ? " at " + stage + " level" : "") + "."} <button className="linkbtn" onClick={clear}>Clear filters</button></div>
+        <div className="empty">{base.length ? <>No questions match these filters. <button className="linkbtn" onClick={clear}>Clear filters</button></> : <>This topic has no questions for the chosen Source{stage ? " at " + stage + " level" : ""}. <a className="linkbtn" href="#/practice">Change the Source</a></>}</div>
       ) : at >= list.length ? (
         <div className="card done">
           <div className="big">{sess.ok} / {sess.n}</div>
