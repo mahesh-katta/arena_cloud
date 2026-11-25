@@ -133,6 +133,25 @@ The server checks each cached file's time and size, so a chain run is served wit
 
 Outside mocks, Booster and Speed drills, a question counts as solved once it or any copy of it was answered, right or wrong. Compile writes `lite/repeats.json` (each question's other ids, from `same` and `twins`). Practice and Modules lessons show solved questions as done, "Next" skips them, a click still opens one, and a lesson opens on its first unsolved question.
 
+## The arena tool (25 Nov 2026)
+
+One way to change the data: `./arena` in the project folder (`build_tools/arena.py`, on top of the chain above).
+
+| Command | What it does |
+|---|---|
+| `./arena tools` | the builders it knows: `registry.json` → `tools` (name, owner, command) |
+| `./arena status` | questions, tag and decision files, changes waiting outside the chain, snapshots, the last runs |
+| `./arena check [--deep]` | app data = working copy, nothing changed outside the chain, registry sane; `--deep` also reads every file in the raw zip |
+| `./arena run <tool>` | **dry run**: the tool runs on a sandbox copy (`../arena_runs/sandbox`), and you see what would change. Nothing real is touched. |
+| `./arena run <tool> --apply` | snapshot → the chain (guard, import, compile, check, export) → check. Any failure puts everything back from the snapshot by itself. |
+| `./arena run --as <owner> [--apply] -- <command>` | the same for a one-off command, with that owner's rights |
+| `./arena undo [--force]` | puts back the state from before the last applied run |
+| `./arena history [n]` | the last runs |
+
+- Every run uses a fixed seed (`PYTHONHASHSEED=0`), so the same input always gives the same output.
+- Snapshots are APFS clones (instant, little disk) in `../arena_runs/snapshots`; the last 5 are kept. History is `../arena_runs/history.jsonl`.
+- Tested 25 Nov: an applied run, an allowed change then `undo` (all 1,510 data files back to the same fingerprint), a forbidden change as a dry run (reported, nothing touched) and applied (refused and put back by itself).
+
 ## The raw store (25 Nov 2026)
 
 Everything raw lives in one place: `../arena_raw.zip`, in folders by kind, exam and capture date, for example `arena_raw/full_mocks/ibps-rrb-po-prelims-2026/2026-11-20/papers/papers-batch-08.json` and `…/booklets/booklet-25301.pdf`. Builders read it through `build_tools/utils/rawzip.py`; new raw files are appended with `rawzip.add()`, which reads every member back and compares it byte for byte. `data/mock_import` (129 files) was merged on 25 Nov: 121 raw files into the zip, the importer's state into decisions, the paper-pattern analysis into `docs/full-mock-paper-patterns.*`. `data/images` stays as the app's working copy of pictures.
@@ -145,6 +164,6 @@ Note: the Practice build is only repeatable with a fixed seed (`PYTHONHASHSEED=0
 
 ## Later steps (not built yet)
 
-1. Workbench folders move to `build/`.
+1. Move each builder into arena one by one, each proving identical output (step 4); then `arena import` / `arena review` for new papers (step 5); then retire the old scripts and workbench folders (step 6).
 
 Dropped (24 Nov 2026): filter profiles; folding `data/quant_maps` into the chain (builder input only); retiring `course/idmap.json` (kept as the fallback when the server runs without `data/app`).
