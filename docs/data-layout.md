@@ -154,6 +154,23 @@ One way to change the data: `./arena` in the project folder (`build_tools/arena.
 - **Retired (registry `retired`, with the reason):** `lessons-arith` (`course_build.py` rebuilt every Modules lesson from scratch; the lessons in `data/source` are the truth) and the old topic builders `syllogism`, `inequality`, `quadratic` (each rebuilt its whole topic; Quadratic would have dropped 1,610 questions). Their labels (Quadratic pattern/rule, Syllogism structure) stay frozen as they are; new questions don't get them. Their held-back lists (52 questions with disputed answer keys) are frozen in `decisions/held_back.json`, which the Practice build reads.
 - Tested 25 Nov: an applied run, an allowed change then `undo` (all 1,510 data files back to the same fingerprint), a forbidden change as a dry run (reported, nothing touched) and applied (refused and put back by itself).
 
+## Importing new papers (25 Nov 2026)
+
+`./arena import <kind> <files…> [--date …] [--apply]` (`build_tools/importers/run_import.py`, owner `import`), one chain run:
+raw files into the zip → missing pictures downloaded once (an identical saved picture is reused) → the papers into
+`data/mocks` with the next free ids and index rows → classifier labels for the **new** questions and passage sets only
+(stored labels are state, never recomputed) → Practice, Method, Level (stored values kept for existing questions),
+Practice, twins, Number Series cards. Existing questions may only gain `pp`, `same`, `twins`, `ns_card_tier`; the guard
+stops anything else. Sets the classifier is unsure of wait for `./arena review` (answers → `decisions/you.json`).
+
+- Readers: `importers/api_tests.py` (sectional, PYQ, Booster: the original builders + the app's later fixes; `prove`
+  rebuilds all 3,503 existing tests and 111,393 questions identically except 64 recorded hand fixes) and the full-mock
+  importer (`mockimport/`). PDF papers: not built yet.
+- Tested 25 Nov on a sandbox: a repeated sectional test (40 questions) became a new paper, added no Practice question,
+  and gave exactly 40 existing questions a paper link and a repeat link; a full-mock batch with no new papers added only
+  its raw file.
+- Runbooks for every case: `docs/how-to-import.md`. Firm rules for agents: `CLAUDE.md`.
+
 ## The raw store (25 Nov 2026)
 
 Everything raw lives in one place: `../arena_raw.zip`, in folders by kind, exam and capture date, for example `arena_raw/full_mocks/ibps-rrb-po-prelims-2026/2026-11-20/papers/papers-batch-08.json` and `…/booklets/booklet-25301.pdf`. Builders read it through `build_tools/utils/rawzip.py`; new raw files are appended with `rawzip.add()`, which reads every member back and compares it byte for byte. `data/mock_import` (129 files) was merged on 25 Nov: 121 raw files into the zip, the importer's state into decisions, the paper-pattern analysis into `docs/full-mock-paper-patterns.*`. `data/images` stays as the app's working copy of pictures.
@@ -166,6 +183,6 @@ Note: the Practice build is only repeatable with a fixed seed (`PYTHONHASHSEED=0
 
 ## Later steps (not built yet)
 
-1. Move each builder into arena one by one, each proving identical output (step 4); then `arena import` / `arena review` for new papers (step 5); then retire the old scripts and workbench folders (step 6).
+1. Retire the old scripts and move the workbench folders under one `build/` folder (step 6).
 
 Dropped (24 Nov 2026): filter profiles; folding `data/quant_maps` into the chain (builder input only); retiring `course/idmap.json` (kept as the fallback when the server runs without `data/app`).
