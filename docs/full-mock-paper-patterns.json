@@ -1,0 +1,2376 @@
+[
+ {
+  "id": "FUL-0001",
+  "name": "Mock Test 1",
+  "reasoning": {
+   "Box Based Puzzle": 5,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 2,
+   "Linear Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Square Seating Arrangement": 5,
+   "Syllogism": 4,
+   "Direction Sense": 3,
+   "Table Based Puzzle": 5,
+   "Month Based Puzzle": 5
+  },
+  "quant": {
+   "Mixtures and Alligations": 2,
+   "Boats and Streams": 1,
+   "Time and Distance": 1,
+   "Simple and Compound Interest": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Averages": 1,
+   "Mensuration": 1,
+   "Problems on Ages": 1,
+   "Number Series": 5,
+   "Approximations": 5,
+   "Cumulative DI": 19,
+   "Profit and Loss": 1
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0002",
+  "name": "Mock Test 2",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Syllogism": 5,
+   "Reasoning Miscellaneous": 3,
+   "Blood Relation": 3,
+   "Square Seating Arrangement": 5,
+   "Box Based Puzzle": 5,
+   "Coding and Decoding": 5,
+   "Inequality": 4,
+   "Month with Date Based Puzzle": 5
+  },
+  "quant": {
+   "Caselet": 4,
+   "Partnership": 1,
+   "Profit and Loss": 1,
+   "Mensuration": 1,
+   "Percentages": 2,
+   "Pipes and Cisterns": 1,
+   "Problems on Ages": 1,
+   "Mixtures and Alligations": 7,
+   "Simple and Compound Interest": 1,
+   "Ratio and Proportion": 1,
+   "Time and Distance": 1,
+   "Boats and Streams": 1,
+   "Approximations": 6,
+   "Number Series": 6,
+   "Table Chart": 6
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0003",
+  "name": "Mock Test 3",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Circular Seating Arrangement": 5,
+   "Table Based Puzzle": 5,
+   "Syllogism": 3,
+   "Coding and Decoding": 5,
+   "Order and Ranking": 3,
+   "Reasoning Miscellaneous": 3,
+   "Blood Relation": 3,
+   "Box Based Puzzle": 5,
+   "Direction Sense": 3
+  },
+  "quant": {
+   "Problems on Ages": 1,
+   "Percentages": 8,
+   "Boats and Streams": 1,
+   "Problems on Numbers": 1,
+   "Partnership": 1,
+   "Mensuration": 1,
+   "Averages": 1,
+   "Simple and Compound Interest": 1,
+   "Number Series": 5,
+   "Table Chart": 5,
+   "Quadratic Equations": 5,
+   "Radar Graph": 10
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0004",
+  "name": "Mock Test 4",
+  "reasoning": {
+   "Square Seating Arrangement": 5,
+   "Linear Seating Arrangement": 5,
+   "Syllogism": 4,
+   "Month with Date Based Puzzle": 5,
+   "Reasoning Miscellaneous": 4,
+   "Inequality": 5,
+   "Blood Relation": 2,
+   "Box Based Puzzle": 5,
+   "Coding and Decoding": 5
+  },
+  "quant": {
+   "Averages": 1,
+   "Mixtures and Alligations": 1,
+   "Problems on Ages": 1,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 1,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Trains": 1,
+   "Profit and Loss": 1,
+   "Mensuration": 1,
+   "Time and Work": 1,
+   "Probability": 1,
+   "Data Sufficiency": 5,
+   "Table Chart": 6,
+   "Missing Table Chart": 5,
+   "Number Series": 6,
+   "Quadratic Equations": 6
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0005",
+  "name": "Mock Test 5",
+  "reasoning": {
+   "Month with Date Based Puzzle": 5,
+   "Linear Seating Arrangement": 5,
+   "Floor Based Puzzle": 5,
+   "Syllogism": 3,
+   "Blood Relation": 3,
+   "Direction Sense": 3,
+   "Alphanumeric Series": 3,
+   "Unknown Linear Seating Arrangement": 5,
+   "Day Based Puzzle": 5,
+   "Reasoning Miscellaneous": 2,
+   "Inequality": 1
+  },
+  "quant": {
+   "Radar Graph": 5,
+   "Approximations": 5,
+   "Table Chart": 5,
+   "Number Series": 5,
+   "Mensuration": 1,
+   "Percentages": 2,
+   "Ratio and Proportion": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1,
+   "Time and Work": 1,
+   "Problems on Ages": 1,
+   "Partnership": 1,
+   "Simple and Compound Interest": 1,
+   "Data Sufficiency": 5,
+   "Permutations and Combinations": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0006",
+  "name": "Mock Test 6",
+  "reasoning": {
+   "Parallel Seating Arrangement": 5,
+   "Box Based Puzzle": 5,
+   "Rectangular Seating Arrangement": 5,
+   "Number Series": 3,
+   "Inequality": 3,
+   "Data Sufficiency": 2,
+   "Table Based Puzzle": 5,
+   "Coding and Decoding": 5,
+   "Reasoning Miscellaneous": 3,
+   "Blood Relation": 1,
+   "Direction Sense": 3
+  },
+  "quant": {
+   "Cumulative DI": 5,
+   "Time and Work": 1,
+   "Time and Distance": 1,
+   "Partnership": 1,
+   "Problems on Ages": 1,
+   "Mensuration": 1,
+   "Averages": 1,
+   "Boats and Streams": 1,
+   "Profit and Loss": 1,
+   "Simple and Compound Interest": 1,
+   "Mixtures and Alligations": 1,
+   "Number Series": 5,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Tree Based DI": 5,
+   "Radar Graph": 5
+  },
+  "series_kind": {
+   "missing": 3,
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0007",
+  "name": "Mock Test 7",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Triangular Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Coding and Decoding": 7,
+   "Floor With Flat Based Puzzle": 5,
+   "Direction Sense": 1,
+   "Inequality": 3,
+   "Blood Relation": 3,
+   "Day Based Puzzle": 5,
+   "Order and Ranking": 3
+  },
+  "quant": {
+   "Month Based Puzzle": 5,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Mensuration": 1,
+   "Problems on Numbers": 1,
+   "Averages": 2,
+   "Partnership": 1,
+   "Boats and Streams": 1,
+   "Time and Work": 1,
+   "Mixtures and Alligations": 1,
+   "Approximations": 5,
+   "Quadratic Equations": 5,
+   "Cumulative DI": 5,
+   "Number Series": 5,
+   "Missing Table Chart": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0008",
+  "name": "Mock Test 8",
+  "reasoning": {
+   "Linear Seating Arrangement": 6,
+   "Alphabet Series": 3,
+   "Circular Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Alphanumeric Series": 3,
+   "Floor Based Puzzle": 5,
+   "Syllogism": 3,
+   "Designation Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Age Based Puzzle": 5
+  },
+  "quant": {
+   "Table Chart": 10,
+   "Number Series": 6,
+   "Approximations": 5,
+   "Data Sufficiency": 2,
+   "Quadratic Equations": 5,
+   "Partnership": 1,
+   "Profit and Loss": 1,
+   "Time and Work": 1,
+   "Mixtures and Alligations": 1,
+   "Mensuration": 2,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 2,
+   "Problems on Numbers": 1,
+   "Problems on Ages": 1,
+   "Probability": 1
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0009",
+  "name": "Mock Test 9",
+  "reasoning": {
+   "Month Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 3,
+   "Sequence Based Puzzle": 5,
+   "Syllogism": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Coding and Decoding": 5,
+   "Unknown Circular Seating Arrangement": 5,
+   "Blood Relation": 3
+  },
+  "quant": {
+   "Percentages": 12,
+   "Problems on Ages": 1,
+   "Profit and Loss": 1,
+   "Partnership": 1,
+   "Mensuration": 1,
+   "Boats and Streams": 1,
+   "Mixtures and Alligations": 1,
+   "Simple and Compound Interest": 1,
+   "Time and Work": 1,
+   "Number Series": 5,
+   "Data Sufficiency": 5,
+   "Table Chart": 5,
+   "Approximations": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0010",
+  "name": "Mock Test 10",
+  "reasoning": {
+   "Day Based Puzzle": 5,
+   "Square Seating Arrangement": 5,
+   "Linear Seating Arrangement": 5,
+   "Table Based Puzzle": 5,
+   "Alphanumeric Series": 5,
+   "Syllogism": 3,
+   "Blood Relation": 3,
+   "Reasoning Miscellaneous": 2,
+   "Direction Sense": 1,
+   "Inequality": 3,
+   "Order and Ranking": 3
+  },
+  "quant": {
+   "Number Series": 5,
+   "Caselet": 3,
+   "Time and Work": 2,
+   "Boats and Streams": 1,
+   "Mixtures and Alligations": 1,
+   "Profit and Loss": 1,
+   "Percentages": 1,
+   "Simple and Compound Interest": 2,
+   "Quantity Comparison": 2,
+   "Line Graph": 5,
+   "Missing Table Chart": 5,
+   "Approximations": 6,
+   "Problems on Ages": 1,
+   "Averages": 1,
+   "Partnership": 1,
+   "Time and Distance": 1,
+   "Mensuration": 1,
+   "Probability": 1
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0011",
+  "name": "Mock Test 11",
+  "reasoning": {
+   "Box Based Puzzle": 5,
+   "Order and Ranking": 3,
+   "Sequence Based Puzzle": 5,
+   "Blood Relation": 3,
+   "Floor Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Inequality": 5,
+   "Reasoning Miscellaneous": 1,
+   "Syllogism": 3,
+   "Number Series": 2,
+   "Floor With Flat Based Puzzle": 5
+  },
+  "quant": {
+   "Approximations": 5,
+   "Cumulative DI": 5,
+   "Problems on Ages": 1,
+   "Boats and Streams": 1,
+   "Time and Work": 1,
+   "Trains": 1,
+   "Averages": 2,
+   "Mensuration": 1,
+   "Mixtures and Alligations": 1,
+   "Problems on Numbers": 1,
+   "Partnership": 1,
+   "Missing Table Chart": 10,
+   "Number Series": 5,
+   "Quadratic Equations": 5
+  },
+  "series_kind": {
+   "missing": 7
+  }
+ },
+ {
+  "id": "FUL-0012",
+  "name": "Mock Test 12",
+  "reasoning": {
+   "Direction Sense": 3,
+   "Floor Based Puzzle": 5,
+   "Inequality": 5,
+   "Blood Relation": 2,
+   "Linear Seating Arrangement": 5,
+   "Data Sufficiency": 3,
+   "Year Based Puzzle": 5,
+   "Syllogism": 3,
+   "Reasoning Miscellaneous": 1,
+   "Coding and Decoding": 1,
+   "Order and Ranking": 2,
+   "Table Based Puzzle": 5
+  },
+  "quant": {
+   "Mensuration": 2,
+   "Problems on Numbers": 1,
+   "Problems on Ages": 2,
+   "Percentages": 6,
+   "Time and Work": 1,
+   "Simple and Compound Interest": 6,
+   "Ratio and Proportion": 1,
+   "Profit and Loss": 1,
+   "Approximations": 5,
+   "Quadratic Equations": 5,
+   "Number Series": 5,
+   "Table Chart": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0013",
+  "name": "Mock Test 13",
+  "reasoning": {
+   "Order and Ranking": 6,
+   "Rectangular Seating Arrangement": 5,
+   "Parallel Seating Arrangement": 5,
+   "Unknown Linear Seating Arrangement": 5,
+   "Coding and Decoding": 4,
+   "Syllogism": 3,
+   "Direction Sense": 3,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 1,
+   "Blood Relation": 1,
+   "Alphabet Series": 1,
+   "Number Series": 3
+  },
+  "quant": {
+   "Probability": 1,
+   "Mixtures and Alligations": 1,
+   "Mensuration": 6,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Time and Work": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1,
+   "Problems on Ages": 1,
+   "Simple and Compound Interest": 1,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Quadratic Equations": 5,
+   "Radar Graph": 5,
+   "Number Series": 5
+  },
+  "series_kind": {
+   "missing": 3,
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0014",
+  "name": "Mock Test 14",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Inequality": 3,
+   "Day Based Puzzle": 5,
+   "Alphabet Series": 3,
+   "Syllogism": 3,
+   "Coding and Decoding": 1,
+   "Unknown Circular Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Direction Sense": 1,
+   "Sequence Based Puzzle": 5,
+   "Floor Based Puzzle": 5,
+   "Reasoning Miscellaneous": 1
+  },
+  "quant": {
+   "Time and Work": 1,
+   "Problems on Numbers": 2,
+   "Mensuration": 2,
+   "Ratio and Proportion": 1,
+   "Averages": 1,
+   "Profit and Loss": 1,
+   "Problems on Ages": 1,
+   "Simple and Compound Interest": 6,
+   "Percentages": 5,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Number Series": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0015",
+  "name": "Mock Test 15",
+  "reasoning": {
+   "Unknown Linear Seating Arrangement": 5,
+   "Linear Seating Arrangement": 5,
+   "Day Based Puzzle": 5,
+   "Month with Date Based Puzzle": 5,
+   "Floor With Flat Based Puzzle": 5,
+   "Alphabet Series": 4,
+   "Direction Sense": 3,
+   "Syllogism": 3,
+   "Reasoning Miscellaneous": 3,
+   "Blood Relation": 2
+  },
+  "quant": {
+   "Line Graph": 6,
+   "Simple and Compound Interest": 1,
+   "Caselet": 4,
+   "Averages": 1,
+   "Quadratic Equations": 6,
+   "Mensuration": 1,
+   "Number Series": 6,
+   "Table Chart": 6,
+   "Time and Work": 1,
+   "Percentages": 2,
+   "Ratio and Proportion": 1,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Partnership": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0016",
+  "name": "Mock Test 16",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Coding and Decoding": 5,
+   "Square Seating Arrangement": 5,
+   "Data Sufficiency": 3,
+   "Floor Based Puzzle": 5,
+   "Inequality": 5,
+   "Direction Sense": 3,
+   "Order and Ranking": 3,
+   "Reasoning Miscellaneous": 1,
+   "Designation Based Puzzle": 5
+  },
+  "quant": {
+   "Bar Graph": 5,
+   "Quadratic Equations": 5,
+   "Line Graph": 5,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Profit and Loss": 1,
+   "Time and Work": 1,
+   "Time and Distance": 1,
+   "Partnership": 1,
+   "Boats and Streams": 1,
+   "Pipes and Cisterns": 1,
+   "Percentages": 1,
+   "Mensuration": 1,
+   "Number Series": 5,
+   "Approximations": 5,
+   "Data Sufficiency": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0017",
+  "name": "Mock Test 17",
+  "reasoning": {
+   "Day Based Puzzle": 5,
+   "Unknown Linear Seating Arrangement": 5,
+   "Sequence Based Puzzle": 5,
+   "Parallel Seating Arrangement": 5,
+   "Circular Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Direction Sense": 2,
+   "Blood Relation": 3,
+   "Reasoning Miscellaneous": 2,
+   "Coding and Decoding": 1,
+   "Order and Ranking": 2,
+   "Inequality": 2
+  },
+  "quant": {
+   "Number Series": 5,
+   "Approximations": 6,
+   "Table Chart": 5,
+   "Caselet": 3,
+   "Averages": 7,
+   "Probability": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Mixtures and Alligations": 2,
+   "Simple and Compound Interest": 2,
+   "Problems on Ages": 1,
+   "Trains": 2,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1,
+   "Quantity Comparison": 2
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0018",
+  "name": "Mock Test 18",
+  "reasoning": {
+   "Month with Date Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Triangular Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Linear Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Coding and Decoding": 5,
+   "Syllogism": 3,
+   "Inequality": 1,
+   "Age Based Puzzle": 3
+  },
+  "quant": {
+   "Approximations": 5,
+   "Number Series": 11,
+   "Mensuration": 1,
+   "Mixtures and Alligations": 1,
+   "Problems on Ages": 2,
+   "Time and Work": 1,
+   "Profit and Loss": 1,
+   "Partnership": 1,
+   "Quantity Comparison": 2,
+   "Boats and Streams": 1,
+   "Trains": 1,
+   "Simple and Compound Interest": 1,
+   "Problems on Numbers": 1,
+   "Probability": 1,
+   "Pipes and Cisterns": 1,
+   "Permutations and Combinations": 1,
+   "Table Chart": 5,
+   "Caselet": 3
+  },
+  "series_kind": {
+   "missing": 11
+  }
+ },
+ {
+  "id": "FUL-0019",
+  "name": "Mock Test 19",
+  "reasoning": {
+   "Unknown Circular Seating Arrangement": 5,
+   "Direction Sense": 3,
+   "Reasoning Miscellaneous": 3,
+   "Linear Seating Arrangement": 5,
+   "Alphabet Series": 4,
+   "Day Based Puzzle": 5,
+   "Syllogism": 3,
+   "Month with Date Based Puzzle": 5,
+   "Floor With Flat Based Puzzle": 5,
+   "Blood Relation": 2
+  },
+  "quant": {
+   "Problems on Numbers": 2,
+   "Mensuration": 2,
+   "Time and Work": 1,
+   "Simple and Compound Interest": 1,
+   "Problems on Ages": 1,
+   "Ratio and Proportion": 1,
+   "Tree Based DI": 1,
+   "Profit and Loss": 1,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Number Series": 5,
+   "Line Graph": 5,
+   "Percentages": 5,
+   "Approximations": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0020",
+  "name": "Mock Test 20",
+  "reasoning": {
+   "Designation Based Puzzle": 5,
+   "Reasoning Miscellaneous": 4,
+   "Rectangular Seating Arrangement": 5,
+   "Alphanumeric Series": 5,
+   "Blood Relation": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Inequality": 3,
+   "Linear Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Data Sufficiency": 2
+  },
+  "quant": {
+   "Pipes and Cisterns": 1,
+   "Profit and Loss": 1,
+   "Time and Work": 1,
+   "Mensuration": 1,
+   "Approximations": 5,
+   "Averages": 1,
+   "Number Series": 5,
+   "Simple and Compound Interest": 1,
+   "Ratio and Proportion": 1,
+   "Boats and Streams": 1,
+   "Quadratic Equations": 5,
+   "Trains": 1,
+   "Mixtures and Alligations": 1,
+   "Table Chart": 5,
+   "Quantity Comparison": 3,
+   "Time and Distance": 1,
+   "Probability": 1,
+   "Line Graph": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0021",
+  "name": "Mock Test 21",
+  "reasoning": {
+   "Day Based Puzzle": 5,
+   "Inequality": 3,
+   "Circular Seating Arrangement": 5,
+   "Number Series": 2,
+   "Unknown Linear Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 3,
+   "Syllogism": 3,
+   "Floor Based Puzzle": 5,
+   "Blood Relation": 3,
+   "Coding and Decoding": 1,
+   "Linear Seating Arrangement": 5
+  },
+  "quant": {
+   "Number Series": 5,
+   "Ratio and Proportion": 5,
+   "Quadratic Equations": 5,
+   "Data Sufficiency": 3,
+   "Approximations": 5,
+   "Cumulative DI": 5,
+   "Simple and Compound Interest": 2,
+   "Profit and Loss": 2,
+   "Pipes and Cisterns": 1,
+   "Partnership": 1,
+   "Trains": 1,
+   "Mensuration": 1,
+   "Time and Work": 1,
+   "Problems on Ages": 1,
+   "Permutations and Combinations": 1,
+   "Boats and Streams": 1
+  },
+  "series_kind": {
+   "missing": 7
+  }
+ },
+ {
+  "id": "FUL-0022",
+  "name": "Mock Test 22",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Alphanumeric Series": 5,
+   "Floor Based Puzzle": 5,
+   "Reasoning Miscellaneous": 2,
+   "Direction Sense": 3,
+   "Table Based Puzzle": 5,
+   "Syllogism": 3,
+   "Order and Ranking": 3,
+   "Year Based Puzzle": 5,
+   "Coding and Decoding": 1,
+   "Blood Relation": 3
+  },
+  "quant": {
+   "Cumulative DI": 5,
+   "Problems on Ages": 1,
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Problems on Numbers": 1,
+   "Averages": 1,
+   "Number Series": 6,
+   "Trains": 1,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Quadratic Equations": 5,
+   "Approximations": 5,
+   "Line Graph": 5,
+   "Missing Table Chart": 5
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0023",
+  "name": "Mock Test 23",
+  "reasoning": {
+   "Square Seating Arrangement": 5,
+   "Coding and Decoding": 5,
+   "Reasoning Miscellaneous": 2,
+   "Floor With Flat Based Puzzle": 5,
+   "Syllogism": 3,
+   "Blood Relation": 3,
+   "Month with Date Based Puzzle": 5,
+   "Number Series": 3,
+   "Parallel Seating Arrangement": 5,
+   "Inequality": 1,
+   "Order and Ranking": 3
+  },
+  "quant": {
+   "Mixtures and Alligations": 1,
+   "Percentages": 2,
+   "Problems on Numbers": 2,
+   "Pie Chart": 3,
+   "Pipes and Cisterns": 1,
+   "Number Series": 6,
+   "Quadratic Equations": 6,
+   "Boats and Streams": 1,
+   "Line Graph": 6,
+   "Time and Work": 1,
+   "Simple and Compound Interest": 1,
+   "Partnership": 1,
+   "Mensuration": 1,
+   "Problems on Ages": 1,
+   "Table Chart": 6,
+   "Profit and Loss": 1
+  },
+  "series_kind": {
+   "missing": 3,
+   "wrong": 6
+  }
+ },
+ {
+  "id": "FUL-0024",
+  "name": "Mock Test 24",
+  "reasoning": {
+   "Triangular Seating Arrangement": 5,
+   "Alphabet Series": 3,
+   "Designation Based Puzzle": 5,
+   "Alphanumeric Series": 5,
+   "Circular Seating Arrangement": 5,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 2,
+   "Order and Ranking": 1,
+   "Unknown Linear Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Direction Sense": 3
+  },
+  "quant": {
+   "Percentages": 6,
+   "Time and Work": 1,
+   "Problems on Ages": 1,
+   "Boats and Streams": 1,
+   "Mensuration": 1,
+   "Simple and Compound Interest": 1,
+   "Profit and Loss": 1,
+   "Mixtures and Alligations": 1,
+   "Probability": 1,
+   "Partnership": 1,
+   "Number Series": 5,
+   "Bar Graph": 5,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Quadratic Equations": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0025",
+  "name": "Mock Test 25",
+  "reasoning": {
+   "Designation Based Puzzle": 5,
+   "Reasoning Miscellaneous": 2,
+   "Blood Relation": 3,
+   "Number Series": 2,
+   "Circular Seating Arrangement": 5,
+   "Inequality": 3,
+   "Month with Date Based Puzzle": 5,
+   "Coding and Decoding": 6,
+   "Order and Ranking": 1,
+   "Syllogism": 3,
+   "Triangular Seating Arrangement": 5
+  },
+  "quant": {
+   "Approximations": 5,
+   "Number Series": 6,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Bar Graph": 5,
+   "Partnership": 1,
+   "Boats and Streams": 1,
+   "Problems on Ages": 1,
+   "Mensuration": 1,
+   "Percentages": 1,
+   "Mixtures and Alligations": 1,
+   "Simple and Compound Interest": 1,
+   "Averages": 1,
+   "Time and Distance": 1,
+   "Profit and Loss": 1,
+   "Trains": 1,
+   "Data Sufficiency": 3
+  },
+  "series_kind": {
+   "missing": 3,
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0026",
+  "name": "Mock Test 26",
+  "reasoning": {
+   "Box Based Puzzle": 5,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 2,
+   "Linear Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Square Seating Arrangement": 5,
+   "Syllogism": 4,
+   "Direction Sense": 3,
+   "Table Based Puzzle": 5,
+   "Month Based Puzzle": 5
+  },
+  "quant": {
+   "Number Series": 6,
+   "Boats and Streams": 2,
+   "Mixtures and Alligations": 2,
+   "Pipes and Cisterns": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Simple and Compound Interest": 1,
+   "Mensuration": 1,
+   "Problems on Ages": 1,
+   "Profit and Loss": 1,
+   "Percentages": 1,
+   "Bar Graph": 6,
+   "Radar Graph": 5,
+   "Quadratic Equations": 6,
+   "Table Chart": 5
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0027",
+  "name": "Mock Test 27",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Alphanumeric Series": 4,
+   "Reasoning Miscellaneous": 2,
+   "Month with Date Based Puzzle": 5,
+   "Inequality": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Syllogism": 3,
+   "Circular Seating Arrangement": 5,
+   "Order and Ranking": 3,
+   "Sequence Based Puzzle": 5
+  },
+  "quant": {
+   "Table Chart": 5,
+   "Caselet": 3,
+   "Bar Graph": 5,
+   "Problems on Numbers": 1,
+   "Ratio and Proportion": 1,
+   "Mixtures and Alligations": 1,
+   "Time and Distance": 1,
+   "Simple and Compound Interest": 1,
+   "Time and Work": 1,
+   "Mensuration": 1,
+   "Number Series": 5,
+   "Approximations": 5,
+   "Percentages": 1,
+   "Averages": 1,
+   "Problems on Ages": 1,
+   "Partnership": 1,
+   "Boats and Streams": 1,
+   "Quadratic Equations": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0028",
+  "name": "Mock Test 28",
+  "reasoning": {
+   "Box Based Puzzle": 5,
+   "Syllogism": 3,
+   "Year Based Puzzle": 5,
+   "Reasoning Miscellaneous": 3,
+   "Direction Sense": 3,
+   "Unknown Linear Seating Arrangement": 3,
+   "Inequality": 3,
+   "Triangular Seating Arrangement": 5,
+   "Coding and Decoding": 5,
+   "Parallel Seating Arrangement": 5
+  },
+  "quant": {
+   "Line Graph": 6,
+   "Simple and Compound Interest": 1,
+   "Caselet": 4,
+   "Averages": 1,
+   "Quadratic Equations": 6,
+   "Mensuration": 1,
+   "Number Series": 6,
+   "Table Chart": 6,
+   "Time and Work": 1,
+   "Percentages": 2,
+   "Ratio and Proportion": 1,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Partnership": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0029",
+  "name": "Mock Test 29",
+  "reasoning": {
+   "Square Seating Arrangement": 5,
+   "Syllogism": 4,
+   "Reasoning Miscellaneous": 2,
+   "Floor Based Puzzle": 5,
+   "Inequality": 4,
+   "Linear Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Day Based Puzzle": 5,
+   "Order and Ranking": 2,
+   "Month Based Puzzle": 5
+  },
+  "quant": {
+   "Problems on Ages": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Mensuration": 1,
+   "Trains": 1,
+   "Averages": 1,
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Problems on Numbers": 1,
+   "Number Series": 6,
+   "Missing Table Chart": 5,
+   "Cumulative DI": 10,
+   "Quadratic Equations": 5,
+   "Approximations": 5
+  },
+  "series_kind": {
+   "missing": 1,
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0030",
+  "name": "Mock Test 30",
+  "reasoning": {
+   "Box Based Puzzle": 5,
+   "Alphanumeric Series": 3,
+   "Unknown Linear Seating Arrangement": 3,
+   "Number Series": 4,
+   "Parallel Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Coding and Decoding": 5,
+   "Circular Seating Arrangement": 5,
+   "Direction Sense": 3,
+   "Designation Based Puzzle": 5
+  },
+  "quant": {
+   "Approximations": 5,
+   "Cumulative DI": 5,
+   "Number Series": 5,
+   "Mensuration": 1,
+   "Table Chart": 5,
+   "Quadratic Equations": 5,
+   "Partnership": 1,
+   "Problems on Ages": 1,
+   "Time and Work": 1,
+   "Simple and Compound Interest": 1,
+   "Profit and Loss": 1,
+   "Probability": 1,
+   "Boats and Streams": 1,
+   "Percentages": 1,
+   "Mixtures and Alligations": 1,
+   "Permutations and Combinations": 5
+  },
+  "series_kind": {
+   "missing": 9
+  }
+ },
+ {
+  "id": "FUL-0031",
+  "name": "Mock Test 31",
+  "reasoning": {
+   "Triangular Seating Arrangement": 5,
+   "Inequality": 5,
+   "Box Based Puzzle": 5,
+   "Syllogism": 4,
+   "Reasoning Miscellaneous": 2,
+   "Linear Seating Arrangement": 5,
+   "Alphabet Series": 3,
+   "Blood Relation": 3,
+   "Order and Ranking": 3,
+   "Month with Date Based Puzzle": 5
+  },
+  "quant": {
+   "Time and Work": 1,
+   "Partnership": 1,
+   "Ratio and Proportion": 2,
+   "Problems on Ages": 1,
+   "Mensuration": 1,
+   "Time and Distance": 1,
+   "Simple and Compound Interest": 1,
+   "Mixtures and Alligations": 1,
+   "Probability": 1,
+   "Missing Table Chart": 5,
+   "Trains": 5,
+   "Quadratic Equations": 5,
+   "Number Series": 5,
+   "Caselet": 5,
+   "Percentages": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0032",
+  "name": "Mock Test 32",
+  "reasoning": {
+   "Inequality": 3,
+   "Month Based Puzzle": 5,
+   "Coding and Decoding": 3,
+   "Reasoning Miscellaneous": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Designation Based Puzzle": 5,
+   "Syllogism": 3,
+   "Square Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Unknown Linear Seating Arrangement": 5
+  },
+  "quant": {
+   "Averages": 1,
+   "Problems on Ages": 1,
+   "Profit and Loss": 1,
+   "Partnership": 1,
+   "Mensuration": 1,
+   "Time and Work": 1,
+   "Percentages": 1,
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 1,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Number Series": 5,
+   "Line Graph": 5,
+   "Caselet": 5,
+   "Cumulative DI": 4,
+   "Radar Graph": 1
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0033",
+  "name": "Mock Test 33",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Parallel Seating Arrangement": 5,
+   "Inequality": 3,
+   "Table Based Puzzle": 5,
+   "Reasoning Miscellaneous": 3,
+   "Alphanumeric Series": 3,
+   "Box Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Sequence Based Puzzle": 5
+  },
+  "quant": {
+   "Quadratic Equations": 5,
+   "Boats and Streams": 1,
+   "Mensuration": 1,
+   "Profit and Loss": 1,
+   "Time and Work": 1,
+   "Probability": 1,
+   "Mixtures and Alligations": 1,
+   "Partnership": 1,
+   "Problems on Ages": 1,
+   "Approximations": 6,
+   "Bar Graph": 10,
+   "Number Series": 5,
+   "Bubble Graph": 6
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0034",
+  "name": "Mock Test 34",
+  "reasoning": {
+   "Floor With Flat Based Puzzle": 5,
+   "Number Series": 3,
+   "Reasoning Miscellaneous": 2,
+   "Day Based Puzzle": 5,
+   "Syllogism": 3,
+   "Designation Based Puzzle": 3,
+   "Coding and Decoding": 6,
+   "Circular Seating Arrangement": 5,
+   "Inequality": 3,
+   "One Mark Puzzle": 5
+  },
+  "quant": {
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Caselet": 3,
+   "Number Series": 5,
+   "Bar Graph": 5,
+   "Time and Distance": 1,
+   "Profit and Loss": 2,
+   "Mixtures and Alligations": 2,
+   "Probability": 1,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Simple and Compound Interest": 1,
+   "Problems on Ages": 1,
+   "Boats and Streams": 1
+  },
+  "series_kind": {
+   "missing": 3,
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0035",
+  "name": "Mock Test 35",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Parallel Seating Arrangement": 5,
+   "Inequality": 5,
+   "Reasoning Miscellaneous": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Blood Relation": 3,
+   "Direction Sense": 3,
+   "Data Sufficiency": 3,
+   "Month Based Puzzle": 5
+  },
+  "quant": {
+   "Probability": 1,
+   "Mixtures and Alligations": 1,
+   "Mensuration": 6,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Time and Work": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1,
+   "Problems on Ages": 1,
+   "Simple and Compound Interest": 1,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Quadratic Equations": 5,
+   "Radar Graph": 5,
+   "Number Series": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0036",
+  "name": "Mock Test 36",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Inequality": 4,
+   "Floor With Flat Based Puzzle": 5,
+   "Blood Relation": 3,
+   "Unknown Linear Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Month with Date Based Puzzle": 5,
+   "Order and Ranking": 3,
+   "Circular Seating Arrangement": 5
+  },
+  "quant": {
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 1,
+   "Mensuration": 1,
+   "Problems on Numbers": 1,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Profit and Loss": 1,
+   "Problems on Ages": 1,
+   "Time and Work": 1,
+   "Line Graph": 5,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Tree Based DI": 5,
+   "Number Series": 5,
+   "Pie Chart": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0037",
+  "name": "Mock Test 37",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Syllogism": 4,
+   "Reasoning Miscellaneous": 2,
+   "Box Based Puzzle": 5,
+   "Inequality": 3,
+   "Designation Based Puzzle": 5,
+   "Coding and Decoding": 4,
+   "Parallel Seating Arrangement": 4,
+   "Direction Sense": 3,
+   "Sequence Based Puzzle": 5
+  },
+  "quant": {
+   "Problems on Numbers": 1,
+   "Averages": 1,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Boats and Streams": 1,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Time and Work": 1,
+   "Ratio and Proportion": 6,
+   "Mixtures and Alligations": 1,
+   "Quadratic Equations": 5,
+   "Line Graph": 5,
+   "Table Chart": 5,
+   "Number Series": 5,
+   "Approximations": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0038",
+  "name": "Mock Test 38",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Number Series": 3,
+   "Reasoning Miscellaneous": 3,
+   "Floor Based Puzzle": 5,
+   "Syllogism": 3,
+   "Linear Seating Arrangement": 5,
+   "Coding and Decoding": 5,
+   "Day Based Puzzle": 5,
+   "Inequality": 3,
+   "Order and Ranking": 3
+  },
+  "quant": {
+   "Quadratic Equations": 5,
+   "Number Series": 5,
+   "Percentages": 6,
+   "Mixtures and Alligations": 1,
+   "Profit and Loss": 1,
+   "Averages": 1,
+   "Trains": 1,
+   "Boats and Streams": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Pipes and Cisterns": 1,
+   "Mensuration": 1,
+   "Simple and Compound Interest": 5,
+   "Table Chart": 5,
+   "Approximations": 5
+  },
+  "series_kind": {
+   "missing": 8
+  }
+ },
+ {
+  "id": "FUL-0039",
+  "name": "Mock Test 39",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Syllogism": 4,
+   "Reasoning Miscellaneous": 3,
+   "Box Based Puzzle": 5,
+   "Inequality": 4,
+   "Linear Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Direction Sense": 3,
+   "Data Sufficiency": 3,
+   "Month Based Puzzle": 5
+  },
+  "quant": {
+   "Partnership": 1,
+   "Percentages": 2,
+   "Trains": 1,
+   "Profit and Loss": 1,
+   "Mensuration": 1,
+   "Caselet": 4,
+   "Table Chart": 6,
+   "Simple and Compound Interest": 1,
+   "Problems on Numbers": 1,
+   "Boats and Streams": 1,
+   "Pipes and Cisterns": 1,
+   "Quadratic Equations": 5,
+   "Line Graph": 5,
+   "Number Series": 5,
+   "Approximations": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0040",
+  "name": "Mock Test 40",
+  "reasoning": {
+   "Inequality": 3,
+   "Floor Based Puzzle": 5,
+   "Coding and Decoding": 3,
+   "Reasoning Miscellaneous": 3,
+   "Square Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Linear Seating Arrangement": 5,
+   "Month Based Puzzle": 5,
+   "Blood Relation": 3,
+   "Month with Date Based Puzzle": 5
+  },
+  "quant": {
+   "Bar Graph": 5,
+   "Number Series": 6,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Data Sufficiency": 2,
+   "Quadratic Equations": 5,
+   "Partnership": 1,
+   "Profit and Loss": 1,
+   "Time and Work": 1,
+   "Mixtures and Alligations": 1,
+   "Mensuration": 2,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 2,
+   "Problems on Numbers": 1,
+   "Problems on Ages": 1,
+   "Probability": 1
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0041",
+  "name": "Mock Test 41",
+  "reasoning": {
+   "Blood Relation": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Inequality": 3,
+   "Unknown Linear Seating Arrangement": 5,
+   "Coding and Decoding": 3,
+   "Table Based Puzzle": 5,
+   "Reasoning Miscellaneous": 1,
+   "Syllogism": 3,
+   "Triangular Seating Arrangement": 5,
+   "Order and Ranking": 2,
+   "Sequence Based Puzzle": 5
+  },
+  "quant": {
+   "Caselet": 5,
+   "Quadratic Equations": 5,
+   "Approximations": 5,
+   "Line Graph": 6,
+   "Simple and Compound Interest": 1,
+   "Profit and Loss": 1,
+   "Partnership": 1,
+   "Boats and Streams": 1,
+   "Time and Work": 1,
+   "Pipes and Cisterns": 1,
+   "Time and Distance": 1,
+   "Mensuration": 1,
+   "Problems on Ages": 1,
+   "Cumulative DI": 5,
+   "Number Series": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0042",
+  "name": "Mock Test 42",
+  "reasoning": {
+   "Floor With Flat Based Puzzle": 5,
+   "Syllogism": 3,
+   "Designation Based Puzzle": 5,
+   "Inequality": 3,
+   "Sequence Based Puzzle": 5,
+   "Alphanumeric Series": 4,
+   "Triangular Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Direction Sense": 3,
+   "Unknown Linear Seating Arrangement": 5
+  },
+  "quant": {
+   "Table Chart": 10,
+   "Approximations": 4,
+   "Data Sufficiency": 5,
+   "Number Series": 5,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Time and Distance": 1,
+   "Percentages": 4,
+   "Ratio and Proportion": 1,
+   "Quadratic Equations": 4,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 1,
+   "Profit and Loss": 1,
+   "Averages": 1
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0043",
+  "name": "Mock Test 43",
+  "reasoning": {
+   "Square Seating Arrangement": 5,
+   "Inequality": 4,
+   "Reasoning Miscellaneous": 2,
+   "Linear Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Box Based Puzzle": 5,
+   "Alphabet Series": 3,
+   "Designation Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Sequence Based Puzzle": 5
+  },
+  "quant": {
+   "Number Series": 6,
+   "Approximations": 5,
+   "Line Graph": 5,
+   "Table Chart": 5,
+   "Cumulative DI": 5,
+   "Problems on Ages": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Mensuration": 1,
+   "Trains": 1,
+   "Averages": 1,
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Problems on Numbers": 1,
+   "Quadratic Equations": 5
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0044",
+  "name": "Mock Test 44",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Syllogism": 4,
+   "Reasoning Miscellaneous": 2,
+   "Square Seating Arrangement": 5,
+   "Direction Sense": 3,
+   "Coding and Decoding": 5,
+   "Box Based Puzzle": 5,
+   "Inequality": 3,
+   "Blood Relation": 3,
+   "Table Based Puzzle": 5
+  },
+  "quant": {
+   "Percentages": 7,
+   "Problems on Ages": 1,
+   "Profit and Loss": 1,
+   "Partnership": 1,
+   "Mensuration": 1,
+   "Boats and Streams": 1,
+   "Mixtures and Alligations": 1,
+   "Simple and Compound Interest": 1,
+   "Time and Work": 1,
+   "Number Series": 5,
+   "Data Sufficiency": 5,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Bar Graph": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0045",
+  "name": "Mock Test 45",
+  "reasoning": {
+   "Floor With Flat Based Puzzle": 5,
+   "Syllogism": 3,
+   "Month Based Puzzle": 5,
+   "Linear Seating Arrangement": 5,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 2,
+   "Coding and Decoding": 4,
+   "Circular Seating Arrangement": 5,
+   "Sequence Based Puzzle": 5,
+   "Order and Ranking": 3
+  },
+  "quant": {
+   "Tree Based DI": 5,
+   "Radar Graph": 5,
+   "Approximations": 5,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Trains": 1,
+   "Profit and Loss": 1,
+   "Mensuration": 2,
+   "Mixtures and Alligations": 1,
+   "Time and Distance": 1,
+   "Simple and Compound Interest": 1,
+   "Time and Work": 1,
+   "Quadratic Equations": 5,
+   "Number Series": 5,
+   "Table Chart": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0046",
+  "name": "Mock Test 46",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Circular Seating Arrangement": 5,
+   "Alphanumeric Series": 4,
+   "Floor With Flat Based Puzzle": 5,
+   "Alphabet Series": 1,
+   "Reasoning Miscellaneous": 1,
+   "Month Based Puzzle": 5,
+   "Inequality": 3,
+   "Order and Ranking": 3,
+   "Sequence Based Puzzle": 5
+  },
+  "quant": {
+   "Radar Graph": 5,
+   "Approximations": 5,
+   "Table Chart": 5,
+   "Number Series": 5,
+   "Mensuration": 1,
+   "Percentages": 2,
+   "Ratio and Proportion": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1,
+   "Time and Work": 1,
+   "Problems on Ages": 1,
+   "Partnership": 1,
+   "Simple and Compound Interest": 1,
+   "Data Sufficiency": 5,
+   "Permutations and Combinations": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0047",
+  "name": "Mock Test 47",
+  "reasoning": {
+   "Unknown Linear Seating Arrangement": 5,
+   "Syllogism": 3,
+   "Circular Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Box Based Puzzle": 5,
+   "Inequality": 4,
+   "Parallel Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Direction Sense": 3,
+   "Day Based Puzzle": 5
+  },
+  "quant": {
+   "Mixtures and Alligations": 1,
+   "Averages": 1,
+   "Problems on Ages": 1,
+   "Profit and Loss": 2,
+   "Partnership": 2,
+   "Month Based Puzzle": 5,
+   "Percentages": 6,
+   "Trains": 1,
+   "Boats and Streams": 1,
+   "Approximations": 5,
+   "Number Series": 5,
+   "Table Chart": 5,
+   "Quadratic Equations": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0048",
+  "name": "Mock Test 48",
+  "reasoning": {
+   "Year Based Puzzle": 5,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 3,
+   "Unknown Linear Seating Arrangement": 3,
+   "Box Based Puzzle": 5,
+   "Coding and Decoding": 5,
+   "Parallel Seating Arrangement": 5,
+   "Direction Sense": 3,
+   "Triangular Seating Arrangement": 5,
+   "Syllogism": 3
+  },
+  "quant": {
+   "Percentages": 6,
+   "Time and Work": 1,
+   "Problems on Ages": 1,
+   "Boats and Streams": 1,
+   "Mensuration": 1,
+   "Simple and Compound Interest": 1,
+   "Profit and Loss": 1,
+   "Mixtures and Alligations": 1,
+   "Probability": 1,
+   "Partnership": 1,
+   "Number Series": 5,
+   "Bar Graph": 5,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Quadratic Equations": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0049",
+  "name": "Mock Test 49",
+  "reasoning": {
+   "Year Based Puzzle": 5,
+   "Reasoning Miscellaneous": 3,
+   "Alphanumeric Series": 4,
+   "Linear Seating Arrangement": 5,
+   "Number Series": 4,
+   "Floor With Flat Based Puzzle": 5,
+   "Coding and Decoding": 5,
+   "Designation Based Puzzle": 5,
+   "Order and Ranking": 4
+  },
+  "quant": {
+   "Number Series": 5,
+   "Percentages": 6,
+   "Cumulative DI": 5,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Mensuration": 2,
+   "Simple and Compound Interest": 1,
+   "Boats and Streams": 1,
+   "Time and Work": 2,
+   "Approximations": 5,
+   "Pipes and Cisterns": 1,
+   "Profit and Loss": 1,
+   "Averages": 1
+  },
+  "series_kind": {
+   "missing": 9
+  }
+ },
+ {
+  "id": "FUL-0050",
+  "name": "Mock Test 50",
+  "reasoning": {
+   "Square Seating Arrangement": 4,
+   "Syllogism": 4,
+   "Linear Seating Arrangement": 4,
+   "Reasoning Miscellaneous": 3,
+   "Inequality": 4,
+   "Floor Based Puzzle": 4,
+   "Order and Ranking": 2,
+   "Day Based Puzzle": 4,
+   "Direction Sense": 3,
+   "Month Based Puzzle": 5,
+   "Blood Relation": 3
+  },
+  "quant": {
+   "Mensuration": 2,
+   "Problems on Numbers": 2,
+   "Problems on Ages": 2,
+   "Percentages": 6,
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Averages": 1,
+   "Missing Table Chart": 5,
+   "Cumulative DI": 5,
+   "Number Series": 5,
+   "Approximations": 5,
+   "Quadratic Equations": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0051",
+  "name": "Mock Test 51",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Inequality": 5,
+   "Box Based Puzzle": 5,
+   "Syllogism": 3,
+   "Reasoning Miscellaneous": 3,
+   "Table Based Puzzle": 5,
+   "Blood Relation": 3,
+   "Unknown Linear Seating Arrangement": 3,
+   "Direction Sense": 3,
+   "Parallel Seating Arrangement": 5
+  },
+  "quant": {
+   "Table Chart": 5,
+   "Number Series": 5,
+   "Bar Graph": 5,
+   "Probability": 1,
+   "Mixtures and Alligations": 1,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Time and Work": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1,
+   "Problems on Ages": 1,
+   "Simple and Compound Interest": 1,
+   "Radar Graph": 5,
+   "Quadratic Equations": 5,
+   "Approximations": 5
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0052",
+  "name": "Mock Test 52",
+  "reasoning": {
+   "Number Series": 4,
+   "Parallel Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Alphanumeric Series": 3,
+   "Circular Seating Arrangement": 5,
+   "Direction Sense": 3,
+   "Unknown Linear Seating Arrangement": 3,
+   "Box Based Puzzle": 5,
+   "Coding and Decoding": 5,
+   "Designation Based Puzzle": 5
+  },
+  "quant": {
+   "Radar Graph": 5,
+   "Probability": 1,
+   "Mixtures and Alligations": 1,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Time and Work": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1,
+   "Problems on Ages": 1,
+   "Simple and Compound Interest": 1,
+   "Caselet": 5,
+   "Approximations": 5,
+   "Missing Table Chart": 5,
+   "Quadratic Equations": 5,
+   "Number Series": 5
+  },
+  "series_kind": {
+   "missing": 9
+  }
+ },
+ {
+  "id": "FUL-0053",
+  "name": "Mock Test 53",
+  "reasoning": {
+   "Box Based Puzzle": 4,
+   "Inequality": 5,
+   "Linear Seating Arrangement": 4,
+   "Syllogism": 4,
+   "Month with Date Based Puzzle": 5,
+   "Alphanumeric Series": 3,
+   "Triangular Seating Arrangement": 4,
+   "Blood Relation": 3,
+   "Reasoning Miscellaneous": 2,
+   "Alphabet Series": 3,
+   "Month Based Puzzle": 3
+  },
+  "quant": {
+   "Number Series": 6,
+   "Trains": 1,
+   "Mensuration": 2,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Bar Graph": 5,
+   "Profit and Loss": 1,
+   "Percentages": 1,
+   "Pipes and Cisterns": 1,
+   "Problems on Ages": 1,
+   "Approximations": 5,
+   "Missing Table Chart": 5,
+   "Quadratic Equations": 5,
+   "Line Graph": 5
+  },
+  "series_kind": {
+   "missing": 1,
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0054",
+  "name": "Mock Test 54",
+  "reasoning": {
+   "Syllogism": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Reasoning Miscellaneous": 3,
+   "Unknown Linear Seating Arrangement": 5,
+   "Month Based Puzzle": 5,
+   "Inequality": 3,
+   "Square Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Designation Based Puzzle": 5,
+   "Coding and Decoding": 3
+  },
+  "quant": {
+   "Line Graph": 6,
+   "Simple and Compound Interest": 1,
+   "Caselet": 4,
+   "Averages": 1,
+   "Quadratic Equations": 6,
+   "Mensuration": 1,
+   "Number Series": 6,
+   "Table Chart": 6,
+   "Time and Work": 1,
+   "Percentages": 2,
+   "Ratio and Proportion": 1,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Partnership": 1,
+   "Profit and Loss": 1,
+   "Boats and Streams": 1
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0055",
+  "name": "Mock Test 55",
+  "reasoning": {
+   "Day Based Puzzle": 5,
+   "Syllogism": 3,
+   "Sequence Based Puzzle": 4,
+   "Circular Seating Arrangement": 4,
+   "Inequality": 3,
+   "Reasoning Miscellaneous": 3,
+   "Direction Sense": 3,
+   "Box Based Puzzle": 4,
+   "Alphanumeric Series": 4,
+   "Blood Relation": 3,
+   "Parallel Seating Arrangement": 4
+  },
+  "quant": {
+   "Approximations": 5,
+   "Table Chart": 5,
+   "Bar Graph": 5,
+   "Cumulative DI": 5,
+   "Number Series": 5,
+   "Quadratic Equations": 5,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Time and Work": 2,
+   "Percentages": 1,
+   "Mixtures and Alligations": 1,
+   "Problems on Numbers": 2,
+   "Simple and Compound Interest": 1,
+   "Profit and Loss": 1
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0056",
+  "name": "Mock Test 56",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Inequality": 3,
+   "Floor Based Puzzle": 5,
+   "Direction Sense": 2,
+   "Unknown Linear Seating Arrangement": 4,
+   "Number Series": 5,
+   "Coding and Decoding": 3,
+   "Box Based Puzzle": 5,
+   "Syllogism": 3,
+   "Year Based Puzzle": 5
+  },
+  "quant": {
+   "Simple and Compound Interest": 1,
+   "Partnership": 1,
+   "Time and Work": 1,
+   "Number Series": 6,
+   "Percentages": 1,
+   "Profit and Loss": 1,
+   "Problems on Ages": 1,
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Mensuration": 1,
+   "Quadratic Equations": 5,
+   "Cumulative DI": 5,
+   "Caselet": 5,
+   "Line Graph": 5,
+   "Table Chart": 5
+  },
+  "series_kind": {
+   "missing": 11
+  }
+ },
+ {
+  "id": "FUL-0057",
+  "name": "Mock Test 57",
+  "reasoning": {
+   "Direction Sense": 3,
+   "Floor Based Puzzle": 5,
+   "Syllogism": 3,
+   "Alphanumeric Series": 4,
+   "Linear Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 1,
+   "Blood Relation": 2,
+   "Box Based Puzzle": 5,
+   "Inequality": 3,
+   "Coding and Decoding": 4,
+   "Year Based Puzzle": 5
+  },
+  "quant": {
+   "Mensuration": 2,
+   "Problems on Numbers": 1,
+   "Problems on Ages": 2,
+   "Percentages": 6,
+   "Time and Work": 1,
+   "Simple and Compound Interest": 6,
+   "Ratio and Proportion": 1,
+   "Profit and Loss": 1,
+   "Approximations": 5,
+   "Quadratic Equations": 5,
+   "Number Series": 5,
+   "Table Chart": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0058",
+  "name": "Mock Test 58",
+  "reasoning": {
+   "Unknown Linear Seating Arrangement": 5,
+   "Direction Sense": 3,
+   "Syllogism": 3,
+   "Month with Date Based Puzzle": 5,
+   "Reasoning Miscellaneous": 2,
+   "Alphanumeric Series": 4,
+   "Coding and Decoding": 3,
+   "Order and Ranking": 3,
+   "Designation Based Puzzle": 5,
+   "Inequality": 2,
+   "Circular Seating Arrangement": 5
+  },
+  "quant": {
+   "Mixtures and Alligations": 1,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 1,
+   "Mensuration": 1,
+   "Problems on Numbers": 1,
+   "Partnership": 1,
+   "Percentages": 1,
+   "Profit and Loss": 1,
+   "Problems on Ages": 1,
+   "Time and Work": 1,
+   "Line Graph": 5,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Tree Based DI": 5,
+   "Number Series": 5,
+   "Pie Chart": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0059",
+  "name": "Mock Test 59",
+  "reasoning": {
+   "Direction Sense": 2,
+   "Floor Based Puzzle": 5,
+   "Syllogism": 3,
+   "Reasoning Miscellaneous": 2,
+   "Month Based Puzzle": 5,
+   "Inequality": 3,
+   "Box Based Puzzle": 5,
+   "Blood Relation": 3,
+   "Coding and Decoding": 3,
+   "Alphabet Series": 4,
+   "Parallel Seating Arrangement": 5
+  },
+  "quant": {
+   "Simple and Compound Interest": 2,
+   "Boats and Streams": 2,
+   "Pipes and Cisterns": 2,
+   "Mixtures and Alligations": 1,
+   "Table Chart": 5,
+   "Trains": 1,
+   "LCM and HCF": 1,
+   "Time and Distance": 1,
+   "Time and Work": 1,
+   "Mensuration": 1,
+   "Number Series": 5,
+   "Profit and Loss": 1,
+   "Averages": 1,
+   "Probability": 1,
+   "Approximations": 6,
+   "Cumulative DI": 6,
+   "Caselet": 3
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ },
+ {
+  "id": "FUL-0060",
+  "name": "Mock Test 60",
+  "reasoning": {
+   "Syllogism": 3,
+   "Unknown Linear Seating Arrangement": 5,
+   "Direction Sense": 3,
+   "Month Based Puzzle": 5,
+   "Alphanumeric Series": 4,
+   "Designation Based Puzzle": 6,
+   "Circular Seating Arrangement": 5,
+   "Blood Relation": 2,
+   "Inequality": 2,
+   "Coding and Decoding": 5
+  },
+  "quant": {
+   "Problems on Numbers": 1,
+   "Averages": 1,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Boats and Streams": 2,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Time and Work": 1,
+   "Ratio and Proportion": 6,
+   "Mixtures and Alligations": 1,
+   "Quadratic Equations": 5,
+   "Line Graph": 5,
+   "Table Chart": 5,
+   "Number Series": 4,
+   "Pipes and Cisterns": 1,
+   "Approximations": 4
+  },
+  "series_kind": {
+   "missing": 4
+  }
+ },
+ {
+  "id": "FUL-0061",
+  "name": "Mock Test 61",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Inequality": 2,
+   "Reasoning Miscellaneous": 4,
+   "Designation Based Puzzle": 5,
+   "Order and Ranking": 3,
+   "Unknown Linear Seating Arrangement": 4,
+   "Box Based Puzzle": 5,
+   "Syllogism": 3,
+   "Circular Seating Arrangement": 5,
+   "Alphabet Series": 4
+  },
+  "quant": {
+   "Ratio and Proportion": 2,
+   "Table Chart": 6,
+   "Profit and Loss": 1,
+   "Time and Distance": 1,
+   "Simple and Compound Interest": 1,
+   "Radar Graph": 5,
+   "Problems on Numbers": 2,
+   "Mixtures and Alligations": 1,
+   "Time and Work": 1,
+   "Problems on Ages": 1,
+   "Mensuration": 1,
+   "Partnership": 1,
+   "Quadratic Equations": 5,
+   "Boats and Streams": 1,
+   "Number Series": 5,
+   "Approximations": 6
+  },
+  "series_kind": {
+   "wrong": 5
+  }
+ },
+ {
+  "id": "FUL-0062",
+  "name": "Mock Test 62",
+  "reasoning": {
+   "Syllogism": 3,
+   "Floor Based Puzzle": 5,
+   "Reasoning Miscellaneous": 3,
+   "Order and Ranking": 3,
+   "Month Based Puzzle": 5,
+   "Coding and Decoding": 4,
+   "Square Seating Arrangement": 5,
+   "Alphanumeric Series": 4,
+   "Sequence Based Puzzle": 5,
+   "Inequality": 3
+  },
+  "quant": {
+   "Averages": 1,
+   "Mixtures and Alligations": 1,
+   "Problems on Ages": 1,
+   "Boats and Streams": 1,
+   "Simple and Compound Interest": 1,
+   "Partnership": 1,
+   "Percentages": 7,
+   "Trains": 1,
+   "Profit and Loss": 1,
+   "Mensuration": 1,
+   "Time and Work": 1,
+   "Probability": 1,
+   "Data Sufficiency": 5,
+   "Missing Table Chart": 5,
+   "Number Series": 6,
+   "Quadratic Equations": 6
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0063",
+  "name": "Mock Test 63",
+  "reasoning": {
+   "Reasoning Miscellaneous": 3,
+   "Box Based Puzzle": 5,
+   "Inequality": 3,
+   "Floor With Flat Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Circular Seating Arrangement": 5,
+   "Unknown Linear Seating Arrangement": 4,
+   "Blood Relation": 3,
+   "Designation Based Puzzle": 5,
+   "Coding and Decoding": 4
+  },
+  "quant": {
+   "Approximations": 5,
+   "Ratio and Proportion": 5,
+   "Caselet": 3,
+   "Boats and Streams": 2,
+   "Probability": 1,
+   "Mensuration": 2,
+   "Simple and Compound Interest": 2,
+   "Problems on Ages": 1,
+   "Mixtures and Alligations": 1,
+   "Quantity Comparison": 3,
+   "Time and Work": 1,
+   "Percentages": 1,
+   "Cumulative DI": 1,
+   "Table Chart": 6,
+   "Number Series": 6
+  },
+  "series_kind": {
+   "wrong": 6
+  }
+ },
+ {
+  "id": "FUL-0064",
+  "name": "Mock Test 64",
+  "reasoning": {
+   "Circular Seating Arrangement": 5,
+   "Linear Seating Arrangement": 5,
+   "Blood Relation": 3,
+   "Syllogism": 4,
+   "Month with Date Based Puzzle": 5,
+   "Direction Sense": 3,
+   "Box Based Puzzle": 5,
+   "Inequality": 4,
+   "Unknown Linear Seating Arrangement": 3,
+   "Order and Ranking": 3
+  },
+  "quant": {
+   "Profit and Loss": 7,
+   "Simple and Compound Interest": 1,
+   "Caselet": 4,
+   "Averages": 1,
+   "Quadratic Equations": 6,
+   "Mensuration": 1,
+   "Number Series": 6,
+   "Table Chart": 6,
+   "Time and Work": 1,
+   "Percentages": 2,
+   "Ratio and Proportion": 1,
+   "Problems on Ages": 1,
+   "Trains": 1,
+   "Partnership": 1,
+   "Boats and Streams": 1
+  },
+  "series_kind": {
+   "missing": 6
+  }
+ },
+ {
+  "id": "FUL-0065",
+  "name": "Mock Test 65",
+  "reasoning": {
+   "Linear Seating Arrangement": 5,
+   "Floor Based Puzzle": 5,
+   "Syllogism": 5,
+   "Month with Date Based Puzzle": 5,
+   "Inequality": 3,
+   "Blood Relation": 3,
+   "Sequence Based Puzzle": 5,
+   "Unknown Linear Seating Arrangement": 5,
+   "Reasoning Miscellaneous": 2,
+   "Direction Sense": 2
+  },
+  "quant": {
+   "Profit and Loss": 1,
+   "Mensuration": 2,
+   "Problems on Ages": 1,
+   "Time and Work": 1,
+   "Tree Based DI": 1,
+   "Ratio and Proportion": 6,
+   "Simple and Compound Interest": 1,
+   "Problems on Numbers": 2,
+   "Quadratic Equations": 5,
+   "Table Chart": 5,
+   "Approximations": 5,
+   "Percentages": 5,
+   "Number Series": 5
+  },
+  "series_kind": {
+   "missing": 5
+  }
+ }
+]

@@ -133,9 +133,13 @@ The server checks each cached file's time and size, so a chain run is served wit
 
 Outside mocks, Booster and Speed drills, a question counts as solved once it or any copy of it was answered, right or wrong. Compile writes `lite/repeats.json` (each question's other ids, from `same` and `twins`). Practice and Modules lessons show solved questions as done, "Next" skips them, a click still opens one, and a lesson opens on its first unsolved question.
 
+## The raw store (25 Nov 2026)
+
+Everything raw lives in one place: `../arena_raw.zip`, in folders by kind, exam and capture date, for example `arena_raw/full_mocks/ibps-rrb-po-prelims-2026/2026-11-20/papers/papers-batch-08.json` and `…/booklets/booklet-25301.pdf`. Builders read it through `build_tools/utils/rawzip.py`; new raw files are appended with `rawzip.add()`, which reads every member back and compares it byte for byte. `data/mock_import` (129 files) was merged on 25 Nov: 121 raw files into the zip, the importer's state into decisions, the paper-pattern analysis into `docs/full-mock-paper-patterns.*`. `data/images` stays as the app's working copy of pictures.
+
 ## Decisions (25 Nov 2026)
 
-Your choices used to sit in `data/practice_build/review` and `audit` (69 files). They are now the six files in `data/source/decisions`, listed in `registry.json` under `decisions`; a file not listed there stops the chain. Moving them was proved by running the Practice build and Method twice (old files vs new) with the same seed: 110 of 110 outputs identical.
+Your choices used to sit in `data/practice_build/review` and `audit` (69 files). They are now files in `data/source/decisions`, listed in `registry.json` under `decisions` with an owner; a file not listed there stops the chain. A builder run through the chain may change only the decisions it owns (`mockimport` owns `mock_ids`, `mock_keys`, `mock_topics`; the review files belong to `review`); any other change is refused and put back. Moving them was proved by running the Practice build and Method twice (old files vs new) with the same seed: 110 of 110 outputs identical.
 
 Note: the Practice build is only repeatable with a fixed seed (`PYTHONHASHSEED=0`, run without `-I`, which ignores it). Without one, set order can move a few questions between runs.
 
