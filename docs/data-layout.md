@@ -18,7 +18,8 @@ Agreed 24 Nov 2026. Steps 1–3 below are built and tested; the later steps are 
 | `data/source/questions/<home>.json` | Every question once (178,689). Home = its Practice topic, or `mocks--<group>`, `speed--<topic>`, `booster--<file>` for a question found only there. |
 | `data/source/tags/<name>.json` | `{id: {field: value}}`. One file per kind of label: `classifier`, `papers`, `repeats`, `method`, `level`, `subtopic`, `rule`, `series`, `syllogism`. |
 | `data/source/views/<store>/<file>.json` | The rest of each app file, plus `_q`, its questions in order. An entry is an id, or `{id, set, drop}` when that copy differs from the stored question (a mock's own wording, for example). |
-| `data/source/registry.json` | The tag files and the fields each owns, and the **owners**: what each builder may change. |
+| `data/source/decisions/<name>.json` | Your decisions and the reviewers' answers: `you` (your answers, they win), `hand` (hand checks you asked for), `agents` (review agents), `allowed` (what each could choose), `broken` (reported broken), `method` (Arithmetic Method by hand). Builders read them; the app never does. Kept unchanged by every chain run. |
+| `data/source/registry.json` | The tag files and the fields each owns, the decisions files, and the **owners**: what each builder may change. |
 | `data/source/manifest.json` | Fingerprints of the last chain run, used to catch changes made outside the chain. |
 | `data/app/` | Made by compile: the same files the app reads today, plus `lite/`. |
 | `data/app/lite/bank/<topic>.json` | The topic without question text, options, explanation, passage or pictures. Every filter, chip and count works from it. |
@@ -131,6 +132,12 @@ The server checks each cached file's time and size, so a chain run is served wit
 ## The solved rule (25 Nov 2026)
 
 Outside mocks, Booster and Speed drills, a question counts as solved once it or any copy of it was answered, right or wrong. Compile writes `lite/repeats.json` (each question's other ids, from `same` and `twins`). Practice and Modules lessons show solved questions as done, "Next" skips them, a click still opens one, and a lesson opens on its first unsolved question.
+
+## Decisions (25 Nov 2026)
+
+Your choices used to sit in `data/practice_build/review` and `audit` (69 files). They are now the six files in `data/source/decisions`, listed in `registry.json` under `decisions`; a file not listed there stops the chain. Moving them was proved by running the Practice build and Method twice (old files vs new) with the same seed: 110 of 110 outputs identical.
+
+Note: the Practice build is only repeatable with a fixed seed (`PYTHONHASHSEED=0`, run without `-I`, which ignores it). Without one, set order can move a few questions between runs.
 
 ## Later steps (not built yet)
 
