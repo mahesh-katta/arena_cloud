@@ -54,7 +54,7 @@ Each command refuses to start when something changed outside the chain, so nothi
 |---|---|
 | `practice` | Practice topic files: add and remove questions, the file header, and the labels `pp r1 how score also subtopic topic section exam_stage method calc_level twins same num shape skill ruled`. Also `bank/index.json` and `bank/papers.json`. |
 | `twins` | `twins` on Practice questions |
-| `numberseries`, `quadratic`, `syllogism`, `inequality` | Everything in their own topic file, its row in `bank/index.json` (Number Series also its Modules plan) |
+| `numberseries` | Everything in the Number Series topic file, its row in `bank/index.json`, its Modules card lessons |
 | `mockimport` | `mocks/*`, `course/idmap.json` |
 | `course` | `course/*` (Modules lessons) |
 | `crosstab` | `bank/index.json` |
@@ -150,6 +150,8 @@ One way to change the data: `./arena` in the project folder (`build_tools/arena.
 
 - Every run uses a fixed seed (`PYTHONHASHSEED=0`), so the same input always gives the same output.
 - Snapshots are APFS clones (instant, little disk) in `../arena_runs/snapshots`; the last 5 are kept. History is `../arena_runs/history.jsonl`.
+- **Tools (25 Nov):** `practice`, `method`, `level`, `twins`, `cards`, `mocks`, `mock-keys-po`, `mock-keys-clerk`. Each reproduces the app data exactly in a dry run (0 changes).
+- **Retired (registry `retired`, with the reason):** `lessons-arith` (`course_build.py` rebuilt every Modules lesson from scratch; the lessons in `data/source` are the truth) and the old topic builders `syllogism`, `inequality`, `quadratic` (each rebuilt its whole topic; Quadratic would have dropped 1,610 questions). Their labels (Quadratic pattern/rule, Syllogism structure) stay frozen as they are; new questions don't get them. Their held-back lists (52 questions with disputed answer keys) are frozen in `decisions/held_back.json`, which the Practice build reads.
 - Tested 25 Nov: an applied run, an allowed change then `undo` (all 1,510 data files back to the same fingerprint), a forbidden change as a dry run (reported, nothing touched) and applied (refused and put back by itself).
 
 ## The raw store (25 Nov 2026)
