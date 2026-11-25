@@ -247,7 +247,12 @@ export function clearSpos(tid) { try { const m = readSpos(); delete m[tid]; loca
 /* Course tab: the structure comes from data/course (ids and names only); a lesson's questions come from /api/course/q. */
 export const courseIndex = () => getJSON("/data/course/index.json");
 export const courseTopic = (subject, id) => getJSON("/data/course/" + subject + "/" + id + ".json");
-export const courseQs = (ids) => getJSON("/api/course/q?ids=" + ids.join(","));
+/* a lesson's questions; the server answers at most 200 ids per call, so a longer lesson (a Number Series card) is fetched in parts */
+export const courseQs = (ids) => {
+  const parts = [];
+  for (let k = 0; k < ids.length; k += 200) parts.push(getJSON("/api/course/q?ids=" + ids.slice(k, k + 200).join(",")));
+  return parts.length === 1 ? parts[0] : Promise.all(parts).then((a) => a.flat());
+};
 
 /* Shorthand notes (data/notes): index.json lists the topics that have a notes file, so a topic without notes is never fetched.
    Resolves to the topic's notes with its subject's common rules as .common, or null when there are none (or no notes folder). */
