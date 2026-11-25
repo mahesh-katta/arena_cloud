@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import Solver, { fmt } from "./Question.jsx";
-import { courseIndex, courseTopic, courseQs, bankIndex, notesIndex, topicNotes, useData, useProgress } from "./store.js";
+import { courseIndex, courseTopic, courseQs, bankIndex, notesIndex, topicNotes, useData, useProgress, repeats, solvedIn } from "./store.js";
 import { BackBtn, Solve, initials, Meter, Loading, Failed } from "./ui.jsx";
 import { glyph } from "./TopicIcon.jsx";
 import { UnitShorthand } from "./Shorthand.jsx";
@@ -85,8 +85,8 @@ const readRecent = () => { try { return JSON.parse(localStorage.getItem(RECENT))
 const clearRecent = () => { try { localStorage.removeItem(RECENT); } catch {} };
 const saveRecent = (r) => { try { localStorage.setItem(RECENT, JSON.stringify([r, ...readRecent().filter((x) => x.lid !== r.lid)].slice(0, 6))); } catch {} };
 
-/* how far a list of question ids is: answered, and answered right */
-const stat = (answers, ids) => { let done = 0, ok = 0; for (const i of ids) { const a = answers[i]; if (a) { done++; if (a.ok) ok++; } } return { done, ok, n: ids.length }; };
+/* how far a list of question ids is: answered (this copy or any repeat of it, see solvedIn), and answered right */
+const stat = (ans, ids) => { let done = 0, ok = 0; for (const i of ids) { const a = ans(i); if (a) { done++; if (a.ok) ok++; } } return { done, ok, n: ids.length }; };
 const tone = (s) => (!s.done ? "" : s.done < s.n ? " prog" : s.ok / s.n >= 0.8 ? " good" : s.ok / s.n >= 0.5 ? " mid" : " low");
 
 /* Score Cracker: the high-yield "other topics", in priority order (day = row). Each opens its Topic Practice page. */
@@ -262,6 +262,8 @@ function Ring({ value, color }) {
 
 export function CourseTopic({ subject, tid }) {
   const p = useProgress();
+  const [rep] = useData(repeats, []);
+  const ans = solvedIn(p.answers, rep);
   const [d, err] = useData(() => courseTopic(subject, tid), [subject, tid]);
   const [sel, setSel] = useState(null);
   const [lvPick, setLvPick] = useState("");
@@ -275,26 +277,26 @@ export function CourseTopic({ subject, tid }) {
   const byLevel = subject === "reasoning";
   const idsOf = (lessons) => lessons.flatMap((l) => l.ids);
   const all = d.units.flatMap((u) => idsOf(u.lessons));
-  const tot = stat(p.answers, all);
+  const tot = stat(ans, all);
   const nLessons = d.units.reduce((a, u) => a + u.lessons.length, 0);
   /* the first lesson not finished yet, in course order (unit, then level, then set) */
   const resume = (() => {
-    for (const un of d.units) { const nm = lessonNames(un.lessons); for (const gp of groupLessons(un.lessons, byLevel)) for (const { l, li } of gp.items) if (stat(p.answers, l.ids).done < l.ids.length) return { l, name: nm[li], unit: un.name, lv: gp.lv }; }
+    for (const un of d.units) { const nm = lessonNames(un.lessons); for (const gp of groupLessons(un.lessons, byLevel)) for (const { l, li } of gp.items) if (stat(ans, l.ids).done < l.ids.length) return { l, name: nm[li], unit: un.name, lv: gp.lv }; }
     return null;
   })();
   const nextId = resume ? resume.l.id : null;
-  const firstOpen = (() => { const i = d.units.findIndex((x) => { const s = stat(p.answers, idsOf(x.lessons)); return s.done < s.n; }); return i < 0 ? 0 : i; })();
+  const firstOpen = (() => { const i = d.units.findIndex((x) => { const s = stat(ans, idsOf(x.lessons)); return s.done < s.n; }); return i < 0 ? 0 : i; })();
   const ui = sel == null || !d.units[sel] ? firstOpen : sel;
   const u = d.units[ui];
   const names = lessonNames(u.lessons);
   const groups = groupLessons(u.lessons, byLevel);
   const lv = groups.some((x) => x.lv === lvPick) ? lvPick : (groups.find((x) => x.items.some((i) => i.l.id === nextId)) || groups[0]).lv;
-  const us = stat(p.answers, idsOf(u.lessons));
+  const us = stat(ans, idsOf(u.lessons));
   const subName = subject === "quant" ? "Quant" : subject === "series" ? "Score Cracker" : "Reasoning";
   const pick = (n) => { setSel(n); setLvPick(""); setQ(""); setSt("all"); };
   /* filters: text in the title, status of the lesson */
   const ql = q.trim().toLowerCase();
-  const keep = ({ l, li }) => (!ql || (names[li] + " " + (l.test || "") + " " + l.title).toLowerCase().includes(ql)) && (st === "all" || lstate(stat(p.answers, l.ids)) === st);
+  const keep = ({ l, li }) => (!ql || (names[li] + " " + (l.test || "") + " " + l.title).toLowerCase().includes(ql)) && (st === "all" || lstate(stat(ans, l.ids)) === st);
   const g = { lv, items: groups.find((x) => x.lv === lv).items.filter(keep) };
   const after = d.units[ui + 1] ? { label: d.units[ui + 1].name, sub: "Next unit", go: () => pick(ui + 1) } : null;
   const afterCard = after ? (
@@ -355,7 +357,7 @@ export function CourseTopic({ subject, tid }) {
           </div>
           <div className="ulist">
             {d.units.map((x, n) => {
-              const s = stat(p.answers, idsOf(x.lessons));
+              const s = stat(ans, idsOf(x.lessons));
               const isFull = s.n > 0 && s.done === s.n;
               return (
                 <button key={x.name + n} type="button" className={"uitem" + (n === ui ? " on" : "") + (isFull ? " full" : "")} aria-current={n === ui ? "true" : undefined} onClick={() => pick(n)}>
@@ -434,7 +436,7 @@ export function CourseTopic({ subject, tid }) {
               {subject === "reasoning" ? (
                 <div className="sets">
                   {sets.map((r) => {
-                    const s = stat(p.answers, r.items.flatMap((i) => i.l.ids));
+                    const s = stat(ans, r.items.flatMap((i) => i.l.ids));
                     const ss = lstate(s);
                     return (
                       <section key={r.key} className={"setbox s-" + ss + (r.items.some((i) => i.l.id === nextId) ? " cur" : "")} aria-label={r.key}>
@@ -450,7 +452,7 @@ export function CourseTopic({ subject, tid }) {
                         </div>
                         <div className="pzgrid">
                           {r.items.map(({ l, li, k }) => {
-                            const qq = stat(p.answers, l.ids), ls = lstate(qq);
+                            const qq = stat(ans, l.ids), ls = lstate(qq);
                             return (
                               <a key={l.id} className={"pz s-" + ls + (l.id === nextId ? " cur" : "")} href={href(subject, tid, l.id)} aria-label={names[li] + ", " + l.ids.length + " questions, " + state(qq)}>
                                 <span className="pzn">{k}</span>
@@ -484,7 +486,7 @@ export function CourseTopic({ subject, tid }) {
               ) : (
                 <ol className="rgrid path2">
                   {g.items.map(({ l, li }) => {
-                    const qq = stat(p.answers, l.ids); const r = recipe(names[li]); const ls = lstate(qq);
+                    const qq = stat(ans, l.ids); const r = recipe(names[li]); const ls = lstate(qq);
                     return (
                       <li key={l.id}>
                         <a className={"rcard" + tone(qq) + (l.id === nextId ? " nxt" : "")} href={href(subject, tid, l.id)} aria-label={r.main + (r.sub ? ". " + r.sub : "") + ". " + l.ids.length + " questions, " + state(qq)}>
@@ -528,6 +530,8 @@ export function CourseTopic({ subject, tid }) {
 
 export function CourseLesson({ subject, tid, lid }) {
   const p = useProgress();
+  const [rep] = useData(repeats, []);
+  const ans = solvedIn(p.answers, rep);
   const [d, err] = useData(() => courseTopic(subject, tid), [subject, tid]);
   const lessons = useMemo(() => (d ? d.units.flatMap((u, ui) => { const names = lessonNames(u.lessons); return groupLessons(u.lessons, subject === "reasoning").flatMap((gp) => gp.items.map(({ l, li }) => ({ ...l, unit: u.name, ui, name: names[li] }))); }) : []), [d]);
   const at = lessons.findIndex((l) => l.id === lid);
@@ -539,12 +543,13 @@ export function CourseLesson({ subject, tid, lid }) {
   const [i, setI] = useState(0);
   const [tools, setTools] = useState(false);
   const [end, setEnd] = useState(false);
-  useEffect(() => { setI(0); setEnd(false); }, [lid]);
+  /* a lesson opens on its first question not solved yet (the solved rule), or the first one when all are */
+  useEffect(() => { const k = qs ? qs.findIndex((x) => !ans(x.id)) : 0; setI(k < 0 ? 0 : k); setEnd(false); }, [lid, !!qs, !!rep]);
   if (err || qerr) return <Failed what="this lesson" err={err || qerr} />;
   if (!d || !qs) return <Loading />;
   if (!lesson) return <div className="page"><div className="empty">This lesson is not in the course. <a href={href(subject, tid)}>Back to {d.name}</a></div></div>;
   const next = lessons[at + 1];
-  const s = stat(p.answers, lesson.ids);
+  const s = stat(ans, lesson.ids);
   const back = href(subject, tid);
   const prev = lessons[at - 1];
   const unitLessons = lessons.filter((l) => l.ui === lesson.ui);
@@ -565,7 +570,7 @@ export function CourseLesson({ subject, tid, lid }) {
         </div>
         {more && <a className="btn sm primary morebtn" href={more}>More like this · {lesson.more.toLocaleString()} in Practice</a>}
         {d.units.map((u, ui) => {
-          const us = stat(p.answers, u.lessons.flatMap((l) => l.ids));
+          const us = stat(ans, u.lessons.flatMap((l) => l.ids));
           const unames = lessonNames(u.lessons);
           return (
             <details key={ui} className="runit" open={ui === lesson.ui}>
@@ -576,7 +581,7 @@ export function CourseLesson({ subject, tid, lid }) {
                 const body = rows.map((r) => (
                   <div className={"rrow2" + (r.key ? "" : " nolab")} key={r.key}>
                     {r.key && <span className="rlab">{r.key}</span>}
-                    <span className="rchips">{r.items.map(({ l, li, k }) => { const nm = subject === "quant" ? recipe(unames[li]).main : unames[li]; return <a key={l.id} className={"rchip" + (l.id === lid ? " now" : "") + tone(stat(p.answers, l.ids))} aria-current={l.id === lid ? "page" : undefined} aria-label={nm} title={nm} href={href(subject, tid, l.id)} onPointerEnter={() => courseQs(l.ids).catch(() => {})} onFocus={() => courseQs(l.ids).catch(() => {})}>{k}</a>; })}</span>
+                    <span className="rchips">{r.items.map(({ l, li, k }) => { const nm = subject === "quant" ? recipe(unames[li]).main : unames[li]; return <a key={l.id} className={"rchip" + (l.id === lid ? " now" : "") + tone(stat(ans, l.ids))} aria-current={l.id === lid ? "page" : undefined} aria-label={nm} title={nm} href={href(subject, tid, l.id)} onPointerEnter={() => courseQs(l.ids).catch(() => {})} onFocus={() => courseQs(l.ids).catch(() => {})}>{k}</a>; })}</span>
                   </div>
                 ));
                 return gp.lv ? (
@@ -605,7 +610,7 @@ export function CourseLesson({ subject, tid, lid }) {
         <>
         <Solver q={qs[i]} refInfo={qs[i]._ref} head={"Q " + (i + 1) + " / " + qs.length} chips={subject === "series" ? [[lesson.unit, "ac"], lesson.set] : [[subject === "quant" ? lesson.unit : lesson.name, "ac"], lesson.test]}
           onPrev={i > 0 ? () => setI(i - 1) : null}
-          onNext={() => (i + 1 >= qs.length ? setEnd(true) : setI(i + 1))} nextLabel={i + 1 >= qs.length ? "Finish lesson" : "Next question"} />
+          onNext={() => { let k = i + 1; while (k < qs.length && ans(qs[k].id)) k++; if (k >= qs.length) setEnd(true); else setI(k); }} nextLabel={i + 1 >= qs.length ? "Finish lesson" : "Next question"} />
         {more && <p className="muted small morelike">Want more like this? <a href={more}>{lesson.more.toLocaleString()} questions with the same group, branch and tier in Practice →</a></p>}
         </>
       )}

@@ -128,9 +128,12 @@ python3 -I build_tools/layout/layout.py run numberseries -- python3 -I build_too
 
 The server checks each cached file's time and size, so a chain run is served without a restart.
 
+## The solved rule (25 Nov 2026)
+
+Outside mocks, Booster and Speed drills, a question counts as solved once it or any copy of it was answered, right or wrong. Compile writes `lite/repeats.json` (each question's other ids, from `same` and `twins`). Practice and Modules lessons show solved questions as done, "Next" skips them, a click still opens one, and a lesson opens on its first unsolved question.
+
 ## Later steps (not built yet)
 
-1. The solved rule: outside mocks, a question whose copy was answered shows green and "Next" skips it.
-2. Workbench folders move to `build/`.
+1. Workbench folders move to `build/`.
 
 Dropped (24 Nov 2026): filter profiles; folding `data/quant_maps` into the chain (builder input only); retiring `course/idmap.json` (kept as the fallback when the server runs without `data/app`).

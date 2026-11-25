@@ -28,7 +28,8 @@ function useTopicStats() {
    copies kept twice inside sets that only partly repeat, see build_tools/practice/twins.py) */
 const otherIds = (q) => [...(q.same || []), ...(q.twins || [])];
 export const answerOf = (p, q) => p.answers[q.id] || otherIds(q).map((i) => p.answers[i]).find(Boolean);
-/* a copy whose twin was already answered: Practice doesn't show it again */
+/* a copy whose twin was already answered: Practice doesn't show it again. "Next" skips every solved question (answerOf:
+   this copy or any repeat answered; the solved rule, 25 Nov 2026); a click in the question grid still opens one. */
 const twinDone = (p, q) => !p.answers[q.id] && (q.twins || []).some((i) => p.answers[i]);
 /* one copy of each twin group: the first one left in the list (an answered copy, since unanswered ones whose twin
    is answered are taken out before this) */
@@ -368,7 +369,7 @@ export function PracticeRun({ topic, query }) {
             where && where[0] && paperLabel(where[0]) + (where.length > 1 ? " · +" + (where.length - 1) + " more" : ""),
             prev && (prev.ok ? ["Solved earlier", "ok"] : ["Missed earlier", "bad"])]}
           onPrev={at > 0 ? () => setI(at - 1) : null}
-          onNext={() => { let k = at + 1; while (k < list.length && twinDone(p, list[k])) k++; setI(k); }} />
+          onNext={() => { let k = at + 1; while (k < list.length && answerOf(p, list[k])) k++; setI(k); }} />
       )}
     </Solve>
   );

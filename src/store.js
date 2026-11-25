@@ -162,6 +162,10 @@ export function getJSON(url) {
   return cache.get(url);
 }
 export const bankIndex = () => getJSON("/data/bank/index.json");
+/* the solved rule (25 Nov 2026): outside mocks a question counts as solved once it or any copy of it was answered.
+   lite/repeats.json lists each question's other ids; without a lite folder nothing extra is counted. */
+export const repeats = () => getJSON("/data/lite/repeats.json").catch(() => ({}));
+export const solvedIn = (answers, rep) => (id) => answers[id] || (rep && rep[id] ? rep[id].map((j) => answers[j]).find(Boolean) : undefined);
 export const bankTopic = (id) => getJSON("/data/bank/" + id + ".json");
 /* A Practice topic without the heavy fields (text, options, explanation, passage, pictures), from data/app/lite
    (build_tools/layout). Every filter, chip and count works from it; a question's heavy fields come from its chunk.
