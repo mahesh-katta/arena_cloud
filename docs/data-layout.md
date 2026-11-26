@@ -113,10 +113,10 @@ Both are optional. When they're unset, the server behaves exactly as before.
 - `ARENA_APP_DATA=data/app` reads question data (`bank`, `mocks`, `speed`, `booster`, `course`, `lite`) from `data/app`.
 - `ARENA_PROGRESS=<file>` uses another progress file (for testing).
 
-The always-on app (PM2 `arena_station`, port 8001) runs with `ARENA_APP_DATA=data/app` since 24 Nov 2026. A builder's output reaches the app only through the chain (`run` or `absorb`). To go back to the old folders:
+The always-on app (PM2 `arena_cloud`, port 8001) runs with `ARENA_APP_DATA=data/app` since 24 Nov 2026. A builder's output reaches the app only through the chain (`run` or `absorb`). To go back to the old folders:
 
 ```bash
-ARENA_APP_DATA= pm2 restart arena_station --update-env && pm2 save
+ARENA_APP_DATA= pm2 restart arena_cloud --update-env && pm2 save
 ```
 
 ## Number Series cards (25 Nov 2026)
