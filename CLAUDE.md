@@ -25,6 +25,9 @@ A private bank-exam practice app (React in `src/`, a dependency-free `server.mjs
 | Tools, owners and what each may change | `data/source/registry.json` (`tools`, `owners`, `decisions`, `retired`) |
 | What the app reads | `data/app` (compiled; `ARENA_APP_DATA=data/app`), `data/images`, `data/notes` |
 | Everything raw (papers, booklets, original pictures) | `../arena_raw.zip` only, by kind/exam/date; add with `build_tools/utils/rawzip.py` `add()` |
+| Live tools (the code `./arena` runs) | `build_tools/` top level: `arena.py`, `layout`, `importers`, `mockimport`, `practice`, `numberseries`, `classifier`, `utils` |
+| Research tools (pattern maps, solvers, audits, old experiments; not used by the app or `./arena`) | `build_tools/research/` |
+| Builder working files (labels, caches, reports, research outputs, reference maps) | `build/` (`practice`, `classifier`, `research`, `reference`); never read by the app |
 | How it all fits | `docs/data-layout.md` · runbooks: `docs/how-to-import.md` |
 
 ## Never
@@ -34,11 +37,13 @@ A private bank-exam practice app (React in `src/`, a dependency-free `server.mjs
 - Rebuild anything from scratch: imports only add. An existing question gains paper links and repeat links
   (`pp`, `same`, `twins`, `ns_card_tier`); its topic changes only through the user's decisions (`./arena review`).
 - Leave raw files loose in the project, or put provider names in what the app shows (no branding).
+- Put anything but app data in `data/`: it holds only `app`, `source`, `bank`, `mocks`, `speed`, `booster`, `course`,
+  `images`, `notes`. Working files go to `build/`, research code to `build_tools/research/`.
 - Answer questions in the live app (port 8001) or touch `../arena_dashboard_progress.json`: preview clicks write the user's
   real progress. Test on a test server with `ARENA_PROGRESS=<copy>` (see `.claude/launch.json`).
 - Run Python builders with `python3 -I`: it ignores `PYTHONHASHSEED`, and the builds are only repeatable with a fixed seed.
   `./arena` sets `PYTHONHASHSEED=0` and runs `python3 -s`.
-- Commit or push unless the user asks. Note: `build_tools/` and `data/` are gitignored.
+- Commit or push unless the user asks. Note: `build_tools/`, `build/` and `data/` are gitignored.
 
 ## Adding something new
 

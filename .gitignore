@@ -11,3 +11,4 @@ arena_dashboard_progress.json
 *.log
 __pycache__/
 .fuse_hidden*
+build/

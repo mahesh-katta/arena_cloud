@@ -114,7 +114,7 @@ the classifier, and every question carries its source record.
   3. `build.py` builds the source record, merges repeats, adds the new questions and writes the filters, the index and `papers.json`.
   - Run `build.py` with no flags for a report only; `--cutoff 0.95 --write` writes.
   - It is safe to re-run, and it must be re-run after any topic builder rewrites its topic file.
-  - The report is `data/practice_build/report.md`, and questions below the cut-off are in `round1_to_check.json`.
+  - The report is `build/practice/report.md`, and questions below the cut-off are in `round1_to_check.json`.
 - **Cut-off 0.95:** 12,065 questions wait on the to-check list, 60% of them DI whose chart type is only in the image.
   They are next round's job, with the DI clean-up.
 - **Repeats:** 7,948 mock questions were kept once, with every paper they appeared in (`pp`). Their own ids are kept in `same`, so an answer on either copy counts.
@@ -130,7 +130,7 @@ the classifier, and every question carries its source record.
 ### Round 1b: rulebook and review (18 Nov 2026)
 - **Practice now holds 92,299 questions.**
   - The rulebook (`docs/classification-rulebook.md`, approved, P5 = Option A) placed 8,780 of the 12,065 unsure questions.
-  - 8 review agents placed 2,800 more. They worked from `data/practice_build/review/BRIEF.md`, with a closed list of allowed topics per item.
+  - 8 review agents placed 2,800 more. They worked from `build/practice/review/BRIEF.md`, with a closed list of allowed topics per item.
 - **175 old bank questions moved** to the topic their pair rule gives. The 30 of them that Modules lessons use have their idmap entry updated; Modules still finds all its questions.
 - **472 questions stay on the to-check list:**
   - 448 the reviewers weren't sure of
@@ -138,12 +138,12 @@ the classifier, and every question carries its source record.
 - **13 broken questions are left out** (`round1_broken.json`): a chart named but no picture, a picture from another set, a cut-off question, or a spliced passage.
 - Every question records how its topic was decided (`how`) and its score. Mixed questions also carry `also`, shown in the question details as "Also fits …".
 - **Backups:** `~/projects/arena/backups/2026-11-18-before-practice` (bank, course, progress) and
-  `data/practice_build/before` (the bank as it was before the first write).
+  `build/practice/before` (the bank as it was before the first write).
 
 ## 10. The four built topics in Practice (19 Nov 2026)
 
 **Decision (user):** in Practice, Syllogism, Inequality, Quadratic Equations and Number Series are filled like every other topic. Their own builders matter only for Modules, which comes later.
-- **Classifier check first:** v11 gives the same topic to 99.3–100% of the questions their builders placed (`build_tools/practice/trials/own_topics_v11.py`).
+- **Classifier check first:** v11 gives the same topic to 99.3–100% of the questions their builders placed (`build_tools/research/practice/trials/own_topics_v11.py`).
 - **What `build.py` now does:** it adds classifier-placed mock questions to these topics too. 3,403 were added: Quadratic Equations 1,508 (including picture and fraction equations the engine can't solve), Syllogism 708, Inequality 652, Number Series 525.
 - **Kept out:** 69 questions whose answer key the topic's builder disputes (`data/*_build/held_back.json`). A wrong key would mislead, as with broken questions anywhere.
 - **Not disturbed:** none of the 14,398 questions the builders placed changed. The same holds for all 33,363 original questions (checked field by field after the write). Modules point at those ids, so they are untouched.
@@ -174,8 +174,8 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
 ### Pending 2: inside-topic filters (Round 2)
 
 **Arithmetic: done 19 Nov 2026.** Each of the 16 Arithmetic topics with Modules lessons has a **Method** filter: its Modules units, in Modules order, with "Not sorted" for the rest. 98% of their questions are sorted.
-- **Where a unit comes from:** the question's Modules lesson; else a hand check (`data/practice_build/audit/unit_handcheck_labels.json`, 1,202); else the unit model when sure, 94% right when sure on unseen papers.
-- **Built by** `build_tools/practice/arith_units.py`, which writes `data/practice_build/arith_units.json`. `build.py` puts it on the questions as `method` and declares the filter.
+- **Where a unit comes from:** the question's Modules lesson; else a hand check (`build/practice/audit/unit_handcheck_labels.json`, 1,202); else the unit model when sure, 94% right when sure on unseen papers.
+- **Built by** `build_tools/practice/arith_units.py`, which writes `build/practice/arith_units.json`. `build.py` puts it on the questions as `method` and declares the filter.
 - **After new papers:** run `build.py`, then `arith_units.py`, then `build.py` again.
 - **Not covered:** Permutations and Combinations and Application Sums have no Modules units, so no Method filter.
 - **Possible later:** a Modules "More like this" link can open Practice with `?meth=<unit>`.
@@ -201,7 +201,7 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
   - A fraction that divides out (1784/8) counts as plain division.
   - An unknown that has to be undone counts by the step that undoes it: ?² is Square roots, √? is Squares, ?³ is Cubes, ? in a power is Powers.
 - **Checked:** 120 random questions (15 per skill), read one by one, were all on the right skill.
-- **Built by** `build_tools/practice/calc_skills.py`. It writes `data/practice_build/calc_skills.json`, and `build.py` puts the skill on each question as `method` and declares the filter. A link can open one skill with `?meth=<name>`.
+- **Built by** `build_tools/practice/calc_skills.py`. It writes `build/practice/calc_skills.json`, and `build.py` puts the skill on each question as `method` and declares the filter. A link can open one skill with `?meth=<name>`.
 - **After new papers:** run `build.py`, then `arith_units.py` and `calc_skills.py`, then `build.py` again.
 - **Picture options (fixed 23 Nov):** Practice's copies of mock questions had dropped `option_image_paths`. So 322 questions whose options are pictures showed "[Image 1]" as text, or the question's picture as option A. The pictures were put back from the mock papers, and `build.py` now copies the field.
 - **Known build quirk:** when two topics tie, `build.py` picks one at random. So each rebuild can flip a few "Also fits" hints, and can even move a question to another topic. On 23 Nov two rebuilds flipped 12 hints and moved one question (FCL-0027-052, a word problem, between Percentages and Permutations and Combinations); all were put back from the backup.

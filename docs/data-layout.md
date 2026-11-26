@@ -177,12 +177,31 @@ Everything raw lives in one place: `../arena_raw.zip`, in folders by kind, exam 
 
 ## Decisions (25 Nov 2026)
 
-Your choices used to sit in `data/practice_build/review` and `audit` (69 files). They are now files in `data/source/decisions`, listed in `registry.json` under `decisions` with an owner; a file not listed there stops the chain. A builder run through the chain may change only the decisions it owns (`mockimport` owns `mock_ids`, `mock_keys`, `mock_topics`; the review files belong to `review`); any other change is refused and put back. Moving them was proved by running the Practice build and Method twice (old files vs new) with the same seed: 110 of 110 outputs identical.
+Your choices used to sit in `build/practice/review` and `audit` (69 files). They are now files in `data/source/decisions`, listed in `registry.json` under `decisions` with an owner; a file not listed there stops the chain. A builder run through the chain may change only the decisions it owns (`mockimport` owns `mock_ids`, `mock_keys`, `mock_topics`; the review files belong to `review`); any other change is refused and put back. Moving them was proved by running the Practice build and Method twice (old files vs new) with the same seed: 110 of 110 outputs identical.
 
 Note: the Practice build is only repeatable with a fixed seed (`PYTHONHASHSEED=0`, run without `-I`, which ignores it). Without one, set order can move a few questions between runs.
 
-## Later steps (not built yet)
+## Workbench and code layout (26 Nov 2026)
 
-1. Retire the old scripts and move the workbench folders under one `build/` folder (step 6).
+| Folder | Holds |
+|---|---|
+| `data/` | only what the app reads or the chain owns: `app`, `source`, `bank`, `mocks`, `speed`, `booster`, `course`, `images`, `notes` |
+| `build/practice` | the Practice build's working files: classifier labels (state), set labels, OCR and picture caches, Method/Level inputs, reports |
+| `build/classifier/extra` | the classifier's training book |
+| `build/research/<tool>` | outputs of the research tools (circular, box, designation, month-year, syllogism, inequality, quadratic, number series) |
+| `build/reference/quant_maps` | the hand-made Arithmetic recipe maps (reference; the lessons in `data/source` are the truth) |
+| `build_tools/` | live tools only: `arena.py`, `layout`, `importers`, `mockimport`, `practice`, `numberseries` (cards), `classifier`, `utils` |
+| `build_tools/research/` | research tools and old experiments (pattern maps, solvers, audits, review pages, trials) |
 
-Dropped (24 Nov 2026): filter profiles; folding `data/quant_maps` into the chain (builder input only); retiring `course/idmap.json` (kept as the fallback when the server runs without `data/app`).
+Moved 26 Nov with every path updated (75 code files for `build/`, 63 for `build_tools/research/`; each moved file's path
+setup was evaluated before and after and names the same folder). The OCR cache keeps its old keys, so no picture was read
+again. Proof: `./arena check` and a dry run of all 8 tools gave 0 changes, and the repeat-paper import gave the same result.
+Dead scripts went to the Trash (the three old topic builders, `course_build.py`, `stitch_set_names.py`, the first
+first-version API-test builders (copies in the raw zip), the old classifier copy, `label_one.sh`).
+
+## Later steps
+
+All six steps of the arena plan are done. Open items: a PDF paper reader (when the first PDF paper arrives); a rule
+engine run for new Number Series questions (today a new question without a `rule` line gets no card).
+
+Dropped (24 Nov 2026): filter profiles; folding `build/reference/quant_maps` into the chain (builder input only); retiring `course/idmap.json` (kept as the fallback when the server runs without `data/app`).

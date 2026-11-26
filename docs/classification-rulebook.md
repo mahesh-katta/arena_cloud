@@ -1,15 +1,15 @@
 # Classification rulebook
 
-**Status: APPROVED 18 Nov 2026: every rule as written; P5 = Option A.** Applied by `build_tools/practice/build.py` (each question records the rule that placed it in `how`). The manual part (D6 and R1) is done by review agents working from `data/practice_build/review/BRIEF.md`.
+**Status: APPROVED 18 Nov 2026: every rule as written; P5 = Option A.** Applied by `build_tools/practice/build.py` (each question records the rule that placed it in `how`). The manual part (D6 and R1) is done by review agents working from `build/practice/review/BRIEF.md`.
 
 One rulebook for people and the machine alike: when a question could go to two topics, these rules decide. The
 classifier, the picture model, the builders and anyone reviewing by hand all follow the same page. When a rule
 changes, the old labels that break it are corrected and the classifier is retrained, so the labels it learns from
 agree with the rules it is judged by.
 
-Numbers are from the 12,065 questions now on the to-check list (`data/practice_build/round1_to_check.json`).
-Every rule was tested against the labelled bank before Round 1 (`data/practice_build/before`). Code:
-`build_tools/practice/pair_rules.py` (pair rules); `build_tools/practice/trials/` (DI picture model and the estimate).
+Numbers are from the 12,065 questions now on the to-check list (`build/practice/round1_to_check.json`).
+Every rule was tested against the labelled bank before Round 1 (`build/practice/before`). Code:
+`build_tools/practice/pair_rules.py` (pair rules); `build_tools/research/practice/trials/` (DI picture model and the estimate).
 
 ---
 
@@ -95,7 +95,7 @@ birth years plus "ages calculated with respect to a year", and 7 labelled "Year 
 | **Left: DI pictures checked by eye (D6)** | **884** |
 | **Left: review page (R1)** | **1,981** (PYQ 270 · Trending 1,395 · Booster 316) |
 
-Estimate made with `build_tools/practice/trials/rulebook_estimate.py`.
+Estimate made with `build_tools/research/practice/trials/rulebook_estimate.py`.
 
 ## Amendments (18 Nov 2026, evening), each tested before it went in
 
@@ -111,7 +111,7 @@ Estimate made with `build_tools/practice/trials/rulebook_estimate.py`.
 
 The user reviewed 48 sets by hand: 27 kept, 14 changed, 7 unsure. Before these rules, the machine matched the user on 27 of 41 answered sets; after them, on 36 of 40 (one answer held for a check).
 
-- **The user's own answers beat everything** (rules, agents, the classifier). An "unsure" answer changes nothing. Answers kept in `data/practice_build/review/user/round*.json`, applied last; ids in `user/held.json` wait for the user's word.
+- **The user's own answers beat everything** (rules, agents, the classifier). An "unsure" answer changes nothing. Answers kept in `build/practice/review/user/round*.json`, applied last; ids in `user/held.json` wait for the user's word.
 - **P6 Direction Sense / Order & Ranking / Blood Relation**, on sure and unsure sets alike. Each kind needs a clear signal of its own. Direction needs compass words (north, east, turn left), since walking or distance words alone are not enough. Blood Relation needs 3+ family words. Order & Ranking needs 3+ comparison words, "than" twice or more ("walks more distance than" is still a comparison). With one clear kind, that kind wins. With two, the set keeps its topic and gets the other under "Also fits". Bank: 189 of 203 agree, 0 conflicts. It moved 40+ sure "more than / less than" sets from Direction Sense to Order & Ranking. The classifier writes "Order and Ranking", so topic names are now compared ignoring case.
 - **D2b two pictures (the user's rule):** the first picture counts 50%, and the other 50% goes to the chart type the sub-questions point to (their chart words, never their maths). So the first picture decides, unless the questions name the second picture's type. The second picture's type shows under "Also fits". It settles only when the first picture is read with confidence (0.7+), or both pictures agree.
 - **D7 missing cells:** a Table Chart whose picture shows missing values (blank cells, "?", a dash, or algebra like x+y, 2a) is a Missing Table Chart. The picture is read offline with the Mac's own text reader (`build_tools/practice/missing_cells.py`), and blank cells are re-checked at twice the size. Bank: 45 of 48 missing tables found; of 76 Table Chart sets, 5 were flagged and 4 of those really were missing tables. It also corrects old bank labels.
@@ -131,7 +131,7 @@ The user reviewed 48 sets by hand: 27 kept, 14 changed, 7 unsure. Before these r
 
 ## Section mix-ups and the last unsure sets (19 Nov 2026)
 
-- **The 137 unsure questions (42 sets)** were checked by hand and placed (`data/practice_build/review/hand/round2c_unsure_137.json`). The to-check list is now empty.
+- **The 137 unsure questions (42 sets)** were checked by hand and placed (`build/practice/review/hand/round2c_unsure_137.json`). The to-check list is now empty.
 - **65 units (205 questions) sat in a different section from the one their paper lists.** Each was decided on its content (`review/hand/round2d_section_mixups.json`): 37 moved to the paper's section and 28 stayed.
   - The paper isn't always right. Whole sections of some papers are mislabelled: SEC-2098 and SEC-1531 list Quant questions as Reasoning, and PYQ-093 lists Reasoning puzzles as Quant.
   - Hand checks may now set `section`, moving a set to the other section.
@@ -139,7 +139,7 @@ The user reviewed 48 sets by hand: 27 kept, 14 changed, 7 unsure. Before these r
 
 ## Arithmetic units: hand check and wrong topics (19 Nov 2026)
 
-- **Every unsure Arithmetic question was given its Modules unit by hand:** 1,093 unsure questions plus a sample of 170 sure ones, 1,263 labels in all (`data/practice_build/audit/unit_handcheck_labels.json`). On the unsure ones the unit model was right 55% of the time.
+- **Every unsure Arithmetic question was given its Modules unit by hand:** 1,093 unsure questions plus a sample of 170 sure ones, 1,263 labels in all (`build/practice/audit/unit_handcheck_labels.json`). On the unsure ones the unit model was right 55% of the time.
 - **60 questions were filed under the wrong topic,** for example train and tank chart sets under Trains or Time and Work, and ratio or percentage problems under Profit and Loss. Only the round-1 ones moved:
   - 22 round-1 questions through `review/hand/round2f_wrong_topic.json`;
   - 38 original bank questions were moved too, then **put back on the user's word: original bank labels stay exactly as the bank has them**, including chapter-theme placements (a boat ratio question practised in the Ratio chapter, a train chart set in Trains). Restored from the backup; the list is kept only for the record as `review/hand/bank_moves.rejected-by-user.json`, which the builder does not read.
