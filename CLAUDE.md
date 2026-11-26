@@ -2,6 +2,7 @@
 
 A private bank-exam practice app (React in `src/`, a dependency-free `server.mjs`) and its question data
 (`data/`, never in git). These rules are firm. If a task seems to need breaking one, stop and ask the user.
+Housekeeping (where every file goes, temporary work, no provider names, what to write) is in `../CLAUDE.md`.
 
 ## The one rule: change data only through `./arena`
 
@@ -22,10 +23,12 @@ A private bank-exam practice app (React in `src/`, a dependency-free `server.mjs
 |---|---|
 | Questions once, tags, paper/lesson views | `data/source/questions`, `tags`, `views` (the truth) |
 | Your decisions and import state | `data/source/decisions/*.json`, each with an owner in `data/source/registry.json` |
+| Stored labels and Method/Level (state, never recomputed for old questions) | `data/source/state/`, owners in `registry.json` `state` |
+| The private data repo (data/source, notes, images, build_tools) | `.git-data/`: `./arena save "<msg>"` only when the user asks; `./arena rebuild` after a fresh clone |
 | Tools, owners and what each may change | `data/source/registry.json` (`tools`, `owners`, `decisions`, `retired`) |
 | What the app reads | `data/app` (compiled; `ARENA_APP_DATA=data/app`), `data/images`, `data/notes` |
 | Everything raw (papers, booklets, original pictures) | `../arena_raw.zip` only, by kind/exam/date; add with `build_tools/utils/rawzip.py` `add()` |
-| Live tools (the code `./arena` runs) | `build_tools/` top level: `arena.py`, `layout`, `importers`, `mockimport`, `practice`, `numberseries`, `classifier`, `utils` |
+| Live tools (the code `./arena` runs) | `build_tools/` top level: `arena.py` (the tool), `layout` (the chain), `importers` (new papers), `mockimport` (full mocks), `practice` (places questions in topics), `taggers` (one labeller per topic or label: `arithmetic`, `simplification`, `repeats`, `numberseries`), `classifier`, `utils` |
 | Research tools (pattern maps, solvers, audits, old experiments; not used by the app or `./arena`) | `build_tools/research/` |
 | Builder working files (labels, caches, reports, research outputs, reference maps) | `build/` (`practice`, `classifier`, `research`, `reference`); never read by the app |
 | How it all fits | `docs/data-layout.md` · runbooks: `docs/how-to-import.md` |

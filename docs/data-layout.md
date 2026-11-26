@@ -53,7 +53,7 @@ Each command refuses to start when something changed outside the chain, so nothi
 | Owner | May change |
 |---|---|
 | `practice` | Practice topic files: add and remove questions, the file header, and the labels `pp r1 how score also subtopic topic section exam_stage method calc_level twins same num shape skill ruled`. Also `bank/index.json` and `bank/papers.json`. |
-| `twins` | `twins` on Practice questions |
+| `repeats` | `twins` on Practice questions (`taggers/repeats.py`) |
 | `numberseries` | Everything in the Number Series topic file, its row in `bank/index.json`, its Modules card lessons |
 | `mockimport` | `mocks/*`, `course/idmap.json` |
 | `course` | `course/*` (Modules lessons) |
@@ -121,10 +121,10 @@ ARENA_APP_DATA= pm2 restart arena_station --update-env && pm2 save
 
 ## Number Series cards (25 Nov 2026)
 
-`build_tools/numberseries/cards.py` gives every Number Series question its Series type, Branch, card and Tier, and writes the Modules lessons: units are the Groups, one lesson per card (never split), in Gold / Complete / Perfection tabs. Practice filters: Series type · Group · Branch · Tier. The Practice build runs its tagging too; the lessons come from:
+`build_tools/taggers/numberseries.py` gives every Number Series question its Series type, Branch, card and Tier, and writes the Modules lessons: units are the Groups, one lesson per card (never split), in Gold / Complete / Perfection tabs. Practice filters: Series type · Group · Branch · Tier. The Practice build runs its tagging too; the lessons come from:
 
 ```bash
-python3 -I build_tools/layout/layout.py run numberseries -- python3 -I build_tools/numberseries/cards.py --write
+python3 -I build_tools/layout/layout.py run numberseries -- python3 -I build_tools/taggers/numberseries.py --write
 ```
 
 The server checks each cached file's time and size, so a chain run is served without a restart.
@@ -150,7 +150,7 @@ One way to change the data: `./arena` in the project folder (`build_tools/arena.
 
 - Every run uses a fixed seed (`PYTHONHASHSEED=0`), so the same input always gives the same output.
 - Snapshots are APFS clones (instant, little disk) in `../arena_runs/snapshots`; the last 5 are kept. History is `../arena_runs/history.jsonl`.
-- **Tools (25 Nov):** `practice`, `method`, `level`, `twins`, `cards`, `mocks`, `mock-keys-po`, `mock-keys-clerk`. Each reproduces the app data exactly in a dry run (0 changes).
+- **Tools (named after their file since 26 Nov):** `practice`, `arithmetic`, `simplification`, `repeats`, `numberseries`, `mocks`, `mock-keys-po`, `mock-keys-clerk`. Each reproduces the app data exactly in a dry run (0 changes).
 - **Retired (registry `retired`, with the reason):** `lessons-arith` (`course_build.py` rebuilt every Modules lesson from scratch; the lessons in `data/source` are the truth) and the old topic builders `syllogism`, `inequality`, `quadratic` (each rebuilt its whole topic; Quadratic would have dropped 1,610 questions). Their labels (Quadratic pattern/rule, Syllogism structure) stay frozen as they are; new questions don't get them. Their held-back lists (52 questions with disputed answer keys) are frozen in `decisions/held_back.json`, which the Practice build reads.
 - Tested 25 Nov: an applied run, an allowed change then `undo` (all 1,510 data files back to the same fingerprint), a forbidden change as a dry run (reported, nothing touched) and applied (refused and put back by itself).
 
@@ -190,7 +190,7 @@ Note: the Practice build is only repeatable with a fixed seed (`PYTHONHASHSEED=0
 | `build/classifier/extra` | the classifier's training book |
 | `build/research/<tool>` | outputs of the research tools (circular, box, designation, month-year, syllogism, inequality, quadratic, number series) |
 | `build/reference/quant_maps` | the hand-made Arithmetic recipe maps (reference; the lessons in `data/source` are the truth) |
-| `build_tools/` | live tools only: `arena.py`, `layout`, `importers`, `mockimport`, `practice`, `numberseries` (cards), `classifier`, `utils` |
+| `build_tools/` | live tools only: `arena.py`, `layout`, `importers`, `mockimport`, `practice` (places questions), `taggers` (`arithmetic`, `simplification`, `repeats`, `numberseries`: one labeller per topic or label, all the same shape), `classifier`, `utils` |
 | `build_tools/research/` | research tools and old experiments (pattern maps, solvers, audits, review pages, trials) |
 
 Moved 26 Nov with every path updated (75 code files for `build/`, 63 for `build_tools/research/`; each moved file's path
@@ -198,6 +198,21 @@ setup was evaluated before and after and names the same folder). The OCR cache k
 again. Proof: `./arena check` and a dry run of all 8 tools gave 0 changes, and the repeat-paper import gave the same result.
 Dead scripts went to the Trash (the three old topic builders, `course_build.py`, `stitch_set_names.py`, the first
 first-version API-test builders (copies in the raw zip), the old classifier copy, `label_one.sh`).
+
+## Taggers (26 Nov 2026)
+
+Every labeller that adds labels to the questions of a topic lives in `build_tools/taggers/`, one file each, the same
+shape: read its topic's questions, write its own labels (or its input file for the Practice build). `practice/` only
+places questions in topics. Moved from `practice/arith_units.py`, `calc_skills.py`, `twins.py` and
+`numberseries/cards.py`; the tools are named after the files. A new labeller (e.g. for Quadratic or Syllogism) goes here.
+
+## The private data repo (26 Nov 2026)
+
+`.git-data/` (ignored by the app repo) holds `data/source` (questions, tags, views, `decisions/`, `state/`),
+`data/notes`, `data/images` and `build_tools`: 36,830 files, 486 MB packed. `./arena save` commits and pushes it;
+`./arena rebuild` makes `data/app` and the working copy from it. Tested: two fresh clones plus `rebuild` gave every
+file identical. Stored state (classifier labels, passage-set labels, Method/Level) moved from `build/practice` into
+`data/source/state/` on 26 Nov, so snapshots, undo, the guard (owners in `registry.json` `state`) and the repo cover it.
 
 ## Later steps
 

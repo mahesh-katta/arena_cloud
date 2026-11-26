@@ -25,7 +25,7 @@ function useTopicStats() {
   }, [p.answers]);
 }
 /* a question answered under any of its ids (one copy is kept of a repeat; `same` lists the other ids; `twins` are
-   copies kept twice inside sets that only partly repeat, see build_tools/practice/twins.py) */
+   copies kept twice inside sets that only partly repeat, see build_tools/taggers/repeats.py) */
 const otherIds = (q) => [...(q.same || []), ...(q.twins || [])];
 export const answerOf = (p, q) => p.answers[q.id] || otherIds(q).map((i) => p.answers[i]).find(Boolean);
 /* a copy whose twin was already answered: Practice doesn't show it again. "Next" skips every solved question (answerOf:

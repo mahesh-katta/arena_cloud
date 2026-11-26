@@ -175,7 +175,7 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
 
 **Arithmetic: done 19 Nov 2026.** Each of the 16 Arithmetic topics with Modules lessons has a **Method** filter: its Modules units, in Modules order, with "Not sorted" for the rest. 98% of their questions are sorted.
 - **Where a unit comes from:** the question's Modules lesson; else a hand check (`build/practice/audit/unit_handcheck_labels.json`, 1,202); else the unit model when sure, 94% right when sure on unseen papers.
-- **Built by** `build_tools/practice/arith_units.py`, which writes `build/practice/arith_units.json`. `build.py` puts it on the questions as `method` and declares the filter.
+- **Built by** `build_tools/taggers/arithmetic.py`, which writes `build/practice/arith_units.json`. `build.py` puts it on the questions as `method` and declares the filter.
 - **After new papers:** run `build.py`, then `arith_units.py`, then `build.py` again.
 - **Not covered:** Permutations and Combinations and Application Sums have no Modules units, so no Method filter.
 - **Possible later:** a Modules "More like this" link can open Practice with `?meth=<unit>`.
@@ -201,11 +201,11 @@ When new PYQ papers or Trending mocks (Mocks-G, Mocks-S) arrive in bulk, there s
   - A fraction that divides out (1784/8) counts as plain division.
   - An unknown that has to be undone counts by the step that undoes it: ?² is Square roots, √? is Squares, ?³ is Cubes, ? in a power is Powers.
 - **Checked:** 120 random questions (15 per skill), read one by one, were all on the right skill.
-- **Built by** `build_tools/practice/calc_skills.py`. It writes `build/practice/calc_skills.json`, and `build.py` puts the skill on each question as `method` and declares the filter. A link can open one skill with `?meth=<name>`.
+- **Built by** `build_tools/taggers/simplification.py`. It writes `build/practice/calc_skills.json`, and `build.py` puts the skill on each question as `method` and declares the filter. A link can open one skill with `?meth=<name>`.
 - **After new papers:** run `build.py`, then `arith_units.py` and `calc_skills.py`, then `build.py` again.
 - **Picture options (fixed 23 Nov):** Practice's copies of mock questions had dropped `option_image_paths`. So 322 questions whose options are pictures showed "[Image 1]" as text, or the question's picture as option A. The pictures were put back from the mock papers, and `build.py` now copies the field.
 - **Known build quirk:** when two topics tie, `build.py` picks one at random. So each rebuild can flip a few "Also fits" hints, and can even move a question to another topic. On 23 Nov two rebuilds flipped 12 hints and moved one question (FCL-0027-052, a word problem, between Percentages and Permutations and Combinations); all were put back from the backup.
-- **Repeats kept twice (23 Nov):** a set that only partly repeats another is kept whole, so 2,706 questions sat in Practice twice (3,228 extra copies). Nothing is removed: `build_tools/practice/twins.py` gives each copy `twins` (its other ids; a match ignores case, spacing, stray full stops/commas and option order, or the same sum in other words: same numbers, signs, option numbers and keyed answer; never different pictures). The list shows one copy of each group, an answer on one copy counts for all. Run `twins.py --apply` after every `build.py`.
+- **Repeats kept twice (23 Nov):** a set that only partly repeats another is kept whole, so 2,706 questions sat in Practice twice (3,228 extra copies). Nothing is removed: `build_tools/taggers/repeats.py` gives each copy `twins` (its other ids; a match ignores case, spacing, stray full stops/commas and option order, or the same sum in other words: same numbers, signs, option numbers and keyed answer; never different pictures). The list shows one copy of each group, an answer on one copy counts for all. Run `twins.py --apply` after every `build.py`.
 
 **Method and Level everywhere in Arithmetic (24 Nov 2026, user):** one name for one idea.
 - Simplification's Skill filter is now **Method**: the field is `method` and the order list `method_order`, the same as the Arithmetic topics. The values didn't change.

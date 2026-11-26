@@ -68,7 +68,7 @@ document it here. Until then, stop and tell the user.
 | New thing | What to do |
 |---|---|
 | A tag (a label on questions) | a tag file `data/source/tags/<name>.json` + its fields under `tags` in `registry.json`; produced by a tool registered in `tools` with an owner allowed only those fields |
-| A filter in Practice | the topic file's `filters` (written by the Practice build: `filters_for` in `build_tools/practice/build.py`, Number Series in `numberseries/cards.py`) |
+| A filter in Practice | the topic file's `filters` (written by the Practice build: `filters_for` in `build_tools/practice/build.py`, Number Series in `taggers/numberseries.py`) |
 | A Practice topic | add it to the Practice build's topics and cards, then a dry run of `practice` |
 | Modules lessons | the lessons in `data/source` are the truth: add questions to existing lessons append-only; never regenerate them |
 | State a tool must remember | a file in `data/source/decisions`, listed in `registry.json` `decisions` with its owner(s) |
@@ -76,7 +76,26 @@ document it here. Until then, stop and tell the user.
 
 Every one: dry run, read it, `--apply`, update this file and `docs/data-layout.md` in the same change.
 
-## 7. When something goes wrong
+## 7. Save to the private data repo, and restore on a new machine
+
+- Save: `./arena save "<what changed>"` checks everything, commits `data/source` (with `state/` and `decisions/`),
+  `data/notes`, `data/images` and `build_tools` to the private repo in `.git-data/`, and pushes it. Agents run it only
+  when the user asks. Set the remote once: `./arena save --remote git@github.com:<user>/arena-data.git`.
+- Not in it (rebuilt or kept elsewhere): `data/app` and the working copy (`./arena rebuild`), `build/` caches,
+  the classifier's training data, `../arena_raw.zip` (back it up separately), the progress file.
+- Restore (tested 26 Nov: every file identical):
+
+```bash
+git clone git@github.com:<user>/arena_cloud.git arena_cloud && cd arena_cloud
+git clone --bare git@github.com:<user>/arena-data.git .git-data
+git --git-dir=.git-data config core.bare false
+git --git-dir=.git-data config core.worktree "$PWD"
+git --git-dir=.git-data --work-tree=. checkout -f main
+./arena rebuild
+./arena check
+```
+
+## 8. When something goes wrong
 
 | Message | Meaning |
 |---|---|

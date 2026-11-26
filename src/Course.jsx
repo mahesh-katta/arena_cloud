@@ -8,7 +8,7 @@ import { UnitShorthand } from "./Shorthand.jsx";
 /* Course: Reasoning or Quant → topic → units → lessons. Reasoning units are concepts and a lesson is one puzzle;
    Quant units are archetypes and a lesson is one recipe. No gates, no tests, no levels: every lesson is open. */
 const SUBJ = { reasoning: "s-r", quant: "s-q", series: "c-cracker" };   /* series = Score Cracker lessons, in its orange */
-/* Score Cracker topics that have lessons in Modules (data/course/<subject>/<id>.json; Number Series: its cards, build_tools/numberseries/cards.py) */
+/* Score Cracker topics that have lessons in Modules (data/course/<subject>/<id>.json; Number Series: its cards, build_tools/taggers/numberseries.py) */
 const PLANS = { "quant--number-series": "series" };
 /* "More like this": the topic's Practice page with the lesson's filters set (a lesson may carry `more_q`, e.g. "nty=Add&branch=Whole&tier=Gold") */
 const moreHref = (tid, l) => "#/practice/" + tid + "?" + l.more_q;
