@@ -80,14 +80,14 @@ Every one: dry run, read it, `--apply`, update this file and `docs/data-layout.m
 
 - Save: `./arena save "<what changed>"` checks everything, commits `data/source` (with `state/` and `decisions/`),
   `data/notes`, `data/images` and `build_tools` to the private repo in `.git-data/`, and pushes it. Agents run it only
-  when the user asks. Set the remote once: `./arena save --remote git@github.com:<user>/arena-data.git`.
+  when the user asks. Set the remote once: `./arena save --remote git@github.com:<user>/arena_data.git`.
 - Not in it (rebuilt or kept elsewhere): `data/app` and the working copy (`./arena rebuild`), `build/` caches,
   the classifier's training data, `../arena_raw.zip` (back it up separately), the progress file.
 - Restore (tested 26 Nov: every file identical):
 
 ```bash
 git clone git@github.com:<user>/arena_cloud.git arena_cloud && cd arena_cloud
-git clone --bare git@github.com:<user>/arena-data.git .git-data
+git clone --bare git@github.com:<user>/arena_data.git .git-data
 git --git-dir=.git-data config core.bare false
 git --git-dir=.git-data config core.worktree "$PWD"
 git --git-dir=.git-data --work-tree=. checkout -f main

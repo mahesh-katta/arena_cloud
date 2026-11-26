@@ -23,5 +23,5 @@ Tests, Speed drills, Booster and a mistakes list. Single user, runs on this Mac.
 ## Repositories
 
 - This repo: the app (code and docs). It never holds question data.
-- `arena-data` (private): `data/source`, `data/notes`, `data/images` and `build_tools`, saved with `./arena save`. On a new
+- `arena_data` (private): `data/source`, `data/notes`, `data/images` and `build_tools`, saved with `./arena save`. On a new
   machine, `./arena rebuild` makes `data/app` from `data/source`. The question material is third-party: keep it private.
