@@ -39,7 +39,8 @@ Housekeeping (where every file goes, temporary work, no provider names, what to 
   and every decision are state. New questions get new values; existing ones keep theirs.
 - Rebuild anything from scratch: imports only add. An existing question gains paper links and repeat links
   (`pp`, `same`, `twins`, `ns_card_tier`); its topic changes only through the user's decisions (`./arena review`).
-- Leave raw files loose in the project, or put provider names in what the app shows (no branding).
+- Leave raw files loose in the project, or let a provider's name (or a short form of it, a link to it, an id prefix made
+  from it) into the app, the code, docs, file names, ids or commit messages. See "No provider names" below.
 - Put anything but app data in `data/`: it holds only `app`, `source`, `bank`, `mocks`, `speed`, `booster`, `course`,
   `images`, `notes`. Working files go to `build/`, research code to `build_tools/research/`.
 - Answer questions in the live app (port 8001) or touch `../arena_dashboard_progress.json`: preview clicks write the user's
@@ -55,5 +56,17 @@ that rebuilds today's papers identically; a new full-mock exam gets an entry in 
 a new tool gets an entry in `registry.json` `tools` with an owner whose rules are as narrow as possible; a new kind of
 state gets a file in `data/source/decisions` listed in `registry.json` `decisions` with its owner. Every change is a
 dry run first, then `--apply`, and the docs are updated in the same change.
+
+## No provider names: the one who brings the papers checks them
+
+Papers are collected from providers, so whoever imports them (the user or any agent) makes sure nothing of the provider
+reaches the app or the repos. The readers strip only the plain brand words. Before every `--apply` of an import or a
+content change:
+
+1. Search the new questions, passages, options, explanations, paper names and file names for the provider names
+   (decode them from `build_tools/utils/brands.py`) and every variant: short forms, a name glued into another word,
+   web addresses.
+2. Replace what is left with neutral words (a one-off `./arena run --as admin`, see `../CLAUDE.md`), or stop and ask.
+3. Never apply with a name left in. New id prefixes and file names are neutral too.
 
 The user prefers short, plain, structured answers: confirm in their words, yes/no first, a table where it helps.
